@@ -10,4 +10,5 @@ venv/
 personas/*.yaml
 eval/results.jsonl
 .DS_Store
-.claude/
+.claude/*
+!.claude/commands/
