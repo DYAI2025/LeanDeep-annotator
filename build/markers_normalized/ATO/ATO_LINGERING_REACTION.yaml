@@ -1,0 +1,44 @@
+id: ATO_LINGERING_REACTION
+schema: LeanDeep
+version: '5.1'
+layer: ATO
+lang: en
+description: ''
+frame:
+  signal:
+  - Ellipsen
+  - zögerlicher Tonfall
+  - stille Pause
+  concept: Verzögerte Reaktion
+  pragmatics: Zögern oder Andeutung
+  narrative: Spannungsaufbau
+patterns:
+- type: regex
+  value: '(\w*\.\.\.+|\w*…+)'
+examples:
+  positive:
+  - Hm…
+  - '...'
+  - Ähm…
+  - 😶‍🌫️
+  - …
+  negative:
+  - I think we should discuss this calmly.
+  - That's a good point you're making.
+  - I understand your perspective.
+  - Let's find a solution together.
+  - I've noticed we think differently about this.
+  - I want to understand what you mean.
+  - That sounds like an important topic for you.
+tags: []
+rating: 2
+activation:
+  rule: ANY 1
+vad_estimate:
+  valence: 0.0
+  arousal: 0.3
+  dominance: 0.5
+effect_on_state:
+  trust: 0.0
+  conflict: 0.0
+  deesc: 0.0

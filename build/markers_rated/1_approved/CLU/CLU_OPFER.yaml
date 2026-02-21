@@ -1,0 +1,45 @@
+# Archetyp-Mapping: Das Opfer / Märtyrer
+# Format: LEAN.DEEP 3.4 – kompatibel zu ATO → SEM → CLU → MEMA
+
+# 1. ATOMIC MARKER (ATO_)
+- id: ATO_SUFFERING
+  frame:
+    signal: ["token"]
+    concept: "Leiden / Schmerz"
+    pragmatics: "Betonung eigener Verletzung"
+    narrative: "Ich leide und es tut weh"
+  pattern: "(leide|Schmerz|tut weh|verletzt|quält mich)"
+  examples:
+    - "ich leide so sehr"
+    - "der Schmerz ist unerträglich"
+    - "es tut so weh"
+    - "ich bin so verletzt"
+    - "das quält mich"
+
+- id: ATO_POWERLESSNESS_WORD
+  frame:
+    signal: ["token"]
+    concept: "Ohnmacht / Hilflosigkeit"
+    pragmatics: "Betonung der eigenen Machtlosigkeit"
+    narrative: "Ich kann nichts tun"
+  pattern: "(kann nichts|hilflos|ohnmächtig|ausgeliefert|machtlos)"
+  examples:
+    - "ich kann nichts tun"
+    - "völlig hilflos"
+    - "ohnmächtig ausgeliefert"
+    - "so machtlos"
+    - "kann nicht ändern"
+
+- id: ATO_UNFAIRNESS
+  frame:
+    signal: ["token"]
+    concept: "Ungerechtigkeit / Unfairness"
+    pragmatics: "Die Welt ist ungerecht zu mir"
+    narrative: "Es ist unfair, was mir passiert"
+  pattern: "(unfair|ungerecht|verdient das nicht|warum ich|nicht fair)"
+  examples:
+    - "das ist so unfair"
+    - "total ungerecht"
+    - "habe das nicht verdient"
+    - "warum immer ich"
+    - "einfach nicht fair"

@@ -1,0 +1,43 @@
+id: SEM_WARM_APPRECIATION
+version: "5.1"
+layer: SEM
+lang: de
+description: "Warme Wertschätzung — Dankbarkeit und Höflichkeit verbinden sich zu einem positiven Beziehungssignal."
+frame:
+  signal: ["gratitude", "courtesy", "warmth"]
+  concept: "appreciative_connection"
+  pragmatics: "bonding/gratitude"
+  narrative: "care"
+tags: [semantic, gratitude, warmth, positive]
+composed_of:
+  - ATO_GRATITUDE
+  - ATO_COURTESY_FORMAL
+  - ATO_GRATITUDE_APPRECIATION
+activation:
+  mode: "co_occurrence"
+  min_components: 1
+  window: 1
+scoring:
+  base: 0.7
+  weight: 1.5
+vad_estimate: {valence: 0.5, arousal: 0.3, dominance: 0.4}
+effect_on_state: {trust: 0.15, conflict: -0.05, deesc: 0.1}
+family: SUPPORT
+examples:
+  positive:
+  - "Danke xxx das ist lieb"
+  - "Oh danke. Was könntest du denn machen?"
+  - "deine Jacke hat mich gerettet! danke dir!!"
+  - "Ja Mega xxx Danke dir"
+  - "Oki Danke xxxx"
+  - "XXX das is lieb, danke fürs Bescheid geben"
+  - "Vielen Dank für alles"
+  - "Das ist wirklich nett von dir"
+  - "Danke dass du daran gedacht hast"
+  - "Super lieb, danke!"
+  negative:
+  - "Du hättest das früher sagen können."
+  - "Naja, war ja das Mindeste."
+  - "Danke für nichts."
+  - "Brauchst du nicht, ich komme alleine klar."
+  - "Das hilft mir jetzt auch nicht weiter."

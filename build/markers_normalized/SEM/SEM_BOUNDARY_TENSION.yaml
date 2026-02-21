@@ -1,0 +1,58 @@
+id: SEM_BOUNDARY_TENSION
+schema: LeanDeep
+version: '5.1'
+layer: SEM
+lang: de
+description: Grenzspannung — Direkte Adressierung oder Anklage trifft auf Grenzsetzung, erzeugt Reibung.
+frame:
+  signal:
+  - accusation
+  - boundary
+  - tension
+  concept: interpersonal_friction
+  pragmatics: conflict/boundary
+  narrative: friction
+patterns: []
+examples:
+  positive:
+  - Du hörst mir nie zu, ich brauch jetzt Abstand.
+  - Das geht so nicht weiter, ich setze hier eine Grenze.
+  - Du überschreitest gerade eine Linie.
+  - Ich akzeptiere das nicht, und du musst das respektieren.
+  - Nein, das mache ich nicht mit. Punkt.
+  - Du kannst nicht einfach so mit mir reden.
+  - Ich habe dir gesagt das will ich nicht.
+  - Stop, so nicht.
+  - Das ist mein Bereich, da mischst du dich nicht ein.
+  - Ich lasse mir das nicht gefallen.
+  negative:
+  - Danke für den Hinweis.
+  - Ja, lass uns das zusammen klären.
+  - Ich verstehe deinen Punkt.
+  - Ok, machen wir es so wie du sagst.
+  - Kein Problem, geht klar.
+tags:
+- semantic
+- conflict
+- boundary
+- tension
+rating: 1
+composed_of:
+- ATO_DIRECT_ACCUSATION
+- ATO_SET_BOUNDARY
+- ATO_ANGER_RAGE
+activation:
+  mode: "co_occurrence"
+  min_components: 2
+  window: 1
+scoring:
+  base: 0.65
+  weight: 1.5
+vad_estimate:
+  valence: -0.3
+  arousal: 0.6
+  dominance: 0.6
+effect_on_state:
+  trust: -0.1
+  conflict: 0.15
+  deesc: -0.1

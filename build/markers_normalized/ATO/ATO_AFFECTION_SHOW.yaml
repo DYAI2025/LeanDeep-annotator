@@ -1,0 +1,77 @@
+id: ATO_AFFECTION_SHOW
+schema: LeanDeep
+version: '5.1'
+layer: ATO
+lang: de
+description: offene Zuneigungs- und Nähe-Marker
+frame:
+  signal: []
+  concept: ''
+  pragmatics: ''
+  narrative: ''
+patterns:
+- type: regex
+  value: "\\b(liebe?|hab dich gern|Kuss|Küsse|❤️|😘|Umarmung|vermisse dich|Schatz|Liebling)\\b"
+examples:
+  positive:
+  - Hab dich lieb.
+  - Kuss.
+  - ❤️
+  - Vermisse dich.
+  - Fühl dich umarmt.
+  - Du fehlst mir.
+  - Schatz, komm gut heim.
+  - Liebling, schlaf gut.
+  - Ich bin stolz auf dich ❤️
+  - Mehr Nähe heute?
+  - Knuddler für dich.
+  - Bussi.
+  - Herzchen.
+  - Du bist toll.
+  - Umarmung.
+  - Küss dich.
+  - Liebe dich.
+  - Schatzi.
+  - Vermisst.
+  - Stolz ❤️
+  negative:
+  - Ok.
+  - Bitte bestätige.
+  - Scope bleibt.
+  - Protokoll folgt.
+  - Frist 30.09.
+  - Ticket erstellt.
+  - Zur Kenntnis.
+  - Notiert.
+  - Erledigt.
+  - Termin passt.
+  - Agenda einhalten.
+  - Review planen.
+  - Budget checken.
+  - Milestone setzen.
+  - Update teilen.
+  - Freigabe geben.
+  - Prozess folgen.
+  - Abnahme machen.
+  - Notiz nehmen.
+  - Status updaten.
+tags: []
+rating: 1
+semiotic:
+  mode: iconic
+  level: pragmatic
+  object: "affection"
+  connotation:
+  - "zuneigung"
+  - "offen"
+  interpretant: "effect_on_state: {trust: +0.2, intimacy: +0.3}"
+vad_estimate:
+  valence: 0.5
+  arousal: 0.45
+  dominance: 0.4
+effect_on_state:
+  trust: 0.35
+  conflict: -0.2
+  deesc: 0.25
+metadata:
+  label: Zuneigung offen

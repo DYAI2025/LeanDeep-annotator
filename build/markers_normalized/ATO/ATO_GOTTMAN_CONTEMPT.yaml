@@ -1,0 +1,72 @@
+id: ATO_GOTTMAN_CONTEMPT
+schema: LeanDeep
+version: '5.1'
+layer: ATO
+lang: de
+description: Spott, Hohn, Überlegenheitsgesten (inkl. 🙄/🤦); herabsetzende Sprache.
+frame:
+  signal:
+  - Lächerlich
+  - Armselig
+  - Wie dumm …
+  - So peinlich
+  - Augenrollen/Facepalm
+  concept: Verachtung / Überlegenheit
+  pragmatics: Demütigung, Statusabwertung
+  narrative: derision
+patterns:
+- type: regex
+  value: '(?i)\blächerlich\b'
+- type: regex
+  value: '(?i)\barmselig\b'
+- type: regex
+  value: '(?i)\bwie\s+dumm\b'
+- type: regex
+  value: '(?i)\bso\s+peinlich\b'
+- type: regex
+  value: '(?i)\bna\s+klar,\s*meister\b'
+- type: regex
+  value: '(?i)\b(facepalm|eyeroll|augenrollen)\b'
+- type: regex
+  value: '[🙄🤦]'
+- type: regex
+  value: '(?i)\bbravo,\s*großartig\b(?=.*(sarkastisch|ironisch))?'
+- type: regex
+  value: '(?i)\btypisch\b(?=.*\bdu\b)'
+examples:
+  positive:
+  - Wie dumm kann man sein?
+  - Das ist einfach lächerlich.
+  - Armselig, wirklich.
+  - So peinlich, typisch.
+  - Na klar, Meister der Ausreden.
+  - 🙄
+  - Bravo, großartig – sarkastisch gemeint.
+  - Typisch du, kapierst es nie.
+  negative:
+  - Ich sehe das anders, aber ich respektiere deine Sicht.
+  - Ich moechte ehrlich mit dir sein, auch wenn es schwer ist.
+  - Du hast recht, das war mein Fehler. Es tut mir leid.
+  - Lass uns beide unsere Seite erklaeren.
+  - Ich fuehle mich unwohl dabei und moechte darueber reden.
+  - Ich verstehe, warum du das so siehst.
+  - Danke, dass du mir das sagst. Ich denke darueber nach.
+tags:
+- atomic
+- conflict
+- gottman
+- contempt
+rating: 1
+scoring:
+  base: 1.2
+  weight: 1.1
+window:
+  messages: 3
+vad_estimate:
+  valence: -0.5
+  arousal: 0.8
+  dominance: 0.6
+effect_on_state:
+  trust: -0.3
+  conflict: 0.4
+  deesc: -0.2

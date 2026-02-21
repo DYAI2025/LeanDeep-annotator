@@ -1,0 +1,45 @@
+# Archetyp-Mapping: Der Held / Krieger
+# Format: LEAN.DEEP 3.4 – kompatibel zu ATO → SEM → CLU → MEMA
+
+# 1. ATOMIC MARKER (ATO_)
+- id: ATO_COURAGE
+  frame:
+    signal: ["token"]
+    concept: "Mut / Tapferkeit"
+    pragmatics: "Bereitschaft zur Konfrontation"
+    narrative: "Ich stelle mich der Herausforderung"
+  pattern: "(mutig|tapfer|stell mich|kämpfe|wage es)"
+  examples:
+    - "ich bin mutig genug"
+    - "ich stelle mich dem"
+    - "ich kämpfe dafür"
+    - "ich wage es"
+    - "tapfer vorangehen"
+
+- id: ATO_MISSION
+  frame:
+    signal: ["token"]
+    concept: "Mission / Aufgabe"
+    pragmatics: "Klares Ziel vor Augen"
+    narrative: "Ich habe eine Mission"
+  pattern: "(Mission|Aufgabe|Ziel|erreichen|durchziehen)"
+  examples:
+    - "das ist meine Mission"
+    - "meine Aufgabe ist es"
+    - "ich erreiche mein Ziel"
+    - "ich ziehe das durch"
+    - "klare Mission vor Augen"
+
+- id: ATO_VICTORY
+  frame:
+    signal: ["token"]
+    concept: "Sieg / Triumph"
+    pragmatics: "Erfolg und Überwindung"
+    narrative: "Ich siege über die Hindernisse"
+  pattern: "(gewonnen|Sieg|triumphiert|überwunden|geschafft)"
+  examples:
+    - "ich habe gewonnen"
+    - "das ist mein Sieg"
+    - "ich habe triumphiert"
+    - "überwunden und geschafft"
+    - "erfolgreich durchgekämpft"

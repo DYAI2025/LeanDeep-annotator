@@ -1,0 +1,45 @@
+# Archetyp-Mapping: Die Persona / Der Angepasste
+# Format: LEAN.DEEP 3.4 – kompatibel zu ATO → SEM → CLU → MEMA
+
+# 1. ATOMIC MARKER (ATO_)
+- id: ATO_CONFORMITY
+  frame:
+    signal: ["token"]
+    concept: "Anpassung / Konformität"
+    pragmatics: "Erfüllung sozialer Erwartungen"
+    narrative: "Funktionieren im System"
+  pattern: "(normal sein|wie alle anderen|angepasst|funktionieren|erwarten von mir)"
+  examples:
+    - "ich bin ganz normal"
+    - "wie alle anderen auch"
+    - "ich funktioniere ja"
+    - "man erwartet das von mir"
+    - "ich will nur angepasst sein"
+
+- id: ATO_SOCIAL_SAFETY
+  frame:
+    signal: ["token"]
+    concept: "Soziale Sicherheit"
+    pragmatics: "Schutz durch Zugehörigkeit"
+    narrative: "Teil des Systems sein"
+  pattern: "(dazugehören|nicht auffallen|sicher|Teil sein|wie man das macht)"
+  examples:
+    - "ich will dazugehören"
+    - "bloß nicht auffallen"
+    - "so macht man das eben"
+    - "ich bin Teil davon"
+    - "das ist sicher so"
+
+- id: ATO_ROLE_PERFORMANCE
+  frame:
+    signal: ["token"]
+    concept: "Rollenerfüllung"
+    pragmatics: "Perfekte Ausführung sozialer Rollen"
+    narrative: "Ich spiele meine Rolle gut"
+  pattern: "(meine Rolle|Aufgabe erfüllen|wie es sein soll|richtig machen)"
+  examples:
+    - "das ist meine Rolle"
+    - "ich erfülle meine Aufgabe"
+    - "so wie es sein soll"
+    - "ich mache das richtig"
+    - "jeder hat seine Rolle"

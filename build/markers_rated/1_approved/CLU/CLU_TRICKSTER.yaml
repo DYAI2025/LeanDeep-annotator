@@ -1,0 +1,45 @@
+# Archetyp-Mapping: Der Trickster
+# Format: LEAN.DEEP 3.4 – kompatibel zu ATO → SEM → CLU → MEMA
+
+# 1. ATOMIC MARKER (ATO_)
+- id: ATO_SELF_DAMAGING_ADMISSION
+  frame:
+    signal: ["token"]
+    concept: "Selbstsabotage / destruktives Verhalten"
+    pragmatics: "bewusste Selbstschädigung als Kick"
+    narrative: "Zerstörung als Befreiung"
+  pattern: "(nicht schlafen|trinke zu viel|sabotiere mich|zerstöre es)"
+  examples:
+    - "ich schlafe einfach nicht"
+    - "ich trinke zu viel, obwohl ich weiß..."
+    - "ich sabotiere mich selbst"
+    - "ich zerstöre es immer wieder"
+    - "ich mache das, was mir schadet"
+
+- id: ATO_CHAOS_KICK
+  frame:
+    signal: ["token"]
+    concept: "Chaos als Energiequelle"
+    pragmatics: "Unordnung für Kreativität"
+    narrative: "Zerstörung als Katalysator"
+  pattern: "(alles egal|dann bin ich kreativ|Höchstleistung|wenn mir egal)"
+  examples:
+    - "wenn mir alles egal ist, bin ich kreativ"
+    - "dann zur Höchstleistung fähig"
+    - "genau dann überschreite ich Grenzen"
+    - "wenn alles egal ist, geht alles"
+    - "im Chaos entstehen die besten Ideen"
+
+- id: ATO_BETAEUBUNG
+  frame:
+    signal: ["token"]
+    concept: "Betäubung / Flucht vor Klarheit"
+    pragmatics: "Vermeidung von nüchterner Realität"
+    narrative: "Schutz vor zu viel Wahrheit"
+  pattern: "(Betäubung|benebelt|nicht klar|verschwommen)"
+  examples:
+    - "ich suche die Betäubung"
+    - "lieber benebelt als klar"
+    - "wenn ich nicht klar bin"
+    - "alles verschwommen halten"
+    - "Klarheit tut zu weh"

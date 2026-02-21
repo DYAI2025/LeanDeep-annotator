@@ -1,0 +1,45 @@
+id: ATO_TIME_REFERENCE
+schema: LeanDeep
+version: '5.1'
+layer: ATO
+lang: en
+description: Atomic pattern for temporal references and time focus
+frame:
+  signal:
+  - Zeitbezug
+  - temporal
+  concept: Time Reference
+  pragmatics: temporal orientation
+  narrative: token
+patterns:
+- type: regex
+  value: "(?i)\\b(früher|damals|gestern|heute|morgen|später|bald|immer|nie|oft)\\b"
+examples:
+  positive:
+  - Früher war das anders.
+  - Heute fühle ich mich besser.
+  - Morgen wird es sich zeigen.
+  - Das passiert immer wieder.
+  - Ich denke oft daran.
+  negative:
+  - Das passiert manchmal wieder.
+  - I think we should discuss this calmly.
+  - That's a good point you're making.
+  - I understand your perspective.
+  - Let's find a solution together.
+  - I've noticed we think differently about this.
+  - I want to understand what you mean.
+tags:
+- temporal
+- atomic
+- time
+- v3.3
+rating: 1
+vad_estimate:
+  valence: 0.0
+  arousal: 0.3
+  dominance: 0.5
+effect_on_state:
+  trust: 0.0
+  conflict: 0.0
+  deesc: 0.0

@@ -1,0 +1,57 @@
+id: SEM_SHARED_HUMOR
+schema: LeanDeep
+version: '5.1'
+layer: SEM
+lang: de
+description: Geteilter Humor als Bindungssignal — Lachen und Freude treten gemeinsam auf und erzeugen positive Resonanz.
+frame:
+  signal:
+  - humor
+  - joy
+  - social
+  concept: shared_positive_affect
+  pragmatics: bonding/humor
+  narrative: connection
+patterns: []
+examples:
+  positive:
+  - Hahah Danke.
+  - Boah haha fahren jetzt endlich heim
+  - Haha er ist sehr labil
+  - Ja haha deine Jacke hat mich Mega gerettet
+  - Haha naja
+  - aye.. haha..
+  - Hahaha ja genau!
+  - Haha stimmt, das war witzig
+  - LOL ja das kenn ich
+  - Haha ok das ist gut
+  negative:
+  - Das finde ich gar nicht lustig.
+  - Ich verstehe nicht was daran witzig sein soll.
+  - Hör auf darüber zu lachen.
+  - Das ist ernst gemeint.
+  - Ich mache keine Witze.
+tags:
+- semantic
+- humor
+- bonding
+- positive
+rating: 1
+composed_of:
+- ATO_HUMOR_LIGHT
+- ATO_JOY
+activation:
+  mode: "co_occurrence"
+  min_components: 1
+  window: 1
+scoring:
+  base: 0.7
+  weight: 1.5
+vad_estimate:
+  valence: 0.8
+  arousal: 0.6
+  dominance: 0.5
+effect_on_state:
+  trust: 0.15
+  conflict: -0.1
+  deesc: 0.1

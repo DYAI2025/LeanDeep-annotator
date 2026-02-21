@@ -1,0 +1,25 @@
+id: ATO_POWERLESSNESS_WORD
+schema: LeanDeep
+version: '5.1'
+layer: ATO
+lang: de
+description: ''
+frame:
+  signal:
+  - token
+  concept: Ohnmacht / Hilflosigkeit
+  pragmatics: Betonung der eigenen Machtlosigkeit
+  narrative: Ich kann nichts tun
+patterns:
+- type: regex
+  value: "(kann nichts|hilflos|ohnmächtig|ausgeliefert|machtlos)"
+examples:
+  positive:
+  - ich kann nichts tun
+  - völlig hilflos
+  - ohnmächtig ausgeliefert
+  - so machtlos
+  - kann nicht ändern
+  negative: []
+tags: []
+rating: 1

@@ -1,0 +1,45 @@
+# Archetyp-Mapping: Der Liebende / Romantiker
+# Format: LEAN.DEEP 3.4 – kompatibel zu ATO → SEM → CLU → MEMA
+
+# 1. ATOMIC MARKER (ATO_)
+- id: ATO_LOVE_DEVOTION
+  frame:
+    signal: ["token"]
+    concept: "Liebe / Hingabe"
+    pragmatics: "Tiefe emotionale Verbindung"
+    narrative: "Ich liebe von ganzem Herzen"
+  pattern: "\\b(liebe|Herz|hingabe|vergöttere|alles für dich)\\b"
+  examples:
+    - "ich liebe dich so sehr"
+    - "mein ganzes Herz"
+    - "völlige Hingabe"
+    - "ich vergöttere dich"
+    - "alles für dich tun"
+
+- id: ATO_UNITY_LONGING
+  frame:
+    signal: ["token"]
+    concept: "Verschmelzungssehnsucht"
+    pragmatics: "Wunsch nach totaler Einheit"
+    narrative: "Wir sollen eins werden"
+  pattern: "(eins werden|zusammengehören|nie getrennt|für immer|verschmelzen)"
+  examples:
+    - "wir sollen eins werden"
+    - "wir gehören zusammen"
+    - "nie wieder getrennt"
+    - "für immer verbunden"
+    - "miteinander verschmelzen"
+
+- id: ATO_ROMANTIC_IDEALIZATION
+  frame:
+    signal: ["token"]
+    concept: "Romantische Idealisierung"
+    pragmatics: "Perfektheit des Geliebten"
+    narrative: "Du bist perfekt und alles für mich"
+  pattern: "(perfekt|Seelenverwandte|Traumpartner|alles was ich brauche|einzig wahre)"
+  examples:
+    - "du bist perfekt"
+    - "meine Seelenverwandte"
+    - "der Traumpartner"
+    - "alles was ich brauche"
+    - "die einzig wahre Liebe"

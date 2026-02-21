@@ -1,0 +1,101 @@
+id: ATO_AFFECT_FLAT
+schema: LeanDeep
+version: '5.1'
+layer: ATO
+lang: de
+description: neutrale, tonlose, nicht-affektive Formulierungen; keine Emojis/Intensivierer
+frame:
+  signal: []
+  concept: ''
+  pragmatics: ''
+  narrative: ''
+patterns:
+- type: regex
+  value: "(^ok(\\.|,)?$|verstanden\\.?$|zur Kenntnis\\.?$|bestätigt\\.?$|passt\\.?$|erledigt\\.?$)"
+- type: anti_emoji
+  value: true
+- type: style
+  feature: "no-intensifiers"
+examples:
+  positive:
+  - Ok.
+  - Bestätigt.
+  - Zur Kenntnis.
+  - Erledigt.
+  - Passt.
+  - Verstanden.
+  - Notiert.
+  - Gesehen.
+  - Empfangen.
+  - Danke. Erledigt.
+  - Ich habe es erhalten.
+  - Alles klar.
+  - In Ordnung.
+  - Bestätige den Empfang.
+  - Notiz genommen.
+  - Kein Problem.
+  - Geht in Ordnung.
+  - Vermerkt.
+  - Akzeptiert.
+  - Abgeschlossen.
+  - Agenda einhalten.
+  - Review planen.
+  - Budget checken.
+  - Milestone setzen.
+  - Update teilen.
+  - Freigabe geben.
+  - Prozess folgen.
+  - Abnahme machen.
+  - Notiz nehmen.
+  - Status updaten.
+  negative:
+  - Super, das freut mich sehr!
+  - Oh nein, wie ärgerlich!
+  - Wow!
+  - Haha, witzig 😅
+  - Ich bin echt sauer.
+  - Das macht mich traurig.
+  - Mega gut!!!
+  - Klingt toll 😊
+  - Ich hab Angst wegen morgen.
+  - So schön!
+  - Das ist fantastisch!
+  - Ich bin enttäuscht.
+  - Total cool!
+  - Lass uns feiern!
+  - Das nervt mich.
+  - Ich liebe das!
+  - Zu traurig.
+  - Echt toll 😄
+  - Bin überglücklich.
+  - Das schmerzt.
+  - Das triggert mich.
+  - Mehr Empathie.
+  - Lass uns fühlen.
+  - Ich teile Gefühle.
+  - Bleib beim Emotionalen.
+  - Das fühlt sich an.
+  - Erzähl von dir.
+  - Ich liebe das.
+  - Traurig heute.
+  - Feiern wir?
+tags: []
+rating: 1
+semiotic:
+  mode: symbolic
+  level: syntactic
+  object: "neutral_acknowledgement"
+  interpretant: "effect_on_state: {affekt: flat, sync: +0.1}"
+  connotation:
+  - "neutral"
+  - "flach"
+vad_estimate:
+  valence: -0.6
+  arousal: 0.3
+  dominance: 0.2
+effect_on_state:
+  trust: -0.1
+  conflict: 0.1
+  deesc: -0.05
+metadata:
+  label: Affekt flach

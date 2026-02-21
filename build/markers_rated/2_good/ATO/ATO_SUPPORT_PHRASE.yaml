@@ -1,0 +1,27 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_SUPPORT_PHRASE
+frame:
+  signal: ["token"]
+  concept: "Unterstützung"
+  pragmatics: "Bindung"
+  narrative: "surface"
+pattern:
+  tokens: ["ich bin da", "kann helfen", "gemeinsam", "du schaffst das", "an deiner Seite"]
+examples:
+  positive:
+  - "ich bin da für dich … wir schaffen das"
+  - "danke dir … fühl mich gesehen"
+  - "gemeinsam kriegen wir das hin"
+  - "du kannst dich auf mich verlassen"
+  - "ich hör dir zu … okay?"
+  negative:
+  - Kannst du mir das Salz reichen?
+  - Der Termin ist um 14 Uhr.
+  - Ich war gestern einkaufen.
+  - Das Wetter soll morgen besser werden.
+  - Hast du die E-Mail gelesen?
+  - Ich muss noch tanken.
+  - Die Besprechung ist im Konferenzraum.
+vad_estimate: {valence: 0.4, arousal: 0.35, dominance: 0.5}
+effect_on_state: {trust: 0.3, conflict: -0.25, deesc: 0.3}

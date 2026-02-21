@@ -1,0 +1,44 @@
+id: SEM_NEUTRAL_NEGOTIATION
+version: "5.1"
+layer: SEM
+lang: de
+description: "Neutrale Verhandlung — Alltagskoordination mit Abwägung und Gegenüberstellung ohne emotionale Ladung."
+frame:
+  signal: ["contrast", "negation", "coordination"]
+  concept: "pragmatic_exchange"
+  pragmatics: "coordination/planning"
+  narrative: "logistics"
+tags: [semantic, neutral, coordination, negotiation]
+composed_of:
+  - ATO_NEGATION
+  - ATO_CONTRASTIVE_CONNECTOR_ABER
+  - ATO_CONTRAST_CONJUNCTION
+  - ATO_MODAL_VERBS
+activation:
+  mode: "co_occurrence"
+  min_components: 2
+  window: 1
+scoring:
+  base: 0.6
+  weight: 1.0
+vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
+effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+family: NEUTRAL
+examples:
+  positive:
+  - "Ne, denke das passt nicht. Muss vor dem Essen Sport machen."
+  - "Klar kann man dann nicht weitermachen."
+  - "Lass ich ja auch nicht"
+  - "Ne sie lag wohl schon längerem sterben. Aber jetzt gerade stirbt sie"
+  - "Drache ist fertig. Aber er wird beim Jungfernflug drauf gehen."
+  - "Nein, aber ich kann morgen."
+  - "Geht leider nicht, aber Freitag wäre ok."
+  - "Ne, will erst noch einkaufen. Dann können wir."
+  - "Muss ich nicht, aber wäre besser."
+  - "Naja, können wir machen, aber erst nach dem Sport."
+  negative:
+  - "Ich freue mich so sehr auf morgen!"
+  - "Du bist der Beste!"
+  - "Das macht mich wütend."
+  - "Ich bin so traurig gerade."
+  - "Wow das ist ja unglaublich!"

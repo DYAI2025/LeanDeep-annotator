@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LeanDeep Marker Playground</title>
+<style>
+  :root {
+    --ato-bg: #FFF9C4; --ato-border: #F9A825;
+    --sem-bg: #FFE0B2; --sem-border: #FB8C00;
+    --clu-bg: #B2EBF2; --clu-border: #00ACC1;
+    --mema-bg: #E1BEE7; --mema-border: #8E24AA;
+    --bg: #1a1a2e; --surface: #16213e; --surface2: #0f3460;
+    --text: #e0e0e0; --text-dim: #8899aa; --accent: #e94560;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  .header { background: var(--surface); border-bottom: 2px solid var(--accent); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .header h1 { font-size: 1.25rem; font-weight: 600; }
+  .header h1 span { color: var(--accent); }
+  .header .version { font-size: 0.8rem; color: var(--text-dim); background: var(--surface2); padding: 3px 10px; border-radius: 12px; }
+  .tabs { display: flex; gap: 4px; background: var(--surface); padding: 8px 24px 0; }
+  .tab { padding: 8px 18px; border: 1px solid transparent; border-bottom: none; border-radius: 6px 6px 0 0; cursor: pointer; font-size: 0.85rem; color: var(--text-dim); background: transparent; transition: all 0.15s; }
+  .tab:hover { color: var(--text); background: var(--surface2); }
+  .tab.active { color: var(--text); background: var(--surface2); border-color: #334; }
+  .main { display: grid; grid-template-columns: 1fr 1fr; gap: 0; height: calc(100vh - 140px); }
+  .panel { padding: 16px; overflow-y: auto; }
+  .panel-left { background: var(--surface); border-right: 1px solid #334; }
+  .panel-right { background: var(--bg); }
+  .panel h2 { font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+  textarea { width: 100%; height: 220px; background: var(--surface2); color: var(--text); border: 1px solid #334; border-radius: 6px; padding: 12px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.9rem; resize: vertical; line-height: 1.5; }
+  textarea:focus { outline: none; border-color: var(--accent); }
+  .controls { margin-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+  .control-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .control-row label { font-size: 0.8rem; color: var(--text-dim); min-width: 70px; }
+  .control-row input[type="range"] { flex: 1; max-width: 200px; accent-color: var(--accent); }
+  .threshold-val { font-size: 0.8rem; color: var(--accent); min-width: 35px; }
+  .layer-toggles { display: flex; gap: 6px; }
+  .layer-toggle { display: flex; align-items: center; gap: 3px; font-size: 0.8rem; cursor: pointer; padding: 3px 8px; border-radius: 4px; border: 1px solid #445; }
+  .layer-toggle input { accent-color: var(--accent); }
+  .layer-toggle.ato { border-color: var(--ato-border); }
+  .layer-toggle.sem { border-color: var(--sem-border); }
+  .layer-toggle.clu { border-color: var(--clu-border); }
+  .layer-toggle.mema { border-color: var(--mema-border); }
+  .btn { padding: 10px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: all 0.15s; }
+  .btn-primary { background: var(--accent); color: white; }
+  .btn-primary:hover { background: #d63851; }
+  .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid #445; }
+  .btn-secondary:hover { background: #1a4a8a; }
+  .upload-row { display: flex; gap: 8px; align-items: center; }
+  .upload-row input[type="file"] { display: none; }
+
+  /* Annotated text */
+  .annotated-text { background: var(--surface); border-radius: 6px; padding: 16px; line-height: 1.8; font-size: 0.95rem; min-height: 100px; white-space: pre-wrap; word-wrap: break-word; }
+  .annotated-text .marker-span { padding: 1px 0; border-bottom: 2px solid; border-radius: 2px; cursor: pointer; position: relative; transition: filter 0.1s; }
+  .annotated-text .marker-span:hover { filter: brightness(1.2); }
+  .marker-span.layer-ATO { background: var(--ato-bg); color: #333; border-color: var(--ato-border); }
+  .marker-span.layer-SEM { background: var(--sem-bg); color: #333; border-color: var(--sem-border); }
+  .marker-span.layer-CLU { background: var(--clu-bg); color: #333; border-color: var(--clu-border); }
+  .marker-span.layer-MEMA { background: var(--mema-bg); color: #333; border-color: var(--mema-border); }
+
+  /* Tooltip */
+  .tooltip { position: fixed; z-index: 1000; background: #1a1a2e; border: 1px solid #445; border-radius: 8px; padding: 12px; max-width: 380px; font-size: 0.82rem; pointer-events: none; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+  .tooltip .tt-id { font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+  .tooltip .tt-row { display: flex; gap: 8px; margin: 2px 0; }
+  .tooltip .tt-label { color: var(--text-dim); min-width: 70px; }
+  .tooltip .tt-badge { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.75rem; font-weight: 600; }
+  .tooltip .tt-badge.ATO { background: var(--ato-bg); color: #7c6800; }
+  .tooltip .tt-badge.SEM { background: var(--sem-bg); color: #8a5100; }
+  .tooltip .tt-badge.CLU { background: var(--clu-bg); color: #006064; }
+  .tooltip .tt-badge.MEMA { background: var(--mema-bg); color: #4a148c; }
+  .tooltip .tt-match { background: var(--surface2); padding: 4px 8px; border-radius: 4px; margin-top: 4px; font-family: monospace; word-break: break-all; }
+
+  /* Meta cards (CLU/MEMA) */
+  .meta-section { margin-top: 20px; }
+  .meta-section h3 { font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #334; }
+  .meta-card { background: var(--surface); border-radius: 6px; padding: 10px 14px; margin-bottom: 8px; border-left: 3px solid; }
+  .meta-card.layer-CLU { border-color: var(--clu-border); }
+  .meta-card.layer-MEMA { border-color: var(--mema-border); }
+  .meta-card .mc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+  .meta-card .mc-id { font-weight: 600; font-size: 0.85rem; }
+  .meta-card .mc-conf { font-size: 0.8rem; color: var(--accent); }
+  .meta-card .mc-desc { font-size: 0.82rem; color: var(--text-dim); }
+  .meta-card .mc-family { font-size: 0.75rem; color: var(--text-dim); margin-top: 4px; }
+
+  /* Marker list */
+  .marker-list { margin-top: 20px; }
+  .marker-list h3 { font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #334; }
+  .marker-item { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 4px; font-size: 0.82rem; cursor: pointer; transition: background 0.1s; }
+  .marker-item:hover { background: var(--surface); }
+  .marker-item .mi-conf { font-weight: 700; min-width: 40px; text-align: right; }
+  .marker-item .mi-id { font-family: monospace; }
+
+  /* Conversation mode */
+  .conv-message { border-radius: 6px; padding: 12px; margin-bottom: 10px; border-left: 3px solid; }
+  .conv-message.role-a { border-color: #42a5f5; background: rgba(66,165,245,0.08); }
+  .conv-message.role-b { border-color: #ef5350; background: rgba(239,83,80,0.08); }
+  .conv-message .cm-role { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; color: var(--text-dim); }
+  .conv-message .cm-text { line-height: 1.7; white-space: pre-wrap; }
+
+  /* Stats bar */
+  .stats-bar { background: var(--surface); border-top: 1px solid #334; padding: 8px 24px; font-size: 0.8rem; color: var(--text-dim); display: flex; gap: 20px; align-items: center; }
+  .stats-bar .stat { display: flex; gap: 4px; }
+  .stats-bar .stat-val { color: var(--text); font-weight: 600; }
+
+  /* Placeholder */
+  .placeholder { color: var(--text-dim); font-style: italic; padding: 40px; text-align: center; }
+
+  /* Loading */
+  .loading { display: inline-block; width: 16px; height: 16px; border: 2px solid var(--text-dim); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.6s linear infinite; margin-right: 6px; vertical-align: middle; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Dynamics section */
+  .dynamics-section { margin-top: 24px; }
+  .dynamics-section h3 { font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #334; }
+
+  .vad-chart-container { background: var(--surface); border-radius: 6px; padding: 16px; margin-bottom: 16px; position: relative; height: 280px; }
+
+  .state-indices { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+  .state-gauge { background: var(--surface); border-radius: 6px; padding: 12px 16px; }
+  .state-gauge .sg-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  .state-gauge .sg-label { font-size: 0.82rem; font-weight: 600; }
+  .state-gauge .sg-value { font-size: 0.82rem; font-weight: 700; font-family: 'SF Mono', 'Fira Code', monospace; }
+  .state-gauge .sg-bar-track { height: 8px; background: var(--surface2); border-radius: 4px; position: relative; overflow: hidden; }
+  .state-gauge .sg-bar-center { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--text-dim); opacity: 0.4; }
+  .state-gauge .sg-bar-fill { position: absolute; top: 0; bottom: 0; border-radius: 4px; transition: all 0.4s ease; }
+
+  .ued-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
+  @media (max-width: 600px) { .ued-grid { grid-template-columns: repeat(2, 1fr); } }
+  .ued-card { background: var(--surface); border-radius: 6px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+  .ued-card .uc-label { font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .ued-card .uc-value { font-size: 1.1rem; font-weight: 700; font-family: 'SF Mono', 'Fira Code', monospace; }
+  .ued-card .uc-sub { font-size: 0.72rem; color: var(--text-dim); margin-top: 2px; }
+
+  .dynamics-placeholder { color: var(--text-dim); font-style: italic; padding: 30px; text-align: center; font-size: 0.85rem; background: var(--surface); border-radius: 6px; }
+
+  /* Emotion timeline */
+  .emotion-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .emotion-row .er-msg { font-size: 0.72rem; color: var(--text-dim); min-width: 42px; text-align: right; font-family: 'SF Mono', 'Fira Code', monospace; }
+  .emotion-row .er-bar-track { flex: 1; height: 22px; background: var(--surface2); border-radius: 4px; display: flex; overflow: hidden; }
+  .emotion-row .er-segment { height: 100%; transition: width 0.3s ease; position: relative; }
+  .emotion-row .er-segment:first-child { border-radius: 4px 0 0 4px; }
+  .emotion-row .er-segment:last-child { border-radius: 0 4px 4px 0; }
+  .emotion-row .er-dominant { font-size: 0.75rem; font-weight: 600; min-width: 60px; }
+  .emotion-row .er-score { font-size: 0.72rem; color: var(--text-dim); min-width: 32px; font-family: 'SF Mono', 'Fira Code', monospace; }
+  .emotion-legend { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+  .emotion-legend .el-item { display: flex; align-items: center; gap: 4px; font-size: 0.72rem; color: var(--text-dim); }
+  .emotion-legend .el-dot { width: 10px; height: 10px; border-radius: 2px; }
+
+  .btn-dynamics { background: var(--surface2); color: var(--text); border: 1px solid var(--accent); }
+  .btn-dynamics:hover { background: var(--accent); color: white; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .main { grid-template-columns: 1fr; }
+    .panel-left { border-right: none; border-bottom: 1px solid #334; }
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <h1><span>LeanDeep</span> Marker Playground</h1>
+  <span class="version">v5.1-LD5</span>
+</div>
+
+<div class="tabs">
+  <div class="tab active" data-mode="text">Text</div>
+  <div class="tab" data-mode="conversation">Conversation</div>
+  <div class="tab" data-mode="upload">Upload .docx / .md / .txt</div>
+  <div class="tab" data-mode="dynamics">Dynamics</div>
+</div>
+
+<div class="main">
+  <div class="panel panel-left">
+    <h2>Input</h2>
+
+    <!-- Text mode -->
+    <div id="mode-text">
+      <textarea id="input-text" placeholder="Paste text here to analyze...&#10;&#10;Example: &quot;Du bist doch immer so empfindlich. Ich habe doch gar nichts Schlimmes gesagt.&quot;"></textarea>
+    </div>
+
+    <!-- Conversation mode -->
+    <div id="mode-conversation" style="display:none;">
+      <textarea id="input-conversation" placeholder="Enter conversation (Name: text format):&#10;&#10;A: Du bist doch immer so empfindlich.&#10;B: Das stimmt nicht, ich sage nur was mich st&ouml;rt.&#10;A: Siehst du, genau das meine ich. Du verdrehst alles.&#10;B: Ich verdrehe gar nichts..."></textarea>
+    </div>
+
+    <!-- Upload mode -->
+    <div id="mode-upload" style="display:none;">
+      <div class="upload-row">
+        <button class="btn btn-secondary" onclick="document.getElementById('file-input').click()">Choose File</button>
+        <input type="file" id="file-input" accept=".txt,.md,.docx">
+        <span id="file-name" style="font-size:0.85rem; color:var(--text-dim);">No file selected</span>
+      </div>
+      <textarea id="input-upload" placeholder="File contents will appear here..." style="margin-top:10px;"></textarea>
+    </div>
+
+    <!-- Dynamics mode -->
+    <div id="mode-dynamics" style="display:none;">
+      <textarea id="input-dynamics" placeholder="Enter conversation for dynamics analysis (Name: text format):&#10;&#10;A: Ich habe dir doch gesagt, dass das so nicht geht.&#10;B: Du h&ouml;rst mir nie zu.&#10;A: Das stimmt doch gar nicht, ich bin immer f&uuml;r dich da.&#10;B: Dann zeig es mal.&#10;A: Jetzt beruhige dich erstmal.&#10;B: Sag mir nicht, ich soll mich beruhigen!"></textarea>
+    </div>
+
+    <div class="controls">
+      <div class="control-row">
+        <label>Threshold:</label>
+        <input type="range" id="threshold" min="0" max="1" step="0.05" value="0.5">
+        <span class="threshold-val" id="threshold-val">0.50</span>
+      </div>
+      <div class="control-row">
+        <label>Layers:</label>
+        <div class="layer-toggles">
+          <label class="layer-toggle ato"><input type="checkbox" value="ATO" checked> ATO</label>
+          <label class="layer-toggle sem"><input type="checkbox" value="SEM" checked> SEM</label>
+          <label class="layer-toggle clu"><input type="checkbox" value="CLU" checked> CLU</label>
+          <label class="layer-toggle mema"><input type="checkbox" value="MEMA" checked> MEMA</label>
+        </div>
+      </div>
+      <div class="control-row">
+        <button class="btn btn-primary" id="btn-analyze">Analyze</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-right" id="results-panel">
+    <div class="placeholder" id="results-placeholder">Enter text and click Analyze to see results.</div>
+    <div id="results-content" style="display:none;">
+      <h2>Annotated Text</h2>
+      <div class="annotated-text" id="annotated-output"></div>
+      <div class="meta-section" id="meta-section" style="display:none;">
+        <h3>Meta Markers (CLU / MEMA)</h3>
+        <div id="meta-cards"></div>
+      </div>
+      <div class="marker-list">
+        <h3>All Detected Markers</h3>
+        <div id="marker-list"></div>
+      </div>
+    </div>
+
+    <!-- Dynamics results -->
+    <div id="dynamics-content" style="display:none;">
+      <h2>Emotion Dynamics</h2>
+
+      <div class="dynamics-section">
+        <h3>Annotated Conversation</h3>
+        <div id="dynamics-conversation"></div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>VAD Trajectory</h3>
+        <div class="vad-chart-container">
+          <canvas id="vad-chart"></canvas>
+        </div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>Emotion Timeline</h3>
+        <div id="emotion-timeline"></div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>State Indices</h3>
+        <div class="state-indices" id="state-indices"></div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>UED Metrics</h3>
+        <div class="ued-grid" id="ued-grid"></div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>Detected Markers</h3>
+        <div id="dynamics-marker-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar" id="stats-bar">
+  <div class="stat">Markers: <span class="stat-val" id="stat-markers">-</span></div>
+  <div class="stat">Time: <span class="stat-val" id="stat-time">-</span></div>
+  <div class="stat">Characters: <span class="stat-val" id="stat-chars">-</span></div>
+  <div class="stat">Layers: <span class="stat-val" id="stat-layers">-</span></div>
+</div>
+
+<div class="tooltip" id="tooltip" style="display:none;"></div>
+
+<script>
+(function() {
+  'use strict';
+
+  // --- State ---
+  let currentMode = 'text';
+  let debounceTimer = null;
+  let lastResponse = null;
+
+  // --- DOM refs ---
+  const $inputText = document.getElementById('input-text');
+  const $inputConv = document.getElementById('input-conversation');
+  const $inputUpload = document.getElementById('input-upload');
+  const $threshold = document.getElementById('threshold');
+  const $thresholdVal = document.getElementById('threshold-val');
+  const $btnAnalyze = document.getElementById('btn-analyze');
+  const $annotatedOutput = document.getElementById('annotated-output');
+  const $metaSection = document.getElementById('meta-section');
+  const $metaCards = document.getElementById('meta-cards');
+  const $markerList = document.getElementById('marker-list');
+  const $tooltip = document.getElementById('tooltip');
+  const $resultsPlaceholder = document.getElementById('results-placeholder');
+  const $resultsContent = document.getElementById('results-content');
+  const $fileInput = document.getElementById('file-input');
+  const $fileName = document.getElementById('file-name');
+
+  // --- Layer colors ---
+  const LAYER_PRIORITY = { MEMA: 4, CLU: 3, SEM: 2, ATO: 1 };
+
+  // --- Tab switching ---
+  const MODE_IDS = ['text', 'conversation', 'upload', 'dynamics'];
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentMode = tab.dataset.mode;
+      MODE_IDS.forEach(m => {
+        const el = document.getElementById('mode-' + m);
+        if (el) el.style.display = currentMode === m ? '' : 'none';
+      });
+    });
+  });
+
+  // --- Threshold slider ---
+  $threshold.addEventListener('input', () => {
+    $thresholdVal.textContent = parseFloat($threshold.value).toFixed(2);
+  });
+
+  // --- File upload ---
+  $fileInput.addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    $fileName.textContent = file.name;
+
+    if (file.name.endsWith('.txt') || file.name.endsWith('.md')) {
+      const reader = new FileReader();
+      reader.onload = () => { $inputUpload.value = reader.result; };
+      reader.readAsText(file);
+    } else if (file.name.endsWith('.docx')) {
+      const formData = new FormData();
+      formData.append('file', file);
+      try {
+        const resp = await fetch('/v1/upload', { method: 'POST', body: formData });
+        if (!resp.ok) throw new Error(await resp.text());
+        const data = await resp.json();
+        $inputUpload.value = data.text;
+      } catch (err) {
+        $inputUpload.value = 'Error extracting .docx: ' + err.message;
+      }
+    }
+  });
+
+  // --- DOM refs (dynamics) ---
+  const $inputDynamics = document.getElementById('input-dynamics');
+  const $dynamicsContent = document.getElementById('dynamics-content');
+  const $dynamicsConv = document.getElementById('dynamics-conversation');
+  const $stateIndices = document.getElementById('state-indices');
+  const $uedGrid = document.getElementById('ued-grid');
+  const $dynamicsMarkerList = document.getElementById('dynamics-marker-list');
+  let vadChart = null;
+
+  // --- Get active input text ---
+  function getInputText() {
+    if (currentMode === 'text') return $inputText.value;
+    if (currentMode === 'conversation') return $inputConv.value;
+    if (currentMode === 'upload') return $inputUpload.value;
+    if (currentMode === 'dynamics') return $inputDynamics.value;
+    return '';
+  }
+
+  function getSelectedLayers() {
+    return Array.from(document.querySelectorAll('.layer-toggle input:checked')).map(cb => cb.value);
+  }
+
+  // --- Parse conversation text ---
+  function parseConversation(text) {
+    const lines = text.split('\n').filter(l => l.trim());
+    const messages = [];
+    const rolePattern = /^([A-Za-z0-9_]+)\s*:\s*(.+)/;
+
+    // Try Name: text pattern first
+    let matched = 0;
+    for (const line of lines) {
+      const m = line.match(rolePattern);
+      if (m) { matched++; messages.push({ role: m[1], text: m[2] }); }
+    }
+
+    if (matched > 0) return messages;
+
+    // Fallback: double-newline split, alternating A/B
+    const blocks = text.split(/\n\s*\n/).filter(b => b.trim());
+    return blocks.map((b, i) => ({ role: i % 2 === 0 ? 'A' : 'B', text: b.trim() }));
+  }
+
+  // --- API calls ---
+  async function analyzeText(text, layers, threshold) {
+    const resp = await fetch('/v1/analyze', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, layers, threshold: parseFloat(threshold) }),
+    });
+    if (!resp.ok) throw new Error(await resp.text());
+    return resp.json();
+  }
+
+  async function analyzeConversation(messages, layers, threshold) {
+    const resp = await fetch('/v1/analyze/conversation', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages, layers, threshold: parseFloat(threshold) }),
+    });
+    if (!resp.ok) throw new Error(await resp.text());
+    return resp.json();
+  }
+
+  async function analyzeDynamics(messages, layers, threshold) {
+    const resp = await fetch('/v1/analyze/dynamics', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages, layers, threshold: parseFloat(threshold) }),
+    });
+    if (!resp.ok) throw new Error(await resp.text());
+    return resp.json();
+  }
+
+  // --- VAD Trajectory Chart ---
+  function renderVADChart(messageVAD) {
+    const ctx = document.getElementById('vad-chart').getContext('2d');
+    const labels = messageVAD.map((_, i) => 'Msg ' + (i + 1));
+
+    if (vadChart) {
+      vadChart.destroy();
+      vadChart = null;
+    }
+
+    vadChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: 'Valence',
+            data: messageVAD.map(v => v.valence),
+            borderColor: '#42a5f5',
+            backgroundColor: 'rgba(66, 165, 245, 0.1)',
+            borderWidth: 2,
+            pointRadius: 4,
+            pointBackgroundColor: '#42a5f5',
+            tension: 0.3,
+            fill: true,
+          },
+          {
+            label: 'Arousal',
+            data: messageVAD.map(v => v.arousal),
+            borderColor: '#ef5350',
+            backgroundColor: 'rgba(239, 83, 80, 0.05)',
+            borderWidth: 2,
+            borderDash: [6, 3],
+            pointRadius: 4,
+            pointBackgroundColor: '#ef5350',
+            tension: 0.3,
+            fill: false,
+          },
+          {
+            label: 'Dominance',
+            data: messageVAD.map(v => v.dominance),
+            borderColor: '#9e9e9e',
+            backgroundColor: 'rgba(158, 158, 158, 0.05)',
+            borderWidth: 1.5,
+            borderDash: [2, 4],
+            pointRadius: 3,
+            pointBackgroundColor: '#9e9e9e',
+            tension: 0.3,
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: {
+          mode: 'index',
+          intersect: false,
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: '#8899aa',
+              font: { size: 11 },
+              usePointStyle: true,
+              pointStyleWidth: 20,
+            },
+          },
+          tooltip: {
+            backgroundColor: '#1a1a2e',
+            borderColor: '#445',
+            borderWidth: 1,
+            titleColor: '#e0e0e0',
+            bodyColor: '#e0e0e0',
+            callbacks: {
+              label: function(ctx) {
+                return ctx.dataset.label + ': ' + ctx.parsed.y.toFixed(3);
+              },
+            },
+          },
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(255,255,255,0.05)' },
+            ticks: { color: '#8899aa', font: { size: 10 } },
+          },
+          y: {
+            min: -1,
+            max: 1,
+            grid: { color: 'rgba(255,255,255,0.08)' },
+            ticks: {
+              color: '#8899aa',
+              font: { size: 10 },
+              stepSize: 0.25,
+            },
+          },
+        },
+      },
+    });
+  }
+
+  // --- State Index Gauges ---
+  function renderStateIndices(si) {
+    const gauges = [
+      { key: 'trust', label: 'Trust', color: '#4caf50', colorNeg: '#f44336' },
+      { key: 'conflict', label: 'Conflict', color: '#f44336', colorNeg: '#4caf50' },
+      { key: 'deesc', label: 'De-escalation', color: '#42a5f5', colorNeg: '#ff9800' },
+    ];
+
+    $stateIndices.innerHTML = gauges.map(g => {
+      const val = si[g.key];
+      const pct = Math.abs(val) * 50; // 0-50% from center
+      const isPositive = val >= 0;
+      const barColor = isPositive ? g.color : g.colorNeg;
+
+      // For the bar: if positive, fill from center to right; if negative, fill from left to center
+      let barStyle;
+      if (isPositive) {
+        barStyle = `left: 50%; width: ${pct}%; background: ${barColor};`;
+      } else {
+        barStyle = `right: 50%; width: ${pct}%; background: ${barColor};`;
+      }
+
+      return `<div class="state-gauge">
+        <div class="sg-header">
+          <span class="sg-label">${g.label}</span>
+          <span class="sg-value" style="color: ${barColor}">${val >= 0 ? '+' : ''}${val.toFixed(2)}</span>
+        </div>
+        <div class="sg-bar-track">
+          <div class="sg-bar-center"></div>
+          <div class="sg-bar-fill" style="${barStyle}"></div>
+        </div>
+      </div>`;
+    }).join('');
+
+    // Add contributing markers count
+    if (si.contributing_markers !== undefined) {
+      $stateIndices.innerHTML += `<div style="font-size: 0.75rem; color: var(--text-dim); text-align: right; margin-top: 2px;">Based on ${si.contributing_markers} contributing markers</div>`;
+    }
+  }
+
+  // --- UED Metric Cards ---
+  function renderUEDMetrics(ued) {
+    if (!ued) {
+      $uedGrid.innerHTML = '<div class="dynamics-placeholder">No UED metrics available (need 3+ messages)</div>';
+      return;
+    }
+
+    const cards = [
+      {
+        label: 'Home Base',
+        value: `V ${ued.home_base.valence.toFixed(2)}`,
+        sub: `A ${ued.home_base.arousal.toFixed(2)} / D ${ued.home_base.dominance.toFixed(2)}`,
+        color: '#42a5f5',
+      },
+      {
+        label: 'Variability',
+        value: `V ${ued.variability.valence.toFixed(2)}`,
+        sub: `A ${ued.variability.arousal.toFixed(2)}`,
+        color: variabilityColor(ued.variability.valence),
+      },
+      {
+        label: 'Instability',
+        value: `V ${ued.instability.valence.toFixed(2)}`,
+        sub: `A ${ued.instability.arousal.toFixed(2)}`,
+        color: variabilityColor(ued.instability.valence),
+      },
+      {
+        label: 'Rise Rate',
+        value: ued.rise_rate.toFixed(3),
+        sub: 'Escalation speed',
+        color: rateColor(ued.rise_rate),
+      },
+      {
+        label: 'Recovery Rate',
+        value: ued.recovery_rate.toFixed(3),
+        sub: 'De-escalation speed',
+        color: rateColor(ued.recovery_rate, true),
+      },
+      {
+        label: 'Density',
+        value: (ued.density * 100).toFixed(0) + '%',
+        sub: 'Marker saturation',
+        color: densityColor(ued.density),
+      },
+    ];
+
+    $uedGrid.innerHTML = cards.map(c => `
+      <div class="ued-card" style="border-left-color: ${c.color};">
+        <div class="uc-label">${c.label}</div>
+        <div class="uc-value" style="color: ${c.color};">${c.value}</div>
+        <div class="uc-sub">${c.sub}</div>
+      </div>
+    `).join('');
+  }
+
+  function variabilityColor(v) {
+    if (v <= 0.15) return '#4caf50';
+    if (v <= 0.35) return '#ff9800';
+    return '#f44336';
+  }
+
+  function rateColor(r, invertGood) {
+    if (invertGood) {
+      // Higher recovery is better
+      if (r >= 0.1) return '#4caf50';
+      if (r >= 0.05) return '#ff9800';
+      return '#f44336';
+    }
+    // Higher rise rate is worse
+    if (r <= 0.05) return '#4caf50';
+    if (r <= 0.12) return '#ff9800';
+    return '#f44336';
+  }
+
+  function densityColor(d) {
+    if (d <= 0.3) return '#4caf50';
+    if (d <= 0.6) return '#ff9800';
+    return '#f44336';
+  }
+
+  // --- Emotion colors ---
+  const EMOTION_COLORS = {
+    ANGER: '#ef5350', SADNESS: '#42a5f5', FEAR: '#ab47bc',
+    JOY: '#66bb6a', LOVE: '#ec407a', SURPRISE: '#ffa726',
+  };
+
+  // --- Render emotion timeline ---
+  function renderEmotionTimeline(emotions, messages) {
+    const $el = document.getElementById('emotion-timeline');
+    if (!emotions || emotions.length === 0) {
+      $el.innerHTML = '<div class="dynamics-placeholder">No emotion data available</div>';
+      return;
+    }
+
+    // Legend
+    let html = '<div class="emotion-legend">';
+    for (const [emo, color] of Object.entries(EMOTION_COLORS)) {
+      html += `<div class="el-item"><div class="el-dot" style="background:${color};"></div>${emo[0] + emo.slice(1).toLowerCase()}</div>`;
+    }
+    html += '</div>';
+
+    // Per-message bars
+    for (let i = 0; i < emotions.length; i++) {
+      const e = emotions[i];
+      if (!e) {
+        html += `<div class="emotion-row">
+          <span class="er-msg">${i + 1}</span>
+          <div class="er-bar-track"><div style="flex:1;display:flex;align-items:center;justify-content:center;font-size:0.72rem;color:var(--text-dim);">—</div></div>
+          <span class="er-dominant" style="color:var(--text-dim);">n/a</span>
+          <span class="er-score">—</span>
+        </div>`;
+        continue;
+      }
+
+      const scores = e.scores || {};
+      const dominant = e.dominant || '';
+      const dominantScore = e.dominant_score || 0;
+      const dominantColor = EMOTION_COLORS[dominant] || '#888';
+
+      // Build stacked bar segments (only show emotions with > 5% score)
+      const sorted = Object.entries(scores)
+        .filter(([, v]) => v > 0.05)
+        .sort((a, b) => b[1] - a[1]);
+
+      let segments = '';
+      for (const [emo, score] of sorted) {
+        const color = EMOTION_COLORS[emo] || '#555';
+        const pct = (score * 100).toFixed(1);
+        segments += `<div class="er-segment" style="width:${pct}%;background:${color};" title="${emo}: ${pct}%"></div>`;
+      }
+
+      // Role indicator
+      const role = messages && messages[i] ? messages[i].role : '';
+      const roleColor = i % 2 === 0 ? '#42a5f5' : '#ef5350';
+
+      html += `<div class="emotion-row">
+        <span class="er-msg" style="color:${roleColor};">${role || (i + 1)}</span>
+        <div class="er-bar-track">${segments}</div>
+        <span class="er-dominant" style="color:${dominantColor};">${dominant[0] + dominant.slice(1).toLowerCase()}</span>
+        <span class="er-score">${(dominantScore * 100).toFixed(0)}%</span>
+      </div>`;
+    }
+
+    $el.innerHTML = html;
+  }
+
+  // --- Render dynamics marker list ---
+  function renderDynamicsMarkerList(markers) {
+    $dynamicsMarkerList.innerHTML = markers.map(m => {
+      const pct = (m.confidence * 100).toFixed(0);
+      return `<div class="marker-item">
+        <span class="mi-conf" style="color: ${confColor(m.confidence)}">${pct}%</span>
+        <span class="tt-badge ${m.layer}">${m.layer}</span>
+        <span class="mi-id">${escapeHTML(m.id)}</span>
+        ${m.message_indices && m.message_indices.length ? `<span style="font-size:0.72rem;color:var(--text-dim);margin-left:auto;">msg ${m.message_indices.join(', ')}</span>` : ''}
+      </div>`;
+    }).join('');
+  }
+
+  // --- Run dynamics analysis ---
+  async function runDynamicsAnalysis() {
+    const text = getInputText().trim();
+    if (!text) return;
+
+    const messages = parseConversation(text);
+    if (messages.length === 0) {
+      $dynamicsContent.style.display = '';
+      $resultsPlaceholder.style.display = 'none';
+      $resultsContent.style.display = 'none';
+      $dynamicsContent.innerHTML = '<div class="dynamics-placeholder">Could not parse conversation. Use "Name: text" format.</div>';
+      return;
+    }
+
+    const layers = getSelectedLayers();
+    const threshold = $threshold.value;
+
+    $btnAnalyze.disabled = true;
+    $btnAnalyze.innerHTML = '<span class="loading"></span>Analyzing Dynamics...';
+
+    try {
+      const response = await analyzeDynamics(messages, layers, threshold);
+      lastResponse = response;
+
+      $resultsPlaceholder.style.display = 'none';
+      $resultsContent.style.display = 'none';
+      $dynamicsContent.style.display = '';
+
+      // Render annotated conversation
+      $dynamicsConv.innerHTML = buildConversationHTML(messages, response);
+
+      // Render VAD trajectory
+      if (response.message_vad && response.message_vad.length > 0) {
+        renderVADChart(response.message_vad);
+      }
+
+      // Render emotion timeline
+      renderEmotionTimeline(response.message_emotions || [], messages);
+
+      // Render state indices
+      if (response.state_indices) {
+        renderStateIndices(response.state_indices);
+      }
+
+      // Render UED metrics
+      renderUEDMetrics(response.ued_metrics);
+
+      // Render marker list for dynamics
+      renderDynamicsMarkerList(response.markers || []);
+
+      // Update stats
+      updateStats(response.meta);
+    } catch (err) {
+      $dynamicsContent.style.display = '';
+      $resultsPlaceholder.style.display = 'none';
+      $resultsContent.style.display = 'none';
+      $dynamicsContent.querySelector('.dynamics-section').innerHTML =
+        `<div class="dynamics-placeholder" style="color:var(--accent);">Error: ${escapeHTML(err.message)}</div>`;
+    } finally {
+      $btnAnalyze.disabled = false;
+      $btnAnalyze.textContent = 'Analyze';
+    }
+  }
+
+  // --- Build annotated HTML ---
+  function buildAnnotatedHTML(text, markers) {
+    // Collect all spans from ATO/SEM markers (CLU/MEMA have no text spans)
+    const spans = [];
+    for (const marker of markers) {
+      if (marker.layer === 'CLU' || marker.layer === 'MEMA') continue;
+      if (!marker.matches) continue;
+      for (const match of marker.matches) {
+        const [s, e] = match.span;
+        spans.push({
+          start: s, end: e,
+          origStart: s, origEnd: e,
+          marker,
+          matchedText: match.matched_text,
+        });
+      }
+    }
+
+    if (spans.length === 0) return escapeHTML(text);
+
+    // Build character-level marker coverage map
+    const charMarkers = new Array(text.length).fill(null).map(() => []);
+    for (const sp of spans) {
+      for (let i = sp.start; i < Math.min(sp.end, text.length); i++) {
+        charMarkers[i].push(sp);
+      }
+    }
+
+    // Build runs of characters with the same marker set
+    let html = '';
+    let i = 0;
+    while (i < text.length) {
+      const markersHere = charMarkers[i];
+      if (markersHere.length === 0) {
+        // Unmarked character — collect run
+        let j = i;
+        while (j < text.length && charMarkers[j].length === 0) j++;
+        html += escapeHTML(text.slice(i, j));
+        i = j;
+      } else {
+        // Find highest-priority layer span
+        const best = markersHere.reduce((a, b) =>
+          (LAYER_PRIORITY[b.marker.layer] || 0) > (LAYER_PRIORITY[a.marker.layer] || 0) ? b : a
+        );
+        const layer = best.marker.layer;
+        // Collect run with same primary marker
+        let j = i;
+        while (j < text.length && charMarkers[j].length > 0) {
+          const bestJ = charMarkers[j].reduce((a, b) =>
+            (LAYER_PRIORITY[b.marker.layer] || 0) > (LAYER_PRIORITY[a.marker.layer] || 0) ? b : a
+          );
+          if (bestJ.marker.id !== best.marker.id) break;
+          j++;
+        }
+
+        // Gather all marker data for this span (for tooltip)
+        const allMarkersInSpan = new Map();
+        for (let k = i; k < j; k++) {
+          for (const sp of charMarkers[k]) {
+            allMarkersInSpan.set(sp.marker.id, sp);
+          }
+        }
+        const dataMarkers = JSON.stringify(
+          Array.from(allMarkersInSpan.values()).map(sp => ({
+            id: sp.marker.id,
+            layer: sp.marker.layer,
+            confidence: sp.marker.confidence,
+            description: sp.marker.description,
+            family: sp.marker.family,
+            matchedText: sp.matchedText,
+          }))
+        );
+
+        html += `<span class="marker-span layer-${layer}" data-markers='${dataMarkers.replace(/'/g, "&#39;")}'>${escapeHTML(text.slice(i, j))}</span>`;
+        i = j;
+      }
+    }
+    return html;
+  }
+
+  function escapeHTML(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  // --- Build annotated conversation HTML ---
+  function buildConversationHTML(messages, response) {
+    let html = '';
+    const markersByMsg = {};
+    const emotions = response.message_emotions || [];
+
+    for (const m of response.markers) {
+      if (m.message_indices) {
+        for (const idx of m.message_indices) {
+          (markersByMsg[idx] = markersByMsg[idx] || []).push(m);
+        }
+      }
+    }
+
+    for (let i = 0; i < messages.length; i++) {
+      const msg = messages[i];
+      const roleClass = i % 2 === 0 ? 'role-a' : 'role-b';
+      const msgMarkers = markersByMsg[i] || [];
+
+      // Build annotated text using exact match spans
+      const atoSemMarkers = msgMarkers.filter(m =>
+        (m.layer === 'ATO' || m.layer === 'SEM') && m.matches && m.matches.length
+      );
+
+      let textHTML;
+      if (atoSemMarkers.length > 0) {
+        textHTML = buildAnnotatedHTML(msg.text, atoSemMarkers);
+      } else {
+        textHTML = escapeHTML(msg.text);
+      }
+
+      // CLU/MEMA shown as badges on the role line
+      const metaBadges = msgMarkers
+        .filter(m => m.layer === 'CLU' || m.layer === 'MEMA')
+        .map(m => `<span class="tt-badge ${m.layer}" title="${escapeHTML(m.description)}">${escapeHTML(m.id.replace(/^(CLU|MEMA)_/, ''))}</span>`)
+        .join(' ');
+
+      // Emotion chip for this message
+      let emotionChip = '';
+      const emo = emotions[i];
+      if (emo && emo.dominant) {
+        const eColor = EMOTION_COLORS[emo.dominant] || '#888';
+        const ePct = ((emo.dominant_score || 0) * 100).toFixed(0);
+        emotionChip = ` <span style="font-size:0.68rem;padding:1px 6px;border-radius:3px;background:${eColor}22;color:${eColor};border:1px solid ${eColor}44;font-weight:600;">${emo.dominant[0] + emo.dominant.slice(1).toLowerCase()} ${ePct}%</span>`;
+      }
+
+      html += `<div class="conv-message ${roleClass}">
+        <div class="cm-role">${escapeHTML(msg.role)} ${metaBadges}${emotionChip}</div>
+        <div class="cm-text annotated-text">${textHTML}</div>
+      </div>`;
+    }
+    return html;
+  }
+
+  // --- Render meta cards (CLU/MEMA) ---
+  function renderMetaCards(markers) {
+    const metas = markers.filter(m => m.layer === 'CLU' || m.layer === 'MEMA');
+    if (metas.length === 0) {
+      $metaSection.style.display = 'none';
+      return;
+    }
+    $metaSection.style.display = '';
+    $metaCards.innerHTML = metas.map(m => `
+      <div class="meta-card layer-${m.layer}">
+        <div class="mc-header">
+          <span class="mc-id">${escapeHTML(m.id)}</span>
+          <span class="mc-conf">${(m.confidence * 100).toFixed(0)}%</span>
+        </div>
+        <div class="mc-desc">${escapeHTML(m.description || '')}</div>
+        ${m.family ? `<div class="mc-family">Family: ${escapeHTML(m.family)}${m.multiplier ? ` (${m.multiplier}x)` : ''}</div>` : ''}
+        ${m.message_indices && m.message_indices.length ? `<div class="mc-family">Messages: ${m.message_indices.join(', ')}</div>` : ''}
+      </div>
+    `).join('');
+  }
+
+  // --- Render marker list ---
+  function renderMarkerList(markers) {
+    $markerList.innerHTML = markers.map(m => {
+      const pct = (m.confidence * 100).toFixed(0);
+      const layerClass = `layer-${m.layer}`;
+      return `<div class="marker-item" data-marker-id="${escapeHTML(m.id)}">
+        <span class="mi-conf" style="color: ${confColor(m.confidence)}">${pct}%</span>
+        <span class="tt-badge ${m.layer}">${m.layer}</span>
+        <span class="mi-id">${escapeHTML(m.id)}</span>
+      </div>`;
+    }).join('');
+  }
+
+  function confColor(c) {
+    if (c >= 0.8) return '#4caf50';
+    if (c >= 0.6) return '#ff9800';
+    return '#f44336';
+  }
+
+  // --- Update stats ---
+  function updateStats(meta) {
+    document.getElementById('stat-markers').textContent = meta.markers_detected;
+    document.getElementById('stat-time').textContent = meta.processing_ms.toFixed(1) + 'ms';
+    document.getElementById('stat-chars').textContent = meta.text_length;
+    document.getElementById('stat-layers').textContent = meta.layers_scanned.join(', ');
+  }
+
+  // --- Tooltip ---
+  document.addEventListener('mouseover', (e) => {
+    const span = e.target.closest('.marker-span');
+    if (!span) { $tooltip.style.display = 'none'; return; }
+
+    try {
+      const markers = JSON.parse(span.dataset.markers);
+      if (!markers.length) return;
+
+      let html = markers.map(m => `
+        <div class="tt-id">${escapeHTML(m.id)}</div>
+        <div class="tt-row"><span class="tt-label">Layer:</span> <span class="tt-badge ${m.layer}">${m.layer}</span></div>
+        <div class="tt-row"><span class="tt-label">Confidence:</span> ${(m.confidence * 100).toFixed(0)}%</div>
+        ${m.description ? `<div class="tt-row"><span class="tt-label">Description:</span> ${escapeHTML(m.description)}</div>` : ''}
+        ${m.family ? `<div class="tt-row"><span class="tt-label">Family:</span> ${escapeHTML(m.family)}</div>` : ''}
+        ${m.matchedText ? `<div class="tt-match">"${escapeHTML(m.matchedText)}"</div>` : ''}
+      `).join('<hr style="border:none;border-top:1px solid #334;margin:6px 0;">');
+
+      $tooltip.innerHTML = html;
+      $tooltip.style.display = 'block';
+    } catch (err) { /* ignore parse errors */ }
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if ($tooltip.style.display === 'block') {
+      const x = Math.min(e.clientX + 12, window.innerWidth - 400);
+      const y = Math.min(e.clientY + 12, window.innerHeight - 200);
+      $tooltip.style.left = x + 'px';
+      $tooltip.style.top = y + 'px';
+    }
+  });
+
+  document.addEventListener('mouseout', (e) => {
+    if (!e.target.closest('.marker-span')) $tooltip.style.display = 'none';
+  });
+
+  // --- Main analyze function ---
+  async function runAnalysis() {
+    // Route dynamics mode to its own handler
+    if (currentMode === 'dynamics') {
+      return runDynamicsAnalysis();
+    }
+
+    const text = getInputText().trim();
+    if (!text) return;
+
+    const layers = getSelectedLayers();
+    const threshold = $threshold.value;
+
+    $btnAnalyze.disabled = true;
+    $btnAnalyze.innerHTML = '<span class="loading"></span>Analyzing...';
+
+    // Hide dynamics panel when running non-dynamics analysis
+    $dynamicsContent.style.display = 'none';
+
+    try {
+      let response;
+      if (currentMode === 'conversation') {
+        const messages = parseConversation(text);
+        if (messages.length === 0) {
+          $annotatedOutput.innerHTML = '<div class="placeholder">Could not parse conversation. Use "Name: text" format.</div>';
+          return;
+        }
+        response = await analyzeConversation(messages, layers, threshold);
+        lastResponse = response;
+
+        $resultsPlaceholder.style.display = 'none';
+        $resultsContent.style.display = '';
+
+        $annotatedOutput.innerHTML = buildConversationHTML(messages, response);
+        renderMetaCards(response.markers);
+        renderMarkerList(response.markers);
+        updateStats(response.meta);
+      } else {
+        response = await analyzeText(text, layers, threshold);
+        lastResponse = response;
+
+        $resultsPlaceholder.style.display = 'none';
+        $resultsContent.style.display = '';
+
+        $annotatedOutput.innerHTML = buildAnnotatedHTML(text, response.markers);
+        renderMetaCards(response.markers);
+        renderMarkerList(response.markers);
+        updateStats(response.meta);
+      }
+    } catch (err) {
+      $annotatedOutput.innerHTML = `<div class="placeholder" style="color:var(--accent);">Error: ${escapeHTML(err.message)}</div>`;
+    } finally {
+      $btnAnalyze.disabled = false;
+      $btnAnalyze.textContent = 'Analyze';
+    }
+  }
+
+  // --- Event listeners ---
+  $btnAnalyze.addEventListener('click', runAnalysis);
+
+  // Real-time analysis with 300ms debounce
+  function debounceAnalyze() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      if (getInputText().trim().length > 3) runAnalysis();
+    }, 300);
+  }
+
+  $inputText.addEventListener('input', debounceAnalyze);
+  $inputConv.addEventListener('input', debounceAnalyze);
+  $inputUpload.addEventListener('input', debounceAnalyze);
+  $inputDynamics.addEventListener('input', debounceAnalyze);
+
+  // Keyboard shortcut: Ctrl/Cmd+Enter to analyze
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+      e.preventDefault();
+      runAnalysis();
+    }
+  });
+
+})();
+</script>
+</body>
+</html>

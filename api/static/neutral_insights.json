@@ -1,0 +1,442 @@
+{
+  "ATO_ABANDONMENT_ANXIETY": {
+    "insight": "Ausdruck von Verlustangst und Trennungssorge",
+    "observable": "Wiederholte Erwähnung von Verlassen-werden oder Alleinsein"
+  },
+  "ATO_ACCUSATION_OF_CONTROL": {
+    "insight": "Wahrnehmung von Einschränkung oder Fremdbestimmung",
+    "observable": "Formulierungen, die das Erleben von Kontrolle durch andere beschreiben"
+  },
+  "ATO_ANGER_RAGE": {
+    "insight": "Ausdruck intensiver Unzufriedenheit oder Frustration",
+    "observable": "Starke emotionale Sprache mit hoher Erregung"
+  },
+  "ATO_BLAME_SHIFT": {
+    "insight": "Verlagerung der Verantwortung auf eine andere Person",
+    "observable": "Sprache, die Ursachen beim Gegenüber verortet"
+  },
+  "ATO_BLAME_SHIFT_MARKER": {
+    "insight": "Verantwortungszuschreibung in Richtung des Gegenübers",
+    "observable": "Formulierungen, die Schuld externalisieren"
+  },
+  "ATO_CONTROL": {
+    "insight": "Ausdruck von Bestimmungsversuchen im Gespräch",
+    "observable": "Anweisende oder einschränkende Formulierungen"
+  },
+  "ATO_CONTROL_PHRASES": {
+    "insight": "Direktive Sprache mit Steuerungsabsicht",
+    "observable": "Formulierungen, die Handlungsanweisungen enthalten"
+  },
+  "ATO_DEESCALATION_OFFER": {
+    "insight": "Aktives Angebot zur Beruhigung der Situation",
+    "observable": "Vorschläge zur Entspannung oder Versöhnung"
+  },
+  "ATO_DEESCALATION_PHRASE": {
+    "insight": "Beruhigende oder beschwichtigende Formulierung",
+    "observable": "Sprachliche Signale zur Reduzierung von Spannung"
+  },
+  "ATO_DENIAL": {
+    "insight": "Zurückweisung eines Vorwurfs oder einer Behauptung",
+    "observable": "Explizite Verneinungs- oder Abstreitformulierungen"
+  },
+  "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE": {
+    "insight": "Verwendung absoluter Ausdrücke ohne Abstufung",
+    "observable": "Wörter wie 'immer', 'nie', 'alles', 'nichts' ohne Relativierung"
+  },
+  "ATO_DEPRESSION_NEGATIVE_EMOTIONS": {
+    "insight": "Ausdruck negativer Gefühle und Stimmungen",
+    "observable": "Häufung von Wörtern, die Traurigkeit oder Hoffnungslosigkeit ausdrücken"
+  },
+  "ATO_DEPRESSION_PAST_FOCUS": {
+    "insight": "Starker Bezug auf vergangene Ereignisse",
+    "observable": "Vermehrte Nutzung von Vergangenheitsformen und Rückblicken"
+  },
+  "ATO_DEPRESSION_SELF_FOCUS": {
+    "insight": "Erhöhte Selbstbezüglichkeit in der Sprache",
+    "observable": "Häufige Verwendung von Ich-Pronomen"
+  },
+  "ATO_DEPRESSION_SUICIDE_RISK": {
+    "insight": "Äußerungen, die auf akute Belastung hinweisen",
+    "observable": "Sprache, die Hoffnungslosigkeit oder Ausweglosigkeit ausdrückt"
+  },
+  "ATO_ESCALATION_LEXICON": {
+    "insight": "Wörter oder Phrasen, die Intensivierung andeuten",
+    "observable": "Sprachliche Signale für zunehmende Anspannung"
+  },
+  "ATO_FEAR_ANXIETY": {
+    "insight": "Ausdruck von Sorge, Angst oder Beunruhigung",
+    "observable": "Sprache, die Unsicherheit und Bedrohungserleben vermittelt"
+  },
+  "ATO_GOTTMAN_CONTEMPT": {
+    "insight": "Herabsetzende oder spöttische Kommunikation",
+    "observable": "Ironie, Sarkasmus oder Überlegenheitsgestik in der Sprache"
+  },
+  "ATO_GOTTMAN_STONEWALL": {
+    "insight": "Rückzug aus dem Gespräch oder Kommunikationsverweigerung",
+    "observable": "Signale für emotionalen Rückzug oder Schweigen"
+  },
+  "ATO_GUILT_APPEAL_SUPPORT": {
+    "insight": "Appell an das Pflichtgefühl des Gegenübers",
+    "observable": "Sprache, die moralischen Druck durch Schuldgefühle aufbaut"
+  },
+  "ATO_GUILT_TRIP": {
+    "insight": "Erzeugung von Schuldgefühlen beim Gegenüber",
+    "observable": "Formulierungen, die implizit Vorwürfe machen"
+  },
+  "ATO_GUILT_WORD": {
+    "insight": "Wörter aus dem semantischen Feld Schuld",
+    "observable": "Vorkommen schuldbezogener Begriffe"
+  },
+  "ATO_JEALOUSY_ENVY": {
+    "insight": "Ausdruck von Eifersucht oder Neidempfinden",
+    "observable": "Sprache, die Besitzansprüche oder Vergleichsleid ausdrückt"
+  },
+  "ATO_PITY_APPEAL": {
+    "insight": "Appell an das Mitgefühl des Gegenübers",
+    "observable": "Betonung eigener Leidensposition"
+  },
+  "ATO_RECURSIVE_HELPLESSNESS": {
+    "insight": "Wiederkehrendes Muster von Hilflosigkeitsäußerungen",
+    "observable": "Zyklische Formulierungen über fehlende Handlungsmöglichkeiten"
+  },
+  "ATO_SADNESS_GRIEF": {
+    "insight": "Ausdruck von Trauer oder tiefer Traurigkeit",
+    "observable": "Sprache, die Verlust und emotionalen Schmerz vermittelt"
+  },
+  "ATO_SHAME": {
+    "insight": "Ausdruck von Schamerleben",
+    "observable": "Sprache, die Minderwertigkeitsgefühle oder Bloßstellung andeutet"
+  },
+  "ATO_SHAME_GUILT": {
+    "insight": "Gemischtes Erleben von Scham und Schuld",
+    "observable": "Kombination aus Selbstabwertung und Verantwortungsübernahme"
+  },
+  "ATO_SUBSTANCE_DENIAL": {
+    "insight": "Zurückweisung von Bedenken bezüglich Substanzkonsum",
+    "observable": "Bagatellisierende oder abstreitende Formulierungen"
+  },
+  "ATO_THREAT_LANGUAGE": {
+    "insight": "Sprache, die negative Konsequenzen ankündigt",
+    "observable": "Formulierungen mit Drohcharakter oder Ultimatumsstruktur"
+  },
+  "ATO_VICTIM_LANGUAGE": {
+    "insight": "Selbstpositionierung als leidtragende Person",
+    "observable": "Sprache, die eigene Hilflosigkeit und fremde Schuld betont"
+  },
+  "CLU_ATTACHMENT_STYLE_AVOIDANT_MARKER": {
+    "insight": "Muster vermeidender Bindungskommunikation",
+    "observable": "Wiederholter emotionaler Rückzug bei Näheversuchen"
+  },
+  "CLU_CONFLICT_ESCALATION": {
+    "insight": "Zunahme von Konfliktsignalen über mehrere Nachrichten",
+    "observable": "Steigende Intensität und Häufung von Vorwürfen"
+  },
+  "CLU_CONTROL_PATTERN": {
+    "insight": "Wiederkehrendes Muster direktiver Kommunikation",
+    "observable": "Häufung von Anweisungen und Einschränkungen"
+  },
+  "CLU_DIGITAL_MANIPULATION": {
+    "insight": "Strategischer Einsatz digitaler Kommunikationsmittel",
+    "observable": "Muster im Timing, Plattformwechsel oder Verfügbarkeit"
+  },
+  "CLU_FAMILY_HIERARCHY_CONFLICT": {
+    "insight": "Spannungen um Rollen und Zuständigkeiten in der Familie",
+    "observable": "Häufung von Autoritäts- und Zuständigkeitskonflikten"
+  },
+  "CLU_GASLIGHTING_SEQUENCE": {
+    "insight": "Sequenz von Realitätsverschiebung und Verantwortungsumkehr",
+    "observable": "Aufeinanderfolge von Wahrnehmungsrelativierung und Gegenbeschuldigung"
+  },
+  "CLU_GOTTMAN_TOXICITY_CLUSTER": {
+    "insight": "Häufung belastender Kommunikationsmuster",
+    "observable": "Kombination aus Kritik, Verachtung, Abwehr und Rückzug"
+  },
+  "CLU_HEATED_CONFLICT": {
+    "insight": "Erhöhte Spannung im Gespräch",
+    "observable": "Häufung von Vorwürfen, Abwehr oder eskalierenden Formulierungen"
+  },
+  "CLU_HOSTILE_DETACHED": {
+    "insight": "Muster aus Feindseligkeit gefolgt von Rückzug",
+    "observable": "Wechsel zwischen aggressiver und distanzierter Kommunikation"
+  },
+  "CLU_HOUSEHOLD_ROUTINE_CONFLICTS": {
+    "insight": "Wiederkehrende Konflikte um Alltagsorganisation",
+    "observable": "Häufung von Auseinandersetzungen über Haushaltsthemen"
+  },
+  "CLU_INTUITION_CONFLICT": {
+    "insight": "Gesamteindruck einer konflikthaften Dynamik",
+    "observable": "Mehrere Konfliktsignale verdichten sich zu einem Muster"
+  },
+  "CLU_INTUITION_GRIEF": {
+    "insight": "Gesamteindruck tiefer Trauer oder Verlustverarbeitung",
+    "observable": "Mehrere Trauersignale verdichten sich zu einem Muster"
+  },
+  "CLU_NEEDINESS_GUILT_BIND": {
+    "insight": "Muster aus Bedürftigkeitsappell und Schuldgefühlserzeugung",
+    "observable": "Kombination von Hilferufen mit moralischem Druck"
+  },
+  "CLU_PREEMPTIVE_VICTIMIZATION": {
+    "insight": "Präventive Selbstpositionierung als betroffene Person",
+    "observable": "Frühzeitiges Einnehmen einer Leidensposition"
+  },
+  "CLU_PSYCHOLOGICAL_DIGITAL_MANIPULATION": {
+    "insight": "Psychologische Einflussnahme über digitale Kanäle",
+    "observable": "Systematische Nutzung digitaler Kommunikation zur Beeinflussung"
+  },
+  "CLU_SHAME_ALERT_TEXT": {
+    "insight": "Hinweis auf Scham-Dynamik im Gesprächsverlauf",
+    "observable": "Verdichtung schamrelevanter Signale in Textsequenzen"
+  },
+  "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT": {
+    "insight": "Konstruktiver Konflikt ohne persönliche Angriffe",
+    "observable": "Sachbezogene Auseinandersetzung trotz Spannung"
+  },
+  "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT": {
+    "insight": "Respektvolle Kommunikation trotz Meinungsverschiedenheit",
+    "observable": "Fehlende Herabsetzungen im Konfliktkontext"
+  },
+  "MEMA_ABSENCE_OF_EMOTION_LABELS_IN_CONFLICT": {
+    "insight": "Fehlende emotionale Benennung im Konflikt",
+    "observable": "Konfliktkommunikation ohne explizite Gefühlsaussagen"
+  },
+  "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT": {
+    "insight": "Unklare Zielvorstellungen im Konfliktverlauf",
+    "observable": "Fehlende Lösungsvorschläge oder Zielformulierungen"
+  },
+  "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT": {
+    "insight": "Fehlende Übernahme eigener Anteile im Konflikt",
+    "observable": "Keine Ich-Aussagen zu eigenem Verhalten"
+  },
+  "MEMA_ABSENCE_OF_SELF_REFERENCE_IN_CONFLICT": {
+    "insight": "Fehlende Selbstbezüge im Konfliktverlauf",
+    "observable": "Ausschließlich Fremdbezüge ohne Reflexion der eigenen Position"
+  },
+  "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT": {
+    "insight": "Konstruktiver Konflikt ohne Drohungen",
+    "observable": "Keine Ankündigung negativer Konsequenzen"
+  },
+  "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT": {
+    "insight": "Offener Dialog ohne ultimative Forderungen",
+    "observable": "Fehlende Entweder-Oder-Formulierungen"
+  },
+  "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT": {
+    "insight": "Fehlende emotionale Öffnung im Konflikt",
+    "observable": "Keine Verletzlichkeitsäußerungen trotz Spannung"
+  },
+  "MEMA_ATTACHMENT_PROFILE_MARKER": {
+    "insight": "Erkennbares Bindungsmuster in der Kommunikation",
+    "observable": "Konsistente Muster im Umgang mit Nähe und Distanz"
+  },
+  "MEMA_AVOIDANCE_PATTERN_ESCALATION": {
+    "insight": "Zunehmende Vermeidung als Reaktionsmuster",
+    "observable": "Wachsender emotionaler Rückzug über den Gesprächsverlauf"
+  },
+  "MEMA_CONFLICT_RESOLUTION_PATTERN": {
+    "insight": "Muster der Konfliktlösung im Gespräch",
+    "observable": "Erkennbare Strategie zur Beilegung der Auseinandersetzung"
+  },
+  "MEMA_CONTROLLER": {
+    "insight": "Kommunikationsmuster mit starkem Steuerungsanteil",
+    "observable": "Häufung von Anweisungen, Einschränkungen und Bestimmungsversuchen"
+  },
+  "MEMA_DESTRUCTIVE_CONFLICT_DYNAMICS_MARKER": {
+    "insight": "Sich gegenseitig verstärkende Konfliktmuster",
+    "observable": "Eskalationsspirale mit zunehmender Intensität"
+  },
+  "MEMA_DIGITAL_PRESENCE_MANIPULATION": {
+    "insight": "Strategischer Umgang mit digitaler Erreichbarkeit",
+    "observable": "Muster bei Online-Status, Lesebestätigungen oder Antwortzeiten"
+  },
+  "MEMA_GASLIGHTER": {
+    "insight": "Systematische Umdeutung der Wahrnehmung des Gegenübers",
+    "observable": "Wiederholte Infragestellung der Realitätswahrnehmung"
+  },
+  "MEMA_MANIPULATIVE_RELATIONSHIP_ENGINEERING_MARKER": {
+    "insight": "Systematische Beziehungsgestaltung durch indirekte Einflussnahme",
+    "observable": "Muster strategischer Kommunikation zur Beziehungssteuerung"
+  },
+  "MEMA_OVERCONFIDENCE_INVALIDATION_CYCLE": {
+    "insight": "Wechsel zwischen Überlegenheitsgestus und Abwertung",
+    "observable": "Zyklus aus Selbstüberhöhung und Entwertung der Gefühle des Gegenübers"
+  },
+  "MEMA_PERSISTENT_NEEDINESS_GUILT_BIND": {
+    "insight": "Dauerhaftes Muster aus Bedürftigkeit und Schuldgefühlserzeugung",
+    "observable": "Anhaltende Kombination von Hilfeappellen und moralischem Druck"
+  },
+  "MEMA_PLATFORM_SWITCH_MANIPULATION": {
+    "insight": "Strategischer Wechsel zwischen Kommunikationsplattformen",
+    "observable": "Systematisches Ausweichen auf andere Kanäle"
+  },
+  "MEMA_SELF_VICTIMIZATION_CYCLE": {
+    "insight": "Wiederkehrender Kreislauf der Selbst-als-Opfer-Positionierung",
+    "observable": "Zyklisches Muster aus Klage, Vorwurf und Hilflosigkeit"
+  },
+  "SEM_AGGRESSIVE_BEHAVIOR": {
+    "insight": "Konfrontative Kommunikation mit Druckelement",
+    "observable": "Kombination aus Vorwurf und fordernder Sprache"
+  },
+  "SEM_BLAME_SHIFT_EXPRESSIONS_MARKER": {
+    "insight": "Verantwortungsverlagerung durch sprachliche Wendungen",
+    "observable": "Umformulierungen, die Kausalität zum Gegenüber verschieben"
+  },
+  "SEM_CONFLICT_AVOIDANCE": {
+    "insight": "Aktives Umgehen von Konfrontation",
+    "observable": "Themenwechsel, Beschwichtigung oder Rückzug bei Spannung"
+  },
+  "SEM_CONFLICT_ESCALATION": {
+    "insight": "Zunehmende Intensität im Konfliktverlauf",
+    "observable": "Steigerung von Vorwürfen und emotionaler Schärfe"
+  },
+  "SEM_CONFLICT_LVL1_3": {
+    "insight": "Beginnende Meinungsverschiedenheit (niedrige Intensität)",
+    "observable": "Sachliche Differenz mit leichter emotionaler Färbung"
+  },
+  "SEM_CONFLICT_LVL4_6": {
+    "insight": "Deutliche Auseinandersetzung (mittlere Intensität)",
+    "observable": "Emotionale Beteiligung mit Vorwürfen oder Verteidigung"
+  },
+  "SEM_CONFLICT_LVL6_9": {
+    "insight": "Intensive Konfrontation (hohe Intensität)",
+    "observable": "Starke emotionale Aufladung mit eskalierenden Elementen"
+  },
+  "SEM_CONFLICT_MACRO": {
+    "insight": "Vollständige Eskalationskette im Gespräch",
+    "observable": "Abfolge von Kritik, Abwehr, Herabsetzung und Rückzug"
+  },
+  "SEM_CONFLICT_MICRO": {
+    "insight": "Kleinteilige Reibungspunkte im Gespräch",
+    "observable": "Kurze Momente der Spannung oder Irritation"
+  },
+  "SEM_CONTROL_LEX": {
+    "insight": "Lexikalische Muster von Steuerungsversuchen",
+    "observable": "Wortfeld-Häufung aus dem Bereich Kontrolle und Bestimmung"
+  },
+  "SEM_DEESCALATION": {
+    "insight": "Aktive Reduzierung der Gesprächsspannung",
+    "observable": "Beschwichtigende, versöhnliche oder vermittelnde Formulierungen"
+  },
+  "SEM_EMOTIONAL_OVERWHELM": {
+    "insight": "Zustand emotionaler Überforderung",
+    "observable": "Sprache, die Überwältigung und Kontrollverlust ausdrückt"
+  },
+  "SEM_EXTERNALIZING_LOCUS_OF_CONTROL": {
+    "insight": "Verantwortungszuschreibung an äußere Umstände",
+    "observable": "Sprache, die Ursachen außerhalb der eigenen Person verortet"
+  },
+  "SEM_FACT_CONFLICT_EXTERNAL": {
+    "insight": "Sachlicher Streitpunkt mit externem Bezug",
+    "observable": "Meinungsverschiedenheit über äußere Fakten oder Ereignisse"
+  },
+  "SEM_GASLIGHTING": {
+    "insight": "Umdeutung der Wahrnehmung des Gegenübers",
+    "observable": "Infragestellung von Erinnerungen oder Erfahrungen"
+  },
+  "SEM_GASLIGHTING_ATTEMPT": {
+    "insight": "Versuch, die Realitätswahrnehmung zu verschieben",
+    "observable": "Kombination aus Leugnung und Gegenvorwurf"
+  },
+  "SEM_GET_SUBJECT_CONTROL": {
+    "insight": "Übernahme der Gesprächsführung zum eigenen Thema",
+    "observable": "Themenwechsel zur Steuerung des Gesprächsverlaufs"
+  },
+  "SEM_GOTTMAN_CONFLICT_ESCALATION": {
+    "insight": "Eskalation nach klassischem Konfliktverlaufsmuster",
+    "observable": "Stufenweise Intensivierung mit typischen Konfliktelementen"
+  },
+  "SEM_INTERACTIVE_STONEWALLING_MARKER": {
+    "insight": "Wechselseitige Kommunikationsblockade",
+    "observable": "Beide Gesprächspartner zeigen Rückzugssignale"
+  },
+  "SEM_MICRO_AGGRESSION_LIGHT": {
+    "insight": "Subtile Spitzen oder Seitenhiebe im Gespräch",
+    "observable": "Beiläufige Bemerkungen mit leicht abwertendem Unterton"
+  },
+  "SEM_PASSIVE_AGGRESSIVE_BEHAVIOR": {
+    "insight": "Indirekte Äußerung von Widerstand oder Unmut",
+    "observable": "Scheinbar kooperative Sprache mit verdeckter Ablehnung"
+  },
+  "SEM_PERFORMATIVE_HELPLESSNESS": {
+    "insight": "Betonung der eigenen Handlungsunfähigkeit",
+    "observable": "Wiederkehrende Äußerungen über Machtlosigkeit"
+  },
+  "SEM_SELF_PITY": {
+    "insight": "Selbstbezogene Klage mit reduziertem Handlungsspielraum",
+    "observable": "Sprache, die eigene Hilflosigkeit betont"
+  },
+  "SEM_SELF_VICTIMIZATION": {
+    "insight": "Positionierung als leidtragende Person im Gespräch",
+    "observable": "Betonung eigener Betroffenheit bei gleichzeitiger Schuldzuweisung"
+  },
+  "SEM_SETTING_CONTROL": {
+    "insight": "Steuerung der Gesprächsbedingungen",
+    "observable": "Bestimmung von Ort, Zeit oder Rahmen der Kommunikation"
+  },
+  "SEM_SHAME_PROSODY": {
+    "insight": "Strukturelle Schammerkmale in der Sprache",
+    "observable": "Leiser werdende, stockende oder abflachende Sprache"
+  },
+  "SEM_SHAME_TEXT": {
+    "insight": "Textbasierte Schamdynamik",
+    "observable": "Kombination aus Selbstabwertung, Entschuldigung und Abschwächung"
+  },
+  "SEM_STONEWALLING_BEHAVIOR": {
+    "insight": "Emotionaler Rückzug und Kommunikationsverweigerung",
+    "observable": "Schweigen, Einsilbigkeit oder Themenabbruch"
+  },
+  "SEM_TEMPORAL_CONFLICT_EXTERNAL": {
+    "insight": "Zeitbezogener Streitpunkt über äußere Umstände",
+    "observable": "Meinungsverschiedenheit über Abläufe und Zeitpunkte"
+  },
+  "SEM_TOXIC_PERSONA": {
+    "insight": "Kommunikationsmuster mit hoher Belastungswirkung",
+    "observable": "Kombination mehrerer belastender Gesprächselemente"
+  },
+  "SEM_VICTIM_OFFENDER_REVERSAL": {
+    "insight": "Umkehrung der Rollen zwischen Betroffenem und Verursacher",
+    "observable": "Formulierungen, die Schuld und Betroffenheit umdeuten"
+  },
+  "ATO_EXPERIENCE_NEGATION": {
+    "insight": "Infragestellung der Wahrnehmung des Gegenübers",
+    "observable": "Formulierungen, die Realitätserleben relativieren oder umdeuten"
+  },
+  "ATO_FEELING_DOWNPLAY_WORD": {
+    "insight": "Herunterspielen oder Übergehen der Gefühle des Gegenübers",
+    "observable": "Formulierungen, die emotionale Erfahrungen bagatellisieren"
+  },
+  "ATO_OBLIGATION_SYNTAX": {
+    "insight": "Indirekte Einflussnahme auf das Verhalten des Gegenübers",
+    "observable": "Strategische Sprachmuster zur Verhaltenssteuerung"
+  },
+  "ATO_COMPLIANT_WITHDRAWAL": {
+    "insight": "Indirekte Äußerung von Unmut oder Widerstand",
+    "observable": "Scheinbar neutrale Formulierungen mit verdeckter Ablehnung"
+  },
+  "ATO_DIALOGUE_REFUSAL": {
+    "insight": "Kommunikationsblockade und emotionaler Rückzug",
+    "observable": "Verweigerung der Gesprächsteilnahme"
+  },
+  "ATO_RESIGNATION_PHRASE": {
+    "insight": "Ausdruck von Ohnmacht und reduziertem Handlungsspielraum",
+    "observable": "Sprache, die fehlende Einflussmöglichkeiten betont"
+  },
+  "ATO_LOSS_FEAR_EXPRESSION": {
+    "insight": "Sorge um Verlust und Bindungsunsicherheit",
+    "observable": "Formulierungen, die Trennungsangst oder Bindungsbedürfnisse ausdrücken"
+  },
+  "ATO_AMBIVALENCE_PHRASE": {
+    "insight": "Erleben von Loyalitätsspannung zwischen Bezugspersonen",
+    "observable": "Sprache, die geteilte Loyalitäten sichtbar macht"
+  },
+  "ATO_PERSON_COMPARISON": {
+    "insight": "Vergleich mit anderen als Druckmittel",
+    "observable": "Bezugnahme auf Dritte zum Aufbau von Erwartungsdruck"
+  },
+  "ATO_INCOHERENCE_MARKER": {
+    "insight": "Unstrukturierte oder fragmentarische Ausdrucksweise",
+    "observable": "Abgebrochene Sätze, Themenwechsel, inkohärente Verknüpfungen"
+  },
+  "ATO_TOPIC_JUMP_MARKER": {
+    "insight": "Sprunghaftes oder ungeordnetes Denkmuster",
+    "observable": "Häufige Themenwechsel ohne erkennbaren Zusammenhang"
+  }
+}

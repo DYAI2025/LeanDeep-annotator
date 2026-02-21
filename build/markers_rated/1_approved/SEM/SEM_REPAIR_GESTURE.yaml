@@ -1,0 +1,44 @@
+id: SEM_REPAIR_GESTURE
+version: "5.1"
+layer: SEM
+lang: de
+description: "Reparaturgeste — Deeskalation oder Entschuldigung als Versuch, die Beziehungsspannung zu reduzieren."
+frame:
+  signal: ["deescalation", "apology", "softening"]
+  concept: "relationship_repair"
+  pragmatics: "repair/reconciliation"
+  narrative: "healing"
+tags: [semantic, repair, deescalation, positive]
+composed_of:
+  - ATO_DEESCALATION_OFFER
+  - ATO_APOLOGY
+  - ATO_APOLOGY_DE
+  - ATO_SOFTENING
+activation:
+  mode: "co_occurrence"
+  min_components: 1
+  window: 1
+scoring:
+  base: 0.65
+  weight: 1.75
+vad_estimate: {valence: 0.4, arousal: 0.2, dominance: 0.3}
+effect_on_state: {trust: 0.2, conflict: -0.15, deesc: 0.25}
+family: REPAIR
+examples:
+  positive:
+  - "Tut mir leid, das war nicht so gemeint."
+  - "Oki, lass uns das nochmal in Ruhe besprechen."
+  - "Sorry, ich war gestresst."
+  - "Du hast recht, ich hätte das anders sagen sollen."
+  - "Können wir nochmal von vorne anfangen?"
+  - "Entschuldige, das war unfair."
+  - "Ich wollte dich nicht verletzen."
+  - "Lass uns das klären, mir ist das wichtig."
+  - "War blöd von mir, sorry."
+  - "Ok, ich verstehe was du meinst."
+  negative:
+  - "Ist mir egal was du denkst."
+  - "Du bist selber schuld."
+  - "Ich habe nichts falsch gemacht."
+  - "Das musst du jetzt aushalten."
+  - "Reg dich nicht so auf."

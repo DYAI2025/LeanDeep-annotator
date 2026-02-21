@@ -1,0 +1,45 @@
+# Archetyp-Mapping: Der Kritiker / Richter
+# Format: LEAN.DEEP 3.4 – kompatibel zu ATO → SEM → CLU → MEMA
+
+# 1. ATOMIC MARKER (ATO_)
+- id: ATO_JUDGMENT
+  frame:
+    signal: ["token"]
+    concept: "Urteil / Bewertung"
+    pragmatics: "Bewertung von richtig und falsch"
+    narrative: "Ich urteile und bewerte"
+  pattern: "(falsch|richtig|sollte|müsste|gehört sich nicht|ist schlecht)"
+  examples:
+    - "das ist falsch"
+    - "du solltest aber"
+    - "das müsste anders sein"
+    - "das gehört sich nicht"
+    - "richtig wäre es"
+
+- id: ATO_CRITICISM
+  frame:
+    signal: ["token"]
+    concept: "Kritik / Tadel"
+    pragmatics: "Aufzeigen von Fehlern und Mängeln"
+    narrative: "Ich kritisiere und tadle"
+  pattern: "(kritisiere|schlecht gemacht|Fehler|nicht gut genug|mangelhaft)"
+  examples:
+    - "ich kritisiere das"
+    - "schlecht gemacht"
+    - "voller Fehler"
+    - "nicht gut genug"
+    - "völlig mangelhaft"
+
+- id: ATO_MORAL_AUTHORITY
+  frame:
+    signal: ["token"]
+    concept: "Moralische Autorität"
+    pragmatics: "Anspruch auf moralische Überlegenheit"
+    narrative: "Ich weiß, was richtig ist"
+  pattern: "(ich weiß|richtige Weg|moralisch|Werte|Anstand)"
+  examples:
+    - "ich weiß was richtig ist"
+    - "der richtige Weg"
+    - "moralisch verwerflich"
+    - "echte Werte"
+    - "Anstand und Moral"
