@@ -77,6 +77,12 @@ Ohne funktionierenden SEM/CLU-Layer ist das System ein glorifizierter Regex-Matc
 
 > *Spec: [SPEC-P1-3]*
 
+#### P1-4: Monetarisierung — Freemium API + Tiered Pricing
+**Impact:** Sehr hoch — Revenue-Grundlage
+**Aufwand:** Mittel (2-3 Tage)
+
+> *Spec: [SPEC-P1-4]*
+
 ---
 
 ### P2 — Mittel (Qualität & Abdeckung)
@@ -120,6 +126,12 @@ Ohne funktionierenden SEM/CLU-Layer ist das System ein glorifizierter Regex-Matc
 **Aufwand:** Mittel (2 Tage)
 
 > *Spec: [SPEC-P3-3]*
+
+#### P3-4: Skyll + MCP Distribution
+**Impact:** Mittel — macht LeanDeep für jeden AI-Agent entdeckbar
+**Aufwand:** Klein (halber Tag)
+
+> *Spec: [SPEC-P3-4]*
 
 ---
 
@@ -547,3 +559,182 @@ Echtzeit-Analyse für Live-Chat-Integration (z.B. Therapie-Tool das während der
 **Dateien:**
 - EDIT: `api/main.py` (WebSocket Route)
 - NEU: `api/streaming.py` (inkrementelle Analyse-Logik)
+
+---
+
+### SPEC-P1-4: Monetarisierung — Freemium API + Tiered Pricing
+
+**Problem:**
+LeanDeep hat einen funktionierenden Annotator mit 850+ Markern, VAD-Tracking, Persona-System und Prosody-Erkennung — aber kein Revenue-Modell. Die Engine ist zu wertvoll für rein Open-Source und zu komplex für einfaches SaaS-Pricing.
+
+**Monetarisierungsstrategie: 3-Tier Freemium**
+
+#### Tier 1: Free (Developer / Trial)
+- **Rate Limit:** 100 Requests/Tag
+- **Endpoints:** `/v1/analyze` (Einzeltext), `/v1/markers` (Read-only)
+- **Features:** ATO-Layer only, keine VAD, keine Dynamics
+- **Auth:** API-Key (self-service via Landing Page)
+- **Zweck:** Entwickler testen, Integrationen bauen, Lock-in erzeugen
+
+#### Tier 2: Base ($29/Monat oder $290/Jahr)
+- **Rate Limit:** 10.000 Requests/Tag
+- **Endpoints:** Alle stateless Endpoints (analyze, conversation, dynamics, markers)
+- **Features:** Alle 4 Layer, VAD-Tracking, UED-Metriken, Prosody, State-Indices
+- **Kein:** Persona-System, Predictions, WebSocket
+- **Zielgruppe:** Indie-Entwickler, kleine Apps, Dating-App-Integrationen
+
+#### Tier 3: Pro ($99/Monat oder $990/Jahr)
+- **Rate Limit:** 100.000 Requests/Tag
+- **Endpoints:** Alles inkl. Personas, Predictions, LLM-Bridge, WebSocket (wenn verfügbar)
+- **Features:** Persona-Profiles, EWMA Warm-Start, Episode-Tracking, Shift-Predictions, Priority Support
+- **Zielgruppe:** Therapie-Plattformen, Coaching-Tools, Forschung, Enterprise
+
+#### Revenue-Projektion (konservativ)
+
+| Monat | Free | Base | Pro | MRR |
+|-------|------|------|-----|-----|
+| M1 | 50 | 5 | 1 | $244 |
+| M3 | 200 | 15 | 3 | $732 |
+| M6 | 500 | 40 | 10 | $2,150 |
+| M12 | 1000 | 100 | 30 | $5,870 |
+
+Konversion: Free→Base ~3%, Base→Pro ~10% (Branchenstandard für Developer-Tools).
+
+#### Implementierung
+
+1. **Stripe-Integration** (`api/billing.py` — NEU)
+   - Stripe Checkout Sessions für Subscription-Start
+   - Webhook für `invoice.paid`, `customer.subscription.deleted`
+   - API-Key ↔ Stripe Customer ID Mapping
+   - Kein eigenes Payment-UI — Stripe Hosted Checkout
+
+2. **Tier-basiertes Rate-Limiting** (`api/auth.py` — erweitern)
+   - API-Key hat Tier-Attribut (free/base/pro)
+   - Rate-Limit pro Key: `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `Retry-After`
+   - Endpoint-Gating: Free-Keys bekommen 403 auf `/v1/analyze/dynamics`
+   ```python
+   TIER_LIMITS = {
+       "free":  {"daily": 100,    "endpoints": ["analyze", "markers", "health"]},
+       "base":  {"daily": 10000,  "endpoints": ["analyze", "conversation", "dynamics", "markers", "health"]},
+       "pro":   {"daily": 100000, "endpoints": ["*"]},
+   }
+   ```
+
+3. **Self-Service Key Management** (`api/static/signup.html` — NEU)
+   - E-Mail + Stripe Checkout → API-Key per Mail
+   - Dashboard: Usage-Stats, Tier-Upgrade, Key-Rotation
+   - Kein eigenes User-System — Stripe Customer Portal für Billing
+
+4. **Landing Page** (statisch, `/` Route)
+   - Pricing-Tabelle (3 Tiers)
+   - Live-Demo (Free-Tier Playground)
+   - API-Dokumentation Link
+   - "Get API Key" → Stripe Checkout
+
+5. **Usage-Tracking** (`api/usage.py` — NEU)
+   - Request-Counter pro API-Key (in-memory + periodic flush to SQLite/JSON)
+   - Daily Reset um Mitternacht UTC
+   - Usage-Stats Endpoint: `GET /v1/usage` (authenticated)
+
+**Zusätzliche Revenue-Streams:**
+
+- **Corpus-as-a-Service:** Anonymisierte Gold-Corpus-Statistiken als Benchmark-Dataset ($499 einmalig)
+- **Custom Marker Packs:** Branchenspezifische Marker (Dating-Safety, HR-Screening, Therapie) als Add-ons ($49/Pack)
+- **White-Label API:** Für Plattformen die LeanDeep unter eigenem Branding einbetten (Enterprise, Preis auf Anfrage)
+
+**Abhängigkeiten:**
+- P1-2 (API Hardening) muss zuerst laufen (Auth, Rate-Limiting, Error-Schema)
+- P3-2 (Deployment) muss parallel laufen (API muss öffentlich erreichbar sein)
+
+**Erfolgskriterium:**
+- Woche 1: Stripe-Integration live, 3 Tiers funktional
+- Monat 1: ≥50 Free-Keys, ≥5 Base-Subscriptions
+- Monat 3: $500+ MRR
+
+**Dateien:**
+- NEU: `api/billing.py` (Stripe-Integration)
+- NEU: `api/usage.py` (Usage-Tracking)
+- NEU: `api/static/signup.html` (Self-Service Key Management)
+- NEU: `api/static/landing.html` (Pricing + Demo)
+- EDIT: `api/auth.py` (Tier-basiertes Gating)
+- EDIT: `api/config.py` (Stripe Keys, Tier-Limits)
+- EDIT: `api/main.py` (Usage-Middleware, Landing-Route)
+- EDIT: `requirements.txt` (+stripe)
+
+---
+
+### SPEC-P3-4: Skyll + MCP Distribution
+
+**Problem:**
+LeanDeep ist nur nutzbar wenn Entwickler aktiv davon erfahren und die API manuell integrieren. Im AI-Agent-Ökosystem entdecken Agents Skills zur Laufzeit — über Plattformen wie Skyll (REST API + MCP für Skill-Discovery) und skills.sh.
+
+**Ziel:**
+Jeder AI-Agent (Claude Code, Cursor, custom agents) kann LeanDeep per `search_skills("conversation analysis")` finden und sofort nutzen. Zwei Distributionswege:
+
+#### Weg 1: SKILL.md für Skyll/skills.sh Registry
+
+Eine `SKILL.md` die Agents erklärt wie sie die LeanDeep API nutzen:
+
+```markdown
+---
+name: LeanDeep Annotator
+description: Detect psychological patterns in conversations with VAD emotion tracking
+version: 5.1
+tools: [Bash, WebFetch]
+---
+
+# LeanDeep Conversation Annotator
+
+Analyze text for 850+ psychological/communication markers across 4 layers...
+
+## Usage
+curl -X POST https://api.leandeep.app/v1/analyze \
+  -H "Authorization: Bearer $LEANDEEP_API_KEY" \
+  -d '{"text": "Du hörst mir nie zu!"}'
+```
+
+Registrierung:
+1. `SKILL.md` im LeanDeep-annotator Repo erstellen
+2. PR an `assafelovic/skyll` → `registry/SKILLS.md` Eintrag
+3. Automatisch über `api.skyll.app/search?q=conversation+analysis` auffindbar
+
+#### Weg 2: LeanDeep als MCP-Server
+
+Nativer MCP-Server der direkt in Claude Desktop / Cursor / any MCP-Client eingebunden wird:
+
+```json
+{
+  "mcpServers": {
+    "leandeep": {
+      "url": "https://api.leandeep.app/mcp"
+    }
+  }
+}
+```
+
+MCP-Tools:
+- `analyze_text` — Einzeltext-Analyse
+- `analyze_conversation` — Multi-Message mit VAD + State
+- `create_persona` — Persona erstellen (Pro)
+- `get_persona_prediction` — Shift-Prädiktionen (Pro)
+
+Implementierung: FastMCP Wrapper um bestehende FastAPI-Endpoints.
+
+**Monetarisierung über Distribution:**
+- Skyll/skills.sh = kostenlose Entdeckung → treibt Traffic zur API
+- Free-Tier-Key = Einstieg → Konversion zu Base/Pro
+- MCP = nahtlose Integration → höhere Retention (Agent nutzt API automatisch)
+- Jeder MCP-Call = API-Request = zählt gegen Rate-Limit = Revenue
+
+**Aufwand:**
+- SKILL.md + Registry-PR: 2 Stunden
+- MCP-Server (FastMCP Wrapper): 4 Stunden
+
+**Abhängigkeiten:**
+- P3-2 (Deployment) — API muss öffentlich erreichbar sein
+- P1-4 (Monetarisierung) — API-Keys müssen funktionieren
+
+**Dateien:**
+- NEU: `SKILL.md` (Agent-Skill-Definition)
+- NEU: `mcp_server.py` (FastMCP Wrapper)
+- EDIT: `requirements.txt` (+fastmcp)
