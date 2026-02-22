@@ -2,7 +2,7 @@ id: CLU_PERSONA_REGRESSION
 schema: LeanDeep
 version: '5.1'
 layer: CLU
-lang: en
+lang: de
 description: ''
 frame:
   signal:
@@ -13,25 +13,33 @@ frame:
 patterns: []
 examples:
   positive:
-  - Von Gelb zurück zu Rot unter Stress
-  - Türkis kollabiert zu Beige
-  - Grün degeneriert zu Purpur
-  - Orange fällt zu Blau
-  - Systemkollaps erkannt
+  - Ich raste gleich aus, mir ist alles egal jetzt
+  - Halt die Fresse, ich kann nicht mehr denken
+  - Mir ist alles zu viel, ich will nur noch weg
+  - Ich hau drauf wenn du nicht aufhörst, ist mir scheißegal
+  - Keiner versteht mich, ich bin ganz allein, ich brauch meine Mama
+  - Ich überleg nicht mehr, ich mach einfach was ich will
+  - Wenn du nicht für mich bist bist du gegen mich, so einfach
+  - Ich brauche jemanden der mich beschützt, ich kann das nicht allein
+  - Verpiss dich, ich brauch dich nicht, ich brauch niemanden
+  - Mir ist alles egal, Hauptsache überleben
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Lass uns das in Ruhe besprechen, ich verstehe deinen Punkt
+  - Ich merk dass ich gestresst bin, aber ich bleib sachlich
+  - Auch wenn es schwer ist, ich versuche beide Seiten zu sehen
+  - Ich brauch kurz ne Pause, dann können wir weiterreden
+  - Das triggert mich grad, aber ich weiß dass das mein Thema ist
 tags: []
 rating: 2
+composed_of:
+- SEM_ROT_POWER_ERUPTION
+- SEM_PURPUR_TRIBAL_MAGIC
+- SEM_BEIGE_SURVIVAL_MODE
+- SEM_EMOTIONAL_OVERWHELM
 activation:
-  rule: "Lower-level persona AFTER higher-level IN 8 messages"
+  rule: AT_LEAST 2 DISTINCT SEMs IN 8 messages
   window_size: 8
-  threshold: 1
+  threshold: 2
 scoring:
   weight: 1.3
   decay: 0.8

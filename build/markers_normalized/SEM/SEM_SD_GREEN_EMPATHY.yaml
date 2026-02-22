@@ -30,9 +30,8 @@ tags: []
 rating: 2
 composed_of:
 - ATO_SD_GREEN_LEX
-- ATO_COMMUNITY_TALK
 activation:
-  rule: "BOTH IN 1 message"
+  rule: BOTH IN 1 message
 compositionality: deterministic
 vad_estimate:
   valence: 0.3

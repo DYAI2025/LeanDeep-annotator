@@ -2,24 +2,34 @@ id: ATO_CONTRADICTION_LEX
 schema: LeanDeep
 version: '5.1'
 layer: ATO
-lang: en
+lang: de
 description: ''
 frame:
-  signal: []
-  concept: ''
-  pragmatics: ''
+  signal:
+  - widerspricht
+  - im Gegensatz
+  - nicht wie vorher
+  - aber inzwischen
+  - doch
+  concept: Kontradiktions-Lexik
+  pragmatics: Konflikt-Flag für Vergleich
   narrative: ''
-patterns: []
+patterns:
+- detect_class: phrase
+  list:
+  - "widerspricht"
+  - "im Gegensatz"
+  - "nicht wie vorher"
+  - "aber inzwischen"
+  - "doch"
 examples:
-  positive: []
-  negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  positive:
+  - Das widerspricht dem von vorher.
+  - Im Gegensatz zu deiner Aussage gestern.
+  - Das ist nicht wie vorher beschrieben.
+  - Aber inzwischen sagst du etwas anderes.
+  - Doch, vorher war es anders.
+  negative: []
 tags: []
 rating: 2
 vad_estimate:
@@ -30,3 +40,5 @@ effect_on_state:
   trust: -0.1
   conflict: 0.1
   deesc: -0.05
+metadata:
+  type: ATO

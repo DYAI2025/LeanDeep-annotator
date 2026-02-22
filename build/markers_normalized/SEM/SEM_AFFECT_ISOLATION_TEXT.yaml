@@ -48,6 +48,8 @@ effect_on_state:
   trust: -0.25
   conflict: 0.2
   deesc: -0.15
+activation:
+  rule: "ANY 1 IN 2 messages"
 metadata:
   justification: "SEM mit 1 ATO + Kontextregel (Affekt-Abwesenheit) gemäß LD3.4 zulässig."
   repair_log:

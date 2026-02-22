@@ -35,7 +35,6 @@ tags:
 - bonding
 rating: 1
 composed_of:
-- ATO_MEMORY_TRIGGER
 - ATO_SHARED_CONTEXT
 scoring:
   base: 1.4
@@ -49,3 +48,5 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+activation:
+  rule: ANY 2 IN 3 messages

@@ -12,6 +12,11 @@ tags:
 - irony
 - sarcasm
 - learning
+composed_of:
+- SEM_SARCASTIC_DRIFT
+- SEM_FLOUT_QUALITY_IRONY
+- SEM_HYPERBOLE_SIGNAL
+- SEM_PASSIVE_AGGRESSIVE_BEHAVIOR
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 5 messages
 scoring:
@@ -30,21 +35,19 @@ metadata:
     ewma_precision: INT_IRONY.ewma_precision
 examples:
   positive:
-  - … 'ja klar' + Augenrollen-Andeutung …
-  - … 'großartig' bei offensichtlich Negativem …
-  - … spöttische Einlage + Anführungszeichen …
-  - … 'na toll' + Übertreibung …
-  - … ironische Zustimmung + Spitze …
-  - … totepan-Emoji + doppelte Verneinung …
-  - … 'fantastisch gelaufen' nach Fail …
-  - … 'genau, bestimmt' + Hauch Zynismus …
-  - … 'ach wirklich?' + Schnippigkeit …
-  - … überzeichnete Lobhudelei + Seitenhieb …
+  - Ja klar, super Idee, hat ja beim letzten Mal auch SO gut funktioniert
+  - Wow, echt beeindruckend wie du das wieder hingekriegt hast
+  - Na toll, genau das hab ich gebraucht, danke für nichts
+  - Ach wirklich? Das ist ja mal eine ganz neue Erkenntnis
+  - Großartig, einfach großartig, besser hätte man es nicht vermasseln können
+  - Ja sicher, du bist natürlich der Einzige der hier was leistet
+  - Oh wie schön, genau darauf hab ich mein Leben lang gewartet
+  - Fantastisch gelaufen, kann man echt nicht anders sagen
+  - Genau, bestimmt, das glaub ich dir sofort, klar
+  - Super Plan, was soll da schon schiefgehen, oder
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Das finde ich echt gut, tolle Idee
+  - Ja stimmt, das hat super funktioniert letztens
+  - Danke dir, das war wirklich hilfreich
+  - Ich freu mich dass das so gut geklappt hat
+  - Das hast du echt gut gemacht, Respekt

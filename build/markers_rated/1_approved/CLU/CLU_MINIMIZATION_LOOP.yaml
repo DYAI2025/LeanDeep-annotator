@@ -14,11 +14,10 @@ gates:
 score:
   method: weighted_k_of_n
   threshold: 0.5
-ingredients:
+composed_of:
   require:
     - SEM_MINIMIZATION
     - ATO_MINIMIZING
-  k_of_n: {k: 2, of: []}
 emits:
   indices:
     conflict: -0.1

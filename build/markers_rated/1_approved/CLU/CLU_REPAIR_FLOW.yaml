@@ -15,14 +15,11 @@ gates:
 score:
   method: weighted_k_of_n
   threshold: 0.7
-ingredients:
+composed_of:
   require:
   - ATO_REPAIR_REQUEST
   - CLU_EMOTIONAL_SUPPORT
   - SEM_CLOSURE_PROTOCOL
-  k_of_n:
-    k: 2
-    of: []
 emits:
   indices:
     deesc: +0.3
@@ -60,7 +57,5 @@ semiotic:
 composed_of:
   require:
   - ATO_REPAIR_REQUEST
+  - CLU_EMOTIONAL_SUPPORT
   - SEM_CLOSURE_PROTOCOL
-  k_of_n:
-    k: 2
-    of: []

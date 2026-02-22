@@ -37,5 +37,11 @@ tags:
 - love_language
 - cluster
 rating: 1
+composed_of:
+- ATO_LL_WORDS_OF_AFFIRMATION
+- ATO_LL_QUALITY_TIME
+- ATO_LL_ACTS_OF_SERVICE
+- ATO_LL_RECEIVING_GIFTS
+- ATO_LL_PHYSICAL_TOUCH
 detect_class:
   rule: "normalize(w)->ranking; mixed if top2_delta < 0.15"

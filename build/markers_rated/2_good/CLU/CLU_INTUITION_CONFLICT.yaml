@@ -14,7 +14,11 @@ tags:
 - conflict
 - escalation
 - learning
-criteria: ''
+composed_of:
+- SEM_CONFLICT_ESCALATION
+- SEM_CONFLICT_MICRO
+- SEM_ACCUSATION_MARKER
+- SEM_DEFENSIVENESS_SHIFT
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 4 messages
 scoring:
@@ -34,12 +38,19 @@ metadata:
     ewma_precision: INT_CONFLICT.ewma_precision
 examples:
   positive:
-  - kritische, gereizte, sarkastische Hinweise häufen sich leicht
+  - Du hörst mir einfach NIE zu, echt jedes Mal das gleiche
+  - Das ist doch nicht mein Problem wenn du es nicht checkst
+  - Ach komm, jetzt fang nicht schon wieder damit an
+  - Ich hab keinen Bock mehr auf diese Diskussion, echt nicht
+  - Weißt du was, mach doch was du willst, ist mir egal
+  - Du verdrehst mir schon wieder die Worte, so hab ich das nicht gesagt
+  - Immer muss ich mich rechtfertigen, das nervt so
+  - Ja genau, ich bin natürlich wieder der Böse, klar
+  - Das hab ich dir schon tausend Mal gesagt aber du willst es ja nicht hören
+  - Schön dass du direkt wieder angreifst statt zuzuhören
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich verstehe was du meinst, lass uns das besprechen
+  - Das ist ein guter Punkt, danke dafür
+  - Ich finde wir können das gemeinsam lösen
+  - Stimmt, da hast du recht, sorry
+  - Ich hör dir zu, erzähl mal weiter

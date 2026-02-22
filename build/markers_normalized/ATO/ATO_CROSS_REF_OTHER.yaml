@@ -2,24 +2,36 @@ id: ATO_CROSS_REF_OTHER
 schema: LeanDeep
 version: '5.1'
 layer: ATO
-lang: en
+lang: de
 description: ''
 frame:
-  signal: []
-  concept: ''
-  pragmatics: ''
-  narrative: ''
-patterns: []
+  signal:
+  - wie du gesagt hast
+  - vorhin meintest du
+  - eben hast du
+  - du sagtest
+  - das passt nicht zu vorher
+  concept: Expliziter Bezug auf frühere Aussagen einer anderen Person
+  pragmatics: Vergleichsanker herstellen
+  narrative: Pointer auf Referenz
+patterns:
+- detect_class: phrase
+  list:
+  - "wie du gesagt hast"
+  - "vorhin meintest du"
+  - "eben hast du"
+  - "du sagtest"
+  - "das passt nicht zu vorher"
+- detect_class: role
+  rule: "speaker == self && referenced_speaker == other"
 examples:
-  positive: []
-  negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  positive:
+  - Wie du gesagt hast, das war anders.
+  - Vorhin meintest du, du warst nie dort.
+  - Du sagtest eben, es waren fünf.
+  - Das passt nicht zu vorher, was du sagtest.
+  - Eben hast du was anderes behauptet.
+  negative: []
 tags: []
 rating: 2
 vad_estimate:
@@ -30,3 +42,6 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+metadata:
+  type: ATO
+  direction: outward

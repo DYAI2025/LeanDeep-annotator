@@ -71,6 +71,8 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+activation:
+  rule: "ANY 1"
 metadata:
   repair_log:
   - date: "2025-08-14"

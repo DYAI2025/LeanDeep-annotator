@@ -34,6 +34,11 @@ tags:
 - blame_shifting
 - manipulation
 rating: 1
+composed_of:
+- SEM_BLAME_SHIFT_EXPRESSIONS_MARKER
+- SEM_VICTIM_OFFENDER_REVERSAL
+- SEM_SELF_VICTIMIZATION
+- SEM_DEFENSIVENESS_SHIFT
 activation:
   rule: "ANY 1 IN 15 messages"
 scoring:

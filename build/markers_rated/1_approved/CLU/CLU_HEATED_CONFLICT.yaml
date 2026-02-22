@@ -15,13 +15,15 @@ gates:
 score:
   method: weighted_k_of_n
   threshold: 0.75
-ingredients:
+composed_of:
   require:
     - ATO_ANGER
     - ATO_DEFENSIVENESS
-  k_of_n: {k: 3, of: [ATO_BLAME_SHIFT, ATO_CRITICISM_ATTACK_MARKER, ATO_ESCALATION_LEXICON]}
-negative_evidence:
-  any_of: [ATO_DEESCALATION_PHRASE, ATO_APOLOGY]
+    - ATO_BLAME_SHIFT
+    - ATO_CRITICISM_ATTACK_MARKER
+    - ATO_ESCALATION_LEXICON
+  negative_evidence:
+    any_of: [ATO_DEESCALATION_PHRASE, ATO_APOLOGY]
 emits:
   indices:
     conflict: +0.3

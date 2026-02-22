@@ -29,11 +29,9 @@ examples:
 tags: []
 rating: 1
 composed_of:
-- SEM_UNCERTAINTY_TONING
-- SEM_TENTATIVE_INFERENCE
 - ATO_PROBABILISTIC
 activation:
-  rule: "AT_LEAST 3 IN 6 messages"
+  rule: AT_LEAST 3 IN 6 messages
 scoring:
   base: 1.0
   weight: 1.0

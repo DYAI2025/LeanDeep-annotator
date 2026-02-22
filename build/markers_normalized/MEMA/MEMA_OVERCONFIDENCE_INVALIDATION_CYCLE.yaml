@@ -38,6 +38,5 @@ tags:
 rating: 1
 composed_of:
 - SEM_CERTAINTY_CLAIMS
-- CLU_EMOTIONAL_DYSREGULATION
 - SEM_GASLIGHTING_ATTEMPT
-criteria: "Persistent pattern of excessive certainty claims followed by dismissal of others' emotional responses"
+criteria: Persistent pattern of excessive certainty claims followed by dismissal of others' emotional responses

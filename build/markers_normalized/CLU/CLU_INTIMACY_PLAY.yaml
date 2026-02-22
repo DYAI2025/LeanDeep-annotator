@@ -59,31 +59,18 @@ composed_of:
   require:
   - ATO_AFFECTION_SHOW
   - ATO_HUMOR_LIGHT
-  k_of_n:
-    k: 2
-    of:
-    - ATO_ROMANTIC_SIGNAL_DIRECT
-    - ATO_LL_PHYSICAL_TOUCH
-    - ATO_LL_QUALITY_TIME
+  - ATO_ROMANTIC_SIGNAL_DIRECT
+  - ATO_LL_PHYSICAL_TOUCH
+  - ATO_LL_QUALITY_TIME
+  negative_evidence:
+    any_of:
+    - ATO_BOUNDARY_STRICT
+    - ATO_AFFECT_FLAT
 window:
   size_messages: 15
 gates:
   min_msgs: 3
   require_bilateral: true
-ingredients:
-  require:
-  - ATO_AFFECTION_SHOW
-  - ATO_HUMOR_LIGHT
-  k_of_n:
-    k: 2
-    of:
-    - ATO_ROMANTIC_SIGNAL_DIRECT
-    - ATO_LL_PHYSICAL_TOUCH
-    - ATO_LL_QUALITY_TIME
-negative_evidence:
-  any_of:
-  - ATO_BOUNDARY_STRICT
-  - ATO_AFFECT_FLAT
 emits:
   indices:
     intimacy: +0.3

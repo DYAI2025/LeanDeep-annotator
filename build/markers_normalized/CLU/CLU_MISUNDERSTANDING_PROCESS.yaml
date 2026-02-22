@@ -35,12 +35,14 @@ tags:
 - misunderstanding
 rating: 1
 composed_of:
-- ld34_text_social_grammar.SEM_REPAIR_FAILURE_TEXT
-- ld34_voice_social_grammar.SEM_AROUSAL_SPIKE_AT_BREAK
-- ld34_voice_social_grammar.SEM_REPAIR_FAILURE_AUDIO
+- SEM_REPAIR_FAILURE_TEXT
+- SEM_AROUSAL_SPIKE_AT_BREAK
+- SEM_REPAIR_FAILURE_AUDIO
 scoring:
   base: 0.65
   cap: 1.0
+activation:
+  rule: SEQUENCE [EXPECTANCY_BREAK + AROUSAL] AND LACK_OF_SUCCESSFUL_REPAIR within 2 turns
 metadata:
-  family: "MISUNDERSTANDING"
+  family: MISUNDERSTANDING
   cross_namespace: true

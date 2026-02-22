@@ -13,26 +13,31 @@ frame:
 patterns: []
 examples:
   positive:
-  - ich bin da für dich … wir schaffen das
-  - danke dir … fühl mich gesehen
-  - gemeinsam kriegen wir das hin
-  - du kannst dich auf mich verlassen
-  - ich hör dir zu … okay?
+  - Ich bin für dich da, egal was passiert
+  - Danke dass du mir das erzählt hast, das bedeutet mir viel
+  - Du musst das nicht alleine durchstehen, ich bin hier
+  - Ich hör dir zu, nimm dir so viel Zeit wie du brauchst
+  - Das was du fühlst ist total berechtigt
+  - Wir schaffen das zusammen, du bist nicht allein damit
+  - Ich schätze es so sehr dass du ehrlich zu mir bist
+  - Wenn du reden willst, ich bin da, immer
+  - Du machst das richtig gut, auch wenns sich grad nicht so anfühlt
+  - Danke für deine Unterstützung vorhin, hat mir echt geholfen
   negative:
   - Kannst du mir das Salz reichen?
-  - Der Termin ist um 14 Uhr.
-  - Ich war gestern einkaufen.
-  - Das Wetter soll morgen besser werden.
+  - Der Termin ist um 14 Uhr
+  - Ich war gestern einkaufen
+  - Das Wetter soll morgen besser werden
   - Hast du die E-Mail gelesen?
-  - Ich muss noch tanken.
-  - Die Besprechung ist im Konferenzraum.
 tags: []
 rating: 1
 composed_of:
-- SEM_SUPPORT_VALIDATION
-- SEM_TRUST_SIGNALING
+- SEM_VALIDATION
+- SEM_WARM_APPRECIATION
+- SEM_REPAIR_GESTURE
+- SEM_CONNECTION_POSITIVITY
 activation:
-  rule: "AT_LEAST 3 IN 7 messages"
+  rule: AT_LEAST 2 DISTINCT SEMs IN 7 messages
 scoring:
   base: 1.0
   weight: 1.0

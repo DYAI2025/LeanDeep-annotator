@@ -14,11 +14,10 @@ gates:
 score:
   method: weighted_k_of_n
   threshold: 0.55
-ingredients:
+composed_of:
   require:
     - SEM_CONTROL_LEX
     - SEM_PARENTAL_AUTHORITY
-  k_of_n: {k: 1, of: []}
 emits:
   indices:
     control: +0.2

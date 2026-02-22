@@ -8,6 +8,11 @@ frame:
   concept: Verstärkte Selbstvorwurfsschleife
   pragmatics: Verstärkte Beziehungsaussage
   narrative: loop
+composed_of:
+- SEM_SELF_VICTIMIZATION
+- SEM_DEFENSIVENESS_SHIFT
+- SEM_REPETITIVE_COMPLAINT
+- SEM_SPIRAL_THINKING
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 24 messages
 window:
@@ -19,19 +24,22 @@ scoring:
   formula: logistic
 examples:
   positive:
-  - Dialog mit mehrmaligem 'ich bin schuld' und 'ja, aber' in kurzer Folge.
-  - Wiederholte Selbstvorwürfe, gefolgt von Abschwächungen.
-  - Mehrere gleiche Vorwurfspassagen über 10–20 Nachrichten verteilt.
-  - Konversation, die in eine Beschwerde-Schleife fällt.
-  - Partner sagt 'immer du' + wiederholte Selbstbeschuldigung.
+  - "Ich bin schuld, ich weiss... aber du hast auch..."
+  - "Ja ich hab Mist gebaut, ABER du haettest auch anders reagieren koennen"
+  - "Immer das Gleiche, ich entschuldige mich und du machst weiter"
+  - "Sorry sorry sorry, aber DU hoerst ja auch nicht zu"
+  - "Okay ich bin schuld, zufrieden? Aber ehrlich, du provozierst das"
+  - "Ich sag ja ich war falsch, aber musst du das immer wieder aufwaermen?"
+  - "Ja klar, ich bin wieder der Schuldige, wie immer"
+  - "Tut mir leid... aber du hast angefangen"
+  - "Ich geb's zu, mein Fehler, aber du machst das jedes Mal"
+  - "Schon wieder das gleiche Thema, ich hab mich doch entschuldigt"
   negative:
-  - Partner sagt 'manchmal du' + wiederholte Selbstbeschuldigung.
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
+  - "Tut mir leid, du hast recht, ich aender das"
+  - "Ich seh meinen Fehler und ich arbeite dran"
+  - "Wollen wir morgen grillen?"
+  - "Hab die Waesche aufgehaengt"
+  - "Der Bus hat Verspaetung, komm 10 Minuten spaeter"
 tags:
 - cluster
 - relationship-dynamics

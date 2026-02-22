@@ -73,3 +73,5 @@ scoring:
   formula: "linear"
 window:
   messages: 7
+activation:
+  rule: "ANY 1"

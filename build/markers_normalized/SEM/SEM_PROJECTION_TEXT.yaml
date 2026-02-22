@@ -47,6 +47,8 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+activation:
+  rule: "ANY 1 IN 3 messages"
 metadata:
   justification: "1 ATO plus Sequenzregel (Selbstmarkierung → Vorwurf)."
   repair_log:

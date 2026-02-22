@@ -50,6 +50,8 @@ tags:
 - atomic
 - defensive_justification
 rating: 1
+activation:
+  rule: "ANY 1"
 metadata:
   repair_log:
   - rule: "R00-R06 applied"

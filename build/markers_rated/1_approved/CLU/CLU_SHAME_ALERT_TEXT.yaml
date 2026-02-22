@@ -11,7 +11,12 @@ frame:
   concept: Scham-Cluster (Text)
   pragmatics: Vorsicht, Rückzug möglich
   narrative: Anschwellende Selbstabwertung
-activation_logic: AT_LEAST 1 SEM IN 3 messages
+composed_of:
+  - SEM_SHAME_TEXT
+  - SEM_SELF_VICTIMIZATION
+  - SEM_SELF_PITY
+activation:
+  rule: AT_LEAST 1 SEM IN 3 messages
 window:
   messages: 10
 scoring:
@@ -20,22 +25,22 @@ scoring:
   decay: 0.01
 examples:
   positive:
-  - Peinlich... sorry... vielleicht später.
-  - Ich bin dumm... tut mir leid... irgendwie.
-  - Sorry... peinlich... ich glaube...
-  - Tut mir leid... ich schäme mich... vielleicht.
-  - Peinlich... sorry... ich bin schlecht.
-  - Dumm… sorry… vielleicht später.
-  - Peinlich… tut mir leid… irgendwie.
-  - Sorry… ich schäme mich… ich glaube.
+  - "Peinlich... sorry... vielleicht bin ich einfach zu dumm dafür"
+  - "Ich schäm mich so, hätte das nie sagen sollen"
+  - "Sorry... ich bin einfach nicht gut genug"
+  - "Tut mir leid dass ich so bin, ich weiß auch nicht"
+  - "Ich bin so peinlich, warum passiert mir sowas immer"
+  - "Vergiss es, ich sollte einfach den Mund halten"
+  - "Ich schäm mich grad so krass, sorry"
+  - "Warum bin ich immer diejenige die alles kaputt macht"
+  - "Sorry dass ich nerve, ich weiß ich bin zu viel"
+  - "Peinlich... ich kann einfach gar nichts"
   negative:
-  - Ich denke, wir sollten das sachlich betrachten.
-  - Mir geht es gut, danke der Nachfrage.
-  - Das ist ein interessanter Gedanke.
-  - Ich bin gerade entspannt.
-  - Alles in Ordnung bei mir.
-  - Ich fuehle mich heute ruhig und gelassen.
-  - Das ueberrascht mich, aber es ist okay.
+  - "Ich denke wir sollten das sachlich betrachten"
+  - "Mir geht es gut, danke der Nachfrage"
+  - "Das ist ein interessanter Gedanke"
+  - "Ich bin gerade entspannt"
+  - "Alles in Ordnung bei mir"
 tags:
 - cluster
 - shame

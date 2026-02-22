@@ -9,22 +9,13 @@ frame:
   concept: "Haushaltsroutine-Konflikte"
   pragmatics: "Alltägliche Machtkämpfe um Haushaltsorganisation"
   narrative: "Routine-Konfliktdynamik"
-combination:
-  type: "AND"
-  components:
-  - marker_id: "ATO_DIRECTIVE_CHORES"
-    weight: 0.4
-  - marker_id: "ATO_DIRECTIVE_HOMEWORK"
-    weight: 0.4
-  - marker_id: "ATO_DIRECTIVE_BEDTIME"
-    weight: 0.3
-  - marker_id: "SEM_CHILD_RESISTANCE"
-    weight: 0.5
-  - marker_id: "ATO_GOTTMAN_DEFENSIVENESS"
-    weight: 0.3
-  threshold: 0.6
+composed_of:
+  - SEM_CHILD_RESISTANCE
+  - SEM_REPETITIVE_COMPLAINT
+  - SEM_TASK_DOMINANCE
+  - SEM_DEFENSIVENESS_SHIFT
 activation:
-  rule: "WEIGHTED_AND"
+  rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
 window:
   messages: 50
 scoring:
@@ -34,16 +25,22 @@ scoring:
   formula: "logistic"
 examples:
   positive:
-  - "Räum auf! - Das ist nicht meine Schuld, dass es unordentlich ist!"
-  - "Mach Hausaufgaben! - Ich will nicht, das ist unfair!"
+  - "Räum endlich dein Zimmer auf, das sag ich jetzt zum dritten Mal!"
+  - "Immer soll ICH den Müll runterbringen, das nervt"
+  - "Wann machst du endlich Hausaufgaben?? Jeden Tag das gleiche"
+  - "Ich hab keinen Bock aufzuräumen, mach doch selber"
+  - "Du solltest schon seit ner Stunde im Bett sein!"
+  - "Warum muss ich immer den Tisch abräumen und Leo nie?"
+  - "Pack deine Sachen zusammen, wir müssen los - JETZT"
+  - "Ich hab schon gestern gesagt du sollst die Spülmaschine ausräumen"
+  - "Nein ich geh noch nicht ins Bett, alle anderen dürfen auch länger"
+  - "Jeden Morgen der gleiche Stress wegen dem Frühstück"
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - "Ich mach dann mal die Küche, kein Problem"
+  - "Klar, Hausaufgaben mach ich gleich nach dem Essen"
+  - "Das neue Rezept gestern war echt lecker"
+  - "Soll ich dir beim Einkaufen helfen?"
+  - "Ich hab mein Zimmer schon aufgeräumt"
 tags: [cluster, family, routine, chores, resistance, daily]
 detect_class: "E"
 criteria: "Kombination von Haushaltsanweisungen und Widerstandsmustern"

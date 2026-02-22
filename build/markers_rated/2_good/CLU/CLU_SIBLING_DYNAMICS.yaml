@@ -9,20 +9,13 @@ frame:
   concept: "Geschwisterdynamiken"
   pragmatics: "Geschwisterbeziehungen und Rollendynamiken"
   narrative: "Geschwisterliche Systemdynamik"
-combination:
-  type: "AND"
-  components:
-  - marker_id: "SEM_SIBLING_RIVALRY"
-    weight: 0.5
-  - marker_id: "ATO_ROLE_SIBLINGS"
-    weight: 0.4
-  - marker_id: "ATO_GENERALIZED_YOU_PATTERN"
-    weight: 0.3
-  - marker_id: "ATO_GOTTMAN_CONTEMPT"
-    weight: 0.4
-  threshold: 0.6
+composed_of:
+  - SEM_SIBLING_RIVALRY
+  - SEM_ACCUSATION_MARKER
+  - SEM_CONFLICT_MICRO
+  - SEM_TRIANGULATION_PATTERN
 activation:
-  rule: "WEIGHTED_AND"
+  rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
 window:
   messages: 50
 scoring:
@@ -32,16 +25,22 @@ scoring:
   formula: "logistic"
 examples:
   positive:
-  - "Mein Bruder ist so dumm und macht immer alles falsch!"
-  - "Geschwister streiten sich über Aufmerksamkeit der Eltern."
+  - "Mein Bruder kriegt immer alles und ich nichts!"
+  - "Mama liebt dich mehr als mich, das ist eh klar"
+  - "Gib das her, das ist MEINS! Du klaust immer meine Sachen"
+  - "Papa hat gesagt ICH darf zuerst, nicht du"
+  - "Meine Schwester ist so ne Petze, die rennt immer zu Mama"
+  - "Warum darf sie n eigenes Zimmer und ich muss teilen??"
+  - "Du bist nur eifersüchtig weil ich bessere Noten hab"
+  - "Hör auf mich nachzumachen, das nervt so!"
+  - "Leon hat angefangen, nicht ich!! Frag ihn doch"
+  - "Ich will nicht neben ihr sitzen, die ist so peinlich"
   negative:
-  - Mein Bruder ist so dumm und macht manchmal alles falsch!
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
+  - "Mein Bruder und ich spielen gerade zusammen Minecraft"
+  - "Cool, meine Schwester hat mir bei den Hausaufgaben geholfen"
+  - "Wir gehen morgen zusammen ins Kino, wird bestimmt gut"
+  - "Mein Kollege hat heute nen Witz erzählt"
+  - "Das Wetter soll am Wochenende gut werden"
 tags: [cluster, family, siblings, dynamics, rivalry]
 detect_class: "E"
 criteria: "Kombination von Geschwisterrollen und Konfliktmustern"

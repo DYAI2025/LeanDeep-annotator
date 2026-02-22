@@ -5,26 +5,33 @@ frame:
   concept: Narrative Strategie gebündelt
   pragmatics: Erwartungsmanagement
   narrative: qa_loop
+composed_of:
+  - SEM_FLOUT_QUALITY_IRONY
+  - SEM_SHARED_HUMOR
+  - SEM_HYPERBOLE_SIGNAL
 activation:
-  rule: AT_LEAST 2 IN 20 messages
+  rule: AT_LEAST 2 DISTINCT SEMs IN 20 messages
 scoring:
   base: 1.8
   weight: 1.3
 examples:
   positive:
-  - Mehrere Wie-viele-X-Witze nacheinander.
-  - Rätsel-Turn wiederholt.
-  - Frage→Antwort als Running-Gag.
-  - Q&A-Struktur mit Twist.
-  - Format als Gag-Träger.
+  - "Was ist grün und steht vor der Tür? Ein Klopfsalat haha"
+  - "Rate mal wie viele Programmierer man braucht um ne Glühbirne zu wechseln"
+  - "Ok nächstes Rätsel: Was hat Zähne aber kann nicht beißen?"
+  - "Kennst du den? Kommt ein Pferd in die Bar..."
+  - "Weißt du was der Unterschied zwischen nem Krokodil ist?"
+  - "Ok jetzt du: Warum können Geister so schlecht lügen?"
+  - "Noch eins: Was liegt am Strand und spricht undeutlich?"
+  - "Frage: Was sagt ein großer Stift zum kleinen Stift? Wachsmalstift lol"
+  - "Wie nennt man nen Bumerang der nicht zurückkommt? Stock 😂"
+  - "Quiz time: Welches Tier kann höher springen als ein Haus?"
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - "Kannst du mir erklären wie das funktioniert?"
+  - "Ich hab ne ernsthafte Frage zu dem Thema"
+  - "Was meinst du damit genau?"
+  - "Warum hast du gestern nicht geantwortet?"
+  - "Wie war dein Tag so?"
 tags:
 - humor
 - narrative

@@ -5,6 +5,11 @@ frame:
   concept: "Verdeckte Verantwortungsumkehr"
   pragmatics: "Schuldzuweisung mit plausible Abstreitbarkeit"
   narrative: "responsibility_shift"
+composed_of:
+- SEM_BLAME_SHIFT_EXPRESSIONS_MARKER
+- SEM_VICTIM_OFFENDER_REVERSAL
+- SEM_SELF_VICTIMIZATION
+- SEM_DEFENSIVENESS_SHIFT
 pattern: "ich (hätte|müsste|würde) nicht .+ wenn du"
 conditional_structures:
   wenn_dann: "wenn du .+ (dann|würde) ich nicht"

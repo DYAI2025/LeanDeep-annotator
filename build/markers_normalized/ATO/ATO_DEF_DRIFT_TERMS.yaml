@@ -2,24 +2,32 @@ id: ATO_DEF_DRIFT_TERMS
 schema: LeanDeep
 version: '5.1'
 layer: ATO
-lang: en
+lang: de
 description: ''
 frame:
-  signal: []
-  concept: ''
+  signal:
+  - eigentlich
+  - genauer gesagt
+  - streng genommen
+  - definitionstechnisch
+  concept: Begriffsverschiebungs-Indikatoren
   pragmatics: ''
   narrative: ''
-patterns: []
+patterns:
+- detect_class: phrase
+  list:
+  - "eigentlich"
+  - "genauer gesagt"
+  - "streng genommen"
+  - "definitionstechnisch"
 examples:
-  positive: []
-  negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  positive:
+  - Eigentlich meinte ich etwas anderes.
+  - Genauer gesagt war es privat.
+  - Streng genommen zählt das nicht.
+  - Definitionstechnisch ist das korrekt.
+  - Eigentlich war das ein Missverständnis.
+  negative: []
 tags: []
 rating: 2
 vad_estimate:
@@ -30,3 +38,5 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+metadata:
+  type: ATO

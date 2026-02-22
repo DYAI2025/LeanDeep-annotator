@@ -14,52 +14,36 @@ frame:
 patterns: []
 examples:
   positive:
-  - Meld dich, wenn du wach bist ☕️
-  - Gute Nacht – schreib morgen.
+  - Meld dich wenn du wach bist
+  - Gute Nacht, schreib morgen wieder
   - Memes des Tages schon gesehen?
-  - Voice-Note Marathon again?
-  - Noch wach? 🌙
-  - Ping mich, wenn du Pause hast.
-  - Schon zwei Monate Daily-Streak!
-  - Kein Tag ohne dein Update.
-  - Jeden Abend ein Recap, crazy.
-  - Hab extra Datenvolumen für dich geholt.
-  - Wie immer pünktlich zum Morgenkaffee.
-  - Unser täglicher Austausch ist schon Routine.
-  - Kein Tag vergeht ohne ein kurzes Update.
-  - Abendliche Voice-Note, wie abgesprochen.
-  - Schon acht Wochen ohne Pause – beeindruckend.
+  - Noch wach? Hab grad an dich gedacht
+  - Ping mich wenn du Pause hast
+  - Schon zwei Monate Daily-Streak mit uns!
+  - Kein Tag ohne dein Update, ich gewöhn mich dran
+  - Jeden Abend unser Recap, das ist schon Ritual
   - Morgencheck-in wie immer?
-  - Mittags-Ping nicht vergessen.
-  - Abendliche Zusammenfassung – Deal?
-  - Unser täglicher Call steht noch.
-  - 'Wie jeden Sonntag: Lagebericht.'
-  - Daily streak for two months.
-  - At least three chats per week without project pressure.
-  - Good-night + morning check-ins consistently.
-  - Regular memes/voice notes.
-  - No day without a quick update.
-  - Evening recap as a ritual.
-  - Extra data volume 'for you'.
-  - Ping me when you're on break—recurring.
-  - Weekend check-ins without a reason.
-  - Steady closeness via micro-pings.
+  - 'Wie jeden Sonntag: Lagebericht von dir'
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Hey, lang nichts gehört! Wie gehts dir?
+  - Sorry, hab deine Nachricht erst jetzt gesehen, war voll im Stress
+  - Wir sollten uns mal wieder treffen, ist ja ewig her
+  - Antworte wenn du Zeit hast, kein Stress
+  - 'Einmalige Frage: weißt du zufällig wo der Laden ist?'
 tags:
 - cluster
 - frequency
 - bonding
 rating: 1
+composed_of:
+- SEM_CONNECTION_POSITIVITY
+- SEM_SHARED_EXPERIENCE_REFERENCE
+- SEM_SOFT_COMMITMENT
+- SEM_SOCIAL_AFFILIATION
+activation:
+  rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
 scoring:
   base: 1.6
   weight: 1.15
 window:
-  weeks: 8
-detect_class: "SUSTAINED_CONTACT_FREQ_V1"
+  messages: 50

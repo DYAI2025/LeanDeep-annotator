@@ -36,6 +36,5 @@ tags:
 - modulation
 rating: 1
 composed_of:
-  require:
-  - "SCN_*"
-  condition: "rank_in_scene(top_k=2) != rank_global(top_k=2)"
+  require: []
+  condition: rank_in_scene(top_k=2) != rank_global(top_k=2)

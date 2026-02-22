@@ -51,3 +51,5 @@ effect_on_state:
   trust: -0.45
   conflict: 0.5
   deesc: -0.3
+activation:
+  rule: "ANY 2"

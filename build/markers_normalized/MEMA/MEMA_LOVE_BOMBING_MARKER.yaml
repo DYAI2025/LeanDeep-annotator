@@ -32,7 +32,6 @@ tags: []
 rating: 1
 composed_of:
 - SEM_LOVE_BOMBING
-- SEM_GUILT_FRAMING
 - SEM_POSITIVE_FUTURE
 activation:
-  rule: "ANY 2 IN 5 messages"
+  rule: ANY 2 IN 5 messages

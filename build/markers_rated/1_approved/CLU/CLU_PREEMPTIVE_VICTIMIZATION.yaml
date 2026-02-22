@@ -7,6 +7,10 @@ frame:
   pragmatics: "Kontrolle durch antizipierte Viktimisierung"
   narrative: "preemptive_defense"
 tags: [victimization, preemptive]
+composed_of:
+- SEM_SELF_VICTIMIZATION
+- SEM_FACE_SAVING
+- SEM_CONFLICT_AVOIDANCE
 pattern: "(?i)(ich weiß|sicher|wahrscheinlich).*(du wirst|wirst du).*(aber ich|obwohl ich|trotzdem muss ich)"
 activation:
   rule: "ANY 1 IN 10 messages"

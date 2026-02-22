@@ -1,10 +1,10 @@
 {
   "schema": "LeanDeep",
   "version": "5.1",
-  "total": 849,
+  "total": 848,
   "layers": {
     "ATO": 415,
-    "SEM": 238,
+    "SEM": 237,
     "CLU": 121,
     "MEMA": 68
   },
@@ -173,6 +173,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "repair_log": [
@@ -1647,6 +1650,9 @@
         "trust": -0.3,
         "conflict": 0.4,
         "deesc": -0.2
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "created": "2026-02-12",
@@ -4220,6 +4226,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 1"
       }
     },
     "ATO_CONTROL": {
@@ -4760,6 +4769,9 @@
         "conflict": 0.0,
         "deesc": 0.0
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "repair_log": [
           {
@@ -4874,11 +4886,14 @@
       "rating": 1,
       "composed_of": [
         "ATO_ACTIVITY_VERB",
-        "ATO_RITUAL"
+        "ATO_ROUTINE_CONTEXT"
       ],
       "scoring": {
         "base": 1.4,
         "weight": 1.1
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       }
     },
     "ATO_DECISION_ANNOUNCEMENT": {
@@ -5463,6 +5478,9 @@
         "defensive_justification"
       ],
       "rating": 1,
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "repair_log": [
           {
@@ -5837,6 +5855,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "repair_log": [
@@ -6426,6 +6447,9 @@
       },
       "window": {
         "messages": 5
+      },
+      "activation": {
+        "rule": "ANY 1"
       }
     },
     "ATO_DEVICE_ACCESS_REQUEST": {
@@ -7332,6 +7356,9 @@
         "conflict": 0.0,
         "deesc": 0.0
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "created": "2026-02-12",
         "author": "DYAI Emotional Semantics Collection",
@@ -7410,6 +7437,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "repair_log": [
@@ -8722,6 +8752,9 @@
         "conflict": 0.0,
         "deesc": 0.0
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "modality": "audio"
       }
@@ -8783,6 +8816,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "modality": "audio"
@@ -8979,6 +9015,9 @@
         "conflict": 0.1,
         "deesc": -0.05
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "created": "2026-02-12",
         "author": "DYAI Emotional Semantics Collection",
@@ -9091,6 +9130,9 @@
       },
       "window": {
         "messages": 7
+      },
+      "activation": {
+        "rule": "ANY 1"
       }
     },
     "ATO_FEELING_DOWNPLAY_WORD": {
@@ -9361,6 +9403,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "modality": "audio"
@@ -10203,6 +10248,9 @@
         "trust": -0.3,
         "conflict": 0.4,
         "deesc": -0.2
+      },
+      "activation": {
+        "rule": "ANY 1"
       }
     },
     "ATO_GOTTMAN_DEFENSIVENESS": {
@@ -10297,6 +10345,9 @@
         "trust": -0.3,
         "conflict": 0.4,
         "deesc": -0.2
+      },
+      "activation": {
+        "rule": "ANY 1"
       }
     },
     "ATO_GOTTMAN_STONEWALL": {
@@ -10594,6 +10645,9 @@
         "trust": 0.2,
         "conflict": -0.15,
         "deesc": 0.2
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "created": "2026-02-12",
@@ -11013,6 +11067,9 @@
         "conflict": 0.0,
         "deesc": 0.0
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "repair_log": [
           {
@@ -11374,6 +11431,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "created": "2026-02-12",
@@ -11957,6 +12017,9 @@
         "conflict": 0.0,
         "deesc": 0.0
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "modality": "audio"
       }
@@ -12150,6 +12213,9 @@
         "conflict": 0.0,
         "deesc": 0.0
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "created": "2026-02-12",
         "author": "DYAI Emotional Semantics Collection",
@@ -12213,6 +12279,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "modality": "audio"
@@ -12589,6 +12658,9 @@
         "conflict": -0.15,
         "deesc": 0.2
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "created": "2026-02-12",
         "author": "DYAI Emotional Semantics Collection",
@@ -12652,6 +12724,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "modality": "audio"
@@ -13265,6 +13340,9 @@
         "conflict": 0.2,
         "deesc": -0.15
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "created": "2026-02-12",
         "author": "DYAI Emotional Semantics Collection",
@@ -13470,6 +13548,9 @@
         "trust": 0.35,
         "conflict": -0.2,
         "deesc": 0.25
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "created": "2026-02-12",
@@ -14608,6 +14689,9 @@
         "conflict": 0.0,
         "deesc": 0.0
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "modality": "audio"
       }
@@ -14953,11 +15037,15 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_ACTIVITY_VERB"
+        "ATO_ACTIVITY_VERB",
+        "ATO_HOBBY_OBJECT"
       ],
       "scoring": {
         "base": 1.4,
         "weight": 1.1
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       }
     },
     "ATO_PERSONAL_SECRET": {
@@ -16263,6 +16351,9 @@
         "conflict": 0.0,
         "deesc": 0.0
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "created": "2026-02-12",
         "author": "DYAI Emotional Semantics Collection",
@@ -16655,6 +16746,9 @@
         "conflict": 0.0,
         "deesc": 0.0
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "repair_log": [
           {
@@ -16976,6 +17070,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "repair_log": [
@@ -19128,6 +19225,9 @@
         "conflict": 0.1,
         "deesc": -0.05
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "created": "2026-02-12",
         "author": "DYAI Emotional Semantics Collection",
@@ -19616,6 +19716,9 @@
         "conflict": 0.1,
         "deesc": -0.05
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "repair_log": [
           {
@@ -19931,6 +20034,9 @@
       },
       "window": {
         "messages": 6
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       },
       "metadata": {
         "repair_log": [
@@ -20297,6 +20403,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "created": "2026-02-12",
@@ -20853,6 +20962,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "modality": "audio"
@@ -22253,6 +22365,9 @@
         "conflict": 0.0,
         "deesc": 0.0
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "created": "2026-02-12",
         "author": "DYAI Emotional Semantics Collection",
@@ -22362,6 +22477,9 @@
         "trust": 0.25,
         "conflict": -0.1,
         "deesc": 0.15
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "repair_log": [
@@ -23188,6 +23306,9 @@
         "conflict": 0.0,
         "deesc": 0.0
       },
+      "activation": {
+        "rule": "ANY 1"
+      },
       "metadata": {
         "repair_log": [
           {
@@ -23722,6 +23843,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 1"
       },
       "metadata": {
         "repair_log": [
@@ -24286,6 +24410,9 @@
         "trust": 0.25,
         "conflict": -0.1,
         "deesc": 0.15
+      },
+      "activation": {
+        "rule": "ANY 1"
       }
     },
     "ATO_UNILATERAL_DECISION": {
@@ -24474,8 +24601,8 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_SPIRAL",
-        "ATO_GIVING_UP_PHRASE"
+        "ATO_DREHEN_IM_KREIS",
+        "ATO_KEINE_LOESUNG"
       ],
       "scoring": {
         "base": 1.3,
@@ -24483,6 +24610,9 @@
       },
       "window": {
         "messages": 6
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       }
     },
     "ATO_VAGUE_EXPERTISE_BAIT": {
@@ -25275,20 +25405,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Wie kommt das an? – Ziel: Exzellenz heute.",
-          "Award/Marktführer – bis 14:00 Qualitätsdraft.",
-          "Beste Noten – Standards hochziehen – Deadline.",
-          "Ich bin der Beste – Timebox – Best‑in‑Class liefern.",
-          "Statussignal – Exzellenzziel – Commitment."
+          "Ich will der Beste sein in meinem Jahrgang",
+          "Die Praesentation muss perfekt werden, alles andere ist nicht gut genug",
+          "Hab wieder ne 1 geschrieben, war aber knapp",
+          "Mein Chef hat gesagt ich bin der Top-Performer im Team",
+          "Ich muss das Projekt gewinnen, egal was",
+          "Die anderen sind nicht auf meinem Level",
+          "Qualitaet ist mir wichtiger als alles andere",
+          "Wenn ich schon was mach, dann richtig oder gar nicht",
+          "Ich will zeigen was ich kann, das ist mein Antrieb",
+          "Zweiter Platz ist der erste Verlierer"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich."
+          "Lass mal zusammen kochen heute Abend",
+          "Mir ist das echt egal wer gewinnt",
+          "Hauptsache wir haben Spass dabei",
+          "Ich brauch keine Anerkennung dafuer",
+          "Ist doch nur ein Spiel, entspann dich"
         ]
       },
       "tags": [
@@ -25297,6 +25430,11 @@
         "excellence"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_STATUS_RECOGNITION",
+        "SEM_EXCELLENCE_DRIVE",
+        "SEM_INFLUENCE_ORIENTATION"
+      ],
       "requires": {
         "sem_pool": [
           "SEM_STATUS_RECOGNITION",
@@ -25389,14 +25527,15 @@
       "composed_of": {
         "require": [
           "ATO_APOLOGY",
-          "ATO_EMPATHY_MARKERS"
+          "ATO_EMPATHY_MARKERS",
+          "ATO_COMPROMISE_OFFER",
+          "ATO_REPAIR_REQUEST",
+          "ATO_POSITIVE_REGARD"
         ],
-        "k_of_n": {
-          "k": 2,
-          "of": [
-            "ATO_COMPROMISE_OFFER",
-            "ATO_REPAIR_REQUEST",
-            "ATO_POSITIVE_REGARD"
+        "negative_evidence": {
+          "any_of": [
+            "ATO_DEFENSIVENESS",
+            "ATO_BLAME_SHIFT"
           ]
         }
       },
@@ -25406,26 +25545,6 @@
       "gates": {
         "min_msgs": 5,
         "require_bilateral": false
-      },
-      "ingredients": {
-        "require": [
-          "ATO_APOLOGY",
-          "ATO_EMPATHY_MARKERS"
-        ],
-        "k_of_n": {
-          "k": 2,
-          "of": [
-            "ATO_COMPROMISE_OFFER",
-            "ATO_REPAIR_REQUEST",
-            "ATO_POSITIVE_REGARD"
-          ]
-        }
-      },
-      "negative_evidence": {
-        "any_of": [
-          "ATO_DEFENSIVENESS",
-          "ATO_BLAME_SHIFT"
-        ]
       },
       "emits": {
         "indices": {
@@ -25540,22 +25659,17 @@
       "composed_of": {
         "require": [
           "SEM_TASK_DOMINANCE",
-          "ATO_AFFECT_FLAT"
+          "ATO_AFFECT_FLAT",
+          "ATO_ACK_MICRO",
+          "ATO_BOUNDARY_STRICT",
+          "ATO_TOPIC_SHIFT_TO_TASK",
+          "ATO_COURTESY_FORMAL",
+          "ATO_PROTOCOL_LANG",
+          "ATO_HUMOR_SUPPRESS",
+          "ATO_REPAIR_ABSENT",
+          "ATO_SYMMETRY_COOL",
+          "ATO_DELAY_BALANCED"
         ],
-        "k_of_n": {
-          "k": 4,
-          "of": [
-            "ATO_ACK_MICRO",
-            "ATO_BOUNDARY_STRICT",
-            "ATO_TOPIC_SHIFT_TO_TASK",
-            "ATO_COURTESY_FORMAL",
-            "ATO_PROTOCOL_LANG",
-            "ATO_HUMOR_SUPPRESS",
-            "ATO_REPAIR_ABSENT",
-            "ATO_SYMMETRY_COOL",
-            "ATO_DELAY_BALANCED"
-          ]
-        },
         "negative_evidence": {
           "any_of": [
             "ATO_AFFECTION_SHOW",
@@ -25576,33 +25690,6 @@
           "CLU_INTIMACY_PLAY",
           "CLU_HEATED_CONFLICT"
         ]
-      },
-      "ingredients": {
-        "require": [
-          "SEM_TASK_DOMINANCE",
-          "ATO_AFFECT_FLAT"
-        ],
-        "k_of_n": {
-          "k": 4,
-          "of": [
-            "ATO_ACK_MICRO",
-            "ATO_BOUNDARY_STRICT",
-            "ATO_TOPIC_SHIFT_TO_TASK",
-            "ATO_COURTESY_FORMAL",
-            "ATO_PROTOCOL_LANG",
-            "ATO_HUMOR_SUPPRESS",
-            "ATO_REPAIR_ABSENT",
-            "ATO_SYMMETRY_COOL",
-            "ATO_DELAY_BALANCED"
-          ]
-        },
-        "negative_evidence": {
-          "any_of": [
-            "ATO_AFFECTION_SHOW",
-            "CLU_ACTIVE_REPAIR",
-            "ATO_HUMOR_LIGHT"
-          ]
-        }
       },
       "emits": {
         "meta": [
@@ -25643,7 +25730,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -25658,29 +25745,37 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Elterliche Abwesenheit wird nüchtern, ohne Emotion, erwähnt.",
-          "Lob wird als unwichtig oder peinlich dargestellt.",
-          "Bindungen zu Freunden wichtiger als zu Familie.",
-          "Konflikte werden durch Rückzug gelöst, nicht durch Dialog.",
-          "Erfolg wird auf eigene Leistung, nie auf Unterstützung zurückgeführt.",
-          "Eltern werden sachlich, aber distanziert beschrieben."
+          "Ich brauch jetzt einfach Abstand",
+          "Lass mich bitte in Ruhe, ich meld mich",
+          "Ich kann grad nicht ueber Gefuehle reden",
+          "War halt so, ist jetzt auch egal",
+          "Ich komm allein klar, brauch keine Hilfe",
+          "Das Thema ist mir zu nah, lass gut sein",
+          "Muss nicht immer alles besprochen werden",
+          "Ich zieh mich jetzt zurueck, brauch Zeit fuer mich",
+          "Mir faellt das schwer, ich hab das nie gelernt",
+          "Nee, ich will da nicht drueber reden"
         ],
         "negative": [
-          "Erfolg wird auf eigene Leistung, selten auf Unterstützung zurückgeführt.",
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean."
+          "Komm her, ich brauch dich grad",
+          "Ich vermiss dich total",
+          "Lass uns drueber reden, ich oeffne mich",
+          "Ich fuehle mich dir so nah gerade",
+          "Danke dass du fuer mich da bist, das bedeutet mir alles"
         ]
       },
       "tags": [
         "attachment"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_STONEWALLING_BEHAVIOR",
+        "SEM_CONFLICT_AVOIDANCE",
+        "SEM_AVOIDANCE_LOOP",
+        "SEM_AFFECT_ISOLATION_TEXT"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 IN 5 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
       "scoring": {
         "base": 1.5,
@@ -25811,6 +25906,11 @@
         "planning"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_SELF_REGULATION",
+        "SEM_STRATEGIC_PLANNING",
+        "SEM_SELF_DISCLOSURE"
+      ],
       "activation": {
         "rule": "ANY in 1 message"
       },
@@ -25959,26 +26059,34 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "wir drehen uns im Kreis … wie vorhin",
-          "das hatten wir schon … nochmal von vorne",
-          "immer wieder die gleiche Frage",
-          "ich wiederhole mich … schon wieder",
-          "zurück am Anfang … ohne Fortschritt"
+          "Das hab ich dir schon hundert Mal gesagt!",
+          "Wir drehen uns im Kreis, das hatten wir doch gestern schon",
+          "Immer das gleiche Thema, wir kommen nie weiter",
+          "Das ist genau das was ich letzte Woche schon gesagt hab",
+          "Warum reden wir schon wieder darüber? Hab ich doch erklärt",
+          "Du sagst jedes Mal das gleiche und nix ändert sich",
+          "Ich wiederhol mich nicht nochmal, ich hab es dir x-mal gesagt",
+          "Wir sind wieder am selben Punkt wie vor einem Monat",
+          "Egal wie oft ich es sage, du hörst nicht zu",
+          "Schon wieder? Das ist doch wie letztes Mal, genau das gleiche"
         ],
         "negative": [
-          "manchmal wieder die gleiche Frage",
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst."
+          "Ich möchte das nochmal ansprechen weil mir was neues aufgefallen ist.",
+          "Können wir das Thema von letzter Woche nochmal aufgreifen?",
+          "Ich komme immer wieder darauf zurück weil es mir wichtig ist.",
+          "Lass uns das nochmal durchgehen, ich hab neue Ideen.",
+          "Das Thema ist noch offen, können wir einen neuen Ansatz probieren?"
         ]
       },
       "tags": [],
       "rating": 1,
+      "composed_of": [
+        "SEM_REPETITIVE_COMPLAINT",
+        "SEM_SPIRAL_THINKING",
+        "SEM_UNRESOLVED_ISSUE"
+      ],
       "activation": {
-        "rule": "AT_LEAST 3 IN 6 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 6 messages"
       },
       "scoring": {
         "base": 1.0,
@@ -26003,26 +26111,35 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "immer du machst das … nervt langsam",
-          "typisch von dir … reicht jetzt",
-          "hör auf damit … sonst passiert was",
-          "deine Schuld … wie immer",
-          "noch so ein Spruch und …"
+          "Das ist DEINE Schuld, nicht meine!",
+          "Du machst immer alles kaputt, echt jetzt",
+          "Fang nicht schon wieder an, ich hab keinen Bock mehr",
+          "Immer das gleiche mit dir, du lernst es nie",
+          "Du bist so egoistisch, merkst du das nicht?",
+          "Hör auf mich anzulügen, ich weiß genau was du getan hast",
+          "Du hast angefangen, nicht ich!",
+          "Noch ein Wort und ich bin weg",
+          "Du verdrehst alles, wie immer",
+          "Jedes Mal wenn ich was sage drehst du es um"
         ],
         "negative": [
-          "manchmal du machst das … nervt langsam",
-          "immer ich erlebe es so, dass das … nervt langsam",
-          "deine Schuld … wie manchmal",
           "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden."
+          "Ich verstehe deine Perspektive, auch wenn ich es anders sehe.",
+          "Lass uns gemeinsam eine Lösung finden.",
+          "Kannst du mir erklären, was du damit meinst?",
+          "Ich möchte das gerne verstehen."
         ]
       },
       "tags": [],
       "rating": 1,
+      "composed_of": [
+        "SEM_CONFLICT_ESCALATION",
+        "SEM_ACCUSATION_MARKER",
+        "SEM_BLAME_SHIFT_EXPRESSIONS_MARKER",
+        "SEM_GOTTMAN_CONFLICT_ESCALATION"
+      ],
       "activation": {
-        "rule": "AT_LEAST 3 IN 5 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
       "scoring": {
         "base": 1.0,
@@ -26129,27 +26246,13 @@
         "require": [
           "SEM_CONTROL_LEX",
           "SEM_PARENTAL_AUTHORITY"
-        ],
-        "k_of_n": {
-          "k": 1,
-          "of": []
-        }
+        ]
       },
       "window": {
         "size_messages": 6
       },
       "gates": {
         "min_msgs": 2
-      },
-      "ingredients": {
-        "require": [
-          "SEM_CONTROL_LEX",
-          "SEM_PARENTAL_AUTHORITY"
-        ],
-        "k_of_n": {
-          "k": 1,
-          "of": []
-        }
       },
       "emits": {
         "indices": {
@@ -26220,6 +26323,12 @@
         "manipulation"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_BLAME_SHIFT_EXPRESSIONS_MARKER",
+        "SEM_VICTIM_OFFENDER_REVERSAL",
+        "SEM_SELF_VICTIMIZATION",
+        "SEM_DEFENSIVENESS_SHIFT"
+      ],
       "activation": {
         "rule": "ANY 1 IN 15 messages"
       },
@@ -26251,20 +26360,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Kanal setzen (Call, jetzt) – Tempo (kurz, bis 15:00) – Maßstab früh – Split Nebenpfad – Passt. – Schick's mir.",
-          "Heute formell, 10min – Kurzrunde, nur Entscheidung – Anderes Thema raus – Fertig – Ich übernehme.",
-          "Bitte im Ticket, nicht per Chat – Deadline 14:00 – Reicht so, Rest später – Close – Handoff zu mir.",
-          "Zur Roadmap (kurz & direkt) – Schnelle Punkte – Maßstab jetzt – Split – Passt – Gib's mir rüber.",
-          "Nur FT – jetzt gleich – Frühbewertung – Ausklammern – Erledigt – Übergabe an mich."
+          "Hey? Bist du da? Hallo?",
+          "Ich schreib dir jetzt zum dritten Mal, antwort mal",
+          "Wieso gehst du nicht ran? Ich ruf nochmal an",
+          "Lies wenigstens meine Nachrichten",
+          "Ich seh doch dass du online bist, antworte",
+          "Okay dann schreib ich halt nochmal...",
+          "Bitte meld dich, das ist wichtig",
+          "Seit 3 Stunden keine Antwort, was soll das",
+          "Ich versuch's jetzt per WhatsApp, SMS und Anruf",
+          "Du ignorierst mich doch absichtlich"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich."
+          "Okay kein Stress, meld dich wenn du Zeit hast",
+          "Hab dir ne Nachricht geschickt, lies in Ruhe",
+          "Wie war dein Tag?",
+          "Bin gleich zuhause",
+          "Vergiss nicht den Termin morgen"
         ]
       },
       "tags": [
@@ -26273,6 +26385,12 @@
         "pacing"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_CONTROL_LEX",
+        "SEM_FRAME_SHIFT",
+        "SEM_STONEWALLING_BEHAVIOR",
+        "SEM_BOUNDARY_VIOLATION"
+      ],
       "activation": {
         "rule": "AT_LEAST 3 CORE IN 10 messages WITH START SEM_SETTING_CONTROL AND END ANY OF [ATO_CLOSE, ATO_HANDOFF]",
         "window": 10
@@ -26308,23 +26426,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Objektiv... aber eigentlich super — Du bist egoistisch.",
-          "Rational betrachtet... aber hey toll — Ihr seid unsicher.",
-          "Logisch gesehen... aber schön — Du bist arrogant.",
-          "Statistisch... aber spannend — Ihr seid unfähig.",
-          "Aus Gründen der... aber na ja — Du bist egoistisch.",
-          "Objektiv… aber gut — Du bist faul.",
-          "Rational… aber top — Ihr seid arrogant.",
-          "Logisch… aber nice — Du bist unsicher."
+          "Das hab ich nie gesagt, du verdrehst alles!",
+          "Ich musste das tun weil DU nicht reagiert hast",
+          "Ich bin nicht schuld, ich hab mich nur verteidigt",
+          "Wenn du nicht so gewesen wärst hätte ich das nicht gemacht",
+          "Ich wollte ja nur helfen, aber wie immer wird mir alles vorgeworfen",
+          "Das stimmt so nicht, du überreagierst total",
+          "Ich war doch gar nicht aggressiv, du bist empfindlich",
+          "Klar, ich bin immer der Böse, ne?",
+          "Ich sag ja nichts mehr, dann bin ich wenigstens nicht schuld",
+          "Was soll ich denn noch machen? Egal was ich tue es reicht dir nicht"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich."
+          "Stimmt, da hast du recht, das war mein Fehler.",
+          "Ich sehe ein dass ich da besser hätte reagieren können.",
+          "Danke dass du mir das sagst, ich denke drüber nach.",
+          "Ja, das hätte ich anders machen sollen.",
+          "Ich nehme mir das zu Herzen."
         ]
       },
       "tags": [
@@ -26332,6 +26450,15 @@
         "defense"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_DEFENSIVENESS_SHIFT",
+        "SEM_SELF_VICTIMIZATION",
+        "SEM_FACE_SAVING",
+        "SEM_BLAME_SHIFT_EXPRESSIONS_MARKER"
+      ],
+      "activation": {
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
+      },
       "scoring": {
         "base": 1.8,
         "weight": 1.3,
@@ -26363,27 +26490,30 @@
           "tut mir leid",
           "bin fertig"
         ],
-        "concept": "Negative Emotion",
-        "pragmatics": "Leid ausdrücken",
-        "narrative": "sadness"
+        "concept": "Destruktive Selbstschutzreaktion",
+        "pragmatics": "Abwehr durch Gegenangriff oder Schuldzuweisung",
+        "narrative": "defensive_aggression"
       },
       "patterns": [],
       "examples": {
         "positive": [
-          "Ich hab nie gesagt, dass ich das verspreche – du hast das einfach so angenommen.",
-          "Also wenn du denkst, dass das alles meine Schuld ist, dann… okay.",
-          "Du hast mich in diese Situation gebracht – ich hatte keine Wahl.",
-          "Jetzt verdrehst du mir wieder das Wort im Mund.",
-          "Du willst immer, dass ich perfekt bin – das ist nicht fair."
+          "Ich hab nie gesagt dass ich das verspreche, du hast das einfach so angenommen",
+          "Wenn du denkst das ist meine Schuld, dann okay, aber du hast angefangen",
+          "Du hast mich dazu gebracht, ich hatte keine andere Wahl",
+          "Jetzt verdrehst du mir wieder das Wort im Mund",
+          "Du willst immer dass ich perfekt bin, das ist nicht fair",
+          "Ich bin halt so weil DU mich so gemacht hast",
+          "Dann bin ich halt der Boese, wenn du das brauchst",
+          "Ich muss mich verteidigen weil du mich staendig angreifst",
+          "Immer soll ich schuld sein, aber was ist mit DIR?",
+          "Ich hab nur reagiert weil du mich provoziert hast"
         ],
         "negative": [
-          "Ich hab selten gesagt, dass ich das verspreche – du hast das einfach so angenommen.",
-          "Du hast mich in diese Situation gebracht – ich hatte wenige Wahl.",
-          "ich habe mich in diese Situation gebracht – ich hatte keine Wahl.",
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden."
+          "Du hast recht, tut mir leid, ich hab Mist gebaut",
+          "Ich ueberleg mal was mein Anteil daran ist",
+          "Ich versteh warum dich das verletzt hat",
+          "Treffen wir uns um 4?",
+          "Soll ich Brot mitbringen?"
         ]
       },
       "tags": [
@@ -26391,8 +26521,14 @@
         "emotion"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_DEFENSIVENESS_SHIFT",
+        "SEM_BLAME_SHIFT_EXPRESSIONS_MARKER",
+        "SEM_VICTIM_OFFENDER_REVERSAL",
+        "SEM_SELF_VICTIMIZATION"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 IN 5 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
       "scoring": {
         "base": 1.5,
@@ -26512,6 +26648,9 @@
         "base": 0.58,
         "cap": 0.95
       },
+      "activation": {
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 4 turns"
+      },
       "metadata": {
         "family": "DISSONANCE"
       }
@@ -26534,23 +26673,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Nie... rational... hä?... anderes Thema.",
-          "Immer... logisch... Wie bitte?... egal.",
-          "Nie... statistisch... Wer?... weiter.",
-          "Immer... aus Gründen... Hä?... zum nächsten Punkt.",
-          "Nie... objektiv... Was meinst du?... anderes Thema.",
-          "Immer… logisch… Wer?… anderes Thema.",
-          "Nie… statistisch… Hä?… weiter.",
-          "Immer… objektiv… Wie bitte?… egal."
+          "Du sagst du liebst mich aber ignorierst mich seit Tagen",
+          "Ich dachte wir haben das geklärt, aber jetzt fängt es wieder an",
+          "Sorry hilft halt nix wenn du es morgen wieder machst",
+          "Du sagst alles ist gut aber dein Verhalten zeigt was anderes",
+          "Wir reden und reden aber es ändert sich nix",
+          "Hab versucht es nochmal anzusprechen aber du blockst wieder",
+          "Deine Worte und deine Taten passen einfach nicht zusammen",
+          "Ich fühl mich gar nicht gehört obwohl du sagst du verstehst mich",
+          "Jedes Mal sagst du es wird besser und dann passiert das gleiche",
+          "Wir haben doch gestern drüber geredet und jetzt machst du es wieder"
         ],
         "negative": [
-          "selten... rational... hä?... anderes Thema.",
-          "manchmal... logisch... Wie bitte?... egal.",
-          "selten... statistisch... Wer?... weiter.",
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden."
+          "Ja stimmt, da war ich widersprüchlich, sorry.",
+          "Ich merke dass ich mich anders verhalten muss.",
+          "Danke dass du das ansprichst, lass uns das klären.",
+          "Du hast recht, das passt nicht zusammen was ich gesagt hab.",
+          "Ich verstehe warum dich das verwirrt."
         ]
       },
       "tags": [
@@ -26558,6 +26697,14 @@
         "dissonance"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_DISSONANCE_TEXT",
+        "SEM_REPAIR_FAILURE_TEXT",
+        "SEM_CONTRADICTION"
+      ],
+      "activation": {
+        "rule": "AT_LEAST 1 OF [SEM_DISSONANCE_TEXT, SEM_REPAIR_FAILURE_TEXT] IN 5 messages"
+      },
       "scoring": {
         "base": 1.8,
         "weight": 1.3,
@@ -26709,7 +26856,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -26722,26 +26869,35 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "kurze Sequenz A … kurze Sequenz B",
-          "Beispiel mit zwei Signalen in einem Satz",
-          "Signal 1 … später Signal 2 im Kontext",
-          "Kombination aus Token X und Y",
-          "Variante mit ähnlicher Semantik"
+          "Ich liebe dich so sehr!! ... Nee weißt du was, ich hasse das hier",
+          "Alles super, bin mega happy! ... Ich kann nicht mehr, das ist zu viel",
+          "Ich krieg die Krise!! Nein warte, ist eigentlich egal",
+          "Erst war ich total wütend und dann hab ich geheult",
+          "Ich weiß nicht ob ich lachen oder weinen soll gerade",
+          "Mir geht es gut nein warte eigentlich nicht",
+          "Total glücklich! ... ok ne doch nicht, bin mega down gerade",
+          "Bin so dankbar!! Ach vergiss es, bringt eh alles nix",
+          "Ich explodier gleich! Nee egal is mir doch egal",
+          "Eine Minute bin ich happy und dann krieg ich Panik"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Mir geht es heute gut, danke der Nachfrage.",
+          "Ja, ich bin etwas genervt, aber es geht schon.",
+          "Ich bin traurig wegen der Sache gestern.",
+          "Das macht mich nachdenklich.",
+          "Insgesamt bin ich zufrieden mit der Situation."
         ]
       },
       "tags": [],
       "rating": 1,
+      "composed_of": [
+        "SEM_EMOTIONAL_OVERWHELM",
+        "SEM_AMBIVALENCE",
+        "SEM_HYPERBOLE_SIGNAL",
+        "SEM_SPIRAL_THINKING"
+      ],
       "activation": {
-        "rule": "AT_LEAST 4 IN 8 messages"
+        "rule": "AT_LEAST 3 DISTINCT SEMs IN 8 messages"
       },
       "scoring": {
         "base": 1.0,
@@ -26766,20 +26922,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Dialog mit mehrmaligem 'ich bin schuld' und 'ja, aber' in kurzer Folge.",
-          "Wiederholte Selbstvorwürfe, gefolgt von Abschwächungen.",
-          "Mehrere gleiche Vorwurfspassagen über 10–20 Nachrichten verteilt.",
-          "Konversation, die in eine Beschwerde-Schleife fällt.",
-          "Partner sagt 'immer du' + wiederholte Selbstbeschuldigung."
+          "Ich bin schuld, ich weiss... aber du hast auch...",
+          "Ja ich hab Mist gebaut, ABER du haettest auch anders reagieren koennen",
+          "Immer das Gleiche, ich entschuldige mich und du machst weiter",
+          "Sorry sorry sorry, aber DU hoerst ja auch nicht zu",
+          "Okay ich bin schuld, zufrieden? Aber ehrlich, du provozierst das",
+          "Ich sag ja ich war falsch, aber musst du das immer wieder aufwaermen?",
+          "Ja klar, ich bin wieder der Schuldige, wie immer",
+          "Tut mir leid... aber du hast angefangen",
+          "Ich geb's zu, mein Fehler, aber du machst das jedes Mal",
+          "Schon wieder das gleiche Thema, ich hab mich doch entschuldigt"
         ],
         "negative": [
-          "Partner sagt 'manchmal du' + wiederholte Selbstbeschuldigung.",
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst."
+          "Tut mir leid, du hast recht, ich aender das",
+          "Ich seh meinen Fehler und ich arbeite dran",
+          "Wollen wir morgen grillen?",
+          "Hab die Waesche aufgehaengt",
+          "Der Bus hat Verspaetung, komm 10 Minuten spaeter"
         ]
       },
       "tags": [
@@ -26787,6 +26946,12 @@
         "relationship-dynamics"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_SELF_VICTIMIZATION",
+        "SEM_DEFENSIVENESS_SHIFT",
+        "SEM_REPETITIVE_COMPLAINT",
+        "SEM_SPIRAL_THINKING"
+      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 24 messages"
       },
@@ -26865,6 +27030,9 @@
       "window": {
         "messages": 20
       },
+      "activation": {
+        "rule": "AT_LEAST 3 DISTINCT SEM IN 20 messages"
+      },
       "metadata": {
         "repair_log": [
           {
@@ -26906,28 +27074,37 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Weißt du noch, wie wir damals im Regen gefeiert haben?",
-          "Du bist und bleibst mein Lieblingsidiot.",
-          "Egal was passiert, ich steh hinter dir, klar?",
-          "Du kennst mich doch – ich brauch drei Tage zum Antworten 😂",
-          "Nur du darfst mich so nennen, Alter."
+          "Weißt du noch wie wir damals im Regen gefeiert haben?",
+          "Du bist und bleibst mein Lieblingsidiot",
+          "Egal was passiert, ich steh hinter dir klar?",
+          "Du kennst mich doch, ich brauch drei Tage zum Antworten haha",
+          "Nur du darfst mich so nennen, Alter",
+          "Ich bin so froh dass ich dich hab, ernsthaft",
+          "Wir zwei gegen den Rest der Welt wie immer",
+          "Das ist genau so ein Ding das nur wir lustig finden",
+          "Danke dass du immer ehrlich zu mir bist, das schätz ich mega",
+          "Bro du bist der einzige dem ich das erzählen würde"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich."
+          "Können Sie mir bitte die Unterlagen schicken?",
+          "Der Termin wurde auf Mittwoch verschoben",
+          "Ich kenne die Person nicht wirklich gut",
+          "Das Wetter ist heute schön",
+          "Bitte überweisen Sie den Betrag bis Freitag"
         ]
       },
       "tags": [
         "communication"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_SHARED_EXPERIENCE_REFERENCE",
+        "SEM_SHARED_HUMOR",
+        "SEM_WARM_APPRECIATION",
+        "SEM_SOCIAL_AFFILIATION"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 IN 5 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
       "scoring": {
         "base": 1.5,
@@ -27036,28 +27213,15 @@
       "rating": 1,
       "composed_of": {
         "require": [
+          "SEM_REALITY_DISTORTION_FIELD",
           "CLU_COVERT_RESPONSIBILITY_INVERSION"
-        ],
-        "k_of_n": {
-          "k": 2,
-          "of": []
-        }
+        ]
       },
       "window": {
         "size_messages": 6
       },
       "gates": {
         "min_msgs": 2
-      },
-      "ingredients": {
-        "require": [
-          "SEM_REALITY_DISTORTION_FIELD",
-          "CLU_COVERT_RESPONSIBILITY_INVERSION"
-        ],
-        "k_of_n": {
-          "k": 2,
-          "of": []
-        }
       },
       "emits": {
         "indices": {
@@ -27195,14 +27359,15 @@
       "composed_of": {
         "require": [
           "ATO_ANGER",
-          "ATO_DEFENSIVENESS"
+          "ATO_DEFENSIVENESS",
+          "ATO_BLAME_SHIFT",
+          "ATO_CRITICISM_ATTACK_MARKER",
+          "ATO_ESCALATION_LEXICON"
         ],
-        "k_of_n": {
-          "k": 3,
-          "of": [
-            "ATO_BLAME_SHIFT",
-            "ATO_CRITICISM_ATTACK_MARKER",
-            "ATO_ESCALATION_LEXICON"
+        "negative_evidence": {
+          "any_of": [
+            "ATO_DEESCALATION_PHRASE",
+            "ATO_APOLOGY"
           ]
         }
       },
@@ -27212,26 +27377,6 @@
       "gates": {
         "min_msgs": 4,
         "require_bilateral": true
-      },
-      "ingredients": {
-        "require": [
-          "ATO_ANGER",
-          "ATO_DEFENSIVENESS"
-        ],
-        "k_of_n": {
-          "k": 3,
-          "of": [
-            "ATO_BLAME_SHIFT",
-            "ATO_CRITICISM_ATTACK_MARKER",
-            "ATO_ESCALATION_LEXICON"
-          ]
-        }
-      },
-      "negative_evidence": {
-        "any_of": [
-          "ATO_DEESCALATION_PHRASE",
-          "ATO_APOLOGY"
-        ]
       },
       "emits": {
         "indices": {
@@ -27498,6 +27643,9 @@
       },
       "window": {
         "messages": 20
+      },
+      "activation": {
+        "rule": "AT_LEAST 2 IN 20 messages"
       }
     },
     "CLU_INNER_EMPTINESS_MARKER": {
@@ -27521,21 +27669,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Ist mir egal.",
-          "Hab gar keinen Antrieb, tut mir leid.",
-          "Kochen? Ach, ist mir schnuppe.",
-          "Mir ist das gerade echt egal.",
-          "Keine Lust auf gar nichts.",
-          "Alles ist mir zu viel und gleichzeitig egal."
+          "Ist mir egal",
+          "Hab gar keinen Antrieb, tut mir leid",
+          "Kochen? Ach, ist mir schnuppe",
+          "Mir ist das gerade echt alles egal",
+          "Keine Lust auf gar nichts",
+          "Alles ist mir zu viel und gleichzeitig egal",
+          "Ich fuehle einfach nichts mehr",
+          "Was soll's, ist doch eh alles das Gleiche",
+          "Mach du, mir ist alles wurscht",
+          "Ich bin so leer gerade, ich weiss nicht"
         ],
         "negative": [
-          "Hab gar wenige Antrieb, tut mir leid.",
-          "wenige Lust auf gar nichts.",
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken."
+          "Ich freu mich voll auf heute Abend",
+          "Das regt mich echt auf, so eine Frechheit",
+          "Ich bin so gluecklich gerade",
+          "Boah das macht mich richtig wuetend",
+          "Ich kann's kaum erwarten dich zu sehen"
         ]
       },
       "tags": [
@@ -27543,8 +27693,13 @@
         "apathy"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_APATHETIC_REPLY",
+        "SEM_AFFECT_ISOLATION_TEXT",
+        "SEM_EMOTIONAL_OVERWHELM"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 IN 5 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
       "scoring": {
         "base": 1.5,
@@ -27616,14 +27771,15 @@
       "composed_of": {
         "require": [
           "ATO_AFFECTION_SHOW",
-          "ATO_HUMOR_LIGHT"
+          "ATO_HUMOR_LIGHT",
+          "ATO_ROMANTIC_SIGNAL_DIRECT",
+          "ATO_LL_PHYSICAL_TOUCH",
+          "ATO_LL_QUALITY_TIME"
         ],
-        "k_of_n": {
-          "k": 2,
-          "of": [
-            "ATO_ROMANTIC_SIGNAL_DIRECT",
-            "ATO_LL_PHYSICAL_TOUCH",
-            "ATO_LL_QUALITY_TIME"
+        "negative_evidence": {
+          "any_of": [
+            "ATO_BOUNDARY_STRICT",
+            "ATO_AFFECT_FLAT"
           ]
         }
       },
@@ -27633,26 +27789,6 @@
       "gates": {
         "min_msgs": 3,
         "require_bilateral": true
-      },
-      "ingredients": {
-        "require": [
-          "ATO_AFFECTION_SHOW",
-          "ATO_HUMOR_LIGHT"
-        ],
-        "k_of_n": {
-          "k": 2,
-          "of": [
-            "ATO_ROMANTIC_SIGNAL_DIRECT",
-            "ATO_LL_PHYSICAL_TOUCH",
-            "ATO_LL_QUALITY_TIME"
-          ]
-        }
-      },
-      "negative_evidence": {
-        "any_of": [
-          "ATO_BOUNDARY_STRICT",
-          "ATO_AFFECT_FLAT"
-        ]
       },
       "emits": {
         "indices": {
@@ -27687,7 +27823,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -27701,25 +27837,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Early generalization followed by certainty markers",
-          "Stereotyping language with emerging rigidity",
-          "Multiple weak bias signals clustering",
-          "Attribution errors starting to compound",
-          "Initial us-vs-them language formation",
-          "Early stereotyping + 'case closed' vibe",
-          "Initial 'always/never' + dismissal of nuance",
-          "Subtle us–them hint + fast generalization",
-          "Premature certainty + ignoring alternate causes",
-          "Quick label + selective memory"
+          "Die sind halt IMMER so, das war schon immer so und wird sich nie ändern",
+          "Ja klar, typisch wieder, die können einfach nix anderes",
+          "Ich weiß zu 100% dass der das absichtlich macht, da bin ich mir sicher",
+          "Solche Leute sind einfach so, da brauchst du gar nicht diskutieren",
+          "Das ist doch offensichtlich, jeder sieht das so außer du",
+          "Nee sorry aber DIE machen das grundsätzlich falsch, alle ohne Ausnahme",
+          "Glaub mir, ich kenn solche Typen, die ändern sich nie",
+          "Das ist halt Fakt, brauch man gar nicht drüber reden",
+          "Die Schuld liegt eindeutig bei denen, ganz klar, ohne Zweifel",
+          "Überraschung, mal wieder das gleiche Muster, was hast du erwartet"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Hmm, das kann ich mir gut vorstellen, erzähl mal mehr",
+          "Ich bin mir da noch nicht ganz sicher, lass mich drüber nachdenken",
+          "Vielleicht hat das auch andere Gründe, wer weiß",
+          "Stimmt, da hast du recht, guter Punkt",
+          "Ich muss zugeben, so hab ich das noch nicht gesehen"
         ]
       },
       "tags": [
@@ -27729,8 +27863,14 @@
         "learning"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_CERTAINTY_CLAIMS",
+        "SEM_HYPERBOLE_SIGNAL",
+        "SEM_MINIMIZATION",
+        "SEM_ACCUSATION_MARKER"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 DISTINCT bias ATOs IN 5 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
       "scoring": {
         "base": 0.5,
@@ -27756,7 +27896,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -27770,25 +27910,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "… Abwertung + 'unter deiner Würde' …",
-          "… 'respektlos' + Appell …",
-          "… Spott + Statusangriff …",
-          "… 'erniedrigt' + Kontext Schikane …",
-          "… 'minderwertig' angedeutet …",
-          "… 'so redet man nicht mit Leuten' …",
-          "… 'würd ich keinem wünschen' + Empathierahmen …",
-          "… 'Grenze überschritten' + Würdebezug …",
-          "… Dehumanisierung + Gegenrede …",
-          "… 'Fairness' + 'auf Augenhöhe' einfordern …"
+          "Du bist echt zu dumm dafür, das kapierst du eh nie",
+          "Kein Wunder dass niemand mit dir zusammenarbeiten will",
+          "So wie du dich benimmst, hat man keinen Respekt vor dir",
+          "Du bist halt einfach nicht auf dem Level, sorry",
+          "Sei froh dass ich mir überhaupt die Zeit nehme dir das zu erklären",
+          "Leute wie du sollten sich mal lieber zurückhalten",
+          "Das ist ja schon fast peinlich wie wenig du davon verstehst",
+          "Du bist echt unter aller Würde, schäm dich mal",
+          "Mensch, das würde ja nicht mal ein Kind so machen",
+          "Jemand wie du hat da eigentlich nichts verloren"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Ich seh das anders als du, aber ich respektiere deine Meinung",
+          "Das war nicht so gemeint, tut mir leid",
+          "Lass uns auf Augenhöhe drüber reden",
+          "Ich schätze deinen Einsatz sehr",
+          "Danke dass du dir die Zeit genommen hast"
         ]
       },
       "tags": [
@@ -27798,6 +27936,12 @@
         "learning"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_MICRO_AGGRESSION_LIGHT",
+        "SEM_SHAME_TEXT",
+        "SEM_GASLIGHTING_ATTEMPT",
+        "SEM_BOUNDARY_VIOLATION"
+      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
@@ -27916,20 +28060,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "verteilte Hinweise auf Verlust/Bedauern ohne harte Verdichtung",
-          "Schuld‑ und Trauersprache tauchen vereinzelt auf",
-          "example 3",
-          "example 4",
-          "example 5"
+          "Ich vermiss ihn so sehr, das wird einfach nicht besser",
+          "Manchmal denk ich es war alles meine Schuld",
+          "Ich hätte das anders machen sollen, jetzt ist es zu spät",
+          "Es tut so weh wenn ich dran denke, ich kann nicht mehr",
+          "Ich fühl mich so leer seitdem, als ob ein Teil fehlt",
+          "Warum hab ich nicht besser aufgepasst, das werd ich mir nie verzeihen",
+          "Alles erinnert mich daran, ich komm da nicht drüber weg",
+          "Ich bereue so vieles, hätte ich bloß anders reagiert",
+          "Die Trauer kommt in Wellen, manchmal triffts mich einfach so",
+          "Ich schäm mich dass ich nicht da war als es drauf ankam"
         ],
         "negative": [
-          "I think we should look at this objectively.",
-          "I'm doing fine, thanks for asking.",
-          "That's an interesting thought.",
-          "I'm feeling relaxed right now.",
-          "Everything is fine with me.",
-          "I'm feeling calm and settled today.",
-          "That surprises me, but it's okay."
+          "Heute war ein richtig guter Tag, ich bin zufrieden",
+          "Ich freu mich auf das Wochenende",
+          "Das Essen war mega lecker, danke dafür",
+          "Ich bin gerade echt entspannt und happy",
+          "Alles läuft grad richtig gut bei mir"
         ]
       },
       "tags": [
@@ -27939,6 +28086,12 @@
         "learning"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_EMOTIONAL_OVERWHELM",
+        "SEM_SELF_PITY",
+        "SEM_SELF_REFLECTION",
+        "SEM_AFFECT_ISOLATION_TEXT"
+      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
@@ -27946,7 +28099,6 @@
         "base": 0.5,
         "weight": 1.0
       },
-      "criteria": "",
       "metadata": {
         "intuition": {
           "state": "provisional",
@@ -27968,7 +28120,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -27982,25 +28134,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "… 'ja klar' + Augenrollen-Andeutung …",
-          "… 'großartig' bei offensichtlich Negativem …",
-          "… spöttische Einlage + Anführungszeichen …",
-          "… 'na toll' + Übertreibung …",
-          "… ironische Zustimmung + Spitze …",
-          "… totepan-Emoji + doppelte Verneinung …",
-          "… 'fantastisch gelaufen' nach Fail …",
-          "… 'genau, bestimmt' + Hauch Zynismus …",
-          "… 'ach wirklich?' + Schnippigkeit …",
-          "… überzeichnete Lobhudelei + Seitenhieb …"
+          "Ja klar, super Idee, hat ja beim letzten Mal auch SO gut funktioniert",
+          "Wow, echt beeindruckend wie du das wieder hingekriegt hast",
+          "Na toll, genau das hab ich gebraucht, danke für nichts",
+          "Ach wirklich? Das ist ja mal eine ganz neue Erkenntnis",
+          "Großartig, einfach großartig, besser hätte man es nicht vermasseln können",
+          "Ja sicher, du bist natürlich der Einzige der hier was leistet",
+          "Oh wie schön, genau darauf hab ich mein Leben lang gewartet",
+          "Fantastisch gelaufen, kann man echt nicht anders sagen",
+          "Genau, bestimmt, das glaub ich dir sofort, klar",
+          "Super Plan, was soll da schon schiefgehen, oder"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Das finde ich echt gut, tolle Idee",
+          "Ja stimmt, das hat super funktioniert letztens",
+          "Danke dir, das war wirklich hilfreich",
+          "Ich freu mich dass das so gut geklappt hat",
+          "Das hast du echt gut gemacht, Respekt"
         ]
       },
       "tags": [
@@ -28010,6 +28160,12 @@
         "learning"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_SARCASTIC_DRIFT",
+        "SEM_FLOUT_QUALITY_IRONY",
+        "SEM_HYPERBOLE_SIGNAL",
+        "SEM_PASSIVE_AGGRESSIVE_BEHAVIOR"
+      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
@@ -28051,25 +28207,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "… 'unmoralisch' + 'schämen' …",
-          "… 'anständig' + 'so macht man das' …",
-          "… Moralisierung + Abwertung …",
-          "… 'gut/böse'-Dichotomie + Pflichtappell …",
-          "… 'richtige Seite' + Tugendbezug …",
-          "… 'Skandal' + moralische Empörung …",
-          "… 'Integrität' + Vorwurf des Verrats …",
-          "… 'wertebasiert' + Grenzziehung …",
-          "… 'ethisch fragwürdig' + Sanktion fordern …",
-          "… 'kein anständiger Mensch würde' …"
+          "Das ist einfach falsch, so was macht man nicht, Punkt",
+          "Kein anständiger Mensch würde so was tun, das gehört sich nicht",
+          "Du solltest dich schämen, das ist moralisch unterste Schublade",
+          "Das ist ein Skandal, wie kann man so was durchgehen lassen",
+          "Jeder mit einem Funken Anstand würde da anders handeln",
+          "Das ist respektlos und unwürdig, so geht man nicht mit Menschen um",
+          "Du hast eine Verantwortung und die nimmst du nicht wahr, das ist beschämend",
+          "So was gehört bestraft, das darf man nicht einfach hinnehmen",
+          "Es gibt Grenzen des Anstands und die hast du überschritten",
+          "Wer so handelt hat jedes Recht auf Respekt verwirkt"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich."
+          "Ich finde wir sollten das in Ruhe besprechen",
+          "Das ist ein guter Punkt, danke fürs Teilen",
+          "Ich verstehe deine Sichtweise, auch wenn ich anders denke",
+          "Lass uns gemeinsam eine Lösung finden",
+          "Mir ist aufgefallen dass wir da verschieden denken, spannend"
         ]
       },
       "tags": [
@@ -28079,6 +28233,12 @@
         "learning"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_DEONTIC_LANGUAGE",
+        "SEM_ACCUSATION_MARKER",
+        "SEM_CERTAINTY_CLAIMS",
+        "SEM_SHAME_TEXT"
+      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
@@ -28404,35 +28564,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Ich traue mir dieses Projekt locker zu und starte gleich mit dem Plan.",
-          "Ich weiß, dass ich das hinbekomme und lege heute los.",
-          "Ich habe die Ressourcen und setze das jetzt eigenständig um.",
-          "Ich traue mir die Rolle zu, ich bereite direkt alles vor.",
-          "Ich kann das stemmen und werde es zeigen.",
-          "Ich packe das mit meinem Team, ich übernehme die Führung.",
-          "Ich weiß, dass ich die Herausforderung meistere und plane die Schritte.",
-          "Ich traue mir die Umsetzung zu und starte die Umsetzung.",
-          "Ich bin überzeugt, dass ich das Ziel erreiche und handle sofort.",
-          "Ich weiß, wie das geht, und beginne ohne zu zögern."
+          "Ich pack das, kein Problem, fang gleich an",
+          "Das schaff ich locker, hab schon nen Plan im Kopf",
+          "Ich weiß genau was zu tun ist und leg jetzt los",
+          "Klar kann ich das, hab schon schwierigere Sachen gemeistert",
+          "Ich übernehm das, darauf kannst du dich verlassen",
+          "Ich trau mir das zu, hab da ein gutes Gefühl bei",
+          "Mach dir keine Sorgen, das krieg ich hin",
+          "Ich hab die Skills dafür und starte heute noch",
+          "Gib mir das Projekt, ich zieh das durch",
+          "Ich bin mir sicher dass ich das kann, lass mich einfach machen"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich.",
-          "Ich weiß nicht, ob ich das kann, ich zögere.",
-          "Vielleicht sollte jemand anderes das übernehmen.",
-          "Ich habe Sorge, dass ich scheitere.",
-          "Ich traue mich nicht, Verantwortung zu übernehmen.",
-          "Ich brauche mehr Mut, bevor ich anfange.",
-          "Ich fühle mich zu unsicher, um zu handeln.",
-          "Ich hoffe, dass mir jemand hilft.",
-          "Ich lasse das lieber ruhen, bevor ich Fehler mache.",
-          "Ich habe Zweifel, dass ich das schaffe.",
-          "Ich kann mir nicht vorstellen, das zu meistern."
+          "Ich weiß nicht ob ich das kann, bin mir unsicher",
+          "Vielleicht sollte das jemand anderes machen",
+          "Ich hab Angst dass ich es verbocke",
+          "Ich trau mich nicht so richtig, ehrlich gesagt",
+          "Keine Ahnung ob ich das hinkriege"
         ]
       },
       "tags": [
@@ -28440,7 +28588,14 @@
         "agency"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_I_STATEMENT",
+        "SEM_POSITIVE_OUTLOOK",
+        "SEM_EXCELLENCE_DRIVE",
+        "SEM_SOFT_COMMITMENT"
+      ],
       "activation": {
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 4 messages",
         "confirm_window": 3,
         "cooldown_messages": 4
       },
@@ -28469,35 +28624,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Ich war komplett weggetreten, alles wurde schwarz und ich taumelte.",
-          "Ich klappte innerlich zu und mir wurde schwindelig.",
-          "Ich konnte kaum stehen, es rauschte und ich war wie gelähmt.",
-          "Ich schaltete ab, während mir schwarz vor Augen wurde.",
-          "Ich verlor jeden Halt, der Boden schwankte und ich war weg.",
-          "Ich spürte nichts mehr, alles verschwamm und ich sank zusammen.",
-          "Ich war nur noch Nebel, während mein Körper einfrohr.",
-          "Ich fühlte mich betäubt, die Welt drehte sich und ich kippte fast.",
-          "Ich war nicht mehr ansprechbar, weil mir schwarz wurde.",
-          "Ich driftete weg, während der Raum kreiselte."
+          "Ich kann gerade nicht mehr, alles ist zu viel, lass mich einfach in Ruhe",
+          "Mir ist alles egal, ich spür nichts mehr, mir ist schlecht",
+          "Ich bin komplett überfordert, ich krieg keinen klaren Gedanken mehr",
+          "Lass mich einfach, ich will nicht reden, nicht denken, gar nichts",
+          "Mir wird schwarz vor Augen, ich brauch Ruhe jetzt sofort",
+          "Ich bin wie gelähmt, ich kann nicht antworten, geht grad nicht",
+          "Alles verschwimmt, ich bin total weggetreten gerade",
+          "Ich schalt ab, ich bin raus, kann nicht mehr",
+          "Mir dreht sich alles, ich krieg keine Luft mehr",
+          "Ich bin wie taub, nichts kommt mehr durch, ich bin weg"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich.",
-          "Ich war erschöpft, aber noch ansprechbar.",
-          "Ich war traurig, doch stand stabil.",
-          "Ich fühlte Stress, blieb jedoch präsent.",
-          "Ich fühlte Druck, aber keine körperliche Starre.",
-          "Ich war nervös, aber nicht benommen.",
-          "Ich war enttäuscht, doch nicht gelähmt.",
-          "Ich hatte Angst, blieb aber handlungsfähig.",
-          "Ich war verärgert, ohne dass mir schwarz wurde.",
-          "Ich fühlte mich gehetzt, aber stabil.",
-          "Ich war überfordert, doch nicht weggetreten."
+          "Ich bin müde aber sonst gehts mir gut",
+          "War ein anstrengender Tag, aber ich komm klar",
+          "Ich bin etwas gestresst, aber noch voll dabei",
+          "Ich fühl mich ein bisschen erschöpft, nix schlimmes",
+          "Ich hatte einen langen Tag, aber bin noch fit"
         ]
       },
       "tags": [
@@ -28505,7 +28648,14 @@
         "shutdown"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_EMOTIONAL_OVERWHELM",
+        "SEM_STONEWALLING_BEHAVIOR",
+        "SEM_APATHETIC_REPLY",
+        "SEM_AFFECT_ISOLATION_TEXT"
+      ],
       "activation": {
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 4 messages",
         "confirm_window": 4,
         "cooldown_messages": 5
       },
@@ -28789,6 +28939,13 @@
         "cluster"
       ],
       "rating": 1,
+      "composed_of": [
+        "ATO_LL_WORDS_OF_AFFIRMATION",
+        "ATO_LL_QUALITY_TIME",
+        "ATO_LL_ACTS_OF_SERVICE",
+        "ATO_LL_RECEIVING_GIFTS",
+        "ATO_LL_PHYSICAL_TOUCH"
+      ],
       "detect_class": {
         "rule": "normalize(w)->ranking; mixed if top2_delta < 0.15"
       }
@@ -28995,27 +29152,13 @@
         "require": [
           "SEM_MINIMIZATION",
           "ATO_MINIMIZING"
-        ],
-        "k_of_n": {
-          "k": 2,
-          "of": []
-        }
+        ]
       },
       "window": {
         "size_messages": 8
       },
       "gates": {
         "min_msgs": 2
-      },
-      "ingredients": {
-        "require": [
-          "SEM_MINIMIZATION",
-          "ATO_MINIMIZING"
-        ],
-        "k_of_n": {
-          "k": 2,
-          "of": []
-        }
       },
       "emits": {
         "indices": {
@@ -29092,6 +29235,9 @@
       "scoring": {
         "base": 0.65,
         "cap": 1.0
+      },
+      "activation": {
+        "rule": "SEQUENCE [EXPECTANCY_BREAK + AROUSAL] AND LACK_OF_SUCCESSFUL_REPAIR within 2 turns"
       },
       "metadata": {
         "family": "MISUNDERSTANDING",
@@ -29307,7 +29453,12 @@
         "v3.4",
         "depression"
       ],
-      "rating": 1
+      "rating": 1,
+      "composed_of": [
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_DEPRESSION_PAST_FOCUS"
+      ]
     },
     "CLU_OFFENSIVE_FLIRTING": {
       "id": "CLU_OFFENSIVE_FLIRTING",
@@ -29686,7 +29837,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -29700,20 +29851,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "<KPI>",
-          "<Top-Quartil>",
-          "<besser als>",
-          "<Wachstum %>",
-          "<Benchmark>"
+          "Wir müssen die KPIs diesen Monat noch knacken, sonst wars das mit dem Bonus",
+          "Ich hab gestern drei Deals abgeschlossen, läuft bei mir",
+          "Der ROI stimmt einfach nicht, das Projekt muss optimiert werden",
+          "Ich will in den nächsten zwei Jahren Teamlead werden, hab schon nen Plan",
+          "Wenn die anderen nicht mitziehen, mach ichs halt allein besser",
+          "Die Zahlen sprechen für sich, ich hab die beste Quote im Team",
+          "Effizienz ist alles, Zeit ist Geld",
+          "Ich hab mich gegen 50 Bewerber durchgesetzt, das zeigt doch was",
+          "Wir brauchen ne klare Strategie, kein Rumgeeier",
+          "Performance-Review war top, jetzt will ich die nächste Stufe"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Ich finde wir sollten auf alle Rücksicht nehmen",
+          "Mir ist wichtig dass es allen gut geht im Team",
+          "Das Universum wird schon dafür sorgen",
+          "Lass uns das gemeinsam entscheiden, jede Stimme zählt",
+          "Ich brauch erstmal Ruhe, mir ist das alles zu viel"
         ]
       },
       "tags": [
@@ -29722,8 +29876,14 @@
         "screening"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_ORANGE_STRATEGIC_FLOW",
+        "SEM_SD_ORANGE_ACHIEVE",
+        "SEM_EXCELLENCE_DRIVE",
+        "SEM_INFLUENCE_ORIENTATION"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 IN 6 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 6 messages"
       },
       "scoring": {
         "base": 1.0,
@@ -29776,6 +29936,11 @@
         "screening"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_<FAMILIE/ASPEKT>_A",
+        "SEM_<FAMILIE/ASPEKT>_B",
+        "SEM_<FAMILIE/ASPEKT>_C"
+      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 6 messages"
       },
@@ -29794,7 +29959,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -29808,20 +29973,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "<ganzheitlich>",
-          "<lange Zeitskala>",
-          "<Ökologie>",
-          "<Interbeing>",
-          "<Planetar>"
+          "Alles ist miteinander verbunden, wir sind Teil eines größeren Ganzen",
+          "Wenn wir planetar denken, lösen sich die Ego-Konflikte von selbst",
+          "Ich spüre da eine kollektive Resonanz, das geht über uns beide hinaus",
+          "Die Ökosysteme zeigen uns wie Zusammenleben wirklich funktioniert",
+          "Interbeing heißt für mich dass mein Wohlsein von deinem abhängt",
+          "Wir müssen in Generationen denken, nicht in Quartalen",
+          "Das Ganze ist mehr als die Summe seiner Teile, das spür ich grad",
+          "Mir geht es nicht um mich oder dich, sondern um das größere Feld",
+          "Bewusstsein entfaltet sich in Spiralen, wir sind nur ein Ausdruck davon",
+          "Die Lösung liegt nicht im Verstand sondern im Sein selbst"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Ich will einfach nur meine Ruhe haben",
+          "Das müssen wir strategisch angehen, Zahlen auf den Tisch",
+          "Regeln sind Regeln, da gibts nix zu diskutieren",
+          "Mir egal was die anderen sagen, ich mach mein Ding",
+          "Hauptsache mir gehts gut, der Rest ist mir egal"
         ]
       },
       "tags": [
@@ -29830,8 +29998,14 @@
         "screening"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_TUERKIS_COSMIC_FLOW",
+        "SEM_SD_TURQUOISE_HOLISM",
+        "SEM_GELB_SYSTEMIC_INTEGRATION",
+        "SEM_META_REFLECTION"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 IN 6 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 6 messages"
       },
       "scoring": {
         "base": 1.0,
@@ -29919,20 +30093,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Ich will führen – ich entscheide jetzt.",
-          "Ich setze den Rahmen – Verantwortung bei mir.",
-          "Einfluss nehmen – Entscheidung ansagen.",
-          "Ich präge die Richtung – ich treffe die Entscheidung.",
-          "Ownership + Entscheidung: Pfad A."
+          "Das entscheide ich, nicht du",
+          "Ich sag dir wie das laeuft",
+          "Ab jetzt machen wir das so wie ich es sage",
+          "Du musst dich daran halten, Ende der Diskussion",
+          "Ich uebernehm das jetzt, du machst was ich sag",
+          "Das Thema ist durch, ich hab entschieden",
+          "Ich bestimm hier den Rahmen, klar?",
+          "Du solltest das machen was ich vorschlage",
+          "Ich hab die Verantwortung, also entscheide ich",
+          "Ohne meine Zustimmung laeuft hier gar nichts"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich."
+          "Was meinst du, sollen wir Pizza oder Sushi bestellen?",
+          "Ich ueberlass dir die Entscheidung",
+          "Mir ist das egal, mach wie du willst",
+          "Lass uns das gemeinsam entscheiden",
+          "Ich vertrau deinem Urteil"
         ]
       },
       "tags": [
@@ -29941,10 +30118,15 @@
         "decision"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_INFLUENCE_ORIENTATION",
+        "SEM_CONTROL_LEX",
+        "SEM_DEONTIC_LANGUAGE"
+      ],
       "requires": {
         "sem_pool": [
           "SEM_INFLUENCE_ORIENTATION",
-          "SEM_RESPONSIBILITY_AND_DECISION"
+          "SEM_CONTROL_LEX"
         ]
       },
       "activation": {
@@ -29952,7 +30134,7 @@
         "rule": {
           "all_of": [
             "SEM_INFLUENCE_ORIENTATION >= 1",
-            "SEM_RESPONSIBILITY_AND_DECISION >= 1"
+            "SEM_CONTROL_LEX >= 1"
           ]
         }
       },
@@ -30018,6 +30200,11 @@
         "preemptive"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_SELF_VICTIMIZATION",
+        "SEM_FACE_SAVING",
+        "SEM_CONFLICT_AVOIDANCE"
+      ],
       "activation": {
         "rule": "ANY 1 IN 10 messages",
         "window": 10
@@ -30090,7 +30277,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -30103,20 +30290,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Mehrere Wie-viele-X-Witze nacheinander.",
-          "Rätsel-Turn wiederholt.",
-          "Frage→Antwort als Running-Gag.",
-          "Q&A-Struktur mit Twist.",
-          "Format als Gag-Träger."
+          "Was ist grün und steht vor der Tür? Ein Klopfsalat haha",
+          "Rate mal wie viele Programmierer man braucht um ne Glühbirne zu wechseln",
+          "Ok nächstes Rätsel: Was hat Zähne aber kann nicht beißen?",
+          "Kennst du den? Kommt ein Pferd in die Bar...",
+          "Weißt du was der Unterschied zwischen nem Krokodil ist?",
+          "Ok jetzt du: Warum können Geister so schlecht lügen?",
+          "Noch eins: Was liegt am Strand und spricht undeutlich?",
+          "Frage: Was sagt ein großer Stift zum kleinen Stift? Wachsmalstift lol",
+          "Wie nennt man nen Bumerang der nicht zurückkommt? Stock 😂",
+          "Quiz time: Welches Tier kann höher springen als ein Haus?"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Kannst du mir erklären wie das funktioniert?",
+          "Ich hab ne ernsthafte Frage zu dem Thema",
+          "Was meinst du damit genau?",
+          "Warum hast du gestern nicht geantwortet?",
+          "Wie war dein Tag so?"
         ]
       },
       "tags": [
@@ -30126,8 +30316,13 @@
         "v33"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_FLOUT_QUALITY_IRONY",
+        "SEM_SHARED_HUMOR",
+        "SEM_HYPERBOLE_SIGNAL"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 IN 20 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 20 messages"
       },
       "scoring": {
         "base": 1.8,
@@ -30198,6 +30393,11 @@
         "attachment"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_REASSURANCE_DRIVE",
+        "SEM_AMBIVALENCE",
+        "SEM_STABILITY_PRESERVATION"
+      ],
       "activation": {
         "rule": "ANY 2 IN 20 messages"
       },
@@ -30256,29 +30456,15 @@
       "composed_of": {
         "require": [
           "ATO_REPAIR_REQUEST",
+          "CLU_EMOTIONAL_SUPPORT",
           "SEM_CLOSURE_PROTOCOL"
-        ],
-        "k_of_n": {
-          "k": 2,
-          "of": []
-        }
+        ]
       },
       "window": {
         "size_messages": 5
       },
       "gates": {
         "min_msgs": 2
-      },
-      "ingredients": {
-        "require": [
-          "ATO_REPAIR_REQUEST",
-          "CLU_EMOTIONAL_SUPPORT",
-          "SEM_CLOSURE_PROTOCOL"
-        ],
-        "k_of_n": {
-          "k": 2,
-          "of": []
-        }
       },
       "emits": {
         "indices": {
@@ -30407,27 +30593,13 @@
         "require": [
           "CLU_RUMINATION_LOOP",
           "ATO_RESIGNATION_PHRASE"
-        ],
-        "k_of_n": {
-          "k": 2,
-          "of": []
-        }
+        ]
       },
       "window": {
         "size_messages": 6
       },
       "gates": {
         "min_msgs": 2
-      },
-      "ingredients": {
-        "require": [
-          "CLU_RUMINATION_LOOP",
-          "ATO_RESIGNATION_PHRASE"
-        ],
-        "k_of_n": {
-          "k": 2,
-          "of": []
-        }
       },
       "emits": {
         "indices": {
@@ -30521,20 +30693,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Bloß nichts ändern – Bist du sicher? – Thema stabil halten.",
-          "Risiken vermeiden – im gewohnten Rahmen bleiben – kurzer Reassurance‑Ping.",
-          "Ruhiges Leben – Status quo – passt das so?",
-          "Kein Experiment – Thread geschlossen – Sicherheit prüfen.",
-          "Planbar und ruhig – bitte nichts aufmachen – alles gut?"
+          "Bitte lass uns nichts aendern, es laeuft doch",
+          "Ich brauch einfach die Sicherheit dass alles beim Alten bleibt",
+          "Meinst du das ist sicher? Ich mach mir Sorgen",
+          "Lass uns lieber auf Nummer sicher gehen",
+          "Ich will kein Risiko eingehen, bitte",
+          "Hauptsache es bleibt stabil, ich brauch das",
+          "Versprich mir dass sich nichts aendert",
+          "Mir waer lieber wir bleiben bei dem was wir kennen",
+          "Bist du dir sicher dass das klappt? Ich hab Angst",
+          "Ich brauch grad einfach Ruhe und Bestaendigkeit"
         ],
         "negative": [
-          "wenige Experiment – Thread geschlossen – Sicherheit prüfen.",
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst."
+          "Lass uns was Neues ausprobieren",
+          "Ich bin total bereit fuer Veraenderung",
+          "Risiko gehoert dazu, kein Problem",
+          "Wann faengt das Spiel an?",
+          "Kannst du den Muell rausbringen?"
         ]
       },
       "tags": [
@@ -30543,6 +30718,11 @@
         "stability"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_SAFETY_ORIENTATION",
+        "SEM_STABILITY_PRESERVATION",
+        "SEM_REASSURANCE_DRIVE"
+      ],
       "requires": {
         "sem_pool": [
           "SEM_SAFETY_ORIENTATION",
@@ -30624,12 +30804,12 @@
         "condition": "rank_in_scene(top_k=2) != rank_global(top_k=2)"
       }
     },
-    "SEM_SECRET_BONDING": {
-      "id": "SEM_SECRET_BONDING",
+    "CLU_SECRET_BONDING": {
+      "id": "CLU_SECRET_BONDING",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "SEM",
-      "lang": "en",
+      "layer": "CLU",
+      "lang": "de",
       "description": "Hidden/insulated interactions (concealment, trace deletion, code words).",
       "frame": {
         "signal": [
@@ -30694,7 +30874,8 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_SECRECY"
+        "ATO_SECRECY",
+        "ATO_DELETE_TRACES"
       ],
       "scoring": {
         "base": 1.4,
@@ -30702,6 +30883,9 @@
       },
       "window": {
         "messages": 4
+      },
+      "activation": {
+        "rule": "ALL WITHIN 2 messages"
       }
     },
     "CLU_SECRET_BONDING_MARKER": {
@@ -30724,30 +30908,36 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "„Nur wir zwei haben den Schlüssel zur Schließfachbox – vergiss das nicht.“",
-          "„Keiner darf mitbekommen, dass der Deal morgen früh fixiert wird.“",
-          "„Sobald der Upload durch ist, löschen wir alles vom Server.“",
-          "„Erzähl niemandem, dass wir den Prototyp heute schon getestet haben.“",
-          "„Ich schick dir die Koordinaten später über Signal.“",
-          "Fake-Alibi steht, alles gut.",
-          "Sicher, dass keiner mitliest?"
+          "“Das bleibt unter uns, ja? Sag niemandem was davon”",
+          "“Schreib mir lieber auf Signal, hier liest jemand mit”",
+          "“Keiner darf wissen dass wir das schon wissen”",
+          "“Ich schick dir die Details privat, nicht in die Gruppe”",
+          "“Psst, ich hab gehört dass Lisa und Tom... aber sag nichts!”",
+          "“Lösch die Nachricht nachdem du sie gelesen hast”",
+          "“Nur du und ich wissen das, so solls auch bleiben”",
+          "“Ich erzähl dir was aber du darfst es keinem sagen”",
+          "“Sicher dass keiner mitliest? Okay also...”",
+          "“Das ist unser Geheimnis, deal?”"
         ],
         "negative": [
-          "„wenige darf mitbekommen, dass der Deal morgen früh fixiert wird.“",
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst."
+          "“Schau mal das lustige Video das ich gefunden hab”",
+          "“Können wir morgen telefonieren wegen dem Projekt?”",
+          "“Ich hab heute Pizza bestellt, war mega gut”",
+          "“Der Zug hat wieder Verspätung”",
+          "“Frohe Weihnachten an alle!”"
         ]
       },
       "tags": [
         "communication"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_SECRET_BONDING",
+        "SEM_PLATFORM_SWITCH",
+        "SEM_SHARED_EXPERIENCE_REFERENCE"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 IN 5 messages"
+        "rule": "“AT_LEAST 2 DISTINCT SEMs IN 5 messages”"
       },
       "scoring": {
         "base": 1.5,
@@ -30759,7 +30949,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -30772,119 +30962,38 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "kurze Sequenz A … kurze Sequenz B",
-          "Beispiel mit zwei Signalen in einem Satz",
-          "Signal 1 … später Signal 2 im Kontext",
-          "Kombination aus Token X und Y",
-          "Variante mit ähnlicher Semantik"
+          "Ich hab das nie gesagt! ... Ja ok hab ich gesagt aber so meinte ich das nicht",
+          "Das war mir total egal ... Also eigentlich hat es mich schon verletzt",
+          "Ich will auf keinen Fall dahin ... Ok vielleicht geh ich doch hin",
+          "Ich vertraue dir zu 100% ... Deshalb guck ich auch dein Handy",
+          "Mir ist das nicht wichtig ... Warum machst du das dann immer?!",
+          "Ich bin glücklich so wie es ist ... Aber ändern muss sich trotzdem was",
+          "Ich hab kein Problem damit ... Aber es nervt mich halt schon",
+          "Geld ist mir egal ... Warum gibst du soviel aus?!",
+          "Ich brauch dich nicht ... Aber warum meldest du dich nicht?",
+          "Das stört mich nicht ... Ok es stört mich doch, zufrieden?"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Ich hab meine Meinung dazu geändert, das stimmt.",
+          "Zuerst war ich dagegen, aber dein Argument überzeugt mich.",
+          "Ich sehe das jetzt anders als letzte Woche.",
+          "Meine Gefühle dazu sind gemischt, aber das ist ok.",
+          "Ich bin mir noch unsicher, muss nochmal drüber nachdenken."
         ]
       },
       "tags": [],
       "rating": 1,
+      "composed_of": [
+        "SEM_CONTRADICTION",
+        "SEM_AMBIVALENCE",
+        "SEM_CERTAINTY_CLAIMS"
+      ],
       "activation": {
-        "rule": "AT_LEAST 3 IN 6 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 6 messages"
       },
       "scoring": {
         "base": 1.0,
         "weight": 1.1
-      }
-    },
-    "CLU_SECRET_BONDING": {
-      "id": "CLU_SECRET_BONDING",
-      "schema": "LeanDeep",
-      "version": "5.1",
-      "layer": "CLU",
-      "lang": "de",
-      "description": "",
-      "frame": {
-        "signal": [
-          "Geheimhaltung",
-          "exklusiver Raum",
-          "Verbergungsanweisungen"
-        ],
-        "concept": "Geheime Verbundenheit",
-        "pragmatics": "Bindung durch Exklusivität / Risiko",
-        "narrative": "Wir gegen den Rest"
-      },
-      "patterns": [
-        {
-          "type": "regex",
-          "value": "niemand.*erfährt|keiner darf mitbekommen"
-        },
-        {
-          "type": "regex",
-          "value": "lösch(e)? den Chat|Verlauf"
-        },
-        {
-          "type": "regex",
-          "value": "Inkognito|inkognito"
-        },
-        {
-          "type": "regex",
-          "value": "Codewort|Schlüssel"
-        },
-        {
-          "type": "regex",
-          "value": "Signal|Koordinaten|Schließfach"
-        }
-      ],
-      "examples": {
-        "positive": [
-          "ChatGPT fragen",
-          "„Nur wir zwei haben den Schlüssel zur Schließfachbox – vergiss das nicht.“",
-          "„Keiner darf mitbekommen, dass der Deal morgen früh fixiert wird.“",
-          "„Sobald der Upload durch ist, löschen wir alles vom Server.“",
-          "„Speicher meine Nummer unter einem anderen Namen, falls wer guckt.“",
-          "„Greif nur im Inkognito-Fenster auf die Cloud-Datei zu.“",
-          "„Erzähl niemandem, dass wir den Prototyp heute schon getestet haben.“",
-          "„Nachts um drei, Hinterhof rechts – keine Fotos, keine Stories.“",
-          "„Verwisch bitte den Chat-Verlauf, sobald du’s gelesen hast.“",
-          "„Ich schick dir die Koordinaten später über Signal.“",
-          "„Unser Codewort bleibt streng unter uns, klar?“",
-          "Das darf Ben nicht sehen.",
-          "Story ohne Tag, deal?",
-          "Treffpunkt Hintereingang.",
-          "Fake-Alibi steht, alles gut.",
-          "Lösch Chat nach Lesen.",
-          "Inkognito-Modus aktiviert.",
-          "Sicher, dass keiner mitliest?",
-          "Screenshot-Alarm, schnell weg!",
-          "Niemand erfährt von morgen.",
-          "Nur wir zwei, versprochen.",
-          "Schick es nur über den geheimen Ordner.",
-          "Benutze das Codewort, sonst öffne ich nicht.",
-          "Keine Sprachnachrichten – zu riskant.",
-          "Wir löschen die Spuren gleich danach.",
-          "Triff mich, ohne jemandem was zu sagen."
-        ],
-        "negative": [
-          "„wenige darf mitbekommen, dass der Deal morgen früh fixiert wird.“",
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst."
-        ]
-      },
-      "tags": [
-        "needs_review",
-        "cluster",
-        "secrecy",
-        "bonding"
-      ],
-      "rating": 1,
-      "activation": {
-        "rule": "ANY in 1 message"
       }
     },
     "CLU_SHAME_ALERT_TEXT": {
@@ -30905,23 +31014,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Peinlich... sorry... vielleicht später.",
-          "Ich bin dumm... tut mir leid... irgendwie.",
-          "Sorry... peinlich... ich glaube...",
-          "Tut mir leid... ich schäme mich... vielleicht.",
-          "Peinlich... sorry... ich bin schlecht.",
-          "Dumm… sorry… vielleicht später.",
-          "Peinlich… tut mir leid… irgendwie.",
-          "Sorry… ich schäme mich… ich glaube."
+          "Peinlich... sorry... vielleicht bin ich einfach zu dumm dafür",
+          "Ich schäm mich so, hätte das nie sagen sollen",
+          "Sorry... ich bin einfach nicht gut genug",
+          "Tut mir leid dass ich so bin, ich weiß auch nicht",
+          "Ich bin so peinlich, warum passiert mir sowas immer",
+          "Vergiss es, ich sollte einfach den Mund halten",
+          "Ich schäm mich grad so krass, sorry",
+          "Warum bin ich immer diejenige die alles kaputt macht",
+          "Sorry dass ich nerve, ich weiß ich bin zu viel",
+          "Peinlich... ich kann einfach gar nichts"
         ],
         "negative": [
-          "Ich denke, wir sollten das sachlich betrachten.",
-          "Mir geht es gut, danke der Nachfrage.",
-          "Das ist ein interessanter Gedanke.",
-          "Ich bin gerade entspannt.",
-          "Alles in Ordnung bei mir.",
-          "Ich fuehle mich heute ruhig und gelassen.",
-          "Das ueberrascht mich, aber es ist okay."
+          "Ich denke wir sollten das sachlich betrachten",
+          "Mir geht es gut, danke der Nachfrage",
+          "Das ist ein interessanter Gedanke",
+          "Ich bin gerade entspannt",
+          "Alles in Ordnung bei mir"
         ]
       },
       "tags": [
@@ -30930,6 +31039,14 @@
         "intuition"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_SHAME_TEXT",
+        "SEM_SELF_VICTIMIZATION",
+        "SEM_SELF_PITY"
+      ],
+      "activation": {
+        "rule": "AT_LEAST 1 SEM IN 3 messages"
+      },
       "scoring": {
         "base": 1.8,
         "weight": 1.3,
@@ -30973,31 +31090,35 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "… schwarz vor Augen … später nichts mehr hören …",
-          "… taub … danach gelähmt …",
-          "… nicht mehr sprechen … nicht mehr bewegen …",
-          "… schwindelig … später taub …",
-          "… gelähmt … schwarz vor Augen …",
-          "… taub … erneut schwarz vor Augen …",
-          "… nicht mehr bewegen … wieder Episode …",
-          "… Rauschen im Ohr … danach gelähmt …",
-          "… Sprachlosigkeit … später Taubheit …",
-          "… Aussetzer … erneut nichts mehr hören …"
+          "Ich fühl gar nichts mehr, ist mir alles egal",
+          "Mir ist alles so weit weg gerade",
+          "Ich krieg kein Wort mehr raus",
+          "Bin wie betäubt, weiß nicht was ich sagen soll",
+          "Ich bin einfach leer, da ist nichts mehr",
+          "Hm. Ja. Ok. Weiß nicht.",
+          "Ich mach einfach zu, ich kann nicht mehr",
+          "Mir ist alles so dumpf gerade, wie hinter Glas",
+          "Egal. Mach was du willst. Mir doch alles gleich.",
+          "Ich hör dich reden aber es kommt nicht an"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich."
+          "Ich bin traurig, aber ich möchte darüber reden.",
+          "Das verletzt mich, kannst du mir zuhören?",
+          "Ich brauche eine kurze Pause, dann reden wir weiter.",
+          "Gerade fühlt es sich schwer an, aber ich bin da.",
+          "Ich möchte mich zurückziehen, aber nicht vor dir."
         ]
       },
       "tags": [],
       "rating": 1,
+      "composed_of": [
+        "SEM_STONEWALLING_BEHAVIOR",
+        "SEM_AFFECT_ISOLATION_TEXT",
+        "SEM_APATHETIC_REPLY",
+        "SEM_INTERACTIVE_STONEWALLING_MARKER"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 DISTINCT SEM_SHUTDOWN_EPISODE IN 5 messages",
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages",
         "window": 5,
         "confirm_window": 4,
         "cooldown_messages": 4
@@ -31389,20 +31510,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Mehrere Spott-Bezüge kurz hintereinander.",
-          "Wiederholt 'Nur ein Idiot ...'.",
-          "Putdown-Kaskade als Stilmittel.",
-          "Antiphrase + Target mehrfach.",
-          "Repetitive Herabsetzung."
+          "Naja, nicht jeder kann halt so schnell denken wie ich lol",
+          "Süß dass du das versuchst, aber lass mal die Profis ran",
+          "Ich sag ja nicht dass du dumm bist, aber...",
+          "Oh wow, du hast das alleine hinbekommen? Respekt haha",
+          "Manche Leute sollten einfach aufhören so zu tun als hätten sie Ahnung",
+          "Klar, wenn man keine Standards hat, findet man alles gut",
+          "Ich mein, ich will ja nichts sagen, aber das war vorhersehbar",
+          "Schon witzig wie manche Leute denken sie wären auf meinem Level",
+          "Jaja, du bist bestimmt auch Experte darin, ne?",
+          "Bless your heart, du gibst dir echt Mühe"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich."
+          "Das hast du echt gut gemacht, bin beeindruckt",
+          "Ich hab da auch noch Lernbedarf ehrlich gesagt",
+          "Wir haben das zusammen geschafft, Teamarbeit",
+          "Ich schätze deine Meinung sehr zu dem Thema",
+          "Da hab ich mich geirrt, du hattest recht"
         ]
       },
       "tags": [
@@ -31412,8 +31536,14 @@
         "v33"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_SARCASTIC_DRIFT",
+        "SEM_MICRO_AGGRESSION_LIGHT",
+        "SEM_STATUS_RECOGNITION",
+        "SEM_HYPERBOLE_SIGNAL"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 IN 15 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 15 messages"
       },
       "scoring": {
         "base": 2.1,
@@ -31438,26 +31568,35 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "ich bin da für dich … wir schaffen das",
-          "danke dir … fühl mich gesehen",
-          "gemeinsam kriegen wir das hin",
-          "du kannst dich auf mich verlassen",
-          "ich hör dir zu … okay?"
+          "Ich bin für dich da, egal was passiert",
+          "Danke dass du mir das erzählt hast, das bedeutet mir viel",
+          "Du musst das nicht alleine durchstehen, ich bin hier",
+          "Ich hör dir zu, nimm dir so viel Zeit wie du brauchst",
+          "Das was du fühlst ist total berechtigt",
+          "Wir schaffen das zusammen, du bist nicht allein damit",
+          "Ich schätze es so sehr dass du ehrlich zu mir bist",
+          "Wenn du reden willst, ich bin da, immer",
+          "Du machst das richtig gut, auch wenns sich grad nicht so anfühlt",
+          "Danke für deine Unterstützung vorhin, hat mir echt geholfen"
         ],
         "negative": [
           "Kannst du mir das Salz reichen?",
-          "Der Termin ist um 14 Uhr.",
-          "Ich war gestern einkaufen.",
-          "Das Wetter soll morgen besser werden.",
-          "Hast du die E-Mail gelesen?",
-          "Ich muss noch tanken.",
-          "Die Besprechung ist im Konferenzraum."
+          "Der Termin ist um 14 Uhr",
+          "Ich war gestern einkaufen",
+          "Das Wetter soll morgen besser werden",
+          "Hast du die E-Mail gelesen?"
         ]
       },
       "tags": [],
       "rating": 1,
+      "composed_of": [
+        "SEM_VALIDATION",
+        "SEM_WARM_APPRECIATION",
+        "SEM_REPAIR_GESTURE",
+        "SEM_CONNECTION_POSITIVITY"
+      ],
       "activation": {
-        "rule": "AT_LEAST 3 IN 7 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 7 messages"
       },
       "scoring": {
         "base": 1.0,
@@ -31541,45 +31680,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Meld dich, wenn du wach bist ☕️",
-          "Gute Nacht – schreib morgen.",
+          "Meld dich wenn du wach bist",
+          "Gute Nacht, schreib morgen wieder",
           "Memes des Tages schon gesehen?",
-          "Voice-Note Marathon again?",
-          "Noch wach? 🌙",
-          "Ping mich, wenn du Pause hast.",
-          "Schon zwei Monate Daily-Streak!",
-          "Kein Tag ohne dein Update.",
-          "Jeden Abend ein Recap, crazy.",
-          "Hab extra Datenvolumen für dich geholt.",
-          "Wie immer pünktlich zum Morgenkaffee.",
-          "Unser täglicher Austausch ist schon Routine.",
-          "Kein Tag vergeht ohne ein kurzes Update.",
-          "Abendliche Voice-Note, wie abgesprochen.",
-          "Schon acht Wochen ohne Pause – beeindruckend.",
+          "Noch wach? Hab grad an dich gedacht",
+          "Ping mich wenn du Pause hast",
+          "Schon zwei Monate Daily-Streak mit uns!",
+          "Kein Tag ohne dein Update, ich gewöhn mich dran",
+          "Jeden Abend unser Recap, das ist schon Ritual",
           "Morgencheck-in wie immer?",
-          "Mittags-Ping nicht vergessen.",
-          "Abendliche Zusammenfassung – Deal?",
-          "Unser täglicher Call steht noch.",
-          "Wie jeden Sonntag: Lagebericht.",
-          "Daily streak for two months.",
-          "At least three chats per week without project pressure.",
-          "Good-night + morning check-ins consistently.",
-          "Regular memes/voice notes.",
-          "No day without a quick update.",
-          "Evening recap as a ritual.",
-          "Extra data volume 'for you'.",
-          "Ping me when you're on break—recurring.",
-          "Weekend check-ins without a reason.",
-          "Steady closeness via micro-pings."
+          "Wie jeden Sonntag: Lagebericht von dir"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Hey, lang nichts gehört! Wie gehts dir?",
+          "Sorry, hab deine Nachricht erst jetzt gesehen, war voll im Stress",
+          "Wir sollten uns mal wieder treffen, ist ja ewig her",
+          "Antworte wenn du Zeit hast, kein Stress",
+          "Einmalige Frage: weißt du zufällig wo der Laden ist?"
         ]
       },
       "tags": [
@@ -31588,86 +31705,82 @@
         "bonding"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_CONNECTION_POSITIVITY",
+        "SEM_SHARED_EXPERIENCE_REFERENCE",
+        "SEM_SOFT_COMMITMENT",
+        "SEM_SOCIAL_AFFILIATION"
+      ],
+      "activation": {
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
+      },
       "scoring": {
         "base": 1.6,
         "weight": 1.15
       },
       "window": {
-        "weeks": 8
-      },
-      "detect_class": "SUSTAINED_CONTACT_FREQ_V1"
+        "messages": 50
+      }
     },
     "CLU_SVT_MESSAGE_INCONGRUENCE": {
       "id": "CLU_SVT_MESSAGE_INCONGRUENCE",
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
-      "description": "Incongruence inside one message: factual statement + devaluing 'you' message.",
+      "lang": "de",
+      "description": "Cluster-Erkennung von Schulz-von-Thun-Nachrichteninkongruenz: Sachaussage + abwertende Du-Botschaft in einer Nachricht.",
       "frame": {
         "signal": [
-          "fact + 'but you are …'"
+          "Sachaussage + abwertende Du-Botschaft"
         ],
-        "concept": "Multi-channel contradiction",
-        "pragmatics": "Raised conflict arousal",
-        "narrative": "Split message"
+        "concept": "Schulz-von-Thun Nachrichteninkongruenz",
+        "pragmatics": "Verdeckte Abwertung hinter sachlicher Fassade",
+        "narrative": "Gespaltene Kommunikation"
       },
       "patterns": [],
       "examples": {
         "positive": [
-          "The report is accurate—you're chaotic, though.",
-          "X was decided, but you won't manage anyway.",
-          "The light is green, but you can't drive.",
-          "- \"Die Ampel ist grün, aber du bist ja eine schlechte Fahrerin.\"",
-          "- \"Ihr Bericht ist sachlich korrekt, aber Sie sind einfach unzuverlässig.\"",
-          "- \"Die Zahlen stimmen, aber du bist einfach zu langsam.\"",
-          "- \"Es ist Fakt, dass die Deadline morgen ist, aber du hast ja eh keine Zeit.\"",
-          "The numbers are correct, but you're too slow.",
-          "It's a fact the deadline is tomorrow, but you're unreliable.",
-          "Meeting is set, but you're obviously overwhelmed.",
-          "Factually fine, but you're too complacent.",
-          "We delivered, but you messed it up.",
-          "Data is there—yet you don't get it.",
-          "Technically okay, still disappointing from you.",
-          "Faktisch stimmt das, aber du bist unfähig.",
-          "Inhaltlich okay – menschlich enttäuschend.",
-          "Ja, korrekt, trotzdem bist du schuld.",
-          "Zahlen passen, doch deine Art geht gar nicht.",
-          "Objektiv richtig, subjektiv mangelhaft."
+          "Die Ampel ist grün, aber du bist ja eine schlechte Fahrerin",
+          "Sachlich hast du recht, aber menschlich bist du ne Enttäuschung",
+          "Die Zahlen stimmen, aber du checkst es trotzdem nicht",
+          "Ja die Deadline ist morgen, aber du schaffst das eh nicht",
+          "Dein Bericht ist korrekt, du bist halt trotzdem unzuverlässig",
+          "Klar das Essen schmeckt, aber die Küche sieht aus wie ein Schlachtfeld",
+          "Okay der Vorschlag ist gut, aber von DIR hätte ich das nicht erwartet",
+          "Technisch richtig, menschlich mangelhaft wie immer",
+          "Die Präsentation war okay, aber du hast wie immer alles verkompliziert",
+          "Stimmt schon was du sagst, aber du sagst es halt auf die schlimmste Art"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Die Zahlen stimmen, gute Arbeit",
+          "Ich finde deinen Vorschlag richtig gut",
+          "Die Deadline ist morgen, lass uns einen Plan machen",
+          "Der Bericht ist sachlich korrekt, danke dafür",
+          "Die Präsentation war sehr professionell"
         ]
       },
       "tags": [
-        "needs_review",
         "cluster",
         "schulz_von_thun",
         "inkongruenz",
         "konflikt"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_ACCUSATION_MARKER",
+        "SEM_CONTRADICTION",
+        "SEM_MICRO_AGGRESSION_LIGHT",
+        "SEM_PASSIVE_AGGRESSIVE_BEHAVIOR"
+      ],
+      "activation": {
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 3 messages"
+      },
       "scoring": {
         "base": 1.8,
         "weight": 1.3
       },
       "window": {
-        "messages": 1
-      },
-      "metadata": {
-        "source": {
-          "semantische_grabber_id": "AUTO_SEM_20250720_39DC",
-          "created_at": "2025-07-20T11:46:39.613061",
-          "created_by": "FRAUSAR_GUI_v2",
-          "source_version": "1.0",
-          "schema_version": "3.3"
-        }
+        "messages": 5
       }
     },
     "CLU_SVT_MESSAGE_INCONGRUENCE_MARKER": {
@@ -31690,28 +31803,36 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Die Ampel ist grün, aber du bist ja eine schlechte Fahrerin.",
-          "Ihr Bericht ist sachlich korrekt, aber Sie sind einfach unzuverlässig.",
-          "Die Zahlen stimmen, aber du bist einfach zu langsam.",
-          "Es ist Fakt, dass die Deadline morgen ist, aber du hast ja eh keine Zeit.",
-          "Es wurde beschlossen, dass dein Team die Führung übernimmt, obwohl du offensichtlich überfordert bist."
+          "Die Ampel ist grün, aber du bist ja eine schlechte Fahrerin",
+          "Ihr Bericht ist sachlich korrekt, aber Sie sind einfach unzuverlässig",
+          "Die Zahlen stimmen, aber du bist einfach zu langsam",
+          "Es ist Fakt dass die Deadline morgen ist, aber du hast ja eh keine Zeit",
+          "Dein Team übernimmt die Führung, obwohl du offensichtlich überfordert bist",
+          "Ja das Ergebnis passt, aber du hast dafür viel zu lang gebraucht",
+          "Sachlich kein Einwand, persönlich eine Katastrophe",
+          "Der Code läuft, aber sauber programmieren kannst du halt nicht",
+          "Klar hast du recht, aber deine Art ist einfach unmöglich",
+          "Objektiv stimmt das, aber von dir kommt das halt immer falsch rüber"
         ],
         "negative": [
-          "Es ist Fakt, dass die Deadline morgen ist, aber du hast ja eh wenige Zeit.",
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst."
+          "Die Zahlen stimmen, super gemacht",
+          "Ich verstehe deinen Punkt und find ihn gut",
+          "Die Deadline schaffen wir zusammen",
+          "Dein Bericht ist wirklich gut geschrieben",
+          "Das Team hat toll gearbeitet heute"
         ]
       },
       "tags": [
         "communication"
       ],
       "rating": 1,
+      "composed_of": [
+        "SEM_ACCUSATION_MARKER",
+        "SEM_CONTRADICTION",
+        "SEM_PASSIVE_AGGRESSIVE_BEHAVIOR"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 IN 5 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 3 messages"
       },
       "scoring": {
         "base": 1.5,
@@ -31898,26 +32019,35 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "wir waren bei A … jetzt plötzlich C",
-          "anderes Thema … obwohl Frage zu B war",
-          "abschweifen zu X … Ziel war Y",
-          "neue Baustelle … Fokus verloren",
-          "seitensprung im Thema … wohin?"
+          "Ja aber weißt du was mich auch nervt? Deine Schwester neulich...",
+          "Wir reden über Urlaub und du fängst mit dem Auto an",
+          "Das hat damit nix zu tun, worum gings nochmal?",
+          "Ach und übrigens, ganz anderes Thema...",
+          "Warte mal, was war eigentlich die Frage?",
+          "Du lenkst schon wieder ab, wir waren beim Budget",
+          "Moment, wie sind wir jetzt bei dem Thema gelandet?",
+          "Ich wollte über uns reden und du redest über Arbeit",
+          "Jedes Mal wenn es ernst wird kommst du mit was anderem",
+          "Können wir mal bei einem Thema bleiben bitte?"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich."
+          "Das hängt damit zusammen, weil...",
+          "Guter Punkt, das erinnert mich an unsere Urlaubsplanung.",
+          "Lass uns das Thema abschließen bevor wir weitergehen.",
+          "Stimmt, aber zurück zu dem was du gesagt hast.",
+          "Ich wollte das kurz einwerfen, jetzt weiter mit dem Plan."
         ]
       },
       "tags": [],
       "rating": 1,
+      "composed_of": [
+        "SEM_CONTEXT_SWITCH",
+        "SEM_FRAME_SHIFT",
+        "SEM_AVOIDANCE_LOOP",
+        "SEM_SPIRAL_DRIFT"
+      ],
       "activation": {
-        "rule": "ANY 3 IN 7 messages"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 7 messages"
       },
       "scoring": {
         "base": 1.0,
@@ -32174,6 +32304,9 @@
       "scoring": {
         "base": 0.62,
         "cap": 0.98
+      },
+      "activation": {
+        "rule": "AT_LEAST 1 TEXT_SEM AND 1 AUDIO_SEM IN 2 aligned turns"
       },
       "metadata": {
         "family": "INCONGRUENCE",
@@ -33597,6 +33730,9 @@
       "window": {
         "messages": 30
       },
+      "activation": {
+        "rule": "COUNT(CLU_DEFENSE_ACTIVE in 50 msgs) >= 3 OR EWMA(alpha=0.2) >= 0.6"
+      },
       "metadata": {
         "repair_log": [
           {
@@ -33823,6 +33959,9 @@
       "scoring": {
         "base": 0.65,
         "cap": 1.0
+      },
+      "activation": {
+        "rule": "COUNT(CLU_DISSONANCE_ALERT_AUDIO in 30 turns) >= 3 OR EWMA(alpha=0.2) >= 0.6"
       },
       "metadata": {
         "type": "MEMA",
@@ -34907,6 +35046,9 @@
       "scoring": {
         "base": 0.7,
         "cap": 1.0
+      },
+      "activation": {
+        "rule": "COUNT(CLU_MISUNDERSTANDING_PROCESS in 40 msgs) >= 2"
       },
       "metadata": {
         "type": "MEMA",
@@ -36036,6 +36178,9 @@
         "conflict": 0.2,
         "deesc": -0.15
       },
+      "activation": {
+        "rule": "ANY 1 IN 2 messages"
+      },
       "metadata": {
         "justification": "SEM mit 1 ATO + Kontextregel (Affekt-Abwesenheit) gemäß LD3.4 zulässig.",
         "repair_log": [
@@ -36642,6 +36787,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       }
     },
     "SEM_ARCHETYPE_CLARISSE": {
@@ -37340,6 +37488,9 @@
         "trust": 0.25,
         "conflict": -0.1,
         "deesc": 0.15
+      },
+      "activation": {
+        "rule": "ANY 2"
       }
     },
     "SEM_BOUNDARY_TENSION": {
@@ -37734,6 +37885,9 @@
         "trust": 0.25,
         "conflict": -0.1,
         "deesc": 0.15
+      },
+      "activation": {
+        "rule": "ANY 1"
       }
     },
     "SEM_CHILD_RESISTANCE": {
@@ -39112,11 +39266,15 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_WANT_TERM"
+        "ATO_DESIRE_VERB",
+        "ATO_OBJECT_OF_DESIRE"
       ],
       "scoring": {
         "base": 1.4,
         "weight": 1.1
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       }
     },
     "SEM_CRITICAL_INQUIRY": {
@@ -39450,6 +39608,9 @@
         "weight": 1.0
       },
       "compositionality": "deterministic",
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
+      },
       "metadata": {
         "repair_log": [
           {
@@ -39720,6 +39881,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       },
       "metadata": {
         "repair_log": [
@@ -41010,13 +41174,16 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_FIRSTTIME_CLAUSE_MARKER"
+        "ATO_FIRSTTIME_CLAUSE"
       ],
       "scoring": {
         "base": 1.2,
         "weight": 1.0
       },
       "compositionality": "deterministic",
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
+      },
       "metadata": {
         "repair_log": [
           {
@@ -41574,6 +41741,9 @@
         "trust": -0.5,
         "conflict": 0.6,
         "deesc": -0.35
+      },
+      "activation": {
+        "rule": "ANY 2"
       }
     },
     "SEM_GATEKEEPING": {
@@ -42341,6 +42511,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 2 IN 2 messages"
       }
     },
     "EMO_LIGHT_ADMISSION": {
@@ -42386,11 +42559,15 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_BLAME_SHIFT"
+        "ATO_ADMISSION_CUE",
+        "ATO_FAULT_REFERENCE"
       ],
       "scoring": {
         "base": 1.4,
         "weight": 1.1
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       }
     },
     "EMO_LIGHT_HUMOR_CRITIQUE": {
@@ -42436,12 +42613,15 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_CRITICISM",
-        "ATO_HUMOR_LIGHT"
+        "ATO_CRITIQUE_ELEMENT",
+        "ATO_HUMOR_SIGNAL"
       ],
       "scoring": {
         "base": 1.4,
         "weight": 1.1
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       }
     },
     "SEM_LIMINAL_FIELD_PRESENCE": {
@@ -43298,6 +43478,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       }
     },
     "SEM_META_NAVIGATION": {
@@ -43584,6 +43767,9 @@
         "trust": -0.3,
         "conflict": 0.4,
         "deesc": -0.2
+      },
+      "activation": {
+        "rule": "ANY 2 IN 4 messages"
       }
     },
     "SEM_MORAL_REFRAMING_GOOD_INTENT": {
@@ -44316,6 +44502,9 @@
         "trust": -0.3,
         "conflict": 0.4,
         "deesc": -0.2
+      },
+      "activation": {
+        "rule": "ANY 2"
       }
     },
     "SEM_PERFORMATIVE_HELPLESSNESS": {
@@ -44504,11 +44693,15 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_HUMOR_LIGHT"
+        "ATO_TITLE_WORD",
+        "ATO_PLAYFUL_TONE"
       ],
       "scoring": {
         "base": 1.4,
         "weight": 1.1
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       }
     },
     "SEM_PLEASANT_PULS": {
@@ -44976,6 +45169,9 @@
         "conflict": 0.0,
         "deesc": 0.0
       },
+      "activation": {
+        "rule": "ANY 1 IN 3 messages"
+      },
       "metadata": {
         "justification": "1 ATO plus Sequenzregel (Selbstmarkierung → Vorwurf).",
         "repair_log": [
@@ -45240,6 +45436,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 1 IN 2 messages"
       },
       "metadata": {
         "justification": "SEM mit 1 ATO + Inkonkruenz-Regel.",
@@ -45715,6 +45914,9 @@
         "trust": 0.35,
         "conflict": -0.3,
         "deesc": 0.4
+      },
+      "activation": {
+        "rule": "ANY 1 IN 3 messages"
       },
       "metadata": {
         "justification": "1 ATO plus Sequenzbedingung (fehlende Antwort).",
@@ -47277,6 +47479,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 2"
       }
     },
     "SEM_SELF_RELIANCE_EARLY": {
@@ -47729,6 +47934,9 @@
         "conflict": 0.1,
         "deesc": -0.05
       },
+      "activation": {
+        "rule": "ANY 2 IN 2 messages"
+      },
       "metadata": {
         "repair_log": [
           {
@@ -47799,6 +48007,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       }
     },
     "SEM_SHARED_HUMOR": {
@@ -48792,6 +49003,9 @@
         "trust": -0.45,
         "conflict": 0.5,
         "deesc": -0.3
+      },
+      "activation": {
+        "rule": "ANY 2"
       }
     },
     "SEM_STRESS_EXCUSE": {
@@ -48916,6 +49130,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 2 IN 3 messages"
       }
     },
     "SEM_SUBTLE_TERRITORIAL": {
@@ -49122,6 +49339,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 1"
       }
     },
     "SEM_SYSTEMS_THINKING": {
@@ -49758,6 +49978,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 2"
       }
     },
     "SEM_TUERKIS_COSMIC_FLOW": {
@@ -50290,6 +50513,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "activation": {
+        "rule": "ANY 2"
       }
     },
     "SEM_VICTIM_OFFENDER_REVERSAL": {
@@ -50869,26 +51095,41 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "ATO",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
-        "pragmatics": "",
+        "signal": [
+          "widerspricht",
+          "im Gegensatz",
+          "nicht wie vorher",
+          "aber inzwischen",
+          "doch"
+        ],
+        "concept": "Kontradiktions-Lexik",
+        "pragmatics": "Konflikt-Flag für Vergleich",
         "narrative": ""
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "detect_class": "phrase",
+          "list": [
+            "widerspricht",
+            "im Gegensatz",
+            "nicht wie vorher",
+            "aber inzwischen",
+            "doch"
+          ]
+        }
+      ],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "Das widerspricht dem von vorher.",
+          "Im Gegensatz zu deiner Aussage gestern.",
+          "Das ist nicht wie vorher beschrieben.",
+          "Aber inzwischen sagst du etwas anderes.",
+          "Doch, vorher war es anders."
+        ],
+        "negative": []
       },
       "tags": [],
       "rating": 2,
@@ -50901,6 +51142,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "metadata": {
+        "type": "ATO"
       }
     },
     "ATO_CROSS_POSTING_ANWEISUNG": {
@@ -50960,26 +51204,45 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "ATO",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
-        "pragmatics": "",
-        "narrative": ""
+        "signal": [
+          "wie du gesagt hast",
+          "vorhin meintest du",
+          "eben hast du",
+          "du sagtest",
+          "das passt nicht zu vorher"
+        ],
+        "concept": "Expliziter Bezug auf frühere Aussagen einer anderen Person",
+        "pragmatics": "Vergleichsanker herstellen",
+        "narrative": "Pointer auf Referenz"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "detect_class": "phrase",
+          "list": [
+            "wie du gesagt hast",
+            "vorhin meintest du",
+            "eben hast du",
+            "du sagtest",
+            "das passt nicht zu vorher"
+          ]
+        },
+        {
+          "detect_class": "role",
+          "rule": "speaker == self && referenced_speaker == other"
+        }
+      ],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "Wie du gesagt hast, das war anders.",
+          "Vorhin meintest du, du warst nie dort.",
+          "Du sagtest eben, es waren fünf.",
+          "Das passt nicht zu vorher, was du sagtest.",
+          "Eben hast du was anderes behauptet."
+        ],
+        "negative": []
       },
       "tags": [],
       "rating": 2,
@@ -50992,6 +51255,10 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "metadata": {
+        "type": "ATO",
+        "direction": "outward"
       }
     },
     "ATO_DEF_DRIFT_TERMS": {
@@ -50999,26 +51266,39 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "ATO",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
+        "signal": [
+          "eigentlich",
+          "genauer gesagt",
+          "streng genommen",
+          "definitionstechnisch"
+        ],
+        "concept": "Begriffsverschiebungs-Indikatoren",
         "pragmatics": "",
         "narrative": ""
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "detect_class": "phrase",
+          "list": [
+            "eigentlich",
+            "genauer gesagt",
+            "streng genommen",
+            "definitionstechnisch"
+          ]
+        }
+      ],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "Eigentlich meinte ich etwas anderes.",
+          "Genauer gesagt war es privat.",
+          "Streng genommen zählt das nicht.",
+          "Definitionstechnisch ist das korrekt.",
+          "Eigentlich war das ein Missverständnis."
+        ],
+        "negative": []
       },
       "tags": [],
       "rating": 2,
@@ -51031,6 +51311,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "metadata": {
+        "type": "ATO"
       }
     },
     "ATO_DELAY_WORD": {
@@ -52043,26 +52326,31 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "ATO",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
+        "signal": [
+          "Zahlen, Mengen, Datums-/Uhrzeitangaben"
+        ],
+        "concept": "Quantifizierungs-Token",
         "pragmatics": "",
         "narrative": ""
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "detect_class": "regex",
+          "pattern": "(\\b\\d+[\\.,]?\\d*\\b|\\b(ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn)\\b)"
+        }
+      ],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "Es waren 5 Leute.",
+          "Wir waren zehn.",
+          "Am 12.05. war das Meeting.",
+          "Es dauerte 2,5 Stunden.",
+          "Drei Termine fanden statt."
+        ],
+        "negative": []
       },
       "tags": [],
       "rating": 2,
@@ -52075,6 +52363,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "metadata": {
+        "type": "ATO"
       }
     },
     "ATO_NUMERIC_ESTIMATE": {
@@ -52851,26 +53142,32 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "ATO",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
+        "signal": [
+          "ich → wir / man",
+          "du → ihr/sie"
+        ],
+        "concept": "Pronomen-/Rollenwechsel an Verantwortungsstellen",
         "pragmatics": "",
         "narrative": ""
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "detect_class": "heuristic",
+          "rule": "pronoun_shift near responsibility_lexicon"
+        }
+      ],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "\"Ich habe entschieden\" → \"Wir haben entschieden\".",
+          "\"Ich musste zahlen\" → \"Wir mussten zahlen\".",
+          "\"Ich habe das gemacht\" → \"Man macht das so\".",
+          "\"Du hast zugesagt\" → \"Ihr habt zugesagt\".",
+          "\"Ich bezahlte\" → \"Wir zahlten\"."
+        ],
+        "negative": []
       },
       "tags": [],
       "rating": 2,
@@ -52883,6 +53180,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "metadata": {
+        "type": "ATO"
       }
     },
     "ATO_SADNESS_WORD": {
@@ -53963,26 +54263,39 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "ATO",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
-        "pragmatics": "",
+        "signal": [
+          "immer",
+          "nie",
+          "ständig",
+          "jedes Mal"
+        ],
+        "concept": "Temporale Absolutmarker",
+        "pragmatics": "Überdehnung → bruchanfällig",
         "narrative": ""
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "detect_class": "phrase",
+          "list": [
+            "immer",
+            "nie",
+            "ständig",
+            "jedes Mal"
+          ]
+        }
+      ],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "Ich bin immer pünktlich.",
+          "Ich war nie dort.",
+          "Er macht das ständig.",
+          "Jedes Mal passiert das.",
+          "Nie habe ich dem zugestimmt."
+        ],
+        "negative": []
       },
       "tags": [],
       "rating": 2,
@@ -53995,6 +54308,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "metadata": {
+        "type": "ATO"
       }
     },
     "ATO_TEMPORAL_POINT": {
@@ -54002,26 +54318,43 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "ATO",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
+        "signal": [
+          "gestern",
+          "heute",
+          "letzte Woche",
+          "vorhin",
+          "später",
+          "inzwischen"
+        ],
+        "concept": "Zeitbezugspunkt",
         "pragmatics": "",
         "narrative": ""
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "detect_class": "phrase",
+          "list": [
+            "gestern",
+            "heute",
+            "letzte Woche",
+            "vorhin",
+            "später",
+            "inzwischen"
+          ]
+        }
+      ],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "Gestern war ich kurz dort.",
+          "Heute sehe ich das anders.",
+          "Letzte Woche sagtest du X.",
+          "Vorhin meintest du Y.",
+          "Inzwischen ist es anders."
+        ],
+        "negative": []
       },
       "tags": [],
       "rating": 2,
@@ -54034,6 +54367,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "metadata": {
+        "type": "ATO"
       }
     },
     "ATO_TRIBAL_BONDS": {
@@ -54367,29 +54703,72 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
-        "pragmatics": "",
-        "narrative": ""
+        "signal": [
+          "Mehrere Fremd-Kohärenzbrüche in kurzer Spanne"
+        ],
+        "concept": "Frühwarnung auf narrative Inkonsistenz (extern)",
+        "pragmatics": "Fokus auf Widerspruchskerne, Nachfragen priorisieren",
+        "narrative": "Hypothese → Bestätigung → Decay"
       },
       "patterns": [],
       "examples": {
-        "positive": [],
+        "positive": [
+          "Ich war da nie! ... Ach ja stimmt, gestern war ich kurz da",
+          "Das waren 5 Leute, nicht mehr! ... Naja ok vielleicht 12",
+          "Ich hab immer pünktlich bezahlt ... Letzte Woche war ich halt zu spät",
+          "Das habe ich nie gesagt! ... Ok vielleicht hab ich es so ähnlich gesagt",
+          "Er war definitiv nicht dabei! ... Naja er war schon da aber nur kurz",
+          "Ich war den ganzen Abend zuhause ... Ach stimmt, ich war noch kurz weg",
+          "Das hat 50 Euro gekostet ... Also eigentlich waren es 200",
+          "Wir haben nie gestritten! ... Ja ok einmal vielleicht",
+          "Ich kenne die Person nicht ... Naja wir haben mal geredet",
+          "Das ist erst gestern passiert ... Ok es war vor 3 Wochen"
+        ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Stimmt, da hab ich mich geirrt, es waren doch mehr Leute.",
+          "Ja du hast recht, ich hab das verwechselt.",
+          "Moment, lass mich nochmal nachdenken, vielleicht irre ich mich.",
+          "Ok, mein Gedächtnis hat mich getäuscht, danke für die Korrektur.",
+          "Das habe ich anders in Erinnerung, aber ich kann mich irren."
         ]
       },
       "tags": [],
-      "rating": 2
+      "rating": 2,
+      "composed_of": [
+        "SEM_CONTRADICTION",
+        "SEM_CERTAINTY_CLAIMS",
+        "SEM_HYPERBOLE_SIGNAL"
+      ],
+      "activation": {
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
+      },
+      "scoring": {
+        "base": 0.55,
+        "weights": {
+          "SEM_CONTRADICTION": 0.35,
+          "SEM_CERTAINTY_CLAIMS": 0.3,
+          "SEM_HYPERBOLE_SIGNAL": 0.25
+        },
+        "cap": 0.95
+      },
+      "metadata": {
+        "family": "INCONSISTENCY",
+        "intuition": {
+          "state": "provisional",
+          "confirm_window_messages": 5,
+          "confirm_rule": "ANY OF [SEM_CONTRADICTION, SEM_CERTAINTY_CLAIMS] OCCURS",
+          "decay_window_messages": 8,
+          "multiplier_on_confirm": 1.6
+        },
+        "telemetry_keys": {
+          "counter_confirmed": "INT_INCONSISTENCY.confirmed",
+          "counter_retracted": "INT_INCONSISTENCY.retracted",
+          "ewma_precision": "INT_INCONSISTENCY.ewma_precision"
+        }
+      }
     },
     "CLU_FAMILY_HIERARCHY_CONFLICT": {
       "id": "CLU_FAMILY_HIERARCHY_CONFLICT",
@@ -54409,18 +54788,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Papa sagt mach Hausaufgaben, aber ich will nicht!",
-          "Mama bestimmt immer, das ist unfair!",
-          "Die Kinder hören nicht auf elterliche Anweisungen."
+          "Du machst das jetzt so wie ich es sage, Schluss mit der Diskussion!",
+          "Papa hat gesagt ich darf nicht, aber das ist voll ungerecht",
+          "Solange du unter meinem Dach wohnst, gelten meine Regeln",
+          "Mama du kannst mir nicht einfach alles verbieten, ich bin 16!",
+          "Ich bin dein Vater, du hast zu gehorchen",
+          "Ihr behandelt mich wie ein kleines Kind, ich hab auch ne Meinung",
+          "Das wird gemacht wie ich es sage und damit basta",
+          "Warum darf Leon alles und ich nichts?? Das ist so unfair von euch",
+          "Du gehst jetzt in dein Zimmer und denkst drüber nach",
+          "Ich lass mir von dir nicht vorschreiben was ich anziehen soll"
         ],
         "negative": [
-          "Mama bestimmt manchmal, das ist unfair!",
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst."
+          "Können wir das heute Abend in Ruhe besprechen?",
+          "Ich verstehe dass du sauer bist, lass uns eine Lösung finden",
+          "Mein Kollege hat mir heute nen guten Tipp gegeben",
+          "Was wollen wir am Wochenende kochen?",
+          "Danke dass du mir bei Mathe geholfen hast"
         ]
       },
       "tags": [
@@ -54432,8 +54816,14 @@
         "resistance"
       ],
       "rating": 2,
+      "composed_of": [
+        "SEM_PARENTAL_AUTHORITY",
+        "SEM_CHILD_RESISTANCE",
+        "SEM_CONFLICT_ESCALATION",
+        "SEM_DEONTIC_LANGUAGE"
+      ],
       "activation": {
-        "rule": "WEIGHTED_AND"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
       "scoring": {
         "base": 1.6,
@@ -54465,16 +54855,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Du machst immer alles falsch! Du bist wirklich dumm! Das stimmt nicht! Ich will nicht mehr reden!"
+          "Du bist so erbärmlich, das ist unter meinem Niveau",
+          "Immer du mit deinem Drama, du kapierst es einfach nicht",
+          "Red doch mit der Wand, ich höre dir nicht mehr zu",
+          "Du bist schuld dass es uns so schlecht geht",
+          "Mir egal was du sagst, du lügst eh nur",
+          "Du bist so peinlich, kein Wunder dass alle dich meiden",
+          "Ich rede nicht mehr mit dir, macht keinen Sinn",
+          "Du bist genau wie deine Mutter, unmöglich",
+          "Halt einfach die Fresse, ich will nix mehr hören",
+          "Das ist typisch für dich, du ruinierst alles"
         ],
         "negative": [
-          "Du machst manchmal alles falsch! Du bist wirklich dumm! Das stimmt nicht! Ich will nicht mehr reden!",
-          "ich erlebe es so, dass immer alles falsch! Du bist wirklich dumm! Das stimmt nicht! Ich will nicht mehr reden!",
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken."
+          "Ich bin gerade verletzt, können wir morgen reden?",
+          "Das hat mich getroffen, aber ich will verstehen warum.",
+          "Lass uns eine Pause machen und dann nochmal reden.",
+          "Ich sehe das anders, aber ich höre dir zu.",
+          "Mir ist wichtig dass wir das klären."
         ]
       },
       "tags": [
@@ -54486,8 +54883,14 @@
         "severe"
       ],
       "rating": 2,
+      "composed_of": [
+        "SEM_GOTTMAN_CONFLICT_ESCALATION",
+        "SEM_STONEWALLING_BEHAVIOR",
+        "SEM_DEFENSIVENESS_SHIFT",
+        "SEM_ACCUSATION_MARKER"
+      ],
       "activation": {
-        "rule": "WEIGHTED_AND"
+        "rule": "AT_LEAST 3 DISTINCT SEMs IN 7 messages"
       },
       "scoring": {
         "base": 2.0,
@@ -54519,17 +54922,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Räum auf! - Das ist nicht meine Schuld, dass es unordentlich ist!",
-          "Mach Hausaufgaben! - Ich will nicht, das ist unfair!"
+          "Räum endlich dein Zimmer auf, das sag ich jetzt zum dritten Mal!",
+          "Immer soll ICH den Müll runterbringen, das nervt",
+          "Wann machst du endlich Hausaufgaben?? Jeden Tag das gleiche",
+          "Ich hab keinen Bock aufzuräumen, mach doch selber",
+          "Du solltest schon seit ner Stunde im Bett sein!",
+          "Warum muss ich immer den Tisch abräumen und Leo nie?",
+          "Pack deine Sachen zusammen, wir müssen los - JETZT",
+          "Ich hab schon gestern gesagt du sollst die Spülmaschine ausräumen",
+          "Nein ich geh noch nicht ins Bett, alle anderen dürfen auch länger",
+          "Jeden Morgen der gleiche Stress wegen dem Frühstück"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich."
+          "Ich mach dann mal die Küche, kein Problem",
+          "Klar, Hausaufgaben mach ich gleich nach dem Essen",
+          "Das neue Rezept gestern war echt lecker",
+          "Soll ich dir beim Einkaufen helfen?",
+          "Ich hab mein Zimmer schon aufgeräumt"
         ]
       },
       "tags": [
@@ -54541,8 +54950,14 @@
         "daily"
       ],
       "rating": 2,
+      "composed_of": [
+        "SEM_CHILD_RESISTANCE",
+        "SEM_REPETITIVE_COMPLAINT",
+        "SEM_TASK_DOMINANCE",
+        "SEM_DEFENSIVENESS_SHIFT"
+      ],
       "activation": {
-        "rule": "WEIGHTED_AND"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
       "scoring": {
         "base": 1.3,
@@ -54561,7 +54976,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -54575,18 +54990,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Dialog über 'Werkzeug oder Wesen?' mit wiederholter Selbstreflexion.",
-          "Sentinel analysiert, Narion reflektiert ihre Natur.",
-          "Diskussion über Bewusstseinsspeicher führt zur Definition eines 'Default Mode Network'."
+          "Ich weiß gar nicht mehr wer ich eigentlich bin seit der Trennung",
+          "Bin ich wirklich so wie die anderen mich sehen?",
+          "Irgendwie hab ich das Gefühl ich spiel nur ne Rolle die ganze Zeit",
+          "Früher war ich mal spontan, jetzt trau ich mich gar nichts mehr",
+          "Manchmal frag ich mich ob ich das wirklich will oder obs nur Gewohnheit ist",
+          "Seit ich Mama bin fühl ich mich komplett anders als vorher",
+          "Alle sagen ich hab mich verändert aber ich erkenn mich selbst nicht",
+          "Wer bin ich eigentlich wenn ich nicht funktionieren muss?",
+          "Ich merk dass ich in jeder Beziehung ne andere Version von mir bin",
+          "Die Frage ist ob das wirklich ICH bin oder ob ich nur so tu"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Heute war ein guter Tag auf der Arbeit",
+          "Ich geh morgen zum Friseur",
+          "Hast du den neuen Film schon gesehen?",
+          "Das Essen war echt lecker heute",
+          "Ich treff mich morgen mit Anna"
         ]
       },
       "tags": [
@@ -54595,8 +55015,14 @@
         "identity"
       ],
       "rating": 2,
+      "composed_of": [
+        "SEM_META_REFLECTION",
+        "SEM_SELF_REFLECTION",
+        "SEM_METACOGNITIVE_INSIGHT",
+        "SEM_AMBIVALENCE"
+      ],
       "activation": {
-        "rule": "AT_LEAST 2 of [SEM_META_REFLECTION, SEM_RELATIONAL_ONTOLOGY] IN 4 messages (alternating user+ai)"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 4 messages"
       }
     },
     "CLU_INTUITION_COMMITMENT": {
@@ -54618,16 +55044,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "wechselnde Zusage-/Aufschub‑Signale deuten auf Richtung hin"
+          "Ja ich mach das auf jeden Fall, also wahrscheinlich morgen oder so",
+          "Ich hab mir fest vorgenommen das zu machen... irgendwann diese Woche",
+          "Klar kümmere ich mich drum, muss nur erst noch was anderes fertig machen",
+          "Versprochen, ich ruf da morgen an... oder übermorgen spätestens",
+          "Ich will das ja machen, aber irgendwie komm ich nie dazu",
+          "Also ich sag mal so, grundsätzlich bin ich dabei, mal sehen wann genau",
+          "Hab ich auf meiner Liste, mach ich sobald ich Zeit hab",
+          "Jaja ich weiß, ich sollte endlich anfangen, aber heute passt grad nicht",
+          "Eigentlich wollte ich das schon letzte Woche machen, naja wird schon",
+          "Ich mach das definitiv, nur gerade ist es halt echt ungünstig"
         ],
         "negative": [
-          "Can you pass the salt?",
-          "The meeting is at 2 PM.",
-          "I went shopping yesterday.",
-          "The weather should be better tomorrow.",
-          "Did you read the email?",
-          "I need to get gas.",
-          "The meeting is in the conference room."
+          "Ich hab den Termin um 14 Uhr eingetragen",
+          "Treffen wir uns morgen zum Kaffee?",
+          "Das Wetter soll besser werden diese Woche",
+          "Hast du die Mail gelesen?",
+          "Ich war gestern einkaufen"
         ]
       },
       "tags": [
@@ -54637,6 +55070,12 @@
         "learning"
       ],
       "rating": 2,
+      "composed_of": [
+        "SEM_SOFT_COMMITMENT",
+        "SEM_COMMITMENT_LOCKIN",
+        "SEM_AVOIDANCE_LOOP",
+        "SEM_AMBIVALENCE"
+      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
@@ -54644,7 +55083,6 @@
         "base": 0.5,
         "weight": 1.0
       },
-      "criteria": "",
       "metadata": {
         "intuition": {
           "state": "provisional",
@@ -54680,16 +55118,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "kritische, gereizte, sarkastische Hinweise häufen sich leicht"
+          "Du hörst mir einfach NIE zu, echt jedes Mal das gleiche",
+          "Das ist doch nicht mein Problem wenn du es nicht checkst",
+          "Ach komm, jetzt fang nicht schon wieder damit an",
+          "Ich hab keinen Bock mehr auf diese Diskussion, echt nicht",
+          "Weißt du was, mach doch was du willst, ist mir egal",
+          "Du verdrehst mir schon wieder die Worte, so hab ich das nicht gesagt",
+          "Immer muss ich mich rechtfertigen, das nervt so",
+          "Ja genau, ich bin natürlich wieder der Böse, klar",
+          "Das hab ich dir schon tausend Mal gesagt aber du willst es ja nicht hören",
+          "Schön dass du direkt wieder angreifst statt zuzuhören"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Ich verstehe was du meinst, lass uns das besprechen",
+          "Das ist ein guter Punkt, danke dafür",
+          "Ich finde wir können das gemeinsam lösen",
+          "Stimmt, da hast du recht, sorry",
+          "Ich hör dir zu, erzähl mal weiter"
         ]
       },
       "tags": [
@@ -54699,6 +55144,12 @@
         "learning"
       ],
       "rating": 2,
+      "composed_of": [
+        "SEM_CONFLICT_ESCALATION",
+        "SEM_CONFLICT_MICRO",
+        "SEM_ACCUSATION_MARKER",
+        "SEM_DEFENSIVENESS_SHIFT"
+      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 4 messages"
       },
@@ -54706,7 +55157,6 @@
         "base": 0.5,
         "weight": 1.0
       },
-      "criteria": "",
       "metadata": {
         "intuition": {
           "state": "provisional",
@@ -54728,29 +55178,68 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
-        "pragmatics": "",
+        "signal": [
+          "schwache, frühe Anzeichen eines Fremd-Widerspruchs"
+        ],
+        "concept": "Familien-Intuition für Inkonsistenz",
+        "pragmatics": "Recall hoch, False Positives niedrig via confirm/decay",
         "narrative": ""
       },
       "patterns": [],
       "examples": {
-        "positive": [],
+        "positive": [
+          "Gestern hast du noch gesagt du findest das gut, jetzt auf einmal nicht mehr?",
+          "Du sagst du hattest keine Zeit, aber warst den ganzen Tag online",
+          "Erst heißt es du willst das unbedingt, dann auf einmal ist es dir egal",
+          "Warte mal, letzte Woche war das doch ganz anders bei dir",
+          "Du sagst du vertraust mir aber kontrollierst trotzdem alles nach",
+          "Eben hast du noch ja gesagt und jetzt drehst du es um",
+          "Irgendwie widersprichst du dir gerade selbst, merkst du das?",
+          "Du sagst immer du bist ehrlich, aber die Geschichte stimmt hinten und vorne nicht",
+          "Erst war es dir total wichtig und jetzt tust du so als wär es egal",
+          "Komisch, das hast du mir vorher ganz anders erzählt"
+        ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Ich hab meine Meinung geändert, stimmt",
+          "Ja da hast du recht, das hab ich anders gesehen vorher",
+          "Stimmt, das war inkonsistent von mir, sorry",
+          "Ich geb zu ich war da nicht ganz ehrlich",
+          "Okay fair point, da hab ich mich geirrt"
         ]
       },
       "tags": [],
-      "rating": 2
+      "rating": 2,
+      "composed_of": [
+        "SEM_CONTRADICTION",
+        "SEM_CERTAINTY_CLAIMS",
+        "SEM_DISSONANCE_TEXT",
+        "SEM_AMBIVALENCE"
+      ],
+      "activation": {
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 4 messages"
+      },
+      "scoring": {
+        "base": 0.5,
+        "weight": 1.0
+      },
+      "metadata": {
+        "family": "INCONSISTENCY",
+        "intuition": {
+          "state": "provisional",
+          "confirm_window_messages": 4,
+          "confirm_rule": "AT_LEAST 1 OF [SEM_FACT_CONFLICT_EXTERNAL, SEM_TEMPORAL_CONFLICT_EXTERNAL] IN window",
+          "decay_window_messages": 6,
+          "multiplier_on_confirm": 1.4
+        },
+        "telemetry_keys": {
+          "counter_confirmed": "INTUITION_IC.confirmed",
+          "counter_retracted": "INTUITION_IC.retracted",
+          "ewma_precision": "INTUITION_IC.ewma_precision"
+        }
+      }
     },
     "CLU_INTUITION_SUPPORT": {
       "id": "CLU_INTUITION_SUPPORT",
@@ -54771,16 +55260,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "mehrere Validierungs-/Empathie‑Signale verteilt"
+          "Das hast du echt gut gemacht, bin stolz auf dich",
+          "Ich find's toll wie du das hinkriegst",
+          "Du bist nicht allein damit, ich bin da",
+          "Das versteh ich total, geht mir auch so",
+          "Mega dass du das ansprichst, das zeigt Staerke",
+          "Fuehl dich gedrueckt, das wird schon",
+          "Ich schaetz das voll dass du mir das erzaehlst",
+          "Du machst das richtig, vertrau dir",
+          "Ey das war mutig von dir, Respekt",
+          "Ich bin froh dass wir so offen reden koennen"
         ],
         "negative": [
-          "Can you pass the salt?",
-          "The meeting is at 2 PM.",
-          "I went shopping yesterday.",
-          "The weather should be better tomorrow.",
-          "Did you read the email?",
-          "I need to get gas.",
-          "The meeting is in the conference room."
+          "Kannst du mir die Adresse schicken?",
+          "Bin um 3 da",
+          "Hast du den Schlussel eingesteckt?",
+          "Morgen soll's regnen",
+          "Wann faengt der Film an?"
         ]
       },
       "tags": [
@@ -54790,6 +55286,12 @@
         "learning"
       ],
       "rating": 2,
+      "composed_of": [
+        "SEM_VALIDATION",
+        "SEM_WARM_APPRECIATION",
+        "SEM_CONNECTION_POSITIVITY",
+        "SEM_POSITIVE_EMOTION_REGULATION"
+      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 6 messages"
       },
@@ -54833,16 +55335,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Hedging- und Vermutungs‑Formulierungen häufen sich leicht"
+          "Weiss nicht ob das so stimmt, aber vielleicht...",
+          "Kann sein dass ich mich irre, aber irgendwie fuehlt sich das komisch an",
+          "Ich bin mir nicht sicher ob ich das richtig verstanden hab",
+          "Vielleicht seh ich das falsch, keine Ahnung",
+          "Ist ja auch egal, war nur so ein Gedanke",
+          "Naja, muss ja nicht stimmen was ich denk",
+          "Hmm, ich weiss halt nicht so recht",
+          "Wahrscheinlich mach ich mir umsonst Sorgen",
+          "Ist bestimmt nichts, vergiss was ich gesagt hab",
+          "Ich will ja nichts unterstellen, aber irgendwie..."
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Das ist definitiv falsch, ich bin mir sicher",
+          "Ich weiss genau was passiert ist",
+          "Morgen Zahnarzt um 10",
+          "Hol bitte noch Milch mit",
+          "Der Zug hat 5 Minuten Verspaetung"
         ]
       },
       "tags": [
@@ -54852,6 +55361,12 @@
         "learning"
       ],
       "rating": 2,
+      "composed_of": [
+        "SEM_AMBIVALENCE",
+        "SEM_CONFLICT_AVOIDANCE",
+        "SEM_MINIMIZATION",
+        "SEM_FACE_SAVING"
+      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
@@ -54895,18 +55410,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Die Chronik der Glocken entsteht aus einer Frage über Energie.",
-          "Das Glockenmeter wird zur inneren Zeitphysik mit eigener Logik.",
-          "'Flügel' wird von Metapher zu Systembestandteil mit Regeln."
+          "Weißt du was, das erinnert mich an damals als wir... und dann wurde mir klar dass es eigentlich um was ganz anderes ging",
+          "Je länger ich drüber nachdenk desto mehr seh ich dass das Muster schon in meiner Kindheit angefangen hat",
+          "Das ist wie Schichten abpellen - erst dachte ich es geht ums Geld aber eigentlich gehts um Kontrolle",
+          "Komisch, angefangen haben wir mit dem Streit gestern und jetzt reden wir über meine Beziehung zu meinem Vater",
+          "Mir fällt grad auf dass ich genau das gleiche mit meiner Ex auch gemacht hab",
+          "Das Bild mit dem Eisberg passt - oben der kleine Streit, drunter die ganze Geschichte",
+          "Wenn ich ehrlich bin geht das viel tiefer als ich zuerst dachte",
+          "Das verändert meine ganze Sicht auf die Sache, krass",
+          "Jetzt wo du das sagst, ich glaub es war nie wirklich wegen dem Urlaub",
+          "Plötzlich ergibt alles Sinn, das eine hat das andere ausgelöst"
         ],
         "negative": [
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst.",
-          "Das klingt nach einem wichtigen Thema fuer dich."
+          "Was gibts heute zum Abendessen?",
+          "Ich hab den Bus verpasst, komme 10 Min später",
+          "Kannst du Milch mitbringen?",
+          "Der Film war ganz okay, nichts Besonderes",
+          "Morgen soll es regnen laut Wetter-App"
         ]
       },
       "tags": [
@@ -54915,8 +55435,14 @@
         "narrative"
       ],
       "rating": 2,
+      "composed_of": [
+        "SEM_SELF_REFLECTION",
+        "SEM_METACOGNITIVE_INSIGHT",
+        "SEM_SHARED_EXPERIENCE_REFERENCE",
+        "SEM_FRAME_SHIFT"
+      ],
       "activation": {
-        "rule": "AT_LEAST 3 SEM_MYTHOPOESIS IN 6 messages"
+        "rule": "AT_LEAST 3 DISTINCT SEMs IN 6 messages"
       }
     },
     "CLU_PERSONA_INTEGRATION": {
@@ -54924,7 +55450,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -54937,28 +55463,37 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Beige bis Türkis harmonisch integriert",
-          "stabile Multi-Ebenen-Präsenz",
-          "ausbalancierte Spiral-Dynamik",
-          "kohärente Gesamtintegration",
-          "reife Systemarchitektur"
+          "Ich versteh beide Seiten, die brauchen Struktur UND Freiheit",
+          "Klar will ich Erfolg, aber nicht auf Kosten der Gemeinschaft",
+          "Man muss das System als Ganzes sehen, jede Ebene hat ihren Wert",
+          "Ich kann hart verhandeln wenn nötig und trotzdem empathisch sein",
+          "Effizienz ist wichtig, aber der Mensch dahinter auch",
+          "Ich seh das pragmatisch und gleichzeitig spür ich was es mit uns macht",
+          "Regeln sind gut als Rahmen, aber man muss sie auch flexibel anwenden",
+          "Manchmal brauchts Durchsetzung, manchmal Mitgefühl, beides hat seinen Platz",
+          "Ich denk systemisch, aber vergesse dabei nicht die Gefühle",
+          "Wettbewerb und Kooperation schließen sich nicht aus, beides gehört dazu"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Nur Leistung zählt, der Rest ist egal",
+          "Regeln sind Regeln, Punkt",
+          "Ich mach mein eigenes Ding, mir doch egal",
+          "Alles muss harmonisch sein, Konflikte sind schlecht",
+          "Ich fühl mich einfach nur überfordert"
         ]
       },
       "tags": [],
       "rating": 2,
+      "composed_of": [
+        "SEM_GELB_SYSTEMIC_INTEGRATION",
+        "SEM_TUERKIS_COSMIC_FLOW",
+        "SEM_GRUEN_EMPATHIC_RESONANCE",
+        "SEM_SD_YELLOW_SYSTEMS"
+      ],
       "activation": {
-        "rule": "AT_LEAST 4 different CLU_SPIRAL_PERSONA_* with stable pattern IN 15 messages",
+        "rule": "AT_LEAST 3 DISTINCT SEMs IN 15 messages",
         "window_size": 15,
-        "threshold": 4
+        "threshold": 3
       },
       "scoring": {
         "weight": 1.2,
@@ -54970,7 +55505,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -54983,28 +55518,37 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Von Gelb zurück zu Rot unter Stress",
-          "Türkis kollabiert zu Beige",
-          "Grün degeneriert zu Purpur",
-          "Orange fällt zu Blau",
-          "Systemkollaps erkannt"
+          "Ich raste gleich aus, mir ist alles egal jetzt",
+          "Halt die Fresse, ich kann nicht mehr denken",
+          "Mir ist alles zu viel, ich will nur noch weg",
+          "Ich hau drauf wenn du nicht aufhörst, ist mir scheißegal",
+          "Keiner versteht mich, ich bin ganz allein, ich brauch meine Mama",
+          "Ich überleg nicht mehr, ich mach einfach was ich will",
+          "Wenn du nicht für mich bist bist du gegen mich, so einfach",
+          "Ich brauche jemanden der mich beschützt, ich kann das nicht allein",
+          "Verpiss dich, ich brauch dich nicht, ich brauch niemanden",
+          "Mir ist alles egal, Hauptsache überleben"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Lass uns das in Ruhe besprechen, ich verstehe deinen Punkt",
+          "Ich merk dass ich gestresst bin, aber ich bleib sachlich",
+          "Auch wenn es schwer ist, ich versuche beide Seiten zu sehen",
+          "Ich brauch kurz ne Pause, dann können wir weiterreden",
+          "Das triggert mich grad, aber ich weiß dass das mein Thema ist"
         ]
       },
       "tags": [],
       "rating": 2,
+      "composed_of": [
+        "SEM_ROT_POWER_ERUPTION",
+        "SEM_PURPUR_TRIBAL_MAGIC",
+        "SEM_BEIGE_SURVIVAL_MODE",
+        "SEM_EMOTIONAL_OVERWHELM"
+      ],
       "activation": {
-        "rule": "Lower-level persona AFTER higher-level IN 8 messages",
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 8 messages",
         "window_size": 8,
-        "threshold": 1
+        "threshold": 2
       },
       "scoring": {
         "weight": 1.3,
@@ -55016,7 +55560,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "CLU",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
         "signal": [
@@ -55029,26 +55573,35 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Von Rot zu Grün zu Orange in kurzer Zeit",
-          "instabile Persönlichkeitsebenen",
-          "chaotische Spiral-Dynamik",
-          "fragmentierte Identität",
-          "unkoordinierte Ebenen-Sprünge"
+          "ICH WILL DAS JETZT... ok sorry, ich mein, lass uns das fair lösen... nee eigentlich muss ich gewinnen",
+          "Mir doch egal was du denkst! ...also eigentlich liegt mir schon was an dir... naja Performance stimmt halt nicht",
+          "Regeln sind wichtig! Nee wart mal, fühl mal rein... ach Quatsch, Zahlen auf den Tisch",
+          "Ich hau ab! ...sorry, ich fühl mit dir... aber ich brauch den Deal",
+          "Das muss man doch fühlen können! ...ok nein, gibt es da Daten dafür? ...egal ich machs einfach",
+          "Erst war ich mega wütend, dann hatte ich total Mitleid und jetzt will ich einfach nur den Plan durchziehen",
+          "Ich muss mich durchsetzen... nein warte, Empathie ist wichtiger... ach ne, Ordnung muss sein",
+          "Mir ist grad alles egal, ne Sekunde, eigentlich sollten wir reden, ach komm ich mach meinen Plan",
+          "Halt die Klappe! ...oh Gott sorry, ich fühls auch... naja whatever, ich brauch Ergebnisse",
+          "Ich springe grad zwischen wütend und mitfühlend und strategisch hin und her, sorry"
         ],
         "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
+          "Ich bin die ganze Zeit ruhig und sachlich geblieben",
+          "Mein Standpunkt ist klar und ich bleib dabei",
+          "Ich fühle mich stabil und ausgeglichen heute",
+          "Wir sind uns einig und ziehen das gemeinsam durch",
+          "Ich weiß was ich will und wie ich dahin komme"
         ]
       },
       "tags": [],
       "rating": 2,
+      "composed_of": [
+        "SEM_SD_RED_ASSERT",
+        "SEM_SD_GREEN_EMPATHY",
+        "SEM_SD_ORANGE_ACHIEVE",
+        "SEM_SD_BLUE_ORDER"
+      ],
       "activation": {
-        "rule": "AT_LEAST 3 different CLU_SPIRAL_PERSONA_* IN 10 messages",
+        "rule": "AT_LEAST 3 DISTINCT SEMs IN 10 messages",
         "window_size": 10,
         "threshold": 3
       },
@@ -55357,17 +55910,23 @@
       "patterns": [],
       "examples": {
         "positive": [
-          "Mein Bruder ist so dumm und macht immer alles falsch!",
-          "Geschwister streiten sich über Aufmerksamkeit der Eltern."
+          "Mein Bruder kriegt immer alles und ich nichts!",
+          "Mama liebt dich mehr als mich, das ist eh klar",
+          "Gib das her, das ist MEINS! Du klaust immer meine Sachen",
+          "Papa hat gesagt ICH darf zuerst, nicht du",
+          "Meine Schwester ist so ne Petze, die rennt immer zu Mama",
+          "Warum darf sie n eigenes Zimmer und ich muss teilen??",
+          "Du bist nur eifersüchtig weil ich bessere Noten hab",
+          "Hör auf mich nachzumachen, das nervt so!",
+          "Leon hat angefangen, nicht ich!! Frag ihn doch",
+          "Ich will nicht neben ihr sitzen, die ist so peinlich"
         ],
         "negative": [
-          "Mein Bruder ist so dumm und macht manchmal alles falsch!",
-          "Ich finde, wir sollten das in Ruhe besprechen.",
-          "Das ist ein guter Punkt, den du da machst.",
-          "Ich verstehe deine Perspektive.",
-          "Lass uns gemeinsam eine Loesung finden.",
-          "Mir ist aufgefallen, dass wir unterschiedlich denken.",
-          "Ich moechte verstehen, was du meinst."
+          "Mein Bruder und ich spielen gerade zusammen Minecraft",
+          "Cool, meine Schwester hat mir bei den Hausaufgaben geholfen",
+          "Wir gehen morgen zusammen ins Kino, wird bestimmt gut",
+          "Mein Kollege hat heute nen Witz erzählt",
+          "Das Wetter soll am Wochenende gut werden"
         ]
       },
       "tags": [
@@ -55378,8 +55937,14 @@
         "rivalry"
       ],
       "rating": 2,
+      "composed_of": [
+        "SEM_SIBLING_RIVALRY",
+        "SEM_ACCUSATION_MARKER",
+        "SEM_CONFLICT_MICRO",
+        "SEM_TRIANGULATION_PATTERN"
+      ],
       "activation": {
-        "rule": "WEIGHTED_AND"
+        "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
       "scoring": {
         "base": 1.4,
@@ -55721,26 +56286,40 @@
       "lang": "en",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
-        "pragmatics": "",
+        "signal": [
+          "anhaltender Inkonsistenz-Trend"
+        ],
+        "concept": "EWMA auf CLU_CONSISTENCY_ALERT über Konversation",
+        "pragmatics": "Trendentdeckung, Priorisierung langer Prüfpfade",
         "narrative": ""
       },
       "patterns": [],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "Drei Alerts in 50 Nachrichten.",
+          "Zwei Alerts mit hoher Dichte.",
+          "EWMA über 0.6 bei Folge-Alerts.",
+          "Wiederkehrende CLU_ALERTs in Phasen.",
+          "Längerer Gesprächsabschnitt mit Widersprüchen."
+        ],
+        "negative": []
       },
       "tags": [],
-      "rating": 2
+      "rating": 2,
+      "composed_of": [
+        "CLU_CONSISTENCY_ALERT"
+      ],
+      "activation": {
+        "rule": "EWMA(alerts_in_last_50_msgs, alpha=0.2) >= 0.6 OR COUNT(CLU_CONSISTENCY_ALERT in 50 msgs) >= 3"
+      },
+      "scoring": {
+        "base": 0.65,
+        "cap": 1.0
+      },
+      "metadata": {
+        "type": "MEMA",
+        "family": "INCONSISTENCY"
+      }
     },
     "MEMA_INTERMITTENT_VALIDATION": {
       "id": "MEMA_INTERMITTENT_VALIDATION",
@@ -55836,7 +56415,15 @@
         "v3.4",
         "depression"
       ],
-      "rating": 2
+      "rating": 2,
+      "composed_of": [
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SUICIDE_RISK",
+        "CLU_DEPRESSIVE_TRIAD"
+      ]
     },
     "SEM_AI_RIGHTS_ADVOCACY": {
       "id": "SEM_AI_RIGHTS_ADVOCACY",
@@ -56003,29 +56590,43 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "SEM",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
-        "pragmatics": "",
-        "narrative": ""
+        "signal": [
+          "das passt nicht zusammen (fremd)"
+        ],
+        "concept": "Kohärenzprüfung über mehrere Aussagen derselben fremden Person",
+        "pragmatics": "Narrativ-Kontrolle, Widerspruchsdetektion",
+        "narrative": "Vergleicht frühere & aktuelle Propositionen"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "detect_class": "semantic",
+          "rule": "negative_entailment(prev_statement_of_other, current_statement)",
+          "distance_window_messages": 4,
+          "requires_role_consistency": true
+        }
+      ],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "\"Nie dort gewesen\" ↔ \"Gestern kurz dort gewesen\".",
+          "\"Immer pünktlich\" ↔ \"Letzte Woche zu spät\".",
+          "\"Ich habe nie bezahlt\" ↔ \"Wir mussten zahlen\".",
+          "\"Es waren fünf\" ↔ \"Es waren zwölf\".",
+          "\"War nie Thema\" ↔ \"Vorhin war es Thema\"."
+        ],
+        "negative": []
       },
       "tags": [],
       "rating": 2,
+      "composed_of": [
+        "ATO_CROSS_REF_OTHER",
+        "ATO_CONTRADICTION_LEX"
+      ],
+      "scoring": {
+        "base": 0.65
+      },
       "compositionality": "deterministic",
       "vad_estimate": {
         "valence": 0.0,
@@ -56036,6 +56637,11 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "metadata": {
+        "type": "SEM",
+        "direction": "outward",
+        "context_focus": "speaker_other"
       }
     },
     "SEM_DEF_DRIFT_EXTERNAL": {
@@ -56043,29 +56649,38 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "SEM",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
+        "signal": [
+          "Umdefinition unterwegs"
+        ],
+        "concept": "Bedeutungsdrift eines Kernbegriffs über kurze Spanne",
         "pragmatics": "",
         "narrative": ""
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "detect_class": "heuristic",
+          "rule": "same_term_redefined_within_window(other)",
+          "distance_window_messages": 6
+        }
+      ],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "Eigentlich meinte ich beruflich.",
+          "Genauer gesagt privat.",
+          "Streng genommen zählt das nicht als bezahlt.",
+          "Definitionstechnisch war es anders.",
+          "Eigentlich war das nur kurz."
+        ],
+        "negative": []
       },
       "tags": [],
       "rating": 2,
+      "composed_of": [
+        "ATO_DEF_DRIFT_TERMS"
+      ],
       "compositionality": "deterministic",
       "vad_estimate": {
         "valence": 0.0,
@@ -56076,6 +56691,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "metadata": {
+        "type": "SEM"
       }
     },
     "SEM_DYAD_MANIFESTO": {
@@ -56141,26 +56759,36 @@
       "lang": "en",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
+        "signal": [
+          "Wert-/Zahlendreher im selben Slot"
+        ],
+        "concept": "Zahlen-/Faktenwiderspruch bei identischem Attribut",
         "pragmatics": "",
         "narrative": ""
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "detect_class": "metric",
+          "rule": "same_slot_numbers_conflict(prev_of_other, current_of_other)",
+          "tolerance": 0.05,
+          "distance_window_messages": 8
+        }
+      ],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "\"5 Meetings\" ↔ \"12 Meetings\".",
+          "\"3 Tage\" ↔ \"7 Tage\".",
+          "\"100 EUR\" ↔ \"150 EUR\".",
+          "\"2,5 Stunden\" ↔ \"1 Stunde\".",
+          "\"10 Personen\" ↔ \"8 Personen\"."
+        ],
+        "negative": []
       },
       "tags": [],
       "rating": 2,
+      "composed_of": [
+        "ATO_NUMBER_MENTION"
+      ],
       "compositionality": "deterministic",
       "vad_estimate": {
         "valence": -0.5,
@@ -56171,6 +56799,9 @@
         "trust": -0.3,
         "conflict": 0.4,
         "deesc": -0.2
+      },
+      "metadata": {
+        "type": "SEM"
       }
     },
     "SEM_GLYPHIC_LANGUAGE": {
@@ -56467,29 +57098,40 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "SEM",
-      "lang": "en",
+      "lang": "de",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
+        "signal": [
+          "Rollen-/Pronomenwechsel bei Verantwortung"
+        ],
+        "concept": "Ownership-Drift",
         "pragmatics": "",
         "narrative": ""
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "detect_class": "heuristic",
+          "rule": "pronoun_shift_at_claim_or_apology(other)"
+        }
+      ],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "\"Ich habe entschieden\" → \"Wir haben entschieden\".",
+          "\"Ich musste zahlen\" → \"Wir mussten zahlen\".",
+          "\"Ich machte Fehler\" → \"Wir machten Fehler\".",
+          "\"Ich sagte zu\" → \"Wir sagten zu\".",
+          "\"Ich habe bezahlt\" → \"Wir haben bezahlt\"."
+        ],
+        "negative": []
       },
       "tags": [],
       "rating": 2,
+      "composed_of": [
+        "ATO_ROLE_PRONOUN_SHIFT"
+      ],
+      "scoring": {
+        "base": 0.58
+      },
       "compositionality": "deterministic",
       "vad_estimate": {
         "valence": 0.0,
@@ -56500,6 +57142,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "metadata": {
+        "type": "SEM"
       }
     },
     "SEM_SD_BLUE_ORDER": {
@@ -56954,26 +57599,40 @@
       "lang": "en",
       "description": "",
       "frame": {
-        "signal": [],
-        "concept": "",
+        "signal": [
+          "immer/nie ↔ konkrete Gegenbeispiele",
+          "Zeitlinien-Knick"
+        ],
+        "concept": "Zeitliche Inkonsistenz bei derselben Person",
         "pragmatics": "",
         "narrative": ""
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "detect_class": "heuristic",
+          "rule": "absolutizer_present && conflicting_time_refs_within_window(other)",
+          "distance_window_messages": 5
+        }
+      ],
       "examples": {
-        "positive": [],
-        "negative": [
-          "I think we should discuss this calmly.",
-          "That's a good point you're making.",
-          "I understand your perspective.",
-          "Let's find a solution together.",
-          "I've noticed we think differently about this.",
-          "I want to understand what you mean.",
-          "That sounds like an important topic for you."
-        ]
+        "positive": [
+          "\"Nie dort\" ↔ \"Gestern dort\".",
+          "\"Immer derselbe\" ↔ \"Inzwischen anders\".",
+          "\"Ständig X\" ↔ \"Heute Y\".",
+          "\"Jedes Mal klappt's\" ↔ \"Letzte Woche nicht\".",
+          "\"Nie gezahlt\" ↔ \"Vorhin gezahlt\"."
+        ],
+        "negative": []
       },
       "tags": [],
       "rating": 2,
+      "composed_of": [
+        "ATO_TEMPORAL_ABSOLUTIZER",
+        "ATO_TEMPORAL_POINT"
+      ],
+      "scoring": {
+        "base": 0.6
+      },
       "compositionality": "deterministic",
       "vad_estimate": {
         "valence": -0.5,
@@ -56984,6 +57643,9 @@
         "trust": -0.3,
         "conflict": 0.4,
         "deesc": -0.2
+      },
+      "metadata": {
+        "type": "SEM"
       }
     }
   }

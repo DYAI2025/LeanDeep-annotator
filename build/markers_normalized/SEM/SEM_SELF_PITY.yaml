@@ -49,6 +49,8 @@ scoring:
   weight: 1.1
 window:
   messages: 6
+activation:
+  rule: "ANY 2 IN 3 messages"
 metadata:
   repair_log:
   - date: "2025-08-14"

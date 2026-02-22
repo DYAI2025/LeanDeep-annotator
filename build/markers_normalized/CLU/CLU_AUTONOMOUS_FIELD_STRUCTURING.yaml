@@ -56,6 +56,10 @@ tags:
 - self_regulation
 - planning
 rating: 1
+composed_of:
+- SEM_SELF_REGULATION
+- SEM_STRATEGIC_PLANNING
+- SEM_SELF_DISCLOSURE
 activation:
   rule: "ANY in 1 message"
 metadata:

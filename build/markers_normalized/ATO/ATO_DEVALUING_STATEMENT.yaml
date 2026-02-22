@@ -96,3 +96,5 @@ scoring:
   formula: "linear"
 window:
   messages: 5
+activation:
+  rule: "ANY 1"

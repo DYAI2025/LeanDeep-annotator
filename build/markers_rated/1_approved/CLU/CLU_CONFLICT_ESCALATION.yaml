@@ -7,23 +7,31 @@ frame:
   concept: Konflikt eskaliert
   pragmatics: Warnung
   narrative: window
+composed_of:
+- SEM_CONFLICT_ESCALATION
+- SEM_ACCUSATION_MARKER
+- SEM_BLAME_SHIFT_EXPRESSIONS_MARKER
+- SEM_GOTTMAN_CONFLICT_ESCALATION
 activation:
-  rule: AT_LEAST 3 IN 5 messages
+  rule: AT_LEAST 2 DISTINCT SEMs IN 5 messages
 scoring:
   base: 1.0
   weight: 1.2
 examples:
   positive:
-  - immer du machst das … nervt langsam
-  - typisch von dir … reicht jetzt
-  - hör auf damit … sonst passiert was
-  - deine Schuld … wie immer
-  - noch so ein Spruch und …
+  - Das ist DEINE Schuld, nicht meine!
+  - Du machst immer alles kaputt, echt jetzt
+  - Fang nicht schon wieder an, ich hab keinen Bock mehr
+  - Immer das gleiche mit dir, du lernst es nie
+  - Du bist so egoistisch, merkst du das nicht?
+  - Hör auf mich anzulügen, ich weiß genau was du getan hast
+  - Du hast angefangen, nicht ich!
+  - Noch ein Wort und ich bin weg
+  - Du verdrehst alles, wie immer
+  - Jedes Mal wenn ich was sage drehst du es um
   negative:
-  - manchmal du machst das … nervt langsam
-  - immer ich erlebe es so, dass das … nervt langsam
-  - deine Schuld … wie manchmal
   - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
+  - Ich verstehe deine Perspektive, auch wenn ich es anders sehe.
+  - Lass uns gemeinsam eine Lösung finden.
+  - Kannst du mir erklären, was du damit meinst?
+  - Ich möchte das gerne verstehen.

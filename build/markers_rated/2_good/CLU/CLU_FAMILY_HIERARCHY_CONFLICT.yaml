@@ -9,22 +9,13 @@ frame:
   concept: "Familiäre Hierarchiekonflikte"
   pragmatics: "Machtstrukturen und Rollenkonflikte in Familien"
   narrative: "Familiäre Systemdynamik"
-combination:
-  type: "AND"
-  components:
-  - marker_id: "SEM_PARENTAL_AUTHORITY"
-    weight: 0.5
-  - marker_id: "SEM_CHILD_RESISTANCE"
-    weight: 0.4
-  - marker_id: "ATO_ROLE_FATHER"
-    weight: 0.3
-  - marker_id: "ATO_ROLE_MOTHER"
-    weight: 0.3
-  - marker_id: "ATO_ROLE_CHILD"
-    weight: 0.3
-  threshold: 0.7
+composed_of:
+  - SEM_PARENTAL_AUTHORITY
+  - SEM_CHILD_RESISTANCE
+  - SEM_CONFLICT_ESCALATION
+  - SEM_DEONTIC_LANGUAGE
 activation:
-  rule: "WEIGHTED_AND"
+  rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
 window:
   messages: 50
 scoring:
@@ -34,17 +25,22 @@ scoring:
   formula: "logistic"
 examples:
   positive:
-  - "Papa sagt mach Hausaufgaben, aber ich will nicht!"
-  - "Mama bestimmt immer, das ist unfair!"
-  - "Die Kinder hören nicht auf elterliche Anweisungen."
+  - "Du machst das jetzt so wie ich es sage, Schluss mit der Diskussion!"
+  - "Papa hat gesagt ich darf nicht, aber das ist voll ungerecht"
+  - "Solange du unter meinem Dach wohnst, gelten meine Regeln"
+  - "Mama du kannst mir nicht einfach alles verbieten, ich bin 16!"
+  - "Ich bin dein Vater, du hast zu gehorchen"
+  - "Ihr behandelt mich wie ein kleines Kind, ich hab auch ne Meinung"
+  - "Das wird gemacht wie ich es sage und damit basta"
+  - "Warum darf Leon alles und ich nichts?? Das ist so unfair von euch"
+  - "Du gehst jetzt in dein Zimmer und denkst drüber nach"
+  - "Ich lass mir von dir nicht vorschreiben was ich anziehen soll"
   negative:
-  - Mama bestimmt manchmal, das ist unfair!
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
+  - "Können wir das heute Abend in Ruhe besprechen?"
+  - "Ich verstehe dass du sauer bist, lass uns eine Lösung finden"
+  - "Mein Kollege hat mir heute nen guten Tipp gegeben"
+  - "Was wollen wir am Wochenende kochen?"
+  - "Danke dass du mir bei Mathe geholfen hast"
 tags: [cluster, family, hierarchy, conflict, authority, resistance]
 detect_class: "E"
 criteria: "Kombination von elterlicher Autorität und kindlichem Widerstand"

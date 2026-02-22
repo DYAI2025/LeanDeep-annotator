@@ -2,26 +2,31 @@ id: SEM_ROLE_STABILITY_BREAK_EXTERNAL
 schema: LeanDeep
 version: '5.1'
 layer: SEM
-lang: en
+lang: de
 description: ''
 frame:
-  signal: []
-  concept: ''
+  signal:
+  - Rollen-/Pronomenwechsel bei Verantwortung
+  concept: Ownership-Drift
   pragmatics: ''
   narrative: ''
-patterns: []
+patterns:
+- detect_class: heuristic
+  rule: "pronoun_shift_at_claim_or_apology(other)"
 examples:
-  positive: []
-  negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  positive:
+  - '"Ich habe entschieden" → "Wir haben entschieden".'
+  - '"Ich musste zahlen" → "Wir mussten zahlen".'
+  - '"Ich machte Fehler" → "Wir machten Fehler".'
+  - '"Ich sagte zu" → "Wir sagten zu".'
+  - '"Ich habe bezahlt" → "Wir haben bezahlt".'
+  negative: []
 tags: []
 rating: 2
+composed_of:
+- ATO_ROLE_PRONOUN_SHIFT
+scoring:
+  base: 0.58
 compositionality: deterministic
 vad_estimate:
   valence: 0.0
@@ -31,3 +36,5 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+metadata:
+  type: SEM

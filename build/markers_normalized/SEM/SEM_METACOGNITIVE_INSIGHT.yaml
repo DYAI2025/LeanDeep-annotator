@@ -33,10 +33,10 @@ tags:
 - selbsterkenntnis
 rating: 1
 composed_of:
-- ATO_SELF_OBSERVATION
+- ATO_SELF_REFLECTION
 - ATO_SELF_PATTERN_REFERENCE
 activation:
-  rule: "ALL 2 IN 3 messages"
+  rule: ALL 2 IN 3 messages
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

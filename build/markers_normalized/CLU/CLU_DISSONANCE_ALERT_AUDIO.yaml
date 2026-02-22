@@ -41,5 +41,7 @@ composed_of:
 scoring:
   base: 0.58
   cap: 0.95
+activation:
+  rule: "AT_LEAST 2 DISTINCT SEMs IN 4 turns"
 metadata:
   family: "DISSONANCE"

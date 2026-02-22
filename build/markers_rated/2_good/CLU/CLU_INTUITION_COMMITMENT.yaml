@@ -14,7 +14,11 @@ tags:
 - commitment
 - procrastination
 - learning
-criteria: ''
+composed_of:
+- SEM_SOFT_COMMITMENT
+- SEM_COMMITMENT_LOCKIN
+- SEM_AVOIDANCE_LOOP
+- SEM_AMBIVALENCE
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 5 messages
 scoring:
@@ -34,12 +38,19 @@ metadata:
     ewma_precision: INT_COMMIT.ewma_precision
 examples:
   positive:
-  - wechselnde Zusage-/Aufschub‑Signale deuten auf Richtung hin
+  - Ja ich mach das auf jeden Fall, also wahrscheinlich morgen oder so
+  - Ich hab mir fest vorgenommen das zu machen... irgendwann diese Woche
+  - Klar kümmere ich mich drum, muss nur erst noch was anderes fertig machen
+  - Versprochen, ich ruf da morgen an... oder übermorgen spätestens
+  - Ich will das ja machen, aber irgendwie komm ich nie dazu
+  - Also ich sag mal so, grundsätzlich bin ich dabei, mal sehen wann genau
+  - Hab ich auf meiner Liste, mach ich sobald ich Zeit hab
+  - Jaja ich weiß, ich sollte endlich anfangen, aber heute passt grad nicht
+  - Eigentlich wollte ich das schon letzte Woche machen, naja wird schon
+  - Ich mach das definitiv, nur gerade ist es halt echt ungünstig
   negative:
-  - Can you pass the salt?
-  - The meeting is at 2 PM.
-  - I went shopping yesterday.
-  - The weather should be better tomorrow.
-  - Did you read the email?
-  - I need to get gas.
-  - The meeting is in the conference room.
+  - Ich hab den Termin um 14 Uhr eingetragen
+  - Treffen wir uns morgen zum Kaffee?
+  - Das Wetter soll besser werden diese Woche
+  - Hast du die Mail gelesen?
+  - Ich war gestern einkaufen

@@ -39,20 +39,10 @@ composed_of:
   require:
   - SEM_REALITY_DISTORTION_FIELD
   - CLU_COVERT_RESPONSIBILITY_INVERSION
-  k_of_n:
-    k: 2
-    of: []
 window:
   size_messages: 6
 gates:
   min_msgs: 2
-ingredients:
-  require:
-  - SEM_REALITY_DISTORTION_FIELD
-  - CLU_COVERT_RESPONSIBILITY_INVERSION
-  k_of_n:
-    k: 2
-    of: []
 emits:
   indices:
     trust: -0.2
@@ -60,11 +50,11 @@ emits:
 semiotic:
   mode: symbolic
   level: pragmatic
-  object: "gaslighting"
-  interpretant: "effect_on_state: {trust: -0.2}"
+  object: gaslighting
+  interpretant: 'effect_on_state: {trust: -0.2}'
   connotation:
-  - "manipulation"
-  - "sequence"
+  - manipulation
+  - sequence
 temperature_semantics:
   external: VERWIRRUNG
   latent: KONTROLLE

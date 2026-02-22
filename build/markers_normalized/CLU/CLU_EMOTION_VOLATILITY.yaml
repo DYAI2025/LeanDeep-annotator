@@ -2,7 +2,7 @@ id: CLU_EMOTION_VOLATILITY
 schema: LeanDeep
 version: '5.1'
 layer: CLU
-lang: en
+lang: de
 description: ''
 frame:
   signal:
@@ -13,27 +13,31 @@ frame:
 patterns: []
 examples:
   positive:
-  - kurze Sequenz A … kurze Sequenz B
-  - Beispiel mit zwei Signalen in einem Satz
-  - Signal 1 … später Signal 2 im Kontext
-  - Kombination aus Token X und Y
-  - Variante mit ähnlicher Semantik
+  - Ich liebe dich so sehr!! ... Nee weißt du was, ich hasse das hier
+  - Alles super, bin mega happy! ... Ich kann nicht mehr, das ist zu viel
+  - Ich krieg die Krise!! Nein warte, ist eigentlich egal
+  - Erst war ich total wütend und dann hab ich geheult
+  - Ich weiß nicht ob ich lachen oder weinen soll gerade
+  - Mir geht es gut nein warte eigentlich nicht
+  - Total glücklich! ... ok ne doch nicht, bin mega down gerade
+  - Bin so dankbar!! Ach vergiss es, bringt eh alles nix
+  - Ich explodier gleich! Nee egal is mir doch egal
+  - Eine Minute bin ich happy und dann krieg ich Panik
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Mir geht es heute gut, danke der Nachfrage.
+  - Ja, ich bin etwas genervt, aber es geht schon.
+  - Ich bin traurig wegen der Sache gestern.
+  - Das macht mich nachdenklich.
+  - Insgesamt bin ich zufrieden mit der Situation.
 tags: []
 rating: 1
 composed_of:
-- SEM_SADNESS_EXPRESSIONS
-- SEM_ANGER_ESCALATION
-- SEM_SUPPORT_VALIDATION
+- SEM_EMOTIONAL_OVERWHELM
+- SEM_AMBIVALENCE
+- SEM_HYPERBOLE_SIGNAL
+- SEM_SPIRAL_THINKING
 activation:
-  rule: "AT_LEAST 4 IN 8 messages"
+  rule: AT_LEAST 3 DISTINCT SEMs IN 8 messages
 scoring:
   base: 1.0
   weight: 1.1

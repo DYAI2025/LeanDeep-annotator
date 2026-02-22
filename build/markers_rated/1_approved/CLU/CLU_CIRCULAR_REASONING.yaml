@@ -7,23 +7,30 @@ frame:
   concept: Zirkuläres Denken
   pragmatics: Loop
   narrative: window
+composed_of:
+- SEM_REPETITIVE_COMPLAINT
+- SEM_SPIRAL_THINKING
+- SEM_UNRESOLVED_ISSUE
 activation:
-  rule: AT_LEAST 3 IN 6 messages
+  rule: AT_LEAST 2 DISTINCT SEMs IN 6 messages
 scoring:
   base: 1.0
   weight: 1.0
 examples:
   positive:
-  - wir drehen uns im Kreis … wie vorhin
-  - das hatten wir schon … nochmal von vorne
-  - immer wieder die gleiche Frage
-  - ich wiederhole mich … schon wieder
-  - zurück am Anfang … ohne Fortschritt
+  - Das hab ich dir schon hundert Mal gesagt!
+  - Wir drehen uns im Kreis, das hatten wir doch gestern schon
+  - Immer das gleiche Thema, wir kommen nie weiter
+  - Das ist genau das was ich letzte Woche schon gesagt hab
+  - Warum reden wir schon wieder darüber? Hab ich doch erklärt
+  - Du sagst jedes Mal das gleiche und nix ändert sich
+  - Ich wiederhol mich nicht nochmal, ich hab es dir x-mal gesagt
+  - Wir sind wieder am selben Punkt wie vor einem Monat
+  - Egal wie oft ich es sage, du hörst nicht zu
+  - Schon wieder? Das ist doch wie letztes Mal, genau das gleiche
   negative:
-  - manchmal wieder die gleiche Frage
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
+  - Ich möchte das nochmal ansprechen weil mir was neues aufgefallen ist.
+  - Können wir das Thema von letzter Woche nochmal aufgreifen?
+  - Ich komme immer wieder darauf zurück weil es mir wichtig ist.
+  - Lass uns das nochmal durchgehen, ich hab neue Ideen.
+  - Das Thema ist noch offen, können wir einen neuen Ansatz probieren?

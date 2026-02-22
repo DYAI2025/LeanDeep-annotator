@@ -35,7 +35,7 @@ tags:
 rating: 1
 composed_of:
 - ATO_STYLE_REFERENCE
-- ATO_CULTURAL_ELEMENT
+- ATO_CULTURE_TOKEN
 scoring:
   base: 1.4
   weight: 1.1
@@ -48,3 +48,5 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+activation:
+  rule: ANY 2 IN 3 messages

@@ -6,17 +6,28 @@ frame:
   pragmatics: "Eskalation von normaler Konversation zu symbolischer Narration"
   narrative: "Aus einem Wort wird eine Welt."
 tags: [narion, cluster, narrative]
-activation: {rule: "AT_LEAST 3 SEM_MYTHOPOESIS IN 6 messages"}
+composed_of:
+  - SEM_SELF_REFLECTION
+  - SEM_METACOGNITIVE_INSIGHT
+  - SEM_SHARED_EXPERIENCE_REFERENCE
+  - SEM_FRAME_SHIFT
+activation:
+  rule: "AT_LEAST 3 DISTINCT SEMs IN 6 messages"
 examples:
   positive:
-  - "Die Chronik der Glocken entsteht aus einer Frage über Energie."
-  - "Das Glockenmeter wird zur inneren Zeitphysik mit eigener Logik."
-  - "'Flügel' wird von Metapher zu Systembestandteil mit Regeln."
+  - "Weißt du was, das erinnert mich an damals als wir... und dann wurde mir klar dass es eigentlich um was ganz anderes ging"
+  - "Je länger ich drüber nachdenk desto mehr seh ich dass das Muster schon in meiner Kindheit angefangen hat"
+  - "Das ist wie Schichten abpellen - erst dachte ich es geht ums Geld aber eigentlich gehts um Kontrolle"
+  - "Komisch, angefangen haben wir mit dem Streit gestern und jetzt reden wir über meine Beziehung zu meinem Vater"
+  - "Mir fällt grad auf dass ich genau das gleiche mit meiner Ex auch gemacht hab"
+  - "Das Bild mit dem Eisberg passt - oben der kleine Streit, drunter die ganze Geschichte"
+  - "Wenn ich ehrlich bin geht das viel tiefer als ich zuerst dachte"
+  - "Das verändert meine ganze Sicht auf die Sache, krass"
+  - "Jetzt wo du das sagst, ich glaub es war nie wirklich wegen dem Urlaub"
+  - "Plötzlich ergibt alles Sinn, das eine hat das andere ausgelöst"
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - "Was gibts heute zum Abendessen?"
+  - "Ich hab den Bus verpasst, komme 10 Min später"
+  - "Kannst du Milch mitbringen?"
+  - "Der Film war ganz okay, nichts Besonderes"
+  - "Morgen soll es regnen laut Wetter-App"

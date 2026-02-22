@@ -25,22 +25,19 @@ score:
     ATO_AFFECT_FLAT: 0.2
     k_bucket: 0.55
   decay_minutes: 720
-ingredients:
+composed_of:
   require:
     - SEM_TASK_DOMINANCE
     - ATO_AFFECT_FLAT
-  k_of_n:
-    k: 4
-    of:
-      - ATO_ACK_MICRO
-      - ATO_BOUNDARY_STRICT
-      - ATO_TOPIC_SHIFT_TO_TASK
-      - ATO_COURTESY_FORMAL
-      - ATO_PROTOCOL_LANG
-      - ATO_HUMOR_SUPPRESS
-      - ATO_REPAIR_ABSENT
-      - ATO_SYMMETRY_COOL
-      - ATO_DELAY_BALANCED
+    - ATO_ACK_MICRO
+    - ATO_BOUNDARY_STRICT
+    - ATO_TOPIC_SHIFT_TO_TASK
+    - ATO_COURTESY_FORMAL
+    - ATO_PROTOCOL_LANG
+    - ATO_HUMOR_SUPPRESS
+    - ATO_REPAIR_ABSENT
+    - ATO_SYMMETRY_COOL
+    - ATO_DELAY_BALANCED
   negative_evidence:
     any_of: [ATO_AFFECTION_SHOW, CLU_ACTIVE_REPAIR, ATO_HUMOR_LIGHT]
 emits:

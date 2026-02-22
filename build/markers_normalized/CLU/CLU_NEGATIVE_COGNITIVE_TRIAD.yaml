@@ -32,3 +32,7 @@ tags:
 - v3.4
 - depression
 rating: 1
+composed_of:
+- ATO_DEPRESSION_NEGATIVE_EMOTIONS
+- ATO_DEPRESSION_SELF_FOCUS
+- ATO_DEPRESSION_PAST_FOCUS

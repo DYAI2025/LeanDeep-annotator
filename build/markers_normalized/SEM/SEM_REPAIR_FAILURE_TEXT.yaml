@@ -47,6 +47,8 @@ effect_on_state:
   trust: 0.35
   conflict: -0.3
   deesc: 0.4
+activation:
+  rule: "ANY 1 IN 3 messages"
 metadata:
   justification: "1 ATO plus Sequenzbedingung (fehlende Antwort)."
   repair_log:

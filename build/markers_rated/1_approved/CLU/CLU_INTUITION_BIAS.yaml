@@ -12,8 +12,13 @@ tags:
 - bias
 - hypothesis
 - learning
+composed_of:
+- SEM_CERTAINTY_CLAIMS
+- SEM_HYPERBOLE_SIGNAL
+- SEM_MINIMIZATION
+- SEM_ACCUSATION_MARKER
 activation:
-  rule: AT_LEAST 2 DISTINCT bias ATOs IN 5 messages
+  rule: AT_LEAST 2 DISTINCT SEMs IN 5 messages
 scoring:
   base: 0.5
   weight: 1.0
@@ -30,21 +35,19 @@ metadata:
     ewma_precision: INT_BIAS.ewma_precision
 examples:
   positive:
-  - Early generalization followed by certainty markers
-  - Stereotyping language with emerging rigidity
-  - Multiple weak bias signals clustering
-  - Attribution errors starting to compound
-  - Initial us-vs-them language formation
-  - Early stereotyping + 'case closed' vibe
-  - Initial 'always/never' + dismissal of nuance
-  - Subtle us–them hint + fast generalization
-  - Premature certainty + ignoring alternate causes
-  - Quick label + selective memory
+  - Die sind halt IMMER so, das war schon immer so und wird sich nie ändern
+  - Ja klar, typisch wieder, die können einfach nix anderes
+  - Ich weiß zu 100% dass der das absichtlich macht, da bin ich mir sicher
+  - Solche Leute sind einfach so, da brauchst du gar nicht diskutieren
+  - Das ist doch offensichtlich, jeder sieht das so außer du
+  - Nee sorry aber DIE machen das grundsätzlich falsch, alle ohne Ausnahme
+  - Glaub mir, ich kenn solche Typen, die ändern sich nie
+  - Das ist halt Fakt, brauch man gar nicht drüber reden
+  - Die Schuld liegt eindeutig bei denen, ganz klar, ohne Zweifel
+  - Überraschung, mal wieder das gleiche Muster, was hast du erwartet
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Hmm, das kann ich mir gut vorstellen, erzähl mal mehr
+  - Ich bin mir da noch nicht ganz sicher, lass mich drüber nachdenken
+  - Vielleicht hat das auch andere Gründe, wer weiß
+  - Stimmt, da hast du recht, guter Punkt
+  - Ich muss zugeben, so hab ich das noch nicht gesehen

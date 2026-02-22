@@ -37,6 +37,6 @@ tags:
 rating: 1
 composed_of:
   require:
-  - "CLU_LL_PROFILE@self"
-  - "CLU_LL_PROFILE@partner"
-  condition: "top(self) != top(partner)"
+  - CLU_LL_PROFILE
+  - CLU_LL_PROFILE
+  condition: top(self) != top(partner)

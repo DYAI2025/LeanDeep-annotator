@@ -15,13 +15,15 @@ gates:
 score:
   method: weighted_k_of_n
   threshold: 0.65
-ingredients:
+composed_of:
   require:
     - ATO_AFFECTION_SHOW
     - ATO_HUMOR_LIGHT
-  k_of_n: {k: 2, of: [ATO_ROMANTIC_SIGNAL_DIRECT, ATO_LL_PHYSICAL_TOUCH, ATO_LL_QUALITY_TIME]}
-negative_evidence:
-  any_of: [ATO_BOUNDARY_STRICT, ATO_AFFECT_FLAT]
+    - ATO_ROMANTIC_SIGNAL_DIRECT
+    - ATO_LL_PHYSICAL_TOUCH
+    - ATO_LL_QUALITY_TIME
+  negative_evidence:
+    any_of: [ATO_BOUNDARY_STRICT, ATO_AFFECT_FLAT]
 emits:
   indices:
     intimacy: +0.3

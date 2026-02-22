@@ -5,6 +5,10 @@ frame:
   concept: "Autonomes Innenfeld mit Zukunfts- und Tagesstruktur"
   pragmatics: "Gleichgewicht aus Selbststeuerung und faktischer Abstimmung"
   narrative: "Selbstorganisation + gemeinsame Umsetzung"
+composed_of:
+- SEM_SELF_REGULATION
+- SEM_STRATEGIC_PLANNING
+- SEM_SELF_DISCLOSURE
 pattern:
 - "priorisiere ich"
 - "in (\\d+|sechs|drei|zwei) (monaten|wochen)"

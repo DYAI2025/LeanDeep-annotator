@@ -2,7 +2,7 @@ id: CLU_SELF_CONTRADICTION
 schema: LeanDeep
 version: '5.1'
 layer: CLU
-lang: en
+lang: de
 description: ''
 frame:
   signal:
@@ -13,26 +13,30 @@ frame:
 patterns: []
 examples:
   positive:
-  - kurze Sequenz A … kurze Sequenz B
-  - Beispiel mit zwei Signalen in einem Satz
-  - Signal 1 … später Signal 2 im Kontext
-  - Kombination aus Token X und Y
-  - Variante mit ähnlicher Semantik
+  - Ich hab das nie gesagt! ... Ja ok hab ich gesagt aber so meinte ich das nicht
+  - Das war mir total egal ... Also eigentlich hat es mich schon verletzt
+  - Ich will auf keinen Fall dahin ... Ok vielleicht geh ich doch hin
+  - Ich vertraue dir zu 100% ... Deshalb guck ich auch dein Handy
+  - Mir ist das nicht wichtig ... Warum machst du das dann immer?!
+  - Ich bin glücklich so wie es ist ... Aber ändern muss sich trotzdem was
+  - Ich hab kein Problem damit ... Aber es nervt mich halt schon
+  - Geld ist mir egal ... Warum gibst du soviel aus?!
+  - Ich brauch dich nicht ... Aber warum meldest du dich nicht?
+  - Das stört mich nicht ... Ok es stört mich doch, zufrieden?
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich hab meine Meinung dazu geändert, das stimmt.
+  - Zuerst war ich dagegen, aber dein Argument überzeugt mich.
+  - Ich sehe das jetzt anders als letzte Woche.
+  - Meine Gefühle dazu sind gemischt, aber das ist ok.
+  - Ich bin mir noch unsicher, muss nochmal drüber nachdenken.
 tags: []
 rating: 1
 composed_of:
-- SEM_UNCERTAINTY_TONING
-- SEM_ANGER_ESCALATION
+- SEM_CONTRADICTION
+- SEM_AMBIVALENCE
+- SEM_CERTAINTY_CLAIMS
 activation:
-  rule: "AT_LEAST 3 IN 6 messages"
+  rule: AT_LEAST 2 DISTINCT SEMs IN 6 messages
 scoring:
   base: 1.0
   weight: 1.1

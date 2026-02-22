@@ -8,6 +8,10 @@ frame:
   pragmatics: "Vermeidung, Stabilisierung, Beruhigung"
   narrative: "motive_safety"
 tags: [safety, reassurance, stability]
+composed_of:
+- SEM_SAFETY_ORIENTATION
+- SEM_STABILITY_PRESERVATION
+- SEM_REASSURANCE_DRIVE
 requires:
   sem_pool:
   - SEM_SAFETY_ORIENTATION
@@ -34,16 +38,19 @@ evidence_capture:
   keep_snippets: 5
 examples:
   positive:
-  - "Bloß nichts ändern – Bist du sicher? – Thema stabil halten."
-  - "Risiken vermeiden – im gewohnten Rahmen bleiben – kurzer Reassurance‑Ping."
-  - "Ruhiges Leben – Status quo – passt das so?"
-  - "Kein Experiment – Thread geschlossen – Sicherheit prüfen."
-  - "Planbar und ruhig – bitte nichts aufmachen – alles gut?"
+  - "Bitte lass uns nichts aendern, es laeuft doch"
+  - "Ich brauch einfach die Sicherheit dass alles beim Alten bleibt"
+  - "Meinst du das ist sicher? Ich mach mir Sorgen"
+  - "Lass uns lieber auf Nummer sicher gehen"
+  - "Ich will kein Risiko eingehen, bitte"
+  - "Hauptsache es bleibt stabil, ich brauch das"
+  - "Versprich mir dass sich nichts aendert"
+  - "Mir waer lieber wir bleiben bei dem was wir kennen"
+  - "Bist du dir sicher dass das klappt? Ich hab Angst"
+  - "Ich brauch grad einfach Ruhe und Bestaendigkeit"
   negative:
-  - wenige Experiment – Thread geschlossen – Sicherheit prüfen.
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
+  - "Lass uns was Neues ausprobieren"
+  - "Ich bin total bereit fuer Veraenderung"
+  - "Risiko gehoert dazu, kein Problem"
+  - "Wann faengt das Spiel an?"
+  - "Kannst du den Muell rausbringen?"

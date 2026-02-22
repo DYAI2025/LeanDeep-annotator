@@ -57,7 +57,7 @@ yaml_writer.default_flow_style = False
 yaml_writer.width = 200
 yaml_writer.allow_unicode = True
 
-REPO = Path("/Users/benjaminpoersch/Projects/Marker- entbiazed/WTME_ALL_Marker-LD3.4.1-5.1")
+REPO = Path(__file__).resolve().parent.parent
 INPUT_DIR = REPO / "build" / "markers_rated"
 OUTPUT_DIR = REPO / "build" / "markers_normalized"
 REGISTRY_PATH = OUTPUT_DIR / "marker_registry.json"
@@ -223,11 +223,11 @@ def normalize_tags(data):
 
 def normalize_composed_of(data):
     """Extract composition info."""
-    comp = data.get("composed_of") or data.get("ingredients")
+    comp = data.get("composed_of") or data.get("ingredients") or data.get("components")
     if isinstance(comp, list):
         return [str(c) for c in comp]
     if isinstance(comp, dict):
-        # ingredients: {require: [...], k_of_n: {...}}
+        # ingredients: {require: [...], ...}
         return comp
     return None
 
@@ -335,6 +335,18 @@ def main():
                         if not markers_to_process:
                             stats["errors"] += 1
                             print(f"SKIP (list without ids): {yaml_file.name}", file=sys.stderr)
+                            continue
+                    elif isinstance(data, dict) and "markers" in data and isinstance(data["markers"], list):
+                        # Nested format: {defaults: ..., markers: [{id: ...}, ...]}
+                        defaults = {k: v for k, v in data.items() if k != "markers"}
+                        for item in data["markers"]:
+                            if isinstance(item, dict) and item.get("id"):
+                                # Merge defaults into marker data (marker values take precedence)
+                                merged = {**defaults, **item}
+                                markers_to_process.append(merged)
+                        if not markers_to_process:
+                            stats["errors"] += 1
+                            print(f"SKIP (markers list without ids): {yaml_file.name}", file=sys.stderr)
                             continue
                     else:
                         markers_to_process = [data]

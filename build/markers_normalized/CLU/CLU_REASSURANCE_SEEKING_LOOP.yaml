@@ -48,6 +48,10 @@ tags:
 - early_stage
 - attachment
 rating: 1
+composed_of:
+- SEM_REASSURANCE_DRIVE
+- SEM_AMBIVALENCE
+- SEM_STABILITY_PRESERVATION
 activation:
   rule: "ANY 2 IN 20 messages"
 scoring:

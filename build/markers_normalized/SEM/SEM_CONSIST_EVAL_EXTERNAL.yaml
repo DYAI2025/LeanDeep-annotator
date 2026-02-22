@@ -2,26 +2,34 @@ id: SEM_CONSIST_EVAL_EXTERNAL
 schema: LeanDeep
 version: '5.1'
 layer: SEM
-lang: en
+lang: de
 description: ''
 frame:
-  signal: []
-  concept: ''
-  pragmatics: ''
-  narrative: ''
-patterns: []
+  signal:
+  - das passt nicht zusammen (fremd)
+  concept: Kohärenzprüfung über mehrere Aussagen derselben fremden Person
+  pragmatics: Narrativ-Kontrolle, Widerspruchsdetektion
+  narrative: Vergleicht frühere & aktuelle Propositionen
+patterns:
+- detect_class: semantic
+  rule: "negative_entailment(prev_statement_of_other, current_statement)"
+  distance_window_messages: 4
+  requires_role_consistency: true
 examples:
-  positive: []
-  negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  positive:
+  - '"Nie dort gewesen" ↔ "Gestern kurz dort gewesen".'
+  - '"Immer pünktlich" ↔ "Letzte Woche zu spät".'
+  - '"Ich habe nie bezahlt" ↔ "Wir mussten zahlen".'
+  - '"Es waren fünf" ↔ "Es waren zwölf".'
+  - '"War nie Thema" ↔ "Vorhin war es Thema".'
+  negative: []
 tags: []
 rating: 2
+composed_of:
+- ATO_CROSS_REF_OTHER
+- ATO_CONTRADICTION_LEX
+scoring:
+  base: 0.65
 compositionality: deterministic
 vad_estimate:
   valence: 0.0
@@ -31,3 +39,7 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+metadata:
+  type: SEM
+  direction: outward
+  context_focus: speaker_other

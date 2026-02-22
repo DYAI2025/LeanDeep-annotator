@@ -630,18 +630,25 @@ class MarkerEngine:
         self,
         sem_detections_per_message: list[list[Detection]],
         threshold: float = 0.5,
+        ato_detections_per_message: list[list[Detection]] | None = None,
     ) -> list[Detection]:
         """
         Detect cluster markers over a conversation window.
 
         CLU requires multiple SEMs across messages. Uses family multipliers
         and the hypothesis lifecycle (provisional → confirmed → decayed).
+        Also accepts ATO detections for CLUs that reference ATOs directly.
         """
-        # Flatten all active SEMs with their message indices
+        # Flatten all active markers (SEMs + optionally ATOs) with message indices
         all_sems: dict[str, list[int]] = {}
         for msg_idx, dets in enumerate(sem_detections_per_message):
             for d in dets:
                 all_sems.setdefault(d.marker_id, []).append(msg_idx)
+
+        if ato_detections_per_message:
+            for msg_idx, dets in enumerate(ato_detections_per_message):
+                for d in dets:
+                    all_sems.setdefault(d.marker_id, []).append(msg_idx)
 
         active_sem_ids = set(all_sems.keys())
         detections = []
@@ -662,16 +669,35 @@ class MarkerEngine:
                             if c == sid or all(p.upper() in sid.upper() for p in c.split("_")[1:]):
                                 msg_indices.update(all_sems.get(sid, []))
             elif isinstance(composed, dict):
-                require = composed.get("require", composed.get("sem_pool", []))
-                if isinstance(require, list):
-                    for c in require:
+                # Structured activation: require + k_of_n + negative_evidence
+                require_refs = composed.get("require", composed.get("sem_pool", []))
+                neg_evidence = composed.get("negative_evidence", {})
+                neg_refs = neg_evidence.get("any_of", []) if isinstance(neg_evidence, dict) else []
+
+                # Collect require hits (ANY match counts — not ALL required)
+                require_hits = []
+                if isinstance(require_refs, list):
+                    for c in require_refs:
                         if not isinstance(c, str):
                             continue
                         if self._resolve_ref(c, active_sem_ids):
-                            hits.append(c)
-                            for sid in active_sem_ids:
-                                if c == sid or all(p.upper() in sid.upper() for p in c.split("_")[1:]):
-                                    msg_indices.update(all_sems.get(sid, []))
+                            require_hits.append(c)
+
+                # Negative evidence: if any match, block this CLU
+                neg_ok = True
+                if isinstance(neg_refs, list):
+                    for c in neg_refs:
+                        if isinstance(c, str) and self._resolve_ref(c, active_sem_ids):
+                            neg_ok = False
+                            break
+
+                if require_hits and neg_ok:
+                    hits = require_hits
+                    # Collect message indices for all matched refs
+                    for h in hits:
+                        for sid in active_sem_ids:
+                            if h == sid or all(p.upper() in sid.upper() for p in h.split("_")[1:]):
+                                msg_indices.update(all_sems.get(sid, []))
 
             if not hits:
                 continue
@@ -702,9 +728,13 @@ class MarkerEngine:
             distinct_hits = len(set(hits_in_window))
 
             # Calculate confidence: 1 hit = low, 2+ = higher
-            composed_total = len(composed) if isinstance(composed, list) else len(
-                composed.get("require", composed.get("sem_pool", []))
-            )
+            if isinstance(composed, list):
+                composed_total = len(composed)
+            elif isinstance(composed, dict):
+                req = composed.get("require", composed.get("sem_pool", []))
+                composed_total = len(req) if isinstance(req, list) else 1
+            else:
+                composed_total = 1
             hit_ratio = distinct_hits / max(composed_total, 1)
 
             if distinct_hits >= 2:
@@ -1008,7 +1038,7 @@ class MarkerEngine:
         # Level 3: CLU (over conversation window)
         clu_dets = []
         if "CLU" in layers or "MEMA" in layers:
-            clu_dets = self.detect_clu(all_sem_dets, threshold)
+            clu_dets = self.detect_clu(all_sem_dets, threshold, ato_detections_per_message=all_ato_dets)
             if "CLU" in layers:
                 all_detections.extend(clu_dets)
 

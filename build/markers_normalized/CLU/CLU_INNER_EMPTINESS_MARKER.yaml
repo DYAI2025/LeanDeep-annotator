@@ -16,29 +16,32 @@ frame:
 patterns: []
 examples:
   positive:
-  - Ist mir egal.
-  - Hab gar keinen Antrieb, tut mir leid.
-  - Kochen? Ach, ist mir schnuppe.
-  - Mir ist das gerade echt egal.
-  - Keine Lust auf gar nichts.
-  - Alles ist mir zu viel und gleichzeitig egal.
+  - Ist mir egal
+  - Hab gar keinen Antrieb, tut mir leid
+  - Kochen? Ach, ist mir schnuppe
+  - Mir ist das gerade echt alles egal
+  - Keine Lust auf gar nichts
+  - Alles ist mir zu viel und gleichzeitig egal
+  - Ich fuehle einfach nichts mehr
+  - Was soll's, ist doch eh alles das Gleiche
+  - Mach du, mir ist alles wurscht
+  - Ich bin so leer gerade, ich weiss nicht
   negative:
-  - Hab gar wenige Antrieb, tut mir leid.
-  - wenige Lust auf gar nichts.
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
+  - Ich freu mich voll auf heute Abend
+  - Das regt mich echt auf, so eine Frechheit
+  - Ich bin so gluecklich gerade
+  - Boah das macht mich richtig wuetend
+  - Ich kann's kaum erwarten dich zu sehen
 tags:
 - emotional_state
 - apathy
 rating: 1
 composed_of:
-- SEM_APATHY_EXPRESSION
-- SEM_ENERGY_DEFICIT
+- SEM_APATHETIC_REPLY
+- SEM_AFFECT_ISOLATION_TEXT
+- SEM_EMOTIONAL_OVERWHELM
 activation:
-  rule: AT_LEAST 2 IN 5 messages
+  rule: AT_LEAST 2 DISTINCT SEMs IN 5 messages
 scoring:
   base: 1.5
   weight: 1.2

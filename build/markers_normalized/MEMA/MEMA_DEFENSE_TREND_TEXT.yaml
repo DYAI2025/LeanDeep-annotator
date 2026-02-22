@@ -43,6 +43,8 @@ scoring:
   formula: "logistic"
 window:
   messages: 30
+activation:
+  rule: "COUNT(CLU_DEFENSE_ACTIVE in 50 msgs) >= 3 OR EWMA(alpha=0.2) >= 0.6"
 metadata:
   repair_log:
   - rule: "R00"

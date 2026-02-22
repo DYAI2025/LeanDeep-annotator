@@ -5,23 +5,31 @@ layer: SEM
 lang: en
 description: ''
 frame:
-  signal: []
-  concept: ''
+  signal:
+  - immer/nie ↔ konkrete Gegenbeispiele
+  - Zeitlinien-Knick
+  concept: Zeitliche Inkonsistenz bei derselben Person
   pragmatics: ''
   narrative: ''
-patterns: []
+patterns:
+- detect_class: heuristic
+  rule: "absolutizer_present && conflicting_time_refs_within_window(other)"
+  distance_window_messages: 5
 examples:
-  positive: []
-  negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  positive:
+  - '"Nie dort" ↔ "Gestern dort".'
+  - '"Immer derselbe" ↔ "Inzwischen anders".'
+  - '"Ständig X" ↔ "Heute Y".'
+  - "\"Jedes Mal klappt's\" ↔ \"Letzte Woche nicht\"."
+  - '"Nie gezahlt" ↔ "Vorhin gezahlt".'
+  negative: []
 tags: []
 rating: 2
+composed_of:
+- ATO_TEMPORAL_ABSOLUTIZER
+- ATO_TEMPORAL_POINT
+scoring:
+  base: 0.60
 compositionality: deterministic
 vad_estimate:
   valence: -0.5
@@ -31,3 +39,5 @@ effect_on_state:
   trust: -0.3
   conflict: 0.4
   deesc: -0.2
+metadata:
+  type: SEM

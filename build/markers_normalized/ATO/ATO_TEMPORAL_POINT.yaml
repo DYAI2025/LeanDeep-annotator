@@ -2,24 +2,36 @@ id: ATO_TEMPORAL_POINT
 schema: LeanDeep
 version: '5.1'
 layer: ATO
-lang: en
+lang: de
 description: ''
 frame:
-  signal: []
-  concept: ''
+  signal:
+  - gestern
+  - heute
+  - letzte Woche
+  - vorhin
+  - später
+  - inzwischen
+  concept: Zeitbezugspunkt
   pragmatics: ''
   narrative: ''
-patterns: []
+patterns:
+- detect_class: phrase
+  list:
+  - "gestern"
+  - "heute"
+  - "letzte Woche"
+  - "vorhin"
+  - "später"
+  - "inzwischen"
 examples:
-  positive: []
-  negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  positive:
+  - Gestern war ich kurz dort.
+  - Heute sehe ich das anders.
+  - Letzte Woche sagtest du X.
+  - Vorhin meintest du Y.
+  - Inzwischen ist es anders.
+  negative: []
 tags: []
 rating: 2
 vad_estimate:
@@ -30,3 +42,5 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+metadata:
+  type: ATO

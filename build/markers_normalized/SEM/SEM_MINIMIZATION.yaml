@@ -55,3 +55,5 @@ effect_on_state:
   trust: -0.3
   conflict: 0.4
   deesc: -0.2
+activation:
+  rule: "ANY 2 IN 4 messages"

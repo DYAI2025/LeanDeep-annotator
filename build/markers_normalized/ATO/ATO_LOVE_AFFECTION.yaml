@@ -107,6 +107,8 @@ effect_on_state:
   trust: 0.35
   conflict: -0.2
   deesc: 0.25
+activation:
+  rule: "ANY 1"
 metadata:
   created: "2026-02-12"
   author: "DYAI Emotional Semantics Collection"

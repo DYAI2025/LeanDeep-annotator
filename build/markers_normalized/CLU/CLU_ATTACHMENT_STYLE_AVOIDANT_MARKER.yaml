@@ -2,7 +2,7 @@ id: CLU_ATTACHMENT_STYLE_AVOIDANT_MARKER
 schema: LeanDeep
 version: '5.1'
 layer: CLU
-lang: en
+lang: de
 description: ''
 frame:
   signal:
@@ -15,27 +15,32 @@ frame:
 patterns: []
 examples:
   positive:
-  - Elterliche Abwesenheit wird nüchtern, ohne Emotion, erwähnt.
-  - Lob wird als unwichtig oder peinlich dargestellt.
-  - Bindungen zu Freunden wichtiger als zu Familie.
-  - Konflikte werden durch Rückzug gelöst, nicht durch Dialog.
-  - Erfolg wird auf eigene Leistung, nie auf Unterstützung zurückgeführt.
-  - Eltern werden sachlich, aber distanziert beschrieben.
+  - Ich brauch jetzt einfach Abstand
+  - Lass mich bitte in Ruhe, ich meld mich
+  - Ich kann grad nicht ueber Gefuehle reden
+  - War halt so, ist jetzt auch egal
+  - Ich komm allein klar, brauch keine Hilfe
+  - Das Thema ist mir zu nah, lass gut sein
+  - Muss nicht immer alles besprochen werden
+  - Ich zieh mich jetzt zurueck, brauch Zeit fuer mich
+  - Mir faellt das schwer, ich hab das nie gelernt
+  - Nee, ich will da nicht drueber reden
   negative:
-  - Erfolg wird auf eigene Leistung, selten auf Unterstützung zurückgeführt.
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
+  - Komm her, ich brauch dich grad
+  - Ich vermiss dich total
+  - Lass uns drueber reden, ich oeffne mich
+  - Ich fuehle mich dir so nah gerade
+  - Danke dass du fuer mich da bist, das bedeutet mir alles
 tags:
 - attachment
 rating: 1
 composed_of:
-- SEM_GENERIC_PATTERN
+- SEM_STONEWALLING_BEHAVIOR
+- SEM_CONFLICT_AVOIDANCE
+- SEM_AVOIDANCE_LOOP
+- SEM_AFFECT_ISOLATION_TEXT
 activation:
-  rule: AT_LEAST 2 IN 5 messages
+  rule: AT_LEAST 2 DISTINCT SEMs IN 5 messages
 scoring:
   base: 1.5
   weight: 1.2

@@ -2,7 +2,7 @@ id: CLU_INTUITION_DIGNITY
 schema: LeanDeep
 version: '5.1'
 layer: CLU
-lang: en
+lang: de
 description: ''
 frame:
   signal:
@@ -14,24 +14,22 @@ frame:
 patterns: []
 examples:
   positive:
-  - … Abwertung + 'unter deiner Würde' …
-  - … 'respektlos' + Appell …
-  - … Spott + Statusangriff …
-  - … 'erniedrigt' + Kontext Schikane …
-  - … 'minderwertig' angedeutet …
-  - … 'so redet man nicht mit Leuten' …
-  - … 'würd ich keinem wünschen' + Empathierahmen …
-  - … 'Grenze überschritten' + Würdebezug …
-  - … Dehumanisierung + Gegenrede …
-  - … 'Fairness' + 'auf Augenhöhe' einfordern …
+  - Du bist echt zu dumm dafür, das kapierst du eh nie
+  - Kein Wunder dass niemand mit dir zusammenarbeiten will
+  - So wie du dich benimmst, hat man keinen Respekt vor dir
+  - Du bist halt einfach nicht auf dem Level, sorry
+  - Sei froh dass ich mir überhaupt die Zeit nehme dir das zu erklären
+  - Leute wie du sollten sich mal lieber zurückhalten
+  - Das ist ja schon fast peinlich wie wenig du davon verstehst
+  - Du bist echt unter aller Würde, schäm dich mal
+  - Mensch, das würde ja nicht mal ein Kind so machen
+  - Jemand wie du hat da eigentlich nichts verloren
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich seh das anders als du, aber ich respektiere deine Meinung
+  - Das war nicht so gemeint, tut mir leid
+  - Lass uns auf Augenhöhe drüber reden
+  - Ich schätze deinen Einsatz sehr
+  - Danke dass du dir die Zeit genommen hast
 tags:
 - intuition
 - dignity
@@ -39,22 +37,23 @@ tags:
 - learning
 rating: 1
 composed_of:
-- SEM_DEMEANING_LANGUAGE
-- SEM_RESPECT_APPEAL
-- SEM_STATUS_THREAT
+- SEM_MICRO_AGGRESSION_LIGHT
+- SEM_SHAME_TEXT
+- SEM_GASLIGHTING_ATTEMPT
+- SEM_BOUNDARY_VIOLATION
 activation:
-  rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
+  rule: AT_LEAST 2 DISTINCT SEMs IN 5 messages
 scoring:
   base: 0.5
   weight: 1.0
 metadata:
   intuition:
-    state: "provisional"
+    state: provisional
     confirm_window: 5
-    confirm_rule: "AT_LEAST 1 of [SEM_DEMEANING_LANGUAGE, SEM_STATUS_THREAT] IN confirm_window"
+    confirm_rule: AT_LEAST 1 of [SEM_DEMEANING_LANGUAGE, SEM_STATUS_THREAT] IN confirm_window
     multiplier_on_confirm: 1.7
     decay_window: 7
   telemetry_keys:
-    counter_confirmed: "INT_DIGNITY.confirmed"
-    counter_retracted: "INT_DIGNITY.retracted"
-    ewma_precision: "INT_DIGNITY.ewma_precision"
+    counter_confirmed: INT_DIGNITY.confirmed
+    counter_retracted: INT_DIGNITY.retracted
+    ewma_precision: INT_DIGNITY.ewma_precision

@@ -38,6 +38,10 @@ tags:
 - victimization
 - preemptive
 rating: 1
+composed_of:
+- SEM_SELF_VICTIMIZATION
+- SEM_FACE_SAVING
+- SEM_CONFLICT_AVOIDANCE
 activation:
   rule: "ANY 1 IN 10 messages"
   window: 10

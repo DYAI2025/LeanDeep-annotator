@@ -30,9 +30,8 @@ tags: []
 rating: 1
 composed_of:
 - SEM_SD_ORANGE_ACHIEVE
-- SEM_UNCERTAINTY_TONING
 activation:
-  rule: "AT_LEAST 2 DISTINCT SEMs IN 4 messages"
+  rule: AT_LEAST 2 DISTINCT SEMs IN 4 messages
 scoring:
   base: 1.0
   weight: 1.1

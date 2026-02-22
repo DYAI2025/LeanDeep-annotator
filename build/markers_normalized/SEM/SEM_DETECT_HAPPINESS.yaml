@@ -39,10 +39,10 @@ composed_of:
   any_of:
   - ATO_JOY
   - ATO_POSITIVE_RESONANCE
-  - ATO_SUPPORTIVE_LANGUAGE
+  - ATO_SUPPORT_PHRASE
   - ATO_GRATITUDE
 activation:
-  rule: "AT_LEAST 14 IN 10 messages"
+  rule: AT_LEAST 14 IN 10 messages
   window: 10
 scoring:
   base: 0.6

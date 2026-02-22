@@ -66,3 +66,5 @@ scoring:
   decay: 0.01
 window:
   messages: 20
+activation:
+  rule: "AT_LEAST 2 IN 20 messages"

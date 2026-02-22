@@ -39,20 +39,10 @@ composed_of:
   require:
   - CLU_RUMINATION_LOOP
   - ATO_RESIGNATION_PHRASE
-  k_of_n:
-    k: 2
-    of: []
 window:
   size_messages: 6
 gates:
   min_msgs: 2
-ingredients:
-  require:
-  - CLU_RUMINATION_LOOP
-  - ATO_RESIGNATION_PHRASE
-  k_of_n:
-    k: 2
-    of: []
 emits:
   indices:
     stagnation: +0.2

@@ -38,6 +38,4 @@ tags:
 rating: 1
 composed_of:
 - SEM_WEBCAM_EXCUSE
-- SEM_CONTROL_ESCALATION
-- CLU_BOUNDARY_VIOLATION_PATTERNS
-criteria: "Strategic pattern of controlling digital engagement through technical excuses and presence manipulation"
+criteria: Strategic pattern of controlling digital engagement through technical excuses and presence manipulation

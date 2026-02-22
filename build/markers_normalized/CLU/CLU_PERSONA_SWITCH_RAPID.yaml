@@ -2,7 +2,7 @@ id: CLU_PERSONA_SWITCH_RAPID
 schema: LeanDeep
 version: '5.1'
 layer: CLU
-lang: en
+lang: de
 description: ''
 frame:
   signal:
@@ -13,23 +13,31 @@ frame:
 patterns: []
 examples:
   positive:
-  - Von Rot zu Grün zu Orange in kurzer Zeit
-  - instabile Persönlichkeitsebenen
-  - chaotische Spiral-Dynamik
-  - fragmentierte Identität
-  - unkoordinierte Ebenen-Sprünge
+  - ICH WILL DAS JETZT... ok sorry, ich mein, lass uns das fair lösen... nee eigentlich muss ich gewinnen
+  - Mir doch egal was du denkst! ...also eigentlich liegt mir schon was an dir... naja Performance stimmt halt nicht
+  - Regeln sind wichtig! Nee wart mal, fühl mal rein... ach Quatsch, Zahlen auf den Tisch
+  - Ich hau ab! ...sorry, ich fühl mit dir... aber ich brauch den Deal
+  - Das muss man doch fühlen können! ...ok nein, gibt es da Daten dafür? ...egal ich machs einfach
+  - Erst war ich mega wütend, dann hatte ich total Mitleid und jetzt will ich einfach nur den Plan durchziehen
+  - Ich muss mich durchsetzen... nein warte, Empathie ist wichtiger... ach ne, Ordnung muss sein
+  - Mir ist grad alles egal, ne Sekunde, eigentlich sollten wir reden, ach komm ich mach meinen Plan
+  - Halt die Klappe! ...oh Gott sorry, ich fühls auch... naja whatever, ich brauch Ergebnisse
+  - Ich springe grad zwischen wütend und mitfühlend und strategisch hin und her, sorry
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich bin die ganze Zeit ruhig und sachlich geblieben
+  - Mein Standpunkt ist klar und ich bleib dabei
+  - Ich fühle mich stabil und ausgeglichen heute
+  - Wir sind uns einig und ziehen das gemeinsam durch
+  - Ich weiß was ich will und wie ich dahin komme
 tags: []
 rating: 2
+composed_of:
+- SEM_SD_RED_ASSERT
+- SEM_SD_GREEN_EMPATHY
+- SEM_SD_ORANGE_ACHIEVE
+- SEM_SD_BLUE_ORDER
 activation:
-  rule: "AT_LEAST 3 different CLU_SPIRAL_PERSONA_* IN 10 messages"
+  rule: AT_LEAST 3 DISTINCT SEMs IN 10 messages
   window_size: 10
   threshold: 3
 scoring:

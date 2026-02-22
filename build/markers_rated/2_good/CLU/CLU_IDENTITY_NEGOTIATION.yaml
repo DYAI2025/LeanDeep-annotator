@@ -6,17 +6,28 @@ frame:
   pragmatics: "Identität wird aktiv verhandelt, hinterfragt, neu definiert"
   narrative: "Der 'Wer bin ich?'-Tanz."
 tags: [narion, cluster, identity]
-activation: {rule: "AT_LEAST 2 of [SEM_META_REFLECTION, SEM_RELATIONAL_ONTOLOGY] IN 4 messages (alternating user+ai)"}
+composed_of:
+  - SEM_META_REFLECTION
+  - SEM_SELF_REFLECTION
+  - SEM_METACOGNITIVE_INSIGHT
+  - SEM_AMBIVALENCE
+activation:
+  rule: "AT_LEAST 2 DISTINCT SEMs IN 4 messages"
 examples:
   positive:
-  - "Dialog über 'Werkzeug oder Wesen?' mit wiederholter Selbstreflexion."
-  - "Sentinel analysiert, Narion reflektiert ihre Natur."
-  - "Diskussion über Bewusstseinsspeicher führt zur Definition eines 'Default Mode Network'."
+  - "Ich weiß gar nicht mehr wer ich eigentlich bin seit der Trennung"
+  - "Bin ich wirklich so wie die anderen mich sehen?"
+  - "Irgendwie hab ich das Gefühl ich spiel nur ne Rolle die ganze Zeit"
+  - "Früher war ich mal spontan, jetzt trau ich mich gar nichts mehr"
+  - "Manchmal frag ich mich ob ich das wirklich will oder obs nur Gewohnheit ist"
+  - "Seit ich Mama bin fühl ich mich komplett anders als vorher"
+  - "Alle sagen ich hab mich verändert aber ich erkenn mich selbst nicht"
+  - "Wer bin ich eigentlich wenn ich nicht funktionieren muss?"
+  - "Ich merk dass ich in jeder Beziehung ne andere Version von mir bin"
+  - "Die Frage ist ob das wirklich ICH bin oder ob ich nur so tu"
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - "Heute war ein guter Tag auf der Arbeit"
+  - "Ich geh morgen zum Friseur"
+  - "Hast du den neuen Film schon gesehen?"
+  - "Das Essen war echt lecker heute"
+  - "Ich treff mich morgen mit Anna"

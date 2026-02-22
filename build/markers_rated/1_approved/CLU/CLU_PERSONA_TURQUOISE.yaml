@@ -11,8 +11,13 @@ tags:
 - persona
 - TURQUOISE
 - screening
+composed_of:
+  - SEM_TUERKIS_COSMIC_FLOW
+  - SEM_SD_TURQUOISE_HOLISM
+  - SEM_GELB_SYSTEMIC_INTEGRATION
+  - SEM_META_REFLECTION
 activation:
-  rule: AT_LEAST 2 IN 6 messages
+  rule: AT_LEAST 2 DISTINCT SEMs IN 6 messages
 scoring:
   base: 1.0
   weight: 1.0
@@ -21,16 +26,19 @@ metadata:
     evidence_policy: family-scoped
 examples:
   positive:
-  - <ganzheitlich>
-  - <lange Zeitskala>
-  - <Ökologie>
-  - <Interbeing>
-  - <Planetar>
+  - "Alles ist miteinander verbunden, wir sind Teil eines größeren Ganzen"
+  - "Wenn wir planetar denken, lösen sich die Ego-Konflikte von selbst"
+  - "Ich spüre da eine kollektive Resonanz, das geht über uns beide hinaus"
+  - "Die Ökosysteme zeigen uns wie Zusammenleben wirklich funktioniert"
+  - "Interbeing heißt für mich dass mein Wohlsein von deinem abhängt"
+  - "Wir müssen in Generationen denken, nicht in Quartalen"
+  - "Das Ganze ist mehr als die Summe seiner Teile, das spür ich grad"
+  - "Mir geht es nicht um mich oder dich, sondern um das größere Feld"
+  - "Bewusstsein entfaltet sich in Spiralen, wir sind nur ein Ausdruck davon"
+  - "Die Lösung liegt nicht im Verstand sondern im Sein selbst"
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - "Ich will einfach nur meine Ruhe haben"
+  - "Das müssen wir strategisch angehen, Zahlen auf den Tisch"
+  - "Regeln sind Regeln, da gibts nix zu diskutieren"
+  - "Mir egal was die anderen sagen, ich mach mein Ding"
+  - "Hauptsache mir gehts gut, der Rest ist mir egal"

@@ -2,7 +2,7 @@ id: CLU_PERSONA_ORANGE
 schema: LeanDeep
 version: '5.1'
 layer: CLU
-lang: en
+lang: de
 description: ''
 frame:
   signal:
@@ -14,33 +14,37 @@ frame:
 patterns: []
 examples:
   positive:
-  - <KPI>
-  - <Top-Quartil>
-  - <besser als>
-  - <Wachstum %>
-  - <Benchmark>
+  - Wir müssen die KPIs diesen Monat noch knacken, sonst wars das mit dem Bonus
+  - Ich hab gestern drei Deals abgeschlossen, läuft bei mir
+  - Der ROI stimmt einfach nicht, das Projekt muss optimiert werden
+  - Ich will in den nächsten zwei Jahren Teamlead werden, hab schon nen Plan
+  - Wenn die anderen nicht mitziehen, mach ichs halt allein besser
+  - Die Zahlen sprechen für sich, ich hab die beste Quote im Team
+  - Effizienz ist alles, Zeit ist Geld
+  - Ich hab mich gegen 50 Bewerber durchgesetzt, das zeigt doch was
+  - Wir brauchen ne klare Strategie, kein Rumgeeier
+  - Performance-Review war top, jetzt will ich die nächste Stufe
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich finde wir sollten auf alle Rücksicht nehmen
+  - Mir ist wichtig dass es allen gut geht im Team
+  - Das Universum wird schon dafür sorgen
+  - Lass uns das gemeinsam entscheiden, jede Stimme zählt
+  - Ich brauch erstmal Ruhe, mir ist das alles zu viel
 tags:
 - persona
 - ORANGE
 - screening
 rating: 1
 composed_of:
-- SEM_COMPETITIVE_DRIVE
-- SEM_KPI_FOCUS
-- SEM_COMPARATIVE_CLAIM
+- SEM_ORANGE_STRATEGIC_FLOW
+- SEM_SD_ORANGE_ACHIEVE
+- SEM_EXCELLENCE_DRIVE
+- SEM_INFLUENCE_ORIENTATION
 activation:
-  rule: "AT_LEAST 2 IN 6 messages"
+  rule: AT_LEAST 2 DISTINCT SEMs IN 6 messages
 scoring:
   base: 1.0
   weight: 1.0
 metadata:
   persona:
-    evidence_policy: "family-scoped"
+    evidence_policy: family-scoped

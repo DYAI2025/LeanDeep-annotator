@@ -33,14 +33,13 @@ tags:
 - screening
 rating: 1
 composed_of:
-- SEM_NORM_COMPLIANCE
 - SEM_AUTHORITY_REFERENCE
 - SEM_DEONTIC_LANGUAGE
 activation:
-  rule: "AT_LEAST 2 IN 6 messages"
+  rule: AT_LEAST 2 IN 6 messages
 scoring:
   base: 1.0
   weight: 1.0
 metadata:
   persona:
-    evidence_policy: "family-scoped"
+    evidence_policy: family-scoped

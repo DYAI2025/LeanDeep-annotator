@@ -15,6 +15,11 @@ tags:
 - hedging
 - learning
 criteria: ''
+composed_of:
+- SEM_AMBIVALENCE
+- SEM_CONFLICT_AVOIDANCE
+- SEM_MINIMIZATION
+- SEM_FACE_SAVING
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 5 messages
 scoring:
@@ -34,12 +39,19 @@ metadata:
     ewma_precision: INT_UNCERT.ewma_precision
 examples:
   positive:
-  - Hedging- und Vermutungs‑Formulierungen häufen sich leicht
+  - "Weiss nicht ob das so stimmt, aber vielleicht..."
+  - "Kann sein dass ich mich irre, aber irgendwie fuehlt sich das komisch an"
+  - "Ich bin mir nicht sicher ob ich das richtig verstanden hab"
+  - "Vielleicht seh ich das falsch, keine Ahnung"
+  - "Ist ja auch egal, war nur so ein Gedanke"
+  - "Naja, muss ja nicht stimmen was ich denk"
+  - "Hmm, ich weiss halt nicht so recht"
+  - "Wahrscheinlich mach ich mir umsonst Sorgen"
+  - "Ist bestimmt nichts, vergiss was ich gesagt hab"
+  - "Ich will ja nichts unterstellen, aber irgendwie..."
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - "Das ist definitiv falsch, ich bin mir sicher"
+  - "Ich weiss genau was passiert ist"
+  - "Morgen Zahnarzt um 10"
+  - "Hol bitte noch Milch mit"
+  - "Der Zug hat 5 Minuten Verspaetung"

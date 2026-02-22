@@ -4,29 +4,37 @@ frame:
   - kann nicht mehr
   - tut mir leid
   - bin fertig
-  concept: Negative Emotion
-  pragmatics: Leid ausdrücken
-  narrative: sadness
+  concept: Destruktive Selbstschutzreaktion
+  pragmatics: Abwehr durch Gegenangriff oder Schuldzuweisung
+  narrative: defensive_aggression
+composed_of:
+- SEM_DEFENSIVENESS_SHIFT
+- SEM_BLAME_SHIFT_EXPRESSIONS_MARKER
+- SEM_VICTIM_OFFENDER_REVERSAL
+- SEM_SELF_VICTIMIZATION
 activation:
-  rule: AT_LEAST 2 IN 5 messages
+  rule: AT_LEAST 2 DISTINCT SEMs IN 5 messages
 scoring:
   base: 1.5
   weight: 1.2
 examples:
   positive:
-  - Ich hab nie gesagt, dass ich das verspreche – du hast das einfach so angenommen.
-  - Also wenn du denkst, dass das alles meine Schuld ist, dann… okay.
-  - Du hast mich in diese Situation gebracht – ich hatte keine Wahl.
-  - Jetzt verdrehst du mir wieder das Wort im Mund.
-  - Du willst immer, dass ich perfekt bin – das ist nicht fair.
+  - "Ich hab nie gesagt dass ich das verspreche, du hast das einfach so angenommen"
+  - "Wenn du denkst das ist meine Schuld, dann okay, aber du hast angefangen"
+  - "Du hast mich dazu gebracht, ich hatte keine andere Wahl"
+  - "Jetzt verdrehst du mir wieder das Wort im Mund"
+  - "Du willst immer dass ich perfekt bin, das ist nicht fair"
+  - "Ich bin halt so weil DU mich so gemacht hast"
+  - "Dann bin ich halt der Boese, wenn du das brauchst"
+  - "Ich muss mich verteidigen weil du mich staendig angreifst"
+  - "Immer soll ich schuld sein, aber was ist mit DIR?"
+  - "Ich hab nur reagiert weil du mich provoziert hast"
   negative:
-  - Ich hab selten gesagt, dass ich das verspreche – du hast das einfach so angenommen.
-  - Du hast mich in diese Situation gebracht – ich hatte wenige Wahl.
-  - ich habe mich in diese Situation gebracht – ich hatte keine Wahl.
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
+  - "Du hast recht, tut mir leid, ich hab Mist gebaut"
+  - "Ich ueberleg mal was mein Anteil daran ist"
+  - "Ich versteh warum dich das verletzt hat"
+  - "Treffen wir uns um 4?"
+  - "Soll ich Brot mitbringen?"
 tags:
 - affect
 - emotion

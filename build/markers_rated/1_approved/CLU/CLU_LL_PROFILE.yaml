@@ -6,6 +6,12 @@ frame:
   concept: "Liebessprachen-Profil"
   pragmatics: "Gewichtung & Mischtyp"
   narrative: "Mehrsprachigkeit wahrscheinlich"
+composed_of:
+- ATO_LL_WORDS_OF_AFFIRMATION
+- ATO_LL_QUALITY_TIME
+- ATO_LL_ACTS_OF_SERVICE
+- ATO_LL_RECEIVING_GIFTS
+- ATO_LL_PHYSICAL_TOUCH
 pattern:
 - "score: { affirm: w1, time: w2, service: w3, gifts: w4, touch: w5 }"
 detect_class:

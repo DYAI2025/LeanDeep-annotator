@@ -14,7 +14,11 @@ tags:
 - grief
 - hypothesis
 - learning
-criteria: ''
+composed_of:
+- SEM_EMOTIONAL_OVERWHELM
+- SEM_SELF_PITY
+- SEM_SELF_REFLECTION
+- SEM_AFFECT_ISOLATION_TEXT
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 5 messages
 scoring:
@@ -34,16 +38,19 @@ metadata:
     ewma_precision: INT_GRIEF.ewma_precision
 examples:
   positive:
-  - verteilte Hinweise auf Verlust/Bedauern ohne harte Verdichtung
-  - Schuld‑ und Trauersprache tauchen vereinzelt auf
-  - example 3
-  - example 4
-  - example 5
+  - Ich vermiss ihn so sehr, das wird einfach nicht besser
+  - Manchmal denk ich es war alles meine Schuld
+  - Ich hätte das anders machen sollen, jetzt ist es zu spät
+  - Es tut so weh wenn ich dran denke, ich kann nicht mehr
+  - Ich fühl mich so leer seitdem, als ob ein Teil fehlt
+  - Warum hab ich nicht besser aufgepasst, das werd ich mir nie verzeihen
+  - Alles erinnert mich daran, ich komm da nicht drüber weg
+  - Ich bereue so vieles, hätte ich bloß anders reagiert
+  - Die Trauer kommt in Wellen, manchmal triffts mich einfach so
+  - Ich schäm mich dass ich nicht da war als es drauf ankam
   negative:
-  - I think we should look at this objectively.
-  - I'm doing fine, thanks for asking.
-  - That's an interesting thought.
-  - I'm feeling relaxed right now.
-  - Everything is fine with me.
-  - I'm feeling calm and settled today.
-  - That surprises me, but it's okay.
+  - Heute war ein richtig guter Tag, ich bin zufrieden
+  - Ich freu mich auf das Wochenende
+  - Das Essen war mega lecker, danke dafür
+  - Ich bin gerade echt entspannt und happy
+  - Alles läuft grad richtig gut bei mir
