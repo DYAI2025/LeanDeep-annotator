@@ -120,6 +120,52 @@ This means: when a CONFLICT cluster is active, a neutral word like "okay" can co
 
 ---
 
+### Conceptual Model: Resonance, Superposition, Crystallization
+
+The mechanics of LeanDeep are best understood through a figurative (not physical) model in three acts.
+
+**Act I — Figurative Superposition**
+
+When ATOs fire, they do not yet carry a fixed meaning. Each is semantically *polyvalent*: a single token like "vielleicht" (maybe) simultaneously occupies multiple potential semantic spaces — politeness, uncertainty, avoidance. It is a signal that has not yet been interpreted. This latent multivalence is what we call a **figurative superposition**: not a quantum state in any physical sense, but the recognition that a raw signal holds multiple meanings in potential until context forces a resolution.
+
+**Act II — The Resonance Field and its Self-Referential Bootstrap**
+
+From the ensemble of all raw ATOs, the engine computes an aggregate **VAD field** — the emotional center of gravity of the current message. This field then acts as a **resonance chamber** that is tested back against each individual ATO.
+
+Here is the crucial, self-referential move: *the ATOs collectively create the resonance field, and the resonance field then selects which ATOs survive.* The ensemble defines the context, and the context then judges the ensemble. This is not circular reasoning — it is the bootstrap by which local meaning coheres out of distributed signals.
+
+The resonance is not binary (fit / no-fit). It is a gradient:
+
+```
+congruence ≥ 0.55  →  resonant:  ATO amplified at full confidence
+0.35 ≤ c < 0.55   →  attenuated: ATO passes with confidence × 0.6
+congruence < 0.35  →  dissonant: ATO enters shadow buffer, silenced for now
+```
+
+ATOs displaced into the shadow buffer are not discarded — they wait. If the resonance field shifts in a later message (a change in emotional register), a previously dissonant ATO may surface and contribute to an entirely different semantic reading. The shadow buffer is a **deferred meaning reservoir**.
+
+**Act III — Semantic Crystallization**
+
+What survives the resonance filter is no longer noise. The resonant ATOs — those whose emotional character is coherent with the field — activate SEMs through composition rules. This is **semantic crystallization**: meaning does not unlock like a door opening, it *precipitates* from the resonant remainder the way crystals form in a supersaturated solution when conditions align.
+
+The SEM is not found in any single ATO. It emerges from the resonant pattern of ATOs that the field permitted to survive. The meaning is, in this precise sense, **context-born** (kontextnatal).
+
+```
+Polyvalent ATOs → [resonance field bootstrapped from the ensemble]
+                      ↓ gradient filter
+              resonant ATOs survive  ·  dissonant ATOs → shadow
+                      ↓ composition rules
+              SEM crystallizes from the resonant remainder
+                      ↓ windowed aggregation
+              CLU confirms behavioral pattern
+                      ↓ organism-level inference
+              MEMA diagnoses: absence, trend, cycle, archetype
+```
+
+> A note on the quantum analogy: The terms "superposition," "collapse," and "resonance field" are used here as conceptual metaphors only. LeanDeep is fully deterministic — the same input always yields the same output. The value of the metaphor is interpretive, not explanatory of any underlying physics.
+
+---
+
 ## VAD Model: Valence, Arousal, Dominance
 
 Every marker carries a `vad_estimate` — a three-dimensional emotional fingerprint:
@@ -148,19 +194,26 @@ Valence ────────────────────────
   (-0.6, 0.2)    (0.0, 0.0)            (0.5, 0.2)
 ```
 
-### The VAD Congruence Gate ("Quantum Collapse")
+### The VAD Congruence Gate (Resonance Filter)
 
-During conversation analysis, the engine applies a **VAD congruence gate** to each detected ATO. This compares the ATO's emotional fingerprint against the aggregate emotional field of the current message:
+During conversation analysis, the engine applies a **VAD congruence gate** to each detected ATO. This is the resonance filter described in the conceptual model above: it compares each ATO's emotional fingerprint against the aggregate VAD field derived from the full ATO ensemble of the current message.
+
+The gate is a gradient, not a binary switch:
 
 ```
-congruence ≥ 0.55  →  full pass (resonant)
-0.35 ≤ c < 0.55   →  pass with confidence × 0.6 (weak resonance)
-congruence < 0.35  →  suppressed to shadow buffer
+congruence ≥ 0.55  →  resonant:  full pass
+0.35 ≤ c < 0.55   →  attenuated: pass with confidence × 0.6
+congruence < 0.35  →  dissonant: suppressed to shadow buffer
 ```
 
-Shadow-buffered ATOs can be **surfaced** in later messages if the emotional context shifts to match them. This prevents false positives from emotionally incongruent pattern matches.
+ATOs without a VAD fingerprint (structural markers like negation tokens) are exempt — they always pass, as they modulate meaning rather than carry emotional charge.
 
-**Example:** A message containing "ich freue mich" (positive) will suppress `ATO_ABANDONMENT_ANXIETY` (VAD: -0.6, 0.8, 0.0) because the marker's negative emotional fingerprint is incongruent with the positive message field.
+**The shadow buffer** holds dissonant ATOs across message boundaries. If the emotional field shifts in a subsequent message, shadow-buffered ATOs are re-tested and may surface with attenuated confidence (× 0.4). This is the **deferred meaning reservoir**: signals that were semantically premature in one emotional moment may become relevant in another.
+
+**Example — dissonance suppression:**
+A message "ich freue mich so sehr" (I'm so happy) produces a positive-valence VAD field. `ATO_ABANDONMENT_ANXIETY` (VAD: -0.6, 0.8, 0.0) is strongly dissonant with this field — congruence < 0.35 — and is suppressed to shadow. If the next message shifts to `"...aber ich hab Angst, dass du gehst"` (negative valence), the shadow ATO surfaces and now contributes.
+
+**Why this matters:** False positives in emotional marker detection most commonly arise from applying a negative-charged marker to a positive or neutral utterance, or vice versa. The resonance gate eliminates this class of error structurally, without requiring per-pattern exception lists.
 
 ### Effect on State
 
