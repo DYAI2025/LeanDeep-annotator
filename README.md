@@ -162,8 +162,6 @@ Polyvalent ATOs → [resonance field bootstrapped from the ensemble]
               MEMA diagnoses: absence, trend, cycle, archetype
 ```
 
-> A note on the quantum analogy: The terms "superposition," "collapse," and "resonance field" are used here as conceptual metaphors only. LeanDeep is fully deterministic — the same input always yields the same output. The value of the metaphor is interpretive, not explanatory of any underlying physics.
-
 ---
 
 ## VAD Model: Valence, Arousal, Dominance
