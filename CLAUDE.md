@@ -48,7 +48,7 @@ docs/
   ARCHITECTURE_LD5.md   # System architecture
   THEORY_QUANTUM_COLLAPSE.md  # VAD congruence gate theory
 personas/               # Persona YAML profiles (gitignored, created at runtime)
-.claude/commands/       # 4 reusable skills: implement-plan, fix-marker-fp, marker-pipeline, project-audit
+.claude/commands/       # 7 skills (see Skills section below)
 ```
 
 ## Commands
@@ -87,7 +87,7 @@ python3 tools/eval_dynamics.py       # Emotion dynamics eval (VAD/UED/state tren
 | GET | `/v1/engine/config` | Engine configuration (families, EWMA, ARS) |
 | GET | `/v1/health` | Health check |
 
-## Current State (2026-02-21)
+## Current State (2026-02-22)
 
 | Dimension | Status | Detail |
 |-----------|--------|--------|
@@ -125,8 +125,9 @@ python3 tools/eval_dynamics.py       # Emotion dynamics eval (VAD/UED/state tren
 4. P1-1: Persona Dashboard UI
 5. P1-2: API Hardening (auth, rate-limiting, CORS, error schema)
 6. P1-3: LLM-Bridge Endpoint (structured marker context for LLM interpretation)
+7. P1-4: Monetization (3-tier Freemium: Free 100/day, Base $29/mo 10K/day, Pro $99/mo 100K/day)
 
-**P2/P3:** English expansion, marker descriptions, MEMA stateful, CI/CD, deployment, WebSocket
+**P2/P3:** English expansion, marker descriptions, MEMA stateful, CI/CD, deployment, WebSocket, Skyll/MCP distribution
 
 See `docs/ROADMAP.md` for full specs. See `docs/BUGS.md` for 13 documented bugs.
 
@@ -141,3 +142,6 @@ Include `Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>` in commits.
 - `/fix-marker-fp` — Fix false-positive markers with regex improvements
 - `/marker-pipeline` — Run full enrichment pipeline (normalize -> enrich -> eval -> report)
 - `/project-audit` — Audit system state, update ROADMAP.md + BUGS.md with current metrics
+- `/marker-health` — Multi-dimensional marker quality assessment (ratings, patterns, VAD, detection)
+- `/create-markers` — Batch marker creation with schema validation and duplicate checking
+- `/bug-brainstorm` — Systematic Socratic bug analysis: fix / feature upgrade / deeper investigation (also global)
