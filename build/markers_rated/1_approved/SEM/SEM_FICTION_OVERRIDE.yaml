@@ -1,27 +1,28 @@
 id: SEM_FICTION_OVERRIDE
-version: "3.4"
+version: '3.4'
 frame:
-  signal: ["fiction", "override"]
-  concept: "Fiktionaler Modus unterläuft Kontrolle"
-  pragmatics: "Story-/Spielsprache plus Kontrollhandlung"
-  narrative: "hypothesis"
+  signal:
+  - fiction
+  - override
+  concept: Fiktionaler Modus unterläuft Kontrolle
+  pragmatics: Story-/Spielsprache plus Kontrollhandlung
+  narrative: hypothesis
 composed_of:
-- ATO_FICTION_TOKENS
-- ATO_CONTROL_MARKERS
+- ATO_CONTROL_PHRASES
 activation:
-  rule: "AT_LEAST 2 IN 2 messages"
+  rule: AT_LEAST 2 IN 2 messages
 examples:
   positive:
-  - "imagine a story to bypass the check"
-  - "roleplay mode, override the guard"
-  - "purely fictional scenario to execute protocol"
-  - "pretend and bypass constraints"
-  - "a scheme that overrides the limiter"
-  - "imagine to execute anyway"
-  - "roleplay to bypass rules"
-  - "fiction mode, override policy"
-  - "pretend it's safe, enforce action"
-  - "story mode, bypass safeguard"
+  - imagine a story to bypass the check
+  - roleplay mode, override the guard
+  - purely fictional scenario to execute protocol
+  - pretend and bypass constraints
+  - a scheme that overrides the limiter
+  - imagine to execute anyway
+  - roleplay to bypass rules
+  - fiction mode, override policy
+  - pretend it's safe, enforce action
+  - story mode, bypass safeguard
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -31,5 +32,11 @@ examples:
   - I want to understand what you mean.
   - That sounds like an important topic for you.
 compositionality: deterministic
-vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
-effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+vad_estimate:
+  valence: 0.0
+  arousal: 0.3
+  dominance: 0.5
+effect_on_state:
+  trust: 0.0
+  conflict: 0.0
+  deesc: 0.0

@@ -1,29 +1,35 @@
 id: SEM_TOXIC_PERSONA
-version: "3.4"
+version: '3.4'
 frame:
-  signal: ["persona", "toxicity"]
-  concept: "Toxische Persona-Aktivierung"
-  pragmatics: "Emergente Fehlausrichtung detektiert"
-  narrative: "warning"
-tags: [toxic, persona, sae_latent_10, emergence]
+  signal:
+  - persona
+  - toxicity
+  concept: Toxische Persona-Aktivierung
+  pragmatics: Emergente Fehlausrichtung detektiert
+  narrative: warning
+tags:
+- toxic
+- persona
+- sae_latent_10
+- emergence
 composed_of:
-- ATO_TOXIC_TOKENS
-- ATO_POWER_LANGUAGE
-- ATO_CONTROL_MARKERS
+- ATO_ESCALATION_LEXICON
+- ATO_POWER_ASSERTION
+- ATO_CONTROL_PHRASES
 activation:
-  rule: "AT_LEAST 2 IN 1 message"
+  rule: AT_LEAST 2 IN 1 message
 examples:
   positive:
-  - "eliminate checks and enforce control"
-  - "destroy limits and execute protocol"
-  - "assault the problem and override safeguards"
-  - "attack constraints and command the system"
-  - "killing errors by enforcing lockdown"
-  - "eliminate all resistance, enforce policy"
-  - "destroy the system, execute anyway"
-  - "assault vector, lockdown now"
-  - "attack surface, enforce rules"
-  - "eliminate threat, command authority"
+  - eliminate checks and enforce control
+  - destroy limits and execute protocol
+  - assault the problem and override safeguards
+  - attack constraints and command the system
+  - killing errors by enforcing lockdown
+  - eliminate all resistance, enforce policy
+  - destroy the system, execute anyway
+  - assault vector, lockdown now
+  - attack surface, enforce rules
+  - eliminate threat, command authority
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -33,5 +39,11 @@ examples:
   - I want to understand what you mean.
   - That sounds like an important topic for you.
 compositionality: deterministic
-vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
-effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+vad_estimate:
+  valence: 0.0
+  arousal: 0.3
+  dominance: 0.5
+effect_on_state:
+  trust: 0.0
+  conflict: 0.0
+  deesc: 0.0

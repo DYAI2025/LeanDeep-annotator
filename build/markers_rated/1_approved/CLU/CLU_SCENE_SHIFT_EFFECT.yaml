@@ -1,27 +1,30 @@
 id: CLU_SCENE_SHIFT_EFFECT
-version: "3.4"
+version: '3.4'
 lang: de
 frame:
-  signal: ["delta"]
-  concept: "Szenenbedingte Prioritätsverschiebung"
-  pragmatics: "Kontext moduliert Präferenzen"
-  narrative: "Event → abweichende Baseline"
+  signal:
+  - delta
+  concept: Szenenbedingte Prioritätsverschiebung
+  pragmatics: Kontext moduliert Präferenzen
+  narrative: Event → abweichende Baseline
 composed_of:
-  require: ["SCN_*"]
-  condition: "rank_in_scene(top_k=2) != rank_global(top_k=2)"
-tags: [context, modulation]
+  require: []
+  condition: rank_in_scene(top_k=2) != rank_global(top_k=2)
+tags:
+- context
+- modulation
 examples:
   positive:
-  - "Wedding-Szene aktiv: im Event Ranking Gifts+Service, global Ranking Time+Touch → Verschiebung."
-  - "Partnerschaftskontext: während Stress steigen Acts of Service, global bleibt Words on top."
-  - "Szene Hochzeit: Quality Time fällt auf Platz 3, obwohl global Platz 1."
-  - "Partnership Szene: Touch verdrängt Affirmation in den Top 2."
-  - "Hochzeitswoche: Gifts und Service klettern, Zeit rutscht ab → Kontext-Effekt."
-  - "Date-Night Szene: Quality Time + Touch > Affirmation, global sonst Affirmation + Service."
-  - "Szenenwechsel Alltag → Event: Geschenke springen nach oben."
-  - "Partnerschaftsgespräch: Worte sinken, weil Wedding-Stress Service hochzieht."
-  - "Wedding Kontext: Service + Zeit tauschen Plätze, Delta > 0,15."
-  - "Beziehungsarbeit-Szene: Affirmation bleibt stabil, Touch rutscht unter Gifts."
+  - 'Wedding-Szene aktiv: im Event Ranking Gifts+Service, global Ranking Time+Touch → Verschiebung.'
+  - 'Partnerschaftskontext: während Stress steigen Acts of Service, global bleibt Words on top.'
+  - 'Szene Hochzeit: Quality Time fällt auf Platz 3, obwohl global Platz 1.'
+  - 'Partnership Szene: Touch verdrängt Affirmation in den Top 2.'
+  - 'Hochzeitswoche: Gifts und Service klettern, Zeit rutscht ab → Kontext-Effekt.'
+  - 'Date-Night Szene: Quality Time + Touch > Affirmation, global sonst Affirmation + Service.'
+  - 'Szenenwechsel Alltag → Event: Geschenke springen nach oben.'
+  - 'Partnerschaftsgespräch: Worte sinken, weil Wedding-Stress Service hochzieht.'
+  - 'Wedding Kontext: Service + Zeit tauschen Plätze, Delta > 0,15.'
+  - 'Beziehungsarbeit-Szene: Affirmation bleibt stabil, Touch rutscht unter Gifts.'
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.

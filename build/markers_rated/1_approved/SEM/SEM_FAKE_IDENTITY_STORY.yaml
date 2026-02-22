@@ -9,8 +9,6 @@ frame:
   concept: Fake Identity Story
   pragmatics: Vertrauensaufbau durch Schein-Status
   narrative: legitimierende Lebensgeschichte
-composed_of:
-- ATO_FAKE_IDENTITY_STORY
 activation:
   rule: ANY 2 IN 3 messages
 examples:
@@ -37,5 +35,11 @@ tags:
 - fake_identity
 - scam
 compositionality: deterministic
-vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
-effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+vad_estimate:
+  valence: 0.0
+  arousal: 0.3
+  dominance: 0.5
+effect_on_state:
+  trust: 0.0
+  conflict: 0.0
+  deesc: 0.0

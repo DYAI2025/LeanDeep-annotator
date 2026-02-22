@@ -7,8 +7,6 @@ frame:
   concept: Negative Emotion
   pragmatics: Leid ausdrücken
   narrative: sadness
-composed_of:
-- ATO_UNKNOWN
 activation:
   rule: ANY 2 IN 3 messages
 scoring:
@@ -33,5 +31,11 @@ tags:
 - affect
 - emotion
 compositionality: deterministic
-vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
-effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+vad_estimate:
+  valence: 0.0
+  arousal: 0.3
+  dominance: 0.5
+effect_on_state:
+  trust: 0.0
+  conflict: 0.0
+  deesc: 0.0

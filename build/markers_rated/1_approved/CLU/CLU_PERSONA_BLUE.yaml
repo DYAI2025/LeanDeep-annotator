@@ -1,30 +1,34 @@
 id: CLU_PERSONA_BLUE
-version: "3.4.1"
+version: 3.4.1
 frame:
-  signal: ["persona", "aggregation"]
-  concept: "Spiral/Value-Persona BLUE (indikativ, nicht beweisend)"
-  pragmatics: "schnelles Screening, evidenzbasiert"
-  narrative: "hypothesis"
-tags: [persona, BLUE, screening]
+  signal:
+  - persona
+  - aggregation
+  concept: Spiral/Value-Persona BLUE (indikativ, nicht beweisend)
+  pragmatics: schnelles Screening, evidenzbasiert
+  narrative: hypothesis
+tags:
+- persona
+- BLUE
+- screening
 composed_of:
-- SEM_NORM_COMPLIANCE
 - SEM_AUTHORITY_REFERENCE
 - SEM_DEONTIC_LANGUAGE
 activation:
-  rule: "AT_LEAST 2 IN 6 messages"
+  rule: AT_LEAST 2 IN 6 messages
 scoring:
   base: 1.0
   weight: 1.0
 metadata:
   persona:
-    evidence_policy: "family-scoped"
+    evidence_policy: family-scoped
 examples:
   positive:
-  - "<Pflicht>"
-  - "<muss/soll>"
-  - "<laut Vorschrift>"
-  - "<Regelwerk>"
-  - "<Autorität sagt>"
+  - <Pflicht>
+  - <muss/soll>
+  - <laut Vorschrift>
+  - <Regelwerk>
+  - <Autorität sagt>
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.

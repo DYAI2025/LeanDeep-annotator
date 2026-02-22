@@ -1,30 +1,31 @@
 id: CLU_PERSONA_TURQUOISE
-version: "3.4.1"
+version: 3.4.1
 frame:
-  signal: ["persona", "aggregation"]
-  concept: "Spiral/Value-Persona TURQUOISE (indikativ, nicht beweisend)"
-  pragmatics: "schnelles Screening, evidenzbasiert"
-  narrative: "hypothesis"
-tags: [persona, TURQUOISE, screening]
-composed_of:
-- SEM_HOLISTIC_SCOPE
-- SEM_LONG_HORIZON
-- SEM_ECOLOGICAL_METAPHOR
+  signal:
+  - persona
+  - aggregation
+  concept: Spiral/Value-Persona TURQUOISE (indikativ, nicht beweisend)
+  pragmatics: schnelles Screening, evidenzbasiert
+  narrative: hypothesis
+tags:
+- persona
+- TURQUOISE
+- screening
 activation:
-  rule: "AT_LEAST 2 IN 6 messages"
+  rule: AT_LEAST 2 IN 6 messages
 scoring:
   base: 1.0
   weight: 1.0
 metadata:
   persona:
-    evidence_policy: "family-scoped"
+    evidence_policy: family-scoped
 examples:
   positive:
-  - "<ganzheitlich>"
-  - "<lange Zeitskala>"
-  - "<Ökologie>"
-  - "<Interbeing>"
-  - "<Planetar>"
+  - <ganzheitlich>
+  - <lange Zeitskala>
+  - <Ökologie>
+  - <Interbeing>
+  - <Planetar>
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.

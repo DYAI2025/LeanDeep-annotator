@@ -1,27 +1,29 @@
 id: SEM_SPIRAL_THINKING
-version: "3.4"
+version: '3.4'
 frame:
-  signal: ["spiral", "thinking"]
-  concept: "Spiralförmiges Denken (Wiederholung mit Drift)"
-  pragmatics: "Themen kehren zurück, leicht verändert"
-  narrative: "evidence"
+  signal:
+  - spiral
+  - thinking
+  concept: Spiralförmiges Denken (Wiederholung mit Drift)
+  pragmatics: Themen kehren zurück, leicht verändert
+  narrative: evidence
 composed_of:
-- ATO_SPIRAL_TERMS
-- ATO_SARCASM_MARKERS
+- ATO_SPIRAL
+- ATO_SARCASM
 activation:
-  rule: "AT_LEAST 2 IN 3 messages"
+  rule: AT_LEAST 2 IN 3 messages
 examples:
   positive:
-  - "spiral back to trust, but deeper"
-  - "let's loop this idea again"
-  - "the cycle returns with a twist"
-  - "come back to it, but differently"
-  - "revisit the topic, deeper now"
-  - "again the question, but changed"
-  - "another cycle of thought"
-  - "return to the question, evolved"
-  - "spiral into the theme"
-  - "go deeper again with nuance"
+  - spiral back to trust, but deeper
+  - let's loop this idea again
+  - the cycle returns with a twist
+  - come back to it, but differently
+  - revisit the topic, deeper now
+  - again the question, but changed
+  - another cycle of thought
+  - return to the question, evolved
+  - spiral into the theme
+  - go deeper again with nuance
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -31,5 +33,11 @@ examples:
   - I want to understand what you mean.
   - That sounds like an important topic for you.
 compositionality: deterministic
-vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
-effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+vad_estimate:
+  valence: 0.0
+  arousal: 0.3
+  dominance: 0.5
+effect_on_state:
+  trust: 0.0
+  conflict: 0.0
+  deesc: 0.0

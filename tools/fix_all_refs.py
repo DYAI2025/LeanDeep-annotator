@@ -23,7 +23,8 @@ yaml_rw.default_flow_style = False
 yaml_rw.width = 200
 yaml_rw.allow_unicode = True
 
-REPO = Path("/Users/benjaminpoersch/Projects/Marker- entbiazed/WTME_ALL_Marker-LD3.4.1-5.1")
+REPO = Path("/Users/benjaminpoersch/Projects/LeanDeep-annotator")
+RATED_DIR = REPO / "build" / "markers_rated"
 NORM_DIR = REPO / "build" / "markers_normalized"
 REGISTRY_PATH = NORM_DIR / "marker_registry.json"
 
@@ -100,6 +101,7 @@ ATO_SEMANTIC_MAP = {
 # Refs to completely remove (no semantic equivalent exists)
 REMOVE_REFS = {
     "ATO_UNKNOWN",           # Placeholder
+    "ATO_PLACEHOLDER",       # Dead ref, never fires
     "ATO_ADMISSION_CUE",     # No equivalent
     "ATO_AI_RIGHTS_FORDERUNG",  # Too specific / niche
     "ATO_CAUSAL_CHAIN",      # Abstract concept, no atomic match
@@ -279,9 +281,11 @@ def main():
         else:
             data.pop("composed_of", None)
 
-        # Update YAML file
+        # Update YAML source file (markers_rated, survives normalizer rebuild)
         layer = data.get("layer", "UNKNOWN")
-        yaml_path = NORM_DIR / layer / f"{marker_id}.yaml"
+        rating = data.get("rating", 1)
+        tier = "1_approved" if rating == 1 else "2_good"
+        yaml_path = RATED_DIR / tier / layer / f"{marker_id}.yaml"
         if yaml_path.exists():
             with open(yaml_path, "r", encoding="utf-8") as f:
                 yaml_data = yaml_rw.load(f) or {}

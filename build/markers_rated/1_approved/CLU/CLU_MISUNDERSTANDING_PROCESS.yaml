@@ -1,21 +1,24 @@
-schema: "LeanDeep"
-version: "3.4"
-namespace: "ld34_multimodal_bridge"
+schema: LeanDeep
+version: '3.4'
+namespace: ld34_multimodal_bridge
 id: CLU_MISUNDERSTANDING_PROCESS
 lang: de
 category: CLUSTER
-description: "Bruch → Erregung → Reparatur(−) (Text×Audio)."
+description: Bruch → Erregung → Reparatur(−) (Text×Audio).
 frame:
-  signal: ["Break/Arousal (Audio) + Repair-Failure (Text)"]
-  concept: "Missverständnis-Prozess (Multimodal)"
-  pragmatics: "Meta-Klärung anstoßen"
-  narrative: "Sequenz, cross-modal"
+  signal:
+  - Break/Arousal (Audio) + Repair-Failure (Text)
+  concept: Missverständnis-Prozess (Multimodal)
+  pragmatics: Meta-Klärung anstoßen
+  narrative: Sequenz, cross-modal
 composed_of:
-- ld34_text_social_grammar.SEM_REPAIR_FAILURE_TEXT
-- ld34_voice_social_grammar.SEM_AROUSAL_SPIKE_AT_BREAK
-- ld34_voice_social_grammar.SEM_REPAIR_FAILURE_AUDIO
-activation_logic: "SEQUENCE [EXPECTANCY_BREAK + AROUSAL] AND LACK_OF_SUCCESSFUL_REPAIR within 2 turns"
-scoring: {base: 0.65, cap: 1.0}
+- SEM_REPAIR_FAILURE_TEXT
+- SEM_AROUSAL_SPIKE_AT_BREAK
+- SEM_REPAIR_FAILURE_AUDIO
+activation_logic: SEQUENCE [EXPECTANCY_BREAK + AROUSAL] AND LACK_OF_SUCCESSFUL_REPAIR within 2 turns
+scoring:
+  base: 0.65
+  cap: 1.0
 examples:
   positive:
   - "Audio: Break→Spike; Text: 'hä? … egal, anderes Thema'."
@@ -34,7 +37,10 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
-tags: [cluster, multimodal, misunderstanding]
+tags:
+- cluster
+- multimodal
+- misunderstanding
 metadata:
-  family: "MISUNDERSTANDING"
+  family: MISUNDERSTANDING
   cross_namespace: true

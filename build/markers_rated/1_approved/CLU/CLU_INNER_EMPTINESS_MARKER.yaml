@@ -8,9 +8,6 @@ frame:
   concept: Emotionale Abgestumpftheit
   pragmatics: Desinteresse signalisieren
   narrative: emotional_numbness
-composed_of:
-- SEM_APATHY_EXPRESSION
-- SEM_ENERGY_DEFICIT
 activation:
   rule: AT_LEAST 2 IN 5 messages
 scoring:

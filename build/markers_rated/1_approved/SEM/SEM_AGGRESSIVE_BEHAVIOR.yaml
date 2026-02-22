@@ -34,9 +34,15 @@ examples:
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
 composed_of:
-- ATO_ANGER_EXPRESSION
-- ATO_SWEAR_WORD
-- ATO_THREAT_ESCALATION
+- ATO_ANGER
+- ATO_ESCALATION_LEXICON
+- ATO_THREAT_LANGUAGE
 compositionality: deterministic
-vad_estimate: {valence: -0.6, arousal: 0.95, dominance: 0.7}
-effect_on_state: {trust: -0.3, conflict: 0.4, deesc: -0.2}
+vad_estimate:
+  valence: -0.6
+  arousal: 0.95
+  dominance: 0.7
+effect_on_state:
+  trust: -0.3
+  conflict: 0.4
+  deesc: -0.2

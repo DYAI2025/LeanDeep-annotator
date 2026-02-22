@@ -525,9 +525,12 @@ class MarkerEngine:
                     rule_raw = activation
                 elif isinstance(activation, dict) and "rule" in activation:
                     rule_raw = activation["rule"]
+                elif isinstance(activation, dict) and "min_components" in activation:
+                    # Structured activation: {mode, min_components, window}
+                    rule_raw = f"ANY {activation['min_components']}"
                 else:
-                    # No activation rule → require ALL composed_of refs (safe default)
-                    rule_raw = "ALL"
+                    # No activation rule → LD 5.0: SEM = 1 ATO + context
+                    rule_raw = "ANY 1"
                 mode, min_hits = _parse_activation_rule(str(rule_raw))
 
                 # ALL mode: every composed_of ref must be active

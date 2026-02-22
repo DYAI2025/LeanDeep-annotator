@@ -267,6 +267,14 @@ def normalize_marker(data, filename, tier):
         if val is not None:
             normalized[field] = val
 
+    # If source has activation_logic but no activation, map it
+    if "activation" not in normalized and data.get("activation_logic"):
+        al = data["activation_logic"]
+        if isinstance(al, str):
+            normalized["activation"] = {"rule": al}
+        elif isinstance(al, dict):
+            normalized["activation"] = al
+
     # Metadata: merge metadata + meta
     meta = {}
     if data.get("metadata"):

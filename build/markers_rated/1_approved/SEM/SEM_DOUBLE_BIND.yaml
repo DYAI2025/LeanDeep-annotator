@@ -10,9 +10,9 @@ frame:
   pragmatics: Paradoxe Kommunikation
   narrative: Ausweglosigkeit
 composed_of:
-- ATO_DOUBLE_BIND_EXPRESSIONS
+- ATO_DOUBLE_ENTENDRE
 activation:
-  rule: "ANY 2 IN 3 messages"
+  rule: ANY 2 IN 3 messages
 scoring:
   base: 1.5
   weight: 1.2
@@ -40,5 +40,11 @@ tags:
 - double_bind
 - paradox
 compositionality: deterministic
-vad_estimate: {valence: -0.5, arousal: 0.8, dominance: 0.6}
-effect_on_state: {trust: -0.3, conflict: 0.4, deesc: -0.2}
+vad_estimate:
+  valence: -0.5
+  arousal: 0.8
+  dominance: 0.6
+effect_on_state:
+  trust: -0.3
+  conflict: 0.4
+  deesc: -0.2

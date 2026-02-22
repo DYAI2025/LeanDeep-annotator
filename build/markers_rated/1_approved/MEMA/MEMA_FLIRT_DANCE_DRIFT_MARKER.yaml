@@ -7,8 +7,6 @@ frame:
   concept: Kommunikationsmuster
   pragmatics: Dialog führen
   narrative: exchange
-composed_of:
-- CLU_GENERIC_PATTERN
 activation:
   rule: ANY 2 IN 30 messages
 scoring:

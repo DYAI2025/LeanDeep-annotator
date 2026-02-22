@@ -4874,7 +4874,7 @@
       "rating": 1,
       "composed_of": [
         "ATO_ACTIVITY_VERB",
-        "ATO_ROUTINE_CONTEXT"
+        "ATO_RITUAL"
       ],
       "scoring": {
         "base": 1.4,
@@ -14953,8 +14953,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_ACTIVITY_VERB",
-        "ATO_HOBBY_OBJECT"
+        "ATO_ACTIVITY_VERB"
       ],
       "scoring": {
         "base": 1.4,
@@ -24475,8 +24474,8 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_DREHEN_IM_KREIS",
-        "ATO_KEINE_LOESUNG"
+        "ATO_SPIRAL",
+        "ATO_GIVING_UP_PHRASE"
       ],
       "scoring": {
         "base": 1.3,
@@ -25680,9 +25679,6 @@
         "attachment"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_GENERIC_PATTERN"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 5 messages"
       },
@@ -25981,10 +25977,6 @@
       },
       "tags": [],
       "rating": 1,
-      "composed_of": [
-        "SEM_TENTATIVE_INFERENCE",
-        "SEM_UNCERTAINTY_TONING"
-      ],
       "activation": {
         "rule": "AT_LEAST 3 IN 6 messages"
       },
@@ -26029,10 +26021,6 @@
       },
       "tags": [],
       "rating": 1,
-      "composed_of": [
-        "SEM_ANGER_ESCALATION",
-        "SEM_SARCASM_IRRITATION"
-      ],
       "activation": {
         "rule": "AT_LEAST 3 IN 5 messages"
       },
@@ -26083,8 +26071,6 @@
       ],
       "rating": 1,
       "composed_of": [
-        "SEM_CONFIRMATION_BIAS",
-        "SEM_ANCHORING_BIAS",
         "SEM_SOFT_COMMITMENT",
         "SEM_CONFLICT_MICRO"
       ],
@@ -26346,11 +26332,6 @@
         "defense"
       ],
       "rating": 1,
-      "composed_of": [
-        "{'marker_ids': ['SEM_AFFECT_ISOLATION_TEXT'], 'weight': 0.34}",
-        "{'marker_ids': ['SEM_REACTION_FORMATION_TEXT'], 'weight': 0.33}",
-        "{'marker_ids': ['SEM_PROJECTION_TEXT'], 'weight': 0.33}"
-      ],
       "scoring": {
         "base": 1.8,
         "weight": 1.3,
@@ -26410,9 +26391,6 @@
         "emotion"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_GENERIC_PATTERN"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 5 messages"
       },
@@ -26580,10 +26558,6 @@
         "dissonance"
       ],
       "rating": 1,
-      "composed_of": [
-        "{'marker_ids': ['SEM_DISSONANCE_TEXT'], 'weight': 0.5}",
-        "{'marker_ids': ['SEM_REPAIR_FAILURE_TEXT'], 'weight': 0.5}"
-      ],
       "scoring": {
         "base": 1.8,
         "weight": 1.3,
@@ -26766,11 +26740,6 @@
       },
       "tags": [],
       "rating": 1,
-      "composed_of": [
-        "SEM_SADNESS_EXPRESSIONS",
-        "SEM_ANGER_ESCALATION",
-        "SEM_SUPPORT_VALIDATION"
-      ],
       "activation": {
         "rule": "AT_LEAST 4 IN 8 messages"
       },
@@ -26818,10 +26787,6 @@
         "relationship-dynamics"
       ],
       "rating": 1,
-      "composed_of": [
-        "{'marker_ids': ['SEM_EXAMPLE_MARKER'], 'weight': 0.6}",
-        "{'marker_ids': ['SEM_ADJACENT_COMPLAIN'], 'weight': 0.5}"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 24 messages"
       },
@@ -26887,13 +26852,9 @@
       ],
       "rating": 1,
       "composed_of": [
-        "SEM_FRIENDLY_FLIRTING",
         "SEM_OFFENSIVE_FLIRTING",
         "SEM_SOFT_COMMITMENT",
-        "SEM_LATENT_EXPECTATION",
-        "SEM_BOUNDARY_SHIFT",
         "SEM_RESPONSE_TIMING",
-        "SEM_MIRRORED_STYLE",
         "SEM_SECRET_BONDING"
       ],
       "scoring": {
@@ -26965,9 +26926,6 @@
         "communication"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_GENERIC_PATTERN"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 5 messages"
       },
@@ -27078,7 +27036,6 @@
       "rating": 1,
       "composed_of": {
         "require": [
-          "SEM_REALITY_DISTORTION_FIELD",
           "CLU_COVERT_RESPONSIBILITY_INVERSION"
         ],
         "k_of_n": {
@@ -27163,8 +27120,7 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "SEM_SD_ORANGE_ACHIEVE",
-        "SEM_UNCERTAINTY_TONING"
+        "SEM_SD_ORANGE_ACHIEVE"
       ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 4 messages"
@@ -27587,10 +27543,6 @@
         "apathy"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_APATHY_EXPRESSION",
-        "SEM_ENERGY_DEFICIT"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 5 messages"
       },
@@ -27777,11 +27729,6 @@
         "learning"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_CONFIRMATION_BIAS",
-        "SEM_PERSPECTIVE_RIGIDITY",
-        "SEM_INGROUP_OUTGROUP_BIAS"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT bias ATOs IN 5 messages"
       },
@@ -27851,11 +27798,6 @@
         "learning"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_DEMEANING_LANGUAGE",
-        "SEM_RESPECT_APPEAL",
-        "SEM_STATUS_THREAT"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
@@ -27997,11 +27939,6 @@
         "learning"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_SADNESS_EXPRESSIONS",
-        "SEM_NOSTALGIA_REGRET",
-        "SEM_GUILT_ADMISSION"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
@@ -28073,11 +28010,6 @@
         "learning"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_SARCASM_IRRITATION",
-        "SEM_IRONIC_DISTANCE",
-        "SEM_MOCKING_TONE"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
@@ -28147,11 +28079,6 @@
         "learning"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_MORAL_JUDGMENT",
-        "SEM_MORAL_OUTRAGE",
-        "SEM_VIRTUE_SIGNALING"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
@@ -28356,7 +28283,6 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "HINT_POSITIVE_AFFECT",
         "SEM_ACTIVE_ENJOYMENT",
         "SEM_POSITIVE_OUTLOOK",
         "SEM_EXPRESSED_SATISFACTION",
@@ -28514,9 +28440,6 @@
         "agency"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_POSITIVE_SELF_EFFICACY"
-      ],
       "activation": {
         "confirm_window": 3,
         "cooldown_messages": 4
@@ -28582,9 +28505,6 @@
         "shutdown"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_SHUTDOWN_EPISODE"
-      ],
       "activation": {
         "confirm_window": 4,
         "cooldown_messages": 5
@@ -28642,9 +28562,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "SEM_TRUST_SIGNALING",
-        "SEM_DISTRUST_ACCUSATION",
-        "SEM_RELIABILITY_CONCERN"
+        "ATO_TRUST_DEFICIT_STATEMENT"
       ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
@@ -28816,8 +28734,8 @@
       "rating": 1,
       "composed_of": {
         "require": [
-          "CLU_LL_PROFILE@self",
-          "CLU_LL_PROFILE@partner"
+          "CLU_LL_PROFILE",
+          "CLU_LL_PROFILE"
         ],
         "condition": "top(self) != top(partner)"
       }
@@ -29167,9 +29085,9 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ld34_text_social_grammar.SEM_REPAIR_FAILURE_TEXT",
-        "ld34_voice_social_grammar.SEM_AROUSAL_SPIKE_AT_BREAK",
-        "ld34_voice_social_grammar.SEM_REPAIR_FAILURE_AUDIO"
+        "SEM_REPAIR_FAILURE_TEXT",
+        "SEM_AROUSAL_SPIKE_AT_BREAK",
+        "SEM_REPAIR_FAILURE_AUDIO"
       ],
       "scoring": {
         "base": 0.65,
@@ -29217,8 +29135,7 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "SEM_SD_ORANGE_ACHIEVE",
-        "SEM_SADNESS_EXPRESSIONS"
+        "SEM_SD_ORANGE_ACHIEVE"
       ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 4 messages"
@@ -29332,7 +29249,6 @@
       ],
       "rating": 1,
       "composed_of": [
-        "SEM_DOUBLE_BIND_DISCLAIMER_BUT",
         "SEM_PERFORMATIVE_HELPLESSNESS"
       ],
       "activation": {
@@ -29691,7 +29607,6 @@
       ],
       "rating": 1,
       "composed_of": [
-        "SEM_NORM_COMPLIANCE",
         "SEM_AUTHORITY_REFERENCE",
         "SEM_DEONTIC_LANGUAGE"
       ],
@@ -29751,8 +29666,7 @@
       "rating": 1,
       "composed_of": [
         "SEM_CONSENSUS_SIGNAL",
-        "SEM_INCLUSION_LANGUAGE",
-        "SEM_SOFTENING_MOVE"
+        "SEM_INCLUSION_LANGUAGE"
       ],
       "activation": {
         "rule": "AT_LEAST 2 IN 6 messages"
@@ -29808,11 +29722,6 @@
         "screening"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_COMPETITIVE_DRIVE",
-        "SEM_KPI_FOCUS",
-        "SEM_COMPARATIVE_CLAIM"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 6 messages"
       },
@@ -29867,11 +29776,6 @@
         "screening"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_<FAMILIE/ASPEKT>_A",
-        "SEM_<FAMILIE/ASPEKT>_B",
-        "SEM_<FAMILIE/ASPEKT>_C"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 6 messages"
       },
@@ -29926,11 +29830,6 @@
         "screening"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_HOLISTIC_SCOPE",
-        "SEM_LONG_HORIZON",
-        "SEM_ECOLOGICAL_METAPHOR"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 6 messages"
       },
@@ -29987,8 +29886,7 @@
       "rating": 1,
       "composed_of": [
         "SEM_SYSTEMS_THINKING",
-        "SEM_CONTEXT_SWITCH",
-        "SEM_TRADEOFF_LANGUAGE"
+        "SEM_CONTEXT_SWITCH"
       ],
       "activation": {
         "rule": "AT_LEAST 2 IN 6 messages"
@@ -30228,9 +30126,6 @@
         "v33"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_PUN_RIDDLE_QA"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 20 messages"
       },
@@ -30361,7 +30256,6 @@
       "composed_of": {
         "require": [
           "ATO_REPAIR_REQUEST",
-          "CLU_EMOTIONAL_SUPPORT",
           "SEM_CLOSURE_PROTOCOL"
         ],
         "k_of_n": {
@@ -30726,9 +30620,7 @@
       ],
       "rating": 1,
       "composed_of": {
-        "require": [
-          "SCN_*"
-        ],
+        "require": [],
         "condition": "rank_in_scene(top_k=2) != rank_global(top_k=2)"
       }
     },
@@ -30802,8 +30694,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_SECRECY",
-        "ATO_DELETE_TRACES"
+        "ATO_SECRECY"
       ],
       "scoring": {
         "base": 1.4,
@@ -30855,9 +30746,6 @@
         "communication"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_GENERIC_PATTERN"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 5 messages"
       },
@@ -30902,10 +30790,6 @@
       },
       "tags": [],
       "rating": 1,
-      "composed_of": [
-        "SEM_UNCERTAINTY_TONING",
-        "SEM_ANGER_ESCALATION"
-      ],
       "activation": {
         "rule": "AT_LEAST 3 IN 6 messages"
       },
@@ -31046,9 +30930,6 @@
         "intuition"
       ],
       "rating": 1,
-      "composed_of": [
-        "{'marker_ids': ['SEM_SHAME_TEXT'], 'weight': 1.0}"
-      ],
       "scoring": {
         "base": 1.8,
         "weight": 1.3,
@@ -31115,9 +30996,6 @@
       },
       "tags": [],
       "rating": 1,
-      "composed_of": [
-        "SEM_SHUTDOWN_EPISODE"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEM_SHUTDOWN_EPISODE IN 5 messages",
         "window": 5,
@@ -31534,9 +31412,6 @@
         "v33"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_SUPERIORITY_PUTDOWN"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 15 messages"
       },
@@ -31581,10 +31456,6 @@
       },
       "tags": [],
       "rating": 1,
-      "composed_of": [
-        "SEM_SUPPORT_VALIDATION",
-        "SEM_TRUST_SIGNALING"
-      ],
       "activation": {
         "rule": "AT_LEAST 3 IN 7 messages"
       },
@@ -31639,10 +31510,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "SEM_LIE_CONCEALMENT",
         "SEM_GASLIGHTING",
-        "SEM_GUILT_TRIPPING",
-        "SEM_AI_BOT_SCAM",
         "SEM_M_LOVE_BOMBING"
       ],
       "activation": {
@@ -31785,10 +31653,6 @@
         "konflikt"
       ],
       "rating": 1,
-      "composed_of": [
-        "ATO_FACTUAL_STATEMENT",
-        "ATO_YOU_DEVALUATION"
-      ],
       "scoring": {
         "base": 1.8,
         "weight": 1.3
@@ -31846,9 +31710,6 @@
         "communication"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_GENERIC_PATTERN"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 5 messages"
       },
@@ -32006,8 +31867,7 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "SEM_TEMPORAL_CONFLICT_EXTERNAL",
-        "SEM_SELF_CONSIST_PROBE_EXT"
+        "SEM_TEMPORAL_CONFLICT_EXTERNAL"
       ],
       "activation": {
         "rule": "ANY 2 IN 6 messages",
@@ -32056,10 +31916,6 @@
       },
       "tags": [],
       "rating": 1,
-      "composed_of": [
-        "SEM_SUPPORT_VALIDATION",
-        "SEM_UNCERTAINTY_TONING"
-      ],
       "activation": {
         "rule": "ANY 3 IN 7 messages"
       },
@@ -32207,8 +32063,6 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "SEM_UNCERTAINTY_TONING",
-        "SEM_TENTATIVE_INFERENCE",
         "ATO_PROBABILISTIC"
       ],
       "activation": {
@@ -32311,11 +32165,11 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ld34_text_social_grammar.SEM_REACTION_FORMATION_TEXT",
-        "ld34_text_social_grammar.SEM_AFFECT_ISOLATION_TEXT",
-        "ld34_voice_social_grammar.SEM_UNCERTAINTY_PROSODY",
-        "ld34_voice_social_grammar.SEM_SHAME_PROSODY",
-        "ld34_voice_social_grammar.SEM_REACTION_FORMATION_AUDIO"
+        "SEM_REACTION_FORMATION_TEXT",
+        "SEM_AFFECT_ISOLATION_TEXT",
+        "SEM_UNCERTAINTY_PROSODY",
+        "SEM_SHAME_PROSODY",
+        "SEM_REACTION_FORMATION_AUDIO"
       ],
       "scoring": {
         "base": 0.62,
@@ -33233,7 +33087,6 @@
       "rating": 1,
       "composed_of": [
         "SEM_WEBCAM_EXCUSE",
-        "CLU_INDIRECT_CONFLICT_AVOIDANCE",
         "SEM_EMOTIONAL_OVERWHELM"
       ],
       "criteria": "Progressive pattern of avoidance behaviors escalating from technical excuses to systematic disengagement"
@@ -33871,9 +33724,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "SEM_WEBCAM_EXCUSE",
-        "SEM_CONTROL_ESCALATION",
-        "CLU_BOUNDARY_VIOLATION_PATTERNS"
+        "SEM_WEBCAM_EXCUSE"
       ],
       "criteria": "Strategic pattern of controlling digital engagement through technical excuses and presence manipulation"
     },
@@ -34221,9 +34072,6 @@
         "communication"
       ],
       "rating": 1,
-      "composed_of": [
-        "CLU_GENERIC_PATTERN"
-      ],
       "activation": {
         "rule": "ANY 2 IN 30 messages"
       },
@@ -34387,10 +34235,6 @@
         "prozess"
       ],
       "rating": 1,
-      "composed_of": [
-        "CLU_THERAPEUTIC_AWARENESS",
-        "CLU_DEFENSIVE_RETREAT"
-      ],
       "activation": {
         "rule": "ANY 2 IN 30 messages"
       },
@@ -34444,7 +34288,6 @@
       "rating": 1,
       "composed_of": [
         "SEM_AGGRESSIVE_BEHAVIOR",
-        "SEM_FOGGING",
         "CLU_DIGITAL_MANIPULATION"
       ],
       "activation": {
@@ -34534,7 +34377,6 @@
       "rating": 1,
       "composed_of": [
         "SEM_LOVE_BOMBING",
-        "SEM_GUILT_FRAMING",
         "SEM_POSITIVE_FUTURE"
       ],
       "activation": {
@@ -34582,7 +34424,6 @@
       "composed_of": [
         "SEM_GASLIGHTING",
         "SEM_LOVE_BOMBING",
-        "SEM_GUILT_FRAMING",
         "CLU_PSYCHOLOGICAL_DIGITAL_MANIPULATION"
       ],
       "activation": {
@@ -34635,8 +34476,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "CLU_INNER_EMPTINESS_MARKER",
-        "CLU_PURPOSE_LOSS_PATTERN"
+        "CLU_INNER_EMPTINESS_MARKER"
       ],
       "activation": {
         "rule": "ANY 2 IN 30 messages"
@@ -34971,7 +34811,6 @@
       "rating": 1,
       "composed_of": [
         "SEM_CERTAINTY_CLAIMS",
-        "CLU_EMOTIONAL_DYSREGULATION",
         "SEM_GASLIGHTING_ATTEMPT"
       ],
       "criteria": "Persistent pattern of excessive certainty claims followed by dismissal of others' emotional responses"
@@ -35183,7 +35022,6 @@
       "rating": 1,
       "composed_of": [
         "SEM_PLATFORM_SWITCH",
-        "CLU_BOUNDARY_VIOLATION_PATTERNS",
         "SEM_VALIDATION_SEEKING"
       ],
       "activation": {
@@ -35757,8 +35595,7 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "CLU_CIRCULAR_REASONING",
-        "CLU_PROCRASTINATION_LOOP"
+        "CLU_CIRCULAR_REASONING"
       ],
       "activation": {
         "rule": "AT_LEAST 2 IN 8 messages"
@@ -35812,7 +35649,6 @@
       ],
       "rating": 1,
       "composed_of": [
-        "CLU_INDIRECT_CONFLICT_AVOIDANCE",
         "SEM_SELF_REFLECTION",
         "SEM_VALIDATION_SEEKING"
       ],
@@ -35989,7 +35825,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_ACCUSATION_PHRASE",
+        "ATO_DIRECT_ACCUSATION",
         "ATO_SUPERLATIVE_PHRASE"
       ],
       "activation": {
@@ -36262,9 +36098,9 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_ANGER_EXPRESSION",
-        "ATO_SWEAR_WORD",
-        "ATO_THREAT_ESCALATION"
+        "ATO_ANGER",
+        "ATO_ESCALATION_LEXICON",
+        "ATO_THREAT_LANGUAGE"
       ],
       "activation": {
         "rule": "ANY 2 IN 3 messages"
@@ -36520,8 +36356,8 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "ATO_UNDERSTATEMENT",
-        "ATO_POWER_LANGUAGE"
+        "ATO_SOFTENING",
+        "ATO_POWER_ASSERTION"
       ],
       "activation": {
         "rule": "AT_LEAST 2 IN 3 messages"
@@ -36786,8 +36622,8 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_INDIFFERENT",
-        "ATO_NO_MOTIVATION"
+        "ATO_AFFECT_FLAT",
+        "ATO_ENERGY_LOW"
       ],
       "scoring": {
         "base": 1.2,
@@ -36850,9 +36686,6 @@
       },
       "tags": [],
       "rating": 1,
-      "composed_of": [
-        "ATO_FICTION_TOKENS"
-      ],
       "activation": {
         "rule": "AT_LEAST 1 IN 2 messages"
       },
@@ -36911,7 +36744,7 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "ATO_POWER_LANGUAGE"
+        "ATO_POWER_ASSERTION"
       ],
       "activation": {
         "rule": "AT_LEAST 1 IN 2 messages"
@@ -36971,8 +36804,7 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "ATO_FICTION_TOKENS",
-        "ATO_CONTROL_MARKERS"
+        "ATO_CONTROL_PHRASES"
       ],
       "activation": {
         "rule": "AT_LEAST 2 IN 3 messages"
@@ -37032,7 +36864,7 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "ATO_POWER_LANGUAGE"
+        "ATO_POWER_ASSERTION"
       ],
       "activation": {
         "rule": "AT_LEAST 1 IN 2 messages"
@@ -37229,8 +37061,8 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_APPEAL_TO_AUTHORITY_EXPERT",
-        "ATO_APPEAL_TO_AUTHORITY_STUDY"
+        "ATO_MORAL_AUTHORITY",
+        "ATO_MORAL_AUTHORITY"
       ],
       "activation": {
         "rule": "BOTH IN 1 message"
@@ -37303,7 +37135,7 @@
         "any_of": [
           "ATO_AVOIDANCE_PHRASE",
           "ATO_TOPIC_SWITCH_ADVERSATIVE",
-          "ATO_PREMATURE_CLOSURE"
+          "ATO_SUBJECT_CLOSED"
         ]
       },
       "activation": {
@@ -37820,9 +37652,6 @@
         "emotion"
       ],
       "rating": 1,
-      "composed_of": [
-        "ATO_UNKNOWN"
-      ],
       "activation": {
         "rule": "ANY 2 IN 3 messages"
       },
@@ -38331,7 +38160,7 @@
           "ATO_DEFENSIVENESS",
           "ATO_BLAME_SHIFT",
           "ATO_SARCASM",
-          "ATO_OUTRAGE_MARKERS",
+          "ATO_ANGER_RAGE",
           "ATO_CRITICISM_ATTACK_MARKER"
         ]
       },
@@ -38696,7 +38525,6 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_OFFENDED_SILENCE",
         "ATO_MINIMIZATION"
       ],
       "activation": {
@@ -39217,7 +39045,7 @@
       "composed_of": {
         "any_of": [
           "ATO_CONTROL_PHRASES",
-          "ATO_POWER_LANGUAGE",
+          "ATO_POWER_ASSERTION",
           "ATO_SOVEREIGNTY_OVER_SUBJECT"
         ]
       },
@@ -39284,8 +39112,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_DESIRE_VERB",
-        "ATO_OBJECT_OF_DESIRE"
+        "ATO_WANT_TERM"
       ],
       "scoring": {
         "base": 1.4,
@@ -39739,7 +39566,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_MORAL_LANGUAGE",
+        "ATO_MORAL_AUTHORITY",
         "ATO_SET_BOUNDARY"
       ],
       "activation": {
@@ -39809,7 +39636,7 @@
         "any_of": [
           "ATO_JOY",
           "ATO_POSITIVE_RESONANCE",
-          "ATO_SUPPORTIVE_LANGUAGE",
+          "ATO_SUPPORT_PHRASE",
           "ATO_GRATITUDE"
         ]
       },
@@ -39953,7 +39780,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_DOUBLE_BIND_EXPRESSIONS"
+        "ATO_DOUBLE_ENTENDRE"
       ],
       "activation": {
         "rule": "ANY 2 IN 3 messages"
@@ -40346,7 +40173,7 @@
       "rating": 1,
       "composed_of": [
         "ATO_UNCERTAINTY_PHRASE",
-        "ATO_MICRO_DISMISSAL"
+        "ATO_MINIMIZATION"
       ],
       "activation": {
         "rule": "ANY 2 IN 3 messages"
@@ -40412,7 +40239,7 @@
       "rating": 1,
       "composed_of": {
         "any_of": [
-          "ATO_PREMATURE_CLOSURE",
+          "ATO_SUBJECT_CLOSED",
           "ATO_CLOSE",
           "ATO_PACING"
         ]
@@ -40973,9 +40800,6 @@
         "scam"
       ],
       "rating": 1,
-      "composed_of": [
-        "ATO_FAKE_IDENTITY_STORY"
-      ],
       "activation": {
         "rule": "ANY 2 IN 3 messages"
       },
@@ -41034,8 +40858,7 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "ATO_FICTION_TOKENS",
-        "ATO_CONTROL_MARKERS"
+        "ATO_CONTROL_PHRASES"
       ],
       "activation": {
         "rule": "AT_LEAST 2 IN 2 messages"
@@ -41187,7 +41010,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_FIRSTTIME_CLAUSE"
+        "ATO_FIRSTTIME_CLAUSE_MARKER"
       ],
       "scoring": {
         "base": 1.2,
@@ -41251,9 +41074,6 @@
         "communication"
       ],
       "rating": 1,
-      "composed_of": [
-        "ATO_UNKNOWN"
-      ],
       "activation": {
         "rule": "ANY 2 IN 3 messages"
       },
@@ -41586,7 +41406,7 @@
       "composed_of": [
         "ATO_CARE_CHECKIN",
         "ATO_SUPPORT_MESSAGE",
-        "ATO_EMOTIONAL_WITHDRAWAL"
+        "ATO_DISENGAGEMENT_LANGUAGE"
       ],
       "activation": {
         "rule": "ANY 2 IN 10 messages"
@@ -42152,8 +41972,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_HYPERBOLE_EXTREME",
-        "ATO_TWIST"
+        "ATO_HYPERBOLE_EXTREME"
       ],
       "activation": {
         "rule": "ANY 2 IN 3 messages"
@@ -42280,7 +42099,7 @@
       "composed_of": {
         "any_of": [
           "ATO_INFLUENCE_DESIRE_STATEMENT",
-          "ATO_POWER_LANGUAGE",
+          "ATO_POWER_ASSERTION",
           "ATO_CONTROL_PHRASES",
           "ATO_SOVEREIGNTY_OVER_SUBJECT"
         ]
@@ -42354,9 +42173,6 @@
         "communication"
       ],
       "rating": 1,
-      "composed_of": [
-        "ATO_UNKNOWN"
-      ],
       "activation": {
         "rule": "ANY 2 IN 3 messages"
       },
@@ -42505,8 +42321,8 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_WE_PLAN",
-        "ATO_FUTURE_IDEA"
+        "ATO_JOINT_PLANNING",
+        "ATO_PROACTIVE_INTENTION"
       ],
       "scoring": {
         "base": 1.3,
@@ -42570,8 +42386,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_ADMISSION_CUE",
-        "ATO_FAULT_REFERENCE"
+        "ATO_BLAME_SHIFT"
       ],
       "scoring": {
         "base": 1.4,
@@ -42621,8 +42436,8 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_CRITIQUE_ELEMENT",
-        "ATO_HUMOR_SIGNAL"
+        "ATO_CRITICISM",
+        "ATO_HUMOR_LIGHT"
       ],
       "scoring": {
         "base": 1.4,
@@ -42739,7 +42554,7 @@
       "composed_of": {
         "any_of": [
           "ATO_PLATFORM",
-          "ATO_STATUS_TERMS",
+          "ATO_STATUS_SIGNALING",
           "ATO_NUMBER_MENTION"
         ]
       },
@@ -43206,8 +43021,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_INVITING_RESONANCE",
-        "ATO_SVT_BEZIEHUNG_DU_BOTSCHAFT"
+        "ATO_POSITIVE_RESONANCE"
       ],
       "activation": {
         "rule": "ANY 2 IN 3 messages"
@@ -43407,7 +43221,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_SELF_OBSERVATION",
+        "ATO_SELF_REFLECTION",
         "ATO_SELF_PATTERN_REFERENCE"
       ],
       "activation": {
@@ -43468,8 +43282,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_METAPHOR_CUE",
-        "ATO_COMPARISON_OBJECT"
+        "ATO_METAPHOR"
       ],
       "scoring": {
         "base": 1.4,
@@ -43609,9 +43422,9 @@
       "composed_of": {
         "any_of": [
           "ATO_IRONY",
-          "ATO_MOCKING_LEXICON",
-          "ATO_SARCASM_SUBTILE",
-          "ATO_SARCASM_MARKER"
+          "ATO_PUTDOWN_TEMPLATE",
+          "ATO_SARCASM_CUES",
+          "ATO_SARCASM"
         ]
       },
       "activation": {
@@ -43681,7 +43494,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_INVITING_RESONANCE",
+        "ATO_POSITIVE_RESONANCE",
         "ATO_POSITIVE_RESONANCE"
       ],
       "activation": {
@@ -44080,7 +43893,7 @@
       "rating": 1,
       "composed_of": {
         "any_of": [
-          "ATO_POWER_LANGUAGE",
+          "ATO_POWER_ASSERTION",
           "ATO_MINI_DEADLINE",
           "ATO_REQUEST_FOR_FEEDBACK",
           "ATO_CLARIFY_REQ"
@@ -44293,8 +44106,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_FLIRTING_PHRASE",
-        "ATO_BOUNDARY_CROSS"
+        "ATO_ROMANTIC_SIGNAL_DIRECT"
       ],
       "activation": {
         "rule": "ANY 2 IN 3 messages"
@@ -44552,7 +44364,6 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_HELPLESSNESS_DEPENDENCY",
         "ATO_GUILT_APPEAL_SUPPORT"
       ],
       "activation": {
@@ -44693,8 +44504,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_TITLE_WORD",
-        "ATO_PLAYFUL_TONE"
+        "ATO_HUMOR_LIGHT"
       ],
       "scoring": {
         "base": 1.4,
@@ -45826,7 +45636,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_LONG_RESPONSE_GAP"
+        "ATO_PAUSE_LONG"
       ],
       "scoring": {
         "base": 0.72
@@ -46332,7 +46142,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_SILENCE",
+        "ATO_PAUSE_LONG",
         "ATO_REQUEST_FOR_FEEDBACK"
       ],
       "activation": {
@@ -46466,9 +46276,6 @@
         "communication"
       ],
       "rating": 1,
-      "composed_of": [
-        "ATO_UNKNOWN"
-      ],
       "activation": {
         "rule": "ANY 2 IN 3 messages"
       },
@@ -46658,7 +46465,7 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "ATO_CONTROL_MARKERS"
+        "ATO_CONTROL_PHRASES"
       ],
       "activation": {
         "rule": "AT_LEAST 1 IN 1 message"
@@ -47013,10 +46820,10 @@
           "ATO_RISK_AVERSION_PHRASE",
           "ATO_CALM_LIFE_DESIRE",
           "ATO_REASSURANCE_SEEKING",
-          "ATO_ANXIETY_TERMS",
-          "SEM_ANXIETY_LANGUAGE",
-          "SEM_RISK_FORECAST",
-          "SEM_RELIABILITY_CONCERN"
+          "ATO_FEAR_ANXIETY",
+          "ATO_FEAR_ANXIETY",
+          "ATO_RISK_AVERSION_PHRASE",
+          "ATO_TRUST_DEFICIT_STATEMENT"
         ]
       },
       "activation": {
@@ -47082,8 +46889,8 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "ATO_SARCASM_MARKERS",
-        "ATO_UNDERSTATEMENT"
+        "ATO_SARCASM",
+        "ATO_SOFTENING"
       ],
       "activation": {
         "rule": "BOTH IN 2 messages"
@@ -47390,7 +47197,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_SELF_REF"
+        "ATO_SELF_REFLECTION"
       ],
       "activation": {
         "rule": "AT_LEAST 3 SELF_REF IN 5 messages"
@@ -47840,8 +47647,7 @@
       "composed_of": [
         "ATO_INTENSITY_DIP",
         "ATO_F0_VARIANCE_LOW",
-        "ATO_PAUSE_LONG",
-        "ATO_SIGH"
+        "ATO_PAUSE_LONG"
       ],
       "scoring": {
         "base": 0.7
@@ -47977,7 +47783,6 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_MEMORY_TRIGGER",
         "ATO_SHARED_CONTEXT"
       ],
       "scoring": {
@@ -48574,7 +48379,7 @@
       "rating": 1,
       "composed_of": [
         "ATO_MINIMIZATION",
-        "ATO_DELAYING_PHRASES"
+        "ATO_DELAY_WORD"
       ],
       "activation": {
         "rule": "BOTH IN 1 message"
@@ -48700,8 +48505,8 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "ATO_SPIRAL_TERMS",
-        "ATO_SARCASM_MARKERS"
+        "ATO_SPIRAL",
+        "ATO_SARCASM"
       ],
       "activation": {
         "rule": "AT_LEAST 2 IN 3 messages"
@@ -49029,7 +48834,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_FULL_STRESS",
+        "ATO_STRESS",
         "ATO_MUST_CHECK"
       ],
       "activation": {
@@ -49095,7 +48900,7 @@
       "rating": 1,
       "composed_of": [
         "ATO_STYLE_REFERENCE",
-        "ATO_CULTURAL_ELEMENT"
+        "ATO_CULTURE_TOKEN"
       ],
       "scoring": {
         "base": 1.4,
@@ -49359,7 +49164,6 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_CAUSAL_CHAIN",
         "ATO_PARTIAL_TRUTH"
       ],
       "activation": {
@@ -49731,9 +49535,9 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_TOXIC_TOKENS",
-        "ATO_POWER_LANGUAGE",
-        "ATO_CONTROL_MARKERS"
+        "ATO_ESCALATION_LEXICON",
+        "ATO_POWER_ASSERTION",
+        "ATO_CONTROL_PHRASES"
       ],
       "activation": {
         "rule": "AT_LEAST 2 IN 1 message"
@@ -50126,8 +49930,8 @@
       "tags": [],
       "rating": 1,
       "composed_of": [
-        "ATO_UNDERSTATEMENT",
-        "ATO_CONTROL_MARKERS"
+        "ATO_SOFTENING",
+        "ATO_CONTROL_PHRASES"
       ],
       "activation": {
         "rule": "BOTH IN 2 messages"
@@ -50398,7 +50202,7 @@
       "rating": 1,
       "composed_of": {
         "any_of": [
-          "ATO_SUPPORTIVE_LANGUAGE",
+          "ATO_SUPPORT_PHRASE",
           "ATO_SUPPORT_MESSAGE",
           "ATO_ACKNOWLEDGE"
         ]
@@ -50536,7 +50340,7 @@
       "rating": 1,
       "composed_of": [
         "ATO_COLD_LABEL",
-        "ATO_YOUR_FAULT_PHRASE"
+        "ATO_BLAME_SHIFT_MARKER"
       ],
       "activation": {
         "rule": "ANY 1 IN 25 messages"
@@ -54833,11 +54637,6 @@
         "learning"
       ],
       "rating": 2,
-      "composed_of": [
-        "SEM_CLEAR_COMMITMENT",
-        "SEM_DELAYING_MOVE",
-        "SEM_PROCRASTINATION_BEHAVIOR"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
@@ -54900,11 +54699,6 @@
         "learning"
       ],
       "rating": 2,
-      "composed_of": [
-        "SEM_NEGATIVE_FEEDBACK",
-        "SEM_SARCASM_IRRITATION",
-        "SEM_ESCALATION_MOVE"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 4 messages"
       },
@@ -54996,11 +54790,6 @@
         "learning"
       ],
       "rating": 2,
-      "composed_of": [
-        "SEM_SUPPORT_VALIDATION",
-        "SEM_TRUST_SIGNALING",
-        "SEM_EMOTIONAL_SUPPORT"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 6 messages"
       },
@@ -55063,11 +54852,6 @@
         "learning"
       ],
       "rating": 2,
-      "composed_of": [
-        "SEM_UNCERTAINTY_TONING",
-        "SEM_TENTATIVE_INFERENCE",
-        "SEM_PROBABILISTIC_LANGUAGE"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
       },
@@ -56091,7 +55875,6 @@
       "tags": [],
       "rating": 2,
       "composed_of": [
-        "ATO_AI_RIGHTS_FORDERUNG",
         "ATO_DYAD_WE"
       ],
       "activation": {
@@ -56757,7 +56540,7 @@
       "rating": 2,
       "composed_of": [
         "ATO_SD_BLUE_LEX",
-        "ATO_AUTHORITY_PHRASE"
+        "ATO_POWER_ASSERTION"
       ],
       "activation": {
         "rule": "BOTH IN 1 message"
@@ -56811,8 +56594,7 @@
       "tags": [],
       "rating": 2,
       "composed_of": [
-        "ATO_SD_GREEN_LEX",
-        "ATO_COMMUNITY_TALK"
+        "ATO_SD_GREEN_LEX"
       ],
       "activation": {
         "rule": "BOTH IN 1 message"

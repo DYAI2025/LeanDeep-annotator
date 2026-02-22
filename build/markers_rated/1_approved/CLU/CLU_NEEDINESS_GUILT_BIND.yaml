@@ -1,27 +1,31 @@
 id: CLU_NEEDINESS_GUILT_BIND
-display_title: "Neediness–Guilt Bind"
-version: "3.3"
+display_title: Neediness–Guilt Bind
+version: '3.3'
 lang: de
 frame:
   signal:
-  - "Moralisierende Bedürftigkeitsbindung"
-  concept: "Neediness–Guilt Bind"
-  pragmatics: "Bindung über Schuld/Bedürftigkeit"
-  narrative: "double_bind"
+  - Moralisierende Bedürftigkeitsbindung
+  concept: Neediness–Guilt Bind
+  pragmatics: Bindung über Schuld/Bedürftigkeit
+  narrative: double_bind
 pattern:
 composed_of:
-- SEM_DOUBLE_BIND_DISCLAIMER_BUT
 - SEM_PERFORMATIVE_HELPLESSNESS
 activation:
-  rule: "WINDOW_CLUSTER_AT_END"
+  rule: WINDOW_CLUSTER_AT_END
 window:
   messages: 30
 scoring:
   base: 2.6
   weight: 0.7
   decay: 0.02
-  formula: "logistic"
-tags: [clu, cluster, guilt_pressure, neediness, escalation]
+  formula: logistic
+tags:
+- clu
+- cluster
+- guilt_pressure
+- neediness
+- escalation
 examples:
   positive:
   - "Ich will dich nicht belasten, aber ich brauche das jetzt.\nIch kann das nicht allein."
@@ -39,4 +43,4 @@ examples:
   - Ich bin gerade entspannt.
 detect_class:
 criteria:
-updated_at: "2025-08-19T10:30:00Z"
+updated_at: '2025-08-19T10:30:00Z'

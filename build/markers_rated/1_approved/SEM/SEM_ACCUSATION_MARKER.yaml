@@ -1,21 +1,20 @@
-# Datei: SEM_ACCUSATION_MARKER.yaml
 id: SEM_ACCUSATION_MARKER
 lang: de
 frame:
   signal:
-  - "warum lässt du mich hängen"
-  - "du hast mir versprochen"
-  - "wie kannst du so egoistisch sein"
-  - "du schuldest mir"
-  - "du wirfst mir vor"
-  concept: "reproach and blame"
-  pragmatics: "express criticism or demand justification"
-  narrative: "confrontation"
+  - warum lässt du mich hängen
+  - du hast mir versprochen
+  - wie kannst du so egoistisch sein
+  - du schuldest mir
+  - du wirfst mir vor
+  concept: reproach and blame
+  pragmatics: express criticism or demand justification
+  narrative: confrontation
 composed_of:
-- ATO_ACCUSATION_PHRASE
+- ATO_DIRECT_ACCUSATION
 - ATO_SUPERLATIVE_PHRASE
 activation:
-  rule: "ANY 1"
+  rule: ANY 1
 scoring:
   base: 1.5
   weight: 1.2
@@ -53,5 +52,11 @@ tags:
 - blame
 - generalization
 compositionality: deterministic
-vad_estimate: {valence: -0.5, arousal: 0.75, dominance: 0.7}
-effect_on_state: {trust: -0.45, conflict: 0.6, deesc: -0.3}
+vad_estimate:
+  valence: -0.5
+  arousal: 0.75
+  dominance: 0.7
+effect_on_state:
+  trust: -0.45
+  conflict: 0.6
+  deesc: -0.3

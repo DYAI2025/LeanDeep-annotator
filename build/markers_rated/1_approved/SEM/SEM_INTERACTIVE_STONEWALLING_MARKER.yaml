@@ -7,8 +7,6 @@ frame:
   concept: Kommunikationsmuster
   pragmatics: Dialog führen
   narrative: exchange
-composed_of:
-- ATO_UNKNOWN
 activation:
   rule: ANY 2 IN 3 messages
 scoring:
@@ -41,5 +39,11 @@ examples:
 tags:
 - communication
 compositionality: deterministic
-vad_estimate: {valence: -0.5, arousal: 0.8, dominance: 0.6}
-effect_on_state: {trust: -0.3, conflict: 0.4, deesc: -0.2}
+vad_estimate:
+  valence: -0.5
+  arousal: 0.8
+  dominance: 0.6
+effect_on_state:
+  trust: -0.3
+  conflict: 0.4
+  deesc: -0.2

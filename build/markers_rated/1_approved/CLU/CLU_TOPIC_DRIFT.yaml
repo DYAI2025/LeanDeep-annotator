@@ -1,21 +1,24 @@
-schema: "LeanDeep"
-version: "3.4"
+schema: LeanDeep
+version: '3.4'
 id: CLU_TOPIC_DRIFT
 frame:
-  signal: ["cluster"]
-  concept: "Themen-Drift"
-  pragmatics: "Fokusverlust"
-  narrative: "window"
-composed_of: [SEM_SUPPORT_VALIDATION, SEM_UNCERTAINTY_TONING]
-activation: {rule: "ANY 3 IN 7 messages"}
-scoring: {base: 1.0, weight: 0.9}
+  signal:
+  - cluster
+  concept: Themen-Drift
+  pragmatics: Fokusverlust
+  narrative: window
+activation:
+  rule: ANY 3 IN 7 messages
+scoring:
+  base: 1.0
+  weight: 0.9
 examples:
   positive:
-  - "wir waren bei A … jetzt plötzlich C"
-  - "anderes Thema … obwohl Frage zu B war"
-  - "abschweifen zu X … Ziel war Y"
-  - "neue Baustelle … Fokus verloren"
-  - "seitensprung im Thema … wohin?"
+  - wir waren bei A … jetzt plötzlich C
+  - anderes Thema … obwohl Frage zu B war
+  - abschweifen zu X … Ziel war Y
+  - neue Baustelle … Fokus verloren
+  - seitensprung im Thema … wohin?
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.

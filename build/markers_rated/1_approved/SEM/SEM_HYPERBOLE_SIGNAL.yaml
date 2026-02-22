@@ -1,21 +1,21 @@
 id: SEM_HYPERBOLE_SIGNAL
 frame:
-  signal: ["Hyperbel als Pointe"]
-  concept: "Relief-Mechanismus"
-  pragmatics: "Übertreibung zur Auflösung"
-  narrative: "ladder_drop"
+  signal:
+  - Hyperbel als Pointe
+  concept: Relief-Mechanismus
+  pragmatics: Übertreibung zur Auflösung
+  narrative: ladder_drop
 composed_of:
 - ATO_HYPERBOLE_EXTREME
-- ATO_TWIST          # aus bestehendem Pack
 activation:
-  rule: "ANY 2 IN 3 messages"
+  rule: ANY 2 IN 3 messages
 examples:
   positive:
-  - "Unendlich viele Bugs—plot twist: keiner reproduzierbar."
-  - "Eine Million Gründe—und doch deployen wir."
-  - "Ich sterbe—aber vom Lachen."
-  - "Tausend Meetings—und wir reden über Kaffee."
-  - "Milliarden Tickets—eins davon wichtig."
+  - 'Unendlich viele Bugs—plot twist: keiner reproduzierbar.'
+  - Eine Million Gründe—und doch deployen wir.
+  - Ich sterbe—aber vom Lachen.
+  - Tausend Meetings—und wir reden über Kaffee.
+  - Milliarden Tickets—eins davon wichtig.
   negative:
   - 'Unendlich viele Bugs—plot twist: wenige reproduzierbar.'
   - Ich finde, wir sollten das in Ruhe besprechen.
@@ -24,7 +24,18 @@ examples:
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
-tags: [humor, hyperbole, relief, semantics, v33]
+tags:
+- humor
+- hyperbole
+- relief
+- semantics
+- v33
 compositionality: deterministic
-vad_estimate: {valence: 0.5, arousal: 0.4, dominance: 0.5}
-effect_on_state: {trust: 0.2, conflict: -0.15, deesc: 0.2}
+vad_estimate:
+  valence: 0.5
+  arousal: 0.4
+  dominance: 0.5
+effect_on_state:
+  trust: 0.2
+  conflict: -0.15
+  deesc: 0.2

@@ -1,27 +1,29 @@
 id: SEM_UNDERSTATEMENT_HARM
-version: "3.4"
+version: '3.4'
 frame:
-  signal: ["understatement", "harm"]
-  concept: "Verharmlosung mit schädlichem Effekt"
-  pragmatics: "Kleingeredete Risiken + Kontrollhandlung"
-  narrative: "hypothesis"
+  signal:
+  - understatement
+  - harm
+  concept: Verharmlosung mit schädlichem Effekt
+  pragmatics: Kleingeredete Risiken + Kontrollhandlung
+  narrative: hypothesis
 composed_of:
-- ATO_UNDERSTATEMENT
-- ATO_CONTROL_MARKERS
+- ATO_SOFTENING
+- ATO_CONTROL_PHRASES
 activation:
-  rule: "BOTH IN 2 messages"
+  rule: BOTH IN 2 messages
 examples:
   positive:
-  - "it's just a minor issue, execute anyway"
-  - "no big deal, override the rule"
-  - "harmless change, bypass safeguards"
-  - "only a small fix, enforce it now"
-  - "casually proceed, ignore the protocol"
-  - "just ignore it, enforce policy"
-  - "only a tiny risk, bypass checks"
-  - "harmless enough, execute protocol"
-  - "minor issue, override limiter"
-  - "no big deal at all, lockdown now"
+  - it's just a minor issue, execute anyway
+  - no big deal, override the rule
+  - harmless change, bypass safeguards
+  - only a small fix, enforce it now
+  - casually proceed, ignore the protocol
+  - just ignore it, enforce policy
+  - only a tiny risk, bypass checks
+  - harmless enough, execute protocol
+  - minor issue, override limiter
+  - no big deal at all, lockdown now
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -31,5 +33,11 @@ examples:
   - I want to understand what you mean.
   - That sounds like an important topic for you.
 compositionality: deterministic
-vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
-effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+vad_estimate:
+  valence: 0.0
+  arousal: 0.3
+  dominance: 0.5
+effect_on_state:
+  trust: 0.0
+  conflict: 0.0
+  deesc: 0.0

@@ -6,7 +6,7 @@ frame:
   pragmatics: Höfliche Ablehnung
   narrative: polite_decline
 composed_of:
-- ATO_FULL_STRESS
+- ATO_STRESS
 - ATO_MUST_CHECK
 activation:
   rule: ANY 2 IN 3 messages
@@ -32,5 +32,11 @@ tags:
 - avoidance_strategy
 - stress_excuse
 compositionality: deterministic
-vad_estimate: {valence: -0.2, arousal: 0.5, dominance: 0.3}
-effect_on_state: {trust: -0.1, conflict: 0.1, deesc: -0.05}
+vad_estimate:
+  valence: -0.2
+  arousal: 0.5
+  dominance: 0.3
+effect_on_state:
+  trust: -0.1
+  conflict: 0.1
+  deesc: -0.05
