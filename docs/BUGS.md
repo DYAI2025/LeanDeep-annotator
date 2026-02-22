@@ -19,39 +19,13 @@
 
 ---
 
-## Critical (blocks correct analysis)
-
-### BUG-002: CLU-Layer produziert nur 403 Detections auf 99K Nachrichten
-**Layer:** CLU
-**Severity:** Critical
-**Impact:** 21/121 CLUs feuern. After P0-1 ref cleanup, 133 CLU→SEM refs were removed because target SEMs don't exist. Many CLUs now have fewer composed_of refs than intended.
-
-**Top missing SEM targets (most referenced by CLUs):**
-
-| Missing SEM-ID | CLU-Marker betroffen |
-|----------------|---------------------|
-| `SEM_UNCERTAINTY_TONING` | 6 |
-| `SEM_GENERIC_PATTERN` | 5 |
-| `SEM_SUPPORT_VALIDATION` | 4 |
-| `SEM_TENTATIVE_INFERENCE` | 3 |
-| `SEM_SARCASM_IRRITATION` | 3 |
-| `SEM_ANGER_ESCALATION` | 3 |
-| `SEM_SADNESS_EXPRESSIONS` | 3 |
-| `SEM_TRUST_SIGNALING` | 3 |
-
-**Zusätzlich:** Einige CLUs haben malformed `composed_of` — JSON-Dicts statt Strings:
-```yaml
-# Current (weird):
-composed_of:
-  - {'marker_ids': ['SEM_PROJECTION_TEXT'], 'weight': 0.33}
-# Should be:
-composed_of:
-  - SEM_PROJECTION_TEXT
-```
-
-**Fix:** → SPEC-P0-2 (CLU Reference Repair) — create missing SEMs or map to equivalents
+### ~~BUG-002: CLU-Layer produziert nur 403 Detections auf 99K Nachrichten~~ — FIXED (P0-2)
+**Fixed:** 2026-02-22
+**Result:** 64/121 CLUs fire (was 21, +205%), 7,192 detections (was 403, +1,685%). All 121 CLUs enriched with composed_of refs. Engine require logic changed to ANY match, k_of_n removed. Critical normalizer bug fixed (REPO pointed to legacy repo). MEMA cascading improvement: 22 unique (was 15).
 
 ---
+
+## Critical (blocks correct analysis)
 
 ### BUG-003: 7 Marker mit Layer "UNKNOWN"
 **Layer:** N/A
@@ -133,6 +107,26 @@ composed_of:
 | `SEM_REPAIR_GESTURE` | ~21 | min_components:1, fires on any deescalation ATO |
 
 **Fix:** Raise `min_components` or add negative patterns for these high-frequency SEMs.
+
+---
+
+### BUG-017: SEM unique count dropped from 66 to 56 after normalizer fix
+**Layer:** SEM
+**Severity:** Medium-High
+**Impact:** 10 fewer SEMs firing after switching from legacy repo registry to correct project registry. The legacy repo had additional/different SEM markers that inflated the count. Current 56 is the true number from the correct data source.
+
+**Root Cause:** Normalizer REPO path was pointing to legacy repo (`WTME_ALL_Marker-LD3.4.1-5.1`). After fixing to correct project path, the registry reflects actual markers_rated content.
+
+**Fix:** Create the 10 missing SEMs if they're genuinely needed, or accept 56 as correct baseline.
+
+---
+
+### BUG-018: CLU avg confidence is low (0.43)
+**Layer:** CLU
+**Severity:** Medium
+**Impact:** CLU detections fire but with low confidence. Many CLUs match only 1 of several composed_of refs. The ANY-match logic means a single ref hit = detection, but confidence = hits/total_refs, so 1/5 = 0.20.
+
+**Fix:** Consider adjusting confidence formula for CLUs — perhaps use a minimum floor or weight by ref importance.
 
 ---
 

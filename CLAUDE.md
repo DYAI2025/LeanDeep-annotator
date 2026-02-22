@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-LeanDeep 5.0: deterministischer Annotations-Layer for psychological/conversational pattern detection. Four-layer hierarchy: **ATO** (atomic regex signals) -> **SEM** (semantic blends) -> **CLU** (cluster intuitions) -> **MEMA** (meta markers). Pure Python, no LLM dependency. ~850 markers, regex-based detection with VAD emotion tracking, episode detection, and persona profiling.
+LeanDeep 5.0: deterministischer Annotations-Layer for psychological/conversational pattern detection. Four-layer hierarchy: **ATO** (atomic regex signals) -> **SEM** (semantic blends) -> **CLU** (cluster intuitions) -> **MEMA** (meta markers). Pure Python, no LLM dependency. 848 markers, regex-based detection with VAD emotion tracking, episode detection, and persona profiling.
 
 **Repo:** `DYAI2025/LeanDeep-annotator` (migrated 2026-02-21 from bloated WTME_ALL_Marker legacy repo)
 
@@ -98,19 +98,33 @@ python3 tools/eval_dynamics.py       # Emotion dynamics eval (VAD/UED/state tren
 
 | Dimension | Status | Detail |
 |-----------|--------|--------|
-| Markers | 849 total | 717 Rating-1, 125 Rating-2 (415 ATO, 238 SEM, 121 CLU, 68 MEMA) |
-| VAD Coverage | 72% | 618/849 with vad_estimate + effect_on_state |
-| ATO Detection | Solid | 0.905 avg confidence, 251 unique firing |
-| SEM Detection | **Improved** | 66/238 fire (was 27), 25K detections, 0.81 avg conf |
-| CLU Detection | Weak | 21 unique, 403 detections on 99K msgs, 0 broken refs |
-| MEMA Detection | MVP | 15 unique, keyword-based heuristic, no stateful tracking |
+| Markers | 848 total | 714 Rating-1, 125 Rating-2 (415 ATO, 237 SEM, 121 CLU, 68 MEMA) |
+| VAD Coverage | 72% | 618/848 with vad_estimate + effect_on_state |
+| ATO Detection | Solid | 0.905 avg confidence, 251 unique firing, 87K detections |
+| SEM Detection | **Improved** | 56/237 fire, 21K detections, 0.82 avg conf |
+| CLU Detection | **Improved** | 64 unique (+205%), 7,192 detections (+1,685%), 0.43 avg conf |
+| MEMA Detection | **Improved** | 22 unique (+47%), 5,313 detections (+110%), 0.61 avg conf |
 | Persona System | Done | CRUD + warm-start + 5 episode types + predictions |
 | Tests | 72 pass | API, dynamics, VAD, personas, engine |
 | Prosody | Stable | 6 emotions from 17 structural text features |
-| Broken refs | 0 | All composed_of refs valid after P0-1 fix |
+| Broken refs | 0 | All composed_of refs valid |
+| Total Detections | 121,555 | 393 unique markers firing across all layers |
 
-### What's done (P0-1 SEM-Layer Reanimation, 2026-02-22)
+### What's done
 
+**P0-2: CLU-Layer Reanimation (2026-02-22)**
+- 121/121 CLUs enriched with `composed_of` refs (was 71 empty)
+- Engine: dict `composed_of` format with `require`/`negative_evidence` fully supported
+- Engine: `require` changed from ALL→ANY match (at least 1 ref active = CLU fires)
+- Engine: `k_of_n` logic removed entirely (user decision: CLUs too important to gate)
+- Normalizer: fixed REPO path (was pointing to legacy repo — all YAML edits were invisible!)
+- Normalizer: `components` alias support added (alongside `composed_of`/`ingredients`)
+- Normalizer: nested `markers: [{id: ...}]` YAML wrapper format now parsed
+- Deleted duplicate `CLU_SELF_DISCLOSURE.yaml` (had wrong ID, overwrote CLU_SECRET_BONDING)
+- CLU unique: 21→64 (+205%), detections: 403→7,192 (+1,685%)
+- MEMA cascading improvement: 15→22 unique (+47%), 2,534→5,313 detections (+110%)
+
+**P0-1: SEM-Layer Reanimation (2026-02-22)**
 - Engine default activation: `ANY 1` (was `ALL` — blocked 96% of SEMs)
 - Normalizer: `activation_logic` → `activation` mapping for 32 SEMs
 - `min_components` activation format supported in engine
@@ -121,21 +135,20 @@ python3 tools/eval_dynamics.py       # Emotion dynamics eval (VAD/UED/state tren
 ### What remains to production-ready (MCP/API)
 
 **Must-have (blocks launch):**
-1. **P0-2: CLU Reference Repair** — 21 CLUs fire, target ≥50
-2. **P1-2: API Hardening** — auth, rate-limiting, CORS, error schema
-3. **P3-2: Deployment** — Dockerfile + Fly.io/VPS
-4. **P3-4: MCP Server** — FastMCP wrapper around existing endpoints
+1. **P1-2: API Hardening** — auth, rate-limiting, CORS, error schema
+2. **P3-2: Deployment** — Dockerfile + Fly.io/VPS
+3. **P3-4: MCP Server** — FastMCP wrapper around existing endpoints
 
 **Should-have (improves value):**
-5. P0-3: Dead Marker Cleanup (7 UNKNOWN layer, 15 orphan SEMs)
-6. P1-3: LLM-Bridge Endpoint (structured context for LLM interpretation)
-7. P2-2: Marker Descriptions (only 30% have >20 char descriptions)
+4. P0-3: Dead Marker Cleanup (7 UNKNOWN layer, 15 orphan SEMs)
+5. P1-3: LLM-Bridge Endpoint (structured context for LLM interpretation)
+6. P2-2: Marker Descriptions (only 30% have >20 char descriptions)
 
 **Nice-to-have:**
-8. P1-1: Persona Dashboard UI
-9. P1-4: Monetization (Stripe, 3-tier pricing)
-10. P3-1: CI/CD eval pipeline
-11. P3-3: WebSocket streaming
+7. P1-1: Persona Dashboard UI
+8. P1-4: Monetization (Stripe, 3-tier pricing)
+9. P3-1: CI/CD eval pipeline
+10. P3-3: WebSocket streaming
 
 See `docs/ROADMAP.md` for full specs and production checklist.
 

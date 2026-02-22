@@ -19,17 +19,18 @@ Deterministischer Annotations-Layer für menschliche Kommunikation. Kein LLM nö
 
 | Dimension | Status | Metric |
 |-----------|--------|--------|
-| Markers total | 849 | 714 Rating-1, 125 Rating-2 |
-| VAD-Coverage | 72% | 618/849 mit vad_estimate + effect_on_state |
-| ATO Detection | Solid | 0.905 avg confidence, 251 unique feuern |
-| SEM Detection | Verbessert | 66/238 feuern (was 27), 25K detections, 0.81 avg conf |
-| CLU Detection | Schwach | 21 unique, 403 detections auf 99K Nachrichten |
-| MEMA Detection | MVP | 15 unique, detect_class heuristisch, kein stateful tracking |
+| Markers total | 848 | 714 Rating-1, 125 Rating-2 (415 ATO, 237 SEM, 121 CLU, 68 MEMA) |
+| VAD-Coverage | 72% | 618/848 mit vad_estimate + effect_on_state |
+| ATO Detection | Solid | 0.905 avg confidence, 251 unique, 87K detections |
+| SEM Detection | Verbessert | 56/237 feuern, 21K detections, 0.82 avg conf |
+| CLU Detection | **Verbessert** | 64 unique (+205%), 7,192 detections (+1,685%), 0.43 avg conf |
+| MEMA Detection | **Verbessert** | 22 unique (+47%), 5,313 detections (+110%), 0.61 avg conf |
 | Persona System | Done | CRUD + warm-start + episodes + predictions |
 | Prosody | Stabil | 6 Emotionen, 17 Features, 20K+ Trainingsdaten |
 | Gold-Corpus | 99K msgs | 1543 Chunks, 6 Jahre WhatsApp, DE-fokussiert |
 | Tests | 72 pass | API, dynamics, VAD, personas, engine |
-| Broken Refs | 0 | Alle composed_of Refs valide nach P0-1 |
+| Broken Refs | 0 | Alle composed_of Refs valide nach P0-1 + P0-2 |
+| Total Detections | 121,555 | 393 unique markers feuern über alle Layer |
 | Englisch | Untested | 620 msgs im Corpus, Patterns DE-lastig |
 
 ---
@@ -46,7 +47,7 @@ What's needed to ship LeanDeep as a public MCP/API service:
 | 2 | 72 Tests grün | DONE | — |
 | 3 | SEM-Layer funktioniert (P0-1) | DONE (66 SEMs) | — |
 | 4 | 0 broken refs | DONE | — |
-| 5 | CLU-Layer verbessern (P0-2) | TODO | 1 Tag |
+| 5 | CLU-Layer verbessern (P0-2) | **DONE** (64 CLUs) | — |
 | 6 | API Hardening (P1-2): auth, CORS, error schema | TODO | 1-2 Tage |
 | 7 | Dockerfile + Deployment (P3-2) | TODO | 0.5 Tag |
 | 8 | MCP Server wrapper (P3-4) | TODO | 0.5 Tag |
@@ -71,7 +72,7 @@ What's needed to ship LeanDeep as a public MCP/API service:
 | 17 | English expansion (P2-1) | TODO | 5+ Tage |
 | 18 | MEMA stateful upgrade (P2-3) | TODO | 3-5 Tage |
 
-**Minimum viable launch = items 1-8 (3-4 Tage Arbeit)**
+**Minimum viable launch = items 6-8 (1.5-2 Tage Arbeit)**
 
 ---
 
@@ -93,25 +94,29 @@ What's needed to ship LeanDeep as a public MCP/API service:
 
 **Files changed:** `api/engine.py`, `tools/normalize_schema.py`, `tools/fix_all_refs.py`, 122 YAML files
 
+### P0-2: CLU-Layer Reanimation — DONE (2026-02-22)
+
+**Result:** 64 unique CLUs firing (was 21, +205%), 7,192 detections (was 403, +1,685%)
+
+| Change | Impact |
+|--------|--------|
+| 121/121 CLUs enriched with `composed_of` refs | 50 previously empty CLUs now have detection mechanism |
+| Engine: dict `composed_of` with `require`/`negative_evidence` | Full support for structured CLU definitions |
+| Engine: `require` changed ALL→ANY match | CLUs fire when at least 1 ref active (not all required) |
+| Engine: `k_of_n` logic removed | User decision: CLUs too important to gate with thresholds |
+| Normalizer: REPO path fixed (was legacy repo!) | All YAML edits in markers_rated/ now actually take effect |
+| Normalizer: `components` alias + nested `markers:` format | 3 CLUs with non-standard format now parsed correctly |
+| Deleted duplicate CLU_SELF_DISCLOSURE.yaml | Was overwriting CLU_SECRET_BONDING with wrong data |
+
+**Cascading effect:** MEMA layer improved 15→22 unique (+47%), 2,534→5,313 detections (+110%) — MEMA detects meta-patterns from active CLU pool.
+
+**SEM count change:** 66→56 unique. Expected — previous count came from legacy repo's registry; correct project registry has fewer SEMs.
+
+**Files changed:** `api/engine.py`, `tools/normalize_schema.py`, 121 CLU YAML files, 1 file deleted
+
 ---
 
 ## Remaining Initiatives — Priorisiert
-
-### P0-2: CLU Reference Repair
-**Status:** TODO
-**Impact:** Hoch — aktiviert Cluster-Erkennung (21 → ≥50 CLUs)
-**Aufwand:** 1 Tag
-
-**Problem:** CLU-Layer produziert nur 403 Detections auf 99K Nachrichten. Viele CLUs referenzieren SEM-IDs die nach P0-1 immer noch nicht existieren (die 133 removed refs in fix_all_refs waren mostly CLU→SEM dead refs). Die CLU `composed_of` format is inconsistent (some use dict with `marker_ids` + `weight`).
-
-**Schritte:**
-1. Create missing SEM markers that CLUs reference (or map to existing equivalents)
-2. Normalize CLU `composed_of` format (dict → string list where possible)
-3. Tune CLU window parameters (default 10 messages may be too narrow)
-
-> *Full spec: [SPEC-P0-2]*
-
----
 
 ### P0-3: Dead Marker Cleanup
 **Status:** TODO
@@ -302,25 +307,11 @@ Endpoint `POST /v1/analyze/interpret` that formats marker detections as structur
 
 ---
 
-### SPEC-P0-2: CLU Reference Repair
+### SPEC-P0-2: CLU-Layer Reanimation — DONE
 
-**Problem:**
-After P0-1, composed_of refs across all layers resolve to valid IDs (0 broken). But 133 CLU→SEM refs were *removed* because the target SEMs don't exist. This means many CLUs have fewer refs than intended, or empty composed_of.
+**Completed 2026-02-22.** See "Completed Initiatives" section above.
 
-**Ziel:**
-- ≥ 50 CLUs feuern auf dem Gold-Corpus (aktuell: 21)
-
-**Schritte:**
-
-1. **Audit remaining CLU composed_of** — wie viele haben jetzt ≤1 ref?
-2. **Create missing SEM targets** — für die 10 most-referenced missing SEMs (SEM_UNCERTAINTY_TONING, SEM_SUPPORT_VALIDATION, SEM_SARCASM_IRRITATION etc.), create actual SEM markers with patterns
-3. **Normalize composed_of format** — dict `{marker_ids, weight}` → flat string list
-4. **Tune window parameters** — evaluate `window.messages: 20` vs 10 on gold corpus
-
-**Erfolgskriterium:**
-```bash
-python3 tools/eval_corpus.py  # CLU unique_markers >= 50
-```
+**Result:** 64 unique CLUs firing (target was ≥50). Approach differed from original plan: instead of creating missing SEMs, enriched all 121 CLUs with valid `composed_of` refs, fixed engine logic, and fixed critical normalizer bug (wrong REPO path).
 
 ---
 
