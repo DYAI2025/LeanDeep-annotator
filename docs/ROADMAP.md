@@ -1,6 +1,6 @@
 # LeanDeep Annotator — Product Roadmap
 
-> Last updated: 2026-02-21
+> Last updated: 2026-02-22
 > Status: Active development, Pre-launch
 
 ## Vision
@@ -11,127 +11,284 @@ Deterministischer Annotations-Layer für menschliche Kommunikation. Kein LLM nö
 - **Base** (stateless): Einzeltext- und Konversationsanalyse, VAD-Trajektorien, UED-Metriken, Prosody-Emotionserkennung
 - **Pro** (persistent): Persona-Profile mit EWMA-Warm-Start, Episode-Tracking, Shift-Prädiktionen über Sessions hinweg
 
+**Distribution:** REST API + MCP Server für AI-Agent-Integration (Claude, Cursor, custom agents)
+
 ---
 
-## Current State (v5.1-LD5)
+## Current State (v5.1-LD5, 2026-02-22)
 
 | Dimension | Status | Metric |
 |-----------|--------|--------|
 | Markers total | 849 | 714 Rating-1, 125 Rating-2 |
 | VAD-Coverage | 72% | 618/849 mit vad_estimate + effect_on_state |
 | ATO Detection | Solid | 0.905 avg confidence, 251 unique feuern |
-| SEM Detection | Schwach | Nur 27/238 feuern (11.3%), 96.6% patternlos |
-| CLU Detection | Fast tot | 30 Detections auf 99K Nachrichten, 40.5% broken refs |
-| MEMA Detection | MVP | detect_class heuristisch, kein stateful tracking |
-| Persona System | Neu | CRUD + warm-start + episodes + predictions |
+| SEM Detection | Verbessert | 66/238 feuern (was 27), 25K detections, 0.81 avg conf |
+| CLU Detection | Schwach | 21 unique, 403 detections auf 99K Nachrichten |
+| MEMA Detection | MVP | 15 unique, detect_class heuristisch, kein stateful tracking |
+| Persona System | Done | CRUD + warm-start + episodes + predictions |
 | Prosody | Stabil | 6 Emotionen, 17 Features, 20K+ Trainingsdaten |
 | Gold-Corpus | 99K msgs | 1543 Chunks, 6 Jahre WhatsApp, DE-fokussiert |
 | Tests | 72 pass | API, dynamics, VAD, personas, engine |
+| Broken Refs | 0 | Alle composed_of Refs valide nach P0-1 |
 | Englisch | Untested | 620 msgs im Corpus, Patterns DE-lastig |
 
 ---
 
-## Initiatives — Priorisiert nach Kundenwert
+## Production Readiness Checklist
 
-### P0 — Kritisch (SEM/CLU-Layer reparieren)
+What's needed to ship LeanDeep as a public MCP/API service:
 
-Ohne funktionierenden SEM/CLU-Layer ist das System ein glorifizierter Regex-Matcher. Die 4-Layer-Hierarchie ist das Alleinstellungsmerkmal — aktuell arbeiten nur 2 von 4 Layern zuverlässig.
+### Must-Have (blocks launch)
 
-#### P0-1: SEM-Layer Reanimation
-**Impact:** Hoch — verdreifacht die Analysetiefe
-**Aufwand:** Mittel (2-3 Tage)
+| # | Item | Status | Effort |
+|---|------|--------|--------|
+| 1 | API funktioniert lokal (11 endpoints) | DONE | — |
+| 2 | 72 Tests grün | DONE | — |
+| 3 | SEM-Layer funktioniert (P0-1) | DONE (66 SEMs) | — |
+| 4 | 0 broken refs | DONE | — |
+| 5 | CLU-Layer verbessern (P0-2) | TODO | 1 Tag |
+| 6 | API Hardening (P1-2): auth, CORS, error schema | TODO | 1-2 Tage |
+| 7 | Dockerfile + Deployment (P3-2) | TODO | 0.5 Tag |
+| 8 | MCP Server wrapper (P3-4) | TODO | 0.5 Tag |
 
-> *Spec: [SPEC-P0-1]*
+### Should-Have (improves quality)
 
-#### P0-2: CLU Reference Repair
-**Impact:** Hoch — aktiviert Cluster-Erkennung (Eskalationsmuster, Grief-Cluster)
-**Aufwand:** Mittel (1-2 Tage)
+| # | Item | Status | Effort |
+|---|------|--------|--------|
+| 9 | Dead Marker Cleanup (P0-3) | TODO | 0.5 Tag |
+| 10 | LLM-Bridge Endpoint (P1-3) | TODO | 1 Tag |
+| 11 | Marker Descriptions >50 chars (P2-2) | TODO | 1-2 Tage |
+| 12 | OpenAPI docs vervollständigen | TODO | 0.5 Tag |
 
-> *Spec: [SPEC-P0-2]*
+### Nice-to-Have (post-launch)
 
-#### P0-3: Dead Marker Cleanup
+| # | Item | Status | Effort |
+|---|------|--------|--------|
+| 13 | Persona Dashboard UI (P1-1) | TODO | 2-3 Tage |
+| 14 | Monetization/Stripe (P1-4) | TODO | 2-3 Tage |
+| 15 | CI/CD eval pipeline (P3-1) | TODO | 1 Tag |
+| 16 | WebSocket streaming (P3-3) | TODO | 2 Tage |
+| 17 | English expansion (P2-1) | TODO | 5+ Tage |
+| 18 | MEMA stateful upgrade (P2-3) | TODO | 3-5 Tage |
+
+**Minimum viable launch = items 1-8 (3-4 Tage Arbeit)**
+
+---
+
+## Completed Initiatives
+
+### P0-1: SEM-Layer Reanimation — DONE (2026-02-22)
+
+**Result:** 66 unique SEMs firing (was 27, +144%)
+
+| Change | Impact |
+|--------|--------|
+| Engine default `ANY 1` (was `ALL`) | ~59 SEMs with no activation field become fireable |
+| Normalizer: `activation_logic` → `activation` mapping | 32 SEMs regain their intended rules |
+| Engine: `min_components` activation format support | Structured activation dicts respected |
+| `fix_all_refs.py` targets `markers_rated/` | Fixes survive normalizer rebuilds |
+| 79 refs remapped, 133 dead refs removed | 0 broken refs remaining |
+
+**Gap to 120 target:** 101 SEMs need 2+ ATOs in same message. The `IN N messages` window logic in activation rules is parsed but not tracked in single-message mode. Phase 4 (direct regex patterns from positive examples) would close the gap.
+
+**Files changed:** `api/engine.py`, `tools/normalize_schema.py`, `tools/fix_all_refs.py`, 122 YAML files
+
+---
+
+## Remaining Initiatives — Priorisiert
+
+### P0-2: CLU Reference Repair
+**Status:** TODO
+**Impact:** Hoch — aktiviert Cluster-Erkennung (21 → ≥50 CLUs)
+**Aufwand:** 1 Tag
+
+**Problem:** CLU-Layer produziert nur 403 Detections auf 99K Nachrichten. Viele CLUs referenzieren SEM-IDs die nach P0-1 immer noch nicht existieren (die 133 removed refs in fix_all_refs waren mostly CLU→SEM dead refs). Die CLU `composed_of` format is inconsistent (some use dict with `marker_ids` + `weight`).
+
+**Schritte:**
+1. Create missing SEM markers that CLUs reference (or map to existing equivalents)
+2. Normalize CLU `composed_of` format (dict → string list where possible)
+3. Tune CLU window parameters (default 10 messages may be too narrow)
+
+> *Full spec: [SPEC-P0-2]*
+
+---
+
+### P0-3: Dead Marker Cleanup
+**Status:** TODO
 **Impact:** Mittel — reduziert Rauschen, beschleunigt Engine
-**Aufwand:** Klein (halber Tag)
+**Aufwand:** 0.5 Tag
 
-> *Spec: [SPEC-P0-3]*
+- 7 markers with layer "UNKNOWN" (ACT_*, EMO_* prefixes)
+- 15 orphan SEMs (no patterns, no composed_of after P0-1 cleanup)
+- Reclassify or remove
+
+> *Full spec: [SPEC-P0-3]*
 
 ---
 
-### P1 — Hoch (Nutzer-facing Features)
-
-#### P1-1: Persona Dashboard UI
-**Impact:** Sehr hoch — macht Pro-Tier greifbar
-**Aufwand:** Mittel (2-3 Tage)
-
-> *Spec: [SPEC-P1-1]*
-
-#### P1-2: Annotator-as-a-Service API Hardening
+### P1-2: API Hardening für Produktion
+**Status:** TODO — **blocks launch**
 **Impact:** Hoch — Voraussetzung für externen Zugang
-**Aufwand:** Mittel (1-2 Tage)
+**Aufwand:** 1-2 Tage
 
-> *Spec: [SPEC-P1-2]*
+**What exists:** Basic auth middleware (disabled), sliding-window rate limiter, CORS wildcard, Pydantic validation.
 
-#### P1-3: LLM-Bridge Endpoint
-**Impact:** Hoch — ermöglicht "Marker + LLM"-Workflow
-**Aufwand:** Klein-Mittel (1-2 Tage)
+**What's needed:**
+1. **Auth activation:** `LEANDEEP_REQUIRE_AUTH=true` as prod default, API key create/revoke CLI
+2. **Error response schema:** Standardized `{"error": {"code": "...", "message": "...", "detail": ...}}`
+3. **CORS:** Configurable origins via env (not wildcard `*`)
+4. **Rate limiting:** Per-key tier limits with `X-RateLimit-*` headers, `429` with `Retry-After`
+5. **OpenAPI docs:** Complete endpoint descriptions, request/response examples
+6. **Input validation:** Enforce max text length in engine (not just Pydantic)
 
-> *Spec: [SPEC-P1-3]*
-
-#### P1-4: Monetarisierung — Freemium API + Tiered Pricing
-**Impact:** Sehr hoch — Revenue-Grundlage
-**Aufwand:** Mittel (2-3 Tage)
-
-> *Spec: [SPEC-P1-4]*
+> *Full spec: [SPEC-P1-2]*
 
 ---
 
-### P2 — Mittel (Qualität & Abdeckung)
-
-#### P2-1: Englisch-Expansion
-**Impact:** Mittel-Hoch — öffnet internationalen Markt
-**Aufwand:** Groß (5+ Tage)
-
-> *Spec: [SPEC-P2-1]*
-
-#### P2-2: Marker-Beschreibungen vervollständigen
-**Impact:** Mittel — verbessert API-Dokumentation und LLM-Bridge-Qualität
-**Aufwand:** Mittel (2-3 Tage)
-
-> *Spec: [SPEC-P2-2]*
-
-#### P2-3: MEMA Stateful Upgrade
-**Impact:** Mittel — macht Organismus-Diagnose produktionsreif
-**Aufwand:** Groß (3-5 Tage)
-
-> *Spec: [SPEC-P2-3]*
-
----
-
-### P3 — Nice-to-have
-
-#### P3-1: Eval-Pipeline CI/CD
-**Impact:** Niedrig-Mittel — automatisierte Qualitätssicherung
-**Aufwand:** Klein (1 Tag)
-
-> *Spec: [SPEC-P3-1]*
-
-#### P3-2: Deployment (Vercel/Fly.io)
+### P3-2: Deployment
+**Status:** TODO — **blocks launch**
 **Impact:** Mittel — macht API öffentlich erreichbar
-**Aufwand:** Klein (halber Tag)
+**Aufwand:** 0.5 Tag
 
-> *Spec: [SPEC-P3-2]*
+```dockerfile
+FROM python:3.12-slim
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY api/ api/
+COPY build/markers_normalized/ build/markers_normalized/
+COPY personas/ personas/
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8420"]
+```
 
-#### P3-3: WebSocket Streaming für Echtzeit-Analyse
-**Impact:** Niedrig — Feature für Live-Chat-Integration
-**Aufwand:** Mittel (2 Tage)
+**Options:** Fly.io ($5/mo, recommended), VPS (srv1308064.hstgr.cloud, already have), Railway
 
-> *Spec: [SPEC-P3-3]*
+**Env config:**
+- `LEANDEEP_REQUIRE_AUTH=true`
+- `LEANDEEP_PERSONAS_DIR=/data/personas` (persistent volume)
 
-#### P3-4: Skyll + MCP Distribution
-**Impact:** Mittel — macht LeanDeep für jeden AI-Agent entdeckbar
-**Aufwand:** Klein (halber Tag)
+---
 
-> *Spec: [SPEC-P3-4]*
+### P3-4: MCP Server — AI-Agent Distribution
+**Status:** TODO — **blocks MCP launch**
+**Impact:** Mittel-Hoch — makes LeanDeep discoverable by every AI agent
+**Aufwand:** 0.5 Tag
+
+**Implementation:** FastMCP wrapper around existing FastAPI endpoints.
+
+```python
+# mcp_server.py
+from fastmcp import FastMCP
+mcp = FastMCP("LeanDeep Annotator")
+
+@mcp.tool()
+def analyze_text(text: str, threshold: float = 0.5) -> dict:
+    """Detect 850+ psychological/communication patterns in text."""
+    return engine.analyze_text(text, threshold=threshold)
+
+@mcp.tool()
+def analyze_conversation(messages: list[dict], threshold: float = 0.5) -> dict:
+    """Analyze multi-message conversation with VAD tracking and state indices."""
+    return engine.analyze_conversation(messages, threshold=threshold)
+
+@mcp.tool()
+def search_markers(layer: str = None, family: str = None, search: str = None) -> dict:
+    """Search and filter the 850+ marker registry."""
+    results, total = engine.search_markers(layer=layer, family=family, search=search)
+    return {"total": total, "markers": [m.to_dict() for m in results]}
+
+@mcp.tool()
+def get_marker(marker_id: str) -> dict:
+    """Get full details for a specific marker including patterns and examples."""
+    m = engine.get_marker(marker_id)
+    return m.to_dict() if m else {"error": "not found"}
+```
+
+**MCP Config for clients:**
+```json
+{
+  "mcpServers": {
+    "leandeep": {
+      "url": "https://api.leandeep.app/mcp"
+    }
+  }
+}
+```
+
+**Tools exposed:**
+- `analyze_text` — Single text, returns markers + confidence + matches
+- `analyze_conversation` — Multi-message, returns markers + VAD + episodes + state
+- `search_markers` — Filter by layer/family/tag, full-text search
+- `get_marker` — Full marker detail with frame, patterns, examples
+- `create_persona` — (Pro) Create persistent persona profile
+- `predict_persona` — (Pro) Get shift predictions from accumulated data
+
+**Also:** Create `SKILL.md` for Skyll/skills.sh registry discovery.
+
+---
+
+### P1-3: LLM-Bridge Endpoint
+**Status:** TODO
+**Impact:** Hoch — ermöglicht "Marker + LLM"-Workflow
+**Aufwand:** 1 Tag
+
+Endpoint `POST /v1/analyze/interpret` that formats marker detections as structured LLM context. No LLM call required — returns a markdown block that any LLM can use as system prompt context.
+
+> *Full spec: [SPEC-P1-3]*
+
+---
+
+### P1-1: Persona Dashboard UI
+**Status:** TODO
+**Impact:** Sehr hoch — macht Pro-Tier greifbar
+**Aufwand:** 2-3 Tage
+
+> *Full spec: [SPEC-P1-1]*
+
+---
+
+### P1-4: Monetarisierung — Freemium API + Tiered Pricing
+**Status:** TODO
+**Impact:** Sehr hoch — Revenue-Grundlage
+**Aufwand:** 2-3 Tage
+
+3-Tier Model:
+- **Free:** 100 req/day, ATO-only, no VAD
+- **Base ($29/mo):** 10K req/day, all stateless endpoints, 4 layers
+- **Pro ($99/mo):** 100K req/day, personas, predictions, WebSocket
+
+> *Full spec: [SPEC-P1-4]*
+
+---
+
+### P2-1: Englisch-Expansion
+**Status:** TODO
+**Aufwand:** 5+ Tage
+
+> *Full spec: [SPEC-P2-1]*
+
+### P2-2: Marker-Beschreibungen vervollständigen
+**Status:** TODO
+**Aufwand:** 2-3 Tage
+
+> *Full spec: [SPEC-P2-2]*
+
+### P2-3: MEMA Stateful Upgrade
+**Status:** TODO
+**Aufwand:** 3-5 Tage
+
+> *Full spec: [SPEC-P2-3]*
+
+### P3-1: Eval-Pipeline CI/CD
+**Status:** TODO
+**Aufwand:** 1 Tag
+
+> *Full spec: [SPEC-P3-1]*
+
+### P3-3: WebSocket Streaming
+**Status:** TODO
+**Aufwand:** 2 Tage
+
+> *Full spec: [SPEC-P3-3]*
 
 ---
 
@@ -139,85 +296,31 @@ Ohne funktionierenden SEM/CLU-Layer ist das System ein glorifizierter Regex-Matc
 
 ---
 
-### SPEC-P0-1: SEM-Layer Reanimation
+### SPEC-P0-1: SEM-Layer Reanimation — DONE
 
-**Problem:**
-96.6% der SEM-Marker (230/238) haben keine eigenen Regex-Patterns und verlassen sich ausschließlich auf `composed_of` ATO-Referenzen. Viele dieser Referenzen zeigen auf ATO-IDs die nicht existieren oder nie feuern. Ergebnis: Nur 27 von 238 SEMs detektieren überhaupt.
-
-9 SEMs sind vollständig verwaist — weder Patterns noch composed_of.
-
-**Ziel:**
-≥ 120 SEMs feuern auf dem Gold-Corpus (5x Steigerung).
-
-**Schritte:**
-
-1. **Audit composed_of-Chains** (Tool: `tools/audit_sem_chains.py` — NEU)
-   - Für jeden SEM: prüfe ob alle composed_of ATO-Refs im Registry existieren
-   - Für jeden SEM: prüfe ob die referenzierten ATOs auf dem Gold-Corpus feuern
-   - Output: `docs/sem_audit.json` mit Status pro SEM (alive/broken_ref/dead_ato/orphan)
-
-2. **Fix broken ATO-Referenzen** (Tool: `tools/fix_sem_refs.py` — NEU)
-   - Fuzzy-Mapping: `SEM_ANGER_ESCALATION` → `composed_of: [ATO_ANGER_WORD, ATO_ESCALATION_PHRASE]`
-   - Strategie: SEM-ID-Keywords → passende existierende ATOs matchen
-   - Review-Output: CSV mit Vorschlägen, manuelles Approval
-
-3. **Eigene Patterns für Top-50 SEMs** (manuell + Tool-unterstützt)
-   - Die 50 SEMs mit höchstem erwartetem Impact (basierend auf Family, CLU-Abhängigkeiten) bekommen eigene Regex-Patterns
-   - Tool `tools/discover_patterns.py` nutzen für Bigram/Collocation-Discovery
-   - Patterns in source YAML (`build/markers_rated/`) eintragen
-
-4. **Orphan-Cleanup**
-   - 9 verwaiste SEMs: entweder mit Patterns bestücken oder als Rating-4 markieren und aus Registry entfernen
-
-**Erfolgskriterium:**
-```bash
-python3 tools/eval_corpus.py  # SEM unique_markers >= 120 (aktuell: 27)
-```
-
-**Dateien:**
-- NEU: `tools/audit_sem_chains.py`
-- NEU: `tools/fix_sem_refs.py`
-- EDIT: `build/markers_rated/1_approved/SEM/*.yaml` (Pattern-Ergänzungen)
-- EDIT: `build/markers_normalized/SEM/*.yaml` (nach Normalize-Run)
+**Completed 2026-02-22.** See "Completed Initiatives" section above.
 
 ---
 
 ### SPEC-P0-2: CLU Reference Repair
 
 **Problem:**
-49/121 CLU-Marker (40.5%) referenzieren SEM-IDs die nicht existieren. 77 einzigartige broken Refs. Einige CLUs haben malformed composed_of (JSON-Dicts statt Strings). Der CLU-Layer produziert nur 30 Detections auf 99K Nachrichten — praktisch inaktiv.
+After P0-1, composed_of refs across all layers resolve to valid IDs (0 broken). But 133 CLU→SEM refs were *removed* because the target SEMs don't exist. This means many CLUs have fewer refs than intended, or empty composed_of.
 
 **Ziel:**
-- 0 broken Refs
-- ≥ 50 CLUs feuern auf dem Gold-Corpus
+- ≥ 50 CLUs feuern auf dem Gold-Corpus (aktuell: 21)
 
 **Schritte:**
 
-1. **Systematic Ref-Audit** (Tool: `tools/fix_clu_refs.py` — existiert, erweitern)
-   - Bestehenden Fuzzy-Matcher verbessern: semantische Äquivalenz-Tabelle
-   - Malformed dict-Refs (`{'marker_ids': [...]}`) → Strings normalisieren
-   - Output: Mapping-Tabelle broken_ref → resolved_ref (oder "UNRESOLVABLE")
-
-2. **SEM-ID Alignment** — hängt von P0-1 ab
-   - Sobald SEM-Layer reanimiert: CLU-Refs gegen die neuen/fixierten SEM-IDs abgleichen
-   - Automatisches Re-Mapping wo eindeutig
-
-3. **Window-Parameter tunen**
-   - Default `window.messages: 10` ist für kurze Chats zu eng
-   - Für WhatsApp-Konversationen: `window.messages: 20` evaluieren
-   - A/B-Eval auf Gold-Corpus
-
-**Abhängigkeit:** P0-1 (SEM-Reanimation) sollte zuerst laufen.
+1. **Audit remaining CLU composed_of** — wie viele haben jetzt ≤1 ref?
+2. **Create missing SEM targets** — für die 10 most-referenced missing SEMs (SEM_UNCERTAINTY_TONING, SEM_SUPPORT_VALIDATION, SEM_SARCASM_IRRITATION etc.), create actual SEM markers with patterns
+3. **Normalize composed_of format** — dict `{marker_ids, weight}` → flat string list
+4. **Tune window parameters** — evaluate `window.messages: 20` vs 10 on gold corpus
 
 **Erfolgskriterium:**
 ```bash
-python3 tools/eval_corpus.py  # CLU unique_markers >= 50, 0 broken refs in audit
+python3 tools/eval_corpus.py  # CLU unique_markers >= 50
 ```
-
-**Dateien:**
-- EDIT: `tools/fix_clu_refs.py` (erweitern)
-- EDIT: `build/markers_rated/*/CLU/*.yaml`
-- EDIT: `build/markers_rated/*/MEMA/*.yaml` (gleiche Ref-Probleme)
 
 ---
 
@@ -225,34 +328,15 @@ python3 tools/eval_corpus.py  # CLU unique_markers >= 50, 0 broken refs in audit
 
 **Problem:**
 - 7 Marker mit Layer "UNKNOWN" (ACT_*, EMO_* Prefixes)
-- 9 verwaiste SEMs (weder Patterns noch composed_of)
-- 92 Marker in 7 Families (SD, INTUITION, ABSENCE, CONFLICT, REPAIR, PERSONA, SELF) mit 0% Detection Rate
-- Tote Marker verlangsamen Engine und erzeugen Noise in der API-Ausgabe
+- 15 verwaiste SEMs (weder Patterns noch composed_of nach P0-1 Cleanup)
+- Tote Marker verlangsamen Engine und erzeugen Noise
 
 **Ziel:**
 Jeder Marker im Registry feuert entweder oder ist explizit als `draft` getaggt.
 
 **Schritte:**
-
-1. **UNKNOWN-Layer reklassifizieren**
-   - `ACT_*` → ATO (Verhaltensmarker) oder SEM (wenn komplex)
-   - `EMO_*` → ATO (Emotionslexikon) mit `ATO_EMO_` Prefix
-   - Oder entfernen wenn redundant
-
-2. **Zero-Detection Marker triagen**
-   - 92 Marker prüfen: Pattern-Problem (fixbar) oder konzeptionell tot?
-   - Fixbare → Patterns ergänzen (Teil von P0-1)
-   - Konzeptionell tote → Rating auf 4 setzen, aus 1_approved/2_good verschieben
-
-3. **Registry-Rebuild**
-   ```bash
-   python3 tools/normalize_schema.py
-   python3 -m pytest tests/ -x -q  # Keine Regression
-   ```
-
-**Dateien:**
-- EDIT: `build/markers_rated/` (verschieben/löschen)
-- EDIT: `tools/normalize_schema.py` (UNKNOWN-Layer handling)
+1. **UNKNOWN-Layer reklassifizieren** — ACT_ → ATO, EMO_ → ATO_EMO_ oder entfernen
+2. **15 orphan SEMs** — entweder Patterns ergänzen oder nach `3_needs_work/` verschieben
 
 ---
 
@@ -270,28 +354,6 @@ Eine HTML-Seite `/persona` mit:
 - Prediction-Widget (Shift-Wahrscheinlichkeiten als Donut-Chart)
 - Konversation analysieren mit gewählter Persona
 
-**Schritte:**
-
-1. **HTML/JS Page** (`api/static/persona.html`)
-   - Dark Theme konsistent mit bestehenden UIs (#1a1a2e bg, #e94560 accent)
-   - Chart.js für VAD-Trajectory + State-Indices (2 Charts)
-   - Episode-Timeline als horizontale Bar mit Tooltips
-   - Persona-Selector Dropdown + "New Persona" Button
-   - Textarea für Konversations-Input (gleich wie Playground)
-
-2. **Route** in `api/main.py`
-   ```python
-   @app.get("/persona", response_class=HTMLResponse)
-   ```
-
-3. **API-Calls vom Frontend:**
-   - `POST /v1/personas` → Persona erstellen
-   - `POST /v1/analyze/dynamics` mit `persona_token` → Analysieren + akkumulieren
-   - `GET /v1/personas/{token}` → Profil laden für Dashboard
-   - `GET /v1/personas/{token}/predict` → Prädiktionen anzeigen
-
-**Abhängigkeit:** Keine (Persona-API existiert bereits).
-
 **Dateien:**
 - NEU: `api/static/persona.html`
 - EDIT: `api/main.py` (1 Route)
@@ -306,36 +368,37 @@ Die API ist aktuell ein Dev-Server: Auth deaktiviert, kein HTTPS, keine Input-Va
 **Ziel:**
 Produktionsreife API die extern genutzt werden kann.
 
-**Schritte:**
+**What exists already:**
+- `api/auth.py`: API key verification, sliding-window rate limiter (in-memory)
+- `api/config.py`: `LEANDEEP_REQUIRE_AUTH`, `rate_limit_per_minute`, `max_text_length`
+- `api/models.py`: Pydantic schemas for all endpoints
+- CORS middleware (wildcard)
+- OpenAPI auto-docs at `/docs` and `/redoc`
+
+**What's needed:**
 
 1. **Auth-System aktivieren**
    - `LEANDEEP_REQUIRE_AUTH=true` als Prod-Default
-   - API-Key-Management: Create/Revoke via Admin-Endpoint oder CLI-Tool
-   - Rate-Limiting pro Key (bereits implementiert, testen)
+   - CLI tool or admin endpoint for API key create/revoke
+   - Keys stored in `api_keys.json` (already supported)
 
-2. **Input Sanitization**
-   - Max-Text-Length Enforcement (50K chars — bereits in Pydantic, in Engine doppelt prüfen)
-   - Persona-Token: UUID-Validierung (bereits implementiert)
-   - Injection-Schutz: Regex-Patterns nicht aus User-Input bauen (aktuell safe, dokumentieren)
-
-3. **Error Response Schema**
-   - Standardisiertes Error-Format: `{"error": {"code": "...", "message": "...", "detail": ...}}`
+2. **Error Response Schema**
+   - Standardisiertes Format: `{"error": {"code": "...", "message": "...", "detail": ...}}`
    - Dokumentierte HTTP-Status-Codes pro Endpoint
    - 429 Rate-Limit mit Retry-After Header
 
-4. **OpenAPI-Dokumentation**
-   - Endpoint-Beschreibungen vervollständigen (aktuell teilweise leer)
-   - Request/Response-Examples in OpenAPI-Schema
-   - `/docs` und `/redoc` aktiviert lassen
-
-5. **CORS konfigurieren**
-   - `allow_origins=["*"]` → konfigurierbar via Env-Variable
+3. **CORS konfigurieren**
+   - `allow_origins=["*"]` → konfigurierbar via `LEANDEEP_CORS_ORIGINS`
    - Für Prod: explizite Origin-Liste
+
+4. **OpenAPI-Dokumentation**
+   - Endpoint-Beschreibungen vervollständigen
+   - Request/Response-Examples in OpenAPI-Schema
 
 **Dateien:**
 - EDIT: `api/main.py` (Error handling, CORS)
-- EDIT: `api/auth.py` (Key management)
-- EDIT: `api/config.py` (Prod-Defaults)
+- EDIT: `api/auth.py` (Key management CLI)
+- EDIT: `api/config.py` (Prod-Defaults, CORS config)
 - EDIT: `api/models.py` (Error-Schema)
 
 ---
@@ -343,398 +406,105 @@ Produktionsreife API die extern genutzt werden kann.
 ### SPEC-P1-3: LLM-Bridge Endpoint
 
 **Problem:**
-Die Marker liefern harte Signale (welche Patterns erkannt, VAD-Werte, State-Indices). Aber die **Interpretation** — was bedeutet das für diese Beziehung, was ist der nächste Schritt — braucht kontextuelle Intelligenz. LLMs sind dafür ideal, aber ohne strukturierten Marker-Kontext halluzinieren sie.
+Die Marker liefern harte Signale (welche Patterns erkannt, VAD-Werte, State-Indices). Aber die **Interpretation** — was bedeutet das für diese Beziehung, was ist der nächste Schritt — braucht kontextuelle Intelligenz.
 
 **Ziel:**
 Ein Endpoint der Marker-Annotationen als strukturierten Kontext für einen LLM-Prompt aufbereitet.
 
-**Schritte:**
+**Endpoint:** `POST /v1/analyze/interpret`
+- Input: `ConversationRequest` + optional `model: str`
+- Output: Structured markdown context block for LLM consumption
 
-1. **Endpoint** `POST /v1/analyze/interpret`
-   - Input: `ConversationRequest` + `model: str` (optional, für Routing)
-   - Intern: ruft `analyze_conversation()` auf
-   - Output: Strukturierter Kontext-Block (Markdown oder JSON) der direkt als LLM-System-Prompt oder User-Kontext nutzbar ist
+**Template:**
+```markdown
+## Marker Analysis Context
 
-2. **Kontext-Template:**
-   ```markdown
-   ## Marker Analysis Context
+**Conversation:** {n} messages between {speakers}
+**Emotional State:** Valence {v}, Arousal {a} (home base)
+**State Indices:** Trust {trust}, Conflict {conflict}, De-escalation {deesc}
 
-   **Conversation:** {n} messages between {speakers}
-   **Emotional State:** Valence {v}, Arousal {a} (home base)
-   **State Indices:** Trust {trust}, Conflict {conflict}, De-escalation {deesc}
+### Detected Patterns
+- {marker_id}: {description} (confidence {conf}, messages {indices})
 
-   ### Detected Patterns
-   - {marker_id}: {description} (confidence {conf}, messages {indices})
-   ...
+### Temporal Dynamics
+- {trend}: {marker_id} {direction} over conversation
 
-   ### Temporal Dynamics
-   - {trend}: {marker_id} {direction} over conversation
-
-   ### Speaker Baselines
-   - {speaker}: baseline valence {v}, {shift_count} shifts detected
-
-   ### Episode Indicators
-   - {episode_type}: {duration} messages, VAD delta {delta}
-   ```
-
-3. **Optionaler LLM-Call** (wenn API-Key konfiguriert)
-   - `LEANDEEP_LLM_PROVIDER=anthropic|openai|none`
-   - Wenn `none`: gibt nur den Kontext-Block zurück (Nutzer ruft LLM selbst)
-   - Wenn Provider konfiguriert: sendet Kontext + Conversation an LLM, gibt Interpretation zurück
+### Episode Indicators
+- {episode_type}: {duration} messages, VAD delta {delta}
+```
 
 **Dateien:**
 - EDIT: `api/main.py` (1 neuer Endpoint)
 - NEU: `api/interpret.py` (Kontext-Template-Builder)
-- EDIT: `api/config.py` (LLM-Provider Settings)
-- EDIT: `api/models.py` (InterpretRequest/Response)
-
----
-
-### SPEC-P2-1: Englisch-Expansion
-
-**Problem:**
-98.7% des Gold-Corpus ist Deutsch. Die meisten Regex-Patterns sind DE-spezifisch (Compound-Words, Modalpartikeln). Englische Texte werden nur von den wenigen bilingualen Patterns erkannt. ATO_DEPRESSION_SELF_FOCUS matcht "me"/"I" — viel zu breit für Englisch.
-
-**Ziel:**
-≥ 200 ATO-Patterns mit englischen Varianten. Separater EN-Eval-Corpus.
-
-**Schritte:**
-
-1. **Pattern-Audit: DE-only vs. bilingual**
-   - Alle 936 kompilierten Patterns klassifizieren: DE-only / EN-only / bilingual
-   - Tool: `tools/audit_language_coverage.py` (NEU)
-
-2. **EN-Patterns für Top-100 ATOs**
-   - Die 100 meistfeuernden ATOs: englische Regex-Varianten erstellen
-   - Word-Boundaries (`\b`) für englische Wörter (keine Compound-Words)
-   - Vorsicht: "I"/"me" Pronomen nicht als Marker-Trigger (zu breit)
-
-3. **EN-Eval-Corpus**
-   - Mindestens 5K englische Nachrichten (Quelle: öffentliche Conversation-Datasets)
-   - Oder: synthetisch via LLM-Translation des DE-Corpus (mit manueller Stichprobe)
-
-4. **ATO_DEPRESSION_SELF_FOCUS Fix**
-   - DE: Pattern beibehalten (funktioniert)
-   - EN: Restriktivere Patterns (`I feel worthless`, `I can't do anything right`, nicht `I`/`me` standalone)
-
-**Dateien:**
-- NEU: `tools/audit_language_coverage.py`
-- EDIT: `build/markers_rated/*/ATO/*.yaml` (EN-Patterns)
-- NEU: `eval/gold_corpus_en.jsonl`
-
----
-
-### SPEC-P2-2: Marker-Beschreibungen vervollständigen
-
-**Problem:**
-Nur 30% der Marker (255/849) haben Beschreibungen >20 Zeichen. Für die API-Dokumentation, den LLM-Bridge-Endpoint (P1-3), und das Nutzer-Verständnis sind gute Beschreibungen essentiell.
-
-**Ziel:**
-100% der Rating-1 Marker haben Beschreibungen ≥50 Zeichen.
-
-**Schritte:**
-
-1. **Tool: Batch-Description-Generator** (`tools/enrich_descriptions.py` — NEU)
-   - Input: Marker-YAML mit ID, frame, tags, patterns, examples
-   - Output: 1-2 Satz Beschreibung basierend auf Frame-Semantik
-   - Logik: Frame-Felder (signal, concept, pragmatics, narrative) → Template-basierte Description
-   - Fallback: ID-Parsing (`ATO_BLAME_SHIFT` → "Detects linguistic patterns associated with blame-shifting behavior")
-
-2. **Review-Pass**
-   - Generierte Beschreibungen als PR, manuelles Review der Top-100
-
-**Dateien:**
-- NEU: `tools/enrich_descriptions.py`
-- EDIT: `build/markers_rated/*/ATO/*.yaml`, `*/SEM/*.yaml` etc.
-
----
-
-### SPEC-P2-3: MEMA Stateful Upgrade
-
-**Problem:**
-MEMA detect_class ist aktuell ein stateless Keyword-Matcher. Echte Meta-Diagnose braucht Session-State: "Kommunikationsmuster X hat sich über 3 Sessions verschlechtert" statt "Keyword Y ist in diesem Gespräch aktiv".
-
-**Ziel:**
-MEMA-Layer nutzt Persona-Daten (wenn verfügbar) für longitudinale Diagnose.
-
-**Schritte:**
-
-1. **Persona-aware MEMA Detection**
-   - `engine.detect_mema()` bekommt optionalen Persona-Kontext
-   - detect_class `trend_analysis`: prüft `state_trajectory` über Sessions
-   - detect_class `cycle_detection`: prüft `episodes` auf wiederkehrende Muster
-   - detect_class `absence_meta`: prüft ob historisch vorhandene positive Marker verschwunden sind
-
-2. **Neue detect_classes**
-   - `longitudinal_regression`: State-Index verschlechtert sich über ≥3 Sessions
-   - `pattern_consolidation`: Gleiche Episode-Typen häufen sich
-   - `baseline_shift`: Speaker-EWMA hat sich signifikant verschoben vs. erste Session
-
-**Abhängigkeit:** Persona-System (bereits implementiert).
-
-**Dateien:**
-- EDIT: `api/engine.py` (detect_mema erweitern)
-- EDIT: `api/main.py` (Persona-Kontext durchreichen)
-
----
-
-### SPEC-P3-1: Eval-Pipeline CI/CD
-
-**Ziel:**
-Automatische Qualitätsprüfung bei jedem Push.
-
-**Schritte:**
-
-1. **GitHub Action** (`.github/workflows/eval.yml`)
-   ```yaml
-   on: push
-   jobs:
-     test:
-       - pytest tests/ -x -q
-     eval:
-       - python3 tools/eval_corpus.py --threshold 0.3 --quick
-       - Assert: ATO unique_markers >= 250
-       - Assert: SEM unique_markers >= 27  # Erhöhen nach P0-1
-       - Assert: avg_confidence ATO >= 0.85
-   ```
-
-2. **Eval-Badge** im README
-
-**Dateien:**
-- NEU: `.github/workflows/eval.yml`
-- NEU: `README.md` (mit Badges)
-
----
-
-### SPEC-P3-2: Deployment
-
-**Ziel:**
-API öffentlich erreichbar auf eigener Domain.
-
-**Optionen:**
-- **Fly.io** (empfohlen): Docker-Container, $5/Monat, auto-scaling
-- **Vercel**: Serverless, cold-start-Probleme bei großem Registry-Load
-- **VPS** (srv1308064.hstgr.cloud): Bereits vorhanden, aber überlastet
-
-**Schritte:**
-
-1. **Dockerfile**
-   ```dockerfile
-   FROM python:3.12-slim
-   COPY requirements.txt .
-   RUN pip install -r requirements.txt
-   COPY api/ api/
-   COPY build/markers_normalized/ build/markers_normalized/
-   COPY personas/ personas/
-   CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8420"]
-   ```
-
-2. **Env-Konfiguration**
-   - `LEANDEEP_REQUIRE_AUTH=true`
-   - `LEANDEEP_PERSONAS_DIR=/data/personas` (persistentes Volume)
-
-**Dateien:**
-- NEU: `Dockerfile`
-- NEU: `fly.toml` oder `vercel.json`
-
----
-
-### SPEC-P3-3: WebSocket Streaming
-
-**Ziel:**
-Echtzeit-Analyse für Live-Chat-Integration (z.B. Therapie-Tool das während der Sitzung annotiert).
-
-**Schritte:**
-
-1. **WebSocket Endpoint** (`/ws/analyze`)
-   - Client sendet Nachrichten einzeln
-   - Server antwortet mit inkrementellen Detections + VAD-Updates
-   - Persona-Token optional für Session-Tracking
-
-2. **Inkrementelle Engine**
-   - ATO/SEM: per-message (bereits möglich)
-   - CLU: sliding window über letzte N Nachrichten
-   - State-Indices: akkumulierend
-
-**Dateien:**
-- EDIT: `api/main.py` (WebSocket Route)
-- NEU: `api/streaming.py` (inkrementelle Analyse-Logik)
 
 ---
 
 ### SPEC-P1-4: Monetarisierung — Freemium API + Tiered Pricing
 
-**Problem:**
-LeanDeep hat einen funktionierenden Annotator mit 850+ Markern, VAD-Tracking, Persona-System und Prosody-Erkennung — aber kein Revenue-Modell. Die Engine ist zu wertvoll für rein Open-Source und zu komplex für einfaches SaaS-Pricing.
+**3-Tier Model:**
 
-**Monetarisierungsstrategie: 3-Tier Freemium**
+| Tier | Rate Limit | Endpoints | Price |
+|------|-----------|-----------|-------|
+| Free | 100/day | analyze, markers, health | $0 |
+| Base | 10K/day | + conversation, dynamics | $29/mo |
+| Pro | 100K/day | + personas, predictions, WebSocket | $99/mo |
 
-#### Tier 1: Free (Developer / Trial)
-- **Rate Limit:** 100 Requests/Tag
-- **Endpoints:** `/v1/analyze` (Einzeltext), `/v1/markers` (Read-only)
-- **Features:** ATO-Layer only, keine VAD, keine Dynamics
-- **Auth:** API-Key (self-service via Landing Page)
-- **Zweck:** Entwickler testen, Integrationen bauen, Lock-in erzeugen
+**Implementation:** Stripe integration, tier-based API key gating, usage tracking.
 
-#### Tier 2: Base ($29/Monat oder $290/Jahr)
-- **Rate Limit:** 10.000 Requests/Tag
-- **Endpoints:** Alle stateless Endpoints (analyze, conversation, dynamics, markers)
-- **Features:** Alle 4 Layer, VAD-Tracking, UED-Metriken, Prosody, State-Indices
-- **Kein:** Persona-System, Predictions, WebSocket
-- **Zielgruppe:** Indie-Entwickler, kleine Apps, Dating-App-Integrationen
-
-#### Tier 3: Pro ($99/Monat oder $990/Jahr)
-- **Rate Limit:** 100.000 Requests/Tag
-- **Endpoints:** Alles inkl. Personas, Predictions, LLM-Bridge, WebSocket (wenn verfügbar)
-- **Features:** Persona-Profiles, EWMA Warm-Start, Episode-Tracking, Shift-Predictions, Priority Support
-- **Zielgruppe:** Therapie-Plattformen, Coaching-Tools, Forschung, Enterprise
-
-#### Revenue-Projektion (konservativ)
-
-| Monat | Free | Base | Pro | MRR |
-|-------|------|------|-----|-----|
-| M1 | 50 | 5 | 1 | $244 |
-| M3 | 200 | 15 | 3 | $732 |
-| M6 | 500 | 40 | 10 | $2,150 |
-| M12 | 1000 | 100 | 30 | $5,870 |
-
-Konversion: Free→Base ~3%, Base→Pro ~10% (Branchenstandard für Developer-Tools).
-
-#### Implementierung
-
-1. **Stripe-Integration** (`api/billing.py` — NEU)
-   - Stripe Checkout Sessions für Subscription-Start
-   - Webhook für `invoice.paid`, `customer.subscription.deleted`
-   - API-Key ↔ Stripe Customer ID Mapping
-   - Kein eigenes Payment-UI — Stripe Hosted Checkout
-
-2. **Tier-basiertes Rate-Limiting** (`api/auth.py` — erweitern)
-   - API-Key hat Tier-Attribut (free/base/pro)
-   - Rate-Limit pro Key: `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `Retry-After`
-   - Endpoint-Gating: Free-Keys bekommen 403 auf `/v1/analyze/dynamics`
-   ```python
-   TIER_LIMITS = {
-       "free":  {"daily": 100,    "endpoints": ["analyze", "markers", "health"]},
-       "base":  {"daily": 10000,  "endpoints": ["analyze", "conversation", "dynamics", "markers", "health"]},
-       "pro":   {"daily": 100000, "endpoints": ["*"]},
-   }
-   ```
-
-3. **Self-Service Key Management** (`api/static/signup.html` — NEU)
-   - E-Mail + Stripe Checkout → API-Key per Mail
-   - Dashboard: Usage-Stats, Tier-Upgrade, Key-Rotation
-   - Kein eigenes User-System — Stripe Customer Portal für Billing
-
-4. **Landing Page** (statisch, `/` Route)
-   - Pricing-Tabelle (3 Tiers)
-   - Live-Demo (Free-Tier Playground)
-   - API-Dokumentation Link
-   - "Get API Key" → Stripe Checkout
-
-5. **Usage-Tracking** (`api/usage.py` — NEU)
-   - Request-Counter pro API-Key (in-memory + periodic flush to SQLite/JSON)
-   - Daily Reset um Mitternacht UTC
-   - Usage-Stats Endpoint: `GET /v1/usage` (authenticated)
-
-**Zusätzliche Revenue-Streams:**
-
-- **Corpus-as-a-Service:** Anonymisierte Gold-Corpus-Statistiken als Benchmark-Dataset ($499 einmalig)
-- **Custom Marker Packs:** Branchenspezifische Marker (Dating-Safety, HR-Screening, Therapie) als Add-ons ($49/Pack)
-- **White-Label API:** Für Plattformen die LeanDeep unter eigenem Branding einbetten (Enterprise, Preis auf Anfrage)
-
-**Abhängigkeiten:**
-- P1-2 (API Hardening) muss zuerst laufen (Auth, Rate-Limiting, Error-Schema)
-- P3-2 (Deployment) muss parallel laufen (API muss öffentlich erreichbar sein)
-
-**Erfolgskriterium:**
-- Woche 1: Stripe-Integration live, 3 Tiers funktional
-- Monat 1: ≥50 Free-Keys, ≥5 Base-Subscriptions
-- Monat 3: $500+ MRR
-
-**Dateien:**
-- NEU: `api/billing.py` (Stripe-Integration)
-- NEU: `api/usage.py` (Usage-Tracking)
-- NEU: `api/static/signup.html` (Self-Service Key Management)
-- NEU: `api/static/landing.html` (Pricing + Demo)
-- EDIT: `api/auth.py` (Tier-basiertes Gating)
-- EDIT: `api/config.py` (Stripe Keys, Tier-Limits)
-- EDIT: `api/main.py` (Usage-Middleware, Landing-Route)
-- EDIT: `requirements.txt` (+stripe)
+**Abhängigkeiten:** P1-2 (API Hardening), P3-2 (Deployment)
 
 ---
 
-### SPEC-P3-4: Skyll + MCP Distribution
+### SPEC-P2-1: Englisch-Expansion
 
-**Problem:**
-LeanDeep ist nur nutzbar wenn Entwickler aktiv davon erfahren und die API manuell integrieren. Im AI-Agent-Ökosystem entdecken Agents Skills zur Laufzeit — über Plattformen wie Skyll (REST API + MCP für Skill-Discovery) und skills.sh.
+**Ziel:** ≥ 200 ATO-Patterns mit englischen Varianten. Separater EN-Eval-Corpus.
 
-**Ziel:**
-Jeder AI-Agent (Claude Code, Cursor, custom agents) kann LeanDeep per `search_skills("conversation analysis")` finden und sofort nutzen. Zwei Distributionswege:
+**Key issue:** ATO_DEPRESSION_SELF_FOCUS matcht "I"/"me" — viel zu breit für EN.
 
-#### Weg 1: SKILL.md für Skyll/skills.sh Registry
-
-Eine `SKILL.md` die Agents erklärt wie sie die LeanDeep API nutzen:
-
-```markdown
----
-name: LeanDeep Annotator
-description: Detect psychological patterns in conversations with VAD emotion tracking
-version: 5.1
-tools: [Bash, WebFetch]
 ---
 
-# LeanDeep Conversation Annotator
+### SPEC-P2-2: Marker-Beschreibungen vervollständigen
 
-Analyze text for 850+ psychological/communication markers across 4 layers...
+**Ziel:** 100% der Rating-1 Marker haben Beschreibungen ≥50 Zeichen.
 
-## Usage
-curl -X POST https://api.leandeep.app/v1/analyze \
-  -H "Authorization: Bearer $LEANDEEP_API_KEY" \
-  -d '{"text": "Du hörst mir nie zu!"}'
+**Current:** Nur 30% (255/849) haben description > 20 Zeichen.
+
+---
+
+### SPEC-P2-3: MEMA Stateful Upgrade
+
+**Ziel:** MEMA-Layer nutzt Persona-Daten für longitudinale Diagnose.
+
+**Neue detect_classes:** `longitudinal_regression`, `pattern_consolidation`, `baseline_shift`
+
+---
+
+### SPEC-P3-1: Eval-Pipeline CI/CD
+
+```yaml
+on: push
+jobs:
+  test:
+    - pytest tests/ -x -q
+  eval:
+    - python3 tools/eval_corpus.py --threshold 0.3 --quick
+    - Assert: ATO unique >= 250, SEM unique >= 60, avg_conf ATO >= 0.85
 ```
 
-Registrierung:
-1. `SKILL.md` im LeanDeep-annotator Repo erstellen
-2. PR an `assafelovic/skyll` → `registry/SKILLS.md` Eintrag
-3. Automatisch über `api.skyll.app/search?q=conversation+analysis` auffindbar
+---
 
-#### Weg 2: LeanDeep als MCP-Server
+### SPEC-P3-2: Deployment
 
-Nativer MCP-Server der direkt in Claude Desktop / Cursor / any MCP-Client eingebunden wird:
+**Dockerfile + Fly.io/VPS.** See Deployment section above.
 
-```json
-{
-  "mcpServers": {
-    "leandeep": {
-      "url": "https://api.leandeep.app/mcp"
-    }
-  }
-}
-```
+---
 
-MCP-Tools:
-- `analyze_text` — Einzeltext-Analyse
-- `analyze_conversation` — Multi-Message mit VAD + State
-- `create_persona` — Persona erstellen (Pro)
-- `get_persona_prediction` — Shift-Prädiktionen (Pro)
+### SPEC-P3-3: WebSocket Streaming
 
-Implementierung: FastMCP Wrapper um bestehende FastAPI-Endpoints.
+**Endpoint:** `/ws/analyze` — inkrementelle per-message Analysis für Live-Chat-Integration.
 
-**Monetarisierung über Distribution:**
-- Skyll/skills.sh = kostenlose Entdeckung → treibt Traffic zur API
-- Free-Tier-Key = Einstieg → Konversion zu Base/Pro
-- MCP = nahtlose Integration → höhere Retention (Agent nutzt API automatisch)
-- Jeder MCP-Call = API-Request = zählt gegen Rate-Limit = Revenue
+---
 
-**Aufwand:**
-- SKILL.md + Registry-PR: 2 Stunden
-- MCP-Server (FastMCP Wrapper): 4 Stunden
+### SPEC-P3-4: MCP Server + Skyll Distribution
 
-**Abhängigkeiten:**
-- P3-2 (Deployment) — API muss öffentlich erreichbar sein
-- P1-4 (Monetarisierung) — API-Keys müssen funktionieren
-
-**Dateien:**
-- NEU: `SKILL.md` (Agent-Skill-Definition)
-- NEU: `mcp_server.py` (FastMCP Wrapper)
-- EDIT: `requirements.txt` (+fastmcp)
+**FastMCP wrapper** + `SKILL.md` for registry. See MCP Server section above.

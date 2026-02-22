@@ -1,34 +1,34 @@
 # LeanDeep Annotator — Known Bugs & Technical Debt
 
-> Last updated: 2026-02-21
+> Last updated: 2026-02-22
 
-## Critical (blocks correct analysis)
+## Fixed
 
-### BUG-001: 96.6% der SEM-Marker können nicht feuern
-**Layer:** SEM
-**Severity:** Critical
-**Impact:** Nur 27/238 SEMs detektieren. 211 SEMs sind effektiv tot.
+### ~~BUG-001: 96.6% der SEM-Marker können nicht feuern~~ — FIXED (P0-1)
+**Fixed:** 2026-02-22
+**Result:** 66/238 SEMs fire (was 27). Engine default changed to `ANY 1`, normalizer maps `activation_logic`, 0 broken refs.
+**Remaining:** 172 SEMs still don't fire — most need 2+ ATOs in same message or use conversation-window rules not tracked in single-message mode.
 
-**Root Cause:** 230 SEMs haben keine eigenen Regex-Patterns und verlassen sich auf `composed_of` ATO-Referenzen. Viele dieser Referenzen zeigen auf ATOs die nicht existieren oder nie feuern. 9 SEMs haben weder Patterns noch composed_of (vollständig verwaist).
+### ~~BUG-014: fix_all_refs.py edits markers_normalized (gets overwritten)~~ — FIXED (P0-1)
+**Fixed:** 2026-02-22
+**Result:** `fix_all_refs.py` now targets `markers_rated/` (the source of truth).
 
-**Verwaiste SEMs:**
-- `SEM_CHILD_RESISTANCE`, `SEM_PARENTAL_AUTHORITY`, `SEM_SIBLING_RIVALRY`
-- `SEM_CONSIST_EVAL_EXTERNAL`, `SEM_DEF_DRIFT_EXTERNAL`, `SEM_FACT_CONFLICT_EXTERNAL`
-- `SEM_ROLE_STABILITY_BREAK_EXTERNAL`, `SEM_TEMPORAL_CONFLICT_EXTERNAL`
-- `SEM_TASK_DOMINANCE`
-
-**Fix:** → SPEC-P0-1 (SEM-Layer Reanimation)
+### ~~BUG-015: activation_logic field silently dropped by normalizer~~ — FIXED (P0-1)
+**Fixed:** 2026-02-22
+**Result:** Normalizer maps `activation_logic` → `activation` for 32 SEMs.
 
 ---
 
-### BUG-002: 40.5% der CLU-Referenzen sind broken
+## Critical (blocks correct analysis)
+
+### BUG-002: CLU-Layer produziert nur 403 Detections auf 99K Nachrichten
 **Layer:** CLU
 **Severity:** Critical
-**Impact:** 49/121 CLUs referenzieren SEM-IDs die nicht existieren. CLU-Layer produziert nur 30 Detections auf 99K Nachrichten.
+**Impact:** 21/121 CLUs feuern. After P0-1 ref cleanup, 133 CLU→SEM refs were removed because target SEMs don't exist. Many CLUs now have fewer composed_of refs than intended.
 
-**Top broken Refs (nach Häufigkeit):**
+**Top missing SEM targets (most referenced by CLUs):**
 
-| Broken SEM-ID | CLU-Marker betroffen |
+| Missing SEM-ID | CLU-Marker betroffen |
 |----------------|---------------------|
 | `SEM_UNCERTAINTY_TONING` | 6 |
 | `SEM_GENERIC_PATTERN` | 5 |
@@ -38,22 +38,18 @@
 | `SEM_ANGER_ESCALATION` | 3 |
 | `SEM_SADNESS_EXPRESSIONS` | 3 |
 | `SEM_TRUST_SIGNALING` | 3 |
-| `SEM_CONFIRMATION_BIAS` | 2 |
-| `SEM_SHUTDOWN_EPISODE` | 2 |
 
 **Zusätzlich:** Einige CLUs haben malformed `composed_of` — JSON-Dicts statt Strings:
 ```yaml
-# Broken:
+# Current (weird):
 composed_of:
   - {'marker_ids': ['SEM_PROJECTION_TEXT'], 'weight': 0.33}
-# Soll:
+# Should be:
 composed_of:
   - SEM_PROJECTION_TEXT
 ```
 
-**Betrifft:** `CLU_DEFENSE_ACTIVE`, `CLU_DISSONANCE_ALERT_TEXT`, `CLU_EXAMPLE_MARKER`
-
-**Fix:** → SPEC-P0-2 (CLU Reference Repair)
+**Fix:** → SPEC-P0-2 (CLU Reference Repair) — create missing SEMs or map to equivalents
 
 ---
 
@@ -81,36 +77,38 @@ composed_of:
 ### BUG-004: ATO_DEPRESSION_SELF_FOCUS matcht "me"/"I" im Englischen
 **Layer:** ATO
 **Severity:** High (für EN-Texte)
-**Impact:** Jede englische Nachricht mit "I" oder "me" triggert Depression-Marker. Massiv inflationär.
+**Impact:** Jede englische Nachricht mit "I" oder "me" triggert Depression-Marker.
 
-**Root Cause:** Pattern ist für Deutsch geschrieben (wo "ich" seltener standalone vorkommt) und zu breit für Englisch.
+**Root Cause:** Pattern für Deutsch geschrieben, zu breit für Englisch. Engine prüft `lang` nicht vor Matching.
 
-**Workaround:** Marker hat `lang: de`, aber Engine prüft Sprache nicht vor Pattern-Matching.
-
-**Fix:**
-1. Restriktivere EN-Patterns: `I feel worthless`, `I can't do anything right` statt `\bI\b`
-2. Oder: Engine-Level Sprachfilter (wenn `lang: de`, nur auf DE-Text matchen)
+**Fix:** Restriktivere EN-Patterns oder Engine-Level Sprachfilter.
 
 ---
 
-### BUG-005: 92 Marker in 7 Families mit 0% Detection Rate
-**Layer:** Alle
+### BUG-005: 15 orphan SEMs mit 0% Detection nach P0-1
+**Layer:** SEM
 **Severity:** High
-**Impact:** Diese Marker belasten Engine-Performance ohne Ergebnis.
+**Impact:** Diese SEMs haben weder Patterns noch composed_of — können nie feuern.
 
-| Family | Marker-Anzahl | Detection Rate |
-|--------|--------------|----------------|
-| SD (self-disclosure) | 21 | 0% |
-| INTUITION | 15 | 0% |
-| ABSENCE | 10 | 0% |
-| CONFLICT | 9 | 0% |
-| REPAIR | 8 | 0% |
-| PERSONA | 10 | ~10% |
-| SELF | 19 | ~16% |
+| Orphan SEM |
+|-----------|
+| `SEM_ARCHETYPE_CLARISSE` |
+| `SEM_CARING_FRIEND_EXPRESSIONS_MARKER` |
+| `SEM_CHILD_RESISTANCE` |
+| `SEM_CONSIST_EVAL_EXTERNAL` |
+| `SEM_DEF_DRIFT_EXTERNAL` |
+| `SEM_FACT_CONFLICT_EXTERNAL` |
+| `SEM_FAKE_IDENTITY_STORY` |
+| `SEM_FIRST_TIME_DEPTH_MARKER` |
+| `SEM_INTERACTIVE_STONEWALLING_MARKER` |
+| `SEM_PARENTAL_AUTHORITY` |
+| `SEM_RESPONSIBILITY_SHIFT_MARKER` |
+| `SEM_ROLE_STABILITY_BREAK_EXTERNAL` |
+| `SEM_SIBLING_RIVALRY` |
+| `SEM_TASK_DOMINANCE` |
+| `SEM_TEMPORAL_CONFLICT_EXTERNAL` |
 
-**Root Cause:** Kombination aus fehlenden Patterns (ATO-Level) und broken composed_of Refs (SEM/CLU-Level).
-
-**Fix:** → SPEC-P0-1 + P0-3 (SEM-Reanimation + Dead Marker Cleanup)
+**Fix:** Add patterns from examples or move to `3_needs_work/`. → SPEC-P0-3
 
 ---
 
@@ -119,9 +117,22 @@ composed_of:
 **Severity:** Medium-High
 **Impact:** MEMA-Diagnosen sind oberflächlich. Ein MEMA "feuert" weil ein Keyword im Active-Marker-Set vorkommt, nicht weil ein echtes Meta-Muster erkannt wurde.
 
-**Beispiel:** `MEMA_CONFLICT_ESCALATION_TREND` feuert wenn *irgendein* Marker mit "CONFLICT" oder "ESCALATION" im Namen aktiv ist — unabhängig von tatsächlichem Trend.
-
 **Fix:** → SPEC-P2-3 (MEMA Stateful Upgrade)
+
+---
+
+### BUG-016: SEM inflation — 3 markers fire too often
+**Layer:** SEM
+**Severity:** Medium-High (after P0-1)
+**Impact:** These SEMs fire so often they dominate output and reduce signal-to-noise.
+
+| Marker | Hits/1K msgs | Notes |
+|--------|-------------|-------|
+| `SEM_NEUTRAL_NEGOTIATION` | ~50-60 (was 148 pre-fix) | min_components:2 now enforced |
+| `SEM_SHARED_HUMOR` | ~59 | min_components:1, fires on any ATO_HUMOR_LIGHT or ATO_JOY |
+| `SEM_REPAIR_GESTURE` | ~21 | min_components:1, fires on any deescalation ATO |
+
+**Fix:** Raise `min_components` or add negative patterns for these high-frequency SEMs.
 
 ---
 
@@ -130,32 +141,35 @@ composed_of:
 ### BUG-007: Nur 30% der Marker haben brauchbare Beschreibungen
 **Layer:** Alle
 **Severity:** Medium
-**Impact:** API-Responses enthalten leere oder kryptische `description`-Felder. Schlecht für API-Nutzer und LLM-Integration.
+**Impact:** API-Responses enthalten leere oder kryptische `description`-Felder.
 
 **Zahlen:** 255/849 Marker (30%) haben description > 20 Zeichen.
 
-**Fix:** → SPEC-P2-2 (Marker-Beschreibungen vervollständigen)
+**Fix:** → SPEC-P2-2
 
 ---
 
 ### BUG-008: `activation` Feld inkonsistentes Format
 **Layer:** SEM
 **Severity:** Medium
-**Impact:** Engine muss sowohl String als auch Dict-Format handlen.
+**Impact:** Engine muss String, Dict-with-rule, und Dict-with-min_components Format handlen.
 
 ```yaml
 # Format A (String):
 activation: "ANY 2 IN 3 messages"
 
-# Format B (Dict):
+# Format B (Dict with rule):
 activation:
   rule: "ANY 2 IN 3 messages"
-  window: 3
+
+# Format C (Dict with min_components):
+activation:
+  mode: co_occurrence
+  min_components: 2
+  window: 1
 ```
 
-**Workaround:** Engine prüft `isinstance(activation, str)` — funktioniert, aber fragil.
-
-**Fix:** `tools/normalize_schema.py` sollte einheitliches Dict-Format erzwingen.
+**Status:** Engine handles all 3 formats after P0-1 changes. Still fragil — normalizer should enforce single format.
 
 ---
 
@@ -164,7 +178,7 @@ activation:
 **Severity:** Medium
 **Impact:** Die mit `tools/enrich_negatives.py` generierten Negatives (98.8% Coverage) sind in den Source-YAMLs, werden aber beim Normalize nicht ins Registry übernommen.
 
-**Root Cause:** `tools/normalize_schema.py` kopiert das `negatives`-Feld wahrscheinlich nicht mit.
+**Root Cause:** `tools/normalize_schema.py` kopiert das `negatives`-Feld nicht mit.
 
 **Fix:** `normalize_schema.py` um `negatives` Feld-Preservation erweitern.
 
@@ -174,9 +188,9 @@ activation:
 
 ### BUG-010: Englisch-Corpus zu klein für valide Eval
 **Severity:** Low
-**Impact:** 620 EN-Messages vs. 98.4K DE-Messages. EN-Statistiken sind nicht belastbar.
+**Impact:** 620 EN-Messages vs. 98.4K DE-Messages.
 
-**Fix:** → SPEC-P2-1 (Englisch-Expansion)
+**Fix:** → SPEC-P2-1
 
 ---
 
@@ -190,8 +204,6 @@ activation:
 
 ### BUG-012: Persona-YAML Files nicht in .gitignore des alten Repos
 **Severity:** Low (nur altes Repo betroffen)
-**Impact:** Persona-Daten könnten versehentlich committed werden.
-
 **Status:** Im neuen Repo (LeanDeep-annotator) korrekt in `.gitignore`: `personas/*.yaml`
 
 ---
