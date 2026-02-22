@@ -50,7 +50,7 @@ What's needed to ship LeanDeep as a public MCP/API service:
 | 5 | CLU-Layer verbessern (P0-2) | **DONE** (64 CLUs) | — |
 | 6 | API Hardening (P1-2): auth, CORS, error schema | TODO | 1-2 Tage |
 | 7 | Dockerfile + Deployment (P3-2) | TODO | 0.5 Tag |
-| 8 | MCP Server wrapper (P3-4) | TODO | 0.5 Tag |
+| 8 | MCP Server wrapper (P3-4) | **DONE** (5 tools) | — |
 
 ### Should-Have (improves quality)
 
@@ -72,7 +72,7 @@ What's needed to ship LeanDeep as a public MCP/API service:
 | 17 | English expansion (P2-1) | TODO | 5+ Tage |
 | 18 | MEMA stateful upgrade (P2-3) | TODO | 3-5 Tage |
 
-**Minimum viable launch = items 6-8 (1.5-2 Tage Arbeit)**
+**Minimum viable launch = items 6-7 (1.5 Tage Arbeit)**
 
 ---
 
@@ -113,6 +113,22 @@ What's needed to ship LeanDeep as a public MCP/API service:
 **SEM count change:** 66→56 unique. Expected — previous count came from legacy repo's registry; correct project registry has fewer SEMs.
 
 **Files changed:** `api/engine.py`, `tools/normalize_schema.py`, 121 CLU YAML files, 1 file deleted
+
+### P3-4: MCP Server — DONE (2026-02-22)
+
+**Result:** 5 MCP tools wrapping the LeanDeep engine directly (no HTTP round-trip).
+
+| Tool | Description |
+|------|-------------|
+| `analyze_text` | Single text analysis, ATO+SEM layers |
+| `analyze_conversation` | Multi-message, all 4 layers, optional dynamics |
+| `search_markers` | Filter/search 848-marker registry |
+| `get_marker` | Full marker detail with frame, patterns, examples |
+| `engine_stats` | Marker counts per layer, version info |
+
+**Run:** `fastmcp run mcp_server.py`
+
+**Files:** `mcp_server.py`, `requirements.txt` (added fastmcp>=3.0)
 
 ---
 
@@ -496,6 +512,6 @@ jobs:
 
 ---
 
-### SPEC-P3-4: MCP Server + Skyll Distribution
+### SPEC-P3-4: MCP Server — DONE
 
-**FastMCP wrapper** + `SKILL.md` for registry. See MCP Server section above.
+**Completed 2026-02-22.** See "Completed Initiatives" section above.

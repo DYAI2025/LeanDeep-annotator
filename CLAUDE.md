@@ -17,6 +17,9 @@ pip install -r requirements.txt
 python3 -m uvicorn api.main:app --port 8420
 # -> http://localhost:8420/playground (analysis UI)
 # -> http://localhost:8420/docs (OpenAPI)
+
+# MCP Server (for AI agents: Claude, Cursor, etc.)
+fastmcp run mcp_server.py
 ```
 
 ## Directory Layout
@@ -49,6 +52,7 @@ docs/
   ARCHITECTURE_LD5.md   # System architecture
   THEORY_QUANTUM_COLLAPSE.md  # VAD congruence gate theory
 personas/               # Persona YAML profiles (gitignored, created at runtime)
+mcp_server.py           # MCP server (FastMCP 3.x, 5 tools, wraps engine directly)
 .claude/commands/       # 8 skills (see Skills section below)
 ```
 
@@ -137,18 +141,17 @@ python3 tools/eval_dynamics.py       # Emotion dynamics eval (VAD/UED/state tren
 **Must-have (blocks launch):**
 1. **P1-2: API Hardening** — auth, rate-limiting, CORS, error schema
 2. **P3-2: Deployment** — Dockerfile + Fly.io/VPS
-3. **P3-4: MCP Server** — FastMCP wrapper around existing endpoints
 
 **Should-have (improves value):**
-4. P0-3: Dead Marker Cleanup (7 UNKNOWN layer, 15 orphan SEMs)
-5. P1-3: LLM-Bridge Endpoint (structured context for LLM interpretation)
-6. P2-2: Marker Descriptions (only 30% have >20 char descriptions)
+3. P0-3: Dead Marker Cleanup (7 UNKNOWN layer, 15 orphan SEMs)
+4. P1-3: LLM-Bridge Endpoint (structured context for LLM interpretation)
+5. P2-2: Marker Descriptions (only 30% have >20 char descriptions)
 
 **Nice-to-have:**
-7. P1-1: Persona Dashboard UI
-8. P1-4: Monetization (Stripe, 3-tier pricing)
-9. P3-1: CI/CD eval pipeline
-10. P3-3: WebSocket streaming
+6. P1-1: Persona Dashboard UI
+7. P1-4: Monetization (Stripe, 3-tier pricing)
+8. P3-1: CI/CD eval pipeline
+9. P3-3: WebSocket streaming
 
 See `docs/ROADMAP.md` for full specs and production checklist.
 
