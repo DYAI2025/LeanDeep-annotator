@@ -1,0 +1,14 @@
+__pycache__
+*.pyc
+.git
+.claude
+.github
+personas/*.yaml
+eval/
+tests/
+tools/
+docs/
+build/markers_rated/
+*.md
+.dockerignore
+.gitignore
