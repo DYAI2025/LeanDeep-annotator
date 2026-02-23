@@ -18,7 +18,6 @@ composed_of:
 - SEM_OFFENSIVE_FLIRTING
 - SEM_SOFT_COMMITMENT
 - SEM_RESPONSE_TIMING
-- SEM_SECRET_BONDING
 activation_logic: AT_LEAST 3 DISTINCT SEM IN 20 messages
 scoring:
   base: 1.9
