@@ -2,7 +2,7 @@
 
 **Deterministic semantic annotation layer for psychological and conversational pattern detection.**
 
-LeanDeep 5.0 detects manipulation patterns, attachment styles, conflict dynamics, and emotional states in text — without any LLM dependency. Pure Python, ~1ms per analysis, ~850 regex-based markers organized in a four-layer hierarchy.
+LeanDeep 5.0 detects manipulation patterns, attachment styles, conflict dynamics, and emotional states in text — without any LLM dependency. Pure Python, ~1ms per analysis, 848 regex-based markers organized in a four-layer hierarchy.
 
 ```
 ATO (atomic signals) → SEM (semantic blends) → CLU (cluster intuitions) → MEMA (meta-markers)
@@ -12,6 +12,7 @@ ATO (atomic signals) → SEM (semantic blends) → CLU (cluster intuitions) → 
 
 ## Table of Contents
 
+- [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Architecture: The Four-Layer Hierarchy](#architecture-the-four-layer-hierarchy)
 - [VAD Model: Valence, Arousal, Dominance](#vad-model-valence-arousal-dominance)
@@ -25,12 +26,45 @@ ATO (atomic signals) → SEM (semantic blends) → CLU (cluster intuitions) → 
   - [Prosody-Based Emotion Scoring](#prosody-based-emotion-scoring)
   - [Relationship State Indices](#relationship-state-indices)
 - [API Reference](#api-reference)
+- [MCP Server (AI Agents)](#mcp-server-ai-agents)
 - [Full Conversation Analysis Walkthrough](#full-conversation-analysis-walkthrough)
 - [Marker YAML Schema](#marker-yaml-schema)
 - [Directory Layout](#directory-layout)
 - [Development & Pipeline](#development--pipeline)
 - [Acknowledgements & Attribution](#acknowledgements--attribution)
 - [License](#license)
+
+---
+
+## Installation
+
+**Requirements:** Python 3.12+
+
+```bash
+git clone https://github.com/DYAI2025/LeanDeep-annotator.git
+cd LeanDeep-annotator
+pip install -r requirements.txt
+```
+
+**Dependencies** (`requirements.txt`):
+
+| Package | Purpose |
+|---------|---------|
+| `fastapi` + `uvicorn` | REST API server |
+| `pydantic` + `pydantic-settings` | Request/response validation and config |
+| `ruamel.yaml` | YAML marker file parsing (preserves formatting) |
+| `fastmcp` | MCP server for AI agent integration |
+| `python-docx` | Document upload support (.docx extraction) |
+| `pytest` + `httpx` | Test suite |
+
+**Docker:**
+
+```bash
+docker build -t leandeep .
+docker run -p 8420:8420 leandeep
+```
+
+The container exposes port 8420 and loads the pre-compiled `marker_registry.json` from `build/markers_normalized/`.
 
 ---
 
@@ -42,6 +76,7 @@ python3 -m uvicorn api.main:app --port 8420 --reload
 ```
 
 - Playground UI: `http://localhost:8420/playground`
+- Analysis UI: `http://localhost:8420/analysis`
 - OpenAPI docs: `http://localhost:8420/docs`
 
 **Single text analysis:**
@@ -64,6 +99,14 @@ curl -X POST http://localhost:8420/v1/analyze/conversation \
       {"role": "user", "text": "Nein! Du manipulierst mich die ganze Zeit!"}
     ]
   }'
+```
+
+**Document upload** (extract text from .txt, .md, or .docx for analysis):
+
+```bash
+curl -X POST http://localhost:8420/v1/upload \
+  -F "file=@conversation.docx"
+# Returns: {"filename": "...", "text": "...", "length": ...}
 ```
 
 ---
@@ -97,8 +140,8 @@ Input Text
                      ▼
 ┌─────────────────────────────────────────────────────┐
 │  Layer 3: CLU  (Cluster / Intuition)                │
-│  Windowed aggregation over SEMs. Requires ≥2        │
-│  distinct SEMs within a message window.             │
+│  Windowed aggregation: fires when ANY required      │
+│  ATO/SEM ref is active within a message window.     │
 │  Family multipliers amplify signal (CONFLICT: 2.0x, │
 │  SUPPORT: 1.75x, COMMITMENT/UNCERTAINTY: 1.5x).     │
 └────────────────────┬────────────────────────────────┘
@@ -669,6 +712,7 @@ Across a conversation, the cumulative `effect_on_state` from all detected marker
 | `POST` | `/v1/analyze` | Single text, ATO+SEM layers | ~1ms |
 | `POST` | `/v1/analyze/conversation` | Multi-message, all 4 layers, VAD, UED, state | ~5ms |
 | `POST` | `/v1/analyze/dynamics` | Full dynamics + optional persona warm-start | ~5ms |
+| `POST` | `/v1/upload` | Upload .txt/.md/.docx — extracts text for analysis | — |
 | `POST` | `/v1/personas` | Create persona profile (Pro tier) | — |
 | `GET` | `/v1/personas/{token}` | Get persona (EWMA, episodes, predictions) | — |
 | `DELETE` | `/v1/personas/{token}` | Delete persona | — |
@@ -677,6 +721,65 @@ Across a conversation, the cumulative `effect_on_state` from all detected marker
 | `GET` | `/v1/markers/{id}` | Marker detail with patterns/examples | — |
 | `GET` | `/v1/engine/config` | Engine config (families, EWMA, ARS) | — |
 | `GET` | `/v1/health` | Health check | — |
+| `GET` | `/playground` | Interactive marker playground UI | — |
+| `GET` | `/analysis` | Emotion dynamics analysis UI | — |
+
+### Query Parameters — `/v1/markers`
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `layer` | string | Filter by layer: `ATO`, `SEM`, `CLU`, `MEMA` |
+| `family` | string | Filter by family (e.g. `conflict`, `attachment`) |
+| `tag` | string | Filter by tag |
+| `search` | string | Full-text search in ID and description |
+| `limit` | int | Max results (1–500, default 50) |
+| `offset` | int | Pagination offset (default 0) |
+
+### Authentication
+
+Auth is disabled by default (`LEANDEEP_REQUIRE_AUTH=false`). To enable:
+
+```bash
+# Create api/api_keys.json with your keys
+LEANDEEP_REQUIRE_AUTH=true python3 -m uvicorn api.main:app --port 8420
+# Pass key via header: X-API-Key: <your-key>
+```
+
+---
+
+## MCP Server (AI Agents)
+
+LeanDeep ships an MCP (Model Context Protocol) server that wraps the detection engine directly — no HTTP round-trip. Compatible with Claude Desktop, Cursor, and any MCP client.
+
+**Start the server:**
+
+```bash
+fastmcp run mcp_server.py
+# or: python mcp_server.py
+```
+
+**Client configuration** (`claude_desktop_config.json` / `settings.json`):
+
+```json
+{
+  "mcpServers": {
+    "leandeep": {
+      "command": "fastmcp",
+      "args": ["run", "/path/to/mcp_server.py"]
+    }
+  }
+}
+```
+
+**Available MCP tools:**
+
+| Tool | Description |
+|------|-------------|
+| `analyze_text` | Analyze a single text (ATO+SEM layers) |
+| `analyze_conversation` | Analyze multi-message conversation, all 4 layers; optional `include_dynamics` for VAD/UED |
+| `search_markers` | Filter/search the 848-marker registry |
+| `get_marker` | Full marker detail (patterns, examples, VAD, composed_of) |
+| `engine_stats` | Marker counts per layer + version |
 
 ---
 
@@ -841,7 +944,7 @@ examples:
 
 ```
 api/                    # FastAPI application
-  main.py               # 11 endpoints
+  main.py               # 14 endpoints (analyze, upload, dynamics, personas, markers, health, UIs)
   engine.py             # 4-layer detection engine + VAD congruence gate
   dynamics.py           # UED metrics + relationship state indices
   prosody.py            # Prosody emotion scoring (6 emotions, 17 features)
@@ -851,14 +954,17 @@ api/                    # FastAPI application
   auth.py               # API key auth (LEANDEEP_REQUIRE_AUTH=false for dev)
   prosody_profiles.json # Calibrated emotion profiles (20K+ training examples)
   conversation_baseline.json  # Prosody baseline from gold corpus
+  static/
+    playground.html     # Interactive marker playground UI
+    analysis.html       # Emotion dynamics analysis UI (Chart.js)
 
 build/
   markers_rated/        # !! SOURCE OF TRUTH !! Edit here, not markers_normalized
-    1_approved/         # Rating 1 — production quality (714 markers)
+    1_approved/         # Rating 1 — production quality (717 markers)
     2_good/             # Rating 2 — usable, needs refinement (125 markers)
     3_needs_work/       # Rating 3+4 — WIP/unusable
   markers_normalized/   # GENERATED by normalize_schema.py (DO NOT EDIT)
-    marker_registry.json  # Compiled registry loaded by engine at startup
+    marker_registry.json  # Compiled registry: 848 markers loaded by engine at startup
 
 tools/
   normalize_schema.py   # Rebuild registry from markers_rated/
@@ -925,14 +1031,15 @@ python3 tools/eval_corpus.py         # Full corpus eval (~90s)
 python3 tools/eval_dynamics.py       # Emotion dynamics eval
 ```
 
-### Current Eval Stats (2026-02-22, gold corpus: 99K messages)
+### Current Eval Stats (2026-02-24, gold corpus: 99K messages, 1,543 chunks)
 
-| Layer | Unique Markers Firing | Total Detections | Avg Confidence |
-|-------|-----------------------|------------------|----------------|
-| ATO | 251 | 87,961 | 0.905 |
-| SEM | 66 | 25,000+ | 0.81 |
-| CLU | 21 | 403 | — |
-| MEMA | 15 | — | — |
+| Layer | Total Markers | Unique Firing | Total Detections | Avg Confidence |
+|-------|---------------|---------------|------------------|----------------|
+| ATO | 415 | 251 | 87,961 | 0.905 |
+| SEM | 237 | 56 | 21,000+ | 0.82 |
+| CLU | 121 | 64 | 7,192 | 0.43 |
+| MEMA | 68 | 22 | 5,313 | 0.61 |
+| **Total** | **848** | **393** | **121,555** | — |
 
 ### Configuration
 
