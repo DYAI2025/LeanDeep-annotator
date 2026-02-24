@@ -10,10 +10,10 @@ frame:
   pragmatics: "Machtstrukturen und Rollenkonflikte in Familien"
   narrative: "Familiäre Systemdynamik"
 composed_of:
-  - SEM_PARENTAL_AUTHORITY
-  - SEM_CHILD_RESISTANCE
-  - SEM_CONFLICT_ESCALATION
-  - SEM_DEONTIC_LANGUAGE
+- SEM_PARENTAL_AUTHORITY
+- SEM_CHILD_RESISTANCE
+- SEM_CONFLICT_ESCALATION
+- SEM_DEONTIC_LANGUAGE
 activation:
   rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
 window:
@@ -45,3 +45,4 @@ tags: [cluster, family, hierarchy, conflict, authority, resistance]
 detect_class: "E"
 criteria: "Kombination von elterlicher Autorität und kindlichem Widerstand"
 updated_at: "2025-08-19T10:30:00Z"
+semiotic: {peirce: index, signifikat: Eskalation/Konflikt, framing_type: eskalation, cultural_frame: ''}

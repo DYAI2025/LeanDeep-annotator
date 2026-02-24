@@ -32,6 +32,11 @@ composed_of:
 - ATO_SD_GREEN_LEX
 activation:
   rule: BOTH IN 1 message
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.3

@@ -44,3 +44,8 @@ scoring:
   formula: logistic
 window:
   messages: 30
+semiotic:
+  peirce: index
+  signifikat: Scham/Schuld
+  framing_type: schuld
+  cultural_frame: ''

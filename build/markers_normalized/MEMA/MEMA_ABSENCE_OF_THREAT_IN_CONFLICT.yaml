@@ -47,3 +47,8 @@ criteria:
   window_messages: 30
   min_E_hits: 3
   strict_zero: true
+semiotic:
+  peirce: symbol
+  signifikat: Drohung/Ultimatum
+  framing_type: kontrollnarrative
+  cultural_frame: ''

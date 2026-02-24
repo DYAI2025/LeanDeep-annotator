@@ -7,10 +7,10 @@ frame:
   narrative: "Der 'Wer bin ich?'-Tanz."
 tags: [narion, cluster, identity]
 composed_of:
-  - SEM_META_REFLECTION
-  - SEM_SELF_REFLECTION
-  - SEM_METACOGNITIVE_INSIGHT
-  - SEM_AMBIVALENCE
+- SEM_META_REFLECTION
+- SEM_SELF_REFLECTION
+- SEM_METACOGNITIVE_INSIGHT
+- SEM_AMBIVALENCE
 activation:
   rule: "AT_LEAST 2 DISTINCT SEMs IN 4 messages"
 examples:
@@ -31,3 +31,4 @@ examples:
   - "Hast du den neuen Film schon gesehen?"
   - "Das Essen war echt lecker heute"
   - "Ich treff mich morgen mit Anna"
+semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}

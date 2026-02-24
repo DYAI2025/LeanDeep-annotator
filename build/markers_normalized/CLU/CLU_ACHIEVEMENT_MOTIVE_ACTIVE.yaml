@@ -56,3 +56,8 @@ scoring:
 evidence_capture:
   keep_snippets: 5
 fire_when: "conditions_met_first_time"
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''

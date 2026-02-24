@@ -60,3 +60,4 @@ effect_on_state:
   trust: -0.45
   conflict: 0.6
   deesc: -0.3
+semiotic: {peirce: index, signifikat: Schuldzuweisung, framing_type: eskalation, cultural_frame: ''}

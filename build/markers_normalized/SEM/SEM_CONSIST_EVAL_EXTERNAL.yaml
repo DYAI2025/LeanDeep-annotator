@@ -30,6 +30,11 @@ composed_of:
 - ATO_CONTRADICTION_LEX
 scoring:
   base: 0.65
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

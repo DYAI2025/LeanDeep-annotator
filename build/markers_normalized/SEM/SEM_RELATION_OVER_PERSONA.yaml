@@ -38,6 +38,11 @@ rating: 1
 composed_of:
 - ATO_RELATION_TERM
 - ATO_PERSONA_TERM
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

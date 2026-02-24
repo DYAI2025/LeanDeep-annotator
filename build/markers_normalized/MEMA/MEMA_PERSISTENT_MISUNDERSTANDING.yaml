@@ -39,6 +39,11 @@ composed_of:
 scoring:
   base: 0.70
   cap: 1.0
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''
 activation:
   rule: "COUNT(CLU_MISUNDERSTANDING_PROCESS in 40 msgs) >= 2"
 metadata:

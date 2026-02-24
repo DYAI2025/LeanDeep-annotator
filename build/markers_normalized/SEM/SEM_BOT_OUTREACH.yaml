@@ -36,6 +36,11 @@ activation:
   rule: "AT_LEAST 3"
 window:
   messages: 1
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: -0.6

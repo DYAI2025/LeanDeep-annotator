@@ -85,6 +85,10 @@ semiotic:
   connotation:
   - "bestätigung"
   - "mikro"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: 0.0
   arousal: 0.3

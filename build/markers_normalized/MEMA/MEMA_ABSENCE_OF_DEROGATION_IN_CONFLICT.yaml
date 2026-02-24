@@ -47,3 +47,8 @@ criteria:
   window_messages: 30
   min_E_hits: 3
   strict_zero: true
+semiotic:
+  peirce: symbol
+  signifikat: Eskalation/Konflikt
+  framing_type: eskalation
+  cultural_frame: ''

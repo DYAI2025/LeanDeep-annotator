@@ -32,5 +32,10 @@ composed_of:
 - CLU_CIRCULAR_REASONING
 activation:
   rule: AT_LEAST 2 IN 8 messages
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''
 metadata:
   cooldown_after_detect: 5

@@ -17,11 +17,11 @@ score:
   threshold: 0.75
 composed_of:
   require:
-    - ATO_ANGER
-    - ATO_DEFENSIVENESS
-    - ATO_BLAME_SHIFT
-    - ATO_CRITICISM_ATTACK_MARKER
-    - ATO_ESCALATION_LEXICON
+  - ATO_ANGER
+  - ATO_DEFENSIVENESS
+  - ATO_BLAME_SHIFT
+  - ATO_CRITICISM_ATTACK_MARKER
+  - ATO_ESCALATION_LEXICON
   negative_evidence:
     any_of: [ATO_DEESCALATION_PHRASE, ATO_APOLOGY]
 emits:
@@ -30,53 +30,57 @@ emits:
     trust: -0.2
     deesc: -0.3
 conflicts_with:
-  - CLU_ACTIVE_REPAIR
+- CLU_ACTIVE_REPAIR
 semiotic:
   mode: symbolic
   level: pragmatic
   object: "conflict_escalation"
   connotation: ["konflikt", "heiß"]
   interpretant: "effect_on_state: {conflict: +0.3, trust: -0.2}"
+  peirce: index
+  signifikat: Eskalation/Konflikt
+  framing_type: eskalation
+  cultural_frame: ''
 examples:
   positive_de:
-    - "Das nervt mich extrem!"
-    - "Du bist schuld!"
-    - "Ich hab recht, du nicht."
-    - "Das war unfair von dir."
-    - "Hör auf damit!"
-    - "Das eskaliert jetzt."
-    - "Ich bin sauer."
-    - "Deine Defensive nervt."
-    - "Vorwurf: Du immer!"
-    - "Kritik: Schlecht gemacht."
-    - "Das triggert mich."
-    - "Streit hoch."
-    - "Du machst Fehler."
-    - "Ich verteidige mich."
-    - "Blame dich."
-    - "Eskalation jetzt."
-    - "Wut hoch."
-    - "Kein Kompromiss."
-    - "Konflikt fort."
-    - "Heißer Streit."
+  - "Das nervt mich extrem!"
+  - "Du bist schuld!"
+  - "Ich hab recht, du nicht."
+  - "Das war unfair von dir."
+  - "Hör auf damit!"
+  - "Das eskaliert jetzt."
+  - "Ich bin sauer."
+  - "Deine Defensive nervt."
+  - "Vorwurf: Du immer!"
+  - "Kritik: Schlecht gemacht."
+  - "Das triggert mich."
+  - "Streit hoch."
+  - "Du machst Fehler."
+  - "Ich verteidige mich."
+  - "Blame dich."
+  - "Eskalation jetzt."
+  - "Wut hoch."
+  - "Kein Kompromiss."
+  - "Konflikt fort."
+  - "Heißer Streit."
   negative_de:
-    - "Tut mir leid."
-    - "Lass uns klären."
-    - "Entschuldige."
-    - "Ich verstehe."
-    - "Deeskalieren wir."
-    - "Apologie jetzt."
-    - "Fair bleiben."
-    - "Zugeständnis."
-    - "Reparieren."
-    - "Verzeih mir."
-    - "Pause machen."
-    - "Höre zu."
-    - "Das tut leid."
-    - "Wir klären."
-    - "Offenheit danke."
-    - "Neu starten."
-    - "Verstehe Punkt."
-    - "Entschuldigung."
-    - "Bei dir."
-    - "Support."
+  - "Tut mir leid."
+  - "Lass uns klären."
+  - "Entschuldige."
+  - "Ich verstehe."
+  - "Deeskalieren wir."
+  - "Apologie jetzt."
+  - "Fair bleiben."
+  - "Zugeständnis."
+  - "Reparieren."
+  - "Verzeih mir."
+  - "Pause machen."
+  - "Höre zu."
+  - "Das tut leid."
+  - "Wir klären."
+  - "Offenheit danke."
+  - "Neu starten."
+  - "Verstehe Punkt."
+  - "Entschuldigung."
+  - "Bei dir."
+  - "Support."

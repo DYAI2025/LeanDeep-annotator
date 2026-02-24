@@ -75,6 +75,10 @@ semiotic:
   - "aufgabe"
   - "dominanz"
   interpretant: "effect_on_state: {task_dominance: +0.25, intimacy: -0.1}"
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

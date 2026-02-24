@@ -15,6 +15,10 @@ semiotic:
   object: "repair_absence"
   connotation: ["fehlend", "reparatur"]
   interpretant: "effect_on_state: {deesc: -0.1, conflict: +0.05}"
+  peirce: icon
+  signifikat: Reparatur/Entschuldigung
+  framing_type: reparatur
+  cultural_frame: ''
 examples:
   positive_de:
   - "[ESC] 'Das nervt mich.' → 'Zurück zum Thema: Angebot' … 5 Task-Nachrichten"

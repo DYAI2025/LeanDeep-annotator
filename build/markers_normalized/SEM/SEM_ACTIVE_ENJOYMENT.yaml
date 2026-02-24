@@ -41,6 +41,11 @@ composed_of:
 - ATO_ACTIVITY_VERB
 activation:
   rule: "BOTH IN 1 message"
+semiotic:
+  peirce: index
+  signifikat: Freude/Dankbarkeit
+  framing_type: empathie
+  cultural_frame: ''
 compositionality: contextual
 vad_estimate:
   valence: 0.6

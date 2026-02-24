@@ -33,6 +33,11 @@ composed_of:
 - ATO_RECURSIVE_SELF_ASSERT
 activation:
   rule: "BOTH IN 1 message"
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

@@ -29,6 +29,11 @@ examples:
 tags: []
 rating: 1
 detect_class: "node_crystallizer"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''
 metadata:
   stability_window: 20
   min_repeats: 3

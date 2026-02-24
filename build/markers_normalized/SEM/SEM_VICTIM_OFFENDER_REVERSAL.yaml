@@ -49,6 +49,11 @@ scoring:
   formula: logistic
 window:
   messages: 25
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: -0.65

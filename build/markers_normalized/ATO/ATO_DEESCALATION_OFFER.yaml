@@ -52,6 +52,11 @@ tags:
 - repair
 - atomic
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Eskalation/Konflikt
+  framing_type: eskalation
+  cultural_frame: ''
 vad_estimate:
   valence: 0.45
   arousal: 0.2

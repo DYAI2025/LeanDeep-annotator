@@ -44,6 +44,11 @@ composed_of:
 - ATO_PAUSE_LONG
 scoring:
   base: 0.62
+semiotic:
+  peirce: index
+  signifikat: Reparatur/Entschuldigung
+  framing_type: reparatur
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.45

@@ -33,6 +33,11 @@ composed_of:
 - CLU_UNCERTAINTY_CASCADE
 activation:
   rule: "AT_LEAST 1 IN 6 messages"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''
 metadata:
   policy_hooks:
     on_confirm(CLU_INTUITION_SUPPORT):

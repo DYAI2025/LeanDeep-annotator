@@ -52,3 +52,8 @@ window:
   messages: 50
 detect_class: "E"
 criteria: "Kombination von Geschwisterrollen und Konfliktmustern"
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''

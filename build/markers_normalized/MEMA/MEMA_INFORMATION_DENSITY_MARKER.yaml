@@ -35,3 +35,8 @@ composed_of:
 - CLU_DIGITAL_MANIPULATION
 activation:
   rule: VOLUME_THRESHOLD 50 messages IN 1 hour
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

@@ -86,6 +86,10 @@ semiotic:
   - "shift"
   - "aufgabe"
   interpretant: "effect_on_state: {deesc: +0.1, conflict: -0.15}"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: 0.0
   arousal: 0.3

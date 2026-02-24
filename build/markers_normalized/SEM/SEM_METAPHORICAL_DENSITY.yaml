@@ -35,6 +35,11 @@ composed_of:
 - ATO_METAPHOR
 activation:
   rule: "AT_LEAST 3 METAPHOR IN 5 messages"
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

@@ -38,6 +38,11 @@ rating: 1
 composed_of:
 - ATO_DECISION_CHOOSE
 - ATO_DECISION_STAY
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.2

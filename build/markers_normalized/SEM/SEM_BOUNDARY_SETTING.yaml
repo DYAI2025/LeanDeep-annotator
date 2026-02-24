@@ -42,6 +42,11 @@ composed_of:
 - ATO_SELF_REFLECTION
 window:
   messages: 2
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.2

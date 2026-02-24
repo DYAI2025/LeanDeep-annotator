@@ -35,3 +35,8 @@ tags:
 rating: 1
 activation:
   rule: "THEME_REPETITION_WITH_VARIATION >= 3 in 20 messages"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

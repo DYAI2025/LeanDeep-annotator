@@ -47,3 +47,8 @@ scoring:
   weight: 1.15
 window:
   messages: 50
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''

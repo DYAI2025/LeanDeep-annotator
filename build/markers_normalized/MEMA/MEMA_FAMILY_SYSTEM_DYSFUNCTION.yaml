@@ -41,3 +41,8 @@ window:
   messages: 100
 detect_class: "E"
 criteria: "Akkumulation von Konflikten auf hierarchischer, geschwisterlicher und Routine-Ebene"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

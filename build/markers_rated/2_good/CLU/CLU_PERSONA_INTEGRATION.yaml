@@ -7,10 +7,10 @@ frame:
   pragmatics: "Stabile Multi-Level-Integration"
   narrative: "Das System integriert alle Ebenen"
 composed_of:
-  - SEM_GELB_SYSTEMIC_INTEGRATION
-  - SEM_TUERKIS_COSMIC_FLOW
-  - SEM_GRUEN_EMPATHIC_RESONANCE
-  - SEM_SD_YELLOW_SYSTEMS
+- SEM_GELB_SYSTEMIC_INTEGRATION
+- SEM_TUERKIS_COSMIC_FLOW
+- SEM_GRUEN_EMPATHIC_RESONANCE
+- SEM_SD_YELLOW_SYSTEMS
 activation:
   rule: AT_LEAST 3 DISTINCT SEMs IN 15 messages
   window_size: 15
@@ -36,3 +36,4 @@ examples:
   - "Ich mach mein eigenes Ding, mir doch egal"
   - "Alles muss harmonisch sein, Konflikte sind schlecht"
   - "Ich fühl mich einfach nur überfordert"
+semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}

@@ -7,10 +7,10 @@ frame:
   narrative: "Aus einem Wort wird eine Welt."
 tags: [narion, cluster, narrative]
 composed_of:
-  - SEM_SELF_REFLECTION
-  - SEM_METACOGNITIVE_INSIGHT
-  - SEM_SHARED_EXPERIENCE_REFERENCE
-  - SEM_FRAME_SHIFT
+- SEM_SELF_REFLECTION
+- SEM_METACOGNITIVE_INSIGHT
+- SEM_SHARED_EXPERIENCE_REFERENCE
+- SEM_FRAME_SHIFT
 activation:
   rule: "AT_LEAST 3 DISTINCT SEMs IN 6 messages"
 examples:
@@ -31,3 +31,4 @@ examples:
   - "Kannst du Milch mitbringen?"
   - "Der Film war ganz okay, nichts Besonderes"
   - "Morgen soll es regnen laut Wetter-App"
+semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}

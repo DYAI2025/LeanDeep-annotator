@@ -41,3 +41,8 @@ window:
   messages: 100
 detect_class: "E"
 criteria: "Muster der Koalitionsbildung zwischen verschiedenen Familienmitgliedern"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

@@ -34,6 +34,11 @@ tags:
 - projection
 - blame
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Absolutheit/Schwarz-Weiss
+  framing_type: polarisierung
+  cultural_frame: ''
 vad_estimate:
   valence: -0.5
   arousal: 0.8

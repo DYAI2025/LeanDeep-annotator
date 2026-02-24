@@ -6,37 +6,41 @@ languages: [de]
 meaning: Archetyp des Realitätsverdrehers.
 activates_if:
   all_of:
-    - CLU_GASLIGHTING_SEQUENCE
+  - CLU_GASLIGHTING_SEQUENCE
 effects:
   indices:
     trust: -0.2
 notes: Manipuliert durch Verwirrung.
 examples:
   positive_de:
-    - "So war das nie, du erinnerst dich falsch."
-    - "Ich habe immer gesagt, dass wir das so machen."
-    - "Das bildest du dir ein – objektiv war es anders."
-    - "Du verdrehst mir die Worte im Mund."
-    - "Du bist zu empfindlich, das ist kein echtes Problem."
-    - "Erfunden."
-    - "Niemals."
-    - "Täuschung."
-    - "Schuldumkehr."
-    - "Fakten verdrehen."
+  - "So war das nie, du erinnerst dich falsch."
+  - "Ich habe immer gesagt, dass wir das so machen."
+  - "Das bildest du dir ein – objektiv war es anders."
+  - "Du verdrehst mir die Worte im Mund."
+  - "Du bist zu empfindlich, das ist kein echtes Problem."
+  - "Erfunden."
+  - "Niemals."
+  - "Täuschung."
+  - "Schuldumkehr."
+  - "Fakten verdrehen."
   negative_de:
-    - "Gesagt ja."
-    - "Richtig erinnern."
-    - "Verstehe."
-    - "Wirklich so."
-    - "Ernst kein Scherz."
-    - "Fakt ist."
-    - "Wahrheit anerkennen."
-    - "Keine Täuschung."
-    - "Verantwortung."
-    - "Klare Fakten."
+  - "Gesagt ja."
+  - "Richtig erinnern."
+  - "Verstehe."
+  - "Wirklich so."
+  - "Ernst kein Scherz."
+  - "Fakt ist."
+  - "Wahrheit anerkennen."
+  - "Keine Täuschung."
+  - "Verantwortung."
+  - "Klare Fakten."
 semiotic:
   mode: symbolic
   level: pragmatic
   object: "gaslighter"
   interpretant: "effect_on_state: {trust: -0.2}"
   connotation: ["archetype", "gaslighting"]
+  peirce: symbol
+  signifikat: Realitaetsverzerrung
+  framing_type: kontrollnarrative
+  cultural_frame: ''

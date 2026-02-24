@@ -43,3 +43,8 @@ activation:
 scoring:
   weight: 1.5
   decay: 0.9
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''

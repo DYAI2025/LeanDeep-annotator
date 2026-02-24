@@ -28,6 +28,11 @@ examples:
   - Das ueberrascht mich, aber es ist okay.
 tags: []
 rating: 2
+semiotic:
+  peirce: icon
+  signifikat: Scham/Schuld
+  framing_type: schuld
+  cultural_frame: ''
 vad_estimate:
   valence: -0.5
   arousal: 0.4

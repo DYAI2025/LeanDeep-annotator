@@ -65,6 +65,11 @@ examples:
 tags:
 - preference
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: 0.2
   arousal: 0.4

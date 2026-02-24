@@ -32,3 +32,4 @@ examples:
   - Danke, dass du mir das sagst. Ich denke darueber nach.
 vad_estimate: {valence: -0.85, arousal: 0.55, dominance: 0.1}
 effect_on_state: {trust: -0.5, conflict: 0.6, deesc: -0.35}
+semiotic: {peirce: icon, signifikat: Scham/Schuld, framing_type: schuld, cultural_frame: ''}

@@ -40,6 +40,11 @@ activation:
 scoring:
   base: 1.0
   weight: 1.0
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''
 metadata:
   persona:
     evidence_policy: family-scoped

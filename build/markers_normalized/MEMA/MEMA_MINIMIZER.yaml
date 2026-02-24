@@ -43,5 +43,9 @@ semiotic:
   connotation:
   - "archetype"
   - "minimization"
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''
 metadata:
   label: Minimizer

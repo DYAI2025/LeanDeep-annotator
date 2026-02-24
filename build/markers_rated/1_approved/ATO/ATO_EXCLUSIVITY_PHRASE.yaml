@@ -27,3 +27,4 @@ examples:
 tags: [atomic, v3.3, isolation, separation]
 vad_estimate: {valence: -0.55, arousal: 0.1, dominance: 0.1}
 effect_on_state: {trust: -0.25, conflict: 0.2, deesc: -0.15}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: ''}

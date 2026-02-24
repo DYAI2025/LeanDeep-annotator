@@ -10,8 +10,8 @@ frame:
   narrative: "connection"
 tags: [semantic, humor, bonding, positive]
 composed_of:
-  - ATO_HUMOR_LIGHT
-  - ATO_JOY
+- ATO_HUMOR_LIGHT
+- ATO_JOY
 activation:
   mode: "co_occurrence"
   min_components: 1
@@ -40,3 +40,4 @@ examples:
   - "Hör auf darüber zu lachen."
   - "Das ist ernst gemeint."
   - "Ich mache keine Witze."
+semiotic: {peirce: index, signifikat: Freude/Dankbarkeit, framing_type: empathie, cultural_frame: ''}

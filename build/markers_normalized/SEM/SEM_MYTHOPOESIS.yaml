@@ -36,6 +36,11 @@ composed_of:
 - ATO_VOCAB_MYTHIC
 activation:
   rule: "AT_LEAST 1 ATO_VOCAB_MYTHIC IN 2 messages"
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

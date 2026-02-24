@@ -42,3 +42,8 @@ scoring:
 window:
   messages: 50
   temporal_window: "72h"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

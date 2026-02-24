@@ -50,6 +50,11 @@ composed_of:
 - ATO_UNCERTAINTY_PHRASE
 activation:
   rule: ANY 2 IN 2 messages
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

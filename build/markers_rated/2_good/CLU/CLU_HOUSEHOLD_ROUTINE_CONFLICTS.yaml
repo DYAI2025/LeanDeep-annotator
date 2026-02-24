@@ -10,10 +10,10 @@ frame:
   pragmatics: "Alltägliche Machtkämpfe um Haushaltsorganisation"
   narrative: "Routine-Konfliktdynamik"
 composed_of:
-  - SEM_CHILD_RESISTANCE
-  - SEM_REPETITIVE_COMPLAINT
-  - SEM_TASK_DOMINANCE
-  - SEM_DEFENSIVENESS_SHIFT
+- SEM_CHILD_RESISTANCE
+- SEM_REPETITIVE_COMPLAINT
+- SEM_TASK_DOMINANCE
+- SEM_DEFENSIVENESS_SHIFT
 activation:
   rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
 window:
@@ -45,3 +45,4 @@ tags: [cluster, family, routine, chores, resistance, daily]
 detect_class: "E"
 criteria: "Kombination von Haushaltsanweisungen und Widerstandsmustern"
 updated_at: "2025-08-19T10:30:00Z"
+semiotic: {peirce: index, signifikat: Eskalation/Konflikt, framing_type: eskalation, cultural_frame: ''}

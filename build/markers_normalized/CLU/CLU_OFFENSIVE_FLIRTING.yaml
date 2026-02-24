@@ -40,3 +40,8 @@ composed_of:
 - SEM_BOUNDARY_VIOLATION
 activation:
   rule: BOTH IN 5 messages
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''

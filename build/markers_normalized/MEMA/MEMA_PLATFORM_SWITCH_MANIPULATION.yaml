@@ -42,3 +42,8 @@ composed_of:
 activation:
   rule: AT_LEAST 2
 criteria: Persistent pattern of platform switching attempts to isolate targets and increase control across contexts
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

@@ -42,6 +42,11 @@ composed_of:
 - ATO_PAUSE_LONG
 scoring:
   base: 0.70
+semiotic:
+  peirce: index
+  signifikat: Scham/Schuld
+  framing_type: schuld
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: -0.65

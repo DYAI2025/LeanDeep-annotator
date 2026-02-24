@@ -55,6 +55,11 @@ activation:
 scoring:
   base: 1.2
   weight: 1.1
+semiotic:
+  peirce: index
+  signifikat: Eskalation/Konflikt
+  framing_type: eskalation
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: -0.5

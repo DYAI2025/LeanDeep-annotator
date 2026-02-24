@@ -38,6 +38,11 @@ composed_of:
 - ATO_MINIMIZATION
 activation:
   rule: ANY 2 IN 3 messages
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

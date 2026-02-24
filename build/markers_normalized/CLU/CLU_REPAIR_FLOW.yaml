@@ -55,6 +55,10 @@ semiotic:
   connotation:
   - flow
   - deeskalation
+  peirce: index
+  signifikat: Reparatur/Entschuldigung
+  framing_type: reparatur
+  cultural_frame: ''
 temperature_semantics:
   external: DEESCALATION
   latent: EMPATHIE

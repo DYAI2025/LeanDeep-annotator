@@ -27,3 +27,4 @@ examples:
 tags: [atomic, v3.3, auto-generated]
 vad_estimate: {valence: -0.1, arousal: 0.3, dominance: 0.25}
 effect_on_state: {trust: 0.25, conflict: -0.1, deesc: 0.15}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: ''}

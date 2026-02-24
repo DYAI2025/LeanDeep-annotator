@@ -42,3 +42,8 @@ window:
   messages: 100
 detect_class: "E"
 criteria: "Komplexe Interaktion von Autorität, Widerstand und Machtkämpfen"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

@@ -29,6 +29,11 @@ examples:
 tags: []
 rating: 1
 detect_class: "echo_detector"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''
 metadata:
   regex: "ATO_ECHO_REGEX"
   min_hits: 3

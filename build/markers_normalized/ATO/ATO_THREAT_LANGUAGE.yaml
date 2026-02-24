@@ -33,6 +33,11 @@ tags:
 - v3.3
 - auto-generated
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Drohung/Ultimatum
+  framing_type: kontrollnarrative
+  cultural_frame: ''
 vad_estimate:
   valence: -0.6
   arousal: 0.9

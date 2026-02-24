@@ -12,10 +12,10 @@ tags:
 - ORANGE
 - screening
 composed_of:
-  - SEM_ORANGE_STRATEGIC_FLOW
-  - SEM_SD_ORANGE_ACHIEVE
-  - SEM_EXCELLENCE_DRIVE
-  - SEM_INFLUENCE_ORIENTATION
+- SEM_ORANGE_STRATEGIC_FLOW
+- SEM_SD_ORANGE_ACHIEVE
+- SEM_EXCELLENCE_DRIVE
+- SEM_INFLUENCE_ORIENTATION
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 6 messages
 scoring:
@@ -42,3 +42,4 @@ examples:
   - "Das Universum wird schon dafür sorgen"
   - "Lass uns das gemeinsam entscheiden, jede Stimme zählt"
   - "Ich brauch erstmal Ruhe, mir ist das alles zu viel"
+semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}

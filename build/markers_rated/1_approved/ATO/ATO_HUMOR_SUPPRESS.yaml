@@ -17,6 +17,10 @@ semiotic:
   object: "humor_absence"
   connotation: ["unterdrückt", "humorlos"]
   interpretant: "effect_on_state: {affekt: flat, deesc: -0.05}"
+  peirce: icon
+  signifikat: Freude/Dankbarkeit
+  framing_type: empathie
+  cultural_frame: ''
 examples:
   positive_de:
   - "Ok. Ich sende die Liste heute."

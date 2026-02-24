@@ -12,9 +12,9 @@ frame:
   pragmatics: Vorsicht, Rückzug möglich
   narrative: Anschwellende Selbstabwertung
 composed_of:
-  - SEM_SHAME_TEXT
-  - SEM_SELF_VICTIMIZATION
-  - SEM_SELF_PITY
+- SEM_SHAME_TEXT
+- SEM_SELF_VICTIMIZATION
+- SEM_SELF_PITY
 activation:
   rule: AT_LEAST 1 SEM IN 3 messages
 window:
@@ -56,3 +56,4 @@ metadata:
   - rule: R10
     note: Intuition-Metadaten ergänzt gem. LD3.4
     date: '2025-08-29'
+semiotic: {peirce: index, signifikat: Scham/Schuld, framing_type: schuld, cultural_frame: ''}

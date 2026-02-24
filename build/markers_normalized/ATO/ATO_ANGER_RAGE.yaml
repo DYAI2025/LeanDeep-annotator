@@ -99,6 +99,11 @@ tags:
 - frustration
 - v3.4
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Aerger/Wut
+  framing_type: eskalation
+  cultural_frame: ''
 vad_estimate:
   valence: -0.7
   arousal: 1.0

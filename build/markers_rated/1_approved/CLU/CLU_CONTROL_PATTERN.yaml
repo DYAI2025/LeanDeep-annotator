@@ -16,37 +16,41 @@ score:
   threshold: 0.55
 composed_of:
   require:
-    - SEM_CONTROL_LEX
-    - SEM_PARENTAL_AUTHORITY
+  - SEM_CONTROL_LEX
+  - SEM_PARENTAL_AUTHORITY
 emits:
   indices:
     control: +0.2
 examples:
   positive_de:
-    - "Wir machen das jetzt so."
-    - "Ich erwarte bis morgen ein Update."
-    - "Als Vater bestimme ich, wann Schlafenszeit ist."
-    - "Halt dich an die Vorgaben."
-    - "Ich gebe die Richtung vor."
-    - "Folge meinen Anweisungen."
-    - "Kein Widerspruch."
-    - "Ich entscheide."
-    - "Regeln befolgen."
-    - "Autoritäre Ansage."
+  - "Wir machen das jetzt so."
+  - "Ich erwarte bis morgen ein Update."
+  - "Als Vater bestimme ich, wann Schlafenszeit ist."
+  - "Halt dich an die Vorgaben."
+  - "Ich gebe die Richtung vor."
+  - "Folge meinen Anweisungen."
+  - "Kein Widerspruch."
+  - "Ich entscheide."
+  - "Regeln befolgen."
+  - "Autoritäre Ansage."
   negative_de:
-    - "Lass uns besprechen."
-    - "Deine Meinung zählt."
-    - "Wir entscheiden zusammen."
-    - "Kein Druck."
-    - "Frei wählen."
-    - "Autonomie respektieren."
-    - "Gleichberechtigt."
-    - "Keine Vorgaben."
-    - "Offen für Ideen."
-    - "Partnerschaftlich."
+  - "Lass uns besprechen."
+  - "Deine Meinung zählt."
+  - "Wir entscheiden zusammen."
+  - "Kein Druck."
+  - "Frei wählen."
+  - "Autonomie respektieren."
+  - "Gleichberechtigt."
+  - "Keine Vorgaben."
+  - "Offen für Ideen."
+  - "Partnerschaftlich."
 semiotic:
   mode: symbolic
   level: pragmatic
   object: "control"
   interpretant: "effect_on_state: {control: +0.2}"
   connotation: ["autorität", "pattern"]
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''

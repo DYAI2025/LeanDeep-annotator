@@ -47,6 +47,11 @@ scoring:
   formula: "logistic"
 window:
   messages: 25
+semiotic:
+  peirce: icon
+  signifikat: Scham/Schuld
+  framing_type: schuld
+  cultural_frame: ''
 vad_estimate:
   valence: 0.25
   arousal: 0.4

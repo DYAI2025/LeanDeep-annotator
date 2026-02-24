@@ -40,6 +40,11 @@ tags:
 rating: 1
 window:
   messages: 2
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: contextual
 vad_estimate:
   valence: -0.6

@@ -86,6 +86,10 @@ semiotic:
   - "reparatur"
   - "aktiv"
   interpretant: "effect_on_state: {trust: +0.2, conflict: -0.2}"
+  peirce: index
+  signifikat: Reparatur/Entschuldigung
+  framing_type: reparatur
+  cultural_frame: ''
 temperature_semantics:
   external: RUHE
   latent: REPARIEREND

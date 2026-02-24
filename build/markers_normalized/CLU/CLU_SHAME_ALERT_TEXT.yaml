@@ -46,6 +46,11 @@ scoring:
   decay: 0.01
 window:
   messages: 10
+semiotic:
+  peirce: index
+  signifikat: Scham/Schuld
+  framing_type: schuld
+  cultural_frame: ''
 metadata:
   intuition:
     state: provisional

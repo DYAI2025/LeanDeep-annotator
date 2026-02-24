@@ -56,3 +56,4 @@ tags:
 compositionality: deterministic
 vad_estimate: {valence: -0.6, arousal: 0.7, dominance: 0.95}
 effect_on_state: {trust: -0.5, conflict: 0.6, deesc: -0.35}
+semiotic: {peirce: index, signifikat: Realitaetsverzerrung, framing_type: kontrollnarrative, cultural_frame: ''}

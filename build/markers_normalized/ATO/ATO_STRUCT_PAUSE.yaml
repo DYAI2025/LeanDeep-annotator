@@ -35,6 +35,11 @@ tags:
 rating: 2
 activation:
   rule: "ELLIPSIS_OR_FRAGMENT: '...' or sentence_length<=3"
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: 0.0
   arousal: 0.3

@@ -79,6 +79,10 @@ semiotic:
   - "höflich"
   - "formal"
   interpretant: "effect_on_state: {trust: +0.05, affekt: neutral}"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: 0.0
   arousal: 0.3

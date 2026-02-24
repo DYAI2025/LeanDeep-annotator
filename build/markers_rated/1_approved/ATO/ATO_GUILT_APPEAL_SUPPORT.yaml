@@ -41,3 +41,4 @@ examples:
 tags: [ato, guilt, appeal]
 vad_estimate: {valence: 0.25, arousal: 0.4, dominance: 0.3}
 effect_on_state: {trust: 0.3, conflict: -0.25, deesc: 0.3}
+semiotic: {peirce: icon, signifikat: Scham/Schuld, framing_type: schuld, cultural_frame: ''}

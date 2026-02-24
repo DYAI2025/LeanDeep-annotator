@@ -39,7 +39,9 @@ from .models import (
     EmotionScore,
     EngineConfig,
     Episode,
+    FramingHypothesis,
     HealthResponse,
+    InterpretResponse,
     Layer,
     MarkerDetail,
     MarkerListResponse,
@@ -48,6 +50,7 @@ from .models import (
     PersonaSessionSummary,
     PredictionReservoir,
     PredictionResponse,
+    SemioticEntry,
     SpeakerBaselines,
     SpeakerDelta,
     SpeakerSummary,
@@ -56,6 +59,7 @@ from .models import (
     UEDMetrics,
     VADPoint,
 )
+from .interpret import aggregate_framings, build_semiotic_map, dominant_framing
 from .personas import PersonaStore
 
 _start_time = time.time()
@@ -347,6 +351,44 @@ async def analyze_dynamics(
             processing_ms=result["timing_ms"],
             text_length=sum(len(m.text) for m in req.messages),
             markers_detected=len(markers),
+            layers_scanned=layers,
+        ),
+    )
+
+
+# ---------------------------------------------------------------------------
+# POST /v1/analyze/interpret — Semiotic interpretation
+# ---------------------------------------------------------------------------
+
+@app.post("/v1/analyze/interpret", response_model=InterpretResponse)
+async def analyze_interpret(
+    req: ConversationRequest,
+    api_key: str = Depends(verify_api_key),
+):
+    """
+    Semiotic interpretation of a conversation.
+
+    Runs the full detection engine, then overlays Peirce classification
+    (icon/index/symbol), framing hypotheses, and cultural frame analysis.
+    Returns grouped framings with intensity scores and evidence markers.
+    """
+    messages = [{"role": m.role, "text": m.text} for m in req.messages]
+    layers = [l.value for l in req.layers]
+    result = engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
+
+    detections = result["detections"]
+    sem_map = build_semiotic_map(detections, engine)
+    framings = aggregate_framings(detections, sem_map)
+    dom = dominant_framing(framings)
+
+    return InterpretResponse(
+        framings=[FramingHypothesis(**f) for f in framings],
+        semiotic_map={k: SemioticEntry(**v) for k, v in sem_map.items()},
+        dominant_framing=dom,
+        meta=AnalyzeMeta(
+            processing_ms=result["timing_ms"],
+            text_length=sum(len(m.text) for m in req.messages),
+            markers_detected=len(detections),
             layers_scanned=layers,
         ),
     )

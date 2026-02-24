@@ -13,6 +13,10 @@ semiotic:
   level: pragmatic
   object: "repair_request"
   interpretant: "effect_on_state: {deesc: +0.1, trust: +0.1}"
+  peirce: icon
+  signifikat: Reparatur/Entschuldigung
+  framing_type: reparatur
+  cultural_frame: ''
 examples:
   positive_de:
   - "Lass uns das klären."

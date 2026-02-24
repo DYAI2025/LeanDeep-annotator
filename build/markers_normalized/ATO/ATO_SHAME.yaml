@@ -40,6 +40,11 @@ tags:
 - shame
 - self_conscious
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Scham/Schuld
+  framing_type: schuld
+  cultural_frame: ''
 vad_estimate:
   valence: -0.65
   arousal: 0.45

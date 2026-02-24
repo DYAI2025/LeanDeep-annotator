@@ -47,6 +47,11 @@ tags:
 - boundary
 - semantics
 rating: 1
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

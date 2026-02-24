@@ -34,6 +34,11 @@ composed_of:
 - ATO_POWER_ASSERTION
 - ATO_SURVIVAL_INSTINCT
 activation: "BOTH IN 1 message"
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

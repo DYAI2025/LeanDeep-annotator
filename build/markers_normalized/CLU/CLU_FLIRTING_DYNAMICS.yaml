@@ -46,13 +46,17 @@ composed_of:
 - SEM_OFFENSIVE_FLIRTING
 - SEM_SOFT_COMMITMENT
 - SEM_RESPONSE_TIMING
-- SEM_SECRET_BONDING
 scoring:
   base: 1.9
   weight: 1.25
   decay: 0.02
 window:
   messages: 20
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''
 activation:
   rule: AT_LEAST 3 DISTINCT SEM IN 20 messages
 metadata:

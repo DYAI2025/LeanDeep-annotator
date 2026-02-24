@@ -53,3 +53,8 @@ window:
   messages: 50
 detect_class: "E"
 criteria: "Häufung mehrerer Gottman-Destruktoren in kurzer Zeit"
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''

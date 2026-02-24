@@ -30,6 +30,11 @@ composed_of:
 - ATO_TEMPORAL_POINT
 scoring:
   base: 0.60
+semiotic:
+  peirce: index
+  signifikat: Eskalation/Konflikt
+  framing_type: eskalation
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: -0.5

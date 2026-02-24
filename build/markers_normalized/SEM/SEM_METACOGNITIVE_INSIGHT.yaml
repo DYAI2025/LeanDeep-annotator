@@ -37,6 +37,11 @@ composed_of:
 - ATO_SELF_PATTERN_REFERENCE
 activation:
   rule: ALL 2 IN 3 messages
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

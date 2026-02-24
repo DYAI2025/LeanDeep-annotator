@@ -46,6 +46,11 @@ scoring:
   formula: "logistic"
 window:
   messages: 10
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: -0.7
   arousal: 0.35

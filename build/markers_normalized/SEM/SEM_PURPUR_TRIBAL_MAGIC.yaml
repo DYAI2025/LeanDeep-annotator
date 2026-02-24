@@ -34,6 +34,11 @@ composed_of:
 - ATO_TRIBAL_BONDS
 - ATO_HARMONY_CARING
 activation: "ANY 2 IN 3 messages"
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

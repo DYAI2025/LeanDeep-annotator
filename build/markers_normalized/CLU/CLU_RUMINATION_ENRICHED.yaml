@@ -54,6 +54,10 @@ semiotic:
   connotation:
   - "enriched"
   - "helplessness"
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''
 temperature_semantics:
   external: STAGNATION
   latent: RESIGNATION

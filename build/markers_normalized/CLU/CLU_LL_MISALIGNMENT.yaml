@@ -40,3 +40,8 @@ composed_of:
   - CLU_LL_PROFILE
   - CLU_LL_PROFILE
   condition: top(self) != top(partner)
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''

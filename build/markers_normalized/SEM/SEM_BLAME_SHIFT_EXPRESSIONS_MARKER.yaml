@@ -37,6 +37,11 @@ composed_of:
 - ATO_BLAME_SHIFT_MARKER
 activation:
   rule: ANY 2 IN 3 messages
+semiotic:
+  peirce: index
+  signifikat: Schuldzuweisung
+  framing_type: eskalation
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: -0.5

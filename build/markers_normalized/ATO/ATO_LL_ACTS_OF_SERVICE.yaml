@@ -39,6 +39,11 @@ tags:
 - love_language
 - service
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: 0.5
   arousal: 0.4

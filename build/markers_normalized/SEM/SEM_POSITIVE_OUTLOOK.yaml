@@ -38,6 +38,11 @@ composed_of:
 - ATO_POSITIVE_OUTLOOK_CUE
 activation:
   rule: "ANY 1 IN 1 message"
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

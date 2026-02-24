@@ -43,6 +43,11 @@ composed_of:
 - CLU_INTUITION_NARION
 activation:
   rule: "AT_LEAST 2 CLUs confirmed IN session"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''
 metadata:
   circular_causality: true
   formula: "Teile → Ordnungsparameter → Teile"

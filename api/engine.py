@@ -100,6 +100,7 @@ class MarkerDef:
     compositionality: str | None = None  # deterministic | contextual | emergent
     vad_estimate: dict | None = None        # {valence, arousal, dominance}
     effect_on_state: dict | None = None     # {trust, conflict, deesc}
+    semiotic: dict | None = None            # {peirce, signifikat, cultural_frame, framing_type, ...}
 
 
 @dataclass
@@ -375,6 +376,7 @@ class MarkerEngine:
             compositionality=data.get("compositionality"),
             vad_estimate=data.get("vad_estimate"),
             effect_on_state=data.get("effect_on_state"),
+            semiotic=data.get("semiotic"),
         )
 
     def _compile_pattern(self, raw: str, flags: list[str]) -> re.Pattern | None:

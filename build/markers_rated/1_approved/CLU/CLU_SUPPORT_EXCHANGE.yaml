@@ -8,10 +8,10 @@ frame:
   pragmatics: Ressourcen
   narrative: window
 composed_of:
-  - SEM_VALIDATION
-  - SEM_WARM_APPRECIATION
-  - SEM_REPAIR_GESTURE
-  - SEM_CONNECTION_POSITIVITY
+- SEM_VALIDATION
+- SEM_WARM_APPRECIATION
+- SEM_REPAIR_GESTURE
+- SEM_CONNECTION_POSITIVITY
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 7 messages
 scoring:
@@ -35,3 +35,4 @@ examples:
   - "Ich war gestern einkaufen"
   - "Das Wetter soll morgen besser werden"
   - "Hast du die E-Mail gelesen?"
+semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}

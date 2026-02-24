@@ -40,6 +40,11 @@ composed_of:
 - ATO_LAUGHTER
 scoring:
   base: 0.64
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

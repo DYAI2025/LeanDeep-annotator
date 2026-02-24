@@ -54,7 +54,7 @@ semiotic:
   connotation:
   - manipulation
   - sequence
-composed_of:
-  require:
-  - SEM_REALITY_DISTORTION_FIELD
-  - CLU_COVERT_RESPONSIBILITY_INVERSION
+  peirce: index
+  signifikat: Realitaetsverzerrung
+  framing_type: kontrollnarrative
+  cultural_frame: ''

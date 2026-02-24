@@ -38,6 +38,11 @@ composed_of:
 - ATO_NONVERBAL_JOY_VERB
 activation:
   rule: "ANY 1 IN 1 message"
+semiotic:
+  peirce: index
+  signifikat: Freude/Dankbarkeit
+  framing_type: empathie
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.8

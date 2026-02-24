@@ -36,6 +36,11 @@ detect_class:
   params:
     min_duration_ms: 300
     spectral_pattern: "burst_voiced"
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: 0.0
   arousal: 0.3

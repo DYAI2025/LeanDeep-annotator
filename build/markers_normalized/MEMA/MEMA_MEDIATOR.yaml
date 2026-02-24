@@ -43,5 +43,9 @@ semiotic:
   connotation:
   - "archetype"
   - "repair"
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''
 metadata:
   label: Mediator

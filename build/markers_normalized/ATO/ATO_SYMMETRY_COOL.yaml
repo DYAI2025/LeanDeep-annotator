@@ -55,6 +55,10 @@ semiotic:
   - "symmetrie"
   - "kühl"
   interpretant: "effect_on_state: {sync: +0.12, affekt: cool}"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: 0.0
   arousal: 0.3

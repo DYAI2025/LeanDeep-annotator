@@ -33,6 +33,11 @@ composed_of:
 - ATO_HARMONY_CARING
 - ATO_TRIBAL_BONDS
 activation: "BOTH IN 3 messages"
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

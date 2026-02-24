@@ -45,3 +45,8 @@ composed_of:
 - ATO_LL_PHYSICAL_TOUCH
 detect_class:
   rule: "normalize(w)->ranking; mixed if top2_delta < 0.15"
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''

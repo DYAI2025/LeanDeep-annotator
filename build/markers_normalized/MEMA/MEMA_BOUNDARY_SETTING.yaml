@@ -57,6 +57,11 @@ scoring:
   decay: 0.02
 window:
   messages: 60
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''
 metadata:
   neg_examples:
   - "Tag 1: Einmalige Frustrationsäußerung. Tag 5: Konstruktive Lösung – kein Boundary-Zyklus."

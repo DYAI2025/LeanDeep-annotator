@@ -33,3 +33,4 @@ metadata:
     heuristic: "risk_ack_weight=1.1 uncertainty_weight=1.0"
     note: "Higher score => more explicit unmanaged risk"
 tags: [risk, alert]
+semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}

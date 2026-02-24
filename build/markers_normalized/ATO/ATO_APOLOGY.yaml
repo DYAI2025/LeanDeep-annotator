@@ -62,6 +62,10 @@ semiotic:
   level: pragmatic
   object: "apology_expression"
   interpretant: "effect_on_state: {trust: +0.15, conflict: -0.2}"
+  peirce: icon
+  signifikat: Reparatur/Entschuldigung
+  framing_type: reparatur
+  cultural_frame: ''
 vad_estimate:
   valence: 0.3
   arousal: 0.2

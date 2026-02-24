@@ -17,11 +17,11 @@ score:
   threshold: 0.7
 composed_of:
   require:
-    - ATO_APOLOGY
-    - ATO_EMPATHY_MARKERS
-    - ATO_COMPROMISE_OFFER
-    - ATO_REPAIR_REQUEST
-    - ATO_POSITIVE_REGARD
+  - ATO_APOLOGY
+  - ATO_EMPATHY_MARKERS
+  - ATO_COMPROMISE_OFFER
+  - ATO_REPAIR_REQUEST
+  - ATO_POSITIVE_REGARD
   negative_evidence:
     any_of: [ATO_DEFENSIVENESS, ATO_BLAME_SHIFT]
 emits:
@@ -30,53 +30,57 @@ emits:
     deesc: +0.3
     conflict: -0.2
 conflicts_with:
-  - CLU_HEATED_CONFLICT
+- CLU_HEATED_CONFLICT
 semiotic:
   mode: symbolic
   level: pragmatic
   object: "repair_action"
   connotation: ["reparatur", "aktiv"]
   interpretant: "effect_on_state: {trust: +0.2, conflict: -0.2}"
+  peirce: index
+  signifikat: Reparatur/Entschuldigung
+  framing_type: reparatur
+  cultural_frame: ''
 examples:
   positive_de:
-    - "Tut mir leid, ich war unfair."
-    - "Ich verstehe, wie dich das trifft."
-    - "Lass uns das klären."
-    - "Entschuldige meinen Ton."
-    - "Ich bin bei dir."
-    - "Danke fürs Ansprechen."
-    - "Wir machen eine Pause und reden."
-    - "Lass uns fair bleiben."
-    - "Ich übernehme das."
-    - "Die Stimmung ist heikel, ich pass auf."
-    - "Verzeih mir."
-    - "Lass uns neu starten."
-    - "Ich höre zu."
-    - "Das tut mir leid."
-    - "Wir reparieren das."
-    - "Verstehe deinen Punkt."
-    - "Danke für Offenheit."
-    - "Klärung jetzt."
-    - "Entschuldigung."
-    - "Zugeständnis: Ok."
+  - "Tut mir leid, ich war unfair."
+  - "Ich verstehe, wie dich das trifft."
+  - "Lass uns das klären."
+  - "Entschuldige meinen Ton."
+  - "Ich bin bei dir."
+  - "Danke fürs Ansprechen."
+  - "Wir machen eine Pause und reden."
+  - "Lass uns fair bleiben."
+  - "Ich übernehme das."
+  - "Die Stimmung ist heikel, ich pass auf."
+  - "Verzeih mir."
+  - "Lass uns neu starten."
+  - "Ich höre zu."
+  - "Das tut mir leid."
+  - "Wir reparieren das."
+  - "Verstehe deinen Punkt."
+  - "Danke für Offenheit."
+  - "Klärung jetzt."
+  - "Entschuldigung."
+  - "Zugeständnis: Ok."
   negative_de:
-    - "Das nervt mich."
-    - "Du bist schuld."
-    - "Ich hab recht."
-    - "Vergiss es."
-    - "Kein Bedarf."
-    - "Ignorier das."
-    - "Weiter so."
-    - "Keine Zeit."
-    - "Dein Problem."
-    - "Mach allein."
-    - "Ich bin sauer."
-    - "Kein Kompromiss."
-    - "Verteidige mich."
-    - "Blame dich."
-    - "Konflikt hoch."
-    - "Streit fortsetzen."
-    - "Keine Empathie."
-    - "Ignoranz."
-    - "Weiterkämpfen."
-    - "Kein Repair."
+  - "Das nervt mich."
+  - "Du bist schuld."
+  - "Ich hab recht."
+  - "Vergiss es."
+  - "Kein Bedarf."
+  - "Ignorier das."
+  - "Weiter so."
+  - "Keine Zeit."
+  - "Dein Problem."
+  - "Mach allein."
+  - "Ich bin sauer."
+  - "Kein Kompromiss."
+  - "Verteidige mich."
+  - "Blame dich."
+  - "Konflikt hoch."
+  - "Streit fortsetzen."
+  - "Keine Empathie."
+  - "Ignoranz."
+  - "Weiterkämpfen."
+  - "Kein Repair."

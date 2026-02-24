@@ -57,3 +57,8 @@ absence_sets:
     - SEM_BOUNDARY_VIOLATION
 emit:
   per_speaker: true
+semiotic:
+  peirce: symbol
+  signifikat: Reparatur/Entschuldigung
+  framing_type: reparatur
+  cultural_frame: ''

@@ -41,6 +41,11 @@ activation:
 scoring:
   base: 0.5
   weight: 2.5
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''
 metadata:
   telemetry_keys:
     counter_confirmed: "INT_READINESS.confirmed"

@@ -63,6 +63,11 @@ tags:
 - psychiatric
 - depression
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Trauer/Verlust
+  framing_type: ueberflutung
+  cultural_frame: ''
 vad_estimate:
   valence: -0.7
   arousal: 0.25

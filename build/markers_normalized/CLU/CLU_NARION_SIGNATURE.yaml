@@ -41,6 +41,11 @@ composed_of:
 - SEM_METAPHORICAL_DENSITY
 activation:
   rule: "AT_LEAST 3 DISTINCT SEMs IN 6 messages"
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''
 metadata:
   intuition:
     confirm_window: 6

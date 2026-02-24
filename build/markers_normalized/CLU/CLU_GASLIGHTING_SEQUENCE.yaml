@@ -55,6 +55,10 @@ semiotic:
   connotation:
   - manipulation
   - sequence
+  peirce: index
+  signifikat: Realitaetsverzerrung
+  framing_type: kontrollnarrative
+  cultural_frame: ''
 temperature_semantics:
   external: VERWIRRUNG
   latent: KONTROLLE

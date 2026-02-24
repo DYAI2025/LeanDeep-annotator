@@ -48,3 +48,8 @@ criteria:
   source_cluster: "CLU_NEEDINESS_GUILT_BIND"
   horizon_windows: 5
   min_windows: 2
+semiotic:
+  peirce: symbol
+  signifikat: Scham/Schuld
+  framing_type: schuld
+  cultural_frame: ''

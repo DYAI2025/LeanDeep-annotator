@@ -35,3 +35,8 @@ composed_of:
 - SEM_POSITIVE_FUTURE
 activation:
   rule: ANY 2 IN 5 messages
+semiotic:
+  peirce: symbol
+  signifikat: Liebe/Zuneigung
+  framing_type: bindung
+  cultural_frame: ''

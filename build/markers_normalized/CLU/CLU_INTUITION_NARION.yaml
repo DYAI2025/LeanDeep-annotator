@@ -48,6 +48,11 @@ composed_of:
 - SEM_RITUAL_INVOCATION
 activation:
   rule: "AT_LEAST 3 DISTINCT SEMs IN 5 messages"
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''
 metadata:
   intuition:
     confirm_window: 5

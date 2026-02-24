@@ -39,6 +39,11 @@ composed_of:
 - ATO_SARCASM
 activation:
   rule: AT_LEAST 2 IN 3 messages
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

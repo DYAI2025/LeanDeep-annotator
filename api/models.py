@@ -182,6 +182,30 @@ class DynamicsResponse(BaseModel):
     meta: AnalyzeMeta
 
 
+# --- Semiotic Interpretation Models ---
+
+class SemioticEntry(BaseModel):
+    peirce: str              # "icon" | "index" | "symbol"
+    signifikat: str
+    cultural_frame: str = ""
+    framing_type: str = ""
+
+
+class FramingHypothesis(BaseModel):
+    framing_type: str
+    label: str
+    intensity: float = Field(ge=0.0, le=1.0)
+    evidence_markers: list[str]
+    message_indices: list[int]
+
+
+class InterpretResponse(BaseModel):
+    framings: list[FramingHypothesis]
+    semiotic_map: dict[str, SemioticEntry]
+    dominant_framing: str | None = None
+    meta: AnalyzeMeta
+
+
 class MarkerDetail(BaseModel):
     id: str
     layer: Layer

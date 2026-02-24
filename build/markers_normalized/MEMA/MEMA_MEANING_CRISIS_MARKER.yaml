@@ -47,3 +47,8 @@ activation:
 scoring:
   base: 2.0
   weight: 1.5
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

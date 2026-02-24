@@ -86,6 +86,10 @@ semiotic:
   - "konflikt"
   - "heiß"
   interpretant: "effect_on_state: {conflict: +0.3, trust: -0.2}"
+  peirce: index
+  signifikat: Eskalation/Konflikt
+  framing_type: eskalation
+  cultural_frame: ''
 temperature_semantics:
   external: HITZE
   latent: KONFLIKT

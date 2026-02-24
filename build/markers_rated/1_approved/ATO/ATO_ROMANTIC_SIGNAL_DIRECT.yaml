@@ -13,6 +13,10 @@ semiotic:
   level: pragmatic
   object: "romantic_signal"
   interpretant: "effect_on_state: {intimacy: +0.25, trust: +0.1}"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 examples:
   positive_de:
   - "Ich liebe dich."

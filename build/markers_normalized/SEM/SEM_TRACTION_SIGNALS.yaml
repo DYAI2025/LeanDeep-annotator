@@ -40,6 +40,11 @@ activation:
 scoring:
   base: 1.0
   weight: 1.4
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

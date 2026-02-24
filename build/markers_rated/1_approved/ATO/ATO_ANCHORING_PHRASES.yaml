@@ -43,3 +43,4 @@ metadata:
   - "Wir setzen den Fokus nicht auf den Startpunkt, sondern auf das Endergebnis."
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: ''}

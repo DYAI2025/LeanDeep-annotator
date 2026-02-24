@@ -45,3 +45,4 @@ tags: [cluster, gottman, toxicity, destructive, escalation, severe]
 detect_class: "E"
 criteria: "Häufung mehrerer Gottman-Destruktoren in kurzer Zeit"
 updated_at: "2025-08-19T10:30:00Z"
+semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}

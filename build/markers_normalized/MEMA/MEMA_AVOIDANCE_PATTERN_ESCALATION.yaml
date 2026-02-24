@@ -40,3 +40,8 @@ composed_of:
 - SEM_WEBCAM_EXCUSE
 - SEM_EMOTIONAL_OVERWHELM
 criteria: Progressive pattern of avoidance behaviors escalating from technical excuses to systematic disengagement
+semiotic:
+  peirce: symbol
+  signifikat: Eskalation/Konflikt
+  framing_type: eskalation
+  cultural_frame: ''

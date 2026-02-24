@@ -80,6 +80,10 @@ semiotic:
   - "prozess"
   - "jargon"
   interpretant: "effect_on_state: {sync: +0.15, task_dominance: +0.2}"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: 0.0
   arousal: 0.3

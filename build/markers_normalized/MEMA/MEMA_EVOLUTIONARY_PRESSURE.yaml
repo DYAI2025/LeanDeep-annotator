@@ -31,3 +31,8 @@ examples:
 tags: []
 rating: 1
 detect_class: "evolution_pressure_analyzer"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

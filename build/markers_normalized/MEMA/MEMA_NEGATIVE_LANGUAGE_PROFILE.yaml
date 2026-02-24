@@ -35,3 +35,8 @@ composed_of:
 - ATO_DEPRESSION_PAST_FOCUS
 - ATO_DEPRESSION_SUICIDE_RISK
 - CLU_DEPRESSIVE_TRIAD
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

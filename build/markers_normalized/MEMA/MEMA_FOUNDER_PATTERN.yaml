@@ -36,6 +36,11 @@ scoring:
   base: 0.0
   weight: 1.0
   aggregation: "trend_delta"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''
 meta_logic:
   scope: "multi_session"
   window_sessions: 5

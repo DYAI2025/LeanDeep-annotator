@@ -46,6 +46,11 @@ scoring:
   decay: 0.01
 window:
   messages: 15
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''
 metadata:
   repair_log:
   - rule: R10

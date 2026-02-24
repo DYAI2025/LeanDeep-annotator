@@ -45,6 +45,11 @@ scoring:
   weight: 0.9
 window:
   messages: 5
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: -0.6

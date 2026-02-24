@@ -64,3 +64,8 @@ absence_sets:
     - ATO_SET_BOUNDARY
     - ATO_PROBLEM_SOLVING
     - SEM_SYSTEMS_THINKING
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

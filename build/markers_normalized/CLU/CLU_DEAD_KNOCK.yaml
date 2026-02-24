@@ -52,3 +52,8 @@ scoring:
     SEM_EVAL_PRIOR: 1
     AMPLIFIER_EACH: 1
   threshold: 7
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''

@@ -55,6 +55,10 @@ semiotic:
   connotation:
   - "herunterspielen"
   - "loop"
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''
 temperature_semantics:
   external: RUHE
   latent: DEVALUATION

@@ -65,6 +65,10 @@ semiotic:
   - "balanciert"
   - "latenz"
   interpretant: "effect_on_state: {sync: +0.1, impulsivity: -0.1}"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: -0.2
   arousal: 0.5

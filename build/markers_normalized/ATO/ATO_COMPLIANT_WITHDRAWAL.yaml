@@ -33,6 +33,11 @@ tags:
 - v3.3
 - auto-generated
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Isolation/Rueckzug
+  framing_type: vermeidung
+  cultural_frame: ''
 vad_estimate:
   valence: -0.6
   arousal: 0.95

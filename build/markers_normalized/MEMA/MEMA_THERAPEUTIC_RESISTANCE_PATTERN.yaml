@@ -40,3 +40,8 @@ composed_of:
 - SEM_SELF_REFLECTION
 - SEM_VALIDATION_SEEKING
 criteria: Persistent pattern of resistance to therapeutic change across multiple interventions and contexts
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

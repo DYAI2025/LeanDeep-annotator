@@ -38,6 +38,11 @@ rating: 1
 composed_of:
 - ATO_TECH_FIX
 - ATO_SAFETY_AFFECT
+semiotic:
+  peirce: index
+  signifikat: Reparatur/Entschuldigung
+  framing_type: reparatur
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.45

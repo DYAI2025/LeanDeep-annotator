@@ -58,3 +58,8 @@ absence_sets:
     - ATO_SELF_STATEMENT
 emit:
   per_speaker: true
+semiotic:
+  peirce: symbol
+  signifikat: Eskalation/Konflikt
+  framing_type: eskalation
+  cultural_frame: ''

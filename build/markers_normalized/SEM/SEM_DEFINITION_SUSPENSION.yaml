@@ -43,6 +43,11 @@ policy:
   - SEM_RELATION_OVER_PERSONA
   - SEM_LIMINAL_FIELD_PRESENCE
   - SEM_SACRALIZATION_BINDING
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

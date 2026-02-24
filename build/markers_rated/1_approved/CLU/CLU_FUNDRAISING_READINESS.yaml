@@ -33,3 +33,4 @@ metadata:
     heuristic: "traction_weight=1.2 team_weight=1.0"
     note: "Early signal of fundraising viability"
 tags: [fundraising, readiness]
+semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}

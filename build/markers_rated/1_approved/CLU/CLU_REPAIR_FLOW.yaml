@@ -54,8 +54,7 @@ semiotic:
   connotation:
   - flow
   - deeskalation
-composed_of:
-  require:
-  - ATO_REPAIR_REQUEST
-  - CLU_EMOTIONAL_SUPPORT
-  - SEM_CLOSURE_PROTOCOL
+  peirce: index
+  signifikat: Reparatur/Entschuldigung
+  framing_type: reparatur
+  cultural_frame: ''

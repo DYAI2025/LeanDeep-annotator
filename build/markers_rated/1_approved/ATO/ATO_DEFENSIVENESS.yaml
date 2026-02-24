@@ -13,6 +13,10 @@ semiotic:
   level: pragmatic
   object: "defensive_response"
   interpretant: "effect_on_state: {conflict: +0.1, trust: -0.1}"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 examples:
   positive_de:
   - "Das ist nicht fair."

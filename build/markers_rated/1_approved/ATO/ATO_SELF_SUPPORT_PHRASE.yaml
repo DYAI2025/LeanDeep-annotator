@@ -55,3 +55,4 @@ examples:
   - Die Besprechung ist im Konferenzraum.
 vad_estimate: {valence: 0.4, arousal: 0.35, dominance: 0.5}
 effect_on_state: {trust: 0.3, conflict: -0.25, deesc: 0.3}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: ''}

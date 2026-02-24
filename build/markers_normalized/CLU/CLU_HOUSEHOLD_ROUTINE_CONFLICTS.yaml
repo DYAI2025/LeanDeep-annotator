@@ -53,3 +53,8 @@ window:
   messages: 50
 detect_class: "E"
 criteria: "Kombination von Haushaltsanweisungen und Widerstandsmustern"
+semiotic:
+  peirce: index
+  signifikat: Eskalation/Konflikt
+  framing_type: eskalation
+  cultural_frame: ''

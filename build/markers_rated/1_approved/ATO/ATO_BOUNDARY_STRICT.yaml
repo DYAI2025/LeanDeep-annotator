@@ -14,6 +14,10 @@ semiotic:
   object: "boundary_setting"
   connotation: ["grenze", "strikt"]
   interpretant: "effect_on_state: {conflict: -0.1, sync: +0.1}"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 examples:
   positive_de:
   - "Wie besprochen bleiben wir im Scope."

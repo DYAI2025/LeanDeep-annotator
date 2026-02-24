@@ -44,6 +44,11 @@ tags:
 - motiv
 - valenz
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Liebe/Zuneigung
+  framing_type: bindung
+  cultural_frame: ''
 vad_estimate:
   valence: 0.6
   arousal: 0.65

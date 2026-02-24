@@ -43,6 +43,11 @@ tags:
 rating: 1
 activation:
   rule: ANY 1
+semiotic:
+  peirce: icon
+  signifikat: Angst/Bedrohung
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: -0.6
   arousal: 0.8

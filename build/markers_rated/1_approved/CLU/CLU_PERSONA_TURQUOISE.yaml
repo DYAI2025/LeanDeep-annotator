@@ -12,10 +12,10 @@ tags:
 - TURQUOISE
 - screening
 composed_of:
-  - SEM_TUERKIS_COSMIC_FLOW
-  - SEM_SD_TURQUOISE_HOLISM
-  - SEM_GELB_SYSTEMIC_INTEGRATION
-  - SEM_META_REFLECTION
+- SEM_TUERKIS_COSMIC_FLOW
+- SEM_SD_TURQUOISE_HOLISM
+- SEM_GELB_SYSTEMIC_INTEGRATION
+- SEM_META_REFLECTION
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 6 messages
 scoring:
@@ -42,3 +42,4 @@ examples:
   - "Regeln sind Regeln, da gibts nix zu diskutieren"
   - "Mir egal was die anderen sagen, ich mach mein Ding"
   - "Hauptsache mir gehts gut, der Rest ist mir egal"
+semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}

@@ -61,3 +61,8 @@ scoring:
   formula: "logistic"
 window:
   messages: 20
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''

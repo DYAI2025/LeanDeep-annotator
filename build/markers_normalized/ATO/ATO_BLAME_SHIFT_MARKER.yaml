@@ -83,6 +83,11 @@ tags:
 - schuld
 - abwälzung
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Schuldzuweisung
+  framing_type: eskalation
+  cultural_frame: ''
 vad_estimate:
   valence: -0.5
   arousal: 0.75

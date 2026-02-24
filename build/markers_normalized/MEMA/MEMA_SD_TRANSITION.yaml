@@ -40,6 +40,11 @@ activation:
 scoring:
   base: 1.5
   weight: 1.2
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''
 metadata:
   transition_rule: "if prev_stage.score >= 0.6 and next_stage.score - prev_stage.score >= 0.3 within 10 messages → TRANSITION(prev→next)"
   min_persistence: 3

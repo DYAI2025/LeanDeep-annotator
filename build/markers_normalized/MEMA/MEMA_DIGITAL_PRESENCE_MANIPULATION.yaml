@@ -39,3 +39,8 @@ rating: 1
 composed_of:
 - SEM_WEBCAM_EXCUSE
 criteria: Strategic pattern of controlling digital engagement through technical excuses and presence manipulation
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

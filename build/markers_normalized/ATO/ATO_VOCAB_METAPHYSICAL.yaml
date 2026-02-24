@@ -36,6 +36,11 @@ tags:
 rating: 2
 activation:
   rule: "REGEX: \\b(Präsenz|Wesen|Werden|Raum|Echo|Spiegel)\\b"
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 vad_estimate:
   valence: 0.0
   arousal: 0.3

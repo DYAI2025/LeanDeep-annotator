@@ -39,3 +39,8 @@ activation:
     window: 10
   - trigger: TECHNICAL_IMPLEMENTATION
     description: "Nutzer fragt nach Umsetzung/Integration des neuen Begriffs"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

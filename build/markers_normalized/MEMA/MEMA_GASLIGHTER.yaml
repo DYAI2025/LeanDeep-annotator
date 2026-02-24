@@ -43,5 +43,9 @@ semiotic:
   connotation:
   - "archetype"
   - "gaslighting"
+  peirce: symbol
+  signifikat: Realitaetsverzerrung
+  framing_type: kontrollnarrative
+  cultural_frame: ''
 metadata:
   label: Gaslighter

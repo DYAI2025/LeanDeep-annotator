@@ -84,6 +84,10 @@ semiotic:
   - "humor"
   - "leicht"
   interpretant: "effect_on_state: {deesc: +0.15, intimacy: +0.1}"
+  peirce: icon
+  signifikat: Freude/Dankbarkeit
+  framing_type: empathie
+  cultural_frame: ''
 vad_estimate:
   valence: 0.8
   arousal: 0.6

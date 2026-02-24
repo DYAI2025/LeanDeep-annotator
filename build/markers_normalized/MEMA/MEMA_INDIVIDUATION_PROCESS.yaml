@@ -41,3 +41,8 @@ scoring:
   formula: logistic
 window:
   messages: 30
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

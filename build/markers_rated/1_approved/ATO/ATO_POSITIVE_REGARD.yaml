@@ -13,6 +13,10 @@ semiotic:
   level: pragmatic
   object: "positive_regard"
   interpretant: "effect_on_state: {trust: +0.15, intimacy: +0.1}"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
 examples:
   positive_de:
   - "Gut gemacht!"

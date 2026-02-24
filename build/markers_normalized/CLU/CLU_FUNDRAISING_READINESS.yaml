@@ -39,6 +39,11 @@ activation:
 scoring:
   base: 0.7
   weight: 2.0
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''
 metadata:
   readiness:
     heuristic: "traction_weight=1.2 team_weight=1.0"

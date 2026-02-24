@@ -36,3 +36,8 @@ composed_of:
 - SEM_CARING_FRIEND_EXPRESSIONS_MARKER
 activation:
   rule: "ANY 1 IN 3 chunks"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: ''

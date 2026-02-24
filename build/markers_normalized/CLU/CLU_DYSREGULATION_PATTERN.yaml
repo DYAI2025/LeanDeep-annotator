@@ -45,6 +45,11 @@ activation:
 scoring:
   base: 0.6
   weight: 1.15
+semiotic:
+  peirce: index
+  signifikat: Cluster-Intuition
+  framing_type: unsicherheit
+  cultural_frame: ''
 metadata:
   family: AFFECT
   constraints:
