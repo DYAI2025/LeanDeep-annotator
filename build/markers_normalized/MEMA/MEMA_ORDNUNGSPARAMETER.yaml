@@ -47,7 +47,7 @@ semiotic:
   peirce: symbol
   signifikat: Meta-Diagnose
   framing_type: meta
-  cultural_frame: ''
+  cultural_frame: Systemisch
 metadata:
   circular_causality: true
   formula: "Teile → Ordnungsparameter → Teile"

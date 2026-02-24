@@ -53,4 +53,4 @@ meta:
   created_by: FRAUSAR_GUI_v2
   source_version: '1.0'
   schema_version: '3.3'
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Beduerfnisausdruck, framing_type: bindung, cultural_frame: ''}

@@ -25,4 +25,4 @@ examples:
 tags: [humor, register, formal, atomic, v33]
 vad_estimate: {valence: 0.5, arousal: 0.4, dominance: 0.5}
 effect_on_state: {trust: 0.2, conflict: -0.15, deesc: 0.2}
-semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Humor/Leichtigkeit, framing_type: empathie, cultural_frame: ''}

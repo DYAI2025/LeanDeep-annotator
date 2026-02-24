@@ -49,9 +49,9 @@ scoring:
   base: 0.65
   weight: 1.5
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Grenzsetzung
+  framing_type: bindung
   cultural_frame: ''
 vad_estimate:
   valence: -0.3

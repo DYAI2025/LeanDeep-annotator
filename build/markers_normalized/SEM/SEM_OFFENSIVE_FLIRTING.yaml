@@ -42,9 +42,9 @@ composed_of:
 activation:
   rule: ANY 2 IN 3 messages
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Grenzsetzung
+  framing_type: bindung
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

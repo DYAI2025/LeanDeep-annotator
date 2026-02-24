@@ -36,4 +36,4 @@ examples:
   - "Ich fühle mich stabil und ausgeglichen heute"
   - "Wir sind uns einig und ziehen das gemeinsam durch"
   - "Ich weiß was ich will und wie ich dahin komme"
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Persoenlichkeitsmuster, framing_type: meta, cultural_frame: ''}

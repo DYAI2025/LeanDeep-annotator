@@ -41,7 +41,7 @@ composed_of:
 - SEM_GASLIGHTING_ATTEMPT
 criteria: Persistent pattern of excessive certainty claims followed by dismissal of others' emotional responses
 semiotic:
-  peirce: symbol
-  signifikat: Meta-Diagnose
-  framing_type: meta
-  cultural_frame: ''
+  peirce: index
+  signifikat: Validierung/Anerkennung
+  framing_type: empathie
+  cultural_frame: Rogers

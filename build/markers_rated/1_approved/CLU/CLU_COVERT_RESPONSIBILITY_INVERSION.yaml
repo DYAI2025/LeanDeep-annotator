@@ -46,4 +46,4 @@ examples:
   - Das klingt nach einem wichtigen Thema fuer dich.
 tags: [cognitive, responsibility, blame_shifting, manipulation]
 schema_version: "3.3"
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Verantwortungsuebernahme, framing_type: reparatur, cultural_frame: ''}

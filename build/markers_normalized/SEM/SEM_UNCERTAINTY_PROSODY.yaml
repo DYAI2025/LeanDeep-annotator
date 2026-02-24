@@ -44,8 +44,8 @@ composed_of:
 scoring:
   base: 0.66
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
+  peirce: icon
+  signifikat: Unsicherheit
   framing_type: unsicherheit
   cultural_frame: ''
 compositionality: deterministic

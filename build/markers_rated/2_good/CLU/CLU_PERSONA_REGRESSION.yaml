@@ -36,4 +36,4 @@ examples:
   - "Auch wenn es schwer ist, ich versuche beide Seiten zu sehen"
   - "Ich brauch kurz ne Pause, dann können wir weiterreden"
   - "Das triggert mich grad, aber ich weiß dass das mein Thema ist"
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Persoenlichkeitsmuster, framing_type: meta, cultural_frame: ''}

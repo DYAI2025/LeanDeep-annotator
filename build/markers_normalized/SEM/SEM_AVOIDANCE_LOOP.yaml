@@ -52,8 +52,8 @@ scoring:
   weight: 1.12
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  signifikat: Vermeidungsverhalten
+  framing_type: vermeidung
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

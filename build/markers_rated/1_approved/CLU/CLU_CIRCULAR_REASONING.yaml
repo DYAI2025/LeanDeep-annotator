@@ -34,4 +34,4 @@ examples:
   - Ich komme immer wieder darauf zurück weil es mir wichtig ist.
   - Lass uns das nochmal durchgehen, ich hab neue Ideen.
   - Das Thema ist noch offen, können wir einen neuen Ansatz probieren?
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Erklaerungsversuch, framing_type: reparatur, cultural_frame: ''}

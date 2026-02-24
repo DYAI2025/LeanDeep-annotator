@@ -43,10 +43,10 @@ composed_of:
 window:
   messages: 2
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: icon
+  signifikat: Aerger/Wut
+  framing_type: eskalation
+  cultural_frame: Emotionsregulation
 compositionality: deterministic
 vad_estimate:
   valence: -0.6

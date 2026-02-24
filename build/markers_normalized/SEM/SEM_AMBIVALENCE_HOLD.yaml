@@ -40,8 +40,8 @@ composed_of:
 activation:
   rule: AT_LEAST 2 IN 3 messages
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
+  peirce: icon
+  signifikat: Ambivalenz/Zwiespalt
   framing_type: unsicherheit
   cultural_frame: ''
 compositionality: deterministic

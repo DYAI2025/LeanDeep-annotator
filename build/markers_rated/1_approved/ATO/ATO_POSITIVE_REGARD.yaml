@@ -14,8 +14,8 @@ semiotic:
   object: "positive_regard"
   interpretant: "effect_on_state: {trust: +0.15, intimacy: +0.1}"
   peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  signifikat: Positive Grundhaltung
+  framing_type: empathie
   cultural_frame: ''
 examples:
   positive_de:

@@ -682,10 +682,36 @@ async def analyze_interpret(request: Request):
         dominant = "reparatur"
         n_markers = 8
 
+    if is_conflict:
+        findings = {
+            "narrative": "Kontroll- und Eskalationssignale (9 Marker) praegen den Austausch. Muster wie Contempt, Demand, Guilt Trip deuten auf eine zunehmend verhaertete Dynamik hin. Vermeidungs- und Rueckzugsmuster (2 Marker) sind praesent. Stonewalling, Withdrawal Pattern signalisieren emotionale Distanzierung.",
+            "key_points": [
+                "Abwertungsmodus: 1 Marker, 94% Intensitaet",
+                "Kontroll-/Manipulations-Framing: 3 Marker, 93% Intensitaet",
+                "Vermeidungs-/Rueckzugsmodus: 2 Marker, 90% Intensitaet",
+                "Demand-Withdraw-Muster erkennbar",
+            ],
+            "relational_pattern": "Es zeigt sich ein Demand-Withdraw-Muster: Waehrend eine Seite eskaliert, zieht sich die andere zurueck — ein klassischer Teufelskreis.",
+            "bias_check": None,
+        }
+    else:
+        findings = {
+            "narrative": "Reparatursignale (3 Marker) zeigen Versuche der Wiederherstellung. Repair Bid, Repair Attempt, Repair Sequence deuten auf aktive Beziehungsarbeit hin. Empathie- und Validierungssignale (1 Marker) zeigen einfuehlsame Anteile.",
+            "key_points": [
+                "Reparatur-/Wiederherstellungsmodus: 3 Marker, 95% Intensitaet",
+                "Unsicherheits-/Ambivalenz-Framing: 1 Marker, 92% Intensitaet",
+                "Schuld-/Selbstattributions-Framing: 1 Marker, 91% Intensitaet",
+                "Empathie und Reparatur dominieren — konstruktive Kommunikation",
+            ],
+            "relational_pattern": "Empathie und Reparatur dominieren — konstruktive Kommunikation mit echten Verstaendigungsversuchen.",
+            "bias_check": None,
+        }
+
     return {
         "framings": framings,
         "semiotic_map": semiotic_map,
         "dominant_framing": dominant,
+        "findings": findings,
         "meta": _meta(text_len, n_markers, ["ATO", "SEM", "CLU", "MEMA"], ms=4.2),
     }
 

@@ -39,9 +39,9 @@ composed_of:
 - ATO_VOICE_PROXY
 - ATO_RELATION_TERM
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Persoenlichkeitsmuster
+  framing_type: meta
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

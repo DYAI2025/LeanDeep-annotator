@@ -40,4 +40,4 @@ examples:
   - "Hör auf darüber zu lachen."
   - "Das ist ernst gemeint."
   - "Ich mache keine Witze."
-semiotic: {peirce: index, signifikat: Freude/Dankbarkeit, framing_type: empathie, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Geteilte Erfahrung, framing_type: bindung, cultural_frame: ''}

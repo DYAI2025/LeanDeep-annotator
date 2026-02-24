@@ -61,10 +61,10 @@ scoring:
   base: 1.5
   weight: 1.2
 semiotic:
-  peirce: index
+  peirce: symbol
   signifikat: Realitaetsverzerrung
   framing_type: kontrollnarrative
-  cultural_frame: ''
+  cultural_frame: Sozialpsychologie
 compositionality: deterministic
 vad_estimate:
   valence: -0.6

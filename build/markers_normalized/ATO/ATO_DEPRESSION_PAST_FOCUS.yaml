@@ -65,9 +65,9 @@ tags:
 rating: 1
 semiotic:
   peirce: icon
-  signifikat: Trauer/Verlust
+  signifikat: Depressive Zeichen
   framing_type: ueberflutung
-  cultural_frame: ''
+  cultural_frame: Klinische Psychologie
 vad_estimate:
   valence: -0.7
   arousal: 0.25

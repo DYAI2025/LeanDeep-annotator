@@ -54,9 +54,9 @@ detect_class: "E"
 criteria: "Kombination aus Geschwisterrolle und negativen Bewertungen"
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Konfliktdynamik
+  framing_type: eskalation
+  cultural_frame: Gottman
 compositionality: deterministic
 vad_estimate:
   valence: -0.5

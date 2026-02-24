@@ -48,4 +48,4 @@ tags: [mema, family, triangulation, coalition, systemic]
 detect_class: "E"
 criteria: "Muster der Koalitionsbildung zwischen verschiedenen Familienmitgliedern"
 updated_at: "2025-08-19T10:30:00Z"
-semiotic: {peirce: symbol, signifikat: Meta-Diagnose, framing_type: meta, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Triangulation, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie}

@@ -51,6 +51,6 @@ semiotic:
   interpretant: "effect_on_state: {control: +0.2}"
   connotation: ["autorität", "pattern"]
   peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Kontrolle/Dominanz
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie

@@ -47,9 +47,9 @@ scoring:
   base: 0.5
   weight: 1.0
 semiotic:
-  peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Engagement/Verbindlichkeit
+  framing_type: bindung
   cultural_frame: ''
 metadata:
   intuition:

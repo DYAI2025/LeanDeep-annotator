@@ -45,9 +45,9 @@ composed_of:
 activation:
   rule: AT_LEAST 2 IN 1 message
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Persoenlichkeitsmuster
+  framing_type: meta
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

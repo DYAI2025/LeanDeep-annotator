@@ -44,4 +44,4 @@ examples:
 compositionality: deterministic
 vad_estimate: {valence: 0.45, arousal: 0.2, dominance: 0.5}
 effect_on_state: {trust: 0.35, conflict: -0.3, deesc: 0.4}
-semiotic: {peirce: index, signifikat: Eskalation/Konflikt, framing_type: eskalation, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Eskalation/Konfliktsteigerung, framing_type: eskalation, cultural_frame: Gottman}

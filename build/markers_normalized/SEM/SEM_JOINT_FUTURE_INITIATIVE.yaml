@@ -47,10 +47,10 @@ scoring:
 window:
   messages: 4
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Verbundenheitssignal
+  framing_type: bindung
+  cultural_frame: Bowlby
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

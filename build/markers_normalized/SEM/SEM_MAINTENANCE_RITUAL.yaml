@@ -51,9 +51,9 @@ scoring:
 window:
   messages: 30
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Beziehungsritual
+  framing_type: bindung
   cultural_frame: ''
 compositionality: contextual
 vad_estimate:

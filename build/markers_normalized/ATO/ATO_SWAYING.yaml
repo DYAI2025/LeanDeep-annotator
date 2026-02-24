@@ -65,7 +65,7 @@ scoring:
   weight: 1.0
 semiotic:
   peirce: icon
-  signifikat: Atomares Signal
+  signifikat: Zoegern/Unentschlossenheit
   framing_type: unsicherheit
   cultural_frame: ''
 vad_estimate:

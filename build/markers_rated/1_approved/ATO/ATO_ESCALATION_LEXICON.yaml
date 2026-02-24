@@ -13,10 +13,10 @@ semiotic:
   level: semantic
   object: "escalation_lexicon"
   interpretant: "effect_on_state: {conflict: +0.2, deesc: -0.15}"
-  peirce: icon
-  signifikat: Eskalation/Konflikt
+  peirce: index
+  signifikat: Eskalation/Konfliktsteigerung
   framing_type: eskalation
-  cultural_frame: ''
+  cultural_frame: Gottman
 examples:
   positive_de:
   - "Das eskaliert."

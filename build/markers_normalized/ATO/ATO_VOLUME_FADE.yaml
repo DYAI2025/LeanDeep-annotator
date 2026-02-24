@@ -39,10 +39,10 @@ detect_class:
     - 800
     - 2000
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: index
+  signifikat: Beziehungsdynamik
+  framing_type: meta
+  cultural_frame: Systemisch
 vad_estimate:
   valence: 0.0
   arousal: 0.3

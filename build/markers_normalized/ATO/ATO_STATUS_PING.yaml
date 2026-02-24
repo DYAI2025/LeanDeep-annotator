@@ -58,10 +58,10 @@ scoring:
 window:
   messages: 35
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: index
+  signifikat: Eskalation/Konfliktsteigerung
+  framing_type: eskalation
+  cultural_frame: Gottman
 vad_estimate:
   valence: 0.0
   arousal: 0.3

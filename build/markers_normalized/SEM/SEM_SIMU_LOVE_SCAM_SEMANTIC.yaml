@@ -41,7 +41,7 @@ scoring:
   base: 1.5
   weight: 1.2
 semiotic:
-  peirce: index
+  peirce: symbol
   signifikat: Liebe/Zuneigung
   framing_type: bindung
   cultural_frame: ''

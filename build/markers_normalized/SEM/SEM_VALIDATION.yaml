@@ -48,9 +48,9 @@ scoring:
   weight: 1.05
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Validierung/Anerkennung
+  framing_type: empathie
+  cultural_frame: Rogers
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

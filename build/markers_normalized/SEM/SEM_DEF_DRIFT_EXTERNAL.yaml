@@ -28,8 +28,8 @@ composed_of:
 - ATO_DEF_DRIFT_TERMS
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  signifikat: Themenwechsel/Abdriften
+  framing_type: vermeidung
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

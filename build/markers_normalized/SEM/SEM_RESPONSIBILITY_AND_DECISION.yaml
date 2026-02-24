@@ -49,8 +49,8 @@ scoring:
   weight: 1.09
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  signifikat: Verantwortungsuebernahme
+  framing_type: reparatur
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

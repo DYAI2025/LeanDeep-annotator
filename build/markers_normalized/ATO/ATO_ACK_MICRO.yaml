@@ -86,8 +86,8 @@ semiotic:
   - "bestätigung"
   - "mikro"
   peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  signifikat: Minimal-Antwort/Mikrobestaetigung
+  framing_type: vermeidung
   cultural_frame: ''
 vad_estimate:
   valence: 0.0

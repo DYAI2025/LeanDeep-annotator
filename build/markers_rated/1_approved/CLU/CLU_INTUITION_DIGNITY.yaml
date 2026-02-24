@@ -51,4 +51,4 @@ examples:
   - Lass uns auf Augenhöhe drüber reden
   - Ich schätze deinen Einsatz sehr
   - Danke dass du dir die Zeit genommen hast
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Cluster-Intuition, framing_type: meta, cultural_frame: ''}

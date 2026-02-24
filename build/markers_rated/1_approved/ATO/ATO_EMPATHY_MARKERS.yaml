@@ -14,9 +14,9 @@ semiotic:
   object: "empathy_expression"
   interpretant: "effect_on_state: {trust: +0.2, deesc: +0.15}"
   peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Einfuehlung/Empathie
+  framing_type: empathie
+  cultural_frame: Rogers
 examples:
   positive_de:
   - "Ich verstehe, wie dich das trifft."

@@ -64,7 +64,7 @@ semiotic:
   peirce: icon
   signifikat: Aerger/Wut
   framing_type: eskalation
-  cultural_frame: ''
+  cultural_frame: Emotionsregulation
 vad_estimate:
   valence: -0.7
   arousal: 1.0

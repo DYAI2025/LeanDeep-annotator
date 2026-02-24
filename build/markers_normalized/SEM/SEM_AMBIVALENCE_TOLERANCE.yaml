@@ -48,8 +48,8 @@ scoring:
   base: 1.5
   weight: 1.2
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
+  peirce: icon
+  signifikat: Ambivalenz/Zwiespalt
   framing_type: unsicherheit
   cultural_frame: ''
 compositionality: deterministic

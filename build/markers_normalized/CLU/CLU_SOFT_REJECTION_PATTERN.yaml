@@ -44,6 +44,6 @@ scoring:
   pattern_bonus: 0.3
 semiotic:
   peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  signifikat: Vermeidungsverhalten
+  framing_type: vermeidung
   cultural_frame: ''

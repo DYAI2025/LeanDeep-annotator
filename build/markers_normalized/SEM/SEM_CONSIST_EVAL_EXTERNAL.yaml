@@ -32,8 +32,8 @@ scoring:
   base: 0.65
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  signifikat: Externe Attribution
+  framing_type: vermeidung
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

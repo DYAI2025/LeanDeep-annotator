@@ -33,10 +33,10 @@ tags:
 - neuropsychological
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Diagnostisches Signal
+  framing_type: meta
+  cultural_frame: Klinische Psychologie
 vad_estimate:
   valence: 0.0
   arousal: 0.3

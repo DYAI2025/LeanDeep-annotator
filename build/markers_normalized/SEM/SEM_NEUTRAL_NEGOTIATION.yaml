@@ -51,8 +51,8 @@ scoring:
   weight: 1.0
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  signifikat: Kooperation/Koordination
+  framing_type: reparatur
   cultural_frame: ''
 vad_estimate:
   valence: 0.0

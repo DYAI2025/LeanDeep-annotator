@@ -38,9 +38,9 @@ semiotic:
   connotation: ["reparatur", "aktiv"]
   interpretant: "effect_on_state: {trust: +0.2, conflict: -0.2}"
   peirce: index
-  signifikat: Reparatur/Entschuldigung
+  signifikat: Beziehungsreparatur
   framing_type: reparatur
-  cultural_frame: ''
+  cultural_frame: Gottman
 examples:
   positive_de:
   - "Tut mir leid, ich war unfair."

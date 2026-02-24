@@ -46,7 +46,7 @@ window:
   messages: 30
   seconds: 3600
 semiotic:
-  peirce: symbol
-  signifikat: Meta-Diagnose
-  framing_type: meta
+  peirce: icon
+  signifikat: Humor/Leichtigkeit
+  framing_type: empathie
   cultural_frame: ''

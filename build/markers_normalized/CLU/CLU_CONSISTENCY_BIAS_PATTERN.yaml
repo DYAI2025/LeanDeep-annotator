@@ -42,7 +42,7 @@ scoring:
   base: 0.5
   weight: 1.1
 semiotic:
-  peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Kognitive Verzerrung/Framing
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie

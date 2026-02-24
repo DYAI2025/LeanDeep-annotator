@@ -48,4 +48,4 @@ telemetry:
   counter_confirmed: SELF_EFFICACY.confirmed
   counter_retracted: SELF_EFFICACY.retracted
   ewma_precision: SELF_EFFICACY.precision
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Cluster-Intuition, framing_type: meta, cultural_frame: ''}

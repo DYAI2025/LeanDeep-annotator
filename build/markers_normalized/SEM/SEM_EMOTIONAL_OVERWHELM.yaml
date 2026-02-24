@@ -41,10 +41,10 @@ rating: 1
 window:
   messages: 2
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: icon
+  signifikat: Emotionale Ueberwaeltigung
+  framing_type: ueberflutung
+  cultural_frame: Emotionsregulation
 compositionality: contextual
 vad_estimate:
   valence: -0.6

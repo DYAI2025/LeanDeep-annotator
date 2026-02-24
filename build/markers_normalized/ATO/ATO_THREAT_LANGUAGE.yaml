@@ -34,9 +34,9 @@ tags:
 - auto-generated
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Drohung/Ultimatum
-  framing_type: kontrollnarrative
+  peirce: index
+  signifikat: Forderung/Drohung
+  framing_type: eskalation
   cultural_frame: ''
 vad_estimate:
   valence: -0.6

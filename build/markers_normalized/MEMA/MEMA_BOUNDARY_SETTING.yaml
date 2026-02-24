@@ -59,8 +59,8 @@ window:
   messages: 60
 semiotic:
   peirce: symbol
-  signifikat: Meta-Diagnose
-  framing_type: meta
+  signifikat: Grenzsetzung
+  framing_type: bindung
   cultural_frame: ''
 metadata:
   neg_examples:

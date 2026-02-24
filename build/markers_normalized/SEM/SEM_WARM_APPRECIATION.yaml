@@ -49,9 +49,9 @@ scoring:
   base: 0.7
   weight: 1.5
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: icon
+  signifikat: Waerme/Herzlichkeit
+  framing_type: bindung
   cultural_frame: ''
 vad_estimate:
   valence: 0.5

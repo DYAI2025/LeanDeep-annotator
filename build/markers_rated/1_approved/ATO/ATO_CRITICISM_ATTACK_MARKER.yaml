@@ -13,10 +13,10 @@ semiotic:
   level: pragmatic
   object: "criticism_attack"
   interpretant: "effect_on_state: {conflict: +0.25, trust: -0.2}"
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: index
+  signifikat: Destruktive Kritik
+  framing_type: eskalation
+  cultural_frame: Gottman
 examples:
   positive_de:
   - "Du bist immer so."

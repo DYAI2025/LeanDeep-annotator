@@ -65,7 +65,7 @@ semiotic:
   - "zuneigung"
   - "offen"
   interpretant: "effect_on_state: {trust: +0.2, intimacy: +0.3}"
-  peirce: icon
+  peirce: symbol
   signifikat: Liebe/Zuneigung
   framing_type: bindung
   cultural_frame: ''

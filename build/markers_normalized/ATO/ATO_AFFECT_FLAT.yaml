@@ -90,9 +90,9 @@ semiotic:
   - "neutral"
   - "flach"
   peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Flacher Affekt
+  framing_type: vermeidung
+  cultural_frame: Emotionsregulation
 vad_estimate:
   valence: -0.6
   arousal: 0.3

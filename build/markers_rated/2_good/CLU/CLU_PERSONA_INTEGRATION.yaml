@@ -36,4 +36,4 @@ examples:
   - "Ich mach mein eigenes Ding, mir doch egal"
   - "Alles muss harmonisch sein, Konflikte sind schlecht"
   - "Ich fühl mich einfach nur überfordert"
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Persoenlichkeitsmuster, framing_type: meta, cultural_frame: ''}

@@ -50,4 +50,4 @@ examples:
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
 tags: [cluster, reassurance, early_stage, attachment]
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Beruhigung/Rueckversicherung, framing_type: empathie, cultural_frame: ''}

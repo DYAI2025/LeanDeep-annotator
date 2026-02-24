@@ -63,7 +63,7 @@ activation:
   rule: ANY 1
 semiotic:
   peirce: icon
-  signifikat: Freude/Dankbarkeit
+  signifikat: Freude/Glueck
   framing_type: empathie
   cultural_frame: ''
 vad_estimate:

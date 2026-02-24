@@ -42,9 +42,9 @@ window:
   messages: 30
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Schuldzuweisung/Anklage
+  framing_type: eskalation
+  cultural_frame: Gottman
 compositionality: deterministic
 vad_estimate:
   valence: -0.65

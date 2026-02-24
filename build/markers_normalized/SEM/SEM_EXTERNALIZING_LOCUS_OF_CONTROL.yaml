@@ -50,9 +50,9 @@ scoring:
   weight: 1.05
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Kontrolle/Dominanz
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

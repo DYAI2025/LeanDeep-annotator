@@ -42,4 +42,4 @@ examples:
   - Hast du die E-Mail gelesen?
 tags: [meta, validation, trauma_bonding, manipulation, narcissistic]
 schema_version: "3.3"
-semiotic: {peirce: symbol, signifikat: Meta-Diagnose, framing_type: meta, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Validierung/Anerkennung, framing_type: empathie, cultural_frame: Rogers}

@@ -29,9 +29,9 @@ scoring:
   base: 0.58
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Rollenwechsel/-dynamik
+  framing_type: meta
+  cultural_frame: Systemisch
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

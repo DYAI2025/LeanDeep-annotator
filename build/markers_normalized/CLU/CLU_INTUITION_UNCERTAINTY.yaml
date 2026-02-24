@@ -48,8 +48,8 @@ scoring:
   weight: 1.0
 criteria: ''
 semiotic:
-  peirce: index
-  signifikat: Cluster-Intuition
+  peirce: icon
+  signifikat: Unsicherheit
   framing_type: unsicherheit
   cultural_frame: ''
 metadata:

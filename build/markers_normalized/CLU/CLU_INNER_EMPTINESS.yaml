@@ -67,9 +67,9 @@ scoring:
 window:
   messages: 20
 semiotic:
-  peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  peirce: icon
+  signifikat: Beduerfnisausdruck
+  framing_type: bindung
   cultural_frame: ''
 activation:
   rule: "AT_LEAST 2 IN 20 messages"

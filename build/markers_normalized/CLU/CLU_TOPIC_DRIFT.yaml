@@ -43,6 +43,6 @@ scoring:
   weight: 0.9
 semiotic:
   peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  signifikat: Themenwechsel/Abdriften
+  framing_type: vermeidung
   cultural_frame: ''

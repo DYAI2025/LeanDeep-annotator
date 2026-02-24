@@ -47,10 +47,10 @@ rating: 1
 activation:
   rule: ANY 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Verbundenheitssignal
+  framing_type: bindung
+  cultural_frame: Bowlby
 vad_estimate:
   valence: 0.0
   arousal: 0.3

@@ -43,4 +43,4 @@ effect_on_state:
   trust: -0.3
   conflict: 0.4
   deesc: -0.2
-semiotic: {peirce: index, signifikat: Semantisches Muster, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Grenzsetzung, framing_type: bindung, cultural_frame: ''}

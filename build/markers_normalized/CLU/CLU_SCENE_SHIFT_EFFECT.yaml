@@ -40,6 +40,6 @@ composed_of:
   condition: rank_in_scene(top_k=2) != rank_global(top_k=2)
 semiotic:
   peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  signifikat: Cluster-Muster
+  framing_type: meta
   cultural_frame: ''

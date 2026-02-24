@@ -43,7 +43,7 @@ semiotic:
   peirce: symbol
   signifikat: Meta-Diagnose
   framing_type: meta
-  cultural_frame: ''
+  cultural_frame: Systemisch
 activation:
   rule: "COUNT(CLU_MISUNDERSTANDING_PROCESS in 40 msgs) >= 2"
 metadata:

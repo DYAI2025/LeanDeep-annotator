@@ -43,7 +43,7 @@ composed_of:
 activation:
   rule: "AT_LEAST 3 DISTINCT SEMs IN 6 messages"
 semiotic:
-  peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Narratives Muster
+  framing_type: meta
   cultural_frame: ''

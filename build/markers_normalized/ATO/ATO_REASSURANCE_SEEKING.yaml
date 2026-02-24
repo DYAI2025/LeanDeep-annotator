@@ -40,9 +40,9 @@ tags:
 - validation
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: index
+  signifikat: Beruhigung/Rueckversicherung
+  framing_type: empathie
   cultural_frame: ''
 vad_estimate:
   valence: -0.1

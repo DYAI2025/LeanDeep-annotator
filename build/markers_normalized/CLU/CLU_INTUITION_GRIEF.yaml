@@ -47,7 +47,7 @@ scoring:
   base: 0.5
   weight: 1.0
 semiotic:
-  peirce: index
+  peirce: icon
   signifikat: Trauer/Verlust
   framing_type: ueberflutung
   cultural_frame: ''

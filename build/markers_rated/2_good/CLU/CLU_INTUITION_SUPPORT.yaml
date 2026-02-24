@@ -55,4 +55,4 @@ examples:
   - "Hast du den Schlussel eingesteckt?"
   - "Morgen soll's regnen"
   - "Wann faengt der Film an?"
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Unterstuetzung/Beistand, framing_type: bindung, cultural_frame: ''}

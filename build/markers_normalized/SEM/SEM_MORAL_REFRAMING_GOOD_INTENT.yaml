@@ -49,10 +49,10 @@ scoring:
 window:
   messages: 30
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Kognitive Verzerrung/Framing
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
 compositionality: deterministic
 vad_estimate:
   valence: -0.15

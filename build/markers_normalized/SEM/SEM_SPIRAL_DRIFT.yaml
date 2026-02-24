@@ -39,8 +39,8 @@ activation:
   rule: "AT_LEAST 2 ATO_SPIRAL IN 4 messages"
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  signifikat: Themenwechsel/Abdriften
+  framing_type: vermeidung
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

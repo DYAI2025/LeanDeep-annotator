@@ -45,4 +45,4 @@ tags: [cluster, family, siblings, dynamics, rivalry]
 detect_class: "E"
 criteria: "Kombination von Geschwisterrollen und Konfliktmustern"
 updated_at: "2025-08-19T10:30:00Z"
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Beziehungsdynamik, framing_type: meta, cultural_frame: Systemisch}

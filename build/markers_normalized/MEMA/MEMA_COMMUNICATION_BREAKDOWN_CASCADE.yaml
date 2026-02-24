@@ -42,7 +42,7 @@ composed_of:
 - CLU_GOTTMAN_TOXICITY_CLUSTER
 criteria: "Progressive communication breakdown showing predictable stages from functional to complete failure"
 semiotic:
-  peirce: symbol
-  signifikat: Meta-Diagnose
-  framing_type: meta
-  cultural_frame: ''
+  peirce: icon
+  signifikat: Zusammenbruch
+  framing_type: ueberflutung
+  cultural_frame: Emotionsregulation

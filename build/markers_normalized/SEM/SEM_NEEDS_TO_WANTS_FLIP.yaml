@@ -39,9 +39,9 @@ composed_of:
 - ATO_NEED_TERM
 - ATO_WANT_TERM
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: icon
+  signifikat: Beduerfnisausdruck
+  framing_type: bindung
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

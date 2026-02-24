@@ -43,8 +43,8 @@ scoring:
   cap: 1.0
 semiotic:
   peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  signifikat: Cluster-Muster
+  framing_type: meta
   cultural_frame: ''
 activation:
   rule: SEQUENCE [EXPECTANCY_BREAK + AROUSAL] AND LACK_OF_SUCCESSFUL_REPAIR within 2 turns

@@ -51,4 +51,4 @@ examples:
   - Danke dir, das war wirklich hilfreich
   - Ich freu mich dass das so gut geklappt hat
   - Das hast du echt gut gemacht, Respekt
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Cluster-Intuition, framing_type: meta, cultural_frame: ''}

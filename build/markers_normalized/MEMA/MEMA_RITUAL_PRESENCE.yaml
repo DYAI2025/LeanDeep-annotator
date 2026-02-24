@@ -37,6 +37,6 @@ activation:
   rule: "RITUAL_INVOCATION >= 2 in 10 messages"
 semiotic:
   peirce: symbol
-  signifikat: Meta-Diagnose
-  framing_type: meta
+  signifikat: Beziehungsritual
+  framing_type: bindung
   cultural_frame: ''

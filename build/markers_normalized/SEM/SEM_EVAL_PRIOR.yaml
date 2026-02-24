@@ -47,10 +47,10 @@ activation:
   rule: AT_LEAST 2 IN 4 messages
   window: 4
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Kognitive Verzerrung/Framing
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

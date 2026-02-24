@@ -44,4 +44,4 @@ tags:
 - cluster
 - relationship-dynamics
 schema_version: '3.4'
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Beziehungsdynamik, framing_type: meta, cultural_frame: Systemisch}

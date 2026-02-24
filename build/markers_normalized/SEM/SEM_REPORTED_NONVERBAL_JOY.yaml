@@ -39,8 +39,8 @@ composed_of:
 activation:
   rule: "ANY 1 IN 1 message"
 semiotic:
-  peirce: index
-  signifikat: Freude/Dankbarkeit
+  peirce: icon
+  signifikat: Freude/Glueck
   framing_type: empathie
   cultural_frame: ''
 compositionality: deterministic

@@ -56,9 +56,9 @@ semiotic:
   - flow
   - deeskalation
   peirce: index
-  signifikat: Reparatur/Entschuldigung
+  signifikat: Beziehungsreparatur
   framing_type: reparatur
-  cultural_frame: ''
+  cultural_frame: Gottman
 temperature_semantics:
   external: DEESCALATION
   latent: EMPATHIE

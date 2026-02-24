@@ -43,4 +43,4 @@ tags: [attentional, gatekeeping, avoidance, control]
 schema_version: "3.3"
 vad_estimate: {valence: -0.55, arousal: 0.9, dominance: 0.8}
 effect_on_state: {trust: -0.3, conflict: 0.4, deesc: -0.2}
-semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Kontrolle/Dominanz, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie}

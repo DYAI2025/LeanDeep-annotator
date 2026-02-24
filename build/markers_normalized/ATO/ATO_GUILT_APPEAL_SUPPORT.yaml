@@ -48,9 +48,9 @@ scoring:
 window:
   messages: 25
 semiotic:
-  peirce: icon
-  signifikat: Scham/Schuld
-  framing_type: schuld
+  peirce: index
+  signifikat: Unterstuetzung/Beistand
+  framing_type: bindung
   cultural_frame: ''
 vad_estimate:
   valence: 0.25

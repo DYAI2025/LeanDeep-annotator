@@ -49,7 +49,7 @@ criteria:
   horizon_windows: 5
   min_windows: 2
 semiotic:
-  peirce: symbol
-  signifikat: Scham/Schuld
+  peirce: index
+  signifikat: Schuld/Schuldgefuehle
   framing_type: schuld
   cultural_frame: ''

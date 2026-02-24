@@ -34,10 +34,10 @@ rating: 2
 activation:
   rule: "REGEX: (werde|werden|drift|Spirale|Becoming|Wiederholung)"
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Beziehungsspirale
+  framing_type: meta
+  cultural_frame: Systemisch
 vad_estimate:
   valence: 0.0
   arousal: 0.3

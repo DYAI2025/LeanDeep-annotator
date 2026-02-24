@@ -58,6 +58,6 @@ evidence_capture:
 fire_when: "conditions_met_first_time"
 semiotic:
   peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  signifikat: Handlungsorientierung/Leistung
+  framing_type: kontrollnarrative
   cultural_frame: ''

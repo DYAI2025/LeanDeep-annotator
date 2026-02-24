@@ -125,6 +125,6 @@ semiotic:
   interpretant: "effect_on_state: {trust: +0.05, conflict: -0.15, sync: +0.12}"
   connotation: ["distanz", "formell"]
   peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  signifikat: Cluster-Muster
+  framing_type: meta
   cultural_frame: ''

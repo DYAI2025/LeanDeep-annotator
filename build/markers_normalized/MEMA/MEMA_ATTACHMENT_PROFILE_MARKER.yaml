@@ -38,6 +38,6 @@ activation:
   rule: "ANY 1 IN 3 chunks"
 semiotic:
   peirce: symbol
-  signifikat: Meta-Diagnose
-  framing_type: meta
-  cultural_frame: ''
+  signifikat: Bindungsmuster
+  framing_type: bindung
+  cultural_frame: Bowlby

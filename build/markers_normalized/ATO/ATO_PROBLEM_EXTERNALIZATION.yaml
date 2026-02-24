@@ -65,9 +65,9 @@ tags:
 - externalization
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: index
+  signifikat: Externe Attribution
+  framing_type: vermeidung
   cultural_frame: ''
 vad_estimate:
   valence: 0.0

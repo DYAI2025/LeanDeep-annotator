@@ -34,10 +34,10 @@ tags:
 - auto-generated
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: index
+  signifikat: Kontrolle/Dominanz
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
 vad_estimate:
   valence: -0.05
   arousal: 0.4

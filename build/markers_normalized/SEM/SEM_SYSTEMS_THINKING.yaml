@@ -38,9 +38,9 @@ scoring:
   base: 0.6
   weight: 1.0
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Erklaerungsversuch
+  framing_type: reparatur
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

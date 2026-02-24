@@ -40,7 +40,7 @@ semiotic:
   peirce: symbol
   signifikat: Meta-Diagnose
   framing_type: meta
-  cultural_frame: ''
+  cultural_frame: Systemisch
 meta_logic:
   scope: "multi_session"
   window_sessions: 5

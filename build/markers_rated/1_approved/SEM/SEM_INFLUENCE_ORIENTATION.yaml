@@ -52,4 +52,4 @@ effect_on_state:
   trust: 0.25
   conflict: -0.1
   deesc: 0.15
-semiotic: {peirce: index, signifikat: Semantisches Muster, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Kontrolle/Dominanz, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie}

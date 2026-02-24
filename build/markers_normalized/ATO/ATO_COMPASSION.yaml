@@ -46,9 +46,9 @@ activation:
   rule: ANY 1
 semiotic:
   peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Mitgefuehl
+  framing_type: empathie
+  cultural_frame: Rogers
 vad_estimate:
   valence: 0.3
   arousal: 0.3

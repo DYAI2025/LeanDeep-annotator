@@ -41,9 +41,9 @@ composed_of:
 activation:
   rule: "BOTH IN 1 message"
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: icon
+  signifikat: Freude/Glueck
+  framing_type: empathie
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

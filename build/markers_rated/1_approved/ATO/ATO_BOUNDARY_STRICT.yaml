@@ -14,9 +14,9 @@ semiotic:
   object: "boundary_setting"
   connotation: ["grenze", "strikt"]
   interpretant: "effect_on_state: {conflict: -0.1, sync: +0.1}"
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Grenzsetzung
+  framing_type: bindung
   cultural_frame: ''
 examples:
   positive_de:

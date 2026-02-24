@@ -33,7 +33,7 @@ semiotic:
   peirce: symbol
   signifikat: Meta-Diagnose
   framing_type: meta
-  cultural_frame: ''
+  cultural_frame: Systemisch
 metadata:
   regex: "ATO_ECHO_REGEX"
   min_hits: 3

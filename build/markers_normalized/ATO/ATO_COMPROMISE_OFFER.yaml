@@ -62,9 +62,9 @@ semiotic:
   level: pragmatic
   object: "compromise_proposal"
   interpretant: "effect_on_state: {conflict: -0.15, sync: +0.2}"
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: index
+  signifikat: Kompromissbereitschaft
+  framing_type: reparatur
   cultural_frame: ''
 vad_estimate:
   valence: 0.3

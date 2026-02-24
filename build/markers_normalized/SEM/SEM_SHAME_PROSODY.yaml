@@ -43,8 +43,8 @@ composed_of:
 scoring:
   base: 0.70
 semiotic:
-  peirce: index
-  signifikat: Scham/Schuld
+  peirce: icon
+  signifikat: Scham
   framing_type: schuld
   cultural_frame: ''
 compositionality: deterministic

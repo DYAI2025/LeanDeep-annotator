@@ -72,4 +72,4 @@ metadata:
   - "Gespräch 1: Einmaliger Konflikt resolved. Gespräch 2-3: Harmonie – keine wiederkehrende Boundary-Dynamik."
 tags: [meta, boundary, escalation]
 schema_version: "3.4"
-semiotic: {peirce: symbol, signifikat: Meta-Diagnose, framing_type: meta, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Grenzsetzung, framing_type: bindung, cultural_frame: ''}

@@ -37,6 +37,6 @@ scoring:
   weight: 1.1
 semiotic:
   peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  signifikat: Cluster-Muster
+  framing_type: meta
   cultural_frame: ''

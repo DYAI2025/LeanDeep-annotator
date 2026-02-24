@@ -43,7 +43,7 @@ semiotic:
   peirce: symbol
   signifikat: Meta-Diagnose
   framing_type: meta
-  cultural_frame: ''
+  cultural_frame: Systemisch
 activation:
   rule: "COUNT(CLU_DISSONANCE_ALERT_AUDIO in 30 turns) >= 3 OR EWMA(alpha=0.2) >= 0.6"
 metadata:

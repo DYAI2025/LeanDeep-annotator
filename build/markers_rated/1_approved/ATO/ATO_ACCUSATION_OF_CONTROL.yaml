@@ -39,4 +39,4 @@ examples:
 tags: [accusation, control, atomic]
 vad_estimate: {valence: -0.75, arousal: 0.95, dominance: 1.0}
 effect_on_state: {trust: -0.45, conflict: 0.6, deesc: -0.3}
-semiotic: {peirce: icon, signifikat: Schuldzuweisung, framing_type: eskalation, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Schuldzuweisung/Anklage, framing_type: eskalation, cultural_frame: Gottman}

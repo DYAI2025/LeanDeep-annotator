@@ -33,4 +33,4 @@ examples:
 compositionality: deterministic
 vad_estimate: {valence: 0.45, arousal: 0.1, dominance: 0.35}
 effect_on_state: {trust: 0.35, conflict: -0.3, deesc: 0.4}
-semiotic: {peirce: index, signifikat: Reparatur/Entschuldigung, framing_type: reparatur, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: reparatur, cultural_frame: Gottman}

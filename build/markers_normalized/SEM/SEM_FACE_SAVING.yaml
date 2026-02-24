@@ -51,9 +51,9 @@ scoring:
   weight: 1.05
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Beziehungsreparatur
+  framing_type: reparatur
+  cultural_frame: Gottman
 compositionality: deterministic
 vad_estimate:
   valence: 0.45

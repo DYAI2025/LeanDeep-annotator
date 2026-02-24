@@ -60,10 +60,10 @@ composed_of:
 activation:
   rule: ANY 1
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Verdeckte Einflussnahme
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
 compositionality: deterministic
 vad_estimate:
   valence: -0.7

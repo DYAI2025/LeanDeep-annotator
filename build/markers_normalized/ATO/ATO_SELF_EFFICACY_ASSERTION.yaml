@@ -68,9 +68,9 @@ tags:
 - self-efficacy
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: index
+  signifikat: Bestimmtheit/Assertion
+  framing_type: kontrollnarrative
   cultural_frame: ''
 vad_estimate:
   valence: 0.0

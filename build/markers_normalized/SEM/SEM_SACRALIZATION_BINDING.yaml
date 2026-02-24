@@ -39,10 +39,10 @@ composed_of:
 - ATO_SACRED_LEXEME
 - ATO_TRUTH_FEEL
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Bindungsmuster
+  framing_type: bindung
+  cultural_frame: Bowlby
 compositionality: deterministic
 vad_estimate:
   valence: 0.3

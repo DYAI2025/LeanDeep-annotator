@@ -49,8 +49,8 @@ scoring:
 criteria: ''
 semiotic:
   peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  signifikat: Unterstuetzung/Beistand
+  framing_type: bindung
   cultural_frame: ''
 metadata:
   intuition:

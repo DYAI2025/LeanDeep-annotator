@@ -49,4 +49,4 @@ metadata:
   - rule: R03
     note: Feldreihenfolge geprüft
     date: '2025-08-29'
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: ''}

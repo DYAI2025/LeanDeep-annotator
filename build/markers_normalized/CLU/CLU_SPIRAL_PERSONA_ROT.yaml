@@ -40,7 +40,7 @@ scoring:
   weight: 1.2
   decay: 0.9
 semiotic:
-  peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Beziehungsspirale
+  framing_type: meta
+  cultural_frame: Systemisch

@@ -41,7 +41,7 @@ composed_of:
 activation:
   rule: BOTH IN 5 messages
 semiotic:
-  peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Grenzsetzung
+  framing_type: bindung
   cultural_frame: ''

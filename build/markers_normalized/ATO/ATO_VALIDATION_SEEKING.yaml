@@ -34,10 +34,10 @@ tags:
 - auto-generated
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: index
+  signifikat: Validierung/Anerkennung
+  framing_type: empathie
+  cultural_frame: Rogers
 vad_estimate:
   valence: 0.0
   arousal: 0.3

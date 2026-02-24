@@ -44,9 +44,9 @@ detect_class: "D"
 criteria: "Kombination aus Kinderrolle und defensiven Reaktionsmustern"
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Abwehr/Rechtfertigung
+  framing_type: eskalation
+  cultural_frame: Gottman
 vad_estimate:
   valence: 0.0
   arousal: 0.3

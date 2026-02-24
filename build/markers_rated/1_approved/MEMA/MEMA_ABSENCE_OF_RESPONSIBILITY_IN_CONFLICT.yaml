@@ -85,4 +85,4 @@ examples:
   - Ich verstehe deine Perspektive.
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
-semiotic: {peirce: symbol, signifikat: Eskalation/Konflikt, framing_type: eskalation, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Konfliktdynamik, framing_type: eskalation, cultural_frame: Gottman}

@@ -43,9 +43,9 @@ scoring:
   weight: 1.3
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Beziehungsdynamik
+  framing_type: meta
+  cultural_frame: Systemisch
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

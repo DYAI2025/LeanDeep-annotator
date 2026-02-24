@@ -47,8 +47,8 @@ scoring:
   weight: 1.06
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  signifikat: Beruhigung/Rueckversicherung
+  framing_type: empathie
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

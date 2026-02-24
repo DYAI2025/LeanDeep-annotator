@@ -13,10 +13,10 @@ semiotic:
   level: pragmatic
   object: "apology_expression"
   interpretant: "effect_on_state: {trust: +0.15, conflict: -0.2}"
-  peirce: icon
-  signifikat: Reparatur/Entschuldigung
+  peirce: index
+  signifikat: Entschuldigung/Reue
   framing_type: reparatur
-  cultural_frame: ''
+  cultural_frame: Gottman
 examples:
   positive_de:
   - "Tut mir leid."

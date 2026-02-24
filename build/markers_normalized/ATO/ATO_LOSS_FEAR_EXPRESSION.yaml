@@ -45,8 +45,8 @@ activation:
   rule: ANY 1
 semiotic:
   peirce: icon
-  signifikat: Angst/Bedrohung
-  framing_type: unsicherheit
+  signifikat: Trauer/Verlust
+  framing_type: ueberflutung
   cultural_frame: ''
 vad_estimate:
   valence: -0.6

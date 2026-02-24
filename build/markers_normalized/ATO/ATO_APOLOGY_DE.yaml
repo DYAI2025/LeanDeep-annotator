@@ -44,10 +44,10 @@ tags:
 - atomic
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Reparatur/Entschuldigung
+  peirce: index
+  signifikat: Entschuldigung/Reue
   framing_type: reparatur
-  cultural_frame: ''
+  cultural_frame: Gottman
 vad_estimate:
   valence: 0.45
   arousal: 0.1

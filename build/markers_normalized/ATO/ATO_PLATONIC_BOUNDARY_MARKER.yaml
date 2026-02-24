@@ -45,9 +45,9 @@ tags:
 - friendzone
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Grenzsetzung
+  framing_type: bindung
   cultural_frame: ''
 vad_estimate:
   valence: 0.0

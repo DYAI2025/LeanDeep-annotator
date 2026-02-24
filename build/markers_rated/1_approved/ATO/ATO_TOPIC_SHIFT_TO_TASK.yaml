@@ -16,9 +16,9 @@ semiotic:
   object: "topic_shift"
   connotation: ["shift", "aufgabe"]
   interpretant: "effect_on_state: {deesc: +0.1, conflict: -0.15}"
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: index
+  signifikat: Themenwechsel/Abdriften
+  framing_type: vermeidung
   cultural_frame: ''
 examples:
   positive_de:

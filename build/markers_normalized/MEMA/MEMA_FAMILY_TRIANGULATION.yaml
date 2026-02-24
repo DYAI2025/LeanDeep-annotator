@@ -43,6 +43,6 @@ detect_class: "E"
 criteria: "Muster der Koalitionsbildung zwischen verschiedenen Familienmitgliedern"
 semiotic:
   peirce: symbol
-  signifikat: Meta-Diagnose
-  framing_type: meta
-  cultural_frame: ''
+  signifikat: Triangulation
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie

@@ -63,10 +63,10 @@ scoring:
 window:
   messages: 3
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: index
+  signifikat: Verachtung/Ueberlegenheit
+  framing_type: eskalation
+  cultural_frame: Gottman
 vad_estimate:
   valence: -0.5
   arousal: 0.8

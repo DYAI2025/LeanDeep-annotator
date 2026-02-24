@@ -49,9 +49,9 @@ scoring:
   base: 0.6
   weight: 1.1
 semiotic:
-  peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  peirce: icon
+  signifikat: Positive Grundhaltung
+  framing_type: empathie
   cultural_frame: ''
 metadata:
   family: AFFECT

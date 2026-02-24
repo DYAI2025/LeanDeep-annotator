@@ -64,8 +64,8 @@ scoring:
 window:
   messages: 5
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
+  peirce: symbol
+  signifikat: Paradoxie/Widerspruch
   framing_type: unsicherheit
   cultural_frame: ''
 vad_estimate:

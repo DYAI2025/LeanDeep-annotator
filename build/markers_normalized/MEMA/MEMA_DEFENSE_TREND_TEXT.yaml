@@ -47,7 +47,7 @@ semiotic:
   peirce: symbol
   signifikat: Meta-Diagnose
   framing_type: meta
-  cultural_frame: ''
+  cultural_frame: Systemisch
 activation:
   rule: "COUNT(CLU_DEFENSE_ACTIVE in 50 msgs) >= 3 OR EWMA(alpha=0.2) >= 0.6"
 metadata:

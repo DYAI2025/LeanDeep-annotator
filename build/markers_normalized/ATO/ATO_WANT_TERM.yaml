@@ -42,9 +42,9 @@ tags:
 - agency
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: index
+  signifikat: Handlungsorientierung/Leistung
+  framing_type: kontrollnarrative
   cultural_frame: ''
 vad_estimate:
   valence: 0.0

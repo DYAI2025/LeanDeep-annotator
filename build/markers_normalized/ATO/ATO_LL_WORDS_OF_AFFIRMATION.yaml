@@ -40,9 +40,9 @@ tags:
 - affirmation
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: index
+  signifikat: Bestaetigungssignal
+  framing_type: empathie
   cultural_frame: ''
 vad_estimate:
   valence: 0.5

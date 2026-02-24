@@ -41,4 +41,4 @@ examples:
   - "Danke für nichts."
   - "Brauchst du nicht, ich komme alleine klar."
   - "Das hilft mir jetzt auch nicht weiter."
-semiotic: {peirce: index, signifikat: Semantisches Muster, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Waerme/Herzlichkeit, framing_type: bindung, cultural_frame: ''}

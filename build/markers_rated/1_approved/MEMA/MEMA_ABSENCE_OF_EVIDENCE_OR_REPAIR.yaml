@@ -43,4 +43,4 @@ examples:
   - The meeting is at 2 PM.
   - I went shopping yesterday.
   - The weather should be better tomorrow.
-semiotic: {peirce: symbol, signifikat: Reparatur/Entschuldigung, framing_type: reparatur, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: reparatur, cultural_frame: Gottman}

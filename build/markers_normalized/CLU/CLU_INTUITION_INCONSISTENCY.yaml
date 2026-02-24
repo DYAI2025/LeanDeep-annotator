@@ -42,9 +42,9 @@ scoring:
   base: 0.50
   weight: 1.0
 semiotic:
-  peirce: index
+  peirce: icon
   signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  framing_type: meta
   cultural_frame: ''
 metadata:
   family: "INCONSISTENCY"

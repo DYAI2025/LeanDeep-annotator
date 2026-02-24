@@ -15,8 +15,8 @@ semiotic:
   interpretant: "effect_on_state: {sync: +0.2, affekt: neutral}"
   connotation: ["bestätigung", "mikro"]
   peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  signifikat: Minimal-Antwort/Mikrobestaetigung
+  framing_type: vermeidung
   cultural_frame: ''
 examples:
   positive_de:

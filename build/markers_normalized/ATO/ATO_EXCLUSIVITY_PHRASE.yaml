@@ -35,9 +35,9 @@ tags:
 - separation
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: index
+  signifikat: Isolation/Rueckzug
+  framing_type: vermeidung
   cultural_frame: ''
 vad_estimate:
   valence: -0.55

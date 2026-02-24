@@ -39,9 +39,9 @@ composed_of:
 - ATO_RITUAL_TIME
 - ATO_TRUTH_FEEL
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Beziehungsritual
+  framing_type: bindung
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

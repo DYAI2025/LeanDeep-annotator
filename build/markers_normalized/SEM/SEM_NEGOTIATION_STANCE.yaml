@@ -52,8 +52,8 @@ scoring:
   weight: 1.08
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  signifikat: Bestimmtheit/Assertion
+  framing_type: kontrollnarrative
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

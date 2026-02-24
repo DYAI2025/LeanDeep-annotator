@@ -48,4 +48,4 @@ tags: [mema, family, power, dynamics, control, resistance]
 detect_class: "E"
 criteria: "Komplexe Interaktion von Autorität, Widerstand und Machtkämpfen"
 updated_at: "2025-08-19T10:30:00Z"
-semiotic: {peirce: symbol, signifikat: Meta-Diagnose, framing_type: meta, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Machtausuebung, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie}

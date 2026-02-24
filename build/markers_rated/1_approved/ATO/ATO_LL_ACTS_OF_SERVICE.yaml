@@ -34,4 +34,4 @@ examples:
   - Das klingt nach einem wichtigen Thema fuer dich.
 vad_estimate: {valence: 0.5, arousal: 0.4, dominance: 0.5}
 effect_on_state: {trust: 0.35, conflict: -0.2, deesc: 0.25}
-semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Liebe/Zuneigung, framing_type: bindung, cultural_frame: ''}

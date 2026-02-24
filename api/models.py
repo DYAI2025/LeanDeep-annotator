@@ -197,12 +197,21 @@ class FramingHypothesis(BaseModel):
     intensity: float = Field(ge=0.0, le=1.0)
     evidence_markers: list[str]
     message_indices: list[int]
+    detection_count: int = 0
+
+
+class InterpretFindings(BaseModel):
+    narrative: str = ""
+    key_points: list[str] = []
+    relational_pattern: str | None = None
+    bias_check: str | None = None
 
 
 class InterpretResponse(BaseModel):
     framings: list[FramingHypothesis]
     semiotic_map: dict[str, SemioticEntry]
     dominant_framing: str | None = None
+    findings: InterpretFindings | None = None
     meta: AnalyzeMeta
 
 

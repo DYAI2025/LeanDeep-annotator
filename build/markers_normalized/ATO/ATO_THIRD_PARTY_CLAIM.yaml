@@ -34,9 +34,9 @@ tags:
 - auto-generated
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Anspruchshaltung
+  framing_type: kontrollnarrative
   cultural_frame: ''
 vad_estimate:
   valence: 0.0

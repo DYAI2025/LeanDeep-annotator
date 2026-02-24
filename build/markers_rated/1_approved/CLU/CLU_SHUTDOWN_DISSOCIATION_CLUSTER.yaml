@@ -44,4 +44,4 @@ examples:
   - Ich brauche eine kurze Pause, dann reden wir weiter.
   - Gerade fühlt es sich schwer an, aber ich bin da.
   - Ich möchte mich zurückziehen, aber nicht vor dir.
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Schweigen/Verstummen, framing_type: vermeidung, cultural_frame: ''}

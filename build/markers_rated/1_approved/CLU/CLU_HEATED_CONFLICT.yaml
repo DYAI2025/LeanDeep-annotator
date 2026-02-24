@@ -38,9 +38,9 @@ semiotic:
   connotation: ["konflikt", "heiß"]
   interpretant: "effect_on_state: {conflict: +0.3, trust: -0.2}"
   peirce: index
-  signifikat: Eskalation/Konflikt
+  signifikat: Eskalation/Konfliktsteigerung
   framing_type: eskalation
-  cultural_frame: ''
+  cultural_frame: Gottman
 examples:
   positive_de:
   - "Das nervt mich extrem!"

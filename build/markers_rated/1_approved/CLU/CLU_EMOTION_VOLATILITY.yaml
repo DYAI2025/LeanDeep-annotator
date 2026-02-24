@@ -35,4 +35,4 @@ examples:
   - Ich bin traurig wegen der Sache gestern.
   - Das macht mich nachdenklich.
   - Insgesamt bin ich zufrieden mit der Situation.
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: ''}

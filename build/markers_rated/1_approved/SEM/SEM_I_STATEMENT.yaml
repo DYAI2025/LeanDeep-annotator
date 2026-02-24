@@ -41,4 +41,4 @@ tags: [self_disclosure, clarity, semantics]
 compositionality: deterministic
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
-semiotic: {peirce: index, signifikat: Semantisches Muster, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Selbstoffenbarung, framing_type: bindung, cultural_frame: ''}

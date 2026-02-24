@@ -48,10 +48,10 @@ scoring:
   base: 1.5
   weight: 1.2
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: icon
+  signifikat: Einfuehlung/Empathie
+  framing_type: empathie
+  cultural_frame: Rogers
 compositionality: deterministic
 vad_estimate:
   valence: 0.5

@@ -51,4 +51,4 @@ examples:
   - Vielleicht hat das auch andere Gründe, wer weiß
   - Stimmt, da hast du recht, guter Punkt
   - Ich muss zugeben, so hab ich das noch nicht gesehen
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Kognitive Verzerrung/Framing, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie}

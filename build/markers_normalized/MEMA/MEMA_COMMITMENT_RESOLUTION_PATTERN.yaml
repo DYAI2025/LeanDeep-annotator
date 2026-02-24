@@ -43,6 +43,6 @@ scoring:
   weight: 1.15
 semiotic:
   peirce: symbol
-  signifikat: Meta-Diagnose
-  framing_type: meta
+  signifikat: Engagement/Verbindlichkeit
+  framing_type: bindung
   cultural_frame: ''

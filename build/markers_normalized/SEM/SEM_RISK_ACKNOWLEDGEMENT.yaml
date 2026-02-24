@@ -42,7 +42,7 @@ scoring:
   weight: 1.3
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
+  signifikat: Risikowahrnehmung
   framing_type: unsicherheit
   cultural_frame: ''
 compositionality: deterministic

@@ -27,4 +27,4 @@ examples:
 tags: [atomic, v3.3, love-bombing, idealization]
 vad_estimate: {valence: 0.7, arousal: 0.55, dominance: 0.4}
 effect_on_state: {trust: 0.35, conflict: -0.2, deesc: 0.25}
-semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Absolutheit/Schwarz-Weiss, framing_type: polarisierung, cultural_frame: ''}

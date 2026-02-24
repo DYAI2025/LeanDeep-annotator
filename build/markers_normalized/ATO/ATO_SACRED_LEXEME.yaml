@@ -45,10 +45,10 @@ tags:
 - bedeutung
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Bindungsmuster
+  framing_type: bindung
+  cultural_frame: Bowlby
 vad_estimate:
   valence: 0.0
   arousal: 0.3

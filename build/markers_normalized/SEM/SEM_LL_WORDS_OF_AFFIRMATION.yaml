@@ -42,8 +42,8 @@ composed_of:
   min_hits: 2
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  signifikat: Bestaetigungssignal
+  framing_type: empathie
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

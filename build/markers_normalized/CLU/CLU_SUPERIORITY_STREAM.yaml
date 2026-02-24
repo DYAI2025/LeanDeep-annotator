@@ -46,7 +46,7 @@ scoring:
   base: 2.1
   weight: 1.45
 semiotic:
-  peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  peirce: icon
+  signifikat: Humor/Leichtigkeit
+  framing_type: empathie
   cultural_frame: ''

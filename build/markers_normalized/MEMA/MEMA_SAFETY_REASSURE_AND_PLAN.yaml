@@ -60,6 +60,6 @@ evidence_capture:
 fire_when: "conditions_met_first_time"
 semiotic:
   peirce: symbol
-  signifikat: Meta-Diagnose
-  framing_type: meta
-  cultural_frame: ''
+  signifikat: Sicherheitssignal
+  framing_type: bindung
+  cultural_frame: Bowlby

@@ -64,6 +64,6 @@ window:
   temporal_window: "24h"
 semiotic:
   peirce: symbol
-  signifikat: Meta-Diagnose
-  framing_type: meta
-  cultural_frame: ''
+  signifikat: Bindungsmuster
+  framing_type: bindung
+  cultural_frame: Bowlby

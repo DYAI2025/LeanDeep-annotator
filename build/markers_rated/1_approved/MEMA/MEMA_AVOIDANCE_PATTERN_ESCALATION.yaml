@@ -32,4 +32,4 @@ tags:
 - v3.3
 - avoidance-escalation
 - digital-withdrawal
-semiotic: {peirce: symbol, signifikat: Eskalation/Konflikt, framing_type: eskalation, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Eskalation/Konfliktsteigerung, framing_type: eskalation, cultural_frame: Gottman}

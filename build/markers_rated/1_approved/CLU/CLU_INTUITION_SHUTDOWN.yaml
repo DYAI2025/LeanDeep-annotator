@@ -48,4 +48,4 @@ telemetry:
   counter_confirmed: SHUTDOWN.confirmed
   counter_retracted: SHUTDOWN.retracted
   ewma_precision: SHUTDOWN.precision
-semiotic: {peirce: index, signifikat: Cluster-Intuition, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Schweigen/Verstummen, framing_type: vermeidung, cultural_frame: ''}

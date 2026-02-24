@@ -22,9 +22,9 @@ semiotic:
   connotation: ["aufgabe", "dominanz"]
   interpretant: "effect_on_state: {task_dominance: +0.25, intimacy: -0.1}"
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Machtausuebung
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
 examples:
   positive_de:
   - "Nächster Punkt: Freigabe. — Protokoll folgt."

@@ -39,4 +39,4 @@ tags: [semantic, v3.3, boundaries]
 compositionality: deterministic
 vad_estimate: {valence: 0.2, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.25, conflict: -0.1, deesc: 0.15}
-semiotic: {peirce: index, signifikat: Semantisches Muster, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Grenzsetzung, framing_type: bindung, cultural_frame: ''}

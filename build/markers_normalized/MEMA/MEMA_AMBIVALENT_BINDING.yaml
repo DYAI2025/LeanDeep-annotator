@@ -36,7 +36,7 @@ rating: 1
 activation:
   rule: "AMBIVALENCE + CLOSENESS >= 2 in 8 messages"
 semiotic:
-  peirce: symbol
-  signifikat: Meta-Diagnose
-  framing_type: meta
+  peirce: icon
+  signifikat: Ambivalenz/Zwiespalt
+  framing_type: unsicherheit
   cultural_frame: ''

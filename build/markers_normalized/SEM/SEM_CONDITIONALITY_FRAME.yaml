@@ -48,9 +48,9 @@ tags:
 - semantics
 rating: 1
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Grenzsetzung
+  framing_type: bindung
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

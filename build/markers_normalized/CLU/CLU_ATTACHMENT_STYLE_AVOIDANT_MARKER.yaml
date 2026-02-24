@@ -45,7 +45,7 @@ scoring:
   base: 1.5
   weight: 1.2
 semiotic:
-  peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Bindungsmuster
+  framing_type: bindung
+  cultural_frame: Bowlby

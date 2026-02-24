@@ -56,4 +56,4 @@ metadata:
   updated_at: "2025-08-19T10:30:00Z"
 vad_estimate: {valence: 0.3, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.2, conflict: -0.15, deesc: 0.2}
-semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Beziehungsritual, framing_type: bindung, cultural_frame: ''}

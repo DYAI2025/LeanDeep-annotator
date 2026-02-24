@@ -35,8 +35,8 @@ activation:
   rule: "BOTH IN 1 message"
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  signifikat: Bestimmtheit/Assertion
+  framing_type: kontrollnarrative
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

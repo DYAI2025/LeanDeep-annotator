@@ -36,7 +36,7 @@ rating: 1
 activation:
   rule: "ROLE_SWITCH >= 2 in 8 messages"
 semiotic:
-  peirce: symbol
-  signifikat: Meta-Diagnose
+  peirce: index
+  signifikat: Rollenwechsel/-dynamik
   framing_type: meta
-  cultural_frame: ''
+  cultural_frame: Systemisch

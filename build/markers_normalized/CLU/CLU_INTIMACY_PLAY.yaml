@@ -86,10 +86,10 @@ semiotic:
   - "intimität"
   - "spiel"
   interpretant: "effect_on_state: {intimacy: +0.3, sync: +0.1}"
-  peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Naehe/Intimitaet
+  framing_type: bindung
+  cultural_frame: Bowlby
 temperature_semantics:
   external: WARM
   latent: SPIELERISCH

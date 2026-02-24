@@ -43,9 +43,9 @@ semiotic:
   connotation:
   - "archetype"
   - "control"
-  peirce: symbol
-  signifikat: Meta-Diagnose
-  framing_type: meta
-  cultural_frame: ''
+  peirce: index
+  signifikat: Kontrolle/Dominanz
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
 metadata:
   label: Controller

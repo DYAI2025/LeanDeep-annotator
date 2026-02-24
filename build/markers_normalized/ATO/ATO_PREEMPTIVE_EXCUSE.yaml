@@ -41,10 +41,10 @@ tags:
 - bias
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Kognitive Verzerrung/Framing
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
 vad_estimate:
   valence: 0.0
   arousal: 0.3

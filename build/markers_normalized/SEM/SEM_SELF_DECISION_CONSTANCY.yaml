@@ -39,9 +39,9 @@ composed_of:
 - ATO_DECISION_CHOOSE
 - ATO_DECISION_STAY
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Entscheidungssignal
+  framing_type: meta
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

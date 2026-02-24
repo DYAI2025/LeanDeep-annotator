@@ -46,8 +46,8 @@ activation:
   cooldown_messages: 5
 semiotic:
   peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  signifikat: Schweigen/Verstummen
+  framing_type: vermeidung
   cultural_frame: ''
 metadata:
   maintainer: marker-bot

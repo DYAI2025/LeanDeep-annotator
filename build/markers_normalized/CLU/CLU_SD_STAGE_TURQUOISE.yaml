@@ -36,7 +36,7 @@ scoring:
   base: 1.0
   weight: 1.0
 semiotic:
-  peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Beziehungsphase
+  framing_type: meta
   cultural_frame: ''

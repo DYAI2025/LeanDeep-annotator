@@ -146,6 +146,40 @@
   .pro-hint { background: rgba(171,71,188,0.08); border: 1px solid rgba(171,71,188,0.2); border-radius: 6px; padding: 8px 12px; margin-bottom: 8px; font-size: 0.78rem; color: #ce93d8; font-style: italic; }
   .pro-disclaimer { background: rgba(255,152,0,0.08); border: 1px solid rgba(255,152,0,0.2); border-radius: 6px; padding: 8px 12px; font-size: 0.72rem; color: #ffb74d; margin-bottom: 10px; }
 
+  /* Narrative summary */
+  .narrative-section { background: var(--surface); border-radius: 6px; padding: 14px; border-left: 3px solid var(--accent); }
+  .narrative-section h3 { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
+  .narrative-text { font-size: 0.88rem; line-height: 1.65; color: var(--text); margin-bottom: 10px; }
+  .narrative-points { list-style: none; padding: 0; margin: 8px 0; }
+  .narrative-points li { font-size: 0.82rem; color: var(--text); padding: 3px 0 3px 16px; position: relative; line-height: 1.5; }
+  .narrative-points li::before { content: '\25B8'; position: absolute; left: 0; color: var(--accent); }
+  .narrative-pattern { background: rgba(233,69,96,0.06); border: 1px solid rgba(233,69,96,0.15); border-radius: 6px; padding: 8px 12px; margin-top: 8px; font-size: 0.82rem; line-height: 1.5; color: var(--text); }
+  .narrative-pattern-label { font-size: 0.68rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; margin-bottom: 3px; }
+  .narrative-bias { background: rgba(255,152,0,0.08); border: 1px solid rgba(255,152,0,0.2); border-radius: 6px; padding: 8px 12px; margin-top: 8px; font-size: 0.78rem; color: #ffb74d; }
+
+  /* Framing section */
+  .framing-section { background: var(--surface); border-radius: 6px; padding: 14px; }
+  .framing-section h3 { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
+  .framing-dominant { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; padding: 8px 12px; background: rgba(233,69,96,0.08); border: 1px solid rgba(233,69,96,0.2); border-radius: 6px; }
+  .framing-dominant-label { font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.04em; }
+  .framing-dominant-value { font-size: 0.95rem; font-weight: 700; color: var(--accent); }
+  .framing-bars { display: flex; flex-direction: column; gap: 6px; }
+  .framing-row { display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 4px 6px; border-radius: 4px; transition: background 0.1s; }
+  .framing-row:hover { background: rgba(255,255,255,0.03); }
+  .framing-row-label { font-size: 0.75rem; color: var(--text); min-width: 160px; flex-shrink: 0; }
+  .framing-row-bar { flex: 1; height: 18px; background: var(--surface2); border-radius: 3px; overflow: hidden; position: relative; }
+  .framing-row-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
+  .framing-row-pct { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-size: 0.68rem; font-weight: 700; color: var(--text); }
+  .framing-row-evidence { font-size: 0.65rem; color: var(--text-dim); min-width: 50px; text-align: right; }
+  .framing-colors { }
+  .peirce-badge { display: inline-block; font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 1px 5px; border-radius: 3px; }
+  .peirce-badge.icon { background: rgba(66,165,245,0.15); color: #42a5f5; }
+  .peirce-badge.index { background: rgba(255,167,38,0.15); color: #ffa726; }
+  .peirce-badge.symbol { background: rgba(171,71,188,0.15); color: #ab47bc; }
+  .mc-semiotic { font-size: 0.72rem; color: var(--text-dim); margin-top: 4px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .mc-signifikat { font-style: italic; }
+  .mc-cultural-frame { font-size: 0.65rem; padding: 1px 5px; border-radius: 3px; background: rgba(255,255,255,0.05); color: var(--text-dim); }
+
   /* Verify mode */
   .verify-card { background: var(--surface2); border-radius: 6px; padding: 10px 12px; margin-bottom: 6px; border-left: 3px solid #66bb6a; font-size: 0.78rem; }
   .verify-card.low-examples { border-left-color: #ff9800; }
@@ -255,9 +289,15 @@
     <!-- Structural Summary -->
     <div class="summary-bar" id="summary-bar" style="display:none;"></div>
 
+    <!-- Narrative Summary (Gesamtbild) -->
+    <div class="narrative-section" id="narrative-section" style="display:none;">
+      <h3>Gesamtbild</h3>
+      <div id="narrative-content"></div>
+    </div>
+
     <!-- VAD Chart -->
     <div class="vad-section" id="vad-section" style="display:none;">
-      <h3>Emotional Trajectory (VAD)</h3>
+      <h3>Emotionaler Verlauf</h3>
       <div class="vad-chart-wrap">
         <canvas id="vad-chart"></canvas>
       </div>
@@ -269,6 +309,12 @@
       <div class="strip-rows-wrap" id="strip-rows-wrap">
         <div id="strip-rows"></div>
       </div>
+    </div>
+
+    <!-- Semiotic Framing -->
+    <div class="framing-section" id="framing-section" style="display:none;">
+      <h3>Semiotic Framing</h3>
+      <div id="framing-content"></div>
     </div>
 
     <!-- Detail Zone -->
@@ -289,6 +335,7 @@
   let currentMode = 'reflection'; // 'reflection' | 'professional'
   let selectedMsgIdx = -1;
   let analysisData = null;   // full response from /v1/analyze/dynamics
+  let interpretData = null;  // full response from /v1/analyze/interpret
   let parsedMessages = [];
   let neutralInsights = {};
   let vadChart = null;
@@ -359,6 +406,10 @@
   const $stripRows = document.getElementById('strip-rows');
   const $detailZone = document.getElementById('detail-zone');
   const $detailContent = document.getElementById('detail-content');
+  const $framingSection = document.getElementById('framing-section');
+  const $framingContent = document.getElementById('framing-content');
+  const $narrativeSection = document.getElementById('narrative-section');
+  const $narrativeContent = document.getElementById('narrative-content');
   const $inputToggle = document.getElementById('input-toggle');
   const $inputBody = document.getElementById('input-body');
   const $inputArrow = document.getElementById('input-arrow');
@@ -711,7 +762,7 @@
         labels,
         datasets: [
           {
-            label: 'Valence',
+            label: 'Waerme (Valenz)',
             data: messageVAD.map(v => v.valence),
             borderColor: '#42a5f5',
             backgroundColor: 'rgba(66,165,245,0.08)',
@@ -719,7 +770,7 @@
             pointHoverRadius: ptHover, tension: 0.3, fill: true,
           },
           {
-            label: 'Arousal',
+            label: 'Intensitaet (Arousal)',
             data: messageVAD.map(v => v.arousal),
             borderColor: '#ef5350',
             borderWidth: lineWidth, borderDash: [6, 3],
@@ -727,7 +778,7 @@
             pointHoverRadius: ptHover, tension: 0.3, fill: false,
           },
           {
-            label: 'Dominance',
+            label: 'Kontrolle (Dominanz)',
             data: messageVAD.map(v => v.dominance),
             borderColor: '#9e9e9e',
             borderWidth: Math.max(1, lineWidth - 0.5), borderDash: [2, 4],
@@ -824,7 +875,7 @@
         ? buildAnnotatedHTML(msg.text, atoSemMarkers)
         : escapeHTML(msg.text);
 
-      // VAD compact line (skip for non-linguistic messages)
+      // Compact emotion line (skip for non-linguistic messages)
       let vadLine = '';
       if (!nonLing && vad[i]) {
         const v = vad[i];
@@ -834,10 +885,14 @@
         let shiftBadge = '';
         if (delta && delta.shift) {
           const shiftColors = { repair: '#2ecc71', escalation: '#e74c3c', volatility: '#f1c40f' };
+          const shiftLabels = { repair: 'Reparatur', escalation: 'Eskalation', volatility: 'Schwankung' };
           const shiftSymbols = { repair: '\u2191', escalation: '\u2193', volatility: '\u2194' };
-          shiftBadge = ` <span style="font-size:0.65rem;padding:1px 5px;border-radius:3px;background:${shiftColors[delta.shift]}22;color:${shiftColors[delta.shift]};font-weight:600;">${shiftSymbols[delta.shift]} ${delta.shift}</span>`;
+          shiftBadge = ` <span style="font-size:0.65rem;padding:1px 5px;border-radius:3px;background:${shiftColors[delta.shift]}22;color:${shiftColors[delta.shift]};font-weight:600;">${shiftSymbols[delta.shift]} ${shiftLabels[delta.shift]}</span>`;
         }
-        vadLine = `<div class="msg-vad">V:${v.valence.toFixed(2)} A:${v.arousal.toFixed(2)} D:${v.dominance.toFixed(2)}${shiftBadge}</div>`;
+        // Human-readable: warm/cold + high/low intensity
+        const warmth = v.valence > 0.1 ? 'warm' : v.valence < -0.1 ? 'kalt' : 'neutral';
+        const intensity = v.arousal > 0.5 ? 'hoch' : v.arousal > 0.25 ? 'mittel' : 'niedrig';
+        vadLine = `<div class="msg-vad">${warmth} · ${intensity} Intensitaet${shiftBadge}</div>`;
       }
 
       html += `<div class="conv-msg ${roleClass}" data-idx="${i}">
@@ -1060,10 +1115,23 @@
         const confPct = (m.confidence * 100).toFixed(0);
         const uid = 'mc-' + m.id + '-' + idx;
 
+        // Semiotic info
+        const sem = getSemioticEntry(m.id);
+        let semioticHTML = '';
+        if (sem) {
+          const peirceCls = sem.peirce || 'icon';
+          semioticHTML = `<div class="mc-semiotic">
+            <span class="peirce-badge ${peirceCls}">${escapeHTML(peirceCls)}</span>
+            ${sem.signifikat ? `<span class="mc-signifikat">${escapeHTML(sem.signifikat)}</span>` : ''}
+            ${sem.cultural_frame ? `<span class="mc-cultural-frame">${escapeHTML(sem.cultural_frame)}</span>` : ''}
+          </div>`;
+        }
+
         html += `<div class="marker-card" style="border-left-color: ${m.layer === 'ATO' ? 'var(--ato-border)' : m.layer === 'SEM' ? 'var(--sem-border)' : m.layer === 'CLU' ? 'var(--clu-border)' : 'var(--mema-border)'};">
           <div class="mc-heading">${escapeHTML(heading)}</div>
           ${matchedQuote ? `<div class="mc-quote">"${escapeHTML(matchedQuote)}"</div>` : ''}
           ${observable ? `<div class="mc-explanation">${escapeHTML(observable)}</div>` : ''}
+          ${semioticHTML}
           <div class="mc-meta">
             <span class="mc-conf" style="color:${confColor(m.confidence)}">${confPct}%</span>
             ${m.family ? `<span class="mc-family-badge">${escapeHTML(m.family)}</span>` : ''}
@@ -1166,6 +1234,115 @@
 
     html += `</div>`;
     return html;
+  }
+
+  // ── Render narrative section (Gesamtbild) ──
+  function renderNarrativeSection() {
+    if (!interpretData || !interpretData.findings) {
+      $narrativeSection.style.display = 'none';
+      return;
+    }
+
+    const findings = interpretData.findings;
+    if (!findings.narrative || findings.narrative.length < 10) {
+      $narrativeSection.style.display = 'none';
+      return;
+    }
+
+    $narrativeSection.style.display = '';
+    let html = '';
+
+    // Narrative text
+    html += `<div class="narrative-text">${escapeHTML(findings.narrative)}</div>`;
+
+    // Key points
+    if (findings.key_points && findings.key_points.length > 0) {
+      html += '<ul class="narrative-points">';
+      for (const pt of findings.key_points) {
+        html += `<li>${escapeHTML(pt)}</li>`;
+      }
+      html += '</ul>';
+    }
+
+    // Relational pattern
+    if (findings.relational_pattern) {
+      html += `<div class="narrative-pattern">
+        <div class="narrative-pattern-label">Erkanntes Beziehungsmuster</div>
+        ${escapeHTML(findings.relational_pattern)}
+      </div>`;
+    }
+
+    // Bias check
+    if (findings.bias_check) {
+      html += `<div class="narrative-bias">${escapeHTML(findings.bias_check)}</div>`;
+    }
+
+    $narrativeContent.innerHTML = html;
+  }
+
+  // ── Framing colors (framing_type -> color) ──
+  const FRAMING_COLORS = {
+    abwertung: '#ef5350', kontrollnarrative: '#ab47bc', reparatur: '#66bb6a',
+    vermeidung: '#78909c', unsicherheit: '#ffa726', bindung: '#ec407a',
+    ueberflutung: '#42a5f5', schuld: '#8d6e63', empathie: '#26a69a',
+    eskalation: '#ff7043', meta: '#9e9e9e', polarisierung: '#ff5252',
+  };
+
+  // ── Render framing section ──
+  function renderFramingSection() {
+    if (!interpretData || !interpretData.framings || interpretData.framings.length === 0) {
+      $framingSection.style.display = 'none';
+      return;
+    }
+    $framingSection.style.display = '';
+
+    const framings = interpretData.framings;
+    const dominant = interpretData.dominant_framing;
+
+    // Dominant framing header
+    const domFraming = framings.find(f => f.framing_type === dominant);
+    let html = '';
+    if (domFraming) {
+      html += `<div class="framing-dominant">
+        <div>
+          <div class="framing-dominant-label">Dominantes Framing</div>
+          <div class="framing-dominant-value">${escapeHTML(domFraming.label)}</div>
+        </div>
+        <span style="font-size:0.75rem;color:var(--text-dim);margin-left:auto;">${(domFraming.intensity * 100).toFixed(0)}% Intensity</span>
+      </div>`;
+    }
+
+    // Framing bars
+    html += '<div class="framing-bars">';
+    for (const f of framings) {
+      const color = FRAMING_COLORS[f.framing_type] || '#888';
+      const pct = (f.intensity * 100).toFixed(0);
+      html += `<div class="framing-row" data-msgs="${f.message_indices.join(',')}">
+        <div class="framing-row-label">${escapeHTML(f.label)}</div>
+        <div class="framing-row-bar">
+          <div class="framing-row-fill" style="width:${pct}%;background:${color};"></div>
+          <span class="framing-row-pct">${pct}%</span>
+        </div>
+        <div class="framing-row-evidence">${f.detection_count || f.evidence_markers.length} Treffer</div>
+      </div>`;
+    }
+    html += '</div>';
+
+    $framingContent.innerHTML = html;
+
+    // Click handlers: highlight relevant messages
+    document.querySelectorAll('.framing-row').forEach(el => {
+      el.addEventListener('click', () => {
+        const msgs = el.dataset.msgs.split(',').map(Number).filter(n => !isNaN(n));
+        if (msgs.length > 0) selectMessage(msgs[0]);
+      });
+    });
+  }
+
+  // ── Get semiotic entry for a marker ──
+  function getSemioticEntry(markerId) {
+    if (!interpretData || !interpretData.semiotic_map) return null;
+    return interpretData.semiotic_map[markerId] || null;
   }
 
   // ── Verify mode: Audit panel ──
@@ -1303,13 +1480,23 @@
     $btnAnalyze.innerHTML = '<span class="loading"></span>Analyzing...';
 
     try {
-      const resp = await fetch('/v1/analyze/dynamics', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages, layers, threshold: parseFloat(threshold) }),
-      });
-      if (!resp.ok) throw new Error(await resp.text());
-      analysisData = await resp.json();
+      const payload = JSON.stringify({ messages, layers, threshold: parseFloat(threshold) });
+      const headers = { 'Content-Type': 'application/json' };
+
+      // Parallel fetch: dynamics + interpret
+      const [dynResp, intResp] = await Promise.all([
+        fetch('/v1/analyze/dynamics', { method: 'POST', headers, body: payload }),
+        fetch('/v1/analyze/interpret', { method: 'POST', headers, body: payload }).catch(() => null),
+      ]);
+
+      if (!dynResp.ok) throw new Error(await dynResp.text());
+      analysisData = await dynResp.json();
+
+      // Interpret is optional — degrade gracefully
+      interpretData = null;
+      if (intResp && intResp.ok) {
+        interpretData = await intResp.json();
+      }
 
       selectedMsgIdx = -1;
 
@@ -1332,6 +1519,8 @@
       }
 
       renderEmotionStrip();
+      renderNarrativeSection();
+      renderFramingSection();
 
       // Reset detail zone
       $detailContent.innerHTML = '<div class="detail-placeholder">Click a message or chart point to see detailed analysis.</div>';

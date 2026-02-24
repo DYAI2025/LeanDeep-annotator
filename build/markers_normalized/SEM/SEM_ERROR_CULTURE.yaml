@@ -39,9 +39,9 @@ composed_of:
 activation:
   rule: ANY 2 IN 3 messages
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: icon
+  signifikat: Lernbereitschaft/Wachstum
+  framing_type: reparatur
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

@@ -41,9 +41,9 @@ composed_of:
     utterances: 10
   min_hits: 2
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Liebe/Zuneigung
+  framing_type: bindung
   cultural_frame: ''
 compositionality: deterministic
 vad_estimate:

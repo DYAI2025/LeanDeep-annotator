@@ -51,9 +51,9 @@ tags:
 - text
 rating: 1
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Absolutheit/Schwarz-Weiss
+  framing_type: polarisierung
   cultural_frame: ''
 vad_estimate:
   valence: 0.0

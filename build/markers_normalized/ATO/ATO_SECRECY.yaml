@@ -35,10 +35,10 @@ tags:
 - trust
 rating: 2
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Vertrauen
+  framing_type: bindung
+  cultural_frame: Bowlby
 vad_estimate:
   valence: 0.3
   arousal: 0.3

@@ -47,6 +47,6 @@ scoring:
   formula: "logistic"
 semiotic:
   peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Feindseligkeit
+  framing_type: eskalation
+  cultural_frame: Gottman

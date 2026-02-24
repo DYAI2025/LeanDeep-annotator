@@ -61,9 +61,9 @@ scoring:
 window:
   messages: 30
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Polarisierung/Verallgemeinerung
+  framing_type: polarisierung
   cultural_frame: ''
 vad_estimate:
   valence: -0.5

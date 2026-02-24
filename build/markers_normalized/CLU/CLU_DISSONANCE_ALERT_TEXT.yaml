@@ -47,8 +47,8 @@ window:
   messages: 12
 semiotic:
   peirce: index
-  signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  signifikat: Cluster-Muster
+  framing_type: meta
   cultural_frame: ''
 metadata:
   repair_log:

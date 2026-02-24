@@ -62,4 +62,4 @@ examples:
   - Lass uns gemeinsam eine Loesung finden.
 tags: [behavioral_pattern, meta, dissociation, compartmentalization, attachment_trauma]
 schema_version: "3.3"
-semiotic: {peirce: symbol, signifikat: Meta-Diagnose, framing_type: meta, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Bindungsmuster, framing_type: bindung, cultural_frame: Bowlby}

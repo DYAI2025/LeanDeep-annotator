@@ -41,7 +41,7 @@ scoring:
   weight: 1.9
 semiotic:
   peirce: index
-  signifikat: Cluster-Intuition
+  signifikat: Risikowahrnehmung
   framing_type: unsicherheit
   cultural_frame: ''
 metadata:

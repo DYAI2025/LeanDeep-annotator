@@ -42,8 +42,8 @@ composed_of:
 activation:
   rule: "BOTH IN 1 message"
 semiotic:
-  peirce: index
-  signifikat: Freude/Dankbarkeit
+  peirce: icon
+  signifikat: Freude/Glueck
   framing_type: empathie
   cultural_frame: ''
 compositionality: contextual

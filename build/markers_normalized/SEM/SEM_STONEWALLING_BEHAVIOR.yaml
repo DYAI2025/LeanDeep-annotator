@@ -44,9 +44,9 @@ window:
   messages: 2
 semiotic:
   peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  signifikat: Mauern/Blockade
+  framing_type: vermeidung
+  cultural_frame: Gottman
 compositionality: deterministic
 vad_estimate:
   valence: -0.65

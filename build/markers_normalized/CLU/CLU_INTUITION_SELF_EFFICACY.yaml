@@ -45,9 +45,9 @@ activation:
   confirm_window: 3
   cooldown_messages: 4
 semiotic:
-  peirce: index
+  peirce: icon
   signifikat: Cluster-Intuition
-  framing_type: unsicherheit
+  framing_type: meta
   cultural_frame: ''
 metadata:
   maintainer: marker-bot

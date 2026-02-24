@@ -40,10 +40,10 @@ composed_of:
 activation:
   rule: AT_LEAST 2 IN 3 messages
 semiotic:
-  peirce: index
-  signifikat: Semantisches Muster
-  framing_type: unsicherheit
-  cultural_frame: ''
+  peirce: symbol
+  signifikat: Beziehungsspirale
+  framing_type: meta
+  cultural_frame: Systemisch
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

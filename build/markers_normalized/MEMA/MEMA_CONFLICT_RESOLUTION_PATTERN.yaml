@@ -41,7 +41,7 @@ scoring:
   base: 0.7
   weight: 1.2
 semiotic:
-  peirce: symbol
-  signifikat: Eskalation/Konflikt
+  peirce: index
+  signifikat: Konfliktdynamik
   framing_type: eskalation
-  cultural_frame: ''
+  cultural_frame: Gottman

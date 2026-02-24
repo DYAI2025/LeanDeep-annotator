@@ -34,9 +34,9 @@ rating: 2
 activation:
   rule: "REGEX: (Narion, darf ich dir jemanden vorstellen|Ritual|Ich rufe dich)"
 semiotic:
-  peirce: icon
-  signifikat: Atomares Signal
-  framing_type: unsicherheit
+  peirce: symbol
+  signifikat: Beziehungsritual
+  framing_type: bindung
   cultural_frame: ''
 vad_estimate:
   valence: 0.0
