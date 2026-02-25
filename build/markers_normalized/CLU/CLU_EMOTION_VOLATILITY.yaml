@@ -23,12 +23,72 @@ examples:
   - Bin so dankbar!! Ach vergiss es, bringt eh alles nix
   - Ich explodier gleich! Nee egal is mir doch egal
   - Eine Minute bin ich happy und dann krieg ich Panik
+  - Grade noch gelacht und jetzt heul ich wie ein Schlosshund
+  - Ich LIEBE das!! ... nee doch nicht, ist mir eigentlich egal
+  - Euphorisch, dann am Boden, dann wieder hoch, alles an einem Tag
+  - Ich bin so wütend!! ... ach ne, bin ich gar nicht, bin einfach nur traurig
+  - Bester Tag meines Lebens!! ... ok egal, ist scheiße
+  - Ich kann nicht mehr!! Nein warte, geht doch, hab überreagiert. Oder doch nicht?
+  - Erst total motiviert und 2 Stunden später komplett am Ende
+  - So happy gerade! ... warum heule ich jetzt?
+  - Ich HASSE dich!! ... nein tu ich nicht, sorry, ich liebe dich
+  - Mir geht es super... nee eigentlich nicht... doch eigentlich schon... ach keine Ahnung
+  - Morgens Euphorie, mittags Panik, abends Gleichgültigkeit
+  - Ich war grad mega sauer und jetzt bin ich plötzlich total traurig
+  - Alles ist wunderbar! ... NICHTS ist wunderbar, alles ist scheiße!
+  - Grade noch vor Freude geweint und jetzt vor Wut
+  - Ich weiß selbst nicht mehr was ich fühle, alles gleichzeitig
+  - Hochstimmung die in Sekunden in Verzweiflung umschlägt
+  - Fröhlich reingestartet und nach 10 Minuten am Boden zerstört
+  - Liebe und Hass im selben Atemzug
+  - In einem Moment will ich alles und im nächsten gar nichts
+  - Ich lach und wein gleichzeitig, was ist los mit mir
+  - Mega aufgeregt, mega happy, mega down, alles in einer Stunde
+  - Grade noch total zuversichtlich und jetzt will ich nur noch ins Bett
+  - Emotionaler Achterbahnfahrt, ich komm nicht mehr mit
+  - Erst riesige Vorfreude dann plötzlich panische Angst
+  - Ich schwanke zwischen Euphorie und Verzweiflung, dauernd
+  - In einer Nachricht liebe ich dich, in der nächsten hasse ich alles
+  - "{'Total begeistert! ... 20 Minuten später': 'warum mach ich das überhaupt?'}"
+  - Meine Stimmung wechselt schneller als das Wetter
+  - Happy traurig wütend dankbar frustriert, alles innerhalb einer Stunde
+  - Ich schrei dich an und 5 Minuten später kuschl ich mich an dich
+  - Extrem motiviert am Morgen, komplett antriebslos am Mittag
+  - Ich bin so verliebt! Nee halt, ich bin genervt. Oder verliebt? 🤯
+  - Feuerwerk der Gefühle, keins bleibt länger als 10 Minuten
+  - Von 0 auf 100 und zurück in Rekordzeit
+  - Erst geschrien, dann geheult, dann gelacht, alles in 5 Minuten
+  - Ich spring emotional von einem Extrem ins andere
+  - Gute Laune, schlechte Laune, gute Laune, ich dreh durch
+  - Emotionale Achterbahn 🎢 und ich will aussteigen aber kann nicht
+  - So dankbar für alles! ... WARUM passiert mir immer sowas?!
+  - Total verliebt! ... Nee eigentlich hab ich die Nase voll. Oder doch nicht?
   negative:
   - Mir geht es heute gut, danke der Nachfrage.
   - Ja, ich bin etwas genervt, aber es geht schon.
   - Ich bin traurig wegen der Sache gestern.
   - Das macht mich nachdenklich.
   - Insgesamt bin ich zufrieden mit der Situation.
+  - Heute war ein ruhiger Tag, nichts Besonderes.
+  - Ich bin etwas müde aber sonst okay.
+  - Das ärgert mich ein bisschen, aber nicht schlimm.
+  - Ich freu mich auf den Urlaub nächste Woche.
+  - Bin ganz entspannt gerade, läuft alles.
+  - Naja, war nicht mein bester Tag, aber morgen wird besser.
+  - Ich bin glücklich mit meiner Entscheidung.
+  - Das belastet mich etwas, aber ich komm damit klar.
+  - Fühle mich ausgeglichen heute.
+  - Hab gemischte Gefühle, aber nichts Dramatisches.
+  - Bin ein bisschen aufgeregt wegen morgen.
+  - Ich hab heute gute Laune, keine Ahnung warum.
+  - Leicht genervt vom Stau, sonst alles gut.
+  - Bin zufrieden mit dem was ich heute geschafft hab.
+  - Der Film war traurig, hab ein bisschen geweint.
+  - Bin ganz ruhig heute, ausgeglichener Tag.
+  - Ich bin ein bisschen aufgeregt, aber positiv.
+  - Ganz normal drauf, nicht besonders emotional.
+  - Heute war stabil, keine großen Ausschläge.
+  - Ich bin etwas melancholisch, aber das ist okay.
 tags: []
 rating: 1
 composed_of:

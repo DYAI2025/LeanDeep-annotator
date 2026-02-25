@@ -13,19 +13,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - Ziele setzen … Leistung messen
-  - KPIs und Ergebnisse zählen
-  - optimieren … gewinnen
-  - Datengetrieben entscheiden
-  - Effizienz steigern
+  - Ziele setzen, Leistung messen.
+  - KPIs und Ergebnisse zählen.
+  - Optimieren und gewinnen.
+  - Datengetrieben entscheiden.
+  - Effizienz steigern.
+  - Wir müssen die Conversion Rate verdoppeln.
+  - Ergebnisorientiert arbeiten, das ist der Schlüssel.
+  - Performance ist alles.
+  - Ich will an die Spitze.
+  - Messen, analysieren, optimieren.
+  - ROI muss stimmen, sonst lohnt es nicht.
+  - Wir brauchen messbare Ergebnisse.
+  - Zielorientiert und leistungsstark.
+  - Best Practice implementieren, Effizienz steigern.
+  - Wettbewerb treibt Innovation.
+  - Ich will besser sein als der Durchschnitt.
+  - Erfolg ist planbar, wenn die KPIs stimmen.
+  - Output maximieren, Input minimieren.
+  - Schneller, besser, profitabler.
+  - Wachstum ist das Ziel, Daten der Kompass.
+  - Ich optimiere jeden Prozess.
+  - Leistung wird belohnt.
+  - Die Zahlen sprechen eine klare Sprache.
+  - Wir skalieren das aggressiv.
+  - Erfolg kommt durch Strategie und Umsetzung.
+  - Target erreicht, nächstes Ziel setzen.
+  - Benchmarks schlagen, das motiviert mich.
+  - Datenbasierte Entscheidungen, keine Bauchgefühle.
+  - High-Performance-Team aufbauen.
+  - Ich messe mich an den Besten.
+  - Effizienzsteigerung um 30% ist das Ziel.
+  - Ergebnis über Prozess.
+  - Wir maximieren den Shareholder Value.
+  - Gewinnmaximierung durch Optimierung.
+  - Top-Quartil erreichen.
+  - Leistungskennzahlen tracken und verbessern.
+  - Ich will gewinnen, nicht teilnehmen.
+  - Skalieren und dominieren.
+  - OKRs definiert, Execution startet.
+  - Produktivität steigern durch Automatisierung.
+  - Die Pipeline muss voll sein.
+  - Metrics first, dann entscheiden.
+  - Marktführer werden, das ist das Ziel.
+  - 'Performance-Review zeigt: Wir liefern.'
+  - Ergebnis zählt, nicht Aufwand.
+  - Ich push das auf nächstes Level.
+  - Growth Hacking für schnelle Ergebnisse.
+  - Lean und effizient arbeiten.
+  - Zielerreichung ist nicht verhandelbar.
+  - Ich messe alles, was sich messen lässt.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Mir ist wichtig, dass sich alle wohlfühlen.
+  - Lass uns das in Ruhe angehen.
+  - Zahlen sind nicht alles im Leben.
+  - Wie geht es dir dabei?
+  - Gemeinsam ist es schöner.
+  - Der Weg ist das Ziel.
+  - Ich brauche keine Kennzahlen.
+  - Es geht nicht ums Gewinnen.
+  - Qualität vor Quantität.
+  - Langsam aber gründlich.
+  - Ich mach das aus Freude, nicht für Ergebnisse.
+  - Wettbewerb ist nicht alles.
+  - Lass uns einfach genießen.
+  - Mir reicht es, wenn wir Spaß haben.
+  - Ich vertraue meinem Bauchgefühl.
+  - Nicht alles muss optimiert werden.
+  - Menschlichkeit geht vor Effizienz.
+  - Erfolg ist relativ.
+  - Ich brauche keine Anerkennung.
+  - Es muss nicht immer mehr sein.
+  - Ich bin zufrieden mit dem was ich habe.
+  - Performance-Druck macht mich fertig.
+  - Nicht alles lässt sich messen.
+  - Ich arbeite gern in meinem Tempo.
+  - Hauptsache es macht Freude.
 tags: []
 rating: 2
 composed_of:

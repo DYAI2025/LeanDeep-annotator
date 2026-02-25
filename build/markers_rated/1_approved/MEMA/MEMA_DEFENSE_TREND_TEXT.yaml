@@ -25,6 +25,48 @@ examples:
   - "Mehrere Sprints mit CLU_DEFENSE_ACTIVE."
   - "Wöchentliche Häufung von Abwehr-Clustern."
   - "Langstrecke: wiederkehrende Abwehr-Muster."
+  - Tag für Tag dieselben Rationalisierungen, sobald ein emotionales Thema auftaucht.
+  - In jeder Sitzung zeigt sich ein Cluster aus Projektion und Abwehr.
+  - 'Über drei Wochen hinweg: Erst Verleugnung, dann Rationalisierung, dann erneut Verleugnung.'
+  - Jedes Mal wenn das Thema angesprochen wird, schaltet die Person in den Abwehr-Modus.
+  - 'Deutlicher Trend: Abwehrmechanismen verdichten sich über die letzten 50 Nachrichten.'
+  - 'In der Supervision zeigt sich: Der Patient verteidigt sich zunehmend gegen jede Intervention.'
+  - Seriell 'Ja, aber...'-Reaktionen über mehrere Gesprächsrunden hinweg.
+  - Rationalisierung taucht in jeder dritten Nachricht auf, steigend über die Woche.
+  - Die Abwehrmuster sind in den letzten zwei Meetings deutlich dichter geworden.
+  - 'Über 30 Nachrichten: mindestens drei Episoden von Projektion auf den Gesprächspartner.'
+  - 'Trend: Abwehr-Score liegt über 0.6 und steigt weiter.'
+  - Jede Konfrontation löst sofort Gegenreaktion aus – Muster verdichtet sich.
+  - 'Im Verlauf der Therapie zeigt sich ein klarer Abwehr-Trend: mehr Rationalisierung, weniger Reflexion.'
+  - Wöchentlich mindestens zwei Abwehr-Cluster, Tendenz steigend seit drei Wochen.
+  - 'Über den Monat: Erst gelegentliche Abwehr, jetzt in fast jeder Interaktion.'
+  - 'Abwehr-Drift sichtbar: von vereinzelt zu systematisch innerhalb weniger Sitzungen.'
+  - 'Pattern: Bei emotional geladenen Themen sofortiger Wechsel in Abwehrhaltung.'
+  - 'Langstrecke zeigt: Abwehr korreliert mit Annäherung an Kernthemen.'
+  - 'In den letzten drei Gesprächen: Jeweils mindestens ein signifikanter Abwehr-Block.'
+  - Die Abwehrmuster haben sich verdichtet und zeigen kaum noch Pausen.
+  - 'Über zehn Meetings hinweg: durchgehender Trend zur Reaktionsbildung.'
+  - 'In jedem Sprint-Review taucht dasselbe Abwehrmuster auf: Schuld abwälzen + Rationalisieren.'
+  - 'Trend: Die Latenz zwischen Trigger und Abwehrreaktion wird immer kürzer.'
+  - Mehrfache Abwehr-Episoden innerhalb einer einzigen Sitzung, jeweils bei emotionalen Themen.
+  - "Über Wochen: 'Das liegt nicht an mir' als wiederkehrender Abwehr-Marker."
+  - 'Analyse zeigt: Abwehrmuster tritt konsistent auf, sobald Verantwortung thematisiert wird.'
+  - 'In der Paartherapie: Partner zeigt zunehmende Abwehr über fünf Sitzungen.'
+  - 'Deutliche Verdichtung: Von einer Abwehr-Episode pro Woche auf drei.'
+  - 'Langzeittrend: Die Abwehrstrategien werden komplexer, aber häufiger.'
+  - EWMA der Abwehr-Cluster hat 0.6 überschritten und steigt weiter.
+  - Reflexion wird zunehmend durch Rechtfertigung ersetzt – Abwehr-Drift.
+  - 'Im Teamkontext: Person reagiert auf jedes Feedback mit Gegenkritik, Trend über Monate.'
+  - 'Supervision bemerkt: Patient blockiert systematisch jede tiefergehende Exploration.'
+  - 'Trend: Von gelegentlicher Rationalisierung zu fast permanenter Abwehrstellung.'
+  - Jede dritte Nachricht enthält ein Abwehrmuster – Verdichtung über die Woche.
+  - 'Im Coaching: Klient zeigt zunehmend elaborierte Abwehrstrategien, um Veränderung zu vermeiden.'
+  - 'Über 50 Nachrichten: Mindestens fünf klar identifizierbare Abwehr-Episoden.'
+  - 'Trend bestätigt: Abwehr-Cluster treten in immer kürzeren Abständen auf.'
+  - 'Die Abwehrmuster korrelieren mit Nähe-Themen: je näher, desto stärker die Abwehr.'
+  - In den letzten Sitzungen zeigt sich ein klarer Anstieg der Abwehrreaktionen.
+  - 'Langzeit: Abwehr als Standardreaktion auf Feedback – kein einziges Mal Annahme.'
+  - Systematische Abwehr-Verdichtung über den gesamten Therapieprozess sichtbar.
   negative:
   - Abwehrmuster mit kurzer Latenz manchmal wieder aktiviert.
   - Ich finde, wir sollten das in Ruhe besprechen.
@@ -33,6 +75,24 @@ examples:
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
+  - Einmalige Rechtfertigung, danach Einsicht und Reflexion.
+  - Kurze Abwehrreaktion, die schnell aufgelöst wird durch Selbstreflexion.
+  - Gelegentliche Rationalisierung, aber insgesamt reflektierter Verlauf.
+  - Ab und zu ein 'Ja, aber...', gefolgt von ehrlichem Nachdenken.
+  - Vereinzelte Abwehr, die nicht zu einem Trend wird.
+  - Die Person zeigt Abwehr, erkennt es aber selbst und korrigiert sich.
+  - Einmalig defensiv, danach offen für Feedback.
+  - Kurzfristige Abwehr bei einem schwierigen Thema, danach Bereitschaft zur Auseinandersetzung.
+  - Keine Verdichtung erkennbar – die Abwehr tritt isoliert auf.
+  - Ein einzelner Abwehr-Moment in einem ansonsten reflektierten Gespräch.
+  - Die Person rationalisiert kurz, korrigiert sich dann aber selbst.
+  - Vereinzelte Projektion, die nicht systematisch wiederkehrt.
+  - Abwehr tritt nur bei einem spezifischen Thema auf, nicht generalisiert.
+  - Kurze Phase der Defensivität, gefolgt von produktiver Zusammenarbeit.
+  - Einmaliges 'Das liegt nicht an mir', danach Verantwortungsübernahme.
+  - Die Person verteidigt sich einmal, hört dann aber aktiv zu.
+  - Kurzfristige Abwehr nach Kritik, die sich nicht wiederholt.
+  - Vereinzelte Abwehrreaktion in einem ansonsten offenen Dialog.
 tags: [meta, defense, trend]
 metadata:
   repair_log:

@@ -42,6 +42,46 @@ examples:
   - … 'wir teilen Credentials' + Boundary-Setting …
   - … 'enttäuscht' + Kontrollwunsch …
   - … 'Handshake' + Absicherung …
+  - Ich vertraue dir voll und ganz, du hast mich noch nie enttäuscht
+  - Kann ich mich wirklich auf dich verlassen? Ich muss das wissen
+  - "Du bist der einzige dem ich das anvertraue, sag niemandem was"
+  - Ehrlich gesagt zweifle ich langsam an deiner Aufrichtigkeit
+  - Ich brauche einen Beweis dass du es ernst meinst mit uns
+  - "Vertrauensbasis ist mir extrem wichtig, ohne geht nix"
+  - Warum sollte ich dir glauben nach dem was passiert ist?
+  - Ich setze großes Vertrauen in dich, enttäusch mich nicht
+  - Du hast mein Vertrauen missbraucht und das tut weh
+  - "Auf dich kann man sich verlassen, das weiß ich"
+  - Bevor ich dir das sage, musst du mir versprechen dass es unter uns bleibt
+  - Ich hab ein komisches Bauchgefühl, irgendwas stimmt da nicht
+  - Vertrauen muss man sich verdienen, das bekommt man nicht geschenkt
+  - "Ich glaub dir das, aber beweis es mir bitte nochmal"
+  - Wir teilen alles, das ist die Basis unserer Beziehung
+  - Dein Wort gilt, darauf verlasse ich mich
+  - Ich fühle mich sicher bei dir, das ist selten geworden
+  - Manchmal frag ich mich ob du mir wirklich die Wahrheit sagst
+  - "Vertrag hin oder her, ich brauche dein Wort darauf"
+  - Du hast dich als absolut zuverlässig erwiesen, Respekt
+  - Ich hab Angst dass du mich wieder hintergehst
+  - "Loyalität ist mir heilig, wer die bricht ist raus"
+  - Kannst du garantieren dass das unter uns bleibt?
+  - Ich vertraue deinem Urteil mehr als meinem eigenen
+  - "Die Zusammenarbeit basiert auf gegenseitigem Vertrauen, oder?"
+  - Mein Vertrauen in dich wurde erschüttert, das muss ich dir sagen
+  - Ich leg meine Hand für dich ins Feuer
+  - "Zeig mir dass du verlässlich bist, dann reden wir weiter"
+  - Du bist die letzte Person der ich noch vertraue
+  - "Handschlag drauf, das reicht mir von dir"
+  - Ich öffne mich dir weil ich dir vertraue, nutz das nicht aus
+  - Tut mir leid aber nach dem Vorfall hab ich ein Vertrauensproblem
+  - "Auf einer Skala von 1 bis 10, wie sehr kann ich dir vertrauen?"
+  - Du hast dir mein Vertrauen hart erarbeitet über die Jahre
+  - Mein Misstrauen kommt nicht von ungefähr, du weißt warum
+  - "Ich geb dir noch eine Chance, aber nur eine"
+  - Wir brauchen absolute Transparenz wenn das funktionieren soll
+  - "Ich schwör dir, du kannst mir blind vertrauen"
+  - Ehrlichkeit ist das Fundament, ohne das bricht alles zusammen
+  - Ich zähle auf dich, lass mich nicht hängen
   negative:
   - Kannst du mir das Salz reichen?
   - Der Termin ist um 14 Uhr.
@@ -50,4 +90,22 @@ examples:
   - Hast du die E-Mail gelesen?
   - Ich muss noch tanken.
   - Die Besprechung ist im Konferenzraum.
+  - Morgen regnet es wahrscheinlich den ganzen Tag
+  - Hast du den neuen Film schon gesehen?
+  - Ich muss noch schnell zum Supermarkt
+  - Die Präsentation ist fertig, ich schick sie dir gleich
+  - Wann fährt der nächste Bus?
+  - Das Essen war echt lecker heute
+  - Ich hab den Schlüssel auf dem Tisch gelegt
+  - Können wir den Termin auf Mittwoch verschieben?
+  - Die Kinder sind um drei aus der Schule
+  - Ich hab gerade keine Zeit, ruf später nochmal an
+  - Der Report ist fällig bis Freitag
+  - Pizza oder Sushi heute Abend?
+  - Der Drucker funktioniert wieder
+  - Ich hab den Müll schon rausgebracht
+  - Meeting wurde auf 16 Uhr verschoben
+  - Vergiss nicht die Milch mitzubringen
+  - Der Parkplatz war voll, hab woanders geparkt
+  - Ich schick dir den Link gleich per Mail
 semiotic: {peirce: symbol, signifikat: Vertrauen, framing_type: bindung, cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

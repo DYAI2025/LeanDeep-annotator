@@ -23,12 +23,72 @@ examples:
   - Seit 3 Stunden keine Antwort, was soll das
   - Ich versuch's jetzt per WhatsApp, SMS und Anruf
   - Du ignorierst mich doch absichtlich
+  - Hallo???? Bist du noch da???
+  - Ich hab dir 5 Nachrichten geschrieben und du sagst nix
+  - Warum bist du online aber antwortest nicht?
+  - Ich ruf jetzt nochmal an, das ist WICHTIG
+  - Du hast gelesen um 14:32 und seitdem nichts
+  - Meld dich SOFORT, ich mach mir Sorgen
+  - Okay anscheinend ist dir das egal, ich schreib trotzdem
+  - ????????????????
+  - ANTWORTE MIR
+  - Du lässt mich hier hängen, weißt du das?
+  - Dritte Sprachnachricht, hör dir bitte EINE an
+  - Wieso ignorierst du meine Anrufe?
+  - Ich seh dass du bei Insta aktiv bist aber mir nicht antwortest
+  - Liest du meine Nachrichten überhaupt?
+  - Hey hey hey, bist du da???
+  - Schreib mir bitte zurück, warte seit 2 Stunden
+  - Soll ich vorbeikommen? Antworte oder ich steh vor der Tür
+  - Du lässt mich zappeln und das weißt du
+  - Es ist dringend!! Bitte meld dich!!
+  - Ich hab WhatsApp, SMS und zweimal angerufen, was noch?
+  - Okay ich schreib dir auf allen Kanälen bis du reagierst
+  - Seit gestern Abend nichts von dir, was soll das?
+  - Ich check dein 'zuletzt online' seit ner Stunde
+  - BITTE antworte mir, ich dreh durch hier
+  - Du kannst mich nicht einfach ignorieren!
+  - Jetzt hab ich auch auf Facebook geschrieben, meld dich!!!
+  - Dein Handy ist an, ich seh die blauen Haken
+  - Ich ruf jetzt zum zehnten Mal an, geh ran!
+  - Meld dich oder ich fahr zu dir
+  - Warum tust du mir das an? Einfach nicht antworten?
+  - Hab dir ne Mail geschickt weil du auf WhatsApp nicht reagierst
+  - Letzte Nachricht, danach komm ich persönlich vorbei
+  - Du bist online!!!! ICH SEH DAS!!! ANTWORTE
+  - Seit 6 Stunden warte ich, das ist respektlos
+  - Okay ich geb dir noch 30 Minuten, dann...
+  - Ich versuch's nochmal per Anruf, bitte geh ran diesmal
+  - Hast du mein Problem nicht verstanden? ICH BRAUCHE EINE ANTWORT
+  - Ich weiß dass du mich siehst, warum tust du so?
+  - Hey... bitte... meld dich... ich brauch dich jetzt...
+  - Ich geb nicht auf, du WIRST mir antworten
   negative:
   - Okay kein Stress, meld dich wenn du Zeit hast
   - Hab dir ne Nachricht geschickt, lies in Ruhe
   - Wie war dein Tag?
   - Bin gleich zuhause
   - Vergiss nicht den Termin morgen
+  - Meld dich wenn du Lust hast, kein Druck
+  - 'Hey, nur kurze Info: Termin verschoben auf 15 Uhr'
+  - Wenn du magst können wir morgen telefonieren
+  - Hab an dich gedacht, schönen Abend dir!
+  - Schick mir die Adresse wenn du sie hast
+  - Gute Nacht, bis morgen!
+  - Danke für vorhin, hat mir gut getan
+  - Ich schick dir das Rezept später, kein Stress
+  - 'Wollte nur Bescheid sagen: bin gut angekommen'
+  - Ruf mich an wenn du kannst, muss nicht heute sein
+  - Die Fotos von gestern sind echt gut geworden
+  - Freu mich auf Samstag!
+  - Lässig, meld dich einfach wenn du soweit bist
+  - 'Kurze Frage: hast du noch mein Buch?'
+  - Bis dann, alles Gute!
+  - Ich warte geduldig, kein Stress
+  - Schreib mir wenn du Lust hast, kein Druck
+  - Hab dir ne SMS geschrieben, lies wann du magst
+  - Guten Morgen, schönen Tag dir!
+  - Bin unterwegs, ruf dich später nochmal an
 tags:
 - cluster
 - control

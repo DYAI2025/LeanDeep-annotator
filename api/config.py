@@ -7,7 +7,7 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     app_name: str = "LeanDeep Marker API"
-    version: str = "5.1-LD5"
+    version: str = "6.0-LD6"
     debug: bool = False
 
     # Paths

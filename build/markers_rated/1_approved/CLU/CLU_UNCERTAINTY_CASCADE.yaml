@@ -16,17 +16,80 @@ scoring:
   weight: 1.0
 examples:
   positive:
-  - vielleicht ist es so … bin mir nicht sicher
-  - ich glaube … könnte aber falsch liegen
-  - hm … weiß nicht genau
-  - es spricht einiges dafür … aber
-  - vermutlich … kann mich täuschen
+  - "Vielleicht ist es so, bin mir aber nicht sicher."
+  - "Ich glaube, könnte aber falsch liegen."
+  - "Hm, weiß nicht genau."
+  - "Es spricht einiges dafür, aber..."
+  - "Vermutlich, kann mich aber täuschen."
+  - "Ich bin mir nicht sicher, ob das stimmt. Vielleicht ja, vielleicht nein."
+  - "Könnte sein, muss aber nicht. Keine Ahnung eigentlich."
+  - "Möglicherweise ist das richtig, aber ich bin unsicher. Eventuell auch nicht."
+  - "Ich denke schon, obwohl... naja, vielleicht auch nicht."
+  - "Wahrscheinlich, aber wer weiß. Könnte auch ganz anders sein."
+  - "ich weiß nicht so recht. vielleicht. aber auch vielleicht nicht. hm"
+  - "Es könnte so sein, vermutlich sogar, aber sicher bin ich mir nicht."
+  - "Bin mir total unsicher. Einerseits ja, andererseits nein. Keine Ahnung."
+  - "Möglicherweise hast du Recht. Aber eventuell auch nicht. Ich schwanke."
+  - "Sehr geehrter Herr Doktor, ich bin mir unsicher ob die Diagnose stimmt. Vielleicht ist es etwas anderes."
+  - "Kann sein, dass das funktioniert. Vielleicht aber auch nicht. Unsicher."
+  - "Ich neige zu ja, aber bin nicht überzeugt. Könnte auch falsch sein."
+  - "Vermutlich ist das der richtige Weg, obwohl ich mir nicht sicher bin."
+  - "Hm, schwer zu sagen. Ich tendiere dahin, aber es könnte auch anders sein."
+  - "Ich glaube schon, dass... naja, eigentlich bin ich mir nicht sicher."
+  - "keine ahnung tbh. vielleicht? aber auch irgendwie nicht?"
+  - "Es spricht einiges dafür, aber es gibt auch Argumente dagegen. Ich bin unschlüssig."
+  - "Wahrscheinlich stimmt das so. Aber vielleicht auch nicht. Schwer zu sagen."
+  - "Könnte klappen, muss aber nicht. Bin da echt unsicher."
+  - "Ich denke, vielleicht ist das richtig. Aber ob wirklich? Hmm."
+  - "Nicht sicher. Eher unwahrscheinlich, aber möglich. Oder doch nicht?"
+  - "Ich tendiere zu A, aber B wäre auch denkbar. Unsicher."
+  - "Vielleicht hab ich Recht, vielleicht irre ich mich. Wer weiß das schon."
+  - "Es ist möglich, eventuell sogar wahrscheinlich. Aber sicher? Nein."
+  - "hm ja vielleicht. oder auch nicht. ich weiß es echt nicht"
+  - "Kann gut sein. Kann aber auch sein, dass ich mich täusche."
+  - "Ich vermute, dass... obwohl, vielleicht ist es auch anders."
+  - "Unsicher. Komplett unsicher. Alles ist vage und unklar."
+  - "Ich neige dazu, aber es fühlt sich nicht sicher an."
+  - "Möglicherweise ist das die Lösung. Vielleicht aber auch nicht."
+  - "Ich bin hin- und hergerissen. Vielleicht ja, vielleicht nein."
+  - "Wahrscheinlich schon, aber garantieren kann ich nichts."
+  - "Hmm, es könnte stimmen. Oder auch nicht. Ich bin unsicher."
+  - "bin mir so unsicher gerade. alles ist vielleicht und nichts ist sicher"
+  - "Es spricht ein bisschen dafür. Aber ob es wirklich so ist..."
+  - "Ich glaube fast, dass... nee, doch nicht. Oder doch? Unklar."
+  - "Schwierig zu sagen. Tendenziell ja, aber mit viel Unsicherheit."
+  - "Ich bin mir in der Sache absolut nicht sicher. Vielleicht."
+  - "Es gibt Hinweise, aber keine Gewissheit. Alles ist vage."
+  - "Eher ja als nein, aber ob das stimmt, weiß ich nicht."
+  - "Ich tendiere dazu, aber überzeugt bin ich nicht. Vielleicht irre ich mich auch."
+  - "Könnte klappen, könnte scheitern. Wer weiß das schon. Unsicher."
+  - "Es gibt Argumente dafür, es gibt Argumente dagegen. Ich bin ratlos."
+  - "weiß echt nicht. alles ist irgendwie vielleicht und nichts ist klar"
+  - "Möglicherweise habe ich Recht, möglicherweise nicht. Ich bin mir in nichts sicher gerade."
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - "Ich bin mir sicher, das ist die richtige Entscheidung."
+  - "Das ist eindeutig so, kein Zweifel."
+  - "Ja, das stimmt. Hundertprozentig."
+  - "Ich weiß genau, was zu tun ist."
+  - "Die Antwort ist klar."
+  - "Darüber muss ich nicht nachdenken, das ist offensichtlich."
+  - "Ich bin überzeugt davon."
+  - "Absolut, da gibt es keinen Zweifel."
+  - "Definitiv ja. Ohne Frage."
+  - "das ist so, punkt."
+  - "Ich bin fest entschlossen."
+  - "Kein Zweifel, das ist richtig."
+  - "Meine Meinung steht fest."
+  - "Daran gibt es nichts zu rütteln."
+  - "Ich bin mir sicher und stehe dazu."
+  - "Selbstverständlich, das ist klar."
+  - "Ja, das weiß ich genau."
+  - "Keine Unsicherheit meinerseits."
+  - "Das steht fest und ändert sich nicht."
+  - "Ich habe keinen Zweifel daran."
+  - "Vielleicht sollten wir morgen einkaufen gehen."
+  - "Es könnte heute regnen, ich nehme einen Schirm mit."
+  - "Eventuell brauchen wir noch Milch."
+  - "Wahrscheinlich kommt der Bus in zehn Minuten."
+  - "Möglicherweise hat das Restaurant heute geschlossen."
 semiotic: {peirce: icon, signifikat: Unsicherheit, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

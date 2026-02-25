@@ -1,0 +1,104 @@
+id: MEMA_REPAIR_RECIPROCITY
+version: "3.4"
+frame:
+  signal: ["repair", "reciprocity"]
+  concept: "Reparatur-Reziprozität – Gegenseitigkeit von Reparaturversuchen"
+  pragmatics: "Erkennt, ob Reparaturversuche erwidert oder abgelehnt werden"
+  narrative: "meta_pattern"
+tags: [mema, repair, reciprocity, mutual]
+composed_of:
+  required_any:
+  - SEM_REPAIR_SIGNAL
+  - CLU_CONSTRUCTIVE_CONFLICT
+  supportive:
+  - ATO_APOLOGY
+  - SEM_EMPATHIC_RESONANCE
+activation:
+  rule: "ANY 2 IN 15 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+  positive_de:
+  - "Ich entschuldige mich und du sagst: 'Ich auch, es tut mir auch leid.'"
+  - "Wir reparieren gemeinsam – einer fängt an, der andere steigt ein."
+  - "Du hast den ersten Schritt gemacht und ich bin dir entgegengekommen."
+  - "Ich reiche dir die Hand und du nimmst sie."
+  - "Wir haben beide Fehler gemacht und stehen beide dazu."
+  - "Dein Reparaturversuch wurde von mir angenommen – und umgekehrt."
+  - "Ich sage sorry, du sagst sorry. Wir treffen uns in der Mitte."
+  - "Es tut gut, dass du meinen Reparaturversuch erwidert hast."
+  - "Wir sind beide bereit, aufeinander zuzugehen."
+  - "Du hast dich entschuldigt und ich hab deinen Versuch anerkannt."
+  - "Wir heilen zusammen – keiner muss allein reparieren."
+  - "Ich biete Versöhnung an und du nimmst sie an."
+  - "Gegenseitige Reparatur: du gibst nach, ich gebe nach."
+  - "Ich bin dir einen Schritt entgegengekommen und du mir."
+  - "Wir erwidern Reparaturversuche – das ist unsere Stärke."
+  - "Wenn du dich entschuldigst, nehme ich es an. Wenn ich mich entschuldige, du auch."
+  - "Wir haben einen Tanz der Versöhnung – einer führt, der andere folgt."
+  - "Du hast den Streit beendet und ich hab mitgemacht."
+  - "Unsere Reparaturen sind gegenseitig – das gibt mir Hoffnung."
+  - "Ich sage 'ich war im Unrecht' und du sagst 'ich auch'."
+  - "Wir treffen uns auf halbem Weg."
+  - "Du nimmst meine Entschuldigung an und bietest deine eigene an."
+  - "Wir haben gelernt, gemeinsam zu reparieren."
+  - "Ich mache den ersten Schritt, du machst den zweiten."
+  - "Unsere Versöhnung ist immer ein Dialog, kein Monolog."
+  - "Du hast mir gezeigt, dass Reparatur ein gegenseitiger Prozess ist."
+  - "Wir heilen einander – das ist das Schönste."
+  - "Ich versuche es, du versuchst es. Zusammen schaffen wir es."
+  - "Deine Bereitschaft zur Versöhnung ermutigt mich."
+  - "Wir sind beide fähig und willens, aufeinander zuzugehen."
+  - "Nach dem Streit kommen wir immer zusammen – beide."
+  - "Unser Versöhnungsritual: beide sagen, was schiefgelaufen ist."
+  - "Ich biete Frieden an und du empfängst ihn mit Offenheit."
+  - "Unsere Reparatur ist symmetrisch – das macht sie stark."
+  - "Du reagierst auf meinen Friedensversuch mit Wärme."
+  - "Wir reparieren als Team."
+  - "Ich sage 'lass uns reden' und du sagst 'ja, gerne'."
+  - "Gegenseitigkeit in der Versöhnung – das hält uns zusammen."
+  - "Du hast nicht nur meine Entschuldigung angenommen, sondern deine eigene angeboten."
+  - "Wir sind Meister der gegenseitigen Reparatur."
+  - "Unser Muster: Streit, Pause, gegenseitige Annäherung."
+  - "Ich bin froh, dass du meine Friedensgeste erwidert hast."
+  - "Wir kommen immer wieder zusammen – von beiden Seiten."
+  - "Unsere Reparaturbereitschaft ist ausgeglichen."
+  - "Du machst mir Mut, weil du auch reparieren willst."
+  - "Wir haben einen guten Reparaturrhythmus gefunden."
+  - "Wenn einer fällt, hilft der andere auf – und umgekehrt."
+  - "Unsere Versöhnung ist immer ein Miteinander."
+  - "Ich schätze, dass du meinen Friedensversuch ernst nimmst."
+  - "Gegenseitige Reparatur ist unsere Superkraft."
+  negative_de:
+  - "Ich entschuldige mich immer – du nie."
+  - "Meine Reparaturversuche werden ignoriert."
+  - "Ich reiche die Hand und du schlägst sie weg."
+  - "Du nimmst meine Entschuldigung nicht an."
+  - "Ich versuche aufzuräumen und du stehst daneben."
+  - "Immer bin ich es, die den ersten Schritt macht."
+  - "Du willst nicht reparieren, du willst recht behalten."
+  - "Mein Friedensangebot wird abgelehnt."
+  - "Ich sage sorry und du sagst 'zu spät'."
+  - "Einseitige Reparatur ist keine echte Reparatur."
+  - "Ich komme dir entgegen und du drehst dich um."
+  - "Du erwartest Entschuldigung, bietest aber keine an."
+  - "Mein Versöhnungsversuch wird bestraft."
+  - "Ich repariere allein – du zerstörst weiter."
+  - "Du blockierst jeden Reparaturversuch von mir."
+  - "Ich bin immer die, die nachgibt."
+  - "Meine Friedensgeste wird als Schwäche gesehen."
+  - "Du nimmst, aber gibst nicht zurück."
+  - "Ich versuche zu heilen, du vertiefst die Wunde."
+  - "Reparatur ist bei uns einseitig – und das bin immer ich."
+  - "Du sagst 'Entschuldigung reicht nicht' und bietest selbst nichts an."
+  - "Ich mache einen Schritt auf dich zu, du machst zwei zurück."
+  - "Meine Versuche laufen ins Leere."
+  - "Einseitige Versöhnung ist erschöpfend."
+  - "Du erwartest, dass ich alles repariere – allein."
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

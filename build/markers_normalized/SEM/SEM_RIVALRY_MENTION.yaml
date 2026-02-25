@@ -24,42 +24,82 @@ patterns:
   value: "er schreibt dir"
 examples:
   positive:
-  - 'examples:'
-  - '- "Wenn andere Frauen dir schreiben, fühl ich mich unsicher."'
-  - '- "Er schreibt dir ständig, oder?"'
-  - '- "Warst du gestern mit jemand anderem unterwegs?"'
-  - '- "Wer ist diese Julia, von der alle reden?"'
-  - '- "Du redest in letzter Zeit so oft von ihm... ist da was?"'
-  - '- "Warum schreibt sie dir um diese Uhrzeit noch?"'
-  - '- "Eine andere Frau hat mir heute geschrieben, aber ich denke nur an dich."'
-  - '- "Na, wie viele andere Typen beeindruckst du heute noch so? ;)"'
-  - '- "Gibt es jemand anderen?"'
-  - '- "Mir ist aufgefallen, dass du jedes Bild von ihm likest."'
-  - '- "Was wollen all diese anderen Frauen auf deinem Profil?"'
-  - '- "Mit wem hast du gerade telefoniert? War es wieder dieser Typ von der Arbeit?"'
-  - '- "Du hast sicher viele andere Männer, die dir schreiben. Ich verstehe, wenn ich nur einer von vielen bin."'
-  - '- "Findest du, sie sieht besser aus als ich?"'
-  - '- "Wer war die Person, mit der du gestern im Café warst? Sah nicht nach einem Kumpel aus."'
-  - '- "Ich hab gesehen, dass du wieder mit ihr schreibst. Überrascht mich nicht."'
-  - '- "Warum musst du immer erwähnen, was andere Typen so machen?"'
-  - '- "Du musst mir jetzt ehrlich sagen, ob da jemand anderes ist."'
-  - '- "Ein Mann hier im Camp macht mir den Hof, aber mein Herz gehört nur dir."'
-  - '- "Deine Freundin meinte, du wärst mit jemand anderem da gewesen."'
-  - '- "Zeig mir mal, was er dir schreibt."'
-  - '- "Muss ich mir wegen ihr Sorgen machen?"'
+  - Wenn andere Frauen dir schreiben, fühl ich mich unsicher.
+  - Er schreibt dir ständig, oder?
+  - Warst du gestern mit jemand anderem unterwegs?
+  - Wer ist diese Julia, von der alle reden?
+  - Du redest in letzter Zeit so oft von ihm – ist da was?
+  - Warum schreibt sie dir um diese Uhrzeit noch?
+  - Eine andere Frau hat mir heute geschrieben, aber ich denke nur an dich.
+  - Na, wie viele andere Typen beeindruckst du heute noch so?
+  - Gibt es jemand anderen?
+  - Mir ist aufgefallen, dass du jedes Bild von ihm likest.
+  - Was wollen all diese anderen Frauen auf deinem Profil?
+  - Mit wem hast du gerade telefoniert? War es wieder dieser Typ von der Arbeit?
+  - Du hast sicher viele andere Männer, die dir schreiben.
+  - Findest du, sie sieht besser aus als ich?
+  - Wer war die Person, mit der du gestern im Café warst?
+  - Ich hab gesehen, dass du wieder mit ihr schreibst.
+  - Warum musst du immer erwähnen, was andere Typen so machen?
+  - Du musst mir jetzt ehrlich sagen, ob da jemand anderes ist.
+  - Ein Mann hier im Camp macht mir den Hof, aber mein Herz gehört nur dir.
+  - Deine Freundin meinte, du wärst mit jemand anderem da gewesen.
+  - Zeig mir mal, was er dir schreibt.
+  - Muss ich mir wegen ihr Sorgen machen?
   - Schreibt er dir wieder?
   - Gibt es da jemanden, von dem ich wissen sollte?
   - Wer ist dieser Typ aus dem Studio?
-  - Muss ich mir wegen ihr Sorgen machen?
   - Ist da mehr zwischen euch?
+  - Wer ist diese Frau, die immer bei dir liked?
+  - Du triffst dich schon wieder mit ihm?
+  - Andere Typen schreiben dir ständig Nachrichten.
+  - Sie ist dir schon wieder gefolgt auf Insta.
+  - Hast du sie vorhin angelächelt?
+  - Wer war das eben am Telefon? Klang weiblich.
+  - Du hast viel zu viel Kontakt zu anderen Frauen.
+  - Er kommentiert jedes deiner Bilder.
+  - Ich hab gesehen, dass jemand anderes bei dir war.
+  - Seit wann hast du Kontakt mit ihr?
+  - Es gibt da jemand anderen, oder?
+  - Du triffst dich heimlich mit anderen.
+  - Andere Männer beachtest du mehr als mich.
+  - Wer ist diese neue Arbeitskollegin?
+  - Du hast sie angestarrt.
+  - Warum lachst du so viel, wenn er da ist?
+  - Gibt es eine andere?
+  - Schreibst du heimlich mit jemand anderem?
+  - Er flirtet doch eindeutig mit dir.
+  - Diese Frau will was von dir, das sehe ich.
+  - Du bist mir zu freundlich zu anderen Typen.
+  - Wer hat dir diese Blumen geschickt?
+  - Seit wann schreibst du mit anderen Frauen?
+  - Du vergleichst mich doch mit ihm.
   negative:
-  - '- "Er schreibt dir ab und zu, oder?"'
-  - '- "Wer ist diese Julia, von der einige reden?"'
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
+  - Mein Kollege hat mir bei dem Projekt geholfen.
+  - Ich war gestern mit Freunden essen.
+  - Meine Schwester hat angerufen.
+  - Der Nachbar hat uns gegrüßt.
+  - Ich hab mich mit einer Kollegin unterhalten.
+  - Mein Chef hat mich gelobt.
+  - Wir waren zu fünft beim Essen.
+  - Die Lehrerin meiner Tochter ist nett.
+  - Mein Bruder kommt am Wochenende.
+  - Die neue Kollegin ist kompetent.
+  - Ich war mit der ganzen Abteilung unterwegs.
+  - Mein Trainer hat mir neue Übungen gezeigt.
+  - Wir hatten heute Teammeeting.
+  - Die Nachbarin hat Kuchen gebracht.
+  - Mein Arzt hat gesagt, alles in Ordnung.
+  - Ich hab heute mit dem Vermieter telefoniert.
+  - Meine Mutter kommt nächste Woche.
+  - Der Handwerker war da.
+  - Ich hab mit einem Kunden telefoniert.
+  - Meine Freundin hat Geburtstag.
+  - Der Postbote hat ein Paket gebracht.
+  - Ich war mit der Familie beim Grillen.
+  - Mein Therapeut meinte, das ist normal.
+  - Die Verkäuferin war sehr freundlich.
+  - Ich hab mich mit einem alten Schulfreund getroffen.
 tags:
 - needs_review
 - sem_composition_exception

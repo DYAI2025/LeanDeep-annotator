@@ -1,0 +1,116 @@
+id: MEMA_TRUST_TRAJECTORY
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - trust
+  - trajectory
+  concept: Vertrauenstrajektorie – Richtung der Vertrauensentwicklung über Zeit
+  pragmatics: Erkennt den Trend der Vertrauensentwicklung in der Beziehung
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Ich vertraue dir von Monat zu Monat mehr.
+  - Mein Vertrauen in dich wächst – langsam, aber stetig.
+  - Ich merke, dass ich mich dir gegenüber immer offener zeige.
+  - Das Vertrauen zwischen uns wird stärker.
+  - Jeder Tag, an dem du dein Versprechen hältst, baut Vertrauen auf.
+  - Ich bin zuversichtlicher als vor einem Jahr, was uns betrifft.
+  - Wir bauen Vertrauen auf – Schritt für Schritt.
+  - Ich fühle mich sicherer bei dir als je zuvor.
+  - Die Vertrauenskurve zeigt nach oben.
+  - Ich glaube dir mehr als früher – und das ist ein gutes Zeichen.
+  - Unser Vertrauen hat sich gefestigt.
+  - Ich trau mich, dir Dinge zu sagen, die ich früher nie gesagt hätte.
+  - Das Vertrauen, das wir aufgebaut haben, trägt.
+  - Ich sehe eine positive Entwicklung in unserem Vertrauen.
+  - Du hast mein Vertrauen verdient, durch deine Taten.
+  - Die Vertrauensbasis wird breiter und tiefer.
+  - Ich bin weniger misstrauisch als noch vor Monaten.
+  - Wir haben durch Krisen Vertrauen aufgebaut.
+  - Mein Grundvertrauen dir gegenüber ist gewachsen.
+  - Ich fühle mich sicher genug, verletzlich zu sein.
+  - Die Richtung stimmt – mehr Vertrauen, mehr Offenheit.
+  - Jede gemeisterte Herausforderung stärkt unser Vertrauen.
+  - Ich glaube an uns, weil das Vertrauen wächst.
+  - Du hast gezeigt, dass du vertrauenswürdig bist.
+  - Unser Vertrauen ist heute stärker als je zuvor.
+  - Ich öffne mich dir gegenüber immer mehr.
+  - Das Vertrauen kommt zurück – das spüre ich.
+  - Wir sind auf einem guten Weg, was Vertrauen angeht.
+  - Ich bin nicht mehr so wachsam – ich vertraue.
+  - Die Paranoia weicht dem Vertrauen.
+  - Du hast dein Wort gehalten und das baut Vertrauen auf.
+  - Unsere Vertrauensentwicklung macht mir Hoffnung.
+  - Ich bin offener als früher – weil ich dir vertraue.
+  - Jede kleine Geste des Vertrauens zählt.
+  - Wir haben eine Vertrauensbasis geschaffen, die hält.
+  - Ich vertraue dir mit meinen tiefsten Geheimnissen.
+  - Das Vertrauen hat sich verdichtet.
+  - Wir sind ehrlicher zueinander und das stärkt das Vertrauen.
+  - Die Entwicklung unseres Vertrauens stimmt mich optimistisch.
+  - Ich kann mich auf dich verlassen – das weiß ich jetzt.
+  - Unser Vertrauen hat Wurzeln geschlagen.
+  - Ich bin zuversichtlich, dass unser Vertrauen weiter wächst.
+  - Du bist verlässlich und das schätze ich.
+  - Das Vertrauen zwischen uns ist organisch gewachsen.
+  - Ich muss nicht mehr kontrollieren – ich vertraue.
+  - Unsere Vertrauensreise hat Höhen und Tiefen, aber der Trend stimmt.
+  - Ich bin dir dankbar für die Konstanz, die Vertrauen schafft.
+  - Vertrauen aufzubauen ist ein Prozess – und wir sind auf dem richtigen Weg.
+  - Ich fühle mich geborgen, weil das Vertrauen da ist.
+  - Unsere Vertrauensentwicklung ist die schönste Reise, die ich kenne.
+  negative:
+  - Mein Vertrauen in dich schwindet.
+  - Ich vertraue dir immer weniger.
+  - Die Vertrauenskurve geht nach unten.
+  - Jeder Tag bringt mehr Misstrauen.
+  - Ich werde immer vorsichtiger dir gegenüber.
+  - Das Vertrauen erodiert.
+  - Ich glaube dir weniger als früher.
+  - Mein Misstrauen wächst.
+  - Ich kann dir nicht mehr so vertrauen wie am Anfang.
+  - Die Richtung ist falsch – weniger Vertrauen, mehr Kontrolle.
+  - Ich bin misstrauischer als je zuvor.
+  - Das Vertrauen ist beschädigt und die Reparatur stockt.
+  - Ich bin auf der Hut – weil du mir zu oft wehgetan hast.
+  - Mein Vertrauen hat einen Knick bekommen.
+  - Ich zweifle an allem, was du sagst.
+  - Das Grundvertrauen ist weg.
+  - Ich bin vorsichtiger geworden – und nicht im positiven Sinne.
+  - Vertrauen? Das war mal. Jetzt ist Kontrolle.
+  - Die Vertrauensbasis bröckelt.
+  - Ich kann mich nicht mehr auf dich verlassen.
+  - 'Mein Bauchgefühl sagt mir: sei vorsichtig.'
+  - Das Vertrauen ist im freien Fall.
+  - Ich fühle mich unsicher bei dir.
+  - Jede Enttäuschung nimmt ein Stück Vertrauen weg.
+  - Ich bin auf dem Rückzug – weil ich dir nicht mehr vertraue.
+tags:
+- mema
+- trust
+- trajectory
+- development
+rating: 2
+composed_of:
+  required_any:
+  - SEM_EMPATHIC_RESONANCE
+  - CLU_CONSTRUCTIVE_CONFLICT
+  supportive:
+  - SEM_REPAIR_SIGNAL
+  - ATO_SELF_DISCLOSURE
+activation:
+  rule: "ANY 2 IN 25 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

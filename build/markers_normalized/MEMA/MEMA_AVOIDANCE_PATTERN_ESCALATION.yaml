@@ -22,6 +22,46 @@ examples:
   - Educational context where camera avoidance indicates broader participation resistance.
   - Team dynamics showing escalating avoidance from technical to interpersonal.
   - Long-term pattern where video excuses predict broader relationship withdrawal.
+  - Erst ging die Kamera nicht, dann war das Mikro kaputt, und jetzt kommt er gar nicht mehr in Calls.
+  - "Woche 1: 'Meine Webcam spinnt.' Woche 3: 'Ich hab kein Netz.' Woche 5: Abmeldung vom Meeting ohne Grund."
+  - Am Anfang nur Kameraprobleme, jetzt verweigert sie komplett die Teilnahme an Videokonferenzen.
+  - 'Technische Ausreden werden immer kreativer: vom Kabelbruch bis zum Router-Tausch, aber der Chat funktioniert immer.'
+  - Erst Webcam aus, dann Mikro aus, dann komplett offline bei Teamevents.
+  - "Seit drei Monaten steigert sich die Vermeidung: von 'Kamera kaputt' zu 'Ich arbeite lieber asynchron'."
+  - Jedes Mal wenn ein persönliches Gespräch ansteht, tauchen neue technische Probleme auf.
+  - 'Pattern: Bei lockeren Calls ist die Kamera an, bei wichtigen Themen plötzlich nicht.'
+  - Die technischen Ausreden häufen sich immer dann, wenn emotionale Themen auf der Agenda stehen.
+  - Von Kamera aus bei Meetings zu komplettem Rückzug aus allen synchronen Kanälen in sechs Wochen.
+  - Erst Video vermieden, dann Audio, jetzt antwortet er nur noch schriftlich und mit Verzögerung.
+  - 'Systematische Eskalation: Kamera kaputt → Meeting verpasst → Kalender blockiert → Krankmeldung.'
+  - "In der Therapiesitzung online: Erst Kamera aus, dann Ton leise, dann Abbruch wegen 'Verbindungsproblemen'."
+  - 'Im Onlinekurs: Kamera immer aus, dann Mikro aus, dann nur noch Chat, dann komplett verschwunden.'
+  - Wenn es um Accountability geht, fallen plötzlich die technischen Systeme aus.
+  - 'Muster über Wochen: Teilnahme mit Video → nur Audio → nur Chat → Abmeldung → Ghosting.'
+  - "Partner im Videocall: Erst Kamera aus, dann 'Ich höre dich nicht richtig', dann Auflegen."
+  - 'Im Team: Wer kritisches Feedback geben soll, hat plötzlich immer Kameraprobleme.'
+  - Der Therapeut meldet, dass der Patient bei schwierigen Themen die Verbindung verliert.
+  - Jedes Mal wenn Nähe entsteht, werden die technischen Hürden größer.
+  - 'Dozent merkt: Student hat Kamera nie an, dann fehlt er ganz, dann meldet er sich ab.'
+  - 'Muster: Je wichtiger das Gespräch, desto unzuverlässiger die Technik.'
+  - Kollegin war früher immer mit Video dabei, seit dem Konflikt häufen sich die Ausreden.
+  - "Progressive Vermeidung: Von 'Kamera spinnt' über 'WLAN instabil' bis 'Bin heute nicht verfügbar'."
+  - 'Seit dem Streit immer neue Gründe, warum ein Videocall nicht geht: Update, Neustart, Bandbreite.'
+  - "Im Paargespräch: Partner hat seit Wochen 'technische Schwierigkeiten', nur bei gemeinsamen Sitzungen."
+  - 'Teamleiter bemerkt: Mitarbeiter hat Kameraprobleme nur bei Feedbackgesprächen, nie bei Planungsmeetings.'
+  - 'Schüler hat im Homeschooling systematisch die Teilnahme reduziert: von Video zu Audio zu Abwesenheit.'
+  - 'Im Coaching: Klient fängt an, die Kamera auszumachen, dann Termine zu verschieben, dann abzusagen.'
+  - 'Vermeidungskaskade: Erst Chat statt Call, dann asynchrone Nachrichten statt Chat, dann Funkstille.'
+  - Woche für Woche werden die technischen Ausreden kreativer, die Teilnahme sinkt kontinuierlich.
+  - 'Fällt auf: Bei lustigen Teamevents ist die Technik perfekt, bei Retrospektiven nie.'
+  - Person vermeidet Video erst bei einem Gesprächspartner, dann bei allen.
+  - Von 'Ich bin gerade unterwegs' zu 'Mein Laptop ist kaputt' zu komplettem Ghosting in drei Wochen.
+  - Freundin hat erst die Videoanrufe reduziert, dann die Sprachnachrichten, jetzt antwortet sie nur noch auf Texte.
+  - 'Systematisch: Technische Probleme tauchen immer dann auf, wenn Verletzlichkeit gefragt ist.'
+  - Patient meldet sich vor jeder dritten Sitzung mit technischen Problemen ab, Tendenz steigend.
+  - 'Im Bewerbungsprozess: Bewerber hat bei jedem Videointerview neue technische Schwierigkeiten.'
+  - 'Muster im Online-Kurs: Von aktiver Teilnahme zu sporadisch zu nur noch Aufzeichnungen anschauen.'
+  - 'Chef bemerkt: Remote-Mitarbeiter hat Kameraprobleme, die mit dem Dienstalter zunehmen.'
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -30,6 +70,24 @@ examples:
   - I've noticed we think differently about this.
   - I want to understand what you mean.
   - That sounds like an important topic for you.
+  - Meine Kamera ist heute wirklich kaputt, ich bestelle morgen eine neue.
+  - Sorry, mein Internet war gerade kurz weg, bin wieder da.
+  - Ich mach die Kamera heute mal aus, mir geht es nicht gut, aber ich bin da.
+  - Technische Probleme beim letzten Call, heute klappt alles wieder.
+  - Ich bevorzuge Telefonate, weil ich dabei besser nachdenken kann.
+  - Mein Laptop ist in der Reparatur, nächste Woche hab ich ihn wieder.
+  - Ich hatte wirklich einen Stromausfall gestern, tut mir leid.
+  - Kamera ist an, Mikro funktioniert, los gehts.
+  - Ich war letzte Woche krank, daher nicht in den Calls, bin jetzt wieder voll dabei.
+  - Mein WLAN war instabil, hab jetzt LAN-Kabel, sollte klappen.
+  - Ich bin introvertiert und bevorzuge manchmal Audio, aber ich nehme an allem teil.
+  - Technische Probleme liegen am Büro-Netzwerk, IT arbeitet dran.
+  - Entschuldigung für den Ausfall, ich war beim Umzug, jetzt ist alles eingerichtet.
+  - Ich bevorzuge manchmal asynchrone Kommunikation, bin aber für Videocalls verfügbar.
+  - Mein neues Setup braucht noch Einrichtung, ab Montag funktioniert die Kamera.
+  - 'Einmalig: Der Laptop hat ein Update installiert mitten im Meeting.'
+  - Ich hatte einen einmaligen Ausfall, normalerweise bin ich immer mit Video dabei.
+  - Wir hatten einen Netzwerkausfall im ganzen Büro, davon war das gesamte Team betroffen.
 tags:
 - mema
 - v3.3

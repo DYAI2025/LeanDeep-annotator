@@ -14,19 +14,82 @@ activation:
   rule: BOTH IN 1 message
 examples:
   positive:
-  - Regeln sind Regeln … Pflicht zuerst
-  - Ordnung halten … Autorität respektieren
-  - so steht es im Handbuch
-  - Disziplin vor Diskussion
-  - nach Vorschrift handeln
+  - "Regeln sind Regeln, Pflicht zuerst."
+  - "Ordnung halten, Autorität respektieren."
+  - "So steht es im Handbuch."
+  - "Disziplin vor Diskussion."
+  - "Nach Vorschrift handeln."
+  - "Das ist klar geregelt, daran halten wir uns."
+  - "Ordnung muss sein, sonst bricht alles zusammen."
+  - "Die Hierarchie ist nicht verhandelbar."
+  - "Pflichtbewusstsein geht über persönliche Meinung."
+  - "Gehorsam ist eine Tugend."
+  - "Wir folgen dem Protokoll, ohne Ausnahme."
+  - "So sind die Regeln, und die gelten für alle."
+  - "Struktur gibt Halt, Regeln geben Richtung."
+  - "Zuerst die Pflicht, dann das Vergnügen."
+  - "Das Gesetz steht über allem."
+  - "Ohne Ordnung herrscht Chaos."
+  - "Autorität muss respektiert werden."
+  - "Wir handeln nach klaren Vorgaben."
+  - "Disziplin ist der Schlüssel zum Erfolg."
+  - "Die Vorschrift ist eindeutig."
+  - "Regeltreue hat oberste Priorität."
+  - "So ist die Dienstanweisung, Punkt."
+  - "Ordnung und Pflicht, das sind meine Werte."
+  - "Wer die Regeln bricht, muss die Konsequenzen tragen."
+  - "Ich halte mich an die Vorschriften."
+  - "Hierarchie gibt Orientierung."
+  - "Pünktlichkeit ist eine Form von Respekt."
+  - "Das Regelwerk ist klar definiert."
+  - "Befehl ist Befehl."
+  - "Ich erwarte Disziplin und Ordnung."
+  - "Ohne klare Strukturen geht es nicht."
+  - "Die Dienstvorschrift schreibt das vor."
+  - "Pflicht geht vor Lust."
+  - "Wir halten uns an bewährte Abläufe."
+  - "Regeln existieren aus gutem Grund."
+  - "Autorität braucht man nicht hinterfragen."
+  - "Ordentlich und korrekt, so machen wir das."
+  - "Das Gesetz ist das Gesetz."
+  - "Ich folge der Anweisung meines Vorgesetzten."
+  - "Systematisch und regelkonform vorgehen."
+  - "Die Tradition gibt uns Halt."
+  - "Gehorsam schafft Stabilität."
+  - "Vorschrift ist Vorschrift."
+  - "Wir handeln nach dem Handbuch."
+  - "Disziplin und Ordnung halten alles zusammen."
+  - "Regeln brechen kommt nicht in Frage."
+  - "Ich erwarte Pflichterfüllung."
+  - "Das steht so in der Dienstordnung."
+  - "Autorität und Respekt gehen Hand in Hand."
+  - "Wer die Regeln kennt, weiß was zu tun ist."
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - "Lass uns das mal kreativ angehen."
+  - "Regeln sind dazu da, gebrochen zu werden."
+  - "Ich mache das auf meine Art."
+  - "Formalitäten sind mir egal."
+  - "Ich bin eher der spontane Typ."
+  - "Vorschriften nerven mich."
+  - "Ich vertraue meinem Bauchgefühl."
+  - "Wer braucht schon ein Handbuch?"
+  - "Ich bin lieber flexibel."
+  - "Ach, das muss man nicht so eng sehen."
+  - "Hauptsache es funktioniert irgendwie."
+  - "Ich improvisiere lieber."
+  - "Regeln gelten für andere."
+  - "Ich mach mein eigenes Ding."
+  - "Bürokratie ist nicht mein Ding."
+  - "Ich hinterfrage jede Autorität."
+  - "Freiheit ist mir wichtiger als Ordnung."
+  - "Ich folge meinem Herzen."
+  - "Spontanität schlägt Planung."
+  - "Ich brauche keine Anleitung."
+  - "Das regelt sich von selbst."
+  - "Chaos hat auch seinen Charme."
+  - "Ich bin nicht gut mit Regeln."
+  - "Mal sehen, wie es läuft."
+  - "Ich lass mich da nicht einengen."
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

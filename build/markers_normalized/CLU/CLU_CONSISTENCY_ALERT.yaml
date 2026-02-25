@@ -23,12 +23,72 @@ examples:
   - Wir haben nie gestritten! ... Ja ok einmal vielleicht
   - Ich kenne die Person nicht ... Naja wir haben mal geredet
   - Das ist erst gestern passiert ... Ok es war vor 3 Wochen
+  - Ich hatte gesagt wir waren zu zweit... ach nee stimmt, Lisa war auch da.
+  - Das Treffen war um 14 Uhr... Moment nee, 16 Uhr war es, sorry.
+  - Ich hab nur EIN Bier getrunken... ok vielleicht drei oder vier.
+  - Wir waren nie zusammen aus... naja das eine Mal schon.
+  - Ich hab den Vertrag sofort unterschrieben... also nach ein paar Wochen.
+  - Das Projekt hat 10.000 Euro gekostet... eigentlich waren es eher 30.000.
+  - Ich hab das Auto nie benutzt... ok am Wochenende schon manchmal.
+  - Wir kennen uns kaum... naja wir haben mal 3 Monate zusammen gewohnt.
+  - Das war ein einmaliger Fehler... gut, es ist öfter passiert.
+  - Ich war IMMER pünktlich... na gut, die letzten 5 Mal nicht.
+  - Das Meeting war gestern... ach ne, das war letzte Woche schon.
+  - Ich hab nie was davon gewusst... ok das stimmt nicht ganz.
+  - Der Arzttermin war um 9... nee warte, um 11, ich hab den verpasst.
+  - Wir haben NIE gestritten in der Öffentlichkeit... naja das eine Mal im Restaurant.
+  - Ich hab das allein gemacht... ok Julia hat geholfen, stimmt.
+  - Das war definitiv Donnerstag... könnte auch Dienstag gewesen sein.
+  - Ich hab KEIN Geld ausgegeben... na gut, 500 Euro vielleicht.
+  - Wir waren nur 10 Minuten dort... eigentlich 2 Stunden, jetzt wo du sagst.
+  - Ich hatte keinen Kontakt zu ihr... naja wir haben manchmal geschrieben.
+  - Die Wohnung kostet 800 kalt... also mit Nebenkosten sind es 1200.
+  - Er war DEFINITIV nicht eingeladen... ach so, du hast ihn eingeladen? Hmm ja ok.
+  - Ich hab nur einen Job... naja und den Nebenjob halt.
+  - Das Essen hat 30 Euro gekostet... pro Person, nicht insgesamt.
+  - Ich kenne den Typen nicht... ok wir hatten mal zusammen Fußball gespielt.
+  - Es waren 3 Gäste... oder 8, ich weiß nicht mehr genau.
+  - Ich hab das NIE versprochen... naja vielleicht so ähnlich schon.
+  - Das war vor einem Jahr... ok eher vor 3 Monaten.
+  - Ich hatte keine Zeit... eigentlich schon, ich wollte nur nicht.
+  - Wir haben uns nur einmal getroffen... also zweimal, dreimal vielleicht.
+  - Ich hab den ganzen Tag gearbeitet... na gut, ab 14 Uhr war ich im Café.
+  - Er war nie aggressiv... naja einmal hat er geschrien, stimmt.
+  - Ich hab alles bezahlt... gut, die letzte Rate steht noch aus.
+  - Die Reise war billig... also 3000 Euro, aber für die Strecke billig.
+  - Ich trinke selten... ok jedes Wochenende, aber nur am Wochenende!
+  - Das Auto ist neuwertig... also 120.000 km, aber gepflegt.
+  - Ich hab nichts gehört... ok vielleicht hab ich was mitbekommen.
+  - Wir waren nicht zusammen... also nicht offiziell, aber irgendwie schon.
+  - Die Prüfung war leicht... naja ich hab 3 Mal nachgeschrieben.
+  - Ich hab nie geraucht... ok auf Partys manchmal.
+  - Es war harmlos... eigentlich war es ziemlich heftig jetzt wo ich drüber nachdenke.
   negative:
   - Stimmt, da hab ich mich geirrt, es waren doch mehr Leute.
   - Ja du hast recht, ich hab das verwechselt.
   - Moment, lass mich nochmal nachdenken, vielleicht irre ich mich.
   - Ok, mein Gedächtnis hat mich getäuscht, danke für die Korrektur.
   - Das habe ich anders in Erinnerung, aber ich kann mich irren.
+  - Oh stimmt, jetzt fällt es mir wieder ein, du hast recht.
+  - Ich war mir unsicher und hab deshalb nochmal nachgeschaut.
+  - Mein Fehler, ich hab die Zahlen durcheinander gebracht.
+  - Danke für den Hinweis, ich hab da was verwechselt.
+  - Kann sein dass meine Erinnerung mich trügt.
+  - Hmm, lass mich nochmal überlegen, vielleicht stimmt deine Version.
+  - Ich war mir nicht sicher, deshalb hab ich nochmal nachgefragt.
+  - Da hab ich wohl was durcheinander gebracht, sorry.
+  - Guter Punkt, ich überprüfe das nochmal.
+  - Ich gebe zu, ich bin mir da nicht 100% sicher.
+  - Könnte sein dass ich mich irre, lass uns nachschauen.
+  - Meine Erinnerung ist da etwas verschwommen, was sagst du?
+  - Okay, du hast wahrscheinlich recht, ich lass mich korrigieren.
+  - Ich hab nachgedacht und du hattest recht mit deiner Version.
+  - Sorry, ich hab da falsche Infos gehabt.
+  - Ich bin unsicher, lass mich nochmal nachsehen.
+  - War das wirklich so? Ich frag lieber nochmal nach.
+  - Meine Angaben könnten ungenau sein, ich überprüfe das.
+  - Ich möchte ehrlich sein, ich weiß es nicht genau.
+  - Danke für die Richtigstellung, da lag ich falsch.
 tags: []
 rating: 2
 composed_of:

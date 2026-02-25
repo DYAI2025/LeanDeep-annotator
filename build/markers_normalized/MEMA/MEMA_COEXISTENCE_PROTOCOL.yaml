@@ -32,6 +32,36 @@ examples:
   - Abnahme machen.
   - Notiz nehmen.
   - Status updaten.
+  - Ich hab die Einkaufsliste geschickt. Bitte bis 18 Uhr erledigen.
+  - Kinder werden um 15:00 abgeholt. Ich mach das Abendessen.
+  - Steuererklärung ist eingereicht. Bescheid kommt per Post.
+  - 'Wir teilen uns das fair: du Montag, ich Dienstag.'
+  - Alles klar. Dann bleibt es so wie besprochen.
+  - Rechnung ist bezahlt. Beleg liegt im Ordner.
+  - Ich übernehme den Elternabend. Du machst die Arzttermine.
+  - 'Wie abgemacht: getrennte Konten, gemeinsames Haushaltskonto.'
+  - Wäsche ist gewaschen. Bügeln ist dein Part.
+  - Ok. Jeder macht seinen Bereich. Keine Diskussion nötig.
+  - 'Nächstes Meeting: Donnerstag 10 Uhr. Agenda steht.'
+  - Dokument ist freigegeben. Bitte weiterleiten.
+  - Aufgabenverteilung steht. Jeder weiß Bescheid.
+  - Lieferung kommt Montag. Bitte jemand da sein.
+  - Termin bestätigt. Ich komme direkt vom Büro.
+  - Versicherung ist gekündigt. Neue läuft ab März.
+  - Urlaubsplanung steht. Ich buche die Flüge.
+  - Müll raus ist heute dein Ding. Danke.
+  - Schlüssel liegt unter der Matte. Code ist 4711.
+  - Vertrag unterschrieben. Rücksendung bis Freitag.
+  - Wir halten uns an den Plan. Punkt.
+  - 'Renovierung: du streichst, ich verlege den Boden.'
+  - 'Protokoll versendet. Nächster Schritt: Umsetzung.'
+  - Elternbeitrag überwiesen. Quittung im Mail.
+  - Ich mach die Steuern, du den Papierkram für die Schule.
+  - Passt. Dann so.
+  - Reparatur ist beauftragt. Handwerker kommt Mittwoch.
+  - Einkauf erledigt. Kühlschrank ist voll.
+  - Abholzeit bleibt 16:30. Bitte pünktlich.
+  - Alles organisiert. Keine weiteren Fragen.
   negative:
   - Ich entschuldige mich für vorhin.
   - Ich vermisse dich.
@@ -54,6 +84,10 @@ examples:
   - Ich liebe das.
   - Traurig heute.
   - Feiern wir?
+  - Ich muss dir was sagen, das mich seit Tagen beschäftigt.
+  - Können wir mal über uns reden? Ich vermisse die Nähe.
+  - Das hat mich echt verletzt, als du das gesagt hast.
+  - Ich bin so stolz auf uns, dass wir das zusammen geschafft haben! 🥳
 tags: []
 rating: 1
 semiotic:

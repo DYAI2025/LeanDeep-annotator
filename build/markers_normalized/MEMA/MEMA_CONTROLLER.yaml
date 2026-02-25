@@ -22,6 +22,46 @@ examples:
   - Entscheide ich.
   - Regeln befolgen.
   - Autoritäre Ansage.
+  - Ohne meine Freigabe läuft hier gar nichts.
+  - Du machst das genau so, wie ich es sage.
+  - Ich will jede E-Mail vorher sehen.
+  - Niemand trifft hier Entscheidungen außer mir.
+  - Du fragst vorher, bevor du irgendetwas tust.
+  - Ich bestimme, wann wir Feierabend machen.
+  - Ohne meinen Segen passiert hier nichts.
+  - Du meldest dich alle zwei Stunden bei mir.
+  - Ich überwache jeden Schritt, den du machst.
+  - Das geht nur über meinen Schreibtisch.
+  - Du hast meine Genehmigung nicht, also lass es.
+  - Ich entscheide, wer wann mit wem spricht.
+  - Keiner verlässt den Raum, bis ich das sage.
+  - Du fragst nicht andere, du fragst mich.
+  - Ich hab dir doch gesagt, du sollst warten.
+  - Ab sofort gehen alle Anfragen über mich.
+  - Ich kontrolliere die Finanzen, die Kommunikation und die Planung.
+  - Du machst nichts eigenständig, verstanden?
+  - Ich gebe die Richtung vor, du folgst.
+  - 'Hier gibt es nur eine Meinung, die zählt: meine.'
+  - Du darfst erst gehen, wenn ich es erlaube.
+  - Jede Abweichung von meinem Plan muss begründet werden.
+  - Ich sehe alles, was du tust.
+  - Du berichtest mir täglich, was du geschafft hast.
+  - Ohne meine Unterschrift bewegt sich hier nichts.
+  - Ich lese alle Nachrichten mit.
+  - Du sprichst nur mit Kunden, wenn ich dabei bin.
+  - Ich bestimme, wer befördert wird und wer nicht.
+  - Du folgst meinem System, sonst gibt es Konsequenzen.
+  - Ich überwache den Zugang zu allen Dateien.
+  - Ab jetzt brauchst du für alles meine Genehmigung.
+  - Kein Meeting findet ohne mich statt.
+  - Ich habe die Passwörter geändert, du bekommst sie, wenn ich es sage.
+  - Du machst keine Überstunden ohne meine Erlaubnis.
+  - Hier wird gemacht, was ich sage, ohne Diskussion.
+  - Ich entscheide, wer an welchem Projekt arbeitet.
+  - Du schickst mir jeden Entwurf, bevor er rausgeht.
+  - Jede Änderung im Plan muss von mir genehmigt werden.
+  - Ich will Einsicht in deinen Kalender.
+  - Ich bestimme die Reihenfolge, du führst aus.
   negative:
   - Besprechen wir.
   - Meinung zählt.
@@ -33,6 +73,21 @@ examples:
   - Keine Vorgaben.
   - Offen Ideen.
   - Partnerschaft.
+  - Wie siehst du das? Ich bin offen für Vorschläge.
+  - Entscheide du, ich vertraue deinem Urteil.
+  - Lass uns das im Team abstimmen.
+  - Du kennst dich da besser aus, mach das so, wie du es für richtig hältst.
+  - Ich möchte, dass jeder seine eigene Meinung einbringt.
+  - Nimm dir die Freiheit, das selbst zu entscheiden.
+  - Ich will nicht alles kontrollieren, ihr seid kompetent genug.
+  - Eigenverantwortung ist mir wichtiger als Kontrolle.
+  - Mach das so, wie es für dich am besten passt.
+  - Du brauchst meine Erlaubnis nicht, triff die Entscheidung selbst.
+  - Ich vertraue darauf, dass ihr das löst.
+  - Eure Kreativität ist wichtiger als meine Vorgaben.
+  - Ich bin hier, um zu unterstützen, nicht um zu bestimmen.
+  - Gemeinsam entscheiden wir, wie es weitergeht.
+  - Ihr habt die Freiheit, den Weg selbst zu wählen.
 tags: []
 rating: 1
 semiotic:

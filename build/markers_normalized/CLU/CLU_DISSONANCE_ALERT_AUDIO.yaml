@@ -21,6 +21,48 @@ examples:
   - (Lachen+Negativ) plus lange Pause.
   - (Flattening + Sigh) plus Filler.
   - (Unsicherheit) wiederholt in 4 Turns.
+  - (Zittern in Stimme) direkt gefolgt von (forciertem Lachen).
+  - (Brüchige Stimme) + (Räuspern) + (Scham-Prosodie) in 3 Turns.
+  - (Nervöses Lachen bei Kritik) + (Unsicherheit im nächsten Satz).
+  - (Stimme bricht) + (Übergang zu monoton) in aufeinanderfolgenden Turns.
+  - (Flüstern) nach (lautem Ausbruch) innerhalb von 2 Turns.
+  - (Hektisches Sprechtempo) + (plötzliche Stille) + (Seufzen).
+  - (Übertrieben fröhlicher Ton) direkt nach (Weinen-Unterdrückung).
+  - (Stocken/Stottern) + (Scham-Prosodie) eng beieinander.
+  - (Laut + aggressiv) dann (leise + unsicher) in 2 Turns.
+  - (Nervöses Kichern) bei emotionalem Thema + (Pausen) danach.
+  - (Gepresste Stimme) + (Räuspern) + (Unsicherheit) im Verlauf.
+  - (Ironischer Ton) + (Stimme bricht kurz) in einem Turn.
+  - (Emotionsloser Tonfall) gefolgt von (plötzlichem Stimmbruch).
+  - (Filler-Wörter häufen sich) + (Scham-Prosodie) in 3 Turns.
+  - (Schnelles Atmen) + (Lachen) + (Unsicherheit) eng getaktet.
+  - (Überkontrollierte Stimme) nach (emotionalem Ausbruch).
+  - (Seufzen) + (monoton) + (Filler) innerhalb von 4 Turns.
+  - (Stimme wird höher) bei Konfliktthema + (Pause) danach.
+  - (Forciert ruhig) direkt nach (aufgeregtem Tonfall).
+  - (Lachen als Reaktion auf Trauer) + (Unsicherheit) danach.
+  - (Flache Prosodie) + (Scham-Marker) in aufeinanderfolgenden Sätzen.
+  - (Stocken) + (Lachen) + (Unsicherheit) — Dissonanz-Triade.
+  - (Betont sachlich) nach (emotionalem Inhalt) in 2 Turns.
+  - (Stimme zittert) + (forciertes Lachen) + (Räuspern) in Sequenz.
+  - (Übertrieben laut) dann (kaum hörbar) — prosodischer Bruch.
+  - (Hektik) + (Pausen) + (Filler) — Unsicherheitscluster in 3 Turns.
+  - (Kontrolliert monoton) bei (emotional geladenem Inhalt).
+  - (Lachen-bei-Negativ) + (Scham) in 2 aufeinanderfolgenden Turns.
+  - (Seufzen) + (Stimmbruch) + (Flattening) in engem Fenster.
+  - (Nervöse Energie in Stimme) + (plötzliche Stille) danach.
+  - (Stimme wird leise) + (Unsicherheits-Filler) + (langes Schweigen).
+  - (Überbetontes Alles-gut) + (Scham-Prosodie im nächsten Satz).
+  - (Gepresst) + (Seufzen) + (monoton) — prosodische Inkohärenz.
+  - (Emotionaler Inhalt, flache Stimme) + (Lachen) danach.
+  - (Stottern bei Schlüsselwort) + (Pause) + (Scham-Prosodie).
+  - (Stimme kippt) + (Kontrolle zurückgewinnen) + (Unsicherheit) in 3 Turns.
+  - (Hyper-artikuliert) bei (verletzlichem Inhalt).
+  - (Übertrieben locker) + (Stimme bricht) — Fassade bröckelt.
+  - (Atemlos) + (Flattening) + (Filler) in kurzer Sequenz.
+  - (Aggressive Prosodie) + (Scham-Prosodie) in 2 Turns.
+  - (Lachen unterdrückt Weinen) + (Unsicherheit) direkt danach.
+  - (Monoton) + (plötzlich emotional) + (sofort wieder kontrolliert).
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -29,6 +71,24 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ruhiger, gleichmäßiger Tonfall über den gesamten Verlauf.
+  - Natürliches Lachen in einer fröhlichen Unterhaltung.
+  - Konsistente Prosodie ohne auffällige Brüche.
+  - Sachlicher Ton bei sachlichem Inhalt.
+  - Trauriger Ton bei traurigem Inhalt — kongruent.
+  - Aufgeregte Stimme bei positivem Anlass — passend.
+  - Leises Sprechen in ruhiger Atmosphäre.
+  - Gleichmäßiges Sprechtempo in einer normalen Konversation.
+  - Klare Artikulation ohne auffällige Filler.
+  - Natürlicher Wechsel zwischen leise und laut je nach Thema.
+  - Warmherziger Ton bei Zuneigung — kongruent.
+  - Bestimmter Ton bei Grenzsetzung — angemessen.
+  - Nachdenkliche Pause bei komplexem Thema.
+  - Begeisterung in der Stimme bei guter Nachricht.
+  - Ruhige Stimme bei Meditation/Entspannung.
+  - Leichter Humor in entspannter Runde.
+  - Konzentriertes Sprechen bei Erklärung eines Sachverhalts.
+  - Normaler Gesprächsfluss ohne prosodische Anomalien.
 tags:
 - cluster
 - audio

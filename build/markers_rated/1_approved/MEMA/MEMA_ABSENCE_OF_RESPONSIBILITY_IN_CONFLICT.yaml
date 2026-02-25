@@ -77,6 +77,46 @@ examples:
     B: Du hast das Ticket geschlossen.
     A: Du tust so, als wäre es mein System.
     B: Du hättest dich selbst darum kümmern können.
+  - "A: Du hast den Server runtergefahren.\nB: Du hast das Skript nicht geprüft.\nA: Du bist zuständig für Monitoring.\nB: Du hättest die Logs checken müssen.\n"
+  - "A: Du hast die Abrechnung falsch gemacht.\nB: Du hast die Daten nicht korrigiert.\nA: Du zeigst mit dem Finger auf Finance.\nB: Du weigerst dich, den Fehler einzugestehen.\n"
+  - "A: Das ist nicht mein Problem.\nB: Das liegt an deiner Abteilung.\nA: Du hättest das abfangen sollen.\nB: Du hast ja zugesagt.\n"
+  - "A: Du hast die Bestellung doppelt ausgelöst.\nB: Du hast das System nicht kontrolliert.\nA: Du schiebst das auf die Software.\nB: Du bist der Nutzer, nicht das System.\n"
+  - "A: Du hast die Krise verursacht.\nB: Du warst gar nicht da.\nA: Du hast das verschlafen.\nB: Du hättest handeln müssen.\n"
+  - "A: Wer hat den Bericht freigegeben?\nB: Du hattest die letzte Version.\nA: Du hast nicht Bescheid gesagt.\nB: Du wälzt das auf QA ab.\n"
+  - "A: Du hast die Rechnung übersehen.\nB: Du hättest sie weiterleiten sollen.\nA: Du machst immer denselben Fehler.\nB: Du hast nie einen Plan B.\n"
+  - "A: Du hast den Lieferanten nicht informiert.\nB: Du meinst, das sei mein Job.\nA: Du willst die Schuld loswerden.\nB: Du übersiehst deine Rolle im Prozess.\n"
+  - "A: Das war dein Entscheid.\nB: Du warst dabei und hast zugestimmt.\nA: Du hast nichts gesagt.\nB: Du hättest Einspruch erheben können.\n"
+  - "A: Du hast die Qualität nicht geprüft.\nB: Du hast das Material falsch bestellt.\nA: Du schiebst das auf den Lieferanten.\nB: Du hast die Spezifikation geschrieben.\n"
+  - "A: Du hast mich nicht rechtzeitig informiert.\nB: Du hast die Warnung ignoriert.\nA: Du schiebst das auf den Messenger.\nB: Du hättest anrufen können.\n"
+  - "A: Du hast den Code nicht reviewed.\nB: Du hast den Merge durchgewinkt.\nA: Du sagst jetzt, das sei nicht dein Branch.\nB: Du hattest den Approve-Button gedrückt.\n"
+  - "A: Du hast das Meeting nicht vorbereitet.\nB: Du schickst die Agenda nie rechtzeitig.\nA: Du gibst dem Zeitdruck die Schuld.\nB: Du hättest delegieren können.\n"
+  - "A: Du hast die Inventur versäumt.\nB: Du sagst, du wusstest nichts davon.\nA: Du warst im Verteiler.\nB: Du liest deine Mails nicht.\n"
+  - "A: Du hast den Vorfall nicht gemeldet.\nB: Du dachtest, es regelt sich von selbst.\nA: Du trägst die Verantwortung.\nB: Du schiebst das auf den Prozess.\n"
+  - "A: Du hast das Passwort weitergegeben.\nB: Du sagst, alle machen das so.\nA: Du hast die Policy unterschrieben.\nB: Du weißt, dass das verboten ist.\n"
+  - "A: Du hast den Termin verpasst.\nB: Du sagst, niemand hat dich erinnert.\nA: Du hast einen Kalender.\nB: Du bist erwachsen genug.\n"
+  - "A: Du hast die Testfälle nicht geschrieben.\nB: Du sagst, die Anforderungen waren unklar.\nA: Du hättest nachfragen können.\nB: Du sitzt die Sache aus.\n"
+  - "A: Du hast den Brand gelöscht, ohne Dokumentation.\nB: Du sagst, es war dringend.\nA: Du hast die Prozesse umgangen.\nB: Du sagst, das sei Ausnahmezustand gewesen.\n"
+  - "A: Du hast die Kundendaten falsch exportiert.\nB: Du sagst, das Tool hat gesponnen.\nA: Du hast keine Kontrolle gemacht.\nB: Du stützt dich auf die Technik.\n"
+  - "A: Das Projekt ist gescheitert.\nB: Das lag nicht an mir.\nA: Daran war die Marktlage schuld.\nB: Du hättest früher reagieren sollen.\n"
+  - "A: Du hast falsche Zahlen präsentiert.\nB: Du hattest die Daten von der falschen Quelle.\nA: Du zeigst auf Data Engineering.\nB: Du hast die Zahlen nicht validiert.\n"
+  - "A: Du hast die Maschine beschädigt.\nB: Du sagst, die Wartung war überfällig.\nA: Du hast das trotzdem zu verantworten.\nB: Du bist der Operator.\n"
+  - "A: Du hast die Beschwerde nicht bearbeitet.\nB: Du sagst, sie lag nicht in deinem Bereich.\nA: Du hast sie trotzdem angenommen.\nB: Du hast den Kunden vertröstet.\n"
+  - "A: Du hast den Vertrag unterschrieben.\nB: Du sagst, Legal hat das abgenickt.\nA: Du trägst die Unterschrift.\nB: Du hättest genauer lesen müssen.\n"
+  - "A: Du hast die Datenbank nicht gesichert.\nB: Du sagst, das macht das System automatisch.\nA: Du bist der Admin.\nB: Du hast die Backups nie überprüft.\n"
+  - "A: Du hast zugesagt, den Bericht zu schreiben.\nB: Du sagst, dir hat niemand die Daten geschickt.\nA: Du hättest nachhaken müssen.\nB: Du hast es einfach liegen lassen.\n"
+  - "A: Du hast den Alarm ignoriert.\nB: Du sagst, du hattest ein anderes Ticket offen.\nA: Priorisierung ist dein Job.\nB: Du hättest eskalieren müssen.\n"
+  - "A: Du hast den Fehler im Release eingebaut.\nB: Du sagst, das QA-Team hätte es finden müssen.\nA: Du bist der Entwickler.\nB: Du testest deinen eigenen Code nicht.\n"
+  - "A: Du hast die Bestellung nicht storniert.\nB: Du sagst, du hast keine Antwort bekommen.\nA: Du hättest nachfassen müssen.\nB: Du lässt Dinge schleifen.\n"
+  - "A: Du hast versprochen, das bis Montag fertig zu haben.\nB: Du sagst, es kamen andere Sachen dazwischen.\nA: Du hättest Bescheid geben müssen.\nB: Du übergehst Deadlines einfach.\n"
+  - "A: Du hast den Zugang nicht gesperrt.\nB: Du sagst, IT hat das verschlampt.\nA: Du hast den Antrag gar nicht gestellt.\nB: Du gibst anderen die Schuld.\n"
+  - "A: Du warst gestern nicht da.\nB: Du hast dich nicht abgemeldet.\nA: Du findest, das sei nicht so schlimm.\nB: Du hättest zumindest eine Nachricht schicken können.\n"
+  - "A: Du hast die Kundenerwartung falsch gesetzt.\nB: Du sagst, der Vertrieb hat Versprechungen gemacht.\nA: Du hast die Erwartung nicht korrigiert.\nB: Du hast zugeschaut.\n"
+  - "A: Du hast nichts gegen die Überlastung unternommen.\nB: Du sagst, die Geschäftsführung will es so.\nA: Du hast nie eskaliert.\nB: Du hast einfach zugesehen.\n"
+  - "A: Du hast das Experiment ohne Genehmigung durchgeführt.\nB: Du sagst, das sei branchenüblich.\nA: Du kennst die Vorschriften.\nB: Du schiebst es auf die Branche.\n"
+  - "A: Du hast den Patienten nicht informiert.\nB: Du sagst, die Schwester sollte das machen.\nA: Du bist der behandelnde Arzt.\nB: Du trägst die Aufklärungspflicht.\n"
+  - "A: Du hast die Ergebnisse geschönt.\nB: Du sagst, das macht jeder so im Report.\nA: Du trägst deinen Namen drunter.\nB: Du verantwortest die Zahlen.\n"
+  - "A: Du hast das Kind nicht abgeholt.\nB: Du sagst, du dachtest, ich mach das.\nA: Wir hatten das klar abgesprochen.\nB: Du hättest nachfragen müssen.\n"
+  - "A: Du hast die Heizung anlassen.\nB: Du sagst, du hast es vergessen.\nA: Das passiert dir ständig.\nB: Du übernimmst nie Verantwortung für den Haushalt.\n"
   negative:
   - "A: Du hast das Budget gesperrt.\nB: Du hast die Freigabe selten angefordert.\nA: Du verweist auf Compliance.\nB: Du drückst mir die Eskalation rein.\n"
   - "A: Du hast wenige Update in Jira geschrieben.\nB: Du hast die Stories nicht sauber geschnitten.\nA: Du ignorierst unsere Hinweise.\nB: Du bist genauso mit schuld.\n"
@@ -85,4 +125,22 @@ examples:
   - Ich verstehe deine Perspektive.
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
+  - "A: Du hast recht, das war mein Fehler. Ich übernehme die Verantwortung.\nB: Danke, dass du das einsiehst.\n"
+  - "A: Ich hätte das besser managen müssen, das sehe ich ein.\nB: Okay, wie lösen wir das jetzt gemeinsam?\n"
+  - Stimmt, ich bin verantwortlich für diesen Teil. Tut mir leid.
+  - Ja, ich habe das verbockt. Ich kümmere mich darum.
+  - Ich übernehme die Verantwortung und werde das korrigieren.
+  - Das war mein Fehler, ich hätte rechtzeitig Bescheid sagen sollen.
+  - Ich stehe zu meinem Anteil an dem Problem.
+  - Ja, da muss ich mir an die eigene Nase fassen.
+  - Ich hätte das besser machen müssen. Das tut mir leid.
+  - Mein Fehler. Ich kümmere mich sofort um eine Lösung.
+  - Ich gebe zu, dass ich da nicht aufgepasst habe.
+  - Das liegt eindeutig bei mir. Ich werde dafür sorgen, dass es nicht wieder passiert.
+  - Ja, ich bin da verantwortlich. Lass uns schauen, wie wir es richten.
+  - Ich hätte nachfragen müssen. Das war nachlässig von mir.
+  - Ich trage die Verantwortung dafür und werde es geradebiegen.
+  - Stimmt, ich hätte aktiver handeln sollen.
+  - Meine Schuld, ich kümmere mich jetzt darum.
+  - Da hast du recht, ich hätte das nicht delegieren dürfen.
 semiotic: {peirce: index, signifikat: Konfliktdynamik, framing_type: eskalation, cultural_frame: Gottman, myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'}

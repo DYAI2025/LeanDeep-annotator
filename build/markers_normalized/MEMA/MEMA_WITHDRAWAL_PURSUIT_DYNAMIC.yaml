@@ -1,0 +1,117 @@
+id: MEMA_WITHDRAWAL_PURSUIT_DYNAMIC
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - withdrawal
+  - pursuit
+  concept: 'Rückzug-Verfolgung-Dynamik: einer zieht sich zurück, der andere verfolgt'
+  pragmatics: Erkennt das klassische Demand-Withdraw-Muster in Beziehungen
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Je mehr ich dich verfolge, desto mehr ziehst du dich zurück.
+  - Ich schreibe dir und du antwortest nicht – also schreibe ich noch mehr.
+  - Du brauchst Abstand und ich brauche Nähe – und das kollidiert.
+  - Wenn du gehst, renne ich hinterher. Und dann rennst du schneller.
+  - Ich fordere Gespräch und du machst dicht. Das ist unser Muster.
+  - Je lauter ich werde, desto stiller wirst du.
+  - Du ziehst dich zurück und ich bekomme Panik.
+  - Ich klammere, weil du dich entfernst. Du entfernst dich, weil ich klammere.
+  - Mein Verfolgen und dein Rückzug – ein Teufelskreis.
+  - Wenn du mich ignorierst, werde ich verzweifelt.
+  - Du brauchst Ruhe und ich interpretiere das als Ablehnung.
+  - Jedes Mal wenn du dich zurückziehst, verfolge ich dich mehr.
+  - 'Unser Tanz: ich komme näher, du weichst zurück.'
+  - Du gehst, ich ruf an. Du nimmst nicht ab, ich ruf nochmal an.
+  - Mein Bedürfnis nach Nähe treibt dich weg.
+  - Je mehr ich dränge, desto mehr Widerstand kommt von dir.
+  - Ich schreibe 10 Nachrichten, du antwortest mit einer. Oder gar nicht.
+  - Du brauchst Freiraum und ich nehme es persönlich.
+  - Immer wenn du schweigst, werde ich laut.
+  - 'Rückzug-Verfolgung: unser toxischer Tango.'
+  - Du verschwindest emotional und ich raste aus vor Angst.
+  - Ich verfolge dich, weil dein Rückzug mich triggert.
+  - Mein Klammern und dein Fliehen – zwei Seiten einer Medaille.
+  - Wenn du sagst 'lass mich in Ruhe', will ich erst recht reden.
+  - Du ziehst die Mauer hoch und ich hämmere dagegen.
+  - 'Unser Muster: ich will reden, du willst schweigen.'
+  - Ich hasse dein Schweigen mehr als deinen Streit.
+  - Du entziehst dich und ich fühle mich verlassen.
+  - Je mehr Distanz du schaffst, desto mehr Angst habe ich.
+  - Ich verfolge dich nicht aus Kontrolle, sondern aus Angst.
+  - Du brauchst Luft, ich brauche Verbindung – Deadlock.
+  - Mein Bedürfnis treibt dich weg und dein Rückzug verstärkt meins.
+  - Du gehst ins andere Zimmer und ich stehe vor der Tür.
+  - Ich schicke SMS um SMS und du liest keine davon.
+  - 'Wir sind gefangen: je mehr ich will, desto weniger gibst du.'
+  - Dein Rückzug ist mein Trigger. Mein Verfolgen ist deiner.
+  - Ich werde zum Verfolger, weil du zum Flüchtenden wirst.
+  - 'Unser Muster ist vorhersagbar: ich dränge, du fliehst.'
+  - Immer wenn ich Nähe suche, bekomme ich Distanz.
+  - Du gehst und ich habe das Gefühl zu sterben.
+  - Mein Verfolgen macht dich kaputt. Dein Rückzug macht mich kaputt.
+  - Wenn du sagst 'ich brauche Zeit', denke ich 'du verlässt mich'.
+  - Du ziehst dich zurück und ich klammere mich an.
+  - Wir sind in einer Nachfrage-Rückzug-Spirale gefangen.
+  - Je mehr ich bitte, desto mehr verweigert du.
+  - Ich schreibe, rufe an, stehe vor der Tür – und du bist unerreichbar.
+  - 'Unser Problem: ich brauche Bestätigung, du brauchst Raum.'
+  - 'Die Dynamik frisst uns auf: Verfolgung und Flucht.'
+  - Ich bin der Pursuer, du der Withdrawer. Klassisch.
+  - Wir triggern uns gegenseitig in diesen Kreislauf.
+  negative:
+  - Ich brauche gerade Abstand und du gibst ihn mir – danke.
+  - Du respektierst meinen Wunsch nach Ruhe.
+  - Ich sage dir, wenn ich bereit bin zu reden, und du wartest geduldig.
+  - Wir geben uns gegenseitig den Raum, den wir brauchen.
+  - Wenn du Abstand brauchst, nehme ich das nicht persönlich.
+  - Wir haben gelernt, Nähe und Distanz auszubalancieren.
+  - Du brauchst Zeit? Okay, ich bin da, wenn du bereit bist.
+  - Wir respektieren die Bedürfnisse des anderen.
+  - Ich kann warten, bis du bereit bist zu reden.
+  - Wir haben einen guten Rhythmus zwischen Nähe und Freiraum.
+  - Ich verstehe, dass Rückzug nicht Ablehnung bedeutet.
+  - Wir geben uns Raum und finden dann wieder zusammen.
+  - Dein Bedürfnis nach Ruhe ist okay und ich akzeptiere das.
+  - Wir haben gelernt, dass Abstand manchmal gut ist.
+  - Ich nehme deinen Rückzug nicht persönlich.
+  - "Wir haben ein Signal vereinbart: 'Ich brauch eine Pause, aber ich komme zurück.'"
+  - Ich habe gelernt, dir Raum zu geben, ohne in Panik zu geraten.
+  - Wir balancieren Nähe und Distanz gut aus.
+  - 'Du ziehst dich kurz zurück und ich weiß: du kommst wieder.'
+  - Wir haben ein gesundes Gleichgewicht zwischen Verbundenheit und Freiraum.
+  - Ich respektiere deine Grenzen und du meine.
+  - Wir brauchen beide manchmal Abstand – und das ist okay.
+  - 'Unser System funktioniert: Nähe, Freiraum, Nähe.'
+  - Ich bin nicht ängstlich, wenn du dir Zeit nimmst.
+  - Wir haben die Dynamik durchbrochen und einen gesunden Rhythmus gefunden.
+tags:
+- mema
+- withdrawal
+- pursuit
+- demand_withdraw
+- attachment
+rating: 2
+composed_of:
+  required_any:
+  - SEM_VALIDATION_SEEKING
+  - CLU_INDIRECT_CONFLICT_AVOIDANCE
+  supportive:
+  - SEM_EMOTIONAL_OVERWHELM
+  - ATO_WITHDRAWAL
+activation:
+  rule: "ANY 3 IN 20 messages"
+scoring:
+  base: 2.0
+  weight: 1.3
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

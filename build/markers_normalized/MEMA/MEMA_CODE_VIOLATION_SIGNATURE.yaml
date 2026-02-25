@@ -18,14 +18,77 @@ examples:
   - Ambiguitätssignale + Antiphrase ballen sich.
   - Ironie-Kette plus Format-Wiederkehr.
   - Joking-Frame über mehrere Beiträge stabil.
+  - 'A: Warum ging der Witz ueber die Strasse? B: Weil die Pointe auf der anderen Seite war! A: Knock knock. B: Wer da? A: Die Relevanz, die kommt noch.'
+  - "A: Natuerlich, die Praesentation war 'fantastisch'. B: Oh ja, 'brillant'. A: Genau wie der 'herausragende' Kaffee."
+  - 'In 3 Nachrichten: Wortspiel, Ironie, Raetsel. Der Humor-Frame ist etabliert.'
+  - 'A: Was ist gruen und steht vor der Tuer? B: Ein Klopfsalat! A: Warum hat die Gurke rot gesehen? B: Wegen dem Tomatensaft!'
+  - 'Register-Wechsel: Erst Fachsprache, dann Slang, dann Ironie. Alles innerhalb von 5 Nachrichten.'
+  - "A: 'Natuerlich' ist das Projekt 'total im Zeitplan'. B: 'Selbstverstaendlich' haben wir 'genuegend Budget'. Ironie-Modus aktiviert."
+  - 'Mehrere Antiphrasen hintereinander: Super gelaufen! -> Echt toll! -> Phantastisch! [alles sarkastisch gemeint]'
+  - 'Chat zeigt Humor-Pattern: Wortspiel -> Ironie -> Raetsel-Format -> Wortspiel. Stabil ueber 10 Nachrichten.'
+  - "A: Ich sage bewusst das Gegenteil. B: Ich weiss. A: Und du auch. B: Natuerlich, wir sind ja 'total ernst'."
+  - 'Q&A-Format wiederholt sich: Frage -> absurde Antwort -> Frage -> absurde Antwort. Humor-Frame aktiv.'
+  - 'A: Wie heisst ein Baer der schreit? B: Ein Bruellbaer! A: Und ein Baer der schweigt? B: Eisbär, weil er kalt ist!'
+  - "Der ganze Thread ist in ironischem Register: 'Natuerlich', 'Offensichtlich', 'Wer haette das gedacht'."
+  - 'Maximenverletzung: Zu viel Information, offensichtlich uebertrieben, bewusst am Thema vorbei. Humor.'
+  - 'A: Das Wetter ist schoen. B: Ja, besonders der Hagel. A: Und der Sturm erst! B: Ein Traum!'
+  - 'Chat-Verlauf: 5 Nachrichten hintereinander mit Wortspielen und Doppeldeutigkeiten. Joking-Frame.'
+  - "A: Unsere Deadlines sind 'total realistisch'. B: So realistisch wie Einhoerner. A: Die sind ja auch 'echt'."
+  - 'Raetsel-Format: A: Was ist rund und nervt? B: Meetings! A: Was ist eckig und nervt? B: PowerPoints!'
+  - 'Stabiler Humor-Frame ueber 8 Nachrichten: Ironie, Wortspiel, Sarkasmus, Raetsel. Non-bona-fide.'
+  - "A: Ich 'liebe' Montage. B: Fast so sehr wie Steuerklaerungen. A: Und Zahnarztbesuche! Register: durchgaengig ironisch."
+  - 'Maximenverletzung gehaeuft: Bewusst uebertrieben, bewusst irrelevant, bewusst absurd. Humor.'
+  - 'Chat: Knock-Knock-Witz -> Ironie -> Wortspiel -> noch ein Raetsel. Joking-Frame seit 10 Minuten.'
+  - "A: Ich sage 'toll' und meine 'furchtbar'. B: Und ich sage 'klar' und meine 'niemals'. A: Wir verstehen uns."
+  - 'Ambiguitaet absichtlich: Jeder Satz hat Doppelbedeutung. Das Gespraech ist ein einziger Witz.'
+  - 'Register-Clash: Formelle Geschaeftssprache gemischt mit Memes. In 4 aufeinanderfolgenden Nachrichten.'
+  - 'Humor-Kette: Sarkasmus -> Ironie -> Antiphrase -> Wortspiel. Der Frame bricht nie.'
+  - "A: Warum lacht der Informatiker? B: Weil er den Bug 'Feature' nennt! A: Warum weint er? B: Weil es stimmt!"
+  - "Ironie-Frame stabil: Jede Nachricht hat mindestens eine Antiphrase. 'Grossartig', 'wunderbar', 'perfekt'."
+  - "A: Natuerlich habe ich 'kein Problem' damit. B: 'Selbstverstaendlich'. A: Wie immer 'alles easy'."
+  - 'Durchgehend humoristisches Register: Wortspiele, Raetsel, Uebertreibungen. Nicht ernst gemeint.'
+  - 'Maximenflout + Ironie + Raetselformat: Dreifache Code-Verletzung in einem Fenster. Humor-Signatur.'
+  - 'A: Was ist der Unterschied zwischen Meeting und Mittagsschlaf? B: Beim Mittagsschlaf merkt es keiner.'
+  - 5 Nachrichten in Folge mit bewusster Uebertreibung und Register-Wechsel. Joking-Frame festgestellt.
+  - 'A: Unser Projekt ist wie ein Einhorn. B: Magisch? A: Nein, existiert nicht. B: 😂 Touché!'
+  - 'Stabiler Humor ueber mehrere Beitraege: Ironie, Wortspiele, Absurdismus. Kein ernsthafter Beitrag dazwischen.'
+  - 'Chat-Fenster zeigt: Konzentrierte Maximenverletzungen. Alles ironisch, nichts woertlich. Humor-Code aktiv.'
+  - "A: Wie war das Meeting? B: 'Inspirierend'. A: Die Praesentation? B: 'Revolutionaer'. A: Der Kaffee? B: 'Trinkbar'. Sarkasmus durchgehend."
+  - 'Raetsel-Kette: 3 Witz-Fragen hintereinander mit absurden Antworten. Q&A-Humor-Pattern.'
+  - "A: Ich bin 'total entspannt'. B: Und ich bin der 'Papst'. A: Wir sind 'definitiv' ernst."
+  - 'Humor-Meta-Pattern: Witz -> Nachfrage -> Pointe -> neuer Witz. Ueber 6 Nachrichten ohne Unterbrechung.'
+  - 'Durchgehender Sarkasmus im Team-Chat: Jeder antwortet mit Ironie. Der Frame ist stabil.'
+  - 'A: Natuerlich klappt das. B: Wie immer. A: Perfekt. B: Wie alles. [Alles ironisch, Joking-Frame]'
+  - 'Ambiguitaetssignale gehaeuft: Doppeldeutige Woerter, Ironie-Marker, Uebertreibung. Klarer Humor-Code.'
+  - 'Chat zeigt: Ironie -> Wortspiel -> Sarkasmus -> Ironie. Der Humor-Code bricht nie. Stabile Signatur.'
+  - 'A: Noch ein Witz: Warum haben Programmierer keine Freunde? B: Weil sie alle Bugs haben! A: Und noch einer...'
+  - 'Ganze Konversation im nicht-bona-fide Modus: Nichts woertlich gemeint, alles Humor.'
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - 'A: Heute war ein guter Tag. B: Ja, fand ich auch.'
+  - 'A: Natuerlich, das mache ich gerne. B: Danke, das ist nett.'
+  - Das Meeting war tatsaechlich produktiv.
+  - Ich meine das ernst, kein Witz.
+  - 'A: Wie war dein Tag? B: Gut, danke. A: Freut mich.'
+  - Die Praesentation war wirklich gut.
+  - Ich hab einen Witz gehoert, willst du ihn hoeren?
+  - Der Kaffee schmeckt heute gut.
+  - 'A: Guten Morgen! B: Morgen! Alles klar bei dir?'
+  - Das ist lustig, aber jetzt mal im Ernst.
+  - Ich scherze nur, keine Sorge.
+  - 'A: Haha, das war gut. Aber zurueck zum Thema.'
+  - Manchmal muss man lachen, auch wenn es ernst ist.
+  - Der Witz war gut, aber jetzt zum Geschaeft.
+  - Ich bin ehrlich, das meine ich wirklich so.
+  - "A: Wie geht's? B: Gut, und dir? A: Auch gut. Normale Konversation."
+  - Kein Sarkasmus, ich meine das aufrichtig.
+  - Das war ein einzelner Witz, kein Muster.
+  - Ich uebertrebe manchmal, aber hier meine ich es woertlich.
+  - 'A: Schoenes Wetter! B: Ja, wirklich! [Tatsaechlich sonnig, kein Sarkasmus]'
+  - Ein einziger Wortwitz in einer ansonsten ernsten Konversation.
+  - Humor ist wichtig, aber jetzt bin ich ernst.
+  - Das Gespraech war sachlich und produktiv.
+  - Ich meinte das Kompliment aufrichtig.
+  - 'A: Lass uns fokussiert bleiben. B: Ja, gute Idee.'
 tags:
 - humor
 - meta

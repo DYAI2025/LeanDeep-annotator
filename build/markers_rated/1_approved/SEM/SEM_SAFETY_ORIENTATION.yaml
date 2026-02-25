@@ -30,24 +30,82 @@ scoring:
   weight: 1.08
 examples:
   positive:
-  - Bloß nichts ändern – ich brauche Sicherheit.
-  - Bist du sicher? Ich mag keine Überraschungen.
-  - Mir ist das zu riskant – lieber der sichere Weg.
-  - Ruhiges Leben, keine bösen Überraschungen.
-  - Passt das für dich? – Ich will’s sicher haben.
-  - Status quo behalten, bitte.
-  - Risiken vermeiden, wo es geht.
-  - Ich brauche heute vor allem Ruhe.
-  - Kein Experiment – Stabilität zuerst.
-  - Alles gut? – Nur wenn es planbar bleibt.
+  - "Bloß nichts ändern – ich brauche Sicherheit."
+  - "Bist du sicher? Ich mag keine Überraschungen."
+  - "Mir ist das zu riskant – lieber der sichere Weg."
+  - "Ruhiges Leben, keine bösen Überraschungen."
+  - "Passt das für dich? – Ich will’s sicher haben."
+  - "Status quo behalten, bitte."
+  - "Risiken vermeiden, wo es geht."
+  - "Ich brauche heute vor allem Ruhe."
+  - "Kein Experiment – Stabilität zuerst."
+  - "Alles gut? – Nur wenn es planbar bleibt."
+  - "Ich will keine Veränderungen, es läuft doch."
+  - "Sicherheit geht vor Abenteuer."
+  - "Lieber auf Nummer sicher gehen."
+  - "Ich brauch Berechenbarkeit in meinem Leben."
+  - "Keine Experimente bitte, einfach so lassen."
+  - "Mir macht Ungewissheit Angst."
+  - "Ich halt mich lieber an Bewährtes."
+  - "Veränderung macht mir Sorgen."
+  - "Ich brauche die Gewissheit, dass alles stabil bleibt."
+  - "Planbarkeit ist mir extrem wichtig."
+  - "Ich meide Risiken, wo es nur geht."
+  - "Mir ist ein ruhiges Leben am wichtigsten."
+  - "Bitte keine Überraschungen mehr."
+  - "Ich fühle mich nur sicher, wenn alles vorhersehbar ist."
+  - "Stabilität über alles andere."
+  - "Ich will keinen Stress, nur Ruhe."
+  - "Das ist mir zu unsicher, ich lass das."
+  - "Ich bleibe bei dem, was funktioniert."
+  - "Veränderung um der Veränderung willen lehne ich ab."
+  - "Ich brauche festen Boden unter den Füßen."
+  - "Sicherheit ist mein höchster Wert."
+  - "Mir graut vor unvorhersehbaren Situationen."
+  - "Lieber langweilig als unsicher."
+  - "Ich muss wissen, woran ich bin."
+  - "Ohne Sicherheitsnetz mache ich nichts."
+  - "Ich brauche Routine und Struktur."
+  - "Überraschungen sind für mich Stress."
+  - "Ich will wissen, was auf mich zukommt."
+  - "Risiko ist nichts für mich."
+  - "Ich halte mich an den Plan."
+  - "Berechenbarkeit gibt mir Kraft."
+  - "Ich vermeide alles Unbekannte."
+  - "Mir ist Sicherheit wichtiger als Aufregung."
+  - "Ich möchte mich einfach sicher fühlen."
+  - "Keine Risiken eingehen, das ist mein Motto."
+  - "Ich brauch Gewissheit, bevor ich handle."
+  - "Stabilität hat für mich oberste Priorität."
+  - "Ich will die Kontrolle nicht verlieren."
+  - "Meine Komfortzone verlasse ich ungern."
+  - "Alles soll so bleiben wie es ist."
   negative:
-  - Bloß nichts ändern – ich wuensche mir Sicherheit.
-  - Bist du sicher? Ich mag wenige Überraschungen.
-  - Ruhiges Leben, wenige bösen Überraschungen.
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
+  - "Lass uns was Neues ausprobieren!"
+  - "Ich bin offen für Veränderung."
+  - "Das klingt spannend, machen wir."
+  - "Ich mag Überraschungen."
+  - "Abenteuer machen das Leben lebenswert."
+  - "Wer nicht wagt, der nicht gewinnt."
+  - "Ich liebe spontane Aktionen."
+  - "Veränderung ist immer gut."
+  - "Ich brauche Abwechslung."
+  - "Mal schauen, was passiert."
+  - "Risiko gehört dazu."
+  - "Ich probiere gern Neues aus."
+  - "Das Leben ist zu kurz für Langeweile."
+  - "Auf ins Unbekannte!"
+  - "Flexibilität ist meine Stärke."
+  - "Ich passe mich an."
+  - "Routine langweilt mich."
+  - "Spontan sein macht Spaß."
+  - "Ich bin für jedes Abenteuer zu haben."
+  - "Veränderung bringt Wachstum."
+  - "Ich hab keine Angst vor dem Unbekannten."
+  - "Lass uns das Risiko eingehen."
+  - "Neugier treibt mich an."
+  - "Ich brauche Impulse und Aufregung."
+  - "Alles neu, alles anders – genau richtig."
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

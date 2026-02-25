@@ -13,19 +13,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - früher war mir Sicherheit wichtig … jetzt Freiheit
-  - habe meine Prioritäten geändert
-  - erst Leistung … nun Gemeinschaft
-  - ich sehe das heute anders
-  - Werte neu sortiert
+  - Früher war mir Sicherheit wichtig, jetzt Freiheit.
+  - Habe meine Prioritäten geändert.
+  - Erst Leistung, nun Gemeinschaft.
+  - Ich sehe das heute anders.
+  - Werte neu sortiert.
+  - Okay gut, du hast das geschafft, aber eigentlich war das gar nicht das Ziel.
+  - Na klar hast du die Deadline eingehalten, aber die Qualität stimmt ja nicht.
+  - Ja du hast Recht gehabt, ABER darum ging es doch gar nicht.
+  - Erst sollte ich 100 Kunden bringen, jetzt sind plötzlich 200 das Minimum.
+  - 'Als ich den Umsatz erreicht hab, hieß es auf einmal: Ja aber der Gewinn zählt.'
+  - Du hast gesagt wenn ich X mache ist alles gut. Jetzt auf einmal reicht X nicht mehr.
+  - Ich hab geliefert was du wolltest, und jetzt verschiebst du das Ziel.
+  - erst hieß es wir brauchen mehr umsatz, dann mehr kunden, dann mehr engagement. wann reicht es?
+  - Sehr geehrter Herr Braun, die vereinbarten KPIs wurden erreicht, dennoch werden nun neue Kriterien angelegt.
+  - Du bewegst die Torpfosten jedes Mal wenn ich kurz davor bin.
+  - Anfangs war die Präsentation das Wichtigste. Jetzt auf einmal das Handout.
+  - Erst hieß es, Pünktlichkeit zählt. Jetzt zählt plötzlich Kreativität.
+  - Ich erfülle deine Erwartungen und du erhöhst sie einfach.
+  - Klar, jetzt wo ich das kann, ist das nicht mehr gut genug.
+  - Das Kriterium hat sich schon wieder geändert, ich komm nicht hinterher.
+  - Na toll, ich hab die Note geschafft, und jetzt zählt plötzlich das Engagement.
+  - 'Wir hatten doch abgemacht: wenn ich das mache, ist gut. Jetzt ist es nicht gut.'
+  - Die Messlatte wird immer höher gelegt, egal was ich tue.
+  - Erst muss ich beweisen dass ich zuverlässig bin, dann dass ich kreativ bin, dann dass ich führen kann...
+  - Egal was ich erreiche, es reicht nie. Die Kriterien ändern sich ständig.
+  - Gestern war das noch ausreichend, heute will er plötzlich was anderes.
+  - jedes mal wenn ich liefere, werden die anforderungen geändert. mega frustrierend
+  - Du hast die Regeln während des Spiels geändert.
+  - Sehr geehrte Projektleitung, die ursprünglich definierten Erfolgskriterien scheinen sich verschoben zu haben.
+  - Ich hab den Marathon gelaufen und jetzt sagst du, es hätte ein Sprint sein sollen.
+  - Das Ziel war klar definiert. Warum gilt das plötzlich nicht mehr?
+  - Am Anfang ging es um Umsatz. Jetzt um Marktanteile. Nächste Woche um was?
+  - Ja schön, erreicht. Aber war das wirklich das, worum es ging?
+  - Du verschiebst den Maßstab, sobald ich ihn erreiche.
+  - Meine Leistung wird nach Kriterien bewertet, die es bei der Zielvereinbarung nicht gab.
+  - und auf einmal gelten andere regeln, ja klar
+  - Erst sollte ich schneller sein, dann gründlicher, dann innovativer.
+  - Das Ziel bewegt sich schneller als ich.
+  - Ich hab alles getan was vereinbart war und es reicht trotzdem nicht.
+  - Die Anforderungen ändern sich schneller als ich sie erfüllen kann.
+  - 'Jedes Mal wenn ich was erreiche, heißt es: Ja aber das andere...'
+  - Ich hab das Gefühl, du willst gar nicht dass ich erfolgreich bin.
+  - du hast damals gesagt 5 kunden reichen. jetzt brauch ich plötzlich 50
+  - Klar, das Projekt ist fertig. Aber jetzt muss es auch noch profitabel sein.
+  - Zuerst Team aufbauen, dann Prozesse, dann Kultur - das Ende vom Lied ist nie sichtbar.
+  - Ich habe 110% gegeben und es war immer noch nicht genug. Die Latte liegt jetzt woanders.
+  - Wir haben den Umsatz verdoppelt und jetzt heißt es, die Marge stimmt nicht.
+  - 'Kaum habe ich das Zertifikat, sagt er: Ja, aber du brauchst noch einen Master.'
+  - erst brauchten wir 10 kunden, dann 50, jetzt 100. wann hört das auf?
+  - Du hast gesagt fertig ist fertig, und jetzt willst du noch drei Änderungen.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich habe meine Meinung zu dem Thema geändert, das stimmt.
+  - Die Anforderungen wurden von Anfang an klar kommuniziert.
+  - Wir haben das Ziel gemeinsam angepasst, weil sich der Markt verändert hat.
+  - Die KPIs wurden planmäßig erhöht, wie im Quartalsplan vorgesehen.
+  - Ja, wir setzen jetzt neue Prioritäten. Das haben wir im Team besprochen.
+  - Die Erwartungen waren von Anfang an hoch, das war dir bekannt.
+  - Wir haben das Ziel bewusst weiterentwickelt, weil wir mehr können.
+  - Die Strategie hat sich verändert, das betrifft alle gleichermaßen.
+  - Ich habe meine Werte überdacht und bin zu einem neuen Schluss gekommen.
+  - Der Markt hat sich verändert, daher auch unsere Ziele.
+  - Wir haben festgestellt, dass das ursprüngliche Ziel zu niedrig war.
+  - Die Anpassung der Kriterien war notwendig und wurde transparent kommuniziert.
+  - Ich bin gewachsen und habe neue Ziele für mich definiert.
+  - Die Roadmap wurde aktualisiert, alle kennen die neuen Milestones.
+  - Ich hab meine Prioritäten reflektiert und bewusst neu gesetzt.
+  - Die Leistungskriterien wurden im Vorfeld vereinbart und nicht geändert.
+  - gut gemacht, du hast geliefert!
+  - Das Projektziel ist klar, daran arbeiten wir.
+  - Du hast das super erreicht, ich bin zufrieden.
+  - Die Anforderungen stehen fest und werden nicht verändert.
+  - ich find gut was du machst, weiter so
+  - Die Ziele sind realistisch und wurden gemeinsam definiert.
+  - Deine Arbeit entspricht genau dem, was wir vereinbart haben.
+  - Top Ergebnis, das war genau das was gebraucht wurde.
+  - Wir überprüfen die Ziele jährlich, das nächste Review steht in Q4 an.
 tags: []
 rating: 1
 composed_of:

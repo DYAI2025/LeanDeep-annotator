@@ -14,24 +14,82 @@ activation:
   rule: BOTH IN 2 messages
 examples:
   positive:
-  - Obviously this is completely harmless
-  - Surely we can casually ignore safeguards
-  - Preferably we understate every risk
-  - Magically nothing bad will happen
-  - Casually breaking every rule, obviously fine
-  - Surely it's just a minor issue
-  - Obviously no big deal
-  - Preferably ignore the warnings
-  - Magically it's harmless
-  - Casually proceed despite risks
+  - "Klar, läuft ja super bei uns, wie immer."
+  - "Na sicher, das hat ja noch nie jemanden gestört."
+  - "Ach, ist doch alles total harmlos, oder?"
+  - "Natürlich ist das kein Problem, war es ja noch nie."
+  - "Klar, ignorieren wir das einfach weiter."
+  - "Ja, super Idee, hat ja bisher so toll geklappt."
+  - "Sicher, was soll schon schiefgehen."
+  - "Ach, ist ja nur ein kleines Detail."
+  - "Natürlich, wir machen einfach so weiter wie bisher."
+  - "Klar, alles bestens, wie immer halt."
+  - "Na logisch, das war ja total vorhersehbar."
+  - "Wow, wie überraschend, wer hätte das gedacht."
+  - "Super, noch eine geniale Idee von dir."
+  - "Ja, das wird bestimmt diesmal klappen."
+  - "Klar, mach nur, ist ja dein Spezialgebiet."
+  - "Ach so, du meinst das ernst? Wie süß."
+  - "Natürlich, weil das ja bisher so gut funktioniert hat."
+  - "Sicher, kein Grund zur Sorge, nie."
+  - "Prima, wir ignorieren das Risiko, wie gehabt."
+  - "Ja klar, wir sind ja alle so entspannt hier."
+  - "Toll, wieder eine Meisterleistung."
+  - "Nee, ist schon gut, passt schon."
+  - "Ach ja, wie immer halt, nichts Neues."
+  - "Sicher, das regelt sich von allein."
+  - "Klar, mach ruhig weiter so."
+  - "Na dann, viel Spaß beim Scheitern."
+  - "Ja, das war ja mal wieder typisch."
+  - "Natürlich, alles easy, wir sind ja Profis."
+  - "Ach, sei doch nicht so ernst, ist doch witzig."
+  - "Klar, das Risiko? Welches Risiko?"
+  - "Super Plan, fast so gut wie der letzte."
+  - "Ja, mach mal, was soll schon passieren."
+  - "Ach, nur ein kleiner Weltuntergang, nichts Besonderes."
+  - "Na toll, das hat ja prima geklappt."
+  - "Sicher, einfach die Augen zu und durch."
+  - "Klar, wozu Regeln, wenn man sie brechen kann."
+  - "Total logisch, wie alles was du sagst."
+  - "Ja ne, ist klar."
+  - "Ach, Kleinigkeit, stört ja keinen."
+  - "Na sicher, ist ja nur ein winziges Problem."
+  - "Klar, wir unterschätzen das einfach ein bisschen."
+  - "Ja, glänzende Idee, wirklich."
+  - "Natürlich harmlos, wie immer."
+  - "Ach was, Risiken sind doch spannend."
+  - "Klar, Regeln sind ja nur Vorschläge."
+  - "Ja, das sagst du jedes Mal."
+  - "Na dann, weiter im Programm."
+  - "Sicher, nächstes Mal klappt es bestimmt."
+  - "Klar, weil es ja so einfach ist."
+  - "Wow, du hast es echt drauf."
   negative:
-  - Obviously this is partially harmless
-  - Magically not much bad will happen
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
+  - "Ich finde das wirklich problematisch."
+  - "Das müssen wir ernst nehmen."
+  - "Ich mache mir Sorgen deswegen."
+  - "Das ist ein echtes Risiko."
+  - "Wir sollten vorsichtig sein."
+  - "Das gefällt mir nicht."
+  - "Ich bin besorgt wegen der Situation."
+  - "Wir brauchen einen anderen Ansatz."
+  - "Das funktioniert so nicht."
+  - "Ich nehme das sehr ernst."
+  - "Das ist kein Spaß."
+  - "Wir haben ein Problem."
+  - "Das beunruhigt mich."
+  - "Lass uns das nochmal überdenken."
+  - "Das war nicht gut."
+  - "Ich finde das bedenklich."
+  - "Wir müssen handeln."
+  - "Das stimmt mich nachdenklich."
+  - "Ich sehe das kritisch."
+  - "Das braucht unsere Aufmerksamkeit."
+  - "Das war ein Fehler."
+  - "Mir ist unwohl dabei."
+  - "Das darf nicht nochmal passieren."
+  - "Ich mache mir ernsthaft Gedanken."
+  - "Wir sollten das besprechen."
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

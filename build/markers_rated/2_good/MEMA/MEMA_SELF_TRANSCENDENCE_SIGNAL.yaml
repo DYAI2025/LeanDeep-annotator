@@ -1,0 +1,104 @@
+id: MEMA_SELF_TRANSCENDENCE_SIGNAL
+version: "3.4"
+frame:
+  signal: ["transcendence", "self"]
+  concept: "Selbsttranszendenz-Signal – Überwindung des Egos zugunsten des Größeren"
+  pragmatics: "Erkennt Momente, in denen das Individuelle zugunsten des Gemeinsamen zurücktritt"
+  narrative: "meta_pattern"
+tags: [mema, transcendence, growth, positive, spiritual]
+composed_of:
+  required_any:
+  - SEM_EMPATHIC_RESONANCE
+  - SEM_SYSTEMS_THINKING
+  supportive:
+  - CLU_CONSTRUCTIVE_CONFLICT
+  - ATO_SELF_DISCLOSURE
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 2.0
+  weight: 1.4
+examples:
+  positive_de:
+  - "Es geht nicht mehr um mich oder dich – es geht um uns."
+  - "Ich lasse meinen Stolz los, weil die Beziehung wichtiger ist."
+  - "Ich muss nicht recht haben – ich möchte, dass es uns gut geht."
+  - "Mein Ego tritt zurück zugunsten unserer Verbindung."
+  - "Ich opfere meine Position, weil mir die Beziehung mehr wert ist."
+  - "Es gibt etwas Größeres als meinen Schmerz – und das ist unsere Liebe."
+  - "Ich überwinde meine Angst, weil das Gemeinsame es wert ist."
+  - "Ich lasse los, was mich zurückhält – für uns."
+  - "Mein persönlicher Schmerz ist weniger wichtig als unser Wachstum."
+  - "Ich vergebe nicht für dich – ich vergebe für uns beide."
+  - "Es gibt Momente, in denen ich über mich hinauswachse – das ist jetzt einer."
+  - "Ich stelle das Wir über das Ich."
+  - "Mein Bedürfnis nach Gerechtigkeit ist weniger wichtig als unser Frieden."
+  - "Ich überwinde meinen Groll, weil ich mehr sein will als mein Schmerz."
+  - "Ich wachse über meine Komfortzone hinaus – für unsere Beziehung."
+  - "Es gibt etwas in mir, das größer ist als Wut – und das wähle ich."
+  - "Ich transzendiere mein Ego in diesem Moment."
+  - "Ich bin bereit, meine Perspektive aufzugeben, um deine zu verstehen."
+  - "Das Gemeinsame ist mir heilig – dafür gebe ich mein Rechthaben auf."
+  - "Ich wachse über mich hinaus und finde dort Frieden."
+  - "Mein Herz ist größer als mein Schmerz."
+  - "Ich lasse meinen Selbstschutz fallen – für echte Verbindung."
+  - "Es geht nicht um Gewinnen oder Verlieren – es geht um Liebe."
+  - "Ich überwinde meine Muster, weil ich mehr sein will."
+  - "Ich gehe über meine Grenzen hinaus – nicht weil ich muss, sondern weil ich will."
+  - "In diesem Moment bin ich mehr als meine Angst."
+  - "Ich sehe das Größere Bild und mein Ego wird kleiner."
+  - "Ich bin bereit, mich zu wandeln – für uns und für mich."
+  - "Ich stehe über meinem Bedürfnis nach Kontrolle."
+  - "Meine Verletzung definiert mich nicht – meine Fähigkeit zu lieben schon."
+  - "Ich wähle Wachstum über Bequemlichkeit."
+  - "Es gibt einen Teil in mir, der größer ist als alle Konflikte."
+  - "Ich lasse die Vergangenheit los und bin ganz im Jetzt."
+  - "Mein Mitgefühl überwiegt meinen Zorn."
+  - "Ich bin bereit, über meinen Schatten zu springen."
+  - "Die Verbindung zwischen uns ist heiliger als mein Stolz."
+  - "Ich erkenne, dass Loslassen keine Schwäche ist."
+  - "Ich wachse – in diesem Gespräch, in diesem Moment."
+  - "Mein Herz öffnet sich trotz des Schmerzes."
+  - "Ich überwinde meine Verteidigung und zeige mich ganz."
+  - "Es gibt eine Kraft in mir, die größer ist als meine Angst."
+  - "Ich wähle Liebe über Angst."
+  - "Mein Ego sagt 'kämpfe'. Mein Herz sagt 'liebe'. Ich folge meinem Herzen."
+  - "Ich lasse alles los, was nicht dem Guten dient."
+  - "Ich bin bereit, ein besserer Mensch zu sein – für dich und für mich."
+  - "Die Verbindung ist wichtiger als das Recht."
+  - "Ich transzendiere meine alten Muster."
+  - "In diesem Moment bin ich frei von meinem Ego."
+  - "Ich bin mehr als meine Vergangenheit – und ich handle danach."
+  - "Liebe ist die Antwort, auch wenn mein Verstand widerspricht."
+  negative_de:
+  - "Ich kann nicht verzeihen – mein Schmerz ist zu groß."
+  - "Mein Ego lässt mich nicht nachgeben."
+  - "Ich bin nicht bereit, mich zu ändern."
+  - "Es geht um mich und meine Bedürfnisse – Punkt."
+  - "Ich gebe nicht nach, egal was."
+  - "Mein Stolz ist mir wichtiger als die Beziehung."
+  - "Ich kann nicht über meinen Schatten springen."
+  - "Warum sollte ich nachgeben? Ich habe recht."
+  - "Mein Ego steht im Weg, das weiß ich, aber ich kann nichts dagegen tun."
+  - "Ich bin zu verletzt, um großzügig zu sein."
+  - "Es geht nur um mich gerade. Sorry, nicht sorry."
+  - "Ich halte an meiner Position fest."
+  - "Mein Selbstschutz ist stärker als mein Wunsch nach Verbindung."
+  - "Ich bin nicht bereit, meine Komfortzone zu verlassen."
+  - "Ich wähle Sicherheit über Wachstum."
+  - "Mein Bedürfnis nach Gerechtigkeit überwiegt alles andere."
+  - "Ich kann nicht loslassen."
+  - "Mein Zorn ist stärker als meine Liebe gerade."
+  - "Ich will recht haben, nicht glücklich sein."
+  - "Mein Ego gewinnt – wieder mal."
+  - "Ich bin nicht in der Lage, über mich hinauszuwachsen."
+  - "Veränderung ist zu schwer für mich."
+  - "Mein Schmerz dominiert alles andere."
+  - "Ich bin gefangen in meinem Ego."
+  - "Loslassen? Nein. Ich halte fest."
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

@@ -1,0 +1,104 @@
+id: MEMA_RUPTURE_REPAIR_CYCLE
+version: "3.4"
+frame:
+  signal: ["rupture", "repair", "cycle"]
+  concept: "Ruptur-Repair-Zyklus: Bruch und Reparatur als Beziehungsmotor"
+  pragmatics: "Erkennt den natürlichen Zyklus von Bruch und Wiederherstellung"
+  narrative: "meta_pattern"
+tags: [mema, rupture, repair, cycle, growth]
+composed_of:
+  required_any:
+  - SEM_REPAIR_SIGNAL
+  - CLU_CONSTRUCTIVE_CONFLICT
+  supportive:
+  - SEM_EMOTIONAL_OVERWHELM
+  - ATO_APOLOGY
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+  positive_de:
+  - "Wir streiten hart, aber wir finden immer wieder zueinander."
+  - "Nach jedem Bruch kommt eine Reparatur – das ist unser Rhythmus."
+  - "Der Streit war heftig, aber die Versöhnung danach war tief."
+  - "Wir brechen auseinander und wachsen wieder zusammen – jedes Mal ein Stück stärker."
+  - "Ruptur und Repair – das ist unsere Beziehungsdynamik."
+  - "Jeder Streit bringt uns am Ende näher zusammen."
+  - "Wir zerbrechen und flicken uns immer wieder – und die Nähte halten."
+  - "Nach dem Sturm kommt immer die Ruhe bei uns."
+  - "Wir haben einen gesunden Zyklus: Konflikt, Klärung, Wachstum."
+  - "Der Bruch war schmerzhaft, aber die Reparatur hat uns gestärkt."
+  - "Wir fallen und stehen wieder auf – zusammen."
+  - "Unser Muster: streiten, leiden, reden, heilen."
+  - "Jede Krise hat uns am Ende zusammengeschweißt."
+  - "Wir haben gelernt, dass Brüche zum Wachstum gehören."
+  - "Nach jeder Ruptur wird die Reparatur tiefer."
+  - "Wir zerfallen und bauen uns wieder auf – wie Kintsugi."
+  - "Der Zyklus wiederholt sich, aber wir werden besser darin."
+  - "Streit, Schmerz, Versöhnung, Wachstum – unser Loop."
+  - "Jeder Bruch zeigt uns, wo wir arbeiten müssen."
+  - "Wir reparieren uns gegenseitig und daraus entsteht Neues."
+  - "Unser Repair ist mittlerweile schneller als unsere Ruptur."
+  - "Wir haben gelernt, den Zyklus zu nutzen statt ihn zu fürchten."
+  - "Nach jedem Sturm sind wir stärker."
+  - "Unsere Beziehung lebt vom Wechsel zwischen Bruch und Heilung."
+  - "Der Schmerz des Bruchs wird durch die Tiefe der Reparatur aufgewogen."
+  - "Wir hatten eine schwere Phase, aber wir haben es geschafft, durchzukommen."
+  - "Der Streit hat eine Wahrheit ans Licht gebracht, die wir brauchten."
+  - "Unsere Versöhnung nach dem Streit war das Intensivste seit langem."
+  - "Wir können brechen und heilen – das ist unsere Stärke."
+  - "Jeder Konflikt offenbart eine Wachstumschance."
+  - "Wir sind resilient – Brüche machen uns nicht kaputt."
+  - "Der Zyklus aus Ruptur und Repair definiert unsere Beziehung."
+  - "Nach dem Zusammenbruch kam der Neuaufbau – stärker als vorher."
+  - "Wir haben eine Krise überstanden und daraus gelernt."
+  - "Unser Muster: erst Chaos, dann Ordnung."
+  - "Wir sind an unseren Brüchen gewachsen."
+  - "Die Reparatur nach dem Streit hat uns mehr verbunden als der Streit uns getrennt hat."
+  - "Wir haben den Zyklus durchlaufen und sind gestärkt daraus hervorgegangen."
+  - "Ruptur ist Teil des Prozesses – Repair auch."
+  - "Wir haben gelernt, den Bruch als Chance zu sehen."
+  - "Unsere Beziehung ist wie ein Muskel – sie wächst durch Belastung."
+  - "Der Schmerz war nötig, um die Wahrheit zu sehen."
+  - "Wir reparieren nicht nur – wir verbessern."
+  - "Jeder Zyklus macht uns ein Stück weiser."
+  - "Bruch und Reparatur sind der Herzschlag unserer Beziehung."
+  - "Wir haben den Tiefpunkt erreicht und den Weg zurück gefunden."
+  - "Unsere Reparaturfähigkeit gibt mir Zuversicht."
+  - "Der Zyklus ist nicht unser Feind – er ist unser Lehrer."
+  - "Wir sind Meister im Wieder-Zusammen-Finden."
+  - "Jede Ruptur macht unseren Repair tiefer."
+  negative_de:
+  - "Wir streiten und danach ist nichts besser – nur Narben."
+  - "Es gibt keine Reparatur nach unseren Brüchen."
+  - "Wir zerfallen, aber wir finden nicht wieder zusammen."
+  - "Jeder Streit hinterlässt nur Zerstörung, kein Wachstum."
+  - "Unser Zyklus: streiten, schweigen, so tun als wäre nichts."
+  - "Es gibt keine Versöhnung bei uns – nur kalte Stille."
+  - "Wir brechen auseinander und kitten es nie."
+  - "Der Bruch ist permanent – es gibt keine Heilung."
+  - "Jede Krise macht uns schwächer, nicht stärker."
+  - "Wir lernen nicht aus unseren Streits."
+  - "Die Reparatur findet nicht statt – nur Vermeidung."
+  - "Unser Zyklus: Streit, Ignoranz, wieder Streit."
+  - "Es gibt keinen Neuanfang nach dem Zusammenbruch."
+  - "Wir reparieren nie wirklich – wir verdrängen nur."
+  - "Nach dem Streit kommt nichts – nur leere Versprechen."
+  - "Unser Bruch vertieft sich mit jeder Wiederholung."
+  - "Keine Versöhnung, keine Heilung, kein Wachstum."
+  - "Wir zerstören mehr, als wir reparieren."
+  - "Der Zyklus ist destruktiv – nur Bruch, keine Repair."
+  - "Es gibt bei uns kein Happy End nach dem Streit."
+  - "Wir streiten und dann herrscht tagelang Funkstille."
+  - "Reparatur ist ein Fremdwort in unserer Beziehung."
+  - "Jeder Bruch ist tiefer als der vorherige."
+  - "Wir können streiten, aber wir können nicht heilen."
+  - "Der Zyklus ist kaputt – es gibt nur noch Brüche."
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

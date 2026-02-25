@@ -40,6 +40,36 @@ examples:
   - "Tag 4: Konflikt-Vorahnung (AT_LEAST 2 SEMs). Tag 10: Erneut – wiederkehrende Boundary-Dynamik sichtbar."
   - "Gespräch 1: Erste Warnung mit CLU. Gespräch 3: Zweite Warnung – Meta-Muster der sozialen Regulation."
   - "Msg18-21: Ärger + Unsicherheit + Sarkasmus. Msg45-48: Wiederholung – Boundary enforcement cycle gold-level."
+  - "Tag 2: 'Das geht so nicht weiter' + CLU-Konflikt. Tag 6: Erneut 'So nicht' – Boundary-Zyklus."
+  - 'Msg30-33: Erste Ärger-Eskalation. Msg55-58: Gleiche Muster – wiederkehrender Boundary-Versuch.'
+  - 'Gespräch 3: CLU_INTUITION_CONFLICT confirmed. Gespräch 6: Erneut confirmed – Meta-Level Boundary.'
+  - "Woche 1: 'Ich lasse das nicht mehr zu.' Woche 3: Wiederholung – Boundary enforcement."
+  - 'Msg7-10: Sarkasmus + Distanzierung. Msg32-35: Gleiche Signale – Grenz-Spirale bestätigt.'
+  - 'Tag 5: Konflikt-Vorahnung mit Ärger. Tag 12: Erneute Vorahnung – Boundary-Zyklus stabilisiert.'
+  - "Gespräch 2: 'Nein heißt nein.' Gespräch 4: Wiederholung – wiederkehrende Grenzsetzung."
+  - 'Msg14-17: Erste Eskalation + Frustration. Msg42-45: Zweite Eskalation – Muster bestätigt.'
+  - 'Woche 2: Ärger-Cluster detektiert. Woche 4: Erneut – langfristiger Boundary-Zyklus.'
+  - "Tag 3: 'Ich setze hier einen Schlussstrich.' Tag 9: Gleiche Formulierung – Pattern bestätigt."
+  - 'Msg25-28: CLU triggered (Unsicherheit + Ärger). Msg52-55: Erneut triggered – Grenz-Spirale.'
+  - 'Gespräch 1: Grenze markiert. Gespräch 3: Grenze wiederholt markiert – Dynamik sichtbar.'
+  - "Woche 1: 'Das ist meine rote Linie.' Woche 3: Erneut betont – Boundary-Zyklus aktiv."
+  - 'Tag 1: CLU_INTUITION_CONFLICT provisional. Tag 4: Confirmed. Tag 8: Erneut – Meta-Muster.'
+  - 'Msg10-13: Distanzierungssignal. Msg36-39: Gleiche Signale – wiederkehrende Grenzsetzung.'
+  - "Gespräch 2: 'Ich habe genug.' Gespräch 5: 'Ich habe wirklich genug jetzt.' – Eskalation."
+  - 'Woche 2: Grenze mit Nachdruck gesetzt. Woche 5: Erneut – langfristige Boundary-Dynamik.'
+  - 'Msg33-36: Ärger + Enttäuschung + Distanz. Msg60-63: Wiederholung – Boundary gold-level.'
+  - 'Tag 7: Erste Warnung (2 SEMs). Tag 14: Zweite Warnung – Grenz-Zyklus über Wochen.'
+  - 'Gespräch 4: CLU triggered + Sarkasmus. Gespräch 7: Erneut – Meta-Muster der Regulation.'
+  - 'Msg20-23: Eskalations-Vorahnung. Msg48-51: Zweite Vorahnung – Boundary-Spirale sichtbar.'
+  - "Tag 6: 'Ich sage es ein letztes Mal.' Tag 13: 'Zum allerletzten Mal.' – Zyklus bestätigt."
+  - 'Woche 3: Ärger + Frustration kombiniert. Woche 6: Wiederholung – Grenz-Enforcement Zyklus.'
+  - 'Msg45-48: CLU_INTUITION_CONFLICT mit 3 SEMs. Msg70-73: Erneut – langfristiger Pattern.'
+  - "Gespräch 3: 'Das toleriere ich nicht.' Gespräch 6: 'Das werde ich nicht mehr dulden.' – Eskalation."
+  - 'Tag 4: Boundary-Signal mit Unsicherheit. Tag 11: Gleiche Unsicherheit + Ärger – Dynamik aktiv.'
+  - 'Woche 1: Erste Grenz-Ansage mit Nachdruck. Woche 4: Erneute Ansage mit mehr Nachdruck – Zyklus.'
+  - 'Msg50-53: Ärger-Eskalation + Distanz. Msg80-83: Wiederholung – Boundary-Pattern über lange Strecke.'
+  - 'Tag 8: CLU triggered (confirmed). Tag 15: Erneut confirmed – wiederkehrender Enforcement.'
+  - "Gespräch 5: 'Das ist die Grenze.' Gespräch 8: 'Ich wiederhole mich nicht nochmal.' – Meta-Level."
   negative:
   - Kannst du mir das Salz reichen?
   - Der Termin ist um 14 Uhr.
@@ -48,6 +78,24 @@ examples:
   - Hast du die E-Mail gelesen?
   - Ich muss noch tanken.
   - Die Besprechung ist im Konferenzraum.
+  - Einmalige Grenz-Äußerung ohne Wiederholung. Thema danach konstruktiv gelöst.
+  - 'Tag 1: Kurze Frustration. Tag 2-10: Stabile, konstruktive Kommunikation – kein Pattern.'
+  - 'Gespräch 1: Grenze gesetzt. Gespräch 2: Grenze respektiert. Keine Wiederholung nötig.'
+  - 'Msg5-8: Einmalige Spannung. Rest: Positive Entwicklung – kein Boundary-Zyklus.'
+  - 'Woche 1: Problem angesprochen. Woche 2: Gelöst – keine wiederkehrende Grenzsetzung.'
+  - 'Tag 3: Einmalige Ärger-Äußerung. Tag 4-10: Harmonisch – kein Meta-Pattern.'
+  - 'Gespräch 1: Einmaliger Konflikt. Gespräch 2: Vertrauen aufgebaut – keine Dynamik.'
+  - Einmaliges 'So nicht mehr', danach konstruktive Zusammenarbeit.
+  - 'Tag 5: Frustration ausgedrückt. Tag 6: Lösung gefunden – kein Zyklus.'
+  - 'Msg15-18: Kurzes Missverständnis. Msg19: Geklärt – kein wiederkehrendes Pattern.'
+  - 'Woche 1: Grenze markiert. Woche 2-4: Respekt und Zusammenarbeit – kein Enforcement.'
+  - 'Tag 2: Einmalige Konfrontation. Danach: Einigung – keine Grenz-Spirale.'
+  - 'Gespräch 1: Problem adressiert und gelöst. Keine Wiederholung – kein Meta-Muster.'
+  - 'Msg8-11: Kurze Irritation. Rest: Stabil – keine Boundary-Dynamik.'
+  - Einmalige Warnung, danach friedliche Entwicklung – kein Gold-Level-Muster.
+  - 'Tag 4: Einzelne Spannung ohne Follow-up – kein wiederkehrender Boundary-Versuch.'
+  - 'Gespräch 2: Kurze Differenz. Gespräch 3: Einigung – keine Grenz-Spirale.'
+  - 'Msg30-33: Einmaliges CLU-Signal. Danach Entspannung – kein Enforcement-Cycle.'
 metadata:
   neg_examples:
   - "Tag 1: Einmalige Frustrationsäußerung. Tag 5: Konstruktive Lösung – kein Boundary-Zyklus."

@@ -14,19 +14,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - <wir gemeinsam>
-  - <allen Raum geben>
-  - <Einbindung>
-  - <Konsens>
-  - <sanfter Ton>
+  - Wir sollten das gemeinsam entscheiden, alle Stimmen sind wichtig.
+  - Ich möchte allen Raum geben, ihre Meinung zu äußern.
+  - Einbindung aller Beteiligten ist mir ein Herzensanliegen.
+  - Konsens ist das Ziel, nicht Mehrheitsentscheidung.
+  - Ich achte auf einen sanften, wertschätzenden Ton.
+  - Jeder Mensch verdient es, gehört zu werden.
+  - Empathie ist die Grundlage jeder guten Beziehung.
+  - Wir müssen füreinander da sein, das ist das Wichtigste.
+  - Gemeinschaft geht vor Ego, immer.
+  - Wie fühlst du dich dabei? Das interessiert mich wirklich.
+  - wir schaffen das nur zusammen, nicht gegeneinander
+  - Ich spüre, dass du dich unwohl fühlst. Magst du darüber reden?
+  - Niemand sollte ausgeschlossen werden, Inklusion ist ein Grundwert.
+  - Mir ist Harmonie im Team wichtiger als schnelle Ergebnisse.
+  - Wir brauchen mehr Mitgefühl und weniger Wettbewerb.
+  - Sehr geehrtes Team, ich möchte sicherstellen, dass sich alle gehört und einbezogen fühlen.
+  - Die Beziehungsebene ist genauso wichtig wie die Sachebene.
+  - Ich möchte eine Atmosphäre schaffen, in der sich jeder sicher fühlt.
+  - Fairness und Gerechtigkeit sind keine Luxusgüter.
+  - Wir müssen aufeinander achten, das ist unsere Verantwortung.
+  - lass uns zusammen drüber reden, ich will wissen wie es dir damit geht
+  - Konflikte lösen wir im Dialog, nicht durch Anordnungen.
+  - Ich höre dir zu. Ohne zu urteilen.
+  - Gleichberechtigung ist nicht verhandelbar.
+  - Was brauchst du, damit du dich wohlfühlst?
+  - Nachhaltigkeit und soziale Verantwortung sind mir sehr wichtig.
+  - Diversität bereichert uns alle.
+  - Ich fühle mich verantwortlich für das Wohlergehen aller.
+  - Kooperation statt Konkurrenz - das ist mein Credo.
+  - Jede Perspektive hat ihren Wert.
+  - mir ist wichtig dass sich keiner ausgeschlossen fühlt
+  - Wir sollten mehr auf unsere Intuition und Gefühle hören.
+  - Eine gute Gemeinschaft braucht Vertrauen und Offenheit.
+  - Ich setze mich für die Schwächeren ein.
+  - Zusammenhalt ist stärker als jede Einzelleistung.
+  - Achtsamer Umgang miteinander macht den Unterschied.
+  - Partizipation ist ein Grundrecht, kein Privileg.
+  - Wir wachsen als Gemeinschaft, wenn wir einander stärken.
+  - ich will dass es allen gut geht, nicht nur mir
+  - Emotionale Intelligenz ist die wichtigste Kompetenz.
+  - Beziehungen sind das Fundament meines Lebens.
+  - Jeder sollte sein authentisches Selbst sein dürfen.
+  - Wertschätzung und Anerkennung sind keine Schwäche.
+  - Ich glaube an die Kraft der Gemeinschaft.
+  - Miteinander statt übereinander reden.
+  - Solidarität zeigt sich in Taten, nicht in Worten.
+  - Wie können wir dafür sorgen, dass sich alle einbezogen fühlen?
+  - Verständnis und Toleranz sind meine Leitsterne.
+  - wir sind ein team und teams halten zusammen 💚
+  - Respektvoller Dialog ist die Basis für alles.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Manchmal muss man halt durchgreifen.
+  - Ich bin empathisch, aber nicht naiv.
+  - Gemeinschaft ist schön, aber Leistung muss auch stimmen.
+  - Ich höre zu, aber ich sage auch klar meine Meinung.
+  - Konsens ist wünschenswert, aber nicht immer möglich.
+  - Ich respektiere alle, aber am Ende entscheidet der Chef.
+  - Manchmal ist Konfrontation nötig.
+  - Nicht jede Meinung ist gleich viel wert.
+  - Ich bin hilfsbereit, aber habe auch Grenzen.
+  - Teamarbeit ist gut, Eigenverantwortung auch.
+  - klar bin ich nett, aber ich lass mich nicht ausnutzen
+  - Mitgefühl ja, Selbstaufgabe nein.
+  - Ich kann nicht jeden glücklich machen.
+  - Harmonie ist wichtig, aber nicht um jeden Preis.
+  - Zuhören ist gut, aber Handeln ist besser.
+  - Ich verstehe dich, aber ich bin anderer Meinung.
+  - Fairness ist mir wichtig, Ergebnisse aber auch.
+  - Ich bin freundlich, aber bestimmt.
+  - Gemeinschaft heißt nicht, dass alle gleich denken müssen.
+  - Ich engagiere mich sozial, aber vergesse mich nicht.
+  - Empathie hat auch Grenzen.
+  - Zusammenhalt ist wichtig, aber auch gesunder Wettbewerb.
+  - Ich kümmere mich um andere, aber auch um mich.
+  - Kooperation funktioniert nur, wenn alle beitragen.
+  - Dialog ist gut, Entscheidungen sind besser.
 tags:
 - persona
 - GREEN

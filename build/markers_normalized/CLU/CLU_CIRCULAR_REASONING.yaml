@@ -23,12 +23,72 @@ examples:
   - Wir sind wieder am selben Punkt wie vor einem Monat
   - Egal wie oft ich es sage, du hörst nicht zu
   - Schon wieder? Das ist doch wie letztes Mal, genau das gleiche
+  - Wir reden seit Stunden und kommen immer zum selben Ergebnis
+  - Jedes Mal sagst du das gleiche, nichts verändert sich!
+  - Das diskutieren wir jetzt seit 3 Monaten, null Fortschritt
+  - Immer wenn ich denke wir haben das geklärt, fängt es von vorne an
+  - Wie oft muss ich dir noch erklären dass das so nicht geht??
+  - Die gleiche Leier jedes Wochenende
+  - Du drehst dich im Kreis mit deinen Argumenten
+  - Können wir BITTE mal weiterkommen statt ewig das Gleiche zu besprechen
+  - Ich hab das Gefühl wir stecken in einer Schleife fest
+  - Du sagst A, ich sag B, dann sagst du wieder A, und so weiter
+  - Das hatten wir schon beim letzten Streit und beim davor
+  - Ewig die gleiche Diskussion, ich kann nicht mehr
+  - Wir treten auf der Stelle, merkt du das nicht?
+  - Du wiederholst dich, ich wiederhole mich, keiner hört zu
+  - Jedes Mal das gleiche Theater wegen der gleichen Sache
+  - Warum müssen wir das JEDES MAL von vorne durchkauen?
+  - Das ist ein Déjà-vu, diese Diskussion hatten wir gestern auch schon
+  - "{'Immer der gleiche Kreislauf': 'Streit, Entschuldigung, wieder Streit'}"
+  - Hab ich dir nicht letzte Woche GENAU das Gleiche gesagt?
+  - Komm mir nicht schon wieder mit dem Thema!
+  - Du bringst immer die gleichen Beispiele, wir kommen nicht weiter
+  - Gefühlt führen wir dieses Gespräch zum hundertsten Mal
+  - Ja wir haben das schon besprochen. Und davor. Und davor.
+  - Drehen wir uns nicht im Kreis hier? Ich hab das Gefühl schon
+  - Du sagst jedes Mal du änderst dich und nix passiert
+  - Es ist wie Groundhog Day mit dir, immer das Gleiche
+  - Nochmal das Gleiche? Ich hab doch schon alles gesagt dazu
+  - Wie ein Hamsterrad, wir kommen einfach nicht raus
+  - Du erzählst mir jetzt zum vierten Mal warum ich schuld bin
+  - "{'Gleiche Diskussion, gleiche Argumente, gleiches Ergebnis': None}"
+  - Jedes Mal versprichst du das ändert sich und jedes Mal dasselbe
+  - Das ist ne Endlosschleife aus der wir nicht rauskommen
+  - Immer wenn wir denken das Thema ist durch, kommt es zurück
+  - Und wieder mal sind wir bei Punkt 1, wie immer
+  - Die Platte hängt bei dir, du sagst immer dasselbe
+  - Wir stecken in einem Loop, merkst du das?
+  - Drittes Gespräch diese Woche, gleiches Thema, gleiche Blockade
+  - "{\"Jedes Mal wenn du sagst 'ab jetzt wird alles anders' weiss ich\": 'wird es nicht'}"
+  - Sind wir nicht schon hundert Mal an diesem Punkt gewesen?
+  - Das gleiche Gespräch zum tausendsten Mal, ich hab keinen Bock mehr
   negative:
   - Ich möchte das nochmal ansprechen weil mir was neues aufgefallen ist.
   - Können wir das Thema von letzter Woche nochmal aufgreifen?
   - Ich komme immer wieder darauf zurück weil es mir wichtig ist.
   - Lass uns das nochmal durchgehen, ich hab neue Ideen.
   - Das Thema ist noch offen, können wir einen neuen Ansatz probieren?
+  - Ich hab nochmal drüber nachgedacht und eine neue Perspektive.
+  - Können wir das anders angehen als letztes Mal?
+  - Ich hab was Neues gelernt das hierzu passt.
+  - Lass uns das Thema nochmal öffnen, ich hab einen Vorschlag.
+  - Ich seh das jetzt anders als bei unserem letzten Gespräch.
+  - Das Thema ist wichtig, aber lass uns diesmal konkreter werden.
+  - Ich hab mich seit letztem Mal weiterentwickelt, lass mich erklären.
+  - Können wir frisch anfangen bei dem Thema?
+  - Ich komm nochmal drauf zurück, aber mit einer Lösung diesmal.
+  - Lass uns einen Termin machen und das strukturiert besprechen.
+  - Mir ist was eingefallen das helfen könnte.
+  - Ich hab mit meiner Therapeutin drüber gesprochen und sie hat...
+  - Können wir einen Mediator dazu holen?
+  - Ich will das nicht aufrollen, sondern weiterentwickeln.
+  - "{'Neuer Ansatz': 'was wenn wir es SO versuchen?'}"
+  - Ich hab drüber geschlafen und sehe es jetzt anders.
+  - Können wir das Thema mit frischen Augen angehen?
+  - Ich hab einen Therapeuten-Tipp der helfen könnte.
+  - Lass uns das diesmal schriftlich festhalten damit wir weiterkommen.
+  - Ich schlage vor wir probieren was komplett Neues.
 tags: []
 rating: 1
 composed_of:

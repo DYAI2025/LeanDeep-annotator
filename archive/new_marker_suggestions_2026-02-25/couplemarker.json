@@ -1,0 +1,108 @@
+{
+  "context": {
+    "artifact_type": "text",
+    "audience": "Paare in Krisen, Therapie-Interessierte",
+    "domain_codes": ["Beziehungsarbeit", "Therapeutische Selbsthilfe"],
+    "intended_effect": "Empowerment durch Illusion von Kontrollierbarkeit",
+    "notes": "Paartherapie-Mythen als konzeptionelles Narrativ"
+  },
+  "signs": [
+    {
+      "id": "S1",
+      "locus": "Paartherapie-Mythen: Kommunikation",
+      "evidence": "Kommunikation löst alles",
+      "signifier": "Kommunikation",
+      "signified": "Austausch von Worten",
+      "type": "symbol",
+      "denotation": "Offener Dialog",
+      "connotations": ["Fairness", "Verständnis"],
+      "codes": ["Care", "Rationalität"],
+      "myth": "Kommunikation als universelle Erlösung",
+      "ambiguity": {
+        "kinds": ["pragmatic"],
+        "risk": "medium",
+        "mitigation": "Machtdynamiken einbeziehen"
+      },
+      "markers": [
+        {"name": "rhetoric_assertion", "span": "löse alles", "score": 0.85}
+      ]
+    },
+    {
+      "id": "S2",
+      "locus": "Paartherapie-Mythen: Vertrauen",
+      "evidence": "Vertrauen muss verdient werden",
+      "signifier": "Vertrauen",
+      "signified": "Emotionale Sicherheit",
+      "type": "index",
+      "denotation": "Bruch/Reparatur",
+      "connotations": ["Bindung", "Leistung"],
+      "codes": ["Treue", "Abhängigkeit"],
+      "myth": "Vertrauen als verdiente Währung",
+      "ambiguity": {
+        "kinds": ["lexical"],
+        "risk": "high",
+        "mitigation": "Missbrauchskontexte prüfen"
+      },
+      "markers": [
+        {"name": "modality_insistence", "span": "muss verdient", "score": 0.9}
+      ]
+    },
+    {
+      "id": "S3",
+      "locus": "Paartherapie-Mythen: Grenzen",
+      "evidence": "Grenzen sind gesund",
+      "signifier": "Grenzen",
+      "signified": "Persönliche Barriere",
+      "type": "icon",
+      "denotation": "Schutzmechanismus",
+      "connotations": ["Autonomie", "Selbstschutz"],
+      "codes": ["Individualismus", "Therapie-Ideal"],
+      "myth": "Grenzen als universelle Heilung",
+      "ambiguity": {
+        "kinds": ["pragmatic"],
+        "risk": "medium",
+        "mitigation": "Kollektive Verantwortung einbeziehen"
+      },
+      "markers": [
+        {"name": "sentiment_positive", "span": "sind gesund", "score": 0.8}
+      ]
+    }
+  ],
+  "structure": {
+    "syntagmatic": ["Kommunikation → Grenzen → Vertrauen"],
+    "paradigmatic": ["Rationalität vs. Emotionalität", "Individualismus vs. Kollektivismus"]
+  },
+  "emotions_dynamics": {
+    "method": "valence_arousal",
+    "series": [
+      {"t": 0.0, "valence": 0.3, "arousal": 0.5, "trigger_sign_id": "S1"},
+      {"t": 0.4, "valence": 0.2, "arousal": 0.6, "trigger_sign_id": "S3"},
+      {"t": 0.8, "valence": -0.4, "arousal": 0.8, "trigger_sign_id": "S2"}
+    ]
+  },
+  "findings": {
+    "narrative": "Paartherapie-Mythen naturalisieren Konstrukte wie Kommunikation als Allheilmittel, Vertrauen als Leistung und Grenzen als Ideal – ignorieren Machtdynamiken. Marker wie Schuldumkehr verstärken toxische Codes.",
+    "key_points": ["Mythen als sekundäre Systeme", "Konnotationen perpetuieren Abhängigkeit", "Ambiguität in therapeutischen Phrasen"]
+  },
+  "recommendations": [
+    {
+      "goal": "Mythen entlarven",
+      "action": "Therapie-Mythen explizit diskutieren und mit realen Dynamiken abgleichen",
+      "rationale": "Reduziert Illusion von Kontrollierbarkeit",
+      "expected_effect": "Realistischere Erwartungen",
+      "risk": "Frustration bei Enttäuschung"
+    },
+    {
+      "goal": "Subtile Toxizität mindern",
+      "action": "Paradigmatische Substitution: 'Vertrauen aufbauen' statt 'verdienen'",
+      "rationale": "Entnaturalisiert Leistungsmythos",
+      "expected_effect": "Weniger Druck",
+      "risk": "Übervereinfachung"
+    }
+  ],
+  "claims_mode_balance": {
+    "fact": 4,
+    "inference": 6,
+    "speculation": 3
+  }
+}

@@ -1,0 +1,117 @@
+id: MEMA_THERAPEUTIC_PROGRESS
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - therapeutic
+  - progress
+  concept: Therapeutischer Fortschritt – Anzeichen für Wachstum und Veränderung
+  pragmatics: Erkennt positive Veränderungssignale in therapeutischem Kontext
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Ich merke, dass ich in letzter Zeit anders reagiere als früher.
+  - Seit der Therapie kann ich meine Wut besser kontrollieren.
+  - Ich erkenne jetzt mein Muster und kann mich bewusst dagegen entscheiden.
+  - Früher hätte ich zugemacht. Heute rede ich darüber.
+  - Ich hab zum ersten Mal meine Grenze gesetzt, ohne mich schuldig zu fühlen.
+  - Die Übungen aus der Therapie helfen mir im Alltag.
+  - Ich verstehe jetzt, warum ich so reagiere – das allein ist schon ein Fortschritt.
+  - Mein Therapeut sagt, ich mache große Schritte. Und ich fühle es auch.
+  - Ich kann mittlerweile Konflikte aushalten, ohne wegzulaufen.
+  - Letzte Woche hätte ich noch geschrien. Heute habe ich zugehört.
+  - Ich erkenne meine Trigger jetzt schneller.
+  - Es fällt mir leichter, über meine Gefühle zu sprechen.
+  - Ich hab gelernt, dass meine Angst mich nicht definiert.
+  - Ich habe zum ersten Mal 'Nein' gesagt, ohne mich zu rechtfertigen.
+  - Die Paartherapie zeigt Wirkung – wir kommunizieren besser.
+  - Ich schaffe es jetzt, Pausen einzulegen, bevor ich reagiere.
+  - Mir fällt auf, dass meine Beziehungsmuster sich verändern.
+  - Ich bin stolz auf mich – ich bin weitergekommen.
+  - Ich kann mich jetzt entschuldigen, ohne dass es wie eine Niederlage wirkt.
+  - Die alten Muster kommen noch, aber ich erkenne sie und reagiere anders.
+  - Ich hab gelernt, Hilfe anzunehmen – das war ein großer Schritt.
+  - Ich bin achtsamer geworden in der Art, wie ich kommuniziere.
+  - Mein innerer Kritiker ist leiser geworden.
+  - Ich kann jetzt sagen, was ich brauche, ohne Angst vor der Reaktion.
+  - Die Beziehung zu meinen Eltern hat sich verbessert, seit ich in Therapie bin.
+  - Ich hab gelernt, mich selbst zu beruhigen, wenn die Angst kommt.
+  - Zum ersten Mal habe ich einen Rückfall als Lernchance gesehen.
+  - Ich bin weniger reaktiv als vor einem Jahr.
+  - Ich merke, dass ich mehr Verständnis für den anderen aufbringe.
+  - Die Werkzeuge aus der Therapie werden zu Gewohnheiten.
+  - Ich habe angefangen, ein Gefühlstagebuch zu führen, und es hilft.
+  - Unsere Kommunikation hat sich deutlich verbessert.
+  - Ich traue mich jetzt, verletzlich zu sein.
+  - Ich kann meinen Anteil an Konflikten sehen, ohne mich kaputtzumachen.
+  - Ich hab zum ersten Mal eine Panikattacke ohne Flucht überstanden.
+  - Mein Partner sagt, ich bin gelassener geworden – und er hat recht.
+  - Ich habe gelernt, Verantwortung zu übernehmen, ohne mich zu beschuldigen.
+  - Die Therapie hat mir gezeigt, dass Veränderung möglich ist.
+  - Ich bin heute eine andere Person als vor sechs Monaten.
+  - Ich kann jetzt über schwierige Themen reden, ohne auszurasten.
+  - Ich habe Fortschritte gemacht in meiner Fähigkeit, Empathie zu zeigen.
+  - Meine Beziehungen sind gesünder geworden.
+  - Ich erkenne toxische Dynamiken jetzt früher.
+  - Ich übe mich in Selbstmitgefühl – und es wird langsam leichter.
+  - Ich konnte gestern zum ersten Mal über meine Kindheit reden, ohne zusammenzubrechen.
+  - Mein Therapeut sagt, ich bin bereit für die nächste Phase.
+  - Ich hab mehr Mitgefühl mit mir selbst als je zuvor.
+  - Ich schaffe es mittlerweile, nach einem Streit als Erste den Dialog zu suchen.
+  - Die Veränderungen sind klein, aber spürbar.
+  - 'Ich weiß jetzt: Heilung ist kein gerader Weg, aber ich gehe ihn.'
+  negative:
+  - Die Therapie bringt nichts, ich bin genauso wie vorher.
+  - Ich gehe zur Therapie, aber es ändert sich nichts.
+  - Ich kenne meine Muster, aber ich kann sie trotzdem nicht ändern.
+  - Mein Therapeut versteht mich nicht.
+  - Ich hab aufgehört, die Übungen zu machen – bringt eh nix.
+  - Wir machen seit einem Jahr Paartherapie und streiten immer noch genauso.
+  - Therapie ist Geldverschwendung.
+  - Ich rede seit Monaten und es wird nicht besser.
+  - Reden hilft nicht, ich brauche echte Lösungen.
+  - Ich bin hoffnungslos – Therapie hin oder her.
+  - Ich hab schon drei Therapeuten gewechselt, keiner konnte helfen.
+  - Ich kenne die Theorie, aber in der Praxis klappt nichts.
+  - Meine alten Muster sind stärker als jede Therapie.
+  - Ich hab Angst, dass ich mich nie wirklich ändern werde.
+  - Die Therapie macht alles nur schlimmer, weil ich jetzt mehr fühle.
+  - Ich gehe hin, weil ich muss, nicht weil ich will.
+  - Veränderung? Welche Veränderung?
+  - Ich bin müde davon, an mir zu arbeiten, ohne Ergebnis.
+  - Wir drehen uns in der Therapie genauso im Kreis wie zu Hause.
+  - Mein Partner verweigert die Mitarbeit in der Therapie.
+  - Ich bin genauso impulsiv wie vor einem Jahr.
+  - Die Einsichten aus der Therapie bleiben nicht hängen.
+  - Ich mache zwei Schritte vor und drei zurück.
+  - Therapie ist für Leute mit mehr Geduld als ich.
+  - Ich spüre keinen Unterschied, egal was ich tue.
+tags:
+- mema
+- therapeutic
+- progress
+- growth
+- positive
+rating: 2
+composed_of:
+  required_any:
+  - SEM_EMPATHIC_RESONANCE
+  - CLU_CONSTRUCTIVE_CONFLICT
+  supportive:
+  - ATO_PROBLEM_SOLVING
+  - SEM_SYSTEMS_THINKING
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.3
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

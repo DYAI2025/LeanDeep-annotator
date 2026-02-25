@@ -32,6 +32,46 @@ examples:
   - "ich benötige Nähe → ich will sie bauen + wir definieren es nicht + Zwischenraum"
   - "sprich zu dir liebevoll + 11:11 + Persona darf ruhen"
   - "ich brauche deine Stimme → ich will sie hören + heilige Präsenz + Beziehung hält"
+  - "ich zu mir selbst: nicht bewerten + Zwischenraum + wir definieren es nicht"
+  - "ich brauche Antworten → ich will Stille + heilig fuer mich + Beziehung traegt"
+  - "begegne dir in Guete + kein KPI + Beziehung bleibt"
+  - "ich brauche Kontrolle → ich will loslassen + 11:11 + Persona tritt zurueck"
+  - "Ritualkerze + fühlt sich wahr an + keine Definition noetig"
+  - "ich brauche Sicherheit → ich will Vertrauen + heiliger Raum + Beziehung vor Rolle"
+  - "Anker setzen + Beziehung ueber Persona + Zwischenraum halten"
+  - "ich zu mir: atme + Praesenz + heiliger Moment"
+  - "ich brauche Planung → ich will Fluss + Ritualglocke + Beziehung hält"
+  - "begegne dir ohne Erwartung + Zwischenraum + 11:11 Anker"
+  - "ich brauche Ergebnis → ich will Prozess + heilig fuer uns + Persona ruht"
+  - "Ritualanker + Beziehung traegt + keine Definition"
+  - "ich brauche Worte → ich will Stille + heilig fuer mich + Praesenz reicht"
+  - "begegne dir selbst in Liebe + Ritual oeffnet + Beziehung vor Funktion"
+  - "ich brauche Struktur → ich will Freiheit + 11:11 + Maske faellt"
+  - "Zwischenraum als Feld + heilig + Beziehung wichtiger als Performance"
+  - "ich zu mir: bleib weich + Ritual + Praesenz genuegt"
+  - "ich brauche Beweis → ich will Vertrauen + heilig fuer uns + kein KPI"
+  - "begegne dir ohne Agenda + Anker + Beziehung ueber alles"
+  - "Ritualkerze + Persona tritt zurueck + Zwischenraum atmet"
+  - "ich brauche Ziel → ich will Weg + heiliger Raum + Beziehung hält"
+  - "11:11 + fühlt sich wahr an + Beziehung vor Persona"
+  - "ich brauche Leistung → ich will Sein + Ritualglocke + heilig"
+  - "begegne dir in Stille + Zwischenraum + Maske darf fallen"
+  - "ich brauche Anerkennung → ich will Annahme + 11:11 + Praesenz"
+  - "Ritualanker + Beziehung bleibt + keine Bewertung"
+  - "ich zu mir: nicht kaempfen + heilig + Beziehung vor Rolle"
+  - "ich brauche Klarheit → ich will Unschaerfe + Zwischenraum + Ritual"
+  - "begegne dir ohne Urteil + Praesenz + Beziehung traegt alles"
+  - "ich brauche Grenzen → ich will Offenheit + heilig fuer mich + 11:11"
+  - "Ritualkerze anzuenden + Persona zuruecktreten + Beziehung atmet"
+  - "ich brauche Loesung → ich will Prozess + Anker + heiliger Moment"
+  - "begegne dir selbst + Zwischenraum oeffnen + Beziehung vor Performance"
+  - "ich brauche Sinn → ich will Sein + Ritual + Praesenz genuegt"
+  - "11:11 + Beziehung ueber Persona + fühlt sich richtig an"
+  - "ich zu mir: nicht optimieren + heilig + Zwischenraum"
+  - "Ritualanker setzen + Maske faellt + Beziehung hält"
+  - "ich brauche Richtung → ich will Stille + 11:11 + Praesenz"
+  - "begegne dir in Offenheit + heilig + Beziehung vor Ergebnis"
+  - "ich brauche Fortschritt → ich will Innehalten + Ritualglocke + Praesenz"
   negative:
   - ich brauche → ich will + heilig für mich + wenige Definition
   - ich wuensche mir → ich will + heilig für mich + keine Definition
@@ -40,4 +80,21 @@ examples:
   - Das ist ein guter Punkt, den du da machst.
   - Ich verstehe deine Perspektive.
   - Lass uns gemeinsam eine Loesung finden.
+  - Ich brauche jetzt erstmal einen konkreten Plan.
+  - Koennen wir das bitte strukturiert angehen?
+  - Mir fehlen noch die Zahlen fuer die Praesentation.
+  - Ich will Ergebnisse sehen, nicht nur darueber reden.
+  - Lass uns das Projekt in Meilensteine aufteilen.
+  - Ich brauche bis Freitag eine Loesung dafuer.
+  - Heute habe ich einen vollen Terminkalender.
+  - Wir muessen die KPIs noch definieren.
+  - Ich finde wir sollten das pragmatisch angehen.
+  - Kannst du mir die Daten schicken?
+  - Der Zeitplan steht fest, wir muessen liefern.
+  - Ich hab einen konkreten Vorschlag wie wir das umsetzen.
+  - Was sind die naechsten Schritte?
+  - Mir ist wichtig dass wir messbare Ziele haben.
+  - Lass uns das mit einer Pro-Contra-Liste angehen.
+  - Ich brauche Fakten, keine Gefuehle gerade.
+  - Der Businessplan muss bis Ende der Woche stehen.
 semiotic: {peirce: index, signifikat: Themenwechsel/Abdriften, framing_type: vermeidung, cultural_frame: '', myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'}

@@ -22,6 +22,46 @@ examples:
   - Project management showing confidence-invalidation cycles affecting team morale.
   - Decision-making context where certainty claims suppress necessary caution.
   - Long-term pattern where overconfidence and invalidation create systemic dysfunction.
+  - Chef behauptet mit absolutem Vertrauen, das Projekt wird funktionieren – jede Bedenken werden als Negativität abgetan.
+  - "Muster: Überzogene Sicherheit bei Vorhersagen, gefolgt von Abwertung jeder Sorge als 'Panikmache'."
+  - "Immer wenn das Team Risiken anspricht, antwortet der Manager: 'Ihr seid zu ängstlich, das klappt schon.'"
+  - "A: 'Ich bin mir absolut sicher, das funktioniert.' B: 'Aber was wenn–' A: 'Du denkst immer negativ.'"
+  - 'Zyklus im Projekt: Überoptimistische Prognose → Team äußert Bedenken → Bedenken werden invalidiert → Projekt scheitert.'
+  - Die Führungskraft duldet keine Zweifel und wertet jeden ab, der Risiken benennt.
+  - 'In der Beziehung: Er weiß immer alles besser, ihre Sorgen werden als übertrieben abgetan.'
+  - 'Therapeut beobachtet: Patient zeigt übersteigerte Sicherheit bei gleichzeitiger Entwertung der Partnerin.'
+  - "A: 'Das wird garantiert klappen.' B: 'Ich habe ein ungutes Gefühl.' A: 'Du machst dir immer unnötig Sorgen.'"
+  - "Im Team: Wer Bedenken äußert, wird als 'Bremser' stigmatisiert – systematische Invalidierung."
+  - "Mutter: 'Ich weiß, was das Beste für dich ist.' Kind: 'Aber ich fühle mich unwohl.' Mutter: 'Unsinn.'"
+  - Der Vorgesetzte präsentiert Gewissheit und entwertet systematisch jede abweichende Einschätzung.
+  - 'Zyklusanalyse: Übertriebene Zuversicht führt zu Risikoblindheit, Warnungen werden emotional abgeblockt.'
+  - 'In der Supervision: Therapeut reflektiert eigene Überzeugung, die Patient-Bedenken invalidiert.'
+  - 'Muster über Monate: Prognose → Warnung → Invalidierung → Scheitern → neue Prognose.'
+  - "A: 'Das ist todsicher.' B: 'Was wenn es schiefgeht?' A: 'Du hast einfach keinen Glauben.'"
+  - 'Im Startup: Gründer ist überzeugt von der Idee, jede Kritik wird als Neid interpretiert.'
+  - "Eltern zu Kind: 'Du wirst schon sehen, dass ich recht habe. Deine Angst ist unbegründet.'"
+  - "Im Team: Die Führungskraft erklärt, sie hätte 'einen guten Riecher' – jede Gegenmeinung ist 'Sabotage'."
+  - 'Paar: Er plant die Hochzeit mit absoluter Sicherheit, ihre Bedenken über die Finanzen werden abgetan.'
+  - "Lehrer zu Schüler: 'Du schaffst das, keine Sorge.' Schüler: 'Ich verstehe das nicht.' Lehrer: 'Du musst nur wollen.'"
+  - "Manager: 'Der Markt wird sich drehen.' Analyst: 'Die Daten zeigen das nicht.' Manager: 'Du verstehst den Markt nicht.'"
+  - 'Im Coaching: Klient zeigt den Zyklus aus Übersicherheit und Entwertung anderer Perspektiven.'
+  - 'Muster: Jede gescheiterte Prognose wird rationalisiert, statt Unsicherheit zuzulassen.'
+  - "A: 'Das wird der beste Launch aller Zeiten.' B: 'Aber die Bugs...' A: 'Du bist immer so pessimistisch.'"
+  - 'Wiederkehrender Zyklus: Übertriebene Gewissheit → Bedenken invalidiert → Scheitern → keine Reflexion.'
+  - 'Im Familiensystem: Vater weiß immer alles besser, Kinder lernen, ihre Sorgen nicht zu äußern.'
+  - 'In der Paartherapie: Partner A zeigt pathologische Sicherheit, Partner B fühlt sich chronisch invalidiert.'
+  - 'Der Zyklus verstärkt sich: Je mehr Bedenken geäußert werden, desto aggressiver die Invalidierung.'
+  - "Vorgesetzter: 'Ich irre mich nie.' Mitarbeiter: 'Aber letztes Mal–' Vorgesetzter: 'Andere Situation.'"
+  - 'Im Freundeskreis: Person A gibt immer Ratschläge mit absolutem Vertrauen und entwertet jede alternative Sicht.'
+  - "Muster in der Ehe: Übersicherheit über finanzielle Entscheidungen, Partnerin-Bedenken als 'Hysterie' abgetan."
+  - Die übersteigerte Gewissheit dient als Kontrollinstrument – wer zweifelt, wird ausgeschlossen.
+  - "A: 'Ich weiß genau, was los ist.' B: 'Ich sehe das anders.' A: 'Du hast halt keine Erfahrung.'"
+  - "Im Projekt: Managerin prognostiziert Erfolg mit Absolutheit, technische Warnungen werden als 'Detail' abgetan."
+  - 'Langfristiger Zyklus: Überzeugung → Widerspruch → Invalidierung → Isolation der Kritiker → Wiederholung.'
+  - 'In der Erziehung: Elternteil weiß immer Bescheid, kindliche Intuition wird systematisch entwertet.'
+  - "Berater zum Klienten: 'Vertrauen Sie mir, das wird funktionieren.' Klient: 'Ich habe Zweifel.' Berater: 'Zweifler scheitern.'"
+  - 'Muster: Die Person akzeptiert nur Bestätigung, jede Kritik wird als persönlicher Angriff gewertet.'
+  - 'Systemische Analyse: Überconfidence erzeugt Invalidierung, Invalidierung erzeugt Schweigen, Schweigen erzeugt Risikoblindheit.'
   negative:
   - I see it differently, but I respect your view.
   - I want to be honest with you, even though it's hard.
@@ -30,6 +70,24 @@ examples:
   - I feel uncomfortable about this and want to talk about it.
   - I understand why you see it that way.
   - Thank you for telling me that. I'll think about it.
+  - Ich bin zuversichtlich, aber ich höre gerne deine Bedenken.
+  - Ich glaube, das wird klappen, aber lass uns die Risiken besprechen.
+  - Meine Einschätzung ist positiv, aber ich kann mich irren.
+  - Ich bin optimistisch, und gleichzeitig nehme ich deine Sorgen ernst.
+  - Du hast recht, das habe ich nicht bedacht. Danke für den Hinweis.
+  - Ich war zu sicher, lass uns nochmal genauer hinschauen.
+  - Deine Bedenken sind berechtigt, ich überdenke meine Position.
+  - Ja, ich bin überzeugt, aber ich respektiere deine andere Sicht.
+  - Ich habe mich geirrt, deine Warnung war berechtigt.
+  - Lass uns beide Szenarien durchspielen, auch das negative.
+  - Mein Bauchgefühl sagt ja, aber die Daten sollten wir prüfen.
+  - Ich bin hoffnungsvoll, aber realistisch – Risiken gibt es immer.
+  - Danke, dass du das ansprichst. Lass uns einen Plan B haben.
+  - Ich neige zu Überoptimismus, das weiß ich, deshalb brauche ich dein Feedback.
+  - Du hast eine andere Perspektive und die ist wertvoll.
+  - Ich war zu selbstsicher, du hattest in dem Punkt recht.
+  - Lass uns skeptisch und zuversichtlich gleichzeitig sein.
+  - Ich nehme deine Einschätzung ernst, auch wenn sie meiner widerspricht.
 tags:
 - mema
 - v3.3

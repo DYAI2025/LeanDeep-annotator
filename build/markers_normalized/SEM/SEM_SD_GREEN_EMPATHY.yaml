@@ -13,19 +13,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - Konsens finden … Empathie zeigen
-  - Gemeinschaft vor Ego
-  - jede Stimme zählt
-  - Beziehung ist wichtig
-  - fühlst du dich gehört?
+  - Konsens finden, Empathie zeigen.
+  - Gemeinschaft vor Ego.
+  - Jede Stimme zählt.
+  - Beziehung ist wichtig.
+  - Fühlst du dich gehört?
+  - Wir müssen aufeinander achten.
+  - Wie geht es dir damit?
+  - Ich möchte dich verstehen.
+  - Zusammenhalt ist mir wichtiger als Recht haben.
+  - Empathie ist die Basis von allem.
+  - Lass uns alle einbeziehen.
+  - Ich fühle mit dir.
+  - Gemeinsam sind wir stärker.
+  - Hast du das Gefühl, gehört zu werden?
+  - Jeder Mensch verdient Mitgefühl.
+  - Wie können wir das gemeinsam lösen?
+  - Mir ist die Harmonie in der Gruppe wichtig.
+  - Wir sollten einander zuhören.
+  - Ich achte auf deine Bedürfnisse.
+  - Empathie heißt, den anderen zu sehen.
+  - Die Gemeinschaft braucht jeden von uns.
+  - Ich nehme deine Gefühle ernst.
+  - Uns verbindet mehr als uns trennt.
+  - Wir tragen gemeinsam Verantwortung.
+  - Ich will, dass sich alle wohlfühlen.
+  - Dein Wohlbefinden liegt mir am Herzen.
+  - Miteinander statt gegeneinander.
+  - Ich höre dir zu, erzähl weiter.
+  - Füreinander da sein, das zählt.
+  - Wie fühlt sich das für dich an?
+  - Ich möchte, dass sich jeder einbringen kann.
+  - Rücksicht aufeinander nehmen.
+  - Deine Meinung ist mir wichtig.
+  - Wir schaffen das nur zusammen.
+  - Einfühlungsvermögen ist eine Stärke.
+  - Ich sorge mich um dich.
+  - Gemeinschaft heißt Verantwortung füreinander.
+  - Lass uns empathisch miteinander umgehen.
+  - Ich versuche, mich in dich hineinzuversetzen.
+  - Jeder verdient einen sicheren Raum.
+  - Wie können wir dich unterstützen?
+  - Mir liegt die Gruppe am Herzen.
+  - Gemeinsam entscheiden, gemeinsam tragen.
+  - Ich spüre, dass dich das belastet.
+  - Achtsamkeit füreinander ist essenziell.
+  - Wir hören alle Stimmen an.
+  - Zusammenhalt gibt uns Kraft.
+  - Ich möchte niemanden ausschließen.
+  - Empathie schafft Vertrauen.
+  - Fühlst du dich bei uns aufgehoben?
   negative:
-  - Can you pass the salt?
-  - The meeting is at 2 PM.
-  - I went shopping yesterday.
-  - The weather should be better tomorrow.
-  - Did you read the email?
-  - I need to get gas.
-  - The meeting is in the conference room.
+  - Das ist mir egal, ich mach mein Ding.
+  - Jeder ist sich selbst der Nächste.
+  - Gefühle haben hier nichts verloren.
+  - Performance zählt, nicht Befindlichkeiten.
+  - Ich brauche keinen Konsens.
+  - Wer nicht mithält, fliegt raus.
+  - Das ist nicht mein Problem.
+  - Ich bin nicht euer Therapeut.
+  - Ergebnisse zählen, nicht Stimmung.
+  - Mitleid bringt uns nicht weiter.
+  - Jeder kämpft für sich.
+  - Rücksicht nehmen? Wofür?
+  - Ich sag dir was Sache ist, ob es dir passt oder nicht.
+  - Gefühle sind Privatsache.
+  - Hör auf zu heulen, mach was.
+  - Mich interessiert nur das Ergebnis.
+  - Emotionen sind ein Hindernis.
+  - Ich bin kein Seelsorger.
+  - Stell dich nicht so an.
+  - Fakten, keine Gefühle.
+  - Mitgefühl ist Zeitverschwendung.
+  - Ich hab keine Lust auf Gruppendynamik.
+  - Jeder muss selber klarkommen.
+  - Das muss jeder für sich entscheiden.
+  - Ich bin hier zum Arbeiten, nicht zum Kuscheln.
 tags: []
 rating: 2
 composed_of:

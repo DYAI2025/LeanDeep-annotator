@@ -2,7 +2,7 @@ id: CLU_CONSISTENCY_BIAS_PATTERN
 schema: LeanDeep
 version: '5.1'
 layer: CLU
-lang: en
+lang: de
 description: ''
 frame:
   signal:
@@ -14,19 +14,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - Absolutismen + Anker + weiche Zusage
-  - Cherry-Pick + Mikro-Konflikt + Anker
-  - Anker + Soft-Commit + selektive Wahrheit
-  - Schnelle Beweisrufe + Minimisierung
-  - Bias-Stacking + Timing-Signale
+  - Du hast doch selbst gesagt, dass du das willst. Jetzt kannst du nicht einfach nein sagen.
+  - Ich hab dir ja gesagt, ich mach das vielleicht. Und jetzt sagst du, ich hätte zugesagt?
+  - Das ist doch immer so bei dir - erst sagst du A, dann machst du B.
+  - Naja, ich hab schon gesagt, ich überleg es mir. Das ist doch quasi eine Zusage.
+  - Du hast letzte Woche noch zugestimmt. Jetzt plötzlich nicht mehr? Das passt nicht zusammen.
+  - Ich hab nie gesagt, ich mache es definitiv. Ich sagte, ich schaue mal.
+  - Erinnerst du dich? Du hast selbst gesagt, das sei eine gute Idee. Und JETZT willst du einen Rückzieher?
+  - Das stimmt so nicht ganz, aber im Kern habe ich Recht.
+  - Ja okay, vielleicht hab ich das so gesagt. Aber ich meinte es anders.
+  - Du verdrehst meine Worte. Ich hab gesagt, ich KÖNNTE. Nicht ich WERDE.
+  - ja gut, hab ich vielleicht gesagt. aber so war das nicht gemeint lol
+  - Schau, die Fakten sprechen für sich. Okay, nicht alle, aber die wichtigen.
+  - Du hast doch auch gesagt, wir machen das zusammen. Jetzt auf einmal nicht?
+  - Ich hab mich vielleicht etwas unklar ausgedrückt, aber im Grunde hatte ich Recht.
+  - Na gut, das Detail stimmt nicht. Aber das Gesamtbild passt.
+  - Das war doch abgemacht! Oder zumindest hab ich das so verstanden.
+  - Du hast ja quasi zugestimmt, als du nichts dagegen gesagt hast.
+  - Ist doch egal ob ich genau das gesagt habe. Der Punkt bleibt der gleiche.
+  - Nein nein, ich hab das gesagt weil DU vorher gesagt hast, dass...
+  - Also bitte, du kannst doch jetzt nicht so tun, als hätten wir das nie besprochen.
+  - ok vielleicht hab ich das ein BISSCHEN anders formuliert. aber trotzdem.
+  - Ich sage ja nur, was alle denken. Das ist doch bekannt.
+  - Sehr geehrter Herr Keller, Sie haben in der letzten Sitzung selbst betont, dass... Ihr damaliges Commitment gilt doch noch?
+  - Du pickst dir immer die Sachen raus, die dir passen, und den Rest ignorierst du.
+  - Kann sein dass das nicht 100% stimmt aber der Kern ist richtig und das weißt du auch.
+  - Ich hab nie was anderes behauptet. Du erinnerst dich falsch.
+  - Klar, wenn du nur die negativen Sachen siehst, dann sieht das schlecht aus.
+  - Du hast damals nicht widersprochen. Das ist für mich eine Zustimmung.
+  - Ja ich hab mich korrigiert, na und? Der ursprüngliche Punkt steht.
+  - Das ist doch eine Kleinigkeit. Lass uns beim Wesentlichen bleiben - und da hab ich Recht.
+  - du verdrehst alles. ich hab das GENAUSO gesagt wie jetzt
+  - Mag sein, dass ein Detail nicht stimmt. Aber die Tendenz ist eindeutig.
+  - Du hast das doch auch so empfunden! Sag jetzt nicht, das war anders.
+  - Ich hab halt weiche Zusagen gemacht, das stimmt. Aber du hast sie als fest interpretiert.
+  - 'Nee, das war so: Ich hab gesagt vielleicht, du hast ja gehört, und jetzt ist es meine Schuld?'
+  - Also entweder hast du damals gelogen oder du lügst jetzt. Beides geht nicht.
+  - Das ist ja wohl offensichtlich. Brauche ich da wirklich Beweise?
+  - Guck dir die Zahlen an - also die, die relevant sind.
+  - hab ich so gesagt ja. und? ändert nichts an der sache
+  - Du nimmst immer alles so wörtlich. Das war doch nicht so gemeint.
+  - Sehr geehrte Damen und Herren, wie bereits kommuniziert, haben Sie der Vereinbarung implizit zugestimmt.
+  - Ich sagte, ich würde es versuchen. Das heißt nicht, dass ich es versprochen habe.
+  - Na komm, du hast doch selbst zugegeben, dass es so war.
+  - Die Statistik sagt was anderes - okay nicht diese Statistik, aber eine andere.
+  - Du kannst nicht einfach deine Meinung ändern nachdem du zugesagt hast.
+  - Mag ja sein dass ich das gesagt hab, aber das war in einem anderen Kontext.
+  - Tja, da hast du halt nicht aufgepasst. Ich hab das klar gesagt.
+  - Das war immer schon so und das weißt du.
+  - Ich hab mich vielleicht geirrt, aber du hast dich auch geirrt. Also sind wir quitt.
+  - naja ich hab halt gesagt ich guck mal. das ist keine zusage oder?
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich denke, wir sollten das in Ruhe besprechen.
+  - Das ist ein guter Punkt von dir.
+  - Ich verstehe deine Sichtweise.
+  - Lass uns gemeinsam eine Lösung finden.
+  - Stimmt, da habe ich mich geirrt. Tut mir leid.
+  - Du hast Recht, meine Argumentation war nicht stichhaltig.
+  - Ich muss meine Position überdenken, danke für den Hinweis.
+  - Ja, ich hab das anders gesagt als ich es jetzt sehe. Ich hab meine Meinung geändert.
+  - Ich war unsicher und hab das auch so kommuniziert.
+  - Wir sehen das unterschiedlich, und das ist okay.
+  - Ich möchte verstehen, was du meinst.
+  - Da hast du einen Punkt, den hatte ich nicht bedacht.
+  - Ich bin offen für andere Perspektiven.
+  - Stimmt, ich war da nicht konsequent. Das tut mir leid.
+  - Ich hab mich geirrt und stehe dazu.
+  - Lass mich nochmal darüber nachdenken.
+  - Die Fakten sprechen eine andere Sprache, ich muss mich korrigieren.
+  - Ich hab das falsch dargestellt, entschuldige.
+  - Du hast ein besseres Argument, das überzeugt mich.
+  - Ich war da wohl voreingenommen, danke fürs Aufzeigen.
+  - Klar, das sehe ich anders, aber ich respektiere deine Sicht.
+  - Ich hatte nicht alle Informationen, als ich das gesagt habe.
+  - Fair point, da muss ich nochmal drüber nachdenken.
+  - Du hast absolut Recht, ich war nicht fair in meiner Darstellung.
+  - Ich gebe zu, mein Argument war schwach an der Stelle.
 tags:
 - bias
 - consistency

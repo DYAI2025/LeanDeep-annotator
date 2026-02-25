@@ -23,6 +23,46 @@ examples:
   - "Übertreibung."
   - "Kein Ding."
   - "Bagatelle."
+  - Stell dich nicht so an, war doch nur ein Spaß.
+  - Das ist echt nicht der Rede wert.
+  - Andere haben viel schlimmere Probleme.
+  - Ach komm, so dramatisch war das doch nicht.
+  - Du machst daraus ein Riesending, dabei war es nichts.
+  - Jetzt übertreibst du aber wirklich maßlos.
+  - So schlimm war das doch gar nicht.
+  - Reiß dich mal zusammen, das ist doch kein Weltuntergang.
+  - Das passiert jedem mal, mach nicht so ein Theater.
+  - Du bläst das total auf.
+  - War doch nur eine Kleinigkeit, reg dich ab.
+  - Jetzt mach mal halblang, so ernst ist das nicht.
+  - Das ist wirklich kein Grund, sich aufzuregen.
+  - Ach, das war doch harmlos.
+  - Vergiss es einfach, ist nicht wichtig.
+  - Das ist ein Sturm im Wasserglas.
+  - Mach dir keinen Kopf, das ist völlig normal.
+  - Sei nicht so empfindlich, das war nichts.
+  - Ist doch kein Beinbruch, weiter gehts.
+  - Das war jetzt nicht so tragisch, oder?
+  - Komm, das regelt sich von alleine.
+  - So tragisch ist das auch wieder nicht.
+  - Du regst dich wegen jedem bisschen auf.
+  - Chill mal, das ist nicht so wild.
+  - Das ist eine Lappalie, lass das nicht so an dich ran.
+  - Sind doch nur Worte, nimm das nicht persönlich.
+  - Halb so schlimm, morgen hast du das vergessen.
+  - Ach, das wird schon wieder, mach dir keine Sorgen.
+  - Du nimmst alles viel zu ernst.
+  - Ich verstehe gar nicht, warum du dich so aufregst.
+  - Du bist ein bisschen zu sensibel für so was.
+  - Das stört doch nur dich, alle anderen finden es okay.
+  - Mach mal locker, das ist doch Alltag.
+  - Das war ein Versehen, mehr nicht.
+  - Jetzt sei mal nicht so nachtragend.
+  - Schwamm drüber, weiter im Text.
+  - Ich finde, du interpretierst da zu viel rein.
+  - Es gibt Schlimmeres auf der Welt.
+  - Mach es nicht größer als es ist.
+  - Ist doch nicht persönlich gemeint gewesen.
   negative_de:
   - "Großes Problem."
   - "Ernst nehmen."
@@ -34,6 +74,21 @@ examples:
   - "Eskaliert."
   - "Ernsthaft."
   - "Nicht herunterspielen."
+  - Ich verstehe, dass dich das verletzt hat.
+  - Das ist ein ernstes Thema, wir sollten darüber reden.
+  - Deine Gefühle sind berechtigt.
+  - Das war nicht okay, und ich nehme das ernst.
+  - Das ist ein wichtiges Anliegen, lass uns das klären.
+  - Ich höre, wie sehr dich das belastet.
+  - Das Thema verdient unsere volle Aufmerksamkeit.
+  - Dein Schmerz ist real, das will ich nicht kleinreden.
+  - Ich nehme das ernst und will helfen.
+  - Du hast jedes Recht, dich so zu fühlen.
+  - Das ist alles andere als eine Kleinigkeit.
+  - Ich verstehe, dass das wichtig für dich ist.
+  - Lass uns das gemeinsam aufarbeiten, das verdient Raum.
+  - Deine Reaktion ist völlig angemessen.
+  - Ich will das nicht unter den Tisch kehren.
 semiotic:
   mode: symbolic
   level: pragmatic

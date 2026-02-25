@@ -19,14 +19,77 @@ examples:
   - Bestätigungsglaube ohne Abwägung
   - Anker bleibt, kein Gegenbeispiel
   - Grenze verletzt – kein Repair
+  - 'A: Du machst das immer falsch. B: Nein mach ich nicht. A: Doch! B: [kein Beleg, keine Klaerung]'
+  - 'A: Das stimmt so nicht. B: Doch. [Kein Beispiel, kein Beweis, keine Erklaerung]'
+  - Behauptung aufgestellt, widersprochen bekommen, aber nie konkret belegt. Ueber 10 Nachrichten.
+  - Inkonsistenz angesprochen, aber weder Korrektur noch Erklaerung. Thema wechselt einfach.
+  - Partner verletzt Grenze, wird darauf hingewiesen, ignoriert es komplett. Kein Repair.
+  - 'A: Das ist unfair! B: Findest du? [Kein Gegenargument, kein Einlenken, kein Beleg]'
+  - Vorwurf -> Gegenvorwurf -> kein Einlenken -> kein Beweis -> Thema stirbt.
+  - 'Bias erkennbar: Nur eigene Sicht dargestellt, nie anderer Standpunkt erwaegt. Kein Gegenbeispiel.'
+  - 'A: Du sagst immer das Gleiche. B: Nein! A: Doch! [Keine Evidenz von beiden Seiten]'
+  - 'Ueber 8 Nachrichten: Behauptung steht im Raum, wird weder belegt noch zurueckgenommen.'
+  - Grenze klar benannt, Partner reagiert nicht darauf. Kein Repair, kein Eingestehen.
+  - 'Ankerbias: Erste Aussage dominiert, auch nachdem Widerspruch kam. Keine Korrektur.'
+  - Versprechen gebrochen -> angesprochen -> Thema gewechselt -> nie wieder aufgegriffen.
+  - 'A sagt: Das stimmt nicht. B sagt: Doch. Keiner liefert Evidenz. Dialog dreht sich im Kreis.'
+  - Nach Vorwurf keine Entschuldigung, keine Erklaerung, kein Versuch der Wiedergutmachung.
+  - 'Therapeut bemerkt: Patient zeigt Bias, aber bringt kein einziges Gegenbeispiel. Auch nicht auf Nachfrage.'
+  - Fehler passiert, angesprochen, ignoriert. Kein Repair, kein Plan zur Verbesserung.
+  - Verletzung -> Konfrontation -> Schweigen -> neues Thema. Der Riss bleibt.
+  - 'Ueber das gesamte Gespraech: Nur Bestaetigungsbias, keine kritische Abwaegung, kein Hinterfragen.'
+  - 'A: Du hast meine Grenze ueberschritten. B: [antwortet nicht darauf, redet ueber anderes]'
+  - 'Muster: Fehler machen, nicht zugeben, nicht reparieren, so tun als waere nichts passiert.'
+  - Partner kritisiert, bekommt sachliche Antwort, ignoriert die Antwort komplett. Kein Repair.
+  - Behauptung gegen Behauptung, 12 Nachrichten lang. Nie ein Beweis, nie ein Einlenken.
+  - 'Konfliktsituation: Beide Seiten behaupten recht zu haben, keiner bringt Belege.'
+  - Fehler zugeben waere moeglich, wird aber nicht getan. Stattdessen Ablenkung.
+  - 'A: Du hast mich verletzt. [10 Nachrichten spaeter: nie aufgegriffen, nie repariert]'
+  - 'Kein Repair nach Streit: Einfach weitermachen als waere nichts gewesen.'
+  - 'Im Chat: Bias sichtbar, keine Evidenz geliefert, kein Gegenargument erwaegt.'
+  - Versprechen gebrochen, darauf angesprochen, abgestritten. Kein Repair, keine Beweise.
+  - 'Ueber Wochen: Gleiche Behauptung, nie belegt, nie hinterfragt, nie korrigiert.'
+  - 'A: Das stimmt doch gar nicht! B: Doch! A: Beweis mal! B: [Schweigen] A: Siehste.'
+  - 'Muster ueber 15 Nachrichten: Bias -> Widerspruch -> kein Beleg -> kein Repair -> Eskalation.'
+  - 'Paar-Dynamik: Fehler passieren, werden nie repariert, haeufen sich an.'
+  - Keiner der beiden bringt je ein konkretes Beispiel. Nur Gefuehle, keine Fakten.
+  - 'Nach dem Streit: Kein Sorry, kein Erklaeren, kein Aufraemen. Einfach Schweigen.'
+  - 'Im Team: Problem benannt, keiner liefert Loesung, kein Repair. Thema versandet.'
+  - 'A: Das war gemein. B: Nee, war es nicht. [12 Nachrichten ohne Repair oder Evidenz]'
+  - Verletzung angesprochen -> weggewischt -> nie wieder thematisiert. Der Riss wächst.
+  - 'Chat zeigt: Behauptung ohne Beleg, Kritik ohne Konstruktives, Konflikt ohne Repair.'
+  - 'Therapeut notiert: In 50 Nachrichten kein einziges Repair-Signal nach klar benanntem Konflikt.'
+  - 'Bias bleibt stehen: Keine Gegenperspektive eingenommen, kein Fakt geprueft, kein Fehler eingestanden.'
+  - 'Laengerer Abschnitt ohne jede Evidenz: Nur Behauptungen, Gefuehle, keine Fakten.'
+  - 'Muster: Kritik -> Abwehr -> kein Repair -> Eskalation -> Schweigen. Immer wieder.'
+  - Inkonsistenz festgestellt, nie aufgeklaert. Ueber den gesamten Gespraechsverlauf.
+  - Widerspruch bemerkt, nicht adressiert. 15 Nachrichten lang ignoriert. Kein Repair.
   negative:
-  - Inkonsistenz – wenige Klarstellung
-  - Anker bleibt, wenige Gegenbeispiel
-  - Grenze verletzt – wenige Repair
-  - Can you pass the salt?
-  - The meeting is at 2 PM.
-  - I went shopping yesterday.
-  - The weather should be better tomorrow.
+  - 'A: Das stimmt nicht. B: Stimmt, ich habe mich vertan. Hier ist die richtige Zahl.'
+  - 'A: Du hast meine Grenze ueberschritten. B: Ja, tut mir leid. Wie kann ich das reparieren?'
+  - 'A: Deine Aussage widerspricht dem, was du vorhin gesagt hast. B: Du hast recht, lass mich das klaeren.'
+  - 'A: Ich sehe das anders. B: Okay, hier sind meine Gruende. Was sagst du dazu?'
+  - Fehler gemacht, erkannt, repariert. So soll es laufen.
+  - 'A: Das war verletzend. B: Entschuldigung, das war nicht meine Absicht. Lass uns drueber reden.'
+  - Vorwurf bekommen, Beleg geliefert, Missverstaendnis aufgeklaert.
+  - 'A: Stimmt das? B: Ja, hier der Beweis. A: Okay, danke fuer die Klaerung.'
+  - Bias wurde angesprochen und dann korrigiert. Guter Verlauf.
+  - Inkonsistenz bemerkt, sofort klargestellt, Danke gesagt.
+  - 'A: Du widersprichst dir. B: Stimmt, ich korrigiere mich. Hier die richtige Version.'
+  - Grenze verletzt, angesprochen, Entschuldigung und konkreter Repair.
+  - Partner hat Fehler zugegeben und aktiv repariert.
+  - 'A: Hast du dafuer einen Beweis? B: Ja, schau hier. A: Danke, jetzt verstehe ich.'
+  - 'Nach dem Streit: Beide setzen sich zusammen und klaeren die Situation.'
+  - 'A: Das hat mich verletzt. B: Es tut mir leid. Was kann ich besser machen?'
+  - Missverstaendnis aufgeklaert, Evidenz geliefert, Repair gelungen.
+  - Fehler eingestanden, Loesung vorgeschlagen, umgesetzt.
+  - 'A: Ich glaube du irrst dich. B: Lass mich nochmal pruefen. Du hattest recht.'
+  - Bias erkannt, Gegenperspektive eingenommen, korrigiert.
+  - Kritik angenommen, reflektiert, konkret verbessert.
+  - 'A: Wir hatten einen Streit. B: Ja, lass uns das klären. A: Danke, das wollte ich.'
+  - 'Repair nach Konfrontation: Entschuldigung, Erklaerung, Verhaltensaenderung.'
+  - 'A: Hier ist mein Beleg. B: Okay, dann hatte ich unrecht. Danke.'
+  - 'Nach dem Streit aktiv repariert: Gespraech gesucht, zugehoert, entschuldigt.'
 tags:
 - meta
 - absence

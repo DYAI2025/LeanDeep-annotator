@@ -40,6 +40,8 @@ tags:
 - projection
 - text
 rating: 1
+activation:
+  rule: "ANY 1"
 vad_estimate:
   valence: 0.0
   arousal: 0.3
@@ -48,8 +50,6 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
-activation:
-  rule: "ANY 1"
 metadata:
   repair_log:
   - rule: "R09"

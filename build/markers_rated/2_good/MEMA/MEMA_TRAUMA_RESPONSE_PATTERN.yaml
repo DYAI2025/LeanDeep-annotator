@@ -1,0 +1,104 @@
+id: MEMA_TRAUMA_RESPONSE_PATTERN
+version: "3.4"
+frame:
+  signal: ["trauma", "response"]
+  concept: "Trauma-Antwortmuster: Fight/Flight/Freeze/Fawn im Beziehungskontext"
+  pragmatics: "Erkennt traumabedingte Reaktionsmuster in der Kommunikation"
+  narrative: "meta_pattern"
+tags: [mema, trauma, response, fight_flight_freeze, fawn]
+composed_of:
+  required_any:
+  - SEM_EMOTIONAL_OVERWHELM
+  - CLU_EMOTIONAL_ESCALATION
+  supportive:
+  - SEM_SHAME_SIGNAL
+  - ATO_WITHDRAWAL
+activation:
+  rule: "ANY 2 IN 15 messages"
+scoring:
+  base: 2.0
+  weight: 1.4
+examples:
+  positive_de:
+  - "Wenn du die Stimme erhebst, erstarre ich komplett. Das ist mein Muster aus der Kindheit."
+  - "Ich merke, dass ich in Konflikten immer sofort fliehe – das kommt von früher."
+  - "Immer wenn du sauer wirst, fange ich an zu weinen und kann nicht mehr denken."
+  - "Ich werde in Stresssituationen aggressiv, obwohl ich das nicht will."
+  - "Bei Kritik mache ich komplett dicht – mein Körper schaltet ab."
+  - "Ich stimme dir in allem zu, nur damit kein Streit entsteht. Das ist mein Überlebensmodus."
+  - "Wenn du die Tür laut zumachst, kriege ich Panik."
+  - "Ich kann nicht streiten. Mein Körper geht in den Notfallmodus."
+  - "Jedes Mal wenn du schreist, bin ich wieder das kleine Kind."
+  - "Ich fawne – ich mache alles, was du willst, nur damit du nicht böse bist."
+  - "Bei Konflikten erstarrt mein ganzer Körper. Ich kann dann weder denken noch sprechen."
+  - "Ich renne weg, sobald es emotional wird. Buchstäblich."
+  - "Mein Körper reagiert schneller als mein Verstand – Fight-Modus."
+  - "Wenn du mich ignorierst, triggert das meine Verlassenheitsangst."
+  - "Ich dissoziiere, wenn es zu viel wird. Dann bin ich nicht mehr da."
+  - "Ich werde überangepasst, um Konflikte zu vermeiden – Fawn-Modus."
+  - "Mein Herz rast, ich schwitze, ich kann nicht klar denken – klassische Trauma-Reaktion."
+  - "Bei lauten Stimmen zucke ich zusammen und will nur noch weg."
+  - "Ich merke, dass meine Reaktion nichts mit dir zu tun hat, sondern mit meiner Vergangenheit."
+  - "Wenn du drohst zu gehen, werde ich zu einem anderen Menschen."
+  - "Ich bin hypervigilant – ich lese deine Stimmung, bevor du überhaupt was sagst."
+  - "Mein Fluchtinstinkt wird getriggert, obwohl keine echte Gefahr besteht."
+  - "Ich kann bei Streit keine klaren Gedanken fassen. Mein Gehirn schaltet aus."
+  - "Ich hab Flashbacks, wenn du so mit mir redest."
+  - "Mein Freeze-Modus macht mich stumm – und du denkst, es ist mir egal."
+  - "Ich werde unterwürfig, wenn ich Angst habe – das ist mein Überlebensmuster."
+  - "Bei jeder Unstimmigkeit schaltet mein Nervensystem auf Alarm."
+  - "Ich bin in einem Kampf-oder-Flucht-Zustand, auch wenn wir nur reden."
+  - "Mein Körper erinnert sich an Dinge, die mein Verstand verdrängt hat."
+  - "Wenn du die Stimme erhebst, höre ich nicht dich – ich höre meinen Vater."
+  - "Ich appease dich automatisch, weil ich gelernt habe, dass Widerstand gefährlich ist."
+  - "Mein Trauma macht mich unberechenbar in Konfliktsituationen."
+  - "Ich gehe in den Kampfmodus, obwohl du nur eine Frage gestellt hast."
+  - "Bei jedem Streit fühle ich mich wie in Lebensgefahr."
+  - "Ich werde taub im Körper, wenn es emotional wird."
+  - "Mein Nervensystem ist ständig auf Hochalarm."
+  - "Ich reagiere unverhältnismäßig, weil alte Wunden aufbrechen."
+  - "Mein Instinkt sagt: Gefahr. Mein Verstand sagt: Es ist nur ein Gespräch."
+  - "Ich bin in einer Trauma-Schleife gefangen."
+  - "Wenn du sagst 'wir müssen reden', bekomme ich sofort Herzrasen."
+  - "Ich kann nicht zwischen damals und heute unterscheiden in solchen Momenten."
+  - "Meine Reaktion ist automatisch: anpassen, gefallen, unsichtbar werden."
+  - "Ich wurde getriggert und konnte nur noch reagieren, nicht mehr denken."
+  - "Mein Schutzmechanismus ist Angriff – obwohl ich eigentlich Angst habe."
+  - "Bei Ablehnung schaltet mein System auf Selbstzerstörung."
+  - "Ich merke meine Trigger, aber ich kann sie nicht kontrollieren."
+  - "Meine Trauma-Antwort ist: alles für den anderen tun und mich selbst vergessen."
+  - "Mein Körper weiß es noch, auch wenn ich es verdrängt habe."
+  - "Ich bin hyperaroused in Konflikten – mein Puls ist auf 180."
+  - "Jede Kritik fühlt sich an wie ein Angriff auf mein ganzes Sein."
+  negative_de:
+  - "Ich bin manchmal genervt, aber ich kann damit umgehen."
+  - "Wir streiten, aber ich bleibe ruhig und sachlich."
+  - "Ich fühle mich unwohl, aber ich kann trotzdem klar denken."
+  - "Konflikte sind stressig, aber ich halte sie aus."
+  - "Ich bin ärgerlich, aber nicht überwältigt."
+  - "Streit ist unangenehm, aber ich kann mich artikulieren."
+  - "Ich bin traurig, aber ich kann darüber reden."
+  - "Die Situation ist angespannt, aber ich fühle mich nicht bedroht."
+  - "Ich bin frustriert, aber ich weiß, dass es vorübergeht."
+  - "Wir haben verschiedene Meinungen und das ist okay."
+  - "Ich bin nicht begeistert von der Diskussion, aber ich bin präsent."
+  - "Konflikte machen mir keinen Spaß, aber ich kann konstruktiv bleiben."
+  - "Ich brauche eine Pause, weil ich müde bin – nicht weil ich fliehe."
+  - "Ich bin anderer Meinung, aber ich fühle mich sicher genug, das zu sagen."
+  - "Wir sind uns uneinig, aber ich fühle mich nicht in Gefahr."
+  - "Ich brauche Abstand, um nachzudenken – nicht um zu flüchten."
+  - "Der Streit war heftig, aber ich konnte bei mir bleiben."
+  - "Ich war ärgerlich, aber ich habe nicht die Kontrolle verloren."
+  - "Ich kann über schwierige Dinge reden, ohne dass mein Körper verrücktspielt."
+  - "Die Situation war stressig, aber handhab bar."
+  - "Ich fühle mich verletzt, aber ich kann das ausdrücken."
+  - "Wir haben gestritten, aber danach konnten wir vernünftig reden."
+  - "Ich bin emotional, aber nicht überflutet."
+  - "Konflikte sind Teil des Lebens – ich kann damit umgehen."
+  - "Ich war aufgebracht, aber es hat sich wieder gelegt."
+semiotic:
+  peirce: icon
+  signifikat: Panik/Krise
+  framing_type: ueberflutung
+  cultural_frame: Emotionsregulation
+  myth: Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet

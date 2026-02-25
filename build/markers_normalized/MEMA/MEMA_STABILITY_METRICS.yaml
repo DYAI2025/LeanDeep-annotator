@@ -1,0 +1,116 @@
+id: MEMA_STABILITY_METRICS
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - stability
+  - metrics
+  concept: Stabilitätsmetriken – Indikatoren für Beziehungsstabilität
+  pragmatics: Erkennt Signale, die auf stabile oder instabile Beziehungszustände hinweisen
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Wir haben seit drei Monaten keinen Streit mehr, der eskaliert ist.
+  - Unsere Kommunikation ist stabil – regelmäßig, respektvoll, offen.
+  - Wir können jetzt über schwierige Themen reden, ohne auszurasten.
+  - Die Beziehung fühlt sich gerade sicher und vorhersagbar an.
+  - Wir haben einen guten Rhythmus gefunden.
+  - Es gibt Vertrauen, Verlässlichkeit und Beständigkeit bei uns.
+  - Unsere Konflikte sind seltener und weniger intensiv geworden.
+  - Ich fühle mich sicher in unserer Beziehung.
+  - Wir haben stabile Routinen, die uns tragen.
+  - Die Stimmung zwischen uns ist ausgeglichen und warm.
+  - Wir meistern Herausforderungen, ohne die Beziehung zu gefährden.
+  - Es herrscht Stabilität – emotional und organisatorisch.
+  - Unsere Beziehung hat sich gefestigt.
+  - Wir haben eine gute Basis – auch wenn es mal ruckelt.
+  - Die Frequenz unserer Konflikte hat deutlich abgenommen.
+  - Wir finden schneller zurück zueinander als früher.
+  - Es gibt eine Grundzufriedenheit bei uns.
+  - Unsere Reparaturfähigkeit ist besser geworden.
+  - Wir sind berechenbarer füreinander – im positiven Sinne.
+  - Die Beziehung trägt auch unter Belastung.
+  - Wir haben ein starkes Fundament aufgebaut.
+  - Unsere Streitkultur hat sich verbessert.
+  - Es gibt mehr gute als schlechte Tage.
+  - Wir sind emotional stabiler als vor einem Jahr.
+  - Unsere Beziehung ist wetterfest geworden.
+  - Die Schwankungen sind weniger extrem als früher.
+  - Wir haben gelernt, einander Halt zu geben.
+  - Unsere Beziehungsqualität ist konstant hoch.
+  - Wir können Stress aushalten, ohne uns gegenseitig anzugreifen.
+  - Es gibt eine gesunde Balance zwischen Nähe und Distanz.
+  - Wir sind eingespielt und vertrauen dem Prozess.
+  - Unsere Kommunikation ist klar und regelmäßig.
+  - Wir haben Rituale, die uns verbinden und stabilisieren.
+  - Die Beziehung ist ein sicherer Hafen geworden.
+  - Wir können Meinungsverschiedenheiten aushalten, ohne sie zu eskalieren.
+  - Unsere emotionale Temperatur ist stabil.
+  - Wir sind zuverlässig füreinander.
+  - Die Basis stimmt – darauf können wir aufbauen.
+  - Unsere Beziehung ist resilient.
+  - Wir haben eine stabile Verbindung – trotz Herausforderungen.
+  - Es gibt Vorhersagbarkeit und Sicherheit bei uns.
+  - Unsere Partnerschaft ist belastbar.
+  - Die Stabilität gibt mir Vertrauen in die Zukunft.
+  - Wir sind geerdet und stabil – gemeinsam.
+  - Unsere Beziehungsdynamik ist gesund.
+  - Es gibt weniger Drama und mehr Substanz.
+  - Wir haben eine solide Basis geschaffen.
+  - Unsere Interaktion ist konstruktiv und beständig.
+  - Stabilität ist unser Markenzeichen geworden.
+  - Wir haben die turbulente Phase hinter uns gelassen.
+  negative:
+  - Alles ist instabil – ich weiß nie, wie morgen wird.
+  - Unsere Beziehung schwankt ständig zwischen gut und katastrophal.
+  - Es gibt keine Vorhersagbarkeit bei uns.
+  - Jeden Tag ein anderes Drama.
+  - Ich fühle mich unsicher in dieser Beziehung.
+  - Es gibt keine Stabilität – alles ist im Wandel.
+  - Wir sind wie ein Schiff im Sturm – unkontrollierbar.
+  - Die Beziehung ist ein ständiges Auf und Ab.
+  - Ich weiß nie, wo ich stehe.
+  - Es gibt keine Verlässlichkeit bei uns.
+  - Unsere Stimmung wechselt ständig und unvorhersehbar.
+  - Kein Tag ist wie der andere – und nicht im guten Sinne.
+  - Unsere Beziehung ist wie ein Kartenhaus.
+  - Es gibt keinen festen Boden unter meinen Füßen.
+  - Die Instabilität macht mich fertig.
+  - Wir taumeln von Krise zu Krise.
+  - Es gibt keine Sicherheit in unserer Beziehung.
+  - Alles fühlt sich fragil an.
+  - Die Basis bröckelt.
+  - Jeden Tag könnte alles zusammenbrechen.
+  - Unsere Beziehung ist unberechenbar.
+  - Es gibt keine Konstanz – nur Chaos.
+  - Ich lebe in ständiger Unsicherheit.
+  - Die Schwankungen zerreißen mich.
+  - Nichts fühlt sich sicher an bei uns.
+tags:
+- mema
+- stability
+- metrics
+- assessment
+rating: 2
+composed_of:
+  required_any:
+  - CLU_AGREE_TO_DISAGREE
+  - SEM_EMPATHIC_RESONANCE
+  supportive:
+  - SEM_SYSTEMS_THINKING
+  - ATO_PROBLEM_SOLVING
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.1
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

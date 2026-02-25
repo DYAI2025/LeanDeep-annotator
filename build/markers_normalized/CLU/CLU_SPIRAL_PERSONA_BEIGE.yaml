@@ -13,19 +13,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - Überlebensmodus übernimmt komplett
-  - instinktive Reaktionskette
-  - primitive Angstreaktionen
-  - Flucht-Kampf-Zyklus
-  - Grundbedürfnis-Fokus dominiert
+  - Überlebensmodus übernimmt komplett.
+  - Instinktive Reaktionskette.
+  - Primitive Angstreaktionen.
+  - Flucht-Kampf-Zyklus.
+  - Grundbedürfnis-Fokus dominiert.
+  - Ich brauche Essen, Wasser, Schlaf. Alles andere ist mir egal.
+  - Ich funktioniere nur noch auf Autopilot. Überleben, mehr nicht.
+  - Mein Körper reagiert, bevor ich denken kann. Reine Angst.
+  - Ich muss hier weg. Sofort. Egal wohin.
+  - Ich zittere, mein Herz rast, ich kann nicht mehr klar denken.
+  - ich brauch jetzt was zu essen, kann nicht mehr nachdenken
+  - 'Alles in mir schreit: FLUCHT. Nichts anderes existiert gerade.'
+  - Ich schlafe nicht mehr. Ich esse kaum. Ich überlebe nur noch.
+  - 'Mein Instinkt sagt: Gefahr. Mein Körper folgt.'
+  - Ich bin so erschöpft, dass ich nur noch atmen kann. Mehr geht nicht.
+  - Grundbedürfnisse. Dach über dem Kopf. Essen. Sicherheit. Mehr brauche ich nicht.
+  - Ich reagiere nur noch reflexartig. Denken ist ausgeschaltet.
+  - Kampf oder Flucht - das sind meine einzigen Optionen gerade.
+  - Ich habe Angst, einfach nur nackte Angst. Wie ein Tier.
+  - Alles ist auf Überleben reduziert. Nichts anderes zählt.
+  - mir is kalt, hab hunger, brauch schlaf. mehr gibts grad nicht
+  - Ich fühle mich wie ein gehetztes Tier.
+  - Mein ganzer Körper ist im Alarmzustand. Reine Instinkte.
+  - Ich kann nicht planen, nicht denken. Nur reagieren.
+  - Die Panik hat mich fest im Griff. Ich handle blind.
+  - Wärme, Nahrung, Schutz - das ist alles, woran ich denken kann.
+  - Mein Nervensystem ist im Überlebensmodus. Total dysreguliert.
+  - Ich erfriere fast, ich brauche sofort einen warmen Ort.
+  - Flucht. Einfach nur weg. Weg von allem.
+  - ich kann nix mehr. nur noch atmen. überleben. fertig
+  - Der Instinkt hat die Kontrolle übernommen, Vernunft ist ausgeschaltet.
+  - Ich fühle mich bedroht auf einer elementaren Ebene.
+  - Essen, Trinken, Schlafen - der Rest existiert nicht.
+  - Mein Körper schaltet auf Notfallmodus. Adrenalin pur.
+  - 'Alles schrumpft auf das Wesentliche: Bin ich sicher?'
+  - Ich reagiere wie auf Urinstinkt. Keine Reflexion möglich.
+  - Die Angst ist so primitiv, so tief. Wie aus der Steinzeit.
+  - Ich brauche Schutz. Jetzt. Sofort.
+  - ich funktionier nicht mehr. nur noch grundfunktionen. essen trinken atmen
+  - Mein Puls rast, meine Hände zittern, ich bin im reinen Stressmodus.
+  - Alles andere ist mir egal. Ich will nur überleben.
+  - 'Das Einzige was zählt ist: Bin ich in Sicherheit?'
+  - Instinkt übernimmt. Ratio ist offline.
+  - Ich fühle mich wie ausgeliefert. Hilflos. Primitiv.
+  - Existenzangst auf der grundlegendsten Ebene.
+  - Mein ganzer Körper schreit FLUCHT. Nichts anderes existiert.
+  - Ich kann nicht denken, nicht planen, nur reagieren. Reiner Überlebenstrieb.
+  - Kalt, Hunger, Angst - das ist alles was gerade da ist.
+  - ich brauch wasser. essen. schutz. jetzt. sofort. nix anderes zählt
+  - 'Alles ist auf das Elementarste reduziert: Überleben. Atmen. Aushalten.'
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich bin gestresst, aber ich kann damit umgehen.
+  - Es ist eine schwierige Situation, aber ich bleibe ruhig.
+  - Ich habe Angst, aber ich kann trotzdem klar denken.
+  - Mir fehlt es an nichts Grundlegendem.
+  - Ich bin erschöpft, aber funktionsfähig.
+  - Die Situation ist herausfordernd, aber nicht bedrohlich.
+  - Ich fühle mich unwohl, aber nicht in Gefahr.
+  - Stress ja, Panik nein.
+  - ich bin müde, aber mir geht es sonst ok
+  - Es ist anstrengend, aber ich habe alles was ich brauche.
+  - Mein Körper reagiert auf Stress, aber ich reguliere mich.
+  - Nervös ja, aber nicht in Angst.
+  - Es geht mir nicht gut, aber ich bin sicher.
+  - Ich habe Sorgen, aber keine existenziellen Ängste.
+  - Schwierige Phase, aber ich habe Unterstützung.
+  - Ich bin angespannt, aber nicht am Limit.
+  - Die Lage ist ernst, aber kontrollierbar.
+  - Ich schlafe schlecht, aber ich ernähre mich gut.
+  - Unangenehm ja, lebensbedrohlich nein.
+  - Ich habe Ressourcen und Rückhalt.
+  - Es ist stressig, aber machbar.
+  - Mir geht es besser als es aussieht.
+  - ich bin unter druck, aber ich pack das
+  - Herausfordernd, aber nicht überwältigend.
+  - Ich fühle mich unter Druck, aber sicher.
 tags: []
 rating: 2
 composed_of:

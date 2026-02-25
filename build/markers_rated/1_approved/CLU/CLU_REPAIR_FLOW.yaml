@@ -35,6 +35,46 @@ examples:
   - 'Abschluss: Ok.'
   - Klärung einleiten.
   - Empathie zeigen.
+  - "Ich merke dass das zwischen uns nicht stimmt, können wir darüber reden?"
+  - "Tut mir leid für vorhin, das war nicht ok, ich bin für dich da"
+  - "Ich möchte das klären, damit wir wieder gut miteinander sind"
+  - "Entschuldige meinen Ausbruch, ich verstehe warum dich das verletzt hat"
+  - "Lass uns das Thema abschließen, ich schlage vor wir einigen uns auf X"
+  - "Ich höre dir zu und nehme deine Gefühle ernst, erzähl mir alles"
+  - "Wir haben uns gestritten aber ich will dass wir das hinter uns lassen"
+  - "Mein Ton war nicht angemessen, ich entschuldige mich dafür aufrichtig"
+  - "Ich bin bereit zuzuhören und einen Kompromiss zu finden"
+  - "Bestätigt, der Konfliktpunkt ist damit für mich erledigt"
+  - "Ich sehe dass du leidest und ich will helfen, sag mir wie"
+  - "Können wir das abhaken und nach vorne schauen? Ich verzeihe dir"
+  - "Ich fühle mit dir, das muss schwer gewesen sein, ich bin hier"
+  - "Ok, einverstanden, wir schließen das Kapitel und fangen frisch an"
+  - "Du hattest recht, ich war stur, lass uns das jetzt lösen"
+  - "Ich schlage vor wir reden morgen nochmal in Ruhe, ok?"
+  - "Deine Perspektive leuchtet mir ein, danke fürs Erklären"
+  - "Ich bin bereit das zu akzeptieren, Hauptsache wir sind wieder gut"
+  - "Lass uns das Thema endlich abschließen, ich will keinen Streit mehr"
+  - "Ich stehe zu meinem Fehler und will es wiedergutmachen"
+  - "Wir haben das zusammen durchgestanden, jetzt wird es besser"
+  - "Confirmed, ich bin einverstanden, wir machen das so"
+  - "Ich will dich nicht verlieren wegen sowas, lass uns reden"
+  - "Mein Vorschlag zur Lösung: jeder macht einen Schritt aufeinander zu"
+  - "Ich höre was du sagst und es tut mir leid, wirklich"
+  - "Abgemacht, wir legen das zur Seite und gehen positiv weiter"
+  - "Dankeschön dass du so ehrlich warst, das hilft uns beiden"
+  - "Ich fasse zusammen: wir sind uns einig, der Punkt ist geklärt"
+  - "Es tut mir weh dass du so fühlst, was kann ich tun?"
+  - "Gut, dann ist das Thema durch, ich bin erleichtert"
+  - "Ich hab nachgedacht und du hattest in vielen Punkten recht, sorry"
+  - "Wollen wir es damit gut sein lassen? Ich möchte Frieden"
+  - "Danke für deine Geduld mit mir, das schätze ich sehr"
+  - "Ich übernehme Verantwortung und schlage einen konkreten nächsten Schritt vor"
+  - "Das Gespräch hat geholfen, ich fühle mich schon besser, danke"
+  - "Einigung erzielt, ich schließe das Ticket mental ab"
+  - "Dein Feedback war hart aber fair, ich nehme es an"
+  - "Wir haben uns ausgesprochen, jetzt kann ich loslassen"
+  - "Ich bin dankbar dass wir das klären konnten, das war wichtig"
+  - "Ok bestätigt, Punkt erledigt, wir gehen versöhnt weiter"
   negative_de:
   - Ignorier das.
   - Kein Bedarf.
@@ -46,6 +86,21 @@ examples:
   - Schweigen.
   - Abbrechen.
   - Konflikt halten.
+  - "Du bist schuld, nicht ich, und dabei bleibt es"
+  - "Ich will nicht darüber reden, lass mich in Ruhe"
+  - "Red doch mit wem du willst, mir ist das egal"
+  - "Nee, da entschuldige ich mich sicher nicht für"
+  - "Mach dein Ding, ich mach meins, fertig"
+  - "Warum soll ICH den ersten Schritt machen?"
+  - "Vergiss es einfach, das hat keinen Sinn"
+  - "Ich hab keine Lust mehr auf diese Diskussion"
+  - "Du verdienst keine Entschuldigung nach dem was du gemacht hast"
+  - "Klären? Was gibts da zu klären, du hast Mist gebaut"
+  - "Ich bin fertig mit dem Thema, Punkt, aus, Ende"
+  - "Spar dir deine Entschuldigung, die kaufe ich dir eh nicht ab"
+  - "Eskalieren wir halt, mir ist es auch egal"
+  - "Ich blockiere dich jetzt, brauch das nicht"
+  - "Reparieren? Was denn reparieren, ist doch alles kaputt"
 semiotic:
   mode: symbolic
   level: pragmatic

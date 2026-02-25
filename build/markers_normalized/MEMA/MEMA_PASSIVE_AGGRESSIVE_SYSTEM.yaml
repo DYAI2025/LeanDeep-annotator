@@ -1,0 +1,116 @@
+id: MEMA_PASSIVE_AGGRESSIVE_SYSTEM
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - passive_aggressive
+  - system
+  concept: Passiv-aggressives System – indirekte Feindseligkeit als Kommunikationsmuster
+  pragmatics: Erkennt systematische passiv-aggressive Dynamiken in Beziehungen
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Nein nein, ist schon gut. Mach nur. Mir ist das ja egal. (Ist es nicht.)
+  - Ich bin nicht sauer. – Du klingst aber sauer. – Ich hab gesagt, ich bin nicht sauer.
+  - Ach, mach ruhig, was du willst. Du machst es ja sowieso immer.
+  - Klar, ich mach das schon. Wie immer. Kein Problem.
+  - Interessant, dass du Zeit für deine Freunde hast, aber nicht für mich.
+  - Nein, alles gut. Ich bin es ja gewohnt, hinten anzustehen.
+  - Toll, dass du dir das leisten kannst. Manche von uns können das nicht.
+  - Mach dir keine Sorgen um mich. Ich komm schon klar. Wie immer.
+  - Natürlich, du hast ja immer recht.
+  - Ach, ich wusste gar nicht, dass DAS jetzt Priorität hat.
+  - Schon ok. Ich hab eh keine Erwartungen mehr.
+  - Super, dass du das vergessen hast. Wirklich beeindruckend.
+  - Ich bin nicht enttäuscht. Nur... naja. Egal.
+  - Kein Problem, ich räum das halt selber auf. Wie JEDES Mal.
+  - Ach, du meinst, DU hattest einen stressigen Tag?
+  - Nein, ich finde das überhaupt nicht schlimm. (Langes Schweigen.)
+  - Mir ist das total egal. Mach, was du willst. Wirklich.
+  - Na gut, wenn du meinst, dass das wichtiger ist als ich.
+  - Ich hab nichts gesagt? Stimmt. Weil es ja eh keinen Unterschied macht.
+  - Ok. (Drei Stunden Funkstille.)
+  - Nein, ich bin nicht wütend. Warum sollte ich wütend sein?
+  - Klar, geh nur. Ist ja nicht so, als hätte ich mich auf den Abend gefreut.
+  - Ach, DU brauchst Freiraum? Gut zu wissen.
+  - Alles bestens. (Tür knallen.)
+  - Ich hab dir gesagt, es ist ok. Also ist es ok. Punkt.
+  - Manche Leute denken halt an andere. Andere nicht.
+  - Nein, ich bin nicht sarkastisch. Wo denkst du hin.
+  - Super Idee. Du hast ja immer die besten Ideen.
+  - Vergiss es. Ich hab nicht erwartet, dass du dich daran erinnerst.
+  - Ach, du hattest ja keine ZEIT. Verstehe.
+  - Ich bin nicht beleidigt. Ich bin einfach nur... müde.
+  - Ich freu mich total für dich. Echt. (Monotone Stimme.)
+  - Nein, nein, schon gut. Ich hab ja DICH gefragt, nicht umgekehrt.
+  - Klar helfe ich dir. Ich bin ja dein Diener.
+  - Du hast das sicher nicht mit Absicht vergessen, oder?
+  - Ich bin nicht böse. Ich bin einfach... enttäuscht. Aber das ist ja egal.
+  - Natürlich kümmere ich mich drum. Wer auch sonst.
+  - Schön, dass du fragst. Drei Tage zu spät.
+  - Mach dir keine Mühe meinetwegen. Ernsthaft.
+  - Ach, das war für dich kein Problem? Toll.
+  - Ich bin die Letzte, die sich beschwert. Das weißt du.
+  - Nein, alles fein. (Schublade zuknallen.)
+  - Du merkst es wahrscheinlich nicht mal, oder?
+  - Ich hab keine Lust zu streiten. Also sage ich einfach nichts.
+  - Kein Ding. Ich hab das schon eingeplant, dass du absagst.
+  - Manche Menschen halten ihre Versprechen. Aber hey.
+  - Alles gut, ich brauche deine Hilfe nicht. Ich schaff das allein.
+  - Schön, dass du an mich gedacht hast. Achso, hast du nicht? Ok.
+  - Nein, ich schmoll nicht. Ich bin einfach nur still.
+  - Wenn du wirklich interessiert wärst, müsste ich es nicht erklären.
+  negative:
+  - Ich bin sauer auf dich und ich sage dir direkt warum.
+  - Mich stört, dass du das nicht gemacht hast. Können wir darüber reden?
+  - Ich bin enttäuscht und ich möchte dir sagen, warum.
+  - Das hat mich verletzt. Ich will offen darüber reden.
+  - Ich bin frustriert und brauche eine Lösung.
+  - Ich sage dir ehrlich, was mich stört.
+  - Können wir über den Vorfall reden? Ich bin noch verärgert.
+  - Ich bin wütend und ich stehe dazu.
+  - Das war nicht in Ordnung und ich möchte, dass du das weißt.
+  - Ich bin nicht glücklich damit und sage dir direkt warum.
+  - Mir reicht es und ich sage das jetzt klar und deutlich.
+  - Ich brauche eine Veränderung und sage dir welche.
+  - Das hat mich getroffen und ich will ehrlich darüber sprechen.
+  - Ich bin genervt, aber ich drücke das direkt aus.
+  - Lass uns das offen klären – ich bin unzufrieden.
+  - Mir gefällt nicht, wie das gelaufen ist, und ich sage es dir.
+  - Ich bin ärgerlich und möchte das ansprechen.
+  - Das war verletzend. Ich sage dir jetzt, was ich brauche.
+  - 'Ich bin direkt: das war nicht ok.'
+  - Meine Bedürfnisse werden nicht erfüllt und ich teile dir das mit.
+  - Ich bin offen mit meiner Unzufriedenheit.
+  - Lass mich dir sagen, was mich belastet.
+  - Ich bin frustriert und möchte konstruktiv darüber reden.
+  - Hier ist, was mich stört – ganz direkt.
+  - Ich drücke meine Wut aus, statt sie runterzuschlucken.
+tags:
+- mema
+- passive_aggressive
+- indirect
+- hostility
+rating: 2
+composed_of:
+  required_any:
+  - SEM_PASSIVE_AGGRESSION
+  - CLU_INDIRECT_CONFLICT_AVOIDANCE
+  supportive:
+  - ATO_SARCASM
+  - SEM_BLAME_SIGNAL
+activation:
+  rule: "ANY 3 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

@@ -2,7 +2,7 @@ id: CLU_SPIRAL_PERSONA_BLAU
 schema: LeanDeep
 version: '5.1'
 layer: CLU
-lang: en
+lang: de
 description: ''
 frame:
   signal:
@@ -13,19 +13,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - Ordnungspersona manifestiert vollständig
-  - systematische Strukturierung
-  - hierarchische Organisationsmuster
-  - Regelsystem etabliert
-  - disziplinierte Durchführung
+  - Die Ordnungspersona manifestiert sich vollständig.
+  - Systematische Strukturierung aller Abläufe.
+  - Hierarchische Organisationsmuster bestimmen mein Handeln.
+  - Das Regelsystem ist etabliert und wird durchgesetzt.
+  - Disziplinierte Durchführung ist mein Standard.
+  - Ohne klare Strukturen funktioniert gar nichts.
+  - Ich ordne alles nach festen Kategorien und Regeln.
+  - Die Hierarchie gibt mir Orientierung und Sicherheit.
+  - Pflicht, Ordnung, Disziplin - das sind meine Grundpfeiler.
+  - Jeder Prozess braucht eine klare Struktur und Verantwortlichkeiten.
+  - ordnung ist das halbe leben, und die andere hälfte auch
+  - Ich organisiere alles systematisch, vom Arbeitsplatz bis zum Privatleben.
+  - Die Vorschrift gibt den Rahmen vor, in dem wir handeln.
+  - Regelmäßigkeit und Routine schaffen Zuverlässigkeit.
+  - Sehr geehrte Damen und Herren, gemäß den geltenden Richtlinien ist wie folgt zu verfahren...
+  - Struktur gibt mir Halt in einer chaotischen Welt.
+  - Alles hat seinen Platz, alles hat seine Zeit.
+  - Ich folge dem Protokoll, das ist nicht verhandelbar.
+  - Ordnung und Sauberkeit sind Ausdruck von Disziplin.
+  - Das System funktioniert, weil wir uns an die Regeln halten.
+  - alles muss seine ordnung haben, sonst geht nix
+  - Ich brauche klare Anweisungen und feste Abläufe.
+  - Die Organisation ist hierarchisch aufgebaut und das ist richtig so.
+  - Verlässlichkeit kommt durch Struktur, nicht durch Improvisation.
+  - Das Regelwerk ist mein Kompass.
+  - Wer die Ordnung missachtet, gefährdet das Ganze.
+  - Systematisch vorgehen heißt, nichts dem Zufall zu überlassen.
+  - Die Disziplin, die wir heute zeigen, bestimmt unseren Erfolg morgen.
+  - Ich plane alles durch, von A bis Z, lückenlos.
+  - klare regeln, klare strukturen, klare hierarchien. so muss das
+  - Die Institution steht über dem Individuum.
+  - Ordnung schaffen, Ordnung halten, Ordnung durchsetzen.
+  - Jede Abweichung vom Plan wird dokumentiert und korrigiert.
+  - Das Organigramm zeigt klar, wer wem berichtet.
+  - Ich bin ein Mensch der Ordnung und der Systeme.
+  - Prozesse müssen standardisiert und dokumentiert sein.
+  - Die Hierarchie sorgt dafür, dass Entscheidungen klar sind.
+  - Routine ist keine Langeweile, sondern Effizienz.
+  - Ich strukturiere meinen Tag nach festen Ritualen.
+  - Regeln sind das Fundament des Zusammenlebens.
+  - Pflichtbewusstsein ist keine Last, sondern ein Wert.
+  - ich brauch ordnung, ohne das geht bei mir gar nix
+  - Das System funktioniert, weil jeder seine Rolle kennt.
+  - Organisation ist meine Stärke und meine Leidenschaft.
+  - Disziplin in jedem Detail, das ist mein Anspruch.
+  - Mein Tagesablauf folgt einem festen Plan, von morgens bis abends.
+  - Ohne klare Hierarchie herrscht Chaos, das sehe ich jeden Tag.
+  - Die Regeln gelten für alle, da mache ich keine Ausnahmen.
+  - struktur ist alles. ohne struktur kein erfolg, kein zusammenhalt
+  - Ich bin stolz auf meine Disziplin und Ordnungsliebe, das hält alles zusammen.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Manchmal muss man improvisieren.
+  - Regeln sind gut, aber Flexibilität auch.
+  - Ich bin organisiert, aber nicht starr.
+  - Ordnung ist wichtig, aber nicht um jeden Preis.
+  - Ich plane gern, aber lasse auch Raum für Spontanes.
+  - Struktur hilft, aber Kreativität braucht auch Freiraum.
+  - Ich halte mich an Regeln, hinterfrage sie aber auch.
+  - Organisation ist gut, Überbürokratisierung nicht.
+  - ich mag ordnung, aber ich bin kein roboter
+  - Manchmal sind die besten Ergebnisse ungeplant.
+  - Hierarchien können auch hinderlich sein.
+  - Ich bin systematisch, aber anpassungsfähig.
+  - Nicht alles muss durchstrukturiert sein.
+  - Regeln sind Leitlinien, keine Dogmen.
+  - Ich schätze Ordnung, bin aber offen für Neues.
+  - Plan A ist gut, Plan B manchmal besser.
+  - Struktur ist mein Werkzeug, nicht mein Gefängnis.
+  - Disziplin ja, Rigidität nein.
+  - Ich organisiere mich, aber ich bin auch spontan.
+  - Ordnung und Chaos haben beide ihre Berechtigung.
+  - Manche Regeln sollte man brechen.
+  - ich bin ordentlich, aber nicht zwanghaft
+  - Systematik ist gut, Dogmatik nicht.
+  - Ich folge Prozessen, aber hinterfrage sie regelmäßig.
+  - Ordnung ist eine von vielen Tugenden.
 tags: []
 rating: 2
 composed_of:

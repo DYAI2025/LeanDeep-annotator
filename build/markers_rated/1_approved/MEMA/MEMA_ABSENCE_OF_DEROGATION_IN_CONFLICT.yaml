@@ -49,13 +49,279 @@ examples:
     B: Danke, dass du es sagst.
     A: Ich will verstehen, was bei dir los ist.
     B: Ich erklär's dir gern.
+  - |
+    A: Die Aufgabenverteilung war unfair.
+    B: Was schlägst du vor?
+    A: Wir teilen 50/50.
+    B: Einverstanden.
+  - |
+    A: Du hast zugesagt und nicht geliefert.
+    B: Das stimmt, es tut mir leid.
+    A: Ich brauche Zuverlaessigkeit.
+    B: Ab sofort schreibe ich alles auf.
+  - |
+    A: Mir reicht es mit den Verspaetungen.
+    B: Das verstehe ich.
+    A: Es muss sich was aendern.
+    B: Ich komme morgen puenktlich.
+  - |
+    A: Du hast meinen Geburtstag vergessen.
+    B: Oh nein, das tut mir wirklich leid.
+    A: Das hat mich verletzt.
+    B: Ich mache es wieder gut, versprochen.
+  - |
+    A: Warum hast du das nicht gesagt?
+    B: Ich wollte dich nicht belasten.
+    A: Ich moechte einbezogen werden.
+    B: Okay, kuenftig sage ich Bescheid.
+  - |
+    A: Du hast die Abmachung gebrochen.
+    B: Stimmt, ich habe mich nicht dran gehalten.
+    A: Das geht nicht.
+    B: Ich bessere mich, wirklich.
+  - |
+    A: Ich bin genervt von deinem Verhalten.
+    B: Was genau stoert dich?
+    A: Dass du immer alles auf morgen schiebst.
+    B: Okay, ich fange heute an.
+  - |
+    A: Das haette anders laufen muessen.
+    B: Da stimme ich dir zu.
+    A: Was machen wir beim naechsten Mal?
+    B: Bessere Planung, mehr Absprache.
+  - |
+    A: Du wirkst desinteressiert.
+    B: Das bin ich nicht.
+    A: Dann zeig mir das bitte.
+    B: Ich werde aktiver, versprochen.
+  - |
+    A: Du hast mich vor den anderen stehen lassen.
+    B: Das war nicht geplant.
+    A: Trotzdem hat es mich verletzt.
+    B: Es tut mir leid, ich passe auf.
+  - |
+    A: Warum ignorierst du meine Nachrichten?
+    B: Ich war ueberfordert, sorry.
+    A: Ein kurzes 'Bin beschaeftigt' reicht mir.
+    B: Mache ich ab jetzt.
+  - |
+    A: Du hast mich nicht unterstuetzt.
+    B: Das war falsch von mir.
+    A: Ich brauche dich an meiner Seite.
+    B: Bin ich, ich zeig es dir.
+  - |
+    A: Das Meeting war chaotisch wegen dir.
+    B: Mein Fehler, ich war nicht vorbereitet.
+    A: Bitte naechstes Mal vorbereiten.
+    B: Auf jeden Fall.
+  - |
+    A: Du machst nie Plaene mit mir.
+    B: Das stimmt so nicht ganz, aber ich verstehe den Frust.
+    A: Ich fuehle mich unwichtig.
+    B: Lass uns naechste Woche was planen.
+  - |
+    A: Ich bin enttaeuscht.
+    B: Das tut mir leid zu hoeren.
+    A: Ich will dass wir darueber reden.
+    B: Ja, lass uns heute Abend reden.
+  - |
+    A: Dein Tonfall war verletzend.
+    B: Entschuldigung, das war nicht meine Absicht.
+    A: Achte bitte darauf.
+    B: Mache ich.
+  - |
+    A: Du hast gelogen.
+    B: Nicht absichtlich, es war ein Missverstaendnis.
+    A: Ehrlichkeit ist mir das Wichtigste.
+    B: Ich weiss, und ich bin ehrlich ab jetzt.
+  - |
+    A: Warum redest du nicht mit mir?
+    B: Ich brauche manchmal Zeit.
+    A: Sag mir dann wenigstens, dass du Zeit brauchst.
+    B: Okay, mache ich.
+  - |
+    A: Ich fuehle mich alleingelassen.
+    B: Das tut mir leid.
+    A: Ich brauche mehr Praesenz von dir.
+    B: Ich bin fuer dich da.
+  - |
+    A: Du kritisierst mich staendig.
+    B: Das war nicht meine Absicht.
+    A: Es fuehlt sich so an.
+    B: Ich formuliere es kuenftig anders.
+  - |
+    A: Wir muessen ueber Geld reden.
+    B: Ja, das Thema haben wir aufgeschoben.
+    A: Es gibt Unstimmigkeiten.
+    B: Lass uns die Zahlen durchgehen.
+  - |
+    A: Du nimmst dir nie frei fuer uns.
+    B: Das stimmt, die Arbeit hat ueberhand genommen.
+    A: Ich vermisse die gemeinsame Zeit.
+    B: Ich nehme naechste Woche einen Tag frei.
+  - |
+    A: Wir streiten immer ueber dasselbe.
+    B: Stimmt, das Muster muessen wir durchbrechen.
+    A: Wie?
+    B: Vielleicht hilft ein Gespraech mit einem Berater.
+  - |
+    A: Du haettest mich vorwarnen koennen.
+    B: Ja, hast du recht.
+    A: Ich fuehle mich ueberrumpelt.
+    B: Tut mir leid, kuenftig sage ich Bescheid.
+  - |
+    A: Deine Prioritaeten stimmen nicht.
+    B: Was meinst du damit?
+    A: Arbeit geht immer vor Familie.
+    B: Das stimmt leider, ich will das aendern.
+  - |
+    A: Du haettest mir helfen koennen.
+    B: Stimmt, ich war zu beschaeftigt.
+    A: Ich brauche deine Hilfe manchmal.
+    B: Natuerlich, sag einfach Bescheid.
+  - |
+    A: Ich bin wuetend.
+    B: Was ist passiert?
+    A: Du hast die Abmachung nicht eingehalten.
+    B: Das tut mir leid, ich erklaere dir warum.
+  - |
+    A: Du horst nie richtig zu.
+    B: Ich versuche es, aber du hast recht.
+    A: Ich moechte dass du dich darauf konzentrierst.
+    B: Mach ich, ohne Handy beim Reden.
+  - |
+    A: Du bist zu spaet, wieder mal.
+    B: Ich weiss, tut mir leid.
+    A: Puenktlichkeit zeigt Respekt.
+    B: Du hast recht.
+  - |
+    A: Du hast mir das Gefuehl gegeben, unwichtig zu sein.
+    B: Das wollte ich nicht.
+    A: Trotzdem war es so.
+    B: Ich nehme mir das zu Herzen.
+  - |
+    A: Ich bin sauer, dass du ohne mich entschieden hast.
+    B: Das war falsch.
+    A: Wir sind ein Team.
+    B: Stimmt, naechstes Mal zusammen.
+  - |
+    A: Warum hast du abgesagt, ohne mir Bescheid zu sagen?
+    B: Das war ruecksichtslos von mir.
+    A: Ja, das war es.
+    B: Es tut mir aufrichtig leid.
+  - |
+    A: Das hat mich sehr enttaeuscht.
+    B: Ich kann das verstehen.
+    A: Es muss sich aendern.
+    B: Ja, das sehe ich ein.
+  - |
+    A: Du warst gemein zu meiner Freundin.
+    B: Das war nicht Absicht.
+    A: Entschuldige dich bitte.
+    B: Mache ich sofort.
+  - |
+    A: Wir hatten einen Plan und du hast ihn geaendert.
+    B: Stimmt, haette ich absprechen muessen.
+    A: Genau das meine ich.
+    B: Kuenftig nur mit Absprache.
+  - |
+    A: Ich fuehle mich uebergangen.
+    B: Das tut mir leid.
+    A: Ich moechte gleichberechtigt Entscheidungen treffen.
+    B: Absolut, einverstanden.
+  - |
+    A: Dein Verhalten gestern war nicht okay.
+    B: Was genau meinst du?
+    A: Dass du einfach gegangen bist.
+    B: Das war falsch, entschuldigung.
+  - |
+    A: Ich kann so nicht weitermachen.
+    B: Was brauchst du?
+    A: Mehr Respekt und Verlaesslichkeit.
+    B: Ich verspreche dir, mich zu bessern.
+  - |
+    A: Du haettest das vorher sagen muessen.
+    B: Ja, ich habe zu lange gewartet.
+    A: Das hat Konsequenzen gehabt.
+    B: Ich weiss und es tut mir leid.
+  - |
+    A: Warum kuemmerst du dich nicht um den Haushalt?
+    B: Du hast recht, ich muss mehr tun.
+    A: Ja, bitte.
+    B: Ab morgen uebernehme ich die Kueche.
+  - |
+    A: Du hast meinen Plan ignoriert.
+    B: Nicht absichtlich.
+    A: Trotzdem war es frustrierend.
+    B: Verstehe, kuenftig beruecksichtige ich ihn.
+  - |
+    A: Warum hast du das nicht geteilt?
+    B: Ich dachte es waere nicht relevant.
+    A: Fuer mich schon.
+    B: Sorry, kuenftig teile ich alles.
+  - |
+    A: Ich bin traurig ueber dein Verhalten.
+    B: Was kann ich besser machen?
+    A: Zuhoeren und fragen.
+    B: Mache ich, versprochen.
+  - |
+    A: Das hast du schlecht gehandhabt.
+    B: Stimmt, das war suboptimal.
+    A: Wie machen wir es besser?
+    B: Ich schlage eine Checkliste vor.
+  - |
+    A: Du warst nicht da als ich dich brauchte.
+    B: Das tut mir leid.
+    A: Bitte sei erreichbar.
+    B: Handy bleibt an, versprochen.
   negative:
-  - "A: Ich habe das Gefühl, du hörst mir nicht zu.\nB: Ich verstehe, dass dich das verletzt.\nA: ich wuensche mir mehr Verlässlichkeit.\nB: Okay, ich kann das anpassen.\n"
-  - "A: Warum kommst du manchmal zu spät?\nB: Mein Fehler, ich plane schlecht.\nA: Dann sag wenigstens vorher Bescheid.\nB: Mache ich.\n"
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
+  - |
+    A: Du bist so eine faule Sau, nie machst du was!
+    B: Halt die Fresse!
+    A: Du bist erbaermlich.
+    B: Und du bist eine Nervensaege.
+  - |
+    A: Du bist der groesste Versager den ich kenne.
+    B: Und du bist die groesste Zicke.
+    A: Vollidiot!
+    B: Miststueck!
+  - |
+    A: Du dumme Kuh, warum bist du so bescheuert?
+    B: Red nicht so mit mir!
+    A: Ich red wie ich will!
+  - |
+    A: Kein Wunder, dass deine Ex dich verlassen hat, du bist unertraeglich.
+    B: Das ist unter der Guertellinie.
+    A: Wahrheit tut halt weh.
+  - |
+    A: Du bist peinlich, wie kann man nur so bloed sein?
+    B: Hoer auf mich zu beleidigen!
+    A: Jemand muss dir die Wahrheit sagen!
+  - |
+    A: Du bist ein Nichtsnutz, genau wie dein Vater.
+    B: Lass meinen Vater da raus!
+    A: Der Apfel faellt nicht weit vom Stamm.
+  - |
+    A: Du ekelhafter Mensch, ich schaeme mich fuer dich.
+    B: Wie kannst du sowas sagen?
+    A: Weil es stimmt!
+  - "Heute regnet es wieder."
+  - "Hast du den Schluessel?"
+  - "Der Zug faehrt um 8."
+  - "Ich brauche neue Schuhe."
+  - "Das Essen war gut."
+  - "Wann kommst du heim?"
+  - "Ich hab einkauft."
+  - "Morgen ist Montag."
+  - "Der Film war lang."
+  - "Ich ruf dich spaeter an."
+  - "Kannst du einkaufen gehen?"
+  - "Das Meeting war produktiv."
+  - "Schoenen Feierabend!"
+  - "Danke fuer die Info."
+  - "Bin gleich da."
+  - "Alles klar, bis morgen."
+  - "Gute Nacht."
+  - "Frohe Ostern!"
 tags: [mema, omission, deeskalation, positiv]
 semiotic: {peirce: index, signifikat: Konfliktdynamik, framing_type: eskalation, cultural_frame: Gottman, myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'}

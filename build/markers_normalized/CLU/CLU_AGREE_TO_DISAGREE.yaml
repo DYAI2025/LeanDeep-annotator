@@ -42,6 +42,26 @@ examples:
   - KPI Check.
   - Kanban updaten.
   - Change Request bearbeiten.
+  - Einverstanden. Ich übernehme Punkt 3, du Punkt 4. Deadline Freitag.
+  - Rückmeldung erhalten. Ich passe die Kalkulation an.
+  - 'Wie vereinbart: getrennte Zuständigkeiten. Bei Fragen melden.'
+  - Task Assignment steht. Bitte Timeline einhalten.
+  - Verstanden. Ich halte mich an die Vorgabe.
+  - Zur Kenntnis genommen. Weiter im Programm.
+  - Dokumentation ist aktualisiert. Bitte gegenlesen.
+  - Priorisierung klar. Punkt 1 zuerst, Rest danach.
+  - Lieferung bestätigt. Invoice folgt separat.
+  - Feedback eingearbeitet. Finale Version ist im Drive.
+  - 'Abstimmung erledigt. Nächster Meilenstein: 15.04.'
+  - Protokoll liegt vor. Keine weiteren Punkte meinerseits.
+  - Ok, ich kümmere mich um den Versand, du um die Rechnung.
+  - Scope ist fixiert. Keine Änderungen mehr nach heute.
+  - Confirmed. Ich setze das bis EOD um.
+  - Deine Zuarbeit ist angekommen. Danke. Ich mache weiter.
+  - Termin für Abnahme steht. Bitte vorbereiten.
+  - Arbeitsteilung steht. Jeder macht seinen Part.
+  - Zeitplan einhalten. Kein Spielraum mehr.
+  - Release Candidate ist durch. Go für Production.
   negative:
   - Tut mir leid, ich war unfair. Lass uns das klären.
   - Haha, du und deine Tabs 😄

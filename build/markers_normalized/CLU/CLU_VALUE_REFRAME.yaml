@@ -13,19 +13,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - früher war mir Sicherheit wichtig … jetzt Freiheit
-  - habe meine Prioritäten geändert
-  - erst Leistung … nun Gemeinschaft
-  - ich sehe das heute anders
-  - Werte neu sortiert
+  - Früher war mir Sicherheit wichtig, jetzt Freiheit.
+  - Habe meine Prioritäten geändert.
+  - Erst Leistung, nun Gemeinschaft.
+  - Ich sehe das heute anders.
+  - Werte neu sortiert.
+  - Karriere war mal alles für mich. Jetzt ist es die Familie.
+  - Ich habe gelernt, dass Geld nicht das Wichtigste ist. Beziehungen schon.
+  - Früher war ich ehrgeizig, heute bin ich dankbar für das, was ich habe.
+  - Meine Werte haben sich komplett verschoben seit der Geburt meiner Tochter.
+  - Es ging mir immer um Erfolg. Jetzt geht es mir um Sinn.
+  - früher war geld wichtig, jetzt ist mir zeit wichtiger
+  - Ich habe meine Prioritäten nach der Krankheit komplett umgestellt.
+  - Was mir mit 20 wichtig war, ist mir mit 40 egal. Und umgekehrt.
+  - Erst wollte ich die Welt verändern, jetzt will ich in Frieden leben.
+  - 'Sehr geehrte Kolleginnen, meine beruflichen Prioritäten haben sich verschoben: von Karriere zu Purpose.'
+  - Leistung war mein Antrieb, jetzt ist es Empathie und Gemeinschaft.
+  - Ich habe gelernt, dass Verbundenheit wichtiger ist als Unabhängigkeit.
+  - Mein Wertesystem hat sich fundamental verändert in den letzten Jahren.
+  - Freiheit war mein höchster Wert. Jetzt ist es Verantwortung.
+  - 'Was mich antreibt, hat sich gewandelt: von Anerkennung zu Authentizität.'
+  - status und prestige waren mir wichtig. jetzt ist es innerer frieden
+  - Ich sehe Dinge heute anders als noch vor einem Jahr.
+  - Meine Prioritäten haben sich verschoben, weg von Haben, hin zu Sein.
+  - Früher war ich auf Wettbewerb aus, jetzt auf Kooperation.
+  - Die Krise hat meine Werte auf den Kopf gestellt.
+  - Ehrgeiz hat Platz gemacht für Gelassenheit.
+  - Ich werte Dinge anders als früher. Familie über alles.
+  - Kontrolle war mein Ding. Jetzt ist es Vertrauen.
+  - Meine Sicht auf Erfolg hat sich grundlegend verändert.
+  - was mir damals wichtig war, ist mir heute egal. neue werte, neues ich
+  - Von Materialismus zu Minimalismus - das war mein Wandel.
+  - Ich bewerte Menschen anders seit ich selbst gescheitert bin.
+  - Sicherheit oder Abenteuer? Ich hab die Seiten gewechselt.
+  - 'Meine Werte sind gereift: von Rebellion zu Weisheit.'
+  - Das Streben nach Perfektion habe ich gegen Akzeptanz eingetauscht.
+  - Ich habe gelernt, Harmonie über Recht-haben zu stellen.
+  - 'Mein Kompass zeigt jetzt in eine andere Richtung: Mitgefühl statt Härte.'
+  - Was ich früher als Schwäche sah, erkenne ich jetzt als Stärke.
+  - von leistung zu lebensqualität. das war mein wertewandel
+  - Erst ging es um Wachstum, jetzt um Nachhaltigkeit.
+  - Ich habe meine Werte hinterfragt und neu definiert.
+  - Anpassung war mein Modus. Jetzt ist es Selbstbestimmung.
+  - Die Pandemie hat mir gezeigt, was wirklich wichtig ist.
+  - Ich habe gelernt, dass Mut wichtiger ist als Sicherheit.
+  - 'Mein Wertewandel: von Pflicht zu Leidenschaft.'
+  - Was ich für wichtig hielt, hat sich als unwichtig erwiesen.
+  - 'Neue Erfahrungen, neue Werte: Offenheit statt Dogma.'
+  - 'früher: karriere über alles. heute: gesundheit und beziehungen über alles'
+  - Ich setze andere Prioritäten als noch vor fünf Jahren.
+  - Von der Leistungsgesellschaft zur Sinngesellschaft - so hat sich mein Denken verändert.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Meine Werte sind seit Jahren dieselben.
+  - Ich habe meine Prioritäten nie geändert.
+  - Was mir wichtig ist, war schon immer wichtig.
+  - Ich bin meinen Überzeugungen treu geblieben.
+  - Karriere war immer mein Antrieb und bleibt es.
+  - Ich habe klare Werte und die ändern sich nicht.
+  - Mein Wertegerüst steht fest.
+  - Ich bin konstant in meinen Überzeugungen.
+  - so war ich schon immer
+  - Meine Prioritäten sind stabil und klar.
+  - Ich bleibe mir treu, egal was kommt.
+  - Veränderung meiner Werte? Nein, die sind gesetzt.
+  - Ich habe früh gewusst, was mir wichtig ist.
+  - Mein Kompass zeigt immer in dieselbe Richtung.
+  - Ich bin beständig in meinen Überzeugungen.
+  - Wandel im Leben ja, Wandel der Werte nein.
+  - Ich weiß, woran ich glaube, und das ändert sich nicht.
+  - Konsequenz ist mein Markenzeichen.
+  - ich änder meine werte nicht, die sind fest
+  - Was mir mit 20 wichtig war, ist mir mit 40 immer noch wichtig.
+  - Meine Grundwerte sind wie ein Fels in der Brandung.
+  - Mir war immer wichtig, fair zu sein. Daran hat sich nichts geändert.
+  - Ich bin heute der gleiche Mensch wie vor zehn Jahren.
+  - Meine Überzeugungen haben jede Krise überstanden.
+  - Beständigkeit ist meine Stärke.
 tags: []
 rating: 1
 composed_of:

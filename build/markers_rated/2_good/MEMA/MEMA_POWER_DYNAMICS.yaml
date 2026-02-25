@@ -1,0 +1,104 @@
+id: MEMA_POWER_DYNAMICS
+version: "3.4"
+frame:
+  signal: ["power", "dynamics"]
+  concept: "Machtdynamik – asymmetrische Machtverhältnisse in Beziehungen"
+  pragmatics: "Erkennt Muster von Dominanz und Unterordnung"
+  narrative: "meta_pattern"
+tags: [mema, power, dynamics, dominance, submission]
+composed_of:
+  required_any:
+  - SEM_BLAME_SIGNAL
+  - CLU_EMOTIONAL_ESCALATION
+  supportive:
+  - ATO_ACCUSATION
+  - SEM_PASSIVE_AGGRESSION
+activation:
+  rule: "ANY 2 IN 15 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+  positive_de:
+  - "Du entscheidest alles und ich darf nur nicken."
+  - "Ich habe das Gefühl, du kontrollierst jeden Aspekt unseres Lebens."
+  - "Wer das Geld verdient, hat das Sagen – das ist deine Logik."
+  - "Du bestimmst, wann wir reden und wann nicht."
+  - "Ich habe keine Stimme in dieser Beziehung."
+  - "Du drohst subtil, wenn ich anderer Meinung bin."
+  - "Du behandelst mich wie ein Kind, nicht wie eine gleichberechtigte Partnerin."
+  - "Wenn du sagst 'wir entscheiden zusammen', meinst du 'ich entscheide'."
+  - "Du nutzt dein Wissen, um mich kleinzumachen."
+  - "Ich hab das Gefühl, um Erlaubnis bitten zu müssen."
+  - "Du kontrollierst die Finanzen und ich muss um jeden Euro fragen."
+  - "Dein letztes Wort ist immer das letzte Wort."
+  - "Du redest über mich, nicht mit mir."
+  - "Ich darf keine eigene Meinung haben, ohne dass du es als Angriff siehst."
+  - "Du setzt dich durch, egal was ich sage."
+  - "Du weißt es immer besser – bei allem."
+  - "Ich fühle mich dir unterlegen und du genießt das."
+  - "Du hast die Macht und du setzt sie ein."
+  - "Wenn ich widerspreche, wirst du laut. Also schweige ich."
+  - "Du entscheidest über meinen Freundeskreis."
+  - "Ich bin in dieser Beziehung die Marionette."
+  - "Du manipulierst Situationen, damit du die Oberhand behältst."
+  - "Du drohst mit Trennung, wenn ich nicht gehorche."
+  - "Ich hab das Gefühl, dass du mich kleinhältst."
+  - "Deine Meinung wiegt mehr als meine – immer."
+  - "Du bestimmst, wie unser Leben aussieht, und ich darf zuschauen."
+  - "Ich traue mich nicht, dir zu widersprechen."
+  - "Du nutzt meine Schwächen gegen mich, um Macht auszuüben."
+  - "Du sprichst von oben herab mit mir."
+  - "Ich fühle mich wie eine Angestellte, nicht wie eine Partnerin."
+  - "Du lässt mich nicht mitentscheiden."
+  - "Wenn ich 'Nein' sage, akzeptierst du es nicht."
+  - "Du bestrafst mich emotional, wenn ich eigenständig handle."
+  - "Deine Stimme ist lauter, also gilt deine Meinung."
+  - "Du machst mich abhängig, um die Kontrolle zu behalten."
+  - "Ich bin nur noch eine Ja-Sagerin."
+  - "Du hast alle Trümpfe in der Hand und spielst sie aus."
+  - "Wer schreit, gewinnt – das ist unsere Dynamik."
+  - "Du entscheidest, was ich anziehe, wen ich treffe, was ich esse."
+  - "Ich hab keinen Handlungsspielraum mehr."
+  - "Du setzt dich durch Schweigen und Ignoranz durch."
+  - "Macht ist bei uns ungleich verteilt – und du willst das so."
+  - "Du gibst mir das Gefühl, nichts wert zu sein."
+  - "Ich bin emotional abhängig und du nutzt das aus."
+  - "Du sagst 'wir sind gleichberechtigt', aber dein Verhalten sagt was anderes."
+  - "Ich kann nicht frei entscheiden – du kontrollierst alles."
+  - "Du verwendest Information als Machtmittel."
+  - "Wenn ich sage, was ich will, werde ich bestraft."
+  - "Du hast das letzte Wort. Immer. Ohne Ausnahme."
+  - "Meine Autonomie existiert in dieser Beziehung nicht."
+  negative_de:
+  - "Wir entscheiden gemeinsam und respektieren beide Meinungen."
+  - "Wir teilen uns die Verantwortung fair auf."
+  - "Wenn du anderer Meinung bist, höre ich zu."
+  - "Wir sind gleichberechtigte Partner."
+  - "Ich respektiere deine Autonomie."
+  - "Wir diskutieren und finden Kompromisse."
+  - "Niemand dominiert in unserer Beziehung."
+  - "Wir verhandeln Entscheidungen auf Augenhöhe."
+  - "Ich nehme deine Meinung genauso ernst wie meine."
+  - "Wir haben beide eine Stimme und beide werden gehört."
+  - "Entscheidungen treffen wir zusammen."
+  - "Ich unterstütze deine Eigenständigkeit."
+  - "Wir sind ein Team – kein Hierarchie-Gefüge."
+  - "Du darfst anderer Meinung sein und ich akzeptiere das."
+  - "Unsere Beziehung basiert auf Gleichwertigkeit."
+  - "Ich überrasche mich selbst – ich vertraue dir die Entscheidung an."
+  - "Wir wechseln uns ab mit der Verantwortung."
+  - "Du hast genauso viel Mitspracherecht wie ich."
+  - "Wir sind beide gleichwertige Stimmen in unserer Beziehung."
+  - "Ich lasse dir Raum für deine Entscheidungen."
+  - "Wir begegnen uns auf Augenhöhe."
+  - "Deine Bedürfnisse zählen genauso wie meine."
+  - "Wir haben verschiedene Stärken und nutzen sie gemeinsam."
+  - "Ich vertraue darauf, dass du gute Entscheidungen triffst."
+  - "Unsere Machtverhältnisse sind ausgewogen."
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

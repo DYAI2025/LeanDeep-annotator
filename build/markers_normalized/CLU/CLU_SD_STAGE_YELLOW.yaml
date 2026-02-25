@@ -2,7 +2,7 @@ id: CLU_SD_STAGE_YELLOW
 schema: LeanDeep
 version: '5.1'
 layer: CLU
-lang: en
+lang: de
 description: ''
 frame:
   signal:
@@ -13,19 +13,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - Systeme vernetzen … Komplexität integrieren
-  - mehrperspektivisch denken
-  - Kontext abhängige Lösung
-  - Patterns über Zeit
-  - Metaebene betrachten
+  - Systeme vernetzen und Komplexität integrieren.
+  - Mehrperspektivisch denken.
+  - Kontextabhängige Lösung finden.
+  - Patterns über Zeit erkennen.
+  - Die Metaebene betrachten.
+  - Man muss verstehen, wie die verschiedenen Ebenen interagieren.
+  - Das Problem lässt sich nicht linear lösen, es braucht Systemdenken.
+  - Je nach Kontext ist eine andere Herangehensweise richtig.
+  - Die Muster hinter den Mustern sehen.
+  - Integration verschiedener Perspektiven statt Entweder-Oder.
+  - man muss das ganze system verstehen, nicht nur einzelne teile
+  - Feedback-Schleifen bestimmen das Systemverhalten.
+  - Jede Intervention hat Nebenwirkungen im Gesamtsystem.
+  - Adaptivität ist wichtiger als Perfektion.
+  - Sehr geehrte Kolleginnen und Kollegen, ich möchte die systemischen Wechselwirkungen beleuchten.
+  - Trade-offs managen statt eindeutige Antworten suchen.
+  - Die Komplexität annehmen, nicht reduzieren.
+  - Paradigmenwechsel sind nötig, wenn das alte Modell nicht mehr greift.
+  - Emergente Eigenschaften entstehen erst im Zusammenspiel.
+  - 'Kontextsensitivität: Was hier funktioniert, scheitert dort.'
+  - die wechselwirkungen sind entscheidend, nicht die einzelteile
+  - Non-lineare Dynamiken machen einfache Vorhersagen unmöglich.
+  - Hierarchien und Netzwerke sind beides nützliche Modelle.
+  - Der Hebelpunkt liegt selten dort, wo man ihn vermutet.
+  - Verschiedene Denkmodelle für verschiedene Probleme.
+  - Synthese statt Analyse allein.
+  - Die Frage ist nicht ob A oder B, sondern wann A und wann B.
+  - Selbstorganisation erzeugt oft bessere Ergebnisse als zentrale Steuerung.
+  - Komplexe adaptive Systeme brauchen Raum zum Experimentieren.
+  - es gibt keine einfachen antworten auf komplexe fragen
+  - Vernetztes Denken überwindet Silogrenzen.
+  - Ich suche die Hebel zweiter und dritter Ordnung.
+  - Der Kontext bestimmt die Lösung, nicht umgekehrt.
+  - Man muss gleichzeitig zoomen und rauszoomen können.
+  - Integration bedeutet nicht Kompromiss, sondern eine höhere Synthese.
+  - Die Welt ist zu komplex für einfache Rezepte.
+  - Jede Perspektive hat ihren Geltungsbereich.
+  - Muster über verschiedene Zeitskalen erkennen.
+  - systemdenken heißt die unsichtbaren verbindungen sehen
+  - Flexibilität im Denken, Stabilität in den Werten.
+  - Das Optimum ist kontextabhängig und verändert sich.
+  - Ich wechsle bewusst zwischen verschiedenen Denkmodellen.
+  - Nicht jedes Problem braucht dieselbe Methode.
+  - Die Metaebene zu reflektieren ist kein Luxus, sondern Notwendigkeit.
+  - Adaptive Lösungen statt statischer Pläne.
+  - Die Wechselwirkungen zwischen den Subsystemen erzeugen emergente Phänomene.
+  - Man muss den Kontext wechseln können, um die richtige Lösung zu finden.
+  - Paradoxien managen statt sie aufzulösen - das ist Systemkompetenz.
+  - es gibt keine universelle antwort, nur kontextabhängige lösungen
+  - Ich integriere verschiedene Modelle je nach Anforderung und Situation.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Die Lösung ist einfach und eindeutig.
+  - Entweder oder, so ist das.
+  - Man muss nicht alles so kompliziert machen.
+  - Ein Weg reicht, der richtige.
+  - Ich brauche keine verschiedenen Perspektiven.
+  - Die Antwort liegt auf der Hand.
+  - einfach machen, nicht so viel denken
+  - Regeln gelten immer, ohne Ausnahme.
+  - So ist es und so bleibt es.
+  - Mehr Analyse bringt nichts.
+  - Ich vertraue meiner einen Methode.
+  - Kontext hin oder her, richtig ist richtig.
+  - Zu viel Nachdenken lähmt.
+  - Ich habe die Antwort und die ist eindeutig.
+  - Eines nach dem anderen, linear und klar.
+  - Komplexität ist nur eine Ausrede.
+  - Meine Perspektive reicht völlig aus.
+  - Das ist schwarz oder weiß.
+  - Einfache Probleme brauchen einfache Lösungen.
+  - Muster? Das ist Zufall.
+  - halt dich nicht mit details auf
+  - Nicht alles muss vernetzt werden.
+  - Ein guter Plan reicht.
+  - Ich mache es so wie immer.
+  - warum so kompliziert? einfach durchziehen
 tags: []
 rating: 2
 composed_of:

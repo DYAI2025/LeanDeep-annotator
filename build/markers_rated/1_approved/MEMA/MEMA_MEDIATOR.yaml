@@ -23,6 +23,46 @@ examples:
   - "Abschluss ok."
   - "Klärung einleiten."
   - "Empathie zeigen."
+  - Ich verstehe beide Seiten – lass uns einen Kompromiss finden.
+  - Können wir kurz durchatmen und dann nochmal von vorne anfangen?
+  - Mir ist wichtig, dass sich hier jeder gehört fühlt.
+  - Lass mich vermitteln – ich glaube, ihr wollt eigentlich dasselbe.
+  - Ich möchte helfen, die Sache zu klären.
+  - Was wäre für euch beide ein akzeptables Ergebnis?
+  - Ich sehe, dass ihr euch verletzt fühlt – können wir das ansprechen?
+  - Lass uns das gemeinsam sortieren, Schritt für Schritt.
+  - Ich höre, was du sagst, und ich höre auch die andere Seite.
+  - Können wir uns darauf einigen, respektvoll zu bleiben?
+  - Es tut mir leid, dass es so weit gekommen ist. Wie reparieren wir das?
+  - Ich bin bereit, meinen Teil beizutragen, um die Situation zu lösen.
+  - Lass uns die Emotionen anerkennen und dann sachlich weitermachen.
+  - Ich vermittle gerne – sagt mir, was euch wichtig ist.
+  - Es gibt hier kein Richtig oder Falsch, nur verschiedene Perspektiven.
+  - Können wir die Fakten sortieren und dann gemeinsam entscheiden?
+  - Ich schlage vor, wir machen eine Pause und kommen dann zusammen.
+  - Lass mich zusammenfassen, was ich von beiden Seiten höre.
+  - Was braucht ihr, damit sich das hier besser anfühlt?
+  - Ich möchte, dass wir das als Team lösen, nicht gegeneinander.
+  - Entschuldigung für meinen Anteil – wie können wir vorankommen?
+  - Ich höre dir zu und nehme deine Bedenken ernst.
+  - Lass uns das Positive nicht aus den Augen verlieren.
+  - Gibt es einen Punkt, an dem ihr euch einig seid? Damit können wir anfangen.
+  - Ich bin da, um zu helfen – nicht um zu urteilen.
+  - Wir haben schon Schlimmeres gemeistert, das schaffen wir auch.
+  - Ich schlage einen Neuanfang vor – was haltet ihr davon?
+  - Danke, dass du das ansprichst. Lass uns eine Lösung finden.
+  - Können wir vereinbaren, wie wir in Zukunft mit solchen Situationen umgehen?
+  - Ich nehme mir Zeit für euch beide, damit wir das klären.
+  - Lass uns festhalten, was gut gelaufen ist und was wir verbessern können.
+  - Mir liegt viel an dieser Beziehung, deshalb möchte ich vermitteln.
+  - Ich biete an, als neutrale Person zu moderieren.
+  - Es geht mir nicht ums Rechthaben, sondern um eine Lösung.
+  - Können wir einen gemeinsamen Nenner finden?
+  - Ich höre, dass du frustriert bist. Wie kann ich helfen?
+  - Wir stehen vor einem Problem, aber auch vor einer Chance.
+  - 'Lass uns das strukturiert angehen: Erst zuhören, dann reden.'
+  - Ich möchte, dass am Ende alle zufrieden sind.
+  - Wie wäre es mit einem Kompromiss? Ich habe eine Idee.
   negative_de:
   - "Ignorier das."
   - "Kein Bedarf."
@@ -34,6 +74,21 @@ examples:
   - "Schweigen."
   - "Abbrechen."
   - "Konflikt halten."
+  - Mach das alleine, ich mische mich da nicht ein.
+  - Das ist euer Problem, nicht meins.
+  - Ich habe keine Lust, zwischen euch zu vermitteln.
+  - Klärt das selbst, ich halte mich raus.
+  - Mir ist egal, wie das ausgeht.
+  - Einer von euch hat recht, der andere nicht. Punkt.
+  - 'Ich stelle mich auf eine Seite: du hast Unrecht.'
+  - Das interessiert mich nicht, macht was ihr wollt.
+  - Löst euren Streit gefälligst ohne mich.
+  - Ich habe genug eigene Probleme, kümmert euch selbst.
+  - Da gibt es nichts zu vermitteln, die Sache ist klar.
+  - Ihr seid beide schuld, Ende der Diskussion.
+  - Ich will davon nichts hören, macht das unter euch aus.
+  - Konflikte lösen sich von selbst, da braucht es keine Vermittlung.
+  - Ich bin nicht euer Therapeut.
 semiotic:
   mode: symbolic
   level: pragmatic
