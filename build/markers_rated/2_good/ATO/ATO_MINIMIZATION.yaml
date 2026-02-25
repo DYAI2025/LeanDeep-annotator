@@ -17,6 +17,51 @@ examples:
   - "Halb so wild."
   - "Eigentlich okay."
   - "War ja nichts."
+  - Ach, war nur ein bisschen unangenehm.
+  - Das ist doch nicht so schlimm, mach dir keine Sorgen.
+  - Halb so wild, passiert halt.
+  - Eigentlich war es okay, kein großes Ding.
+  - War ja nichts Ernstes.
+  - Das ist doch kein Drama.
+  - Mach dir keinen Kopf, war nur ein bisschen stressig.
+  - Ist ja halb so wild, echt jetzt.
+  - So schlimm war es gar nicht, glaub mir.
+  - War nur ein kleiner Streit, nichts Weltbewegendes.
+  - Ach, das war nur ein bisschen ärgerlich.
+  - Eigentlich okay, man gewöhnt sich dran.
+  - Nicht so schlimm wie es klingt.
+  - War halb so wild, ehrlich gesagt.
+  - Nur ein bisschen müde, sonst alles gut.
+  - Das ist echt nicht so schlimm, vertrau mir.
+  - Eigentlich okay, ich mache kein Drama daraus.
+  - Ach, halb so wild, das regelt sich.
+  - Ist ja nur ein bisschen Stress, geht vorbei.
+  - War nicht so schlimm, hab ich schon vergessen.
+  - Nur ein bisschen traurig, aber geht schon.
+  - Eigentlich okay, ist nicht der Rede wert.
+  - Halb so wild, ich übertreibe sicher.
+  - So schlimm ist das doch nicht, oder?
+  - War nur ein kleines Missverständnis, halb so wild.
+  - Naja, nur ein bisschen enttäuscht, nicht so schlimm.
+  - Ist eigentlich okay, andere haben es schlimmer.
+  - War ja nur ein bisschen peinlich.
+  - Nicht so schlimm, ich habe Schlimmeres erlebt.
+  - Ach, halb so wild, ich komme drüber weg.
+  - War nur ein bisschen kalt draußen.
+  - Eigentlich okay, war ja nur eine Kleinigkeit.
+  - So schlimm war das wirklich nicht.
+  - Halb so wild, das kennt doch jeder.
+  - Nur ein bisschen angespannt, geht gleich wieder.
+  - Ist ja nicht so schlimm, lass gut sein.
+  - War eigentlich okay, ein bisschen komisch vielleicht.
+  - Ach, halb so wild, ich bin da nicht nachtragend.
+  - Nur ein bisschen nervös, aber nicht so schlimm.
+  - Das war doch gar nicht so schlimm.
+  - War halb so wild, ich hab das überstanden.
+  - Eigentlich okay, war ja nur kurz.
+  - Nicht so schlimm, geht mir schon besser.
+  - Ach, war nur ein bisschen ungemütlich.
+  - Halb so wild, das passiert jedem mal.
   negative:
   - Ich sehe das anders, aber ich respektiere deine Sicht.
   - Ich moechte ehrlich mit dir sein, auch wenn es schwer ist.
@@ -25,7 +70,24 @@ examples:
   - Ich fuehle mich unwohl dabei und moechte darueber reden.
   - Ich verstehe, warum du das so siehst.
   - Danke, dass du mir das sagst. Ich denke darueber nach.
+  - Das hat mich tief getroffen und ich bin wirklich verletzt.
+  - Das war eine schwierige Situation und ich bin noch nicht darüber hinweg.
+  - Ich nehme das sehr ernst und brauche Zeit.
+  - Das ist mir wirklich wichtig, bitte hör zu.
+  - Ich fühle mich damit nicht wohl und will ehrlich sein.
+  - Das war schlimm für mich, das gebe ich offen zu.
+  - Mich hat das wirklich beschäftigt.
+  - Ich bin total kaputt nach dem Tag.
+  - Das war echt hart für mich.
+  - Ich bin frustriert und enttäuscht.
+  - Mir geht es nicht gut damit.
+  - Das hat mich total aufgewühlt.
+  - Ich bin wütend und traurig zugleich.
+  - Das war eine echte Belastung.
+  - Ich brauche Hilfe bei dem Thema.
+  - Mir fehlen die Worte, so schlimm war das.
+  - Das hat mich richtig fertig gemacht.
+  - Ich bin noch ganz aufgelöst deswegen.
 vad_estimate: {valence: -0.5, arousal: 0.8, dominance: 0.6}
 effect_on_state: {trust: -0.3, conflict: 0.4, deesc: -0.2}
-semiotic: {peirce: symbol, signifikat: Kognitive Verzerrung/Framing, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie, myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt
-    sich als Fuersorge'}
+semiotic: {peirce: symbol, signifikat: Kognitive Verzerrung/Framing, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie, myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'}

@@ -23,6 +23,48 @@ examples:
   - "Du bist unfähig, Verantwortung zu übernehmen."
   - "Ihr seid arrogant ohne Grund."
   - "Du bist unsicher und projizierst."
+  - Du bist einfach arrogant, das war schon immer so.
+  - Ihr seid doch alle unsicher, deshalb macht ihr das.
+  - Du bist so dermaßen egoistisch.
+  - Du bist faul, das ist der Kern des Problems.
+  - Ihr seid unfähig, das zu begreifen.
+  - Du bist arrogant und merkst es nicht mal.
+  - Ihr seid unsicher, deshalb greift ihr mich an.
+  - Du bist egoistisch bis auf die Knochen.
+  - Du bist so faul, das ist nicht auszuhalten.
+  - Ihr seid unfähig, eine einfache Aufgabe zu erledigen.
+  - Du bist arrogant, punkt.
+  - Du bist unfähig, zuzuhören.
+  - Ihr seid arrogant und herablassend.
+  - Du bist unsicher, das sieht man dir an.
+  - Du bist egoistisch, dich interessiert nur du selbst.
+  - Ihr seid faul, immer muss ich alles machen.
+  - Du bist arrogant, wie dein Vater.
+  - Du bist unfähig, Kritik anzunehmen.
+  - Ihr seid so unsicher, das ist peinlich.
+  - Du bist egoistisch, du denkst nur an dich.
+  - Du bist faul und bequem.
+  - Ihr seid unfähig, euch zu organisieren.
+  - Du bist arrogant, deshalb hast du keine Freunde.
+  - Du bist unsicher und neidisch.
+  - Ihr seid egoistisch, keiner denkt an andere.
+  - Du bist faul, steh endlich auf.
+  - Du bist unfähig, dich zu entschuldigen.
+  - Ihr seid arrogant, ohne Grund.
+  - Du bist unsicher, deshalb kontrollierst du alles.
+  - Du bist egoistisch, das ist dein Problem.
+  - Ihr seid faul, das sieht man am Ergebnis.
+  - Du bist arrogant und überheblich.
+  - Du bist unfähig, dich zu ändern.
+  - Du bist egoistisch und rücksichtslos.
+  - Ihr seid unsicher und projiziert das auf mich.
+  - Du bist faul, du könntest so viel mehr.
+  - Du bist unfähig, auch nur eine Sache richtig zu machen.
+  - Du bist arrogant und selbstgerecht.
+  - Ihr seid egoistisch und denkt nie an die Konsequenzen.
+  - Du bist faul, das ist keine Überraschung.
+  - Du bist unfähig, einen Kompromiss einzugehen.
+  - Du bist arrogant und eingebildet.
   negative:
   - Ich sehe das anders, aber ich respektiere deine Sicht.
   - Ich moechte ehrlich mit dir sein, auch wenn es schwer ist.
@@ -31,6 +73,24 @@ examples:
   - Ich fuehle mich unwohl dabei und moechte darueber reden.
   - Ich verstehe, warum du das so siehst.
   - Danke, dass du mir das sagst. Ich denke darueber nach.
+  - Ich finde, du hast manchmal eine andere Perspektive als ich.
+  - Mir fällt auf, dass wir unterschiedlich an Dinge herangehen.
+  - Ich wünsche mir, dass du mehr zuhörst.
+  - Ich fühle mich manchmal nicht gehört.
+  - Ich empfinde das als schwierig.
+  - Mir wäre es lieber, wenn wir das anders machen.
+  - Ich möchte ehrlich mit dir sein, auch wenn es schwer ist.
+  - Du hast recht, das war mein Fehler.
+  - Lass uns beide unsere Seite erklären.
+  - Ich fühle mich unwohl und möchte darüber reden.
+  - Danke, dass du mir das sagst, ich denke darüber nach.
+  - Du wirkst heute müde, ist alles okay?
+  - Ich sehe, dass du dich Mühe gibst.
+  - Du bist heute so ruhig, alles gut?
+  - Du hast viel geschafft heute.
+  - Ich finde, du machst das richtig gut.
+  - Du wirkst nachdenklich, was beschäftigt dich?
+  - Ich bin manchmal auch etwas ungeduldig.
 tags: [atomic, projection, text]
 metadata:
   repair_log:

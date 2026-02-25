@@ -17,6 +17,51 @@ examples:
   - "Ganz bestimmt ist das eine Abkürzung."
   - "Klar, wir sind alle Millionäre /s"
   - "Super, logisch, total einfach."
+  - Ja genau, als ob das jemals funktioniert hat.
+  - Na klar, das ist ja total einfach.
+  - Ganz bestimmt, und morgen flieg ich zum Mond.
+  - Super logisch, echt genial dein Plan.
+  - Na klar doch, wir haben ja alle unbegrenzt Zeit.
+  - Ja, genau, du bist natürlich der Experte hier.
+  - Ganz bestimmt hat das niemand vorher probiert /s
+  - Super, na klar funktioniert das einfach so.
+  - Ja genau, so wie beim letzten Mal.
+  - Na klar, weil das bei dir ja immer so gut klappt.
+  - Ganz bestimmt wird das diesmal anders.
+  - Na klar doch, einfach mal machen, was soll schon schiefgehen.
+  - Super, logisch, warum bin ich da nicht drauf gekommen.
+  - Ja, genau, läuft bei dir.
+  - Ganz bestimmt eine tolle Idee /s
+  - Na klar, du hast ja auch nie Fehler gemacht.
+  - Ja genau, das hilft bestimmt total.
+  - Super na klar, sag ich doch.
+  - Na klar doch, wer braucht schon Schlaf.
+  - Ganz bestimmt die beste Entscheidung deines Lebens.
+  - Ja, genau, das hat ja schon drei Mal nicht geklappt.
+  - Na klar, weil Geld ja auf Bäumen wächst.
+  - Ganz bestimmt ist das die Lösung aller Probleme.
+  - Super logisch, warum macht das nicht jeder so?
+  - Ja genau, das wird total gut ausgehen /s
+  - Na klar doch, das glaube ich dir sofort.
+  - Ganz bestimmt hast du recht, wie immer.
+  - Ja, genau, weil das Leben ja so fair ist.
+  - Na klar, als hätte ich nichts Besseres zu tun.
+  - Super, na klar, kein Problem, easy.
+  - Ja genau, du bist der Einzige mit Problemen.
+  - Ganz bestimmt wird das ein voller Erfolg.
+  - Na klar doch, das war ja absehbar.
+  - Ja, genau, als ob mich das überrascht.
+  - Super logisch, da kommt man von alleine drauf.
+  - Na klar, weil du ja immer alles besser weißt.
+  - Ganz bestimmt, das wird sich von alleine lösen.
+  - Ja genau, noch so eine brillante Idee von dir.
+  - Na klar doch, läuft ja hervorragend /s
+  - Super, na klar, als ob das realistisch wäre.
+  - Ja, genau, das macht total Sinn.
+  - Ganz bestimmt habe ich darauf gewartet.
+  - Na klar, weil das so einfach ist, ne?
+  - Ja genau, herzlichen Glückwunsch zu der Erkenntnis.
+  - Super logisch, und die Erde ist eine Scheibe.
   negative:
   - Klar, wir sind einige Millionäre /s
   - Ich finde, wir sollten das in Ruhe besprechen.
@@ -25,4 +70,22 @@ examples:
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
+  - Ja, genau so machen wir das, guter Plan!
+  - Na klar, das schaffen wir gemeinsam.
+  - Ganz bestimmt wird es morgen besser.
+  - Super, ich freue mich darüber.
+  - Klar, verstanden, ich bin dabei.
+  - Das ist wirklich eine gute Idee, finde ich.
+  - Ja, stimmt, da hast du völlig recht.
+  - Natürlich, das mache ich gerne für dich.
+  - Logisch, das ergibt Sinn.
+  - Ich bin aufrichtig begeistert von deinem Vorschlag.
+  - Danke, das ist echt nett von dir.
+  - Na klar helfe ich dir, kein Problem.
+  - Ganz bestimmt komme ich zu deiner Feier.
+  - Super Idee, lass uns das umsetzen!
+  - Ja, genau das wollte ich auch vorschlagen.
+  - Klar doch, gerne mache ich das.
+  - Das ist wirklich toll, danke dir!
+  - Logisch, das ist der richtige Weg.
 tags: [humor, sarcasm, grice_quality, atomic, v33]

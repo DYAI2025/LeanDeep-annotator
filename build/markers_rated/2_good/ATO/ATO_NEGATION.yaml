@@ -18,6 +18,50 @@ examples:
   - "Auf keinen Fall."
   - "Nicht so."
   - "Das sehe ich nicht so."
+  - Nein, das will ich nicht.
+  - Das stimmt so nicht.
+  - Keinesfalls, auf gar keinen Fall.
+  - Auf keinen Fall mache ich das.
+  - Nicht mit mir, das geht nicht.
+  - Nein, da bin ich anderer Meinung.
+  - Das ist nicht richtig.
+  - Nein, absolut nicht.
+  - Auf keinen Fall kommt das in Frage.
+  - Keinesfalls werde ich das akzeptieren.
+  - Nein, das stimmt einfach nicht.
+  - Das sehe ich nicht so, überhaupt nicht.
+  - Nicht in Ordnung, nein.
+  - Nein danke, das möchte ich nicht.
+  - Keinesfalls werde ich das so hinnehmen.
+  - Das habe ich nicht gesagt.
+  - Auf keinen Fall fahre ich da hin.
+  - Nein, das passt mir nicht.
+  - Stimmt nicht, das ist falsch.
+  - Nicht jetzt, nein.
+  - Auf keinen Fall stimme ich zu.
+  - Nein, das ist mir zu viel.
+  - Das will ich nicht, nein.
+  - Keinesfalls war das meine Schuld.
+  - Nein nein nein, so nicht.
+  - Das geht nicht, auf keinen Fall.
+  - Nicht wahr, das hast du dir ausgedacht.
+  - Nein, nie im Leben.
+  - Stimmt nicht, so war das nicht.
+  - Das kommt nicht in Frage.
+  - Auf keinen Fall lasse ich das durchgehen.
+  - Nein, ich lehne ab.
+  - Keinesfalls akzeptabel.
+  - Nicht unter diesen Bedingungen.
+  - Auf keinen Fall, das sage ich klar.
+  - Nein, definitiv nicht.
+  - Nicht in meinem Haus.
+  - Das stimmt nicht, und das weißt du.
+  - Keinesfalls, das kommt überhaupt nicht in Frage.
+  - Nein, fertig, Ende der Diskussion.
+  - Nicht so, das muss anders gehen.
+  - Auf keinen Fall gehe ich da mit.
+  - Nein, kein Stück, gar nicht.
+  - Das hat nicht gestimmt, was du gesagt hast.
   negative:
   - wenige.
   - Auf wenige Fall.
@@ -26,6 +70,24 @@ examples:
   - Ich verstehe deine Perspektive.
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
+  - Ja, das finde ich auch.
+  - Okay, einverstanden.
+  - Stimmt, da hast du recht.
+  - Gerne, kein Problem.
+  - Klar, mach ich.
+  - Das ist eine gute Idee.
+  - Ja natürlich, gerne doch.
+  - Ich bin dabei.
+  - Das klingt gut.
+  - Meinetwegen, warum nicht?
+  - Geht klar, machen wir.
+  - Super, das passt.
+  - Von mir aus, einverstanden.
+  - Ja sicher, kein Thema.
+  - Finde ich gut, lass uns das machen.
+  - Genau so sehe ich das auch.
+  - Richtig, das stimmt.
+  - Alles klar, bin dabei.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
 semiotic: {peirce: icon, signifikat: Verneinung/Ablehnung, framing_type: eskalation, cultural_frame: '', myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'}
