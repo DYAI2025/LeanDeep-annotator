@@ -141,7 +141,17 @@ class MarkerEngine:
         self._loaded = False
 
     def load(self, registry_path: str | None = None):
-        """Load and compile all markers from the registry."""
+        """Load and compile all markers from the registry.
+
+        Idempotent: clears all state before loading so calling load()
+        twice does not accumulate duplicate markers.
+        """
+        self.markers.clear()
+        self.ato_markers.clear()
+        self.sem_markers.clear()
+        self.clu_markers.clear()
+        self.mema_markers.clear()
+
         path = Path(registry_path or settings.registry_path)
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
