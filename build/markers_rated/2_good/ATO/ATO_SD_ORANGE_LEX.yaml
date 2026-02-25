@@ -7,7 +7,8 @@ frame:
   pragmatics: "Leistung"
   narrative: "surface"
 pattern:
-  tokens: ["Ziele setzen", "Leistung", "KPIs", "Ergebnisse", "optimieren", "gewinnen"]
+- (?i)\b(KPIs?|Performance|Effizienz|ergebnisorientiert|Zielerreichung|Benchmark|OKRs?|Metriken?|Kennzahlen?|Revenue|Umsatz|Wachstum|Marktführer|Produktivität|skalier|profitabel)\b
+- (?i)\b(optimier|Target|Pipeline|Profitabilität|Conversion.Rate|Leistungsträger|Spitzenleistung|Shareholder.Value|Output.maximier|Wettbewerb|High.Performance)\b
 examples:
   positive:
   - "Ziele setzen … Leistung messen"

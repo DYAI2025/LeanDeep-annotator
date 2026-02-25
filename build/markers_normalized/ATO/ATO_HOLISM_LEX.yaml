@@ -10,7 +10,9 @@ frame:
   concept: Holismus/Ganzheit
   pragmatics: Integration
   narrative: surface
-patterns: []
+patterns:
+- type: regex
+  value: (?i)\b(holistisch|ganzheitlich|Verbundenheit|kosmisch|integrales?|Ganzheitlichkeit|das Ganze|Ganzheits|holistisches? Denken|ganzheitlicher Ansatz)\b
 examples:
   positive:
   - ganzheitlicher Blick … Verbundenheit

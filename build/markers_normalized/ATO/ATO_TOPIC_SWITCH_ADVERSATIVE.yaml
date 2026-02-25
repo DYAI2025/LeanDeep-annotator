@@ -15,13 +15,13 @@ frame:
   narrative: Schwenk
 patterns:
 - type: regex
-  value: "(?i)\baber\b"
+  value: (?i)\baber\b
 - type: regex
-  value: "(?i)\bjedoch\b"
+  value: (?i)\bjedoch\b
 - type: regex
-  value: "(?i)\bwobei\b"
+  value: (?i)\bwobei\b
 - type: regex
-  value: "(?i)\btrotzdem\b"
+  value: (?i)\btrotzdem\b
 examples:
   positive:
   - Aber koennen wir kurz ueber Budget reden?

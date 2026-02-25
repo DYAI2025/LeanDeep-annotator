@@ -10,7 +10,12 @@ frame:
   concept: SD Yellow
   pragmatics: Systemdenken
   narrative: surface
-patterns: []
+patterns:
+- type: regex
+  value: 
+    (?i)\b(systemisch|Systemdenken|mehrperspektivisch|Metaebene|Meta-Ebene|Feedbackschleife|Emergenz|Interdependenz|Adaptivität|nichtlinear|kontextabhängig|Wechselwirkung|Subsystem|Systemebene|systemische[rs]?)\b
+- type: regex
+  value: (?i)\b(Second-Order|Polarity.Management|integrales?|Metakognition|Komplexitätskompetenz|Hebelpunkt|systemisches? Denken)\b
 examples:
   positive:
   - Systeme vernetzen … Komplexität integrieren

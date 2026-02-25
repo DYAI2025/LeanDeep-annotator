@@ -12,9 +12,13 @@ frame:
   narrative: affect_manipulation
 patterns:
 - type: regex
-  value: (?i)\b(niemand versteht mich|keiner hilft mir|immer bin ich der/die dumme|ich armes(\s+ich)?|keiner steht hinter mir)\b
-  flags:
-  - "IGNORECASE"
+  value: (?i)\b(niemand versteht mich|keiner hilft mir|keiner steht hinter mir|ich bin doch allein)\b
+- type: regex
+  value: (?i)\b(immer bin ich (?:der|die) (?:Dumm|Blöd)|warum passiert das immer mir|alle lassen mich|alle gegen mich)\b
+- type: regex
+  value: (?i)\b(ich armes? Ich|mir hilft niemand|ich habe niemanden|ich bin allein damit|keiner sieht das)\b
+- type: regex
+  value: (?i)\b(immer treffe ich es|warum immer ich|ich komme da nie raus|es bringt doch nichts)\b
 examples:
   positive:
   - Niemand versteht mich.

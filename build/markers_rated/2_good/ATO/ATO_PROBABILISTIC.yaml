@@ -7,7 +7,7 @@ frame:
   pragmatics: "Unsicherheit"
   narrative: "surface"
 pattern:
-  tokens: ["wahrscheinlich", "vermutlich", "eventuell", "tendenziell", "möglich"]
+- (?i)\b(wahrscheinlich|vermutlich|eventuell|tendenziell|möglicherweise|potenziell|dürfte|wohl|womöglich|vielleicht|es könnte|könnte sein|könnte auch)\b
 examples:
   positive:
   - "vielleicht ist es so … bin mir nicht sicher"

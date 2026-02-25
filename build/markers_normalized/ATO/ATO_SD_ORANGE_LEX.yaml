@@ -10,7 +10,11 @@ frame:
   concept: SD Orange
   pragmatics: Leistung
   narrative: surface
-patterns: []
+patterns:
+- type: regex
+  value: (?i)\b(KPIs?|Performance|Effizienz|ergebnisorientiert|Zielerreichung|Benchmark|OKRs?|Metriken?|Kennzahlen?|Revenue|Umsatz|Wachstum|Marktführer|Produktivität|skalier|profitabel)\b
+- type: regex
+  value: (?i)\b(optimier|Target|Pipeline|Profitabilität|Conversion.Rate|Leistungsträger|Spitzenleistung|Shareholder.Value|Output.maximier|Wettbewerb|High.Performance)\b
 examples:
   positive:
   - Ziele setzen … Leistung messen

@@ -8,8 +8,10 @@ frame:
   narrative: "affect_manipulation"
 tags: [pity, victimization]
 pattern:
-  regex: "(?i)\\b(niemand versteht mich|keiner hilft mir|immer bin ich der/die dumme|ich armes(\\s+ich)?|keiner steht hinter mir)\\b"
-  flags: ["IGNORECASE"]
+- (?i)\b(niemand versteht mich|keiner hilft mir|keiner steht hinter mir|ich bin doch allein)\b
+- (?i)\b(immer bin ich (?:der|die) (?:Dumm|Blöd)|warum passiert das immer mir|alle lassen mich|alle gegen mich)\b
+- (?i)\b(ich armes? Ich|mir hilft niemand|ich habe niemanden|ich bin allein damit|keiner sieht das)\b
+- (?i)\b(immer treffe ich es|warum immer ich|ich komme da nie raus|es bringt doch nichts)\b
 examples:
   positive:
   - "Niemand versteht mich."

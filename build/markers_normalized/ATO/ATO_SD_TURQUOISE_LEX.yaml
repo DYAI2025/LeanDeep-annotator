@@ -10,7 +10,11 @@ frame:
   concept: SD Turquoise
   pragmatics: Holismus
   narrative: surface
-patterns: []
+patterns:
+- type: regex
+  value: (?i)\b(ganzheitlich|holistisch|kosmisch|Verbundenheit|planetar|Schwingung|kollektives Bewusstsein|Resonanz|Ganzheit|integrales?|universell|kollektive[rs]? Intelligenz)\b
+- type: regex
+  value: (?i)\b(kollektive[rs]? Unbewusste|kosmische[rs]? Netzwerk|planetares? Bewusstsein|Erde.als.Organismus|Einheit.von|morphisches? Feld)\b
 examples:
   positive:
   - ganzheitlicher Blick … Verbundenheit

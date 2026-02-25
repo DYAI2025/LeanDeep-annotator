@@ -7,7 +7,8 @@ frame:
   pragmatics: "Macht"
   narrative: "surface"
 pattern:
-  tokens: ["Macht", "Kontrolle", "Stärke", "Respekt erzwingen", "durchsetzen"]
+- (?i)\b(setze? mich durch|Durchsetzung|Durchsetzungsvermögen|Alpha|Anführer|Machtposition|hier bestimm|hier regier|Machtkampf|Stärke zeig|Dominanz signalisier|niemand bremst mich)\b
+- (?i)\b(Respekt erzwing|dulde keinen Widerspruch|akzeptiere kein Nein|ich befehle|ich herrsche|ich regiere hier|Unterwerfung|kein Erbarmen|Widerstand ist zwecklos)\b
 examples:
   positive:
   - "ich setze mich durch … Stärke zählt"

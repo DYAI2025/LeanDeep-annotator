@@ -7,7 +7,8 @@ frame:
   pragmatics: "Holismus"
   narrative: "surface"
 pattern:
-  tokens: ["Ganzheit", "Kohärenz", "Verbundenheit", "Feld", "Kollektiv"]
+- (?i)\b(ganzheitlich|holistisch|kosmisch|Verbundenheit|planetar|Schwingung|kollektives Bewusstsein|Resonanz|Ganzheit|integrales?|universell|kollektive[rs]? Intelligenz)\b
+- (?i)\b(kollektive[rs]? Unbewusste|kosmische[rs]? Netzwerk|planetares? Bewusstsein|Erde.als.Organismus|Einheit.von|morphisches? Feld)\b
 examples:
   positive:
   - "ganzheitlicher Blick … Verbundenheit"

@@ -10,7 +10,11 @@ frame:
   concept: SD Red
   pragmatics: Macht
   narrative: surface
-patterns: []
+patterns:
+- type: regex
+  value: (?i)\b(setze? mich durch|Durchsetzung|Durchsetzungsvermögen|Alpha|Anführer|Machtposition|hier bestimm|hier regier|Machtkampf|Stärke zeig|Dominanz signalisier|niemand bremst mich)\b
+- type: regex
+  value: (?i)\b(Respekt erzwing|dulde keinen Widerspruch|akzeptiere kein Nein|ich befehle|ich herrsche|ich regiere hier|Unterwerfung|kein Erbarmen|Widerstand ist zwecklos)\b
 examples:
   positive:
   - ich setze mich durch … Stärke zählt

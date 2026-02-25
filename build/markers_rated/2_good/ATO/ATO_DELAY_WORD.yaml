@@ -7,7 +7,7 @@ frame:
   pragmatics: "Prokrastination"
   narrative: "surface"
 pattern:
-  tokens: ["später", "morgen", "gleich", "bald", "nachher"]
+- (?i)\b(später|nachher|irgendwann|sobald|demnächst|bald|mach ich noch|erledige ich|kommt noch|mach ich morgen|mach ich dann)\b
 examples:
   positive:
   - "mach ich heute noch … vielleicht morgen"

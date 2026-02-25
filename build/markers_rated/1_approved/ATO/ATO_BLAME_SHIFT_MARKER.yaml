@@ -6,11 +6,9 @@ frame:
   pragmatics: Verantwortlichkeit vermeiden
   narrative: abwälzen
 pattern:
-- (?i)\\bdu\ nicht\\b
-- (?i)\\bdu\ hast\\b
-- (?i)\\bnicht\ ich\.\\b
-- (?i)\\bwenn\ du\\b
-- (?i)\\bselber\ schuld\\b
+- (?i)\b(deine Schuld|dein Fehler|du bist schuld|wegen dir|selber schuld|durch dich)\b
+- (?i)\b(du hast mich dazu gebracht|du hast angefangen|wenn du nicht wärst?|das liegt an dir|du hast das verursacht)\b
+- (?i)\b(wegen deinem? Verhalten|wärst? du nicht|du bist verantwortlich dafür|du hast mich gezwungen|du hast provoziert)\b
 examples:
   positive:
   - "Das ist deine Schuld."

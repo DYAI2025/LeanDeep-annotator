@@ -11,10 +11,10 @@ frame:
   pragmatics: "Position relativieren, Fokus verlagern"
   narrative: "Schwenk"
 pattern:
-- "(?i)\baber\b"
-- "(?i)\bjedoch\b"
-- "(?i)\bwobei\b"
-- "(?i)\btrotzdem\b"
+- (?i)\baber\b
+- (?i)\bjedoch\b
+- (?i)\bwobei\b
+- (?i)\btrotzdem\b
 activation_logic: "ANY 1"
 examples:
   positive:
