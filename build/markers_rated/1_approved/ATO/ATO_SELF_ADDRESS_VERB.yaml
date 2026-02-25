@@ -23,6 +23,46 @@ examples:
   - "sprich zu dir leise, dass du sicher bist"
   - "ich zu mir sage: du darfst bleiben"
   - "begegne dir selbst jeden Morgen in Ruhe"
+  - Begegne dir selbst mit Mitgefühl.
+  - Sprich zu dir wie zu einem guten Freund.
+  - 'Ich sage mir: Du schaffst das.'
+  - Begegne dir selbst ehrlich.
+  - Sprich zu dir mit Güte.
+  - 'Ich zu mir: Alles wird gut.'
+  - Begegne dir selbst ohne Urteil.
+  - Sprich zu dir selbst liebevoll.
+  - 'Ich sage zu mir: Bleib stark.'
+  - Begegne dir mit Respekt.
+  - Sprich zu dir wie zu einem Kind.
+  - 'Ich zu mir: Das ist okay.'
+  - Begegne dir selbst offen.
+  - Sprich freundlich zu dir.
+  - 'Ich sage mir selbst: Atme.'
+  - Begegne dir selbst geduldig.
+  - 'Sprich zu dir: Es ist genug.'
+  - 'Ich zu mir selbst: Hab Vertrauen.'
+  - Begegne dir selbst mit Wärme.
+  - Sprich zu dir wie dein bester Freund.
+  - 'Ich sage mir: Du bist gut genug.'
+  - Begegne dir selbst achtsam.
+  - Sprich zu dir in schwierigen Momenten.
+  - 'Ich zu mir: Lass los.'
+  - Begegne dir selbst mit Verständnis.
+  - Sprich zu dir sanft.
+  - 'Ich sage mir: Es geht weiter.'
+  - Begegne dir selbst wie einem Gast.
+  - Sprich zu dir mit Zuversicht.
+  - 'Ich zu mir: Sei mutig.'
+  - Begegne dir selbst mit Neugier.
+  - Sprich zu dir ohne Vorwürfe.
+  - 'Ich sage mir: Das schaffe ich.'
+  - Begegne dir selbst liebevoll.
+  - Sprich zu dir wie zu einer Freundin.
+  - 'Ich zu mir: Sei geduldig.'
+  - Begegne dir selbst mit Humor.
+  - Sprich zu dir ermutigend.
+  - 'Ich sage mir: Du bist wertvoll.'
+  - Begegne dir selbst wie einem Schatz.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -31,6 +71,24 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich rede mit meinem Kollegen.
+  - Wir besprechen das im Team.
+  - Sie hat mir einen Rat gegeben.
+  - Er sprach mit seinem Chef.
+  - Wir kommunizieren offen.
+  - Ich habe mit ihr telefoniert.
+  - Er hat mich angesprochen.
+  - Wir reden darüber.
+  - Sie berät mich.
+  - Ich spreche mit dem Arzt.
+  - Er gibt mir Feedback.
+  - Wir diskutieren das Thema.
+  - Sie motiviert mich.
+  - Ich berate mich mit Freunden.
+  - Er spricht offen darüber.
+  - Wir tauschen uns aus.
+  - Sie hat mir zugehört.
+  - Ich frage um Rat.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
 semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

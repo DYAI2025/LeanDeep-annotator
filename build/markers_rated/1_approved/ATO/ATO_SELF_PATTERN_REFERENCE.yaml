@@ -19,6 +19,49 @@ examples:
   - "Schon wieder mache ich das gleiche"
   - "Es ist immer die selbe Dynamik, die wir haben"
   - "Das ist unser System, wir kommen da nicht so einfach raus"
+  - Das ist mein Muster, immer wieder dasselbe.
+  - Immer wieder passiert mir das.
+  - Das kenne ich von mir, leider.
+  - Typisch für mich, immer dasselbe.
+  - Wie immer, ich mache den gleichen Fehler.
+  - Schon wieder das gleiche Muster.
+  - Meine Muster wiederholen sich ständig.
+  - Immer wieder falle ich darauf rein.
+  - Das kenne ich so gut von mir.
+  - 'Typisch für mich: Vermeidung.'
+  - Wie immer laufe ich davon.
+  - Mal wieder das alte Muster.
+  - Mein Muster ist Kontrolle.
+  - Immer wieder gerate ich in die gleiche Situation.
+  - 'Das kenne ich von mir: Perfektionismus.'
+  - 'Typisch: Ich überfordere mich wieder.'
+  - Wie immer sage ich ja, obwohl ich nein meine.
+  - Schon wieder mein altes Muster.
+  - Mein Muster zeigt sich wieder.
+  - Immer wieder reagiere ich gleich.
+  - Das erkenne ich als mein Muster.
+  - 'Typisch für mich: Ich ziehe mich zurück.'
+  - Wie immer übernehme ich zu viel.
+  - Mal wieder in die Falle getappt.
+  - Meine Muster sind hartnäckig.
+  - Schon wieder das Gleiche.
+  - Das Muster wiederholt sich bei mir.
+  - Immer wieder dieselbe Dynamik.
+  - 'Kenne ich von mir: Selbstzweifel.'
+  - Typisch für mich, dass ich das vergesse.
+  - Wie immer bin ich zu spät dran.
+  - Wieder mal das bekannte Muster.
+  - 'Mein Muster: Erst helfen, dann zusammenbrechen.'
+  - Immer wieder die gleichen Fehler.
+  - Das kenne ich zu gut von mir.
+  - 'Typisch: Ich vermeide den Konflikt.'
+  - Wie immer stecke ich den Kopf in den Sand.
+  - Schon wieder passiert mir das Gleiche.
+  - Das ist ein Muster bei mir.
+  - Immer wieder das alte Spiel.
+  - 'Kenne ich von mir: Aufschieben.'
+  - 'Typisch für mich: Zu viel nachdenken.'
+  - Wie immer mache ich es kompliziert.
   negative:
   - Ich verfalle manchmal wieder in dieses Verhalten
   - Ich finde, wir sollten das in Ruhe besprechen.
@@ -27,6 +70,24 @@ examples:
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
+  - Das ist mir noch nie passiert.
+  - Das ist eine neue Erfahrung.
+  - So habe ich noch nie reagiert.
+  - Das überrascht mich an mir selbst.
+  - Das ist ungewöhnlich für mich.
+  - Zum ersten Mal mache ich das.
+  - Das kenne ich gar nicht von mir.
+  - Ich verhalte mich heute anders.
+  - Das ist ein neues Verhalten.
+  - So bin ich sonst nicht.
+  - Interessant, das ist neu.
+  - Das habe ich noch nie erlebt.
+  - Zum ersten Mal fühlt es sich anders an.
+  - Das ist untypisch für mich.
+  - Ich breche aus meinem Muster aus.
+  - Heute mache ich es anders.
+  - Das ist eine Veränderung.
+  - Ich reagiere anders als sonst.
 tags: [atomic, mustererkennung, selbstreflexion, pattern]
 schema_version: "3.3"
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}

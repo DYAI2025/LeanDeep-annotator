@@ -28,6 +28,51 @@ examples:
   - Ganz bestimmt ist das eine Abkürzung.
   - Klar, wir sind alle Millionäre /s
   - Super, logisch, total einfach.
+  - Ja, genau, weil das immer klappt.
+  - Na klar, so macht man das.
+  - Ganz bestimmt wird das diesmal anders.
+  - Super, na klar, brillante Idee.
+  - Ja genau, und morgen fliege ich zum Mond.
+  - Na klar doch, das glaube ich sofort.
+  - Ganz bestimmt war das Absicht.
+  - Super logisch, wer hätte das gedacht.
+  - Ja, genau so habe ich mir das vorgestellt. Nicht.
+  - Na klar, das funktioniert bestimmt.
+  - Ganz bestimmt ist das die Lösung.
+  - Ja genau, natürlich ist das fair /s
+  - Na klar doch, ich vertraue dem Prozess.
+  - Super, na klar, alles super.
+  - Ganz bestimmt wird das Mal was.
+  - Ja genau, weil ich nichts Besseres zu tun habe.
+  - Na klar, das ergibt total Sinn.
+  - Super logisch der Vorschlag. Nicht.
+  - Ganz bestimmt ist das eine gute Idee /s
+  - Ja, genau, weil das beim letzten Mal so gut lief.
+  - Na klar doch, kein Problem.
+  - Ganz bestimmt schaffen wir das in der Zeit.
+  - Super, na klar, genau mein Ding.
+  - Ja genau, wie immer perfekt geplant.
+  - Na klar, und ich bin der Weihnachtsmann.
+  - Ganz bestimmt haben die das durchdacht.
+  - Super logisch, absolut nachvollziehbar. Not.
+  - Ja, genau das wollte ich hören. Nicht.
+  - Na klar doch, das war ja so vorhersehbar.
+  - Ganz bestimmt ist das durchdacht /s
+  - Super, na klar, mein absoluter Favorit.
+  - Ja genau, geniale Strategie.
+  - Na klar, das löst alle Probleme.
+  - Ganz bestimmt hat das Hand und Fuß.
+  - Ja genau, das war total meine Schuld. Na klar.
+  - Na klar doch, läuft wie geschmiert.
+  - Super, na klar, was könnte schiefgehen?
+  - Ganz bestimmt ist das effizient.
+  - Ja, genau, weil wir alle so viel Zeit haben.
+  - Na klar, einfach toll /s
+  - Ganz bestimmt wird das Mal funktionieren.
+  - Super logisch, wie immer.
+  - Ja genau, großartiger Plan. Nicht.
+  - Na klar doch, ich bin begeistert. Echt jetzt.
+  - Ganz bestimmt ist das die beste Option. Sicher.
   negative:
   - Klar, wir sind einige Millionäre /s
   - Ich finde, wir sollten das in Ruhe besprechen.
@@ -36,6 +81,24 @@ examples:
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
+  - Ja genau, das stimmt wirklich.
+  - Klar, das machen wir gerne.
+  - Natürlich helfe ich dir.
+  - Selbstverständlich, kein Problem.
+  - Ja, das ist eine gute Idee.
+  - Klar, einverstanden.
+  - Natürlich, gerne doch.
+  - Selbstverständlich ist das möglich.
+  - Ja, das sehe ich auch so.
+  - Klar, passt mir gut.
+  - Genau, so machen wir das.
+  - Na klar, komm vorbei.
+  - Gerne, das mache ich.
+  - Ja, stimmt genau.
+  - Klar, wann passt es dir?
+  - Ganz bestimmt schaffen wir das zusammen.
+  - Na klar, ich unterstütze dich.
+  - Super, lass uns anfangen.
 tags:
 - humor
 - sarcasm

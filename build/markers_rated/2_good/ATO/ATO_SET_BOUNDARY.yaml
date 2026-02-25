@@ -17,6 +17,51 @@ examples:
   - "Stopp."
   - "Das ist nicht okay."
   - "Meine Grenze."
+  - Hier ist meine Grenze.
+  - Bis hierhin und nicht weiter.
+  - Nein, das mache ich nicht.
+  - Stopp, das geht zu weit.
+  - Das ist nicht okay für mich.
+  - Meine Grenze ist erreicht.
+  - Bis hierhin, danach ist Schluss.
+  - Nein, das akzeptiere ich nicht.
+  - Stopp, das möchte ich nicht.
+  - Das ist definitiv nicht okay.
+  - 'Grenze setzen: Hier ist Ende.'
+  - Bis hierhin reicht es.
+  - Nein heißt Nein.
+  - Stopp, ich brauche Abstand.
+  - Das ist nicht okay, und das sage ich dir.
+  - Meine Grenze ist klar definiert.
+  - Bis hierhin und keinen Schritt weiter.
+  - Nein, das kommt nicht in Frage.
+  - Stopp, das übersteigt meine Toleranz.
+  - Nicht okay, und das weißt du.
+  - 'Grenze: Ich sage Nein.'
+  - Bis hierhin war es genug.
+  - Nein, damit bin ich nicht einverstanden.
+  - Stopp, respektiere meine Grenzen.
+  - Das ist überhaupt nicht okay.
+  - Hier ziehe ich die Grenze.
+  - Bis hierhin, jetzt ist genug.
+  - Nein, dazu bin ich nicht bereit.
+  - Stopp, so geht das nicht weiter.
+  - Das geht nicht, das ist nicht okay.
+  - Meine persönliche Grenze ist hier.
+  - Bis hierhin und nicht einen Millimeter weiter.
+  - Nein, darüber diskutiere ich nicht.
+  - Stopp, das verletze mich.
+  - 'Nicht okay: Ich sage klar Nein.'
+  - Hier ist meine rote Linie.
+  - Bis hierhin, dann ist Feierabend.
+  - Nein ist ein ganzer Satz.
+  - Stopp, ich setze jetzt Grenzen.
+  - Das ist absolut nicht okay für mich.
+  - Grenze gesetzt, Punkt.
+  - 'Bis hierhin: keine Diskussion.'
+  - Nein, das lehne ich ab.
+  - Stopp, genug ist genug.
+  - Nicht okay, egal wie du es drehst.
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -25,6 +70,24 @@ examples:
   - I've noticed we think differently about this.
   - I want to understand what you mean.
   - That sounds like an important topic for you.
+  - Klar, mache ich gerne.
+  - Okay, wenn du meinst.
+  - Ist schon in Ordnung.
+  - Ja, natürlich.
+  - Kein Problem.
+  - Für dich tue ich das.
+  - Mach ich halt.
+  - Geht schon.
+  - Passt.
+  - Wenn es sein muss.
+  - Na gut.
+  - Okay, einverstanden.
+  - Ja, sicher.
+  - Klar doch.
+  - Wird gemacht.
+  - In Ordnung.
+  - Von mir aus.
+  - Meinetwegen.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
 semiotic: {peirce: symbol, signifikat: Grenzsetzung, framing_type: bindung, cultural_frame: '', myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

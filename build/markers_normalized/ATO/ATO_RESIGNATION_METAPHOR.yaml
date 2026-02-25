@@ -35,6 +35,36 @@ examples:
   - Ich lasse meinen Antrieb einfach versanden.
   - Ich richte mich auf Rückzug ein.
   - Ich höre auf zu kämpfen und lasse es geschehen.
+  - Ich hisse die weiße Fahne.
+  - Ich gebe auf, es hat keinen Sinn.
+  - Das Schiff ist am Sinken.
+  - Ich werfe das Handtuch.
+  - Der Zug ist abgefahren.
+  - Das Licht am Ende des Tunnels ist erloschen.
+  - Ich treibe im Strom ohne Ruder.
+  - Die Mauern fallen über mir zusammen.
+  - Ich stehe mit dem Rücken zur Wand.
+  - Die Uhr ist abgelaufen.
+  - Ich bin am Ende meiner Kräfte.
+  - Das Fass ist übergelaufen.
+  - Ich sitze in der Sackgasse.
+  - Die Luft ist raus.
+  - Ich bin auf dem sinkenden Schiff.
+  - Das Kartenhaus bricht zusammen.
+  - Ich stehe vor verschlossenen Türen.
+  - Die letzte Hoffnung ist verflogen.
+  - Ich hänge in der Luft.
+  - Mir sind die Hände gebunden.
+  - Ich bin am Boden.
+  - Der Wind hat sich gedreht.
+  - Ich renne gegen Windmühlen.
+  - Mein Akku ist leer.
+  - Ich bin ausgebrannt wie eine Kerze.
+  - Das Boot ist leck.
+  - Ich stehe im Regen.
+  - Die Brücke ist abgebrochen.
+  - Ich versinke im Treibsand.
+  - Die Flamme ist erloschen.
   negative:
   - Ich denke, wir sollten das sachlich betrachten.
   - Mir geht es gut, danke der Nachfrage.
@@ -43,6 +73,24 @@ examples:
   - Alles in Ordnung bei mir.
   - Ich fuehle mich heute ruhig und gelassen.
   - Das ueberrascht mich, aber es ist okay.
+  - Es gibt immer einen Weg.
+  - Ich gebe nicht auf.
+  - Da geht noch was.
+  - Ich sehe Licht am Ende des Tunnels.
+  - Neue Energie tanken und weitermachen.
+  - Ich kämpfe weiter.
+  - Der nächste Versuch wird besser.
+  - Ich glaube an eine Lösung.
+  - Es wird schon wieder.
+  - Kopf hoch und weiter.
+  - Morgen sieht alles anders aus.
+  - Ich finde einen neuen Weg.
+  - Das wird schon klappen.
+  - Ich bin optimistisch.
+  - Hindernisse machen stark.
+  - Ich schaffe das.
+  - Da geht noch mehr.
+  - Ich lasse mich nicht unterkriegen.
   - Ich halte durch, bis wir eine Lösung haben.
   - Ich kämpfe weiter, egal wie schwer es wird.
   - Ich gebe nicht auf, auch wenn es zäh ist.

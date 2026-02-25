@@ -27,6 +27,46 @@ examples:
   - Das war eine peinliche Aktion von mir.
   - Fühle mich gerade echt mies und schäme mich.
   - Hoffentlich hat das niemand gesehen, so peinlich.
+  - Ich schäme mich in Grund und Boden.
+  - Peinlich, wie ich mich aufgeführt habe.
+  - Zum Schämen, was da passiert ist.
+  - Ich könnte im Boden versinken vor Scham.
+  - Unangenehm ist gar kein Ausdruck.
+  - Ich schäme mich zutiefst.
+  - Das war so dermaßen peinlich.
+  - 'Zum Schämen: Ich habe mich blamiert.'
+  - Im Boden versinken wäre jetzt gut.
+  - Unangenehm und peinlich zugleich.
+  - Schäme mich so sehr dafür.
+  - Peinlich berührt stehe ich da.
+  - Zum Schämen, wie naiv ich war.
+  - Versinken möchte ich im Boden.
+  - Mir ist das wahnsinnig unangenehm.
+  - Ich schäme mich, dass ich geweint habe.
+  - Peinlich war das, sehr peinlich.
+  - Ich schäme mich für meine Worte.
+  - Im Boden versinken, am liebsten sofort.
+  - Das ist mir extrem unangenehm.
+  - Schäme mich für meine Schwäche.
+  - So peinlich, ich will das vergessen.
+  - Zum Schämen, wie ich reagiert habe.
+  - Könnte im Boden versinken.
+  - 'Unangenehm: Alle haben es gesehen.'
+  - Ich schäme mich für gestern Abend.
+  - Peinlich, dass mir das passiert ist.
+  - 'Zum Schämen: Ich habe gelogen.'
+  - Im Boden versinken vor Scham.
+  - Das war so unangenehm für mich.
+  - Ich schäme mich manchmal für mich selbst.
+  - Peinlich, peinlich, peinlich.
+  - Schäme mich dafür, das gesagt zu haben.
+  - Am liebsten im Boden versinken.
+  - Es ist mir sehr unangenehm.
+  - Ich schäme mich für mein Versagen.
+  - Das Peinlichste, was mir je passiert ist.
+  - Ich will im Boden versinken.
+  - Unangenehme Situation, ich schäme mich.
+  - Schäme mich so sehr.
   negative:
   - Ich denke, wir sollten das sachlich betrachten.
   - Mir geht es gut, danke der Nachfrage.
@@ -35,6 +75,24 @@ examples:
   - Alles in Ordnung bei mir.
   - Ich fuehle mich heute ruhig und gelassen.
   - Das ueberrascht mich, aber es ist okay.
+  - Ich fühle mich heute ruhig und gelassen.
+  - Das überrascht mich, aber es ist okay.
+  - Das kann jedem passieren.
+  - Kein Grund, sich schlecht zu fühlen.
+  - Das war nicht schlimm.
+  - Fehler sind menschlich.
+  - Ich nehme das gelassen.
+  - Kein Drama.
+  - Passiert, weiter geht's.
+  - Ich stehe dazu.
+  - Das ist okay so.
+  - Kein Grund zur Aufregung.
+  - Ich fühle mich wohl.
+  - Das war halt so.
+  - Ich bin im Reinen damit.
+  - Kein Grund für Scham.
+  - Das ist ganz normal.
+  - Ich bin zufrieden mit mir.
 tags:
 - affect
 - shame

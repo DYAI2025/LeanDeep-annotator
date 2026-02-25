@@ -23,6 +23,46 @@ examples:
   - Ich verliere immer Freundschaften → Ich kann es ihnen nicht erklären, das versteht keiner → Neue Leute kennenlernen geht auch nicht, ich bin zu komisch
   - Die Wohnung ist chaotisch → Ich kann nicht aufräumen, mir fehlt Energie → Hilfe holen geht nicht, niemand möchte das sehen
   - Ich komme beruflich nicht voran → Ich kann keinen Kurs machen, der kostet zu viel → Bewerben bringt nichts, die nehmen mich sowieso nicht
+  - Ja, aber das hilft auch nicht.
+  - Habe ich schon probiert, bringt nichts.
+  - Das klingt gut, aber bei mir klappt das nie.
+  - Ja, aber das funktioniert in meiner Situation nicht.
+  - Habe ich alles versucht, nichts hilft.
+  - Klar, aber das geht bei mir nicht.
+  - Das habe ich schon gemacht, ohne Erfolg.
+  - Ja, aber für mich ist das anders.
+  - Habe ich schon gehört, hilft mir aber nicht.
+  - Das kenne ich alles, nichts davon funktioniert.
+  - Ja, aber das ist ja schön und gut, nur bei mir nicht.
+  - Habe ich probiert, hat nur alles schlimmer gemacht.
+  - Das klingt logisch, aber mein Fall ist speziell.
+  - Ja, aber das sagen alle, und niemand versteht.
+  - Habe ich alles durch, es wird nicht besser.
+  - Schon klar, aber bei mir ist das aussichtslos.
+  - Das mag für andere gelten, bei mir aber nicht.
+  - Ja, aber du verstehst meine Situation nicht.
+  - Habe ich versucht, es hat nichts gebracht.
+  - Das funktioniert vielleicht bei dir, bei mir nicht.
+  - Ja, aber ich habe schon alles probiert.
+  - Habe ich gemacht, es ändert sich trotzdem nichts.
+  - Das klingt einfach, ist es aber nicht.
+  - Ja, aber das bringt sowieso nichts.
+  - Habe ich auch gedacht, aber es hilft nicht.
+  - Das haben mir schon viele gesagt, bringt trotzdem nichts.
+  - Ja, aber mein Problem ist komplizierter.
+  - Habe ich schon hundertmal versucht.
+  - Das mag theoretisch stimmen, praktisch klappt das nie.
+  - Ja, aber dann kommt wieder das nächste Problem.
+  - Habe ich alles versucht, es ist hoffnungslos.
+  - Das funktioniert nicht, wenn man so wie ich ist.
+  - Ja, aber selbst wenn ich das mache, ändert sich nichts.
+  - Habe ich durch, bringt alles nichts.
+  - Das klingt nach einer Lösung, ist aber keine.
+  - Ja, aber ich bin dafür einfach nicht gemacht.
+  - Habe ich probiert, ich kann das einfach nicht.
+  - Das wäre schön, aber unrealistisch für mich.
+  - Ja, aber wozu, wenn es doch nichts bringt.
+  - Habe ich alles versucht, es ist zwecklos.
   negative:
   - Ich bin so überfordert mit der Arbeit → ich entscheide mich gegen delegieren, niemand macht es richtig → Ich kann den Job nicht wechseln, es ist zu riskant
   - Ich fühle mich so einsam → Ich kann wenige neuen Leute kennenlernen, ich bin zu ängstlich → Online-Dating funktioniert bei mir nicht
@@ -31,6 +71,24 @@ examples:
   - Mir geht es gut, danke der Nachfrage.
   - Das ist ein interessanter Gedanke.
   - Ich bin gerade entspannt.
+  - Das klingt gut, das probiere ich aus.
+  - Danke für den Tipp, das versuche ich.
+  - Gute Idee, das habe ich noch nicht gemacht.
+  - Das könnte helfen, ich bin offen dafür.
+  - Stimmt, das habe ich noch nicht in Betracht gezogen.
+  - Das ist ein neuer Ansatz, den teste ich.
+  - Klingt machbar, lass mich das versuchen.
+  - Das leuchtet mir ein, ich probiere es.
+  - Guter Vorschlag, darüber denke ich nach.
+  - Das könnte tatsächlich funktionieren.
+  - Ich bin bereit, das auszuprobieren.
+  - Vielleicht ist das ja die Lösung.
+  - Danke, das gibt mir Hoffnung.
+  - Ich werde das mal testen.
+  - Das habe ich noch nicht versucht.
+  - Klingt vielversprechend.
+  - Ja, das probiere ich.
+  - Guter Punkt, das mache ich.
 tags:
 - attentional
 - helplessness

@@ -17,6 +17,51 @@ examples:
   - "Magst du spiegeln?"
   - "Kurze Rückmeldung?"
   - "Passt das so?"
+  - Kannst du mir Feedback geben?
+  - Kannst du mir spiegeln, was du siehst?
+  - Ich hätte gerne eine Rückmeldung.
+  - Wie findest du meine Arbeit?
+  - Feedback wäre mir jetzt wichtig.
+  - Kannst du mir sagen, wie das ankommt?
+  - Wie wirkt mein Vorschlag auf dich?
+  - Kannst du das kurz spiegeln?
+  - Ich brauche deine Rückmeldung.
+  - Feedback geben, bitte, wie war das?
+  - Wie wirkt das auf euch?
+  - Kannst du mir ehrliches Feedback geben?
+  - Eine Rückmeldung wäre hilfreich.
+  - Wie wirkt meine Präsentation auf dich?
+  - Feedback von dir wäre mir wichtig.
+  - Kannst du spiegeln, was du wahrgenommen hast?
+  - Ich möchte gerne eine Rückmeldung haben.
+  - Wie wirkt das insgesamt?
+  - Kannst du mir konstruktives Feedback geben?
+  - Eine ehrliche Rückmeldung bitte.
+  - Wie wirkt mein Text?
+  - 'Feedback geben: Was denkst du?'
+  - Kannst du mir spiegeln, wie ich gewirkt habe?
+  - Rückmeldung erwünscht.
+  - Wie wirkt das Design auf dich?
+  - Ich hätte gern Feedback dazu.
+  - Kannst du mir eine Rückmeldung geben?
+  - Wie wirkt das auf außenstehende Personen?
+  - Dein Feedback wäre mir sehr wichtig.
+  - Kannst du spiegeln, was angekommen ist?
+  - Eine Rückmeldung zum Entwurf bitte.
+  - Wie wirkt mein Auftreten?
+  - 'Feedback geben: Ist das verständlich?'
+  - Kannst du mir Rückmeldung zum Konzept geben?
+  - Wie wirkt das auf dich als Außenstehenden?
+  - Ich bitte um ehrliches Feedback.
+  - Kannst du mir spiegeln, wie das wirkt?
+  - Eine kurze Rückmeldung wäre toll.
+  - Wie wirkt das Anschreiben?
+  - 'Feedback bitte: Ist der Ton richtig?'
+  - Kannst du mir deine Rückmeldung geben?
+  - Wie wirkt mein Vorschlag auf das Team?
+  - Ich brauche Feedback zu meinem Plan.
+  - Kannst du spiegeln, wie das bei dir ankommt?
+  - Eine Rückmeldung zum Prozess hätte ich gern.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -25,6 +70,24 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich mache das einfach so.
+  - Mir ist egal, was andere denken.
+  - Das entscheide ich allein.
+  - Ich brauche keine Meinung dazu.
+  - Das steht fest.
+  - Ich weiß selbst, was gut ist.
+  - Darüber muss ich nicht diskutieren.
+  - Das ist meine Sache.
+  - Ich bin zufrieden damit.
+  - Das lass ich so.
+  - Meine Entscheidung, mein Ding.
+  - Das bewerte ich selbst.
+  - Ich brauche da keinen Input.
+  - Das habe ich durchdacht.
+  - Fertig, keine Diskussion.
+  - Das steht so fest.
+  - Ich weiß, was ich will.
+  - Darüber rede ich nicht.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
 semiotic: {peirce: index, signifikat: Kooperation/Koordination, framing_type: reparatur, cultural_frame: '', myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'}

@@ -18,6 +18,51 @@ examples:
   - fühle mich schuldig … schwer auszuhalten
   - allein damit … traurig
   - hätte früher reden sollen … bereue es
+  - Ich bin so traurig gerade.
+  - Das ist wirklich schade.
+  - Ich fühle mich bedrückt.
+  - Ich vermisse dich sehr.
+  - Ich bin so allein.
+  - Alles fühlt sich leer an.
+  - Traurig, dass es so gekommen ist.
+  - Schade, dass du nicht kommen konntest.
+  - Bedrückt gehe ich durch den Tag.
+  - Ich vermisse unsere Gespräche.
+  - Allein zu Hause, allein mit meinen Gedanken.
+  - Leer, einfach nur leer.
+  - Mir ist traurig zumute.
+  - Schade um die verpasste Chance.
+  - Bedrückt sitze ich hier.
+  - Ich vermisse die alten Zeiten.
+  - Ich bin allein und einsam.
+  - In mir ist eine Leere.
+  - So traurig war ich lange nicht mehr.
+  - Wirklich schade, wie es gelaufen ist.
+  - Ich fühle mich total bedrückt.
+  - Vermisse meine Heimat.
+  - Ganz allein in der Fremde.
+  - Mir ist so leer im Herzen.
+  - Traurig und müde bin ich.
+  - Schade, dass wir uns nicht sehen.
+  - Bedrückt über die Nachricht.
+  - Ich vermisse meine Familie.
+  - Allein sein ist manchmal schwer.
+  - Leere breitet sich in mir aus.
+  - Traurig über den Abschied.
+  - Es ist so schade.
+  - Bedrückt über die Diagnose.
+  - Ich vermisse deinen Humor.
+  - Allein im Hotelzimmer.
+  - Dieses leere Gefühl geht nicht weg.
+  - Traurig, aber wahr.
+  - Schade, dass es nicht geklappt hat.
+  - Bedrückt durch die Dunkelheit.
+  - Vermisse die Unbeschwertheit.
+  - Allein mit meinen Sorgen.
+  - So leer wie selten zuvor.
+  - Traurig, dass er gehen musste.
+  - Echt schade drum.
+  - Total bedrückt seit gestern.
   negative:
   - Ich denke, wir sollten das sachlich betrachten.
   - Mir geht es gut, danke der Nachfrage.
@@ -26,6 +71,24 @@ examples:
   - Alles in Ordnung bei mir.
   - Ich fuehle mich heute ruhig und gelassen.
   - Das ueberrascht mich, aber es ist okay.
+  - Mir geht es gut heute.
+  - Was für ein schöner Tag!
+  - Ich freue mich riesig.
+  - Alles bestens bei mir.
+  - Heute bin ich richtig fröhlich.
+  - Ich genieße den Moment.
+  - Toller Tag, tolle Stimmung.
+  - Mir geht es prächtig.
+  - Ich bin ausgeglichen.
+  - Was für ein Glückstag.
+  - Ich habe super geschlafen.
+  - Die Laune ist top.
+  - Alles wunderbar.
+  - Ich bin motiviert.
+  - Der Tag war fantastisch.
+  - Mir fehlt nichts.
+  - Ich bin zufrieden.
+  - Heute lief alles perfekt.
 tags: []
 rating: 2
 semiotic:

@@ -20,6 +20,51 @@ examples:
   - Nächstes Mal machen wir...
   - Lass uns das bald wieder machen
   - Sollten wir echt öfter machen
+  - Wir sollten öfter so was machen.
+  - Müssen wir unbedingt wiederholen.
+  - Nächstes Mal machen wir das wieder.
+  - Bald wieder, versprochen.
+  - Sollten wir mal öfter zusammen machen.
+  - Nächstes Mal bitte mit mehr Leuten.
+  - Demnächst wieder, auf jeden Fall.
+  - Sollten wir viel öfter machen.
+  - Wiederholen wir das bald.
+  - Nächstes Mal mit Übernachtung.
+  - Bald wieder treffen!
+  - Das sollten wir öfter genießen.
+  - Müssen wir dringend wiederholen.
+  - Nächstes Mal am See.
+  - Bald wieder, ich freu mich.
+  - Sollten wir öfter in den Wald gehen.
+  - Das wiederholen wir auf jeden Fall.
+  - Nächstes Mal mit Musik.
+  - Demnächst wieder, am liebsten morgen.
+  - Das sollten wir öfter tun.
+  - 'Wiederholen: unbedingt!'
+  - Nächstes Mal nehme ich Kuchen mit.
+  - Bald wieder, war super.
+  - Sollten öfter zusammen kochen.
+  - Das müssen wir wiederholen, so schön.
+  - Nächstes Mal im Sommer.
+  - Bald wieder campen gehen.
+  - Sollten wir öfter als Team machen.
+  - Wiederholen wir das nächsten Monat.
+  - Nächstes Mal lade ich ein.
+  - Demnächst wieder, versprochen!
+  - Sollten öfter so zusammensitzen.
+  - Das müssen wir bald wiederholen.
+  - Nächstes Mal mit Kindern.
+  - Bald wieder wandern.
+  - Sollten wir öfter gemeinsam Mittag essen.
+  - Wiederholen wir das am Wochenende.
+  - Nächstes Mal bringe ich Wein mit.
+  - Demnächst wieder, war toll.
+  - Öfter sollten wir so reden.
+  - Müssen wir sofort wiederholen.
+  - Nächstes Mal bleiben wir länger.
+  - Bald wieder zusammen spielen.
+  - Sollten wir öfter spazieren gehen.
+  - Das müssen wir jedes Jahr wiederholen.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -28,6 +73,24 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Das war einmal, reicht mir.
+  - Muss nicht sein.
+  - Einmal war genug.
+  - Darauf kann ich verzichten.
+  - Eher nicht nochmal.
+  - Das brauche ich nicht wieder.
+  - Einmalige Sache.
+  - Nicht mein Ding.
+  - Das muss nicht sein.
+  - Lieber was anderes.
+  - Einmal reicht.
+  - Das war okay, aber einmalig.
+  - Kein Bedarf, das zu wiederholen.
+  - Das machen wir lieber nicht nochmal.
+  - War ganz nett, aber einmal reicht.
+  - Darauf verzichte ich gern.
+  - Das war ein Ausrutscher.
+  - Nie wieder.
 tags:
 - future_orientation
 - commitment_signal

@@ -25,7 +25,57 @@ markers:
   - '"Du hast zugesagt" → "Ihr habt zugesagt".'
   - '"Ich bezahlte" → "Wir zahlten".'
 examples:
-  positive: []
+  positive:
+  - Erst sagt man wir, dann plötzlich nur noch ich.
+  - Er sprach von uns, dann war es nur noch sein Ding.
+  - 'Wir wollten das zusammen machen, aber sie sagte plötzlich: ich mache das allein.'
+  - Zuerst war alles unser Projekt, jetzt ist es plötzlich meins.
+  - Sie wechselte von wir zu man, als es schwierig wurde.
+  - 'Er sagte wir schaffen das, dann hieß es plötzlich: du musst das klären.'
+  - Erst wir, dann ich – der Pronomen-Wechsel fiel mir auf.
+  - Sie sprach von unserem Problem, dann war es plötzlich dein Problem.
+  - 'Wir sollten reden, wurde zu: du musst dich ändern.'
+  - Er begann mit wir und endete mit ich allein.
+  - Plötzlich hieß es nicht mehr wir, sondern du.
+  - Sie wechselte von uns zu mir, als wäre ich nicht mehr dabei.
+  - Erst war es unser Plan, dann sein Plan.
+  - Wir hatten das zusammen beschlossen, aber jetzt sagt er ich.
+  - Sie sprach erst von wir, dann von man.
+  - Er wechselte von unserer Verantwortung zu meiner.
+  - 'Wir wollten das lösen, dann hieß es: mach du.'
+  - Plötzlich von wir zu ich – das hat mich irritiert.
+  - Sie sagte unser Ziel, dann wurde es ihr Ziel.
+  - Er sprach von gemeinsam, dann von allein.
+  - Erst wir beide, dann nur noch er.
+  - 'Sie wechselte die Perspektive: von wir zu du.'
+  - Anfangs war alles wir, jetzt ist es nur noch ich.
+  - Er begann mit uns und endete mit sich.
+  - 'Wir wollten zusammen, jetzt sagt sie: ich mache das ohne dich.'
+  - Plötzlich sprach er nicht mehr von uns.
+  - Sie sagte zuerst unser Haus, dann mein Haus.
+  - Er wechselte von Team zu Solo.
+  - Erst war es unsere Schuld, jetzt ist es meine.
+  - Sie ging von wir auf du über.
+  - Anfangs sprach er von uns, dann nur noch von sich.
+  - Wir als Team, dann plötzlich ich als Einzelperson.
+  - 'Sie wechselte den Ton: von gemeinsam zu getrennt.'
+  - Er sagte unsere Sache, jetzt ist es seine Sache.
+  - Plötzlich von wir zu man – Distanz geschaffen.
+  - Sie sprach erst von uns beiden, dann nur von sich.
+  - Er begann mit wir haben und endete mit ich habe.
+  - Anfangs unser Problem, jetzt dein Problem.
+  - Sie wechselte von wir zu ihr.
+  - Er distanzierte sich durch Pronomen-Wechsel.
+  - Erst sprach sie von uns, dann nur noch von mir.
+  - Wir wurden zu du, ganz subtil.
+  - Er sagte unser Fehler, dann war es mein Fehler.
+  - Plötzlich war es nicht mehr wir, sondern die.
+  - Sie wechselte von uns zu euch.
+  - Anfangs Teamsprache, dann Einzelkämpfer-Sprache.
+  - Er begann mit gemeinsam und endete mit ich muss.
+  - 'Wir hatten geplant, aber er sagte: ich entscheide.'
+  - Sie sprach von unserem Weg, dann von ihrem Weg.
+  - 'Pronomen-Shift bemerkt: von wir auf ich.'
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -34,6 +84,24 @@ examples:
   - I've noticed we think differently about this.
   - I want to understand what you mean.
   - That sounds like an important topic for you.
+  - Wir machen das zusammen.
+  - Unser Plan steht fest.
+  - Ich bin da ganz bei dir.
+  - Wir schaffen das gemeinsam.
+  - Das ist unser Ding.
+  - Ich stehe hinter dir.
+  - Wir ziehen das durch.
+  - Unser Team ist stark.
+  - Ich unterstütze dich.
+  - Wir halten zusammen.
+  - Das lösen wir gemeinsam.
+  - Ich bin an deiner Seite.
+  - Wir sind ein gutes Team.
+  - Unser Ziel ist klar.
+  - Ich und du, wir schaffen das.
+  - Gemeinsam sind wir stark.
+  - Wir haben das zusammen entschieden.
+  - Unser Weg führt nach vorn.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
 semiotic: {peirce: index, signifikat: Rollenwechsel/-dynamik, framing_type: meta, cultural_frame: Systemisch, myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

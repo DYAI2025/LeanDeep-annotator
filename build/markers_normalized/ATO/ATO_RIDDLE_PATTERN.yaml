@@ -20,6 +20,51 @@ examples:
   - Wann ist Feierabend kein Feierabend? Wenn Pager an ist.
   - Wann ist Bug kein Bug? Wenn er Feature heißt.
   - Wann ist Urlaub kein Urlaub? Wenn Slack offen ist.
+  - Wann ist ein Tisch nicht ein Tisch? Wenn er ein Bett ist.
+  - Wann ist ein Freund nicht ein Freund? Wenn er dich verrät.
+  - Wann ist Stille nicht Stille? Wenn sie ohrenbetäubend ist.
+  - Wann ist ein Sieg nicht ein Sieg? Wenn er zu viel kostet.
+  - Wann ist Wahrheit nicht Wahrheit? Wenn sie relativ ist.
+  - Wann ist ein Zuhause nicht ein Zuhause? Wenn man sich fremd fühlt.
+  - Wann ist Stärke nicht Stärke? Wenn sie andere erdrückt.
+  - Wann ist ein Plan nicht ein Plan? Wenn er nur auf Papier steht.
+  - Wann ist Ruhe nicht Ruhe? Wenn sie erzwungen ist.
+  - Wann ist Liebe nicht Liebe? Wenn sie kontrolliert.
+  - Wann ist ein Geschenk nicht ein Geschenk? Wenn es Bedingungen hat.
+  - Wann ist Freiheit nicht Freiheit? Wenn sie Einsamkeit bedeutet.
+  - Wann ist ein Anfang nicht ein Anfang? Wenn er ein Ende tarnt.
+  - Wann ist Vertrauen nicht Vertrauen? Wenn es blind ist.
+  - Wann ist Hilfe nicht Hilfe? Wenn sie bevormundet.
+  - Wann ist Lachen nicht Lachen? Wenn es Schmerz verbirgt.
+  - Wann ist ein Ja nicht ein Ja? Wenn es aus Angst kommt.
+  - Wann ist Loyalität nicht Loyalität? Wenn sie toxisch ist.
+  - Wann ist ein Weg nicht ein Weg? Wenn er im Kreis führt.
+  - Wann ist Ehrlichkeit nicht Ehrlichkeit? Wenn sie verletzt.
+  - Wann ist ein Held nicht ein Held? Wenn er es für den Ruhm tut.
+  - Wann ist Schweigen nicht Schweigen? Wenn es eine Botschaft ist.
+  - Wann ist ein Ziel nicht ein Ziel? Wenn es unerreichbar ist.
+  - Wann ist Mut nicht Mut? Wenn er Übermut ist.
+  - Wann ist ein Versprechen nicht ein Versprechen? Wenn es gebrochen wird.
+  - Wann ist Nähe nicht Nähe? Wenn sie erdrückt.
+  - Wann ist ein Fehler nicht ein Fehler? Wenn man daraus lernt.
+  - Wann ist Wissen nicht Wissen? Wenn es nicht angewandt wird.
+  - Wann ist ein Gewinn nicht ein Gewinn? Wenn er auf Kosten anderer geht.
+  - Wann ist Geduld nicht Geduld? Wenn sie Passivität tarnt.
+  - Wann ist ein Kompliment nicht ein Kompliment? Wenn es manipuliert.
+  - Wann ist Sicherheit nicht Sicherheit? Wenn sie einengt.
+  - Wann ist ein Neuanfang nicht ein Neuanfang? Wenn die alten Muster bleiben.
+  - Wann ist Harmonie nicht Harmonie? Wenn sie Konflikte unterdrückt.
+  - Wann ist ein Gespräch nicht ein Gespräch? Wenn nur einer redet.
+  - Wann ist Hoffnung nicht Hoffnung? Wenn sie Illusion ist.
+  - Wann ist ein Team nicht ein Team? Wenn jeder für sich kämpft.
+  - Wann ist Verantwortung nicht Verantwortung? Wenn sie abgewälzt wird.
+  - Wann ist ein Lob nicht ein Lob? Wenn es sarkastisch gemeint ist.
+  - Wann ist Bescheidenheit nicht Bescheidenheit? Wenn sie aufgesetzt ist.
+  - Wann ist ein Ratschlag nicht ein Ratschlag? Wenn er bevormundend ist.
+  - Wann ist Erfolg nicht Erfolg? Wenn er einsam macht.
+  - Wann ist ein Kompromiss nicht ein Kompromiss? Wenn einer alles aufgibt.
+  - Wann ist Flexibilität nicht Flexibilität? Wenn sie Beliebigkeit ist.
+  - Wann ist ein Wort nicht ein Wort? Wenn die Tat fehlt.
   negative:
   - Wann ist Kaffee wenige Kaffee? Wenn er entkoffeiniert ist.
   - Wann ist Pause wenige Pause? Wenn sie Meeting heißt.
@@ -28,6 +73,24 @@ examples:
   - Das ist ein guter Punkt, den du da machst.
   - Ich verstehe deine Perspektive.
   - Lass uns gemeinsam eine Loesung finden.
+  - Was ist der Sinn des Lebens?
+  - Warum ist der Himmel blau?
+  - Wie funktioniert das Internet?
+  - Wer hat das erfunden?
+  - Was bedeutet das?
+  - Woher kommt der Name?
+  - Wie spät ist es?
+  - Was gibt es zum Essen?
+  - Wo finde ich das?
+  - Wer ist zuständig?
+  - Wie geht das nochmal?
+  - Was soll das heißen?
+  - Wohin fahren wir?
+  - Wer kommt mit?
+  - Was kostet das?
+  - Wie lange dauert das noch?
+  - Warum hat er das gesagt?
+  - Was ist passiert?
 tags:
 - humor
 - riddle

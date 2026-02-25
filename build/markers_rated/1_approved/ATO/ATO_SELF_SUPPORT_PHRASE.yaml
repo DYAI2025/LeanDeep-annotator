@@ -45,6 +45,22 @@ examples:
   - "Ich unterstütze mich selbst in schweren Zeiten."
   - "Ich bin nachsichtig mit mir."
   - "Ich tröste mich selbst."
+  - 'Ich ermutige mich selbst: Du schaffst das.'
+  - Ich stehe mir selbst zur Seite.
+  - Ich muss mich zusammenreißen.
+  - Ich schaffe das, ich bin stark genug.
+  - 'Selbst ermutigen: Kopf hoch!'
+  - Ich muntere mich auf, indem ich laufe.
+  - Mir selbst zur Seite stehen, das lerne ich.
+  - Zusammenreißen und weitermachen.
+  - Ich schaffe das, sage ich mir.
+  - Ich ermutige mich selbst jeden Morgen.
+  - Aufmuntern muss ich mich selbst.
+  - Ich stehe mir zur Seite in der Krise.
+  - Ich reiße mich jetzt zusammen.
+  - Das schaffe ich, ich weiß es.
+  - Selbst ermutigen, wenn niemand da ist.
+  - Ich muntere mich auf mit Musik.
   negative:
   - Kannst du mir das Salz reichen?
   - Der Termin ist um 14 Uhr.
@@ -53,6 +69,24 @@ examples:
   - Hast du die E-Mail gelesen?
   - Ich muss noch tanken.
   - Die Besprechung ist im Konferenzraum.
+  - Ich brauche Hilfe von anderen.
+  - Alleine schaffe ich das nicht.
+  - Bitte unterstütze mich.
+  - Ich bin auf dich angewiesen.
+  - Ohne dich geht es nicht.
+  - Hilf mir bitte.
+  - Ich kann das nicht allein.
+  - Ich brauche jemanden.
+  - Bitte sei für mich da.
+  - Ich komme allein nicht weiter.
+  - Unterstützung von außen ist nötig.
+  - Ich rufe Freunde an.
+  - Ich brauche professionelle Hilfe.
+  - Allein bin ich überfordert.
+  - Hilf mir auf die Beine.
+  - Ich suche mir Unterstützung.
+  - Ohne Hilfe geht gar nichts.
+  - Ich wende mich an euch.
 vad_estimate: {valence: 0.4, arousal: 0.35, dominance: 0.5}
 effect_on_state: {trust: 0.3, conflict: -0.25, deesc: 0.3}
 semiotic: {peirce: index, signifikat: Unterstuetzung/Beistand, framing_type: bindung, cultural_frame: '', myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

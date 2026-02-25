@@ -40,6 +40,36 @@ examples:
   - "Abend romantisch."
   - "Will dich küssen."
   - "Flirten jetzt."
+  - Ich liebe dich so sehr.
+  - Du bist so sexy.
+  - Lass uns mal daten gehen.
+  - Ich küsse dich zärtlich.
+  - Mein Herz schlägt nur für dich.
+  - Ich liebe dich mehr als alles andere.
+  - Du bist unglaublich sexy heute.
+  - Lass uns daten, ich mag dich.
+  - Ich küsse dich auf die Stirn.
+  - Ein Herz für dich, mein Schatz.
+  - Ich liebe dich, vergiss das nie.
+  - Du bist so verdammt sexy.
+  - Lass uns daten, was sagst du?
+  - Küss mich bitte.
+  - Mein Herz gehört nur dir.
+  - Ich liebe dich über alles.
+  - Du siehst so sexy aus in dem Kleid.
+  - Wann daten wir endlich?
+  - Ich küsse dich sanft.
+  - Für dich – mein ganzes Herz.
+  - Ich liebe dich jeden Tag mehr.
+  - Du bist die sexieste Person, die ich kenne.
+  - Lass uns morgen daten.
+  - Ich will dich küssen.
+  - Mein Herz für dich, immer.
+  - Ich liebe dich wahnsinnig.
+  - Sexy, intelligent und lustig – du bist perfekt.
+  - Ein Date mit dir wäre wunderbar.
+  - Ich küsse dir die Tränen weg.
+  - Herz über Kopf – ich liebe dich.
   negative_de:
   - "Ich hasse dich."
   - "Du bist unsexy."
@@ -61,5 +91,12 @@ examples:
   - "Abend nicht romantisch."
   - "Nicht küssen."
   - "Nicht flirten."
+  - Du bist ein guter Freund.
+  - Ich schätze unsere Freundschaft.
+  - Danke, du bist nett.
+  - Wir verstehen uns gut.
+  - Du bist mir sympathisch.
+  positive: []
+  negative: []
 vad_estimate: {valence: 0.3, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.2, conflict: -0.15, deesc: 0.2}

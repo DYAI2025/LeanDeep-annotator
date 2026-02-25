@@ -29,6 +29,36 @@ examples:
   - "Ich fühle nur noch Leere im Körper."
   - "Ich bin wie weggeklappt."
   - "Ich spüre kaum noch meine Hände."
+  - Mir wird schwarz vor Augen.
+  - Ich fühle mich taub, körperlich taub.
+  - Eine Lähmung breitet sich aus.
+  - Ich bin wie weggetreten.
+  - Schwarz vor Augen, ich sehe nichts mehr.
+  - Mein Körper fühlt sich taub an.
+  - Lähmung in den Beinen.
+  - Weggetreten, als wäre ich nicht da.
+  - Alles wird schwarz vor meinen Augen.
+  - Taubheit in den Händen.
+  - Wie gelähmt sitze ich da.
+  - Ich bin völlig weggetreten.
+  - Schwarz vor Augen, Schwindel.
+  - Taub, als hätte jemand den Ton ausgemacht.
+  - Lähmung überkommt mich.
+  - Ich war kurz weggetreten.
+  - Es wird schwarz vor Augen.
+  - Taubheitsgefühl im ganzen Körper.
+  - Gelähmt vor Angst.
+  - Komplett weggetreten.
+  - Schwarz, alles schwarz vor den Augen.
+  - Ich spüre nichts, bin taub.
+  - Wie eine Lähmung, die mich festhält.
+  - Ich war minutenlang weggetreten.
+  - Plötzlich schwarz vor Augen.
+  - Taub in den Armen.
+  - Lähmung im ganzen Körper.
+  - Ich bin immer noch weggetreten.
+  - Schwarz vor Augen beim Aufstehen.
+  - Taubheit nach dem Schock.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -37,6 +67,24 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich fühle mich lebendig und wach.
+  - Mein Körper fühlt sich gut an.
+  - Ich bin hellwach.
+  - Alles funktioniert einwandfrei.
+  - Ich fühle mich energiegeladen.
+  - Mein Kreislauf ist stabil.
+  - Ich bin voll da.
+  - Alles klar, mir geht es gut.
+  - Ich spüre meinen Körper.
+  - Ich bin wach und fokussiert.
+  - Keine Probleme, alles gut.
+  - Ich bin bei vollem Bewusstsein.
+  - Mir geht es körperlich super.
+  - Ich fühle mich fit.
+  - Alles in Ordnung mit mir.
+  - Ich bin entspannt und ruhig.
+  - Mein Körper funktioniert.
+  - Ich bin aufmerksam.
 negatives:
 - "Ich bin hellwach und konzentriert."
 - "Ich fühle mich voller Energie."

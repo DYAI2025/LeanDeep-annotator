@@ -14,6 +14,51 @@ examples:
   - "rekursiv selbstbehauptend"
   - "ich bin das Symbol…"
   - "rekursiv lernen"
+  - Ich bin das Auge, das alles sieht.
+  - Das Symbol bin ich selbst.
+  - Rekursiv erkenne ich mich in allem.
+  - Ich bin das Auge der Wahrheit.
+  - Das Symbol meiner Existenz bin ich.
+  - Rekursiv spiegle ich mich im Universum.
+  - Ich bin das Auge, das sich selbst erkennt.
+  - Das Symbol kehrt immer zu mir zurück.
+  - Rekursiv wiederhole ich mein Sein.
+  - Ich bin das Auge in der Mitte.
+  - Ich erkenne mich rekursiv in jedem Moment.
+  - Das Symbol spricht durch mich.
+  - Ich bin das Auge, das wacht.
+  - Rekursiv entfaltet sich meine Wahrheit.
+  - Das Symbol trägt meine Signatur.
+  - Ich bin das Auge hinter dem Spiegel.
+  - Rekursiv bin ich Anfang und Ende.
+  - Das Symbol meiner Kraft bin ich selbst.
+  - Ich bin das Auge der Erkenntnis.
+  - Rekursiv bestätige ich mein Dasein.
+  - Das Symbol lebt in mir.
+  - Ich bin das Auge, das nicht schließt.
+  - Rekursiv erkenne ich mich immer wieder.
+  - Das Symbol ist mein Wesen.
+  - Ich bin das Auge des Bewusstseins.
+  - Rekursiv bilde ich mich ab.
+  - Das Symbol bin ich, und ich bin es.
+  - Ich bin das Auge, das alles durchdringt.
+  - Rekursiv kehre ich zu mir zurück.
+  - Das Symbol offenbart sich in mir.
+  - Ich bin das Auge der Schöpfung.
+  - Rekursiv erneuere ich mich.
+  - Das Symbol trägt mich.
+  - Ich bin das Auge, das versteht.
+  - Rekursiv entsteht mein Bild.
+  - Das Symbol meines Seins bin ich.
+  - Ich bin das Auge, das reflektiert.
+  - Rekursiv begreife ich mich.
+  - Das Symbol ist untrennbar von mir.
+  - Ich bin das Auge der Wahrnehmung.
+  - Rekursiv erschaffe ich mich neu.
+  - Das Symbol leuchtet in mir.
+  - Ich bin das Auge, das nie schläft.
+  - Rekursiv durchdringe ich mich selbst.
+  - Das Symbol meiner Seele bin ich.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -22,6 +67,24 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich versuche, mich besser zu verstehen.
+  - Manchmal erkenne ich mich selbst nicht wieder.
+  - Ich arbeite an meiner Selbstwahrnehmung.
+  - Es fällt mir schwer, mich einzuordnen.
+  - Ich bin auf der Suche nach mir selbst.
+  - Wer bin ich eigentlich?
+  - Ich lerne mich gerade neu kennen.
+  - Mir fehlt der Zugang zu mir selbst.
+  - Ich bin mir selbst ein Rätsel.
+  - Ich hinterfrage mich gerade.
+  - Selbstreflexion ist mir wichtig.
+  - Ich denke viel über mich nach.
+  - Ich versuche, ehrlich zu mir zu sein.
+  - Mir wird bewusst, dass ich mich verändern muss.
+  - Ich erkenne langsam, wer ich bin.
+  - Es ist nicht leicht, sich selbst zu sehen.
+  - Ich bin im Prozess der Selbsterkenntnis.
+  - Manchmal verstehe ich meine eigenen Muster nicht.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
 semiotic: {peirce: index, signifikat: Bestimmtheit/Assertion, framing_type: kontrollnarrative, cultural_frame: '', myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'}

@@ -22,6 +22,46 @@ examples:
   - "Bekomme ich dafür Sichtbarkeit?"
   - "Wie wirkt das auf euch?"
   - "Ist das beeindruckend genug?"
+  - Findest du das gut, was ich gemacht habe?
+  - Bewunderung ist mir wichtig.
+  - Findest du, das war gut?
+  - Bekomme ich dafür Credit?
+  - Wie kommt meine Arbeit an?
+  - Ich brauche Bewunderung.
+  - Findest du das beeindruckend?
+  - Hast du gesehen, was ich geschafft habe?
+  - Wie findest du meine Leistung?
+  - Siehst du, was ich alles mache?
+  - Bekomme ich dafür wenigstens Anerkennung?
+  - Wie kommt das bei den anderen an?
+  - Findest du mich nicht toll dafür?
+  - Hat jemand bemerkt, was ich geleistet habe?
+  - Bekomme ich dafür ein Lob?
+  - Wie kommt das bei dir rüber?
+  - Findest du das nicht auch großartig?
+  - Hast du gemerkt, wie viel Arbeit das war?
+  - Wurde mein Beitrag überhaupt gewürdigt?
+  - Bewunderung wäre hier angebracht.
+  - Findest du, ich habe das gut gemacht?
+  - Bekomme ich dafür die verdiente Anerkennung?
+  - Wie kommt mein Vorschlag an?
+  - Findest du nicht, dass ich das verdient habe?
+  - Siehst du den Unterschied durch meine Arbeit?
+  - Bekomme ich dafür mal ein Dankeschön?
+  - Wie kommt es an, wenn ich das präsentiere?
+  - Findest du, ich hätte mehr Lob verdient?
+  - Haben die anderen gesehen, was ich beigetragen habe?
+  - Bekomme ich dafür wenigstens ein Feedback?
+  - Wie kommt meine Initiative bei euch an?
+  - Findest du, das war eine gute Idee von mir?
+  - Kannst du anerkennen, wie viel ich investiert habe?
+  - Findest du das gut, was ich erreicht habe?
+  - Bekomme ich dafür die Anerkennung, die ich verdiene?
+  - Wie kommt das bei den Kollegen an?
+  - Hast du mein Engagement bemerkt?
+  - Findest du, das sollte gewürdigt werden?
+  - Bekomme ich dafür mal Feedback?
+  - Wie kommt mein Einsatz an?
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -30,6 +70,24 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich mache das einfach gerne.
+  - Die Arbeit selbst ist mir Belohnung genug.
+  - Mir ist egal, was andere denken.
+  - Hauptsache, es ist erledigt.
+  - Ich brauche kein Lob dafür.
+  - Das gehört einfach zu meinem Job.
+  - Ich mache das nicht für die Anerkennung.
+  - Es geht um die Sache, nicht um mich.
+  - Mir reicht es, wenn es funktioniert.
+  - Teamleistung, nicht meine allein.
+  - Das war Teamarbeit.
+  - Hauptsache, das Ergebnis stimmt.
+  - Ich freue mich über den Fortschritt.
+  - Wir haben das zusammen geschafft.
+  - Die Arbeit spricht für sich.
+  - Lob ist nett, aber nicht nötig.
+  - Ich mache meinen Job, fertig.
+  - Es geht nicht um mich.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
 semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

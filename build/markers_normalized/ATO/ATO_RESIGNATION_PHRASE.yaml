@@ -28,6 +28,45 @@ examples:
   - Alles ist zwecklos.
   - Ich weiß gar nicht, wo ich anfangen soll.
   - Das überfordert mich immer.
+  - Egal was ich tue, es ändert sich nichts.
+  - Es bringt nichts, das zu versuchen.
+  - Ich kann das nicht, es hat keinen Sinn.
+  - Ich schaffe das nie, egal wie sehr ich mich anstrenge.
+  - Keine Chance, das funktioniert bei mir nicht.
+  - Egal was ich probiere, es ist sinnlos.
+  - Es bringt nichts, sich anzustrengen.
+  - Ich kann das einfach nicht ändern.
+  - Ich schaffe das sowieso nie.
+  - Keine Chance für mich.
+  - Egal was ich tue, es wird nicht besser.
+  - Es bringt nichts mehr, darüber zu reden.
+  - Ich kann das nicht schaffen.
+  - Ich schaffe das nie alleine.
+  - Keine Chance, dass sich was ändert.
+  - Egal was ich versuche, es bleibt gleich.
+  - Es bringt nichts, noch mehr Energie reinzustecken.
+  - Ich kann das Ruder nicht mehr herumreißen.
+  - Ich schaffe das nie in der Zeit.
+  - Keine Chance, das zu retten.
+  - Egal was ich tue, ich versage immer.
+  - Es bringt nichts, es zu versuchen.
+  - Ich kann das nicht allein bewältigen.
+  - Ich schaffe das nie, bin einfach zu schwach.
+  - Keine Chance, das klappt nicht.
+  - Egal was kommt, es ändert sich nichts daran.
+  - Es bringt nichts, weiter zu hoffen.
+  - Ich kann das Schicksal nicht ändern.
+  - Ich schaffe es nie, ihre Erwartungen zu erfüllen.
+  - Keine Chance mehr für uns.
+  - Egal was passiert, ich verliere immer.
+  - Es bringt nichts, sich Mühe zu geben.
+  - Ich kann nichts mehr tun.
+  - Ich schaffe das niemals bis morgen.
+  - Keine Chance, dass mir jemand hilft.
+  - Egal was ich sage, es interessiert niemanden.
+  - Es bringt doch nichts.
+  - Ich kann das Problem nicht lösen.
+  - Ich schaffe das nicht mehr.
   negative:
   - Ich schaffe das selten.
   - Es hat sowieso wenige Chance.
@@ -36,6 +75,24 @@ examples:
   - Mir geht es gut, danke der Nachfrage.
   - Das ist ein interessanter Gedanke.
   - Ich bin gerade entspannt.
+  - Ich versuche es nochmal.
+  - Vielleicht klappt es beim nächsten Mal.
+  - Ich gebe nicht so schnell auf.
+  - Es lohnt sich, weiterzumachen.
+  - Ich habe noch Hoffnung.
+  - Das wird schon werden.
+  - Ich kämpfe weiter.
+  - Es gibt immer eine Möglichkeit.
+  - Ich bin zuversichtlich.
+  - Aufgeben ist keine Option.
+  - Ich schaffe das, wenn ich dranbleibe.
+  - Es gibt schlimmeres.
+  - Ich bin optimistisch.
+  - Jeder Versuch zählt.
+  - Schritt für Schritt.
+  - Ich glaube an mich.
+  - Das ist machbar.
+  - Weitermachen lohnt sich.
 tags:
 - helplessness
 - avoidance

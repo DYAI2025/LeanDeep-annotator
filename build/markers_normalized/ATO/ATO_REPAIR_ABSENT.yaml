@@ -41,6 +41,30 @@ examples:
   - Anschärfung → Kein Repair.
   - Spike → 5 Tasks.
   - Vorwurf → Thema bleiben.
+  - Nach dem Streit kam einfach nur Schweigen.
+  - Er hat danach kein einziges versöhnliches Wort gesagt.
+  - Sie ging nach dem Konflikt direkt zu den Aufgaben über.
+  - Keine Entschuldigung, kein Einlenken, einfach weiter wie vorher.
+  - Seit dem Vorfall nur noch sachliche Nachrichten.
+  - Er hat den Streit komplett ignoriert danach.
+  - Sie hat nicht einmal versucht, die Situation zu klären.
+  - Nach der Eskalation kam null Reparatur.
+  - Einfach weitergemacht, als wäre nichts passiert.
+  - Kein versöhnlicher Ton, keine Nachfrage, nichts.
+  - Er wechselte sofort zum nächsten Thema.
+  - 'Nach dem Ausraster: nur noch Dienst nach Vorschrift.'
+  - Sie hat danach nur noch über Aufgaben geschrieben.
+  - Kein Humor, kein Lob, keine Wärme mehr danach.
+  - Nach dem Eklat wurde nur noch das Nötigste besprochen.
+  - Er ging einfach weg und kam nie darauf zurück.
+  - Kein Wort der Versöhnung nach dem Streit.
+  - Sie hat danach einfach so getan, als wäre nichts gewesen.
+  - 'Nach der Auseinandersetzung: komplette Funkstille.'
+  - Er hat das Thema nie wieder angesprochen.
+  - Keine Geste der Wiedergutmachung, rein gar nichts.
+  - Nach dem Konflikt nur noch To-Do-Listen und Termine.
+  - Sie hat den Bruch einfach stehen lassen.
+  - Kein Anruf, keine Nachricht, keine Entschuldigung.
   negative:
   - Tut mir leid, mein Ton war daneben.
   - Ich verstehe, wie dich das trifft.
@@ -67,11 +91,6 @@ examples:
   - Danke ansprechen.
   - Kurze Entschuldigung.
   - Humor 😅
-  - Bei dir.
-  - Pause sprechen.
-  - Fair bleiben.
-  - Übernehme das.
-  - Stimmung heikel.
 tags: []
 rating: 1
 semiotic:

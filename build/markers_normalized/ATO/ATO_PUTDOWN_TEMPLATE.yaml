@@ -24,6 +24,51 @@ examples:
   - Wer Bugfix sagt, meint Hotfix.
   - Nur ein Trottel löscht die Prod-DB.
   - So dumm wie Sand im Server.
+  - Nur ein Depp macht sowas freiwillig.
+  - So lächerlich wie ein leerer Konferenzraum.
+  - Nur ein Idiot ignoriert die Tests.
+  - So peinlich wie ein kaputter Beamer.
+  - Nur ein Trottel merged ohne Review.
+  - So dumm wie ein PDF-Drucker.
+  - Nur ein Idiot schreibt alles in eine Datei.
+  - So lächerlich wie ein Meeting ohne Agenda.
+  - Nur ein Depp vergisst das Backup.
+  - So peinlich wie ein Tippfehler im Produktnamen.
+  - Nur ein Trottel spart am Testing.
+  - So dumm wie Kaffee ohne Wasser.
+  - Nur ein Idiot pusht auf main ohne Tests.
+  - So lächerlich wie ein Zoom-Call ohne Ton.
+  - Nur ein Depp löscht den Cache in Produktion.
+  - So peinlich wie ein falscher Empfänger in der Mail.
+  - Nur ein Trottel hardcoded Passwörter.
+  - So dumm wie ein Update am Freitagabend.
+  - Nur ein Idiot ignoriert die Logs.
+  - So lächerlich wie eine Präsentation ohne Folien.
+  - Nur ein Depp vergisst den Termin.
+  - So peinlich wie ein stummer Podcast.
+  - Nur ein Trottel schreibt Tests nach dem Release.
+  - So dumm wie ein Router ohne Strom.
+  - Nur ein Idiot antwortet auf Phishing-Mails.
+  - So lächerlich wie ein Chatbot ohne Internet.
+  - Nur ein Depp formatiert die Produktionsfestplatte.
+  - So peinlich wie ein Webinar ohne Teilnehmer.
+  - Nur ein Trottel öffnet unbekannte Anhänge.
+  - So dumm wie ein Feueralarm im Homeoffice.
+  - Nur ein Idiot vergisst den API-Key.
+  - So lächerlich wie ein Newsletter an sich selbst.
+  - Nur ein Depp streamt ohne Mikrofon.
+  - So peinlich wie ein Screenshot vom Passwort.
+  - Nur ein Trottel schickt die Mail an alle.
+  - So dumm wie ein Login ohne Passwort.
+  - Nur ein Idiot testet in Produktion.
+  - So lächerlich wie ein Dashboard ohne Daten.
+  - Nur ein Depp löscht die Git-History.
+  - So peinlich wie ein Tippfehler in der URL.
+  - Nur ein Trottel baut ohne Spec.
+  - So dumm wie ein Backup auf dem gleichen Server.
+  - Nur ein Idiot deployt Montag um Mitternacht.
+  - So lächerlich wie ein Meeting über Meetings.
+  - Nur ein Depp committet .env-Dateien.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -32,6 +77,24 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Das war nicht die beste Entscheidung.
+  - Beim nächsten Mal machen wir es anders.
+  - Das hätten wir besser lösen können.
+  - Das lief nicht optimal.
+  - Da gab es Verbesserungspotenzial.
+  - Das war ein Lernmoment.
+  - Nächstes Mal planen wir das besser.
+  - Da war ein Fehler im Prozess.
+  - Das sollte nicht nochmal passieren.
+  - Wir müssen das überarbeiten.
+  - Das können wir besser machen.
+  - Das war nicht ideal, aber kein Drama.
+  - Passiert, wir lernen daraus.
+  - Das hätte jedem passieren können.
+  - Wir optimieren den Prozess.
+  - 'Konstruktive Kritik: Das geht eleganter.'
+  - Schauen wir mal, wie wir das verbessern.
+  - Das ist ein bekanntes Problem.
 tags:
 - humor
 - superiority

@@ -20,6 +20,51 @@ examples:
   - You're the one with the problem here.
   - That's typical of you to react this way.
   - You made me respond like this.
+  - You never listen.
+  - You're the one who started it.
+  - Typical of you to forget.
+  - You made me feel this way.
+  - You always ignore what I say.
+  - You never take responsibility.
+  - You're the one who broke it.
+  - Typical of you, really.
+  - You made me lose my temper.
+  - You always say the wrong thing.
+  - You never think about others.
+  - You're the one to blame.
+  - Typical of you to be late.
+  - You made me cry.
+  - You always put yourself first.
+  - You never care about my feelings.
+  - You're the one causing problems.
+  - Typical of you to overreact.
+  - You made me angry.
+  - You always mess things up.
+  - You never follow through.
+  - You're the one who lied.
+  - Typical of you to avoid conflict.
+  - You made me doubt myself.
+  - You always criticize.
+  - You never apologize.
+  - You're the one who changed.
+  - Typical of you to blame others.
+  - You made me feel worthless.
+  - You always disappoint me.
+  - You never understand.
+  - You're the one who walked away.
+  - Typical of you to shut down.
+  - You made me question everything.
+  - You always do what you want.
+  - You never compromise.
+  - You're the one who's selfish.
+  - Typical of you to deny it.
+  - You made me feel invisible.
+  - You always take and never give.
+  - You never ask how I feel.
+  - You're the one who doesn't care.
+  - Typical of you to twist the truth.
+  - You made me lose trust.
+  - You always find an excuse.
   negative:
   - You sometimes do this to me.
   - I notice that sometimes do this to me.
@@ -28,6 +73,24 @@ examples:
   - I want to be honest with you, even though it's hard.
   - You're right, that was my mistake. I'm sorry.
   - Let's both explain our side.
+  - Sometimes you forget, and that's okay.
+  - I noticed we see this differently.
+  - I feel hurt when this happens.
+  - I wish we could talk about this.
+  - I think there's a misunderstanding.
+  - It bothers me when we don't communicate.
+  - I'd like to find a solution together.
+  - I feel like we're not on the same page.
+  - I understand your point of view.
+  - Let's try to work this out.
+  - I take responsibility for my part.
+  - I'd appreciate more understanding.
+  - Maybe we both need to try harder.
+  - I think we can do better.
+  - I want to understand your perspective.
+  - I feel like we're growing apart.
+  - I'd like us to be more open.
+  - I think communication is key.
 tags:
 - atomic
 - v3.3
