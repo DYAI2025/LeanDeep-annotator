@@ -34,4 +34,4 @@ examples:
   - Ich sehe das jetzt anders als letzte Woche.
   - Meine Gefühle dazu sind gemischt, aber das ist ok.
   - Ich bin mir noch unsicher, muss nochmal drüber nachdenken.
-semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

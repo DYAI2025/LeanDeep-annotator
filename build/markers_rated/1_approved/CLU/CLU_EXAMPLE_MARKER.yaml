@@ -44,4 +44,4 @@ tags:
 - cluster
 - relationship-dynamics
 schema_version: '3.4'
-semiotic: {peirce: index, signifikat: Beziehungsdynamik, framing_type: meta, cultural_frame: Systemisch}
+semiotic: {peirce: index, signifikat: Beziehungsdynamik, framing_type: meta, cultural_frame: Systemisch, myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

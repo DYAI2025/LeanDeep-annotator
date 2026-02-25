@@ -47,4 +47,5 @@ metadata:
   - "Das klingt logisch, doch wir brauchen einen Nachweis."
 vad_estimate: {valence: 0.2, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.25, conflict: -0.1, deesc: 0.15}
-semiotic: {peirce: symbol, signifikat: Kognitive Verzerrung/Framing, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie}
+semiotic: {peirce: symbol, signifikat: Kognitive Verzerrung/Framing, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie, myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt
+    sich als Fuersorge'}

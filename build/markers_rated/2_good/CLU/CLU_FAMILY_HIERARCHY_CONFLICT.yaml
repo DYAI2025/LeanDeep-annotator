@@ -45,4 +45,4 @@ tags: [cluster, family, hierarchy, conflict, authority, resistance]
 detect_class: "E"
 criteria: "Kombination von elterlicher Autorität und kindlichem Widerstand"
 updated_at: "2025-08-19T10:30:00Z"
-semiotic: {peirce: index, signifikat: Konfliktdynamik, framing_type: eskalation, cultural_frame: Gottman}
+semiotic: {peirce: index, signifikat: Konfliktdynamik, framing_type: eskalation, cultural_frame: Gottman, myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'}

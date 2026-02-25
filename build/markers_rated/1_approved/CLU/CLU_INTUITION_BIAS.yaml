@@ -51,4 +51,5 @@ examples:
   - Vielleicht hat das auch andere Gründe, wer weiß
   - Stimmt, da hast du recht, guter Punkt
   - Ich muss zugeben, so hab ich das noch nicht gesehen
-semiotic: {peirce: symbol, signifikat: Kognitive Verzerrung/Framing, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie}
+semiotic: {peirce: symbol, signifikat: Kognitive Verzerrung/Framing, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie, myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt
+    sich als Fuersorge'}

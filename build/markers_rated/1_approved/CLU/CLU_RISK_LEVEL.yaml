@@ -33,4 +33,4 @@ metadata:
     heuristic: "risk_ack_weight=1.1 uncertainty_weight=1.0"
     note: "Higher score => more explicit unmanaged risk"
 tags: [risk, alert]
-semiotic: {peirce: index, signifikat: Risikowahrnehmung, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Risikowahrnehmung, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

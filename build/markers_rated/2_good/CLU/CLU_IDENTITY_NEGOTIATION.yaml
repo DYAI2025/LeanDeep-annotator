@@ -31,4 +31,4 @@ examples:
   - "Hast du den neuen Film schon gesehen?"
   - "Das Essen war echt lecker heute"
   - "Ich treff mich morgen mit Anna"
-semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

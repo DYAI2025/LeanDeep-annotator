@@ -55,4 +55,4 @@ examples:
   - "Morgen Zahnarzt um 10"
   - "Hol bitte noch Milch mit"
   - "Der Zug hat 5 Minuten Verspaetung"
-semiotic: {peirce: icon, signifikat: Unsicherheit, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Unsicherheit, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

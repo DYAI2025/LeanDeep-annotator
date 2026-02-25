@@ -1307,6 +1307,7 @@
         <div>
           <div class="framing-dominant-label">Dominantes Framing</div>
           <div class="framing-dominant-value">${escapeHTML(domFraming.label)}</div>
+          ${domFraming.myth ? `<div class="framing-myth" style="font-size:0.7rem;color:var(--text-dim);font-style:italic;margin-top:4px;">Mythos: „${escapeHTML(domFraming.myth)}"</div>` : ''}
         </div>
         <span style="font-size:0.75rem;color:var(--text-dim);margin-left:auto;">${(domFraming.intensity * 100).toFixed(0)}% Intensity</span>
       </div>`;
@@ -1317,8 +1318,9 @@
     for (const f of framings) {
       const color = FRAMING_COLORS[f.framing_type] || '#888';
       const pct = (f.intensity * 100).toFixed(0);
-      html += `<div class="framing-row" data-msgs="${f.message_indices.join(',')}">
-        <div class="framing-row-label">${escapeHTML(f.label)}</div>
+      const mythTip = f.myth ? ` title="Mythos: ${f.myth.replace(/"/g, '&quot;')}"` : '';
+      html += `<div class="framing-row" data-msgs="${f.message_indices.join(',')}"${mythTip}>
+        <div class="framing-row-label">${escapeHTML(f.label)}${f.myth ? `<div class="framing-myth-sub" style="font-size:0.6rem;color:var(--text-dim);font-style:italic;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px;">„${escapeHTML(f.myth)}"</div>` : ''}</div>
         <div class="framing-row-bar">
           <div class="framing-row-fill" style="width:${pct}%;background:${color};"></div>
           <span class="framing-row-pct">${pct}%</span>

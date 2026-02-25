@@ -53,4 +53,4 @@ effect_on_state:
   trust: -0.1
   conflict: 0.1
   deesc: -0.05
-semiotic: {peirce: icon, signifikat: Scham, framing_type: schuld, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Scham, framing_type: schuld, cultural_frame: '', myth: 'Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung'}

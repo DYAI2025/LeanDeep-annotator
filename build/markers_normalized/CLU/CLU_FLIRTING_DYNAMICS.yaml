@@ -57,6 +57,7 @@ semiotic:
   signifikat: Beziehungsdynamik
   framing_type: meta
   cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 activation:
   rule: AT_LEAST 3 DISTINCT SEM IN 20 messages
 metadata:

@@ -55,6 +55,7 @@ semiotic:
   signifikat: Vermeidungsverhalten
   framing_type: vermeidung
   cultural_frame: ''
+  myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'
 compositionality: deterministic
 vad_estimate:
   valence: -0.2

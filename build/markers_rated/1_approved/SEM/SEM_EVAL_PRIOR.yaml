@@ -50,4 +50,5 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
-semiotic: {peirce: symbol, signifikat: Kognitive Verzerrung/Framing, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie}
+semiotic: {peirce: symbol, signifikat: Kognitive Verzerrung/Framing, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie, myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt
+    sich als Fuersorge'}

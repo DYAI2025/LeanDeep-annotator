@@ -54,4 +54,4 @@ effect_on_state:
   trust: 0.35
   conflict: -0.3
   deesc: 0.4
-semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: reparatur, cultural_frame: Gottman}
+semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: reparatur, cultural_frame: Gottman, myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'}

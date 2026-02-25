@@ -141,6 +141,7 @@ def build_semiotic_map(
                 "signifikat": sem_data.get("signifikat", ""),
                 "cultural_frame": sem_data.get("cultural_frame", ""),
                 "framing_type": sem_data.get("framing_type", ""),
+                "myth": sem_data.get("myth", ""),
             }
         else:
             # Runtime classification fallback
@@ -188,6 +189,7 @@ def aggregate_framings(
                 "detection_count": 0,
                 "evidence_markers": [],
                 "message_indices": set(),
+                "myths": set(),
             }
 
         group = framing_groups[ft]
@@ -196,6 +198,9 @@ def aggregate_framings(
         group["conf_sum"] += det.confidence
         group["detection_count"] += 1
         group["message_indices"].update(det.message_indices)
+        myth = sem.get("myth", "")
+        if myth:
+            group["myths"].add(myth)
 
     if not framing_groups:
         return []
@@ -220,6 +225,7 @@ def aggregate_framings(
             "evidence_markers": group["evidence_markers"],
             "message_indices": sorted(group["message_indices"]),
             "detection_count": group["detection_count"],
+            "myth": next(iter(group["myths"]), ""),
         })
 
     return sorted(result, key=lambda x: -x["intensity"])
@@ -309,12 +315,27 @@ def synthesize_narrative(framings: list[dict], semiotic_map: dict[str, dict],
         sentence = template.format(count=f["detection_count"], top_markers=top_names)
         sentences.append(sentence)
 
+    # Add dominant myths as structural context
+    active_myths = []
+    for f in top_framings[:3]:
+        myth = f.get("myth", "")
+        if myth and myth not in active_myths:
+            active_myths.append(myth)
+
+    if active_myths:
+        myth_sentence = "Kulturelle Narrative: " + " // ".join(f'„{m}"' for m in active_myths[:3]) + "."
+        sentences.append(myth_sentence)
+
     narrative = " ".join(sentences)
 
     # Key points
     key_points = []
     for f in top_framings[:5]:
-        key_points.append(f"{f['label']}: {f['detection_count']} Marker, {int(f['intensity']*100)}% Intensitaet")
+        point = f"{f['label']}: {f['detection_count']} Marker, {int(f['intensity']*100)}% Intensitaet"
+        myth = f.get("myth", "")
+        if myth:
+            point += f" \u2014 Mythos: \u201e{myth}\u201c"
+        key_points.append(point)
 
     # Total unique markers and dominant peirce type
     all_marker_ids = []

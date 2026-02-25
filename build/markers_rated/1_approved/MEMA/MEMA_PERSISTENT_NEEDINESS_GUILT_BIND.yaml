@@ -61,4 +61,4 @@ examples:
   - Das ist ein interessanter Gedanke.
   - Ich bin gerade entspannt.
 tags: [mema, guilt_pressure, series]
-semiotic: {peirce: index, signifikat: Schuld/Schuldgefuehle, framing_type: schuld, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Schuld/Schuldgefuehle, framing_type: schuld, cultural_frame: '', myth: 'Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung'}

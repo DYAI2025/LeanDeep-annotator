@@ -51,6 +51,7 @@ semiotic:
   signifikat: Verbundenheitssignal
   framing_type: bindung
   cultural_frame: Bowlby
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

@@ -50,4 +50,4 @@ metadata:
   - rule: R10
     note: CLU-Defaults für window/scoring gesetzt
     date: '2025-08-29'
-semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

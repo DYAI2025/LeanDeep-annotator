@@ -44,6 +44,7 @@ semiotic:
   signifikat: Risikowahrnehmung
   framing_type: unsicherheit
   cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 metadata:
   risk:
     heuristic: "risk_ack_weight=1.1 uncertainty_weight=1.0"

@@ -1,0 +1,75 @@
+id: SEM_VEHEMENCE_DEMAND
+schema: LeanDeep
+version: '5.1'
+layer: SEM
+lang: de
+description: ''
+frame:
+  signal:
+  - zeig das mit vehemenz
+  - ohne schutzraum
+  - wenn du wirklich willst
+  - zeig dich roh
+  - ohne sicherheitsnetz
+  - beweise es mir
+  concept: coercive demand for unprotected emotional vulnerability
+  pragmatics: demand partner expose themselves emotionally without reciprocal safety
+  narrative: forced_vulnerability
+patterns:
+- type: regex
+  value: (?i)\b(zeig\w*\s+(dich|mir|das|es)\s+.{0,15}(roh|echt|wirklich|ganz|vollstaendig|bedingungslos|ohne\s+(schutz|sicherheit|netz|rueckzug)))\b
+- type: regex
+  value: (?i)(mit\s+vehemenz|ohne\s+schutzraum|ohne\s+sicherheitsnetz|ohne\s+wenn\s+und\s+aber)
+- type: regex
+  value: (?i)\b(beweis\w*\s+(es\s+)?mir|zeig\s+mir\s+dass\s+du\s+(es\s+)?(wirklich|ernst)\s+meinst)\b
+- type: regex
+  value: (?i)(wenn\s+du\s+(wirklich|echt)\s+(willst|liebst|meinst).{0,20}(dann\s+(zeig|beweis|mach)))
+- type: regex
+  value: (?i)(ganz\s+oder\s+gar\s+nicht|alles\s+oder\s+nichts|ohne\s+kompromiss)
+examples:
+  positive:
+  - Zeig mir das mit Vehemenz, ohne Schutzraum.
+  - Wenn du mich wirklich liebst, dann zeig es bedingungslos.
+  - Ich will dich ganz, roh, ohne Sicherheitsnetz.
+  - Beweise mir, dass du es ernst meinst — ohne wenn und aber.
+  - Zeig dich mir so wie du bist, ohne Rueckzugsmoeglichkeit.
+  - Ganz oder gar nicht — ich will keine halben Sachen.
+  - Wenn du wirklich willst, dann kaempfe ohne Schutzraum.
+  - Alles oder nichts, ohne Kompromiss, ohne Hintertuer.
+  negative:
+  - Ich wuerde mir wuenschen, dass du offener bist.
+  - Kannst du mir zeigen, wie du dich fuehlst?
+  - Ich brauche mehr Naehe von dir, wenn du bereit bist.
+  - Lass uns ehrlich miteinander sein.
+  - Ich moechte dich besser verstehen.
+  - Es waere schoen, wenn du dich mehr oeffnest.
+tags:
+- vehemence
+- forced_vulnerability
+- coercion
+- manipulation
+- boundary_pressure
+rating: 1
+composed_of:
+- ATO_CONTROL_PHRASES
+- ATO_CONDITIONAL_CONSEQUENCE
+activation:
+  rule: ANY 1
+scoring:
+  base: 1.8
+  weight: 1.3
+semiotic:
+  peirce: index
+  signifikat: Erzwungene Verletzlichkeit ohne Sicherheit
+  framing_type: kontrollnarrative
+  cultural_frame: Coercive Control
+  myth: "Wahre Liebe zeigt sich nur roh — wer Schutz braucht, liebt nicht genug"
+compositionality: contextual
+vad_estimate:
+  valence: -0.4
+  arousal: 0.85
+  dominance: 0.8
+effect_on_state:
+  trust: -0.35
+  conflict: 0.5
+  deesc: -0.3

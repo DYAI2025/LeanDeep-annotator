@@ -48,4 +48,4 @@ metadata:
 tags: [atomic, v3.3, auto-generated]
 vad_estimate: {valence: -0.6, arousal: 0.7, dominance: 0.95}
 effect_on_state: {trust: -0.5, conflict: 0.6, deesc: -0.35}
-semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

@@ -1,0 +1,72 @@
+id: SEM_INVALIDATION
+lang: de
+frame:
+  signal:
+  - das bildest du dir ein
+  - du uebertreibst
+  - so war das nicht
+  - deine reaktion ist unangemessen
+  - das invalidiert mein erlebtes
+  - du verdrehst alles
+  concept: denial or dismissal of partner's lived experience
+  pragmatics: undermine partner's emotional reality by reframing their experience as invalid
+  narrative: invalidation
+composed_of:
+- ATO_EMOTIONAL_INVALIDATION
+- ATO_FEELING_DOWNPLAY_WORD
+activation:
+  rule: ANY 1
+scoring:
+  base: 1.8
+  weight: 1.3
+patterns:
+- type: regex
+  value: (?i)\b(invalidier\w*|entwert\w*)\s+.{0,15}(mein|mich|dein|dich|ihr|sein|erlebt\w*|gefuehl\w*|empfind\w*)
+- type: regex
+  value: (?i)(deine?\s+(reaktion|gefuehl\w*|empfind\w*|angst|sorge|wut)\s+.{0,10}(unangemessen|uebertrieben|ueberzogen|falsch|unberechtigt|grundlos|eingebildet))
+- type: regex
+  value: (?i)(das\s+(stimmt\s+so\s+nicht|war\s+ganz\s+anders|bildest\s+du\s+dir\s+ein|interpretierst\s+du\s+falsch))
+- type: regex
+  value: (?i)\b(du\s+(uebertreibst|dramatisierst|machst\s+aus\s+.{0,10}(muecke|nichts)|siehst\s+das\s+falsch|verdrehst))\b
+- type: regex
+  value: (?i)(mein\w?\s+(erleb\w*|wahrnehmung|gefuehl\w*|erfahrung)\s+.{0,10}(egal|unwichtig|zaehlt\s+nicht|ist\s+dir\s+egal))
+examples:
+  positive:
+  - Deine Reaktion ist voellig unangemessen.
+  - Du uebertreibst mal wieder masslos.
+  - Das bildest du dir ein, so war das nicht.
+  - Du verdrehst alles, wie immer.
+  - Meine Gefuehle sind dir doch eh egal.
+  - Das interpretierst du falsch, das habe ich nie so gemeint.
+  - Du dramatisierst aus einer Muecke einen Elefanten.
+  - Es invalidiert mein Erlebtes, wenn du das umdeutest.
+  - Deine Angst ist unberechtigt, es gibt keinen Grund dafuer.
+  - Du siehst das komplett falsch.
+  negative:
+  - Ich sehe das anders, aber ich verstehe deine Sicht.
+  - Lass uns beide Seiten anhoeren.
+  - Ich moechte verstehen, warum du so empfindest.
+  - Das tut mir leid, dass du das so erlebt hast.
+  - Deine Gefuehle sind berechtigt, auch wenn ich es anders sehe.
+  - Ich respektiere deine Wahrnehmung.
+tags:
+- invalidation
+- gaslighting
+- dismissal
+- emotional_abuse
+- toxicity
+compositionality: contextual
+vad_estimate:
+  valence: -0.55
+  arousal: 0.65
+  dominance: 0.7
+effect_on_state:
+  trust: -0.5
+  conflict: 0.5
+  deesc: -0.35
+semiotic:
+  peirce: symbol
+  signifikat: Entwertung gelebter Erfahrung
+  framing_type: abwertung
+  cultural_frame: Gaslighting
+  myth: "Eigene Wahrheit ist relativierbar — wer anders fuehlt, irrt"

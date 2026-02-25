@@ -30,4 +30,4 @@ examples:
   - Did you read the email?
   - I need to get gas.
   - The meeting is in the conference room.
-semiotic: {peirce: symbol, signifikat: Engagement/Verbindlichkeit, framing_type: bindung, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Engagement/Verbindlichkeit, framing_type: bindung, cultural_frame: '', myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

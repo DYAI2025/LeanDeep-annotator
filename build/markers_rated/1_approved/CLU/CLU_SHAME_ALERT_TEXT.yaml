@@ -56,4 +56,4 @@ metadata:
   - rule: R10
     note: Intuition-Metadaten ergänzt gem. LD3.4
     date: '2025-08-29'
-semiotic: {peirce: icon, signifikat: Scham, framing_type: schuld, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Scham, framing_type: schuld, cultural_frame: '', myth: 'Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung'}

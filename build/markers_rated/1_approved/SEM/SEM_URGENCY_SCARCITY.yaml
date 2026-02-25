@@ -55,4 +55,5 @@ composed_of:
 compositionality: deterministic
 vad_estimate: {valence: -0.7, arousal: 0.9, dominance: 0.75}
 effect_on_state: {trust: -0.5, conflict: 0.6, deesc: -0.35}
-semiotic: {peirce: symbol, signifikat: Verdeckte Einflussnahme, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie}
+semiotic: {peirce: symbol, signifikat: Verdeckte Einflussnahme, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie, myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich
+    als Fuersorge'}

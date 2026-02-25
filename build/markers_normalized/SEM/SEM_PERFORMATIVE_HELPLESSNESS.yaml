@@ -52,6 +52,7 @@ semiotic:
   signifikat: Schuld/Schuldgefuehle
   framing_type: schuld
   cultural_frame: ''
+  myth: 'Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung'
 compositionality: deterministic
 vad_estimate:
   valence: -0.75

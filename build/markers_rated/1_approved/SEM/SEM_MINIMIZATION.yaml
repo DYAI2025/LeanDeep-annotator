@@ -37,4 +37,4 @@ tags: [semantic, minimization, defense]
 compositionality: deterministic
 vad_estimate: {valence: -0.5, arousal: 0.8, dominance: 0.6}
 effect_on_state: {trust: -0.3, conflict: 0.4, deesc: -0.2}
-semiotic: {peirce: index, signifikat: Semantisches Muster, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Semantisches Muster, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

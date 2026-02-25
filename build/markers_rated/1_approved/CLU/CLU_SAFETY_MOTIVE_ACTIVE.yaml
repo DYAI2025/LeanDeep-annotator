@@ -54,4 +54,4 @@ examples:
   - "Risiko gehoert dazu, kein Problem"
   - "Wann faengt das Spiel an?"
   - "Kannst du den Muell rausbringen?"
-semiotic: {peirce: symbol, signifikat: Sicherheitssignal, framing_type: bindung, cultural_frame: Bowlby}
+semiotic: {peirce: symbol, signifikat: Sicherheitssignal, framing_type: bindung, cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

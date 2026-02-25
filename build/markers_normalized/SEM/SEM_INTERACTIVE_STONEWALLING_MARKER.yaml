@@ -50,6 +50,7 @@ semiotic:
   signifikat: Mauern/Blockade
   framing_type: vermeidung
   cultural_frame: Gottman
+  myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'
 compositionality: deterministic
 vad_estimate:
   valence: -0.5

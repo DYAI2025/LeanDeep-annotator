@@ -42,4 +42,4 @@ examples:
   - "Ich habe nichts falsch gemacht."
   - "Das musst du jetzt aushalten."
   - "Reg dich nicht so auf."
-semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: reparatur, cultural_frame: Gottman}
+semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: reparatur, cultural_frame: Gottman, myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'}

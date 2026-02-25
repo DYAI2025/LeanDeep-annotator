@@ -296,6 +296,26 @@ CLASSIFICATION_RULES = [
      {"peirce": "index", "framing_type": "vermeidung", "signifikat": "Externe Attribution", "cultural_frame": ""}),
 ]
 
+# ---------------------------------------------------------------------------
+# Myth mapping: framing_type -> cultural myth (Barthes secondary system)
+# Each myth names the invisible narrative that a framing category naturalizes.
+# ---------------------------------------------------------------------------
+
+FRAMING_MYTHS = {
+    "eskalation": "Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht",
+    "kontrollnarrative": "Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge",
+    "reparatur": "Kommunikation loest alles — reden heilt, schweigen zerstoert",
+    "vermeidung": "Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres",
+    "unsicherheit": "Zweifel ist Schwaeche — wer zoegert, verliert",
+    "bindung": "Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat",
+    "ueberflutung": "Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet",
+    "schuld": "Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung",
+    "empathie": "Verstehen heisst zustimmen — Empathie fordert Parteinahme",
+    "abwertung": "Ueberlegenheit schuetzt — wer abwertet, vermeidet eigene Verletzlichkeit",
+    "polarisierung": "Es gibt nur Schwarz und Weiss — Differenzierung ist Schwaeche",
+    "meta": "Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich",
+}
+
 # Layer-based fallbacks (last resort)
 LAYER_DEFAULTS = {
     "ATO":  {"peirce": "icon",   "framing_type": "unsicherheit",  "signifikat": "Atomares Signal", "cultural_frame": ""},
@@ -325,8 +345,11 @@ def classify_marker(marker_id: str, layer: str, tags: list[str] | None,
     """
     result = dict(existing_semiotic) if existing_semiotic else {}
 
-    # Skip if peirce already set
+    # If peirce already set, only add myth if missing, then return
     if result.get("peirce"):
+        if "myth" not in result or not result["myth"]:
+            ft = result.get("framing_type", "")
+            result["myth"] = FRAMING_MYTHS.get(ft, "")
         return result
 
     mid_upper = marker_id.upper()
@@ -355,6 +378,11 @@ def classify_marker(marker_id: str, layer: str, tags: list[str] | None,
     for key in ("peirce", "signifikat", "framing_type", "cultural_frame"):
         if key not in result or not result[key]:
             result[key] = defaults.get(key, "")
+
+    # Add myth based on framing_type (only if not already set)
+    if "myth" not in result or not result["myth"]:
+        ft = result.get("framing_type", "")
+        result["myth"] = FRAMING_MYTHS.get(ft, "")
 
     return result
 
@@ -499,7 +527,10 @@ def main():
         existing_semiotic = data.get("semiotic")
 
         # Check if peirce already set (unless --force)
-        if not args.force and isinstance(existing_semiotic, dict) and existing_semiotic.get("peirce"):
+        has_peirce = isinstance(existing_semiotic, dict) and existing_semiotic.get("peirce")
+        needs_myth = not (isinstance(existing_semiotic, dict) and existing_semiotic.get("myth"))
+
+        if not args.force and has_peirce and not needs_myth:
             already_set += 1
             continue
 
@@ -507,6 +538,9 @@ def main():
         if args.force and isinstance(existing_semiotic, dict):
             existing_semiotic = {k: v for k, v in existing_semiotic.items()
                                  if k not in ("peirce", "signifikat", "framing_type", "cultural_frame")}
+        elif has_peirce and needs_myth:
+            # Only add myth to existing semiotic, don't reclassify
+            pass
 
         semiotic = classify_marker(marker_id, layer, tags, existing_semiotic)
 

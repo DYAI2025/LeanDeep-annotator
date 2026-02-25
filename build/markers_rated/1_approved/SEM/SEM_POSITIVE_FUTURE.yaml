@@ -34,4 +34,4 @@ tags:
 compositionality: deterministic
 vad_estimate: {valence: 0.3, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.2, conflict: -0.15, deesc: 0.2}
-semiotic: {peirce: icon, signifikat: Positive Grundhaltung, framing_type: empathie, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Positive Grundhaltung, framing_type: empathie, cultural_frame: '', myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme}

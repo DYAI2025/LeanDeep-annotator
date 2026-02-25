@@ -42,4 +42,4 @@ examples:
   - "Das macht mich wütend."
   - "Ich bin so traurig gerade."
   - "Wow das ist ja unglaublich!"
-semiotic: {peirce: index, signifikat: Kooperation/Koordination, framing_type: reparatur, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Kooperation/Koordination, framing_type: reparatur, cultural_frame: '', myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'}

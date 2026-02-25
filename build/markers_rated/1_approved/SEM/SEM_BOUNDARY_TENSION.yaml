@@ -41,4 +41,4 @@ examples:
   - "Ich verstehe deinen Punkt."
   - "Ok, machen wir es so wie du sagst."
   - "Kein Problem, geht klar."
-semiotic: {peirce: symbol, signifikat: Grenzsetzung, framing_type: bindung, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Grenzsetzung, framing_type: bindung, cultural_frame: '', myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

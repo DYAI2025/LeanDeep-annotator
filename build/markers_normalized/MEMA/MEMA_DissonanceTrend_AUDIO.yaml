@@ -44,6 +44,7 @@ semiotic:
   signifikat: Meta-Diagnose
   framing_type: meta
   cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 activation:
   rule: "COUNT(CLU_DISSONANCE_ALERT_AUDIO in 30 turns) >= 3 OR EWMA(alpha=0.2) >= 0.6"
 metadata:

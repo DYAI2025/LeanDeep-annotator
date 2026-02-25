@@ -27,4 +27,5 @@ examples:
   - Danke, dass du mir das sagst. Ich denke darueber nach.
 vad_estimate: {valence: -0.5, arousal: 0.8, dominance: 0.6}
 effect_on_state: {trust: -0.3, conflict: 0.4, deesc: -0.2}
-semiotic: {peirce: symbol, signifikat: Kognitive Verzerrung/Framing, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie}
+semiotic: {peirce: symbol, signifikat: Kognitive Verzerrung/Framing, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie, myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt
+    sich als Fuersorge'}

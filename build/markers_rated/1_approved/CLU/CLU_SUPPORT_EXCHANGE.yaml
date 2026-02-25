@@ -35,4 +35,4 @@ examples:
   - "Ich war gestern einkaufen"
   - "Das Wetter soll morgen besser werden"
   - "Hast du die E-Mail gelesen?"
-semiotic: {peirce: index, signifikat: Unterstuetzung/Beistand, framing_type: bindung, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Unterstuetzung/Beistand, framing_type: bindung, cultural_frame: '', myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

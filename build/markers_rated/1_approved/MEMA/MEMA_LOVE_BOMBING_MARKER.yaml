@@ -27,4 +27,4 @@ examples:
   - Ich fuehle mich unwohl dabei und moechte darueber reden.
   - Ich verstehe, warum du das so siehst.
   - Danke, dass du mir das sagst. Ich denke darueber nach.
-semiotic: {peirce: symbol, signifikat: Liebe/Zuneigung, framing_type: bindung, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Liebe/Zuneigung, framing_type: bindung, cultural_frame: '', myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

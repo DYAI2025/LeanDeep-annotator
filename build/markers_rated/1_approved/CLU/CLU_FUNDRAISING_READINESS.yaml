@@ -33,4 +33,4 @@ metadata:
     heuristic: "traction_weight=1.2 team_weight=1.0"
     note: "Early signal of fundraising viability"
 tags: [fundraising, readiness]
-semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

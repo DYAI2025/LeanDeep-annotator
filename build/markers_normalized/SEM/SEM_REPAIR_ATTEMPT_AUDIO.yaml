@@ -49,6 +49,7 @@ semiotic:
   signifikat: Beziehungsreparatur
   framing_type: reparatur
   cultural_frame: Gottman
+  myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.45

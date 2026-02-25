@@ -51,6 +51,7 @@ semiotic:
   signifikat: Abwehr/Rechtfertigung
   framing_type: eskalation
   cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'
 vad_estimate:
   valence: -0.5
   arousal: 0.8

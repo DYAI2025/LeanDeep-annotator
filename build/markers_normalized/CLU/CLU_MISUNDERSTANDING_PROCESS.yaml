@@ -46,6 +46,7 @@ semiotic:
   signifikat: Cluster-Muster
   framing_type: meta
   cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 activation:
   rule: SEQUENCE [EXPECTANCY_BREAK + AROUSAL] AND LACK_OF_SUCCESSFUL_REPAIR within 2 turns
 metadata:

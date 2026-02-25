@@ -48,6 +48,7 @@ semiotic:
   signifikat: Entschuldigung/Reue
   framing_type: reparatur
   cultural_frame: Gottman
+  myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'
 vad_estimate:
   valence: 0.45
   arousal: 0.1

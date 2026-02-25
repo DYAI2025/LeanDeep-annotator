@@ -44,4 +44,4 @@ examples:
 detect_class:
 criteria:
 updated_at: '2025-08-19T10:30:00Z'
-semiotic: {peirce: index, signifikat: Schuld/Schuldgefuehle, framing_type: schuld, cultural_frame: ''}
+semiotic: {peirce: index, signifikat: Schuld/Schuldgefuehle, framing_type: schuld, cultural_frame: '', myth: 'Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung'}

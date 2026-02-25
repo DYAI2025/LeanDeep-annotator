@@ -54,4 +54,4 @@ examples:
   - Das klingt nach einem wichtigen Thema fuer dich.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
-semiotic: {peirce: index, signifikat: Aufmerksames Zuhoeren, framing_type: empathie, cultural_frame: Rogers}
+semiotic: {peirce: index, signifikat: Aufmerksames Zuhoeren, framing_type: empathie, cultural_frame: Rogers, myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme}

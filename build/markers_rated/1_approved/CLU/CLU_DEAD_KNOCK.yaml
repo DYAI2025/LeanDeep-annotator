@@ -60,4 +60,5 @@ examples:
   - "Wie war dein Tag?"
   - "Bin gleich zuhause"
   - "Vergiss nicht den Termin morgen"
-semiotic: {peirce: index, signifikat: Kontrolle/Dominanz, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie}
+semiotic: {peirce: index, signifikat: Kontrolle/Dominanz, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie, myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als
+    Fuersorge'}

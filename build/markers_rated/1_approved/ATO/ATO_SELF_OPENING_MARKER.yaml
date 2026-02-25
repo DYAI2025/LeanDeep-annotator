@@ -32,4 +32,4 @@ tags: [atomic, performance, verletzlichkeit, strategie]
 schema_version: "3.3"
 vad_estimate: {valence: -0.6, arousal: 0.3, dominance: 0.2}
 effect_on_state: {trust: -0.1, conflict: 0.1, deesc: -0.05}
-semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

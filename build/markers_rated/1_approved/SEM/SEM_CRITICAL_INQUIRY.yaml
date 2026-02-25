@@ -41,4 +41,4 @@ examples:
 compositionality: deterministic
 vad_estimate: {valence: -0.2, arousal: 0.5, dominance: 0.3}
 effect_on_state: {trust: -0.1, conflict: 0.1, deesc: -0.05}
-semiotic: {peirce: icon, signifikat: Fragehaltung/Suchbewegung, framing_type: unsicherheit, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Fragehaltung/Suchbewegung, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

@@ -36,4 +36,4 @@ negatives:
 compositionality: deterministic
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
-semiotic: {peirce: icon, signifikat: Freude/Glueck, framing_type: empathie, cultural_frame: ''}
+semiotic: {peirce: icon, signifikat: Freude/Glueck, framing_type: empathie, cultural_frame: '', myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme}

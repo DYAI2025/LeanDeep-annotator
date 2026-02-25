@@ -25,4 +25,4 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
-semiotic: {peirce: symbol, signifikat: Bindungsmuster, framing_type: bindung, cultural_frame: Bowlby}
+semiotic: {peirce: symbol, signifikat: Bindungsmuster, framing_type: bindung, cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

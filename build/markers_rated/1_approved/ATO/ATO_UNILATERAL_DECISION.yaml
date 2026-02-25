@@ -35,4 +35,4 @@ tags:
 - autonomy
 vad_estimate: {valence: 0.2, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.25, conflict: -0.1, deesc: 0.15}
-semiotic: {peirce: symbol, signifikat: Entscheidungssignal, framing_type: meta, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Entscheidungssignal, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

@@ -50,4 +50,4 @@ examples:
   - Hast du die E-Mail gelesen?
   - Ich muss noch tanken.
   - Die Besprechung ist im Konferenzraum.
-semiotic: {peirce: symbol, signifikat: Vertrauen, framing_type: bindung, cultural_frame: Bowlby}
+semiotic: {peirce: symbol, signifikat: Vertrauen, framing_type: bindung, cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

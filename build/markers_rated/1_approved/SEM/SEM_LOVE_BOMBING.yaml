@@ -52,4 +52,4 @@ tags:
 compositionality: deterministic
 vad_estimate: {valence: 0.7, arousal: 0.55, dominance: 0.4}
 effect_on_state: {trust: 0.35, conflict: -0.2, deesc: 0.25}
-semiotic: {peirce: symbol, signifikat: Liebe/Zuneigung, framing_type: bindung, cultural_frame: ''}
+semiotic: {peirce: symbol, signifikat: Liebe/Zuneigung, framing_type: bindung, cultural_frame: '', myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

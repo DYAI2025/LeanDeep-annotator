@@ -45,6 +45,7 @@ semiotic:
   signifikat: Meta-Diagnose
   framing_type: meta
   cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 metadata:
   transition_rule: "if prev_stage.score >= 0.6 and next_stage.score - prev_stage.score >= 0.3 within 10 messages → TRANSITION(prev→next)"
   min_persistence: 3

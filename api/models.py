@@ -189,6 +189,7 @@ class SemioticEntry(BaseModel):
     signifikat: str
     cultural_frame: str = ""
     framing_type: str = ""
+    myth: str = ""
 
 
 class FramingHypothesis(BaseModel):
@@ -198,6 +199,7 @@ class FramingHypothesis(BaseModel):
     evidence_markers: list[str]
     message_indices: list[int]
     detection_count: int = 0
+    myth: str = ""
 
 
 class InterpretFindings(BaseModel):
