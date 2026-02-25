@@ -12,20 +12,82 @@ pattern:
   flags: ["IGNORECASE"]
 examples:
   positive:
-  - "Das trennen wir."
-  - "X gehört hier nicht rein."
-  - "Anderes Thema, bitte separat."
-  - "Lass uns das separat behandeln."
-  - "Den Teil klammern wir aus."
-  - "Das gehört in einen separaten Thread."
+  - Das trennen wir.
+  - X gehoert hier nicht rein.
+  - Anderes Thema, bitte separat.
+  - Lass uns das separat behandeln.
+  - Den Teil klammern wir aus.
+  - Das gehoert in einen separaten Thread.
+  - Wir sollten das getrennt besprechen.
+  - Das mischen wir jetzt nicht zusammen.
+  - Lass uns das entkoppeln.
+  - Eines nach dem anderen, bitte.
+  - Das ist ein eigenes Thema.
+  - Wir packen das in einen separaten Punkt.
+  - Das klammern wir bewusst aus.
+  - Lass uns die zwei Themen trennen.
+  - Das gehoert nicht in diese Diskussion.
+  - Wir behandeln das unabhaengig voneinander.
+  - Das ist ein anderes Fass, das machen wir spaeter auf.
+  - Lass uns das separat angehen.
+  - Das muss getrennt betrachtet werden.
+  - Wir splitten das auf.
+  - Zwei verschiedene Baustellen.
+  - Lass uns das nicht vermischen.
+  - Das ist ein separater Tagesordnungspunkt.
+  - Wir muessen das sauber trennen.
+  - Das diskutieren wir in einem eigenen Meeting.
+  - Lass uns fokussiert bleiben und das ausklammern.
+  - Das ist ein eigenstaendiges Thema.
+  - Wir packen das auf die Parkliste.
+  - Bitte nicht alles in einen Topf werfen.
+  - Das verdient eine eigene Diskussion.
+  - Lass uns das priorisieren und aufteilen.
+  - Das nehmen wir raus und besprechen es separat.
+  - Wir sollten das nicht miteinander verquicken.
+  - Einzeln betrachten bitte.
+  - Das sind zwei Paar Schuhe.
+  - Lass uns das in Teile zerlegen.
+  - Das braucht eine eigene Agenda.
+  - Wir trennen Operatives von Strategischem.
+  - Das packe ich auf die naechste Agenda.
+  - Getrennt besprechen, gemeinsam entscheiden.
+  - Lass uns das modular angehen.
+  - Das ist ein separates Anliegen.
+  - Wir behandeln das als eigenes Ticket.
+  - Das klammern wir fuer heute aus.
+  - Bitte nicht alles gleichzeitig.
+  - Das nehmen wir als naechstes, nicht jetzt.
+  - Lass uns das in Teilprojekte splitten.
+  - Wir muessen das klar voneinander abgrenzen.
+  - Das gehoert in ein anderes Gespraech.
+  - Erst das eine, dann das andere.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Das haengt alles zusammen.
+  - Wir muessen das als Ganzes betrachten.
+  - Das kann man nicht trennen.
+  - Alles gehoert zum gleichen Thema.
+  - Lass uns das im Zusammenhang sehen.
+  - Das eine bedingt das andere.
+  - Wir sollten das ganzheitlich angehen.
+  - Das ist untrennbar verbunden.
+  - Alles auf einmal besprechen.
+  - Das ergibt nur im Ganzen Sinn.
+  - Lass uns alles zusammen diskutieren.
+  - Die Themen bedingen sich gegenseitig.
+  - Wir brauchen den Gesamtblick.
+  - Das kann man nicht isoliert betrachten.
+  - Alles zusammen ergibt erst ein Bild.
+  - Wir muessen das vernetzte Denken anwenden.
+  - Das greift ineinander.
+  - Lass uns alles auf den Tisch legen.
+  - Das sind zwei Seiten derselben Medaille.
+  - Wir besprechen alles jetzt.
+  - Das laesst sich nicht aufteilen.
+  - Alles zusammen, bitte.
+  - Die Punkte gehoeren zusammen.
+  - Wir sehen das als Gesamtpaket.
+  - Das ergibt nur im Kontext Sinn.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
 semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

@@ -11,19 +11,82 @@ frame:
 pattern: ["(?i)\\b(früher|damals|gestern|heute|morgen|später|bald|immer|nie|oft)\\b"]
 examples:
   positive:
-  - "Früher war das anders."
-  - "Heute fühle ich mich besser."
-  - "Morgen wird es sich zeigen."
-  - "Das passiert immer wieder."
-  - "Ich denke oft daran."
+  - Früher war das anders.
+  - Heute fühle ich mich besser.
+  - Morgen wird es sich zeigen.
+  - Das passiert immer wieder.
+  - Ich denke oft daran.
+  - Gestern war alles noch gut.
+  - Damals hatten wir es einfacher.
+  - Bald wird sich das klären.
+  - Später reden wir darüber.
+  - Nie habe ich das so erlebt.
+  - Früher konnte ich das besser.
+  - Heute ist ein neuer Tag.
+  - Morgen sieht die Welt anders aus.
+  - Immer wenn das passiert, bin ich nervös.
+  - Oft frage ich mich, ob das richtig war.
+  - Gestern habe ich viel nachgedacht.
+  - Damals war alles anders.
+  - Bald treffen wir uns wieder.
+  - Später wird das klarer.
+  - Nie wieder will ich das erleben.
+  - Früher waren die Zeiten besser.
+  - Heute nehme ich mir das vor.
+  - Morgen starte ich neu.
+  - Immer dasselbe Problem.
+  - Oft denke ich an die alten Zeiten.
+  - Gestern war ein schwerer Tag.
+  - Damals haben wir das geschafft.
+  - Bald ist es soweit.
+  - Später mache ich das.
+  - Nie war es so schwer wie jetzt.
+  - Früher habe ich das nicht verstanden.
+  - Heute sehe ich das klarer.
+  - Morgen kann alles besser werden.
+  - Immer wenn ich daran denke, werde ich traurig.
+  - Oft bin ich unsicher.
+  - Gestern habe ich es erfahren.
+  - Damals war ich noch jung.
+  - Bald ändern wir das.
+  - Später klärt sich alles.
+  - Nie hätte ich das gedacht.
+  - Früher habe ich mehr gelacht.
+  - Heute bin ich dankbar.
+  - Morgen beginnt ein neues Kapitel.
+  - Immer bin ich derjenige, der anfängt.
+  - Oft wünsche ich mir Veränderung.
+  - Gestern war der Wendepunkt.
+  - Damals konnte ich es nicht fassen.
+  - Bald haben wir es geschafft.
+  - Später wird alles gut.
+  - Nie sage nie, aber fast nie.
   negative:
-  - Das passiert manchmal wieder.
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
+  - Das Thema hat keinen zeitlichen Bezug.
+  - Ich spreche allgemein.
+  - Kein bestimmter Zeitpunkt gemeint.
+  - Das gilt unabhängig vom Datum.
+  - Ohne Bezug auf Vergangenheit oder Zukunft.
+  - Das ist eine grundsätzliche Aussage.
+  - Zeitlos betrachtet.
+  - Keine temporale Einordnung nötig.
+  - Das trifft immer und überall zu.
+  - Unabhängig von der Zeit.
+  - Generelle Beobachtung.
+  - Kein Verweis auf einen bestimmten Tag.
+  - Das ist prinzipiell so.
+  - Ohne Zeitbezug.
+  - Allgemeingültige Feststellung.
+  - Weder früher noch später, einfach generell.
+  - Das hat kein Datum.
+  - Ungebunden an eine Epoche.
+  - Grundsätzliche Wahrheit.
+  - Kein temporaler Anker.
+  - Zeitneutral.
+  - Ohne Referenz auf ein Ereignis.
+  - Allgemein formuliert.
+  - Kein Gestern, kein Morgen.
+  - Ewig gültig, sozusagen.
 tags: [temporal, atomic, time, v3.3]
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}

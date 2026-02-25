@@ -11,19 +11,82 @@ frame:
 pattern: ["(?i)\\b(switch|change|move)\\b"]
 examples:
   positive:
-  - "Let's switch to something else"
-  - "We should change the approach"
-  - "Can we move to a different method?"
-  - "Time to switch gears here"
-  - "I want to change this conversation"
+  - Lass uns das Thema wechseln.
+  - Wir sollten den Ansatz ändern.
+  - Können wir zu einer anderen Methode übergehen?
+  - Zeit für einen Wechsel.
+  - Ich möchte das Gespräch umlenken.
+  - Wechseln wir mal die Perspektive.
+  - Können wir switchen?
+  - Ich schlage eine Änderung vor.
+  - Lass uns umschalten.
+  - Wir müssen den Kurs wechseln.
+  - Themenwechsel bitte.
+  - Können wir die Richtung ändern?
+  - Zeit, den Gang zu wechseln.
+  - Ich möchte umsteigen auf Plan B.
+  - Lass uns das Thema switchen.
+  - Wir sollten den Fokus wechseln.
+  - Können wir zu etwas anderem übergehen?
+  - 'Wechsel: neues Thema.'
+  - Ich schlage vor, wir ändern die Strategie.
+  - Lass uns umlenken.
+  - Wir sollten das Vorgehen wechseln.
+  - Können wir den Blickwinkel ändern?
+  - Zeit für einen Perspektivwechsel.
+  - Ich möchte den Ton wechseln.
+  - Lass uns die Methode switchen.
+  - Wir müssen die Taktik ändern.
+  - Können wir den Kanal wechseln?
+  - 'Wechsel: anderer Ansatz.'
+  - Ich schlage vor, wir switchen zum nächsten Punkt.
+  - Lass uns das Thema ändern.
+  - Wir sollten den Plan wechseln.
+  - Können wir die Rollen tauschen?
+  - Zeit, den Modus zu wechseln.
+  - Ich möchte den Schwerpunkt ändern.
+  - Lass uns zum nächsten Punkt wechseln.
+  - Wir müssen die Prioritäten ändern.
+  - Können wir die Agenda wechseln?
+  - 'Wechsel: neue Richtung.'
+  - Ich schlage einen Kurswechsel vor.
+  - Lass uns switchen und neu starten.
+  - Wir sollten umdenken.
+  - Können wir das Format ändern?
+  - Zeit für einen Switch.
+  - Ich möchte den Ansatz wechseln.
+  - Lass uns die Herangehensweise ändern.
+  - Wir müssen umschalten.
+  - Können wir wechseln?
+  - 'Wechsel: anderes Vorgehen.'
+  - Ich schlage einen Wechsel vor.
+  - Lass uns den Kurs ändern.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Bleiben wir beim aktuellen Thema.
+  - Kein Wechsel nötig, wir machen weiter.
+  - Ich möchte beim jetzigen Ansatz bleiben.
+  - Keine Änderung, das passt so.
+  - Wir bleiben bei dem, was funktioniert.
+  - Kein Richtungswechsel geplant.
+  - Ich bleibe bei meiner Methode.
+  - Alles bleibt wie gehabt.
+  - Wir machen weiter wie bisher.
+  - Kein Umdenken nötig.
+  - Ich bleibe bei dem Plan.
+  - Keine Kursänderung.
+  - Wir fahren fort, wie besprochen.
+  - Das bleibt unverändert.
+  - Kein Themenwechsel bitte.
+  - Ich möchte nicht umlenken.
+  - Wir bleiben auf Kurs.
+  - Keine Änderung vorgesehen.
+  - Ich ändere nichts an dem Vorgehen.
+  - Bleiben wir dabei.
+  - Kein Switch geplant.
+  - Alles bleibt beim Alten.
+  - Wir machen das wie immer.
+  - Keine neue Richtung nötig.
+  - Ich bleibe bei der Linie.
 tags: [atomic, v3.3, auto-generated]
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}

@@ -17,11 +17,56 @@ patterns:
   - "IGNORECASE"
 examples:
   positive:
-  - Du bist nicht allein.
-  - Ich bin da.
-  - Melde dich jederzeit.
-  - Ich unterstütze dich.
-  - Wir schaffen das.
+  - Du bist nicht allein damit.
+  - Ich bin da für dich.
+  - Melde dich jederzeit, wenn du reden willst.
+  - Ich unterstütze dich, egal was kommt.
+  - Wir schaffen das zusammen.
+  - Du bist nicht allein, ich bin hier.
+  - Ich bin da, hörst du?
+  - Melde dich jederzeit bei mir.
+  - Ich unterstütze dich voll und ganz.
+  - Zusammen stehen wir das durch.
+  - Du bist nicht allein in dem Ganzen.
+  - Ich bin da, wann immer du mich brauchst.
+  - Melde dich jederzeit, Tag und Nacht.
+  - Ich unterstütze dich bei allem.
+  - Gemeinsam sind wir stärker.
+  - Du bist nicht allein, vergiss das nicht.
+  - Ich bin da und ich bleibe.
+  - Melde dich, wenn es zu viel wird.
+  - Ich unterstütze dich ohne Bedingungen.
+  - Wir packen das, versprochen.
+  - Du bist nicht allein, ich halte zu dir.
+  - Ich bin da, auch wenn es schwer ist.
+  - Melde dich jederzeit, ich höre zu.
+  - Ich unterstütze dich, wo ich kann.
+  - Zusammen kriegen wir das hin.
+  - Du bist nicht allein, auch wenn es sich so anfühlt.
+  - Ich bin da, darauf kannst du zählen.
+  - Melde dich, ich bin immer erreichbar für dich.
+  - Ich unterstütze dich, das ist mir wichtig.
+  - Wir schaffen das, gemeinsam.
+  - Du bist nicht allein in dieser Situation.
+  - Ich bin da und höre dir zu.
+  - Melde dich jederzeit, ohne schlechtes Gewissen.
+  - Ich unterstütze dich von Herzen.
+  - Zusammen finden wir einen Weg.
+  - Du bist nicht allein, ich verspreche es.
+  - Ich bin für dich da, immer.
+  - Melde dich, wann immer du magst.
+  - Ich unterstütze dich, egal wie lange es dauert.
+  - Wir schaffen das Schritt für Schritt.
+  - Du bist nicht allein, ich trage mit.
+  - Ich bin da, und das meine ich ernst.
+  - Melde dich jederzeit, ich urteile nicht.
+  - Ich unterstütze dich mit allem, was ich habe.
+  - Zusammen sind wir ein Team.
+  - Du bist nicht allein, das sage ich dir.
+  - Ich bin da, immer und überall.
+  - Melde dich, wenn du Kraft brauchst.
+  - Ich unterstütze dich bedingungslos.
+  - Wir stehen das gemeinsam durch.
   negative:
   - Kannst du mir das Salz reichen?
   - Der Termin ist um 14 Uhr.
@@ -30,6 +75,24 @@ examples:
   - Hast du die E-Mail gelesen?
   - Ich muss noch tanken.
   - Die Besprechung ist im Konferenzraum.
+  - Ich habe den Bericht abgegeben.
+  - Der Drucker ist kaputt.
+  - Wir brauchen neue Druckerpatronen.
+  - Das Mittagessen war gut.
+  - Ich fahre morgen nach München.
+  - Der Kaffee ist fertig.
+  - Hast du den Schlüssel gesehen?
+  - Die Post ist gekommen.
+  - Ich hole die Kinder ab.
+  - Das Paket wurde geliefert.
+  - Der Aufzug ist außer Betrieb.
+  - Ich brauche eine neue Tastatur.
+  - Die Heizung macht Geräusche.
+  - Wir haben kein Brot mehr.
+  - Der Hund muss raus.
+  - Ich war beim Friseur.
+  - Das Auto muss zur Inspektion.
+  - Die Rechnung liegt auf dem Tisch.
 tags:
 - support
 rating: 2

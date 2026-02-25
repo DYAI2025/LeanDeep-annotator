@@ -15,24 +15,82 @@ patterns:
   value: "\\b(wer übernimmt|kannst du bitte|ich nehme .*?, du .*?|Deadline|To[- ]?do)\\b"
 examples:
   positive:
-  - Wer übernimmt die Abstimmung mit dem Fotografen?
+  - Wer uebernimmt die Abstimmung mit dem Fotografen?
   - Kannst du bitte die Ringe morgen abholen?
   - Ich nehme die Deko, du checkst das Catering, einverstanden?
-  - Welche Deadline hat die Papeterie für die Menükarten?
+  - Welche Deadline hat die Papeterie fuer die Menuekarten?
   - Kannst du bitte die To-do-Liste aktualisieren?
-  - Wer übernimmt den Kontakt zum Standesamt diese Woche?
-  - Ich nehme die Sitzordnung, du kümmerst dich ums Budget.
-  - Kannst du bitte den DJ anrufen und die Zeiten bestätigen?
-  - Die Deadline für die Gästezahlen ist Freitag, wer macht das?
-  - Ich nehme die Blumen, du organisierst den Shuttle für die Gäste.
+  - Wer uebernimmt den Kontakt zum Standesamt diese Woche?
+  - Ich nehme die Sitzordnung, du kuemmerst dich ums Budget.
+  - Kannst du bitte den DJ anrufen und die Zeiten bestaetigen?
+  - Die Deadline fuer die Gaestezahlen ist Freitag, wer macht das?
+  - Ich nehme die Blumen, du organisierst den Shuttle fuer die Gaeste.
+  - Wer uebernimmt die Weinbestellung?
+  - Kannst du bitte die Location nochmal checken?
+  - 'To-do: Brautkleid-Anprobe vereinbaren.'
+  - Deadline fuer die Save-the-Dates ist naechste Woche.
+  - Ich nehme den Blumenschmuck, du die Tischkarten.
+  - Wer uebernimmt die Hotelreservierungen fuer die Gaeste?
+  - Kannst du bitte die Band wegen der Songwuensche kontaktieren?
+  - 'To-do: Trauzeugen-Outfit organisieren.'
+  - Ich nehme die Kirche, du den Empfang.
+  - Wer kuemmert sich um die Parkplaetze?
+  - Kannst du bitte das Probeessen buchen?
+  - 'Deadline: Endgueltige Gaesteliste bis Montag.'
+  - Ich organisiere den Friseur, du die Visagistin.
+  - Wer uebernimmt die Kinderbetreuung waehrend der Feier?
+  - Kannst du bitte die Hochzeitstorte bestellen?
+  - 'To-do: Trauzeugrede absprechen.'
+  - Ich nehme die Einladungen, du die Dankeskarten.
+  - Wer kuemmert sich um die Musik fuer den Empfang?
+  - Kannst du bitte den Floristen anrufen?
+  - 'Deadline fuer die Tischordnung: Mittwoch.'
+  - Ich organisiere den Shuttle, du die Uebernachtungen.
+  - Wer uebernimmt die Abstimmung mit der Druckerei?
+  - Kannst du bitte die Sektglaeser besorgen?
+  - 'To-do: Helfer fuer den Aufbau organisieren.'
+  - Ich klaere die Location-Details, du die Bewirtung.
+  - Wer macht die Playlists fuer die Party?
+  - Kannst du bitte die Anfahrtsbeschreibung versenden?
+  - 'Deadline: DJ-Absprache bis Ende der Woche.'
+  - Ich bestelle die Gastgeschenke, du die Kerzen.
+  - Wer kuemmert sich um das Feuerwerk?
+  - Kannst du bitte die Gaestebuch-Karten vorbereiten?
+  - 'To-do: Ringkissen besorgen.'
+  - Ich organisiere die Fotospots, du den Zeitplan.
+  - Wer uebernimmt die Koordination am Tag selbst?
+  - Kannst du bitte die Stuehle fuer die Zeremonie bestellen?
+  - 'Deadline: Endgueltige Menueauswahl bis Donnerstag.'
+  - Ich klaere den Ablauf mit dem Pfarrer, du mit dem DJ.
+  - Wer besorgt die Wegweiser?
+  - Kannst du bitte die Brandschutzbestimmungen pruefen?
+  - 'To-do: Notfallkit fuer den Hochzeitstag zusammenstellen.'
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Die Hochzeit war wunderschoen.
+  - Ich bin so gluecklich, dass wir geheiratet haben.
+  - Der schoenste Tag unseres Lebens.
+  - Alles hat perfekt geklappt.
+  - Wir erinnern uns gerne zurueck.
+  - Die Feier war ein voller Erfolg.
+  - Alles war perfekt organisiert.
+  - Wir geniessen die Flitterwochen.
+  - Der Tag war magisch.
+  - Alle Gaeste waren begeistert.
+  - Das Essen war fantastisch.
+  - Die Musik hat alle zum Tanzen gebracht.
+  - Wir sind so dankbar fuer den Tag.
+  - Alles verlief reibungslos.
+  - Die Fotos sind wunderschoen geworden.
+  - Jedes Detail stimmte.
+  - Die Gaeste hatten eine tolle Zeit.
+  - Wir wuerden nichts aendern.
+  - Der Blumenschmuck war traumhaft.
+  - Alles lief wie geplant.
+  - Der DJ war grossartig.
+  - Die Torte war ein Traum.
+  - Wir sind ueberwaeltigt von dem Tag.
+  - Alles hat harmoniert.
+  - Die beste Entscheidung unseres Lebens.
 tags:
 - wedding
 - negotiation

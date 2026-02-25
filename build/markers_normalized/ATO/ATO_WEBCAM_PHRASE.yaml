@@ -15,24 +15,82 @@ patterns:
   value: "(?i)\\b(turn on the camera|camera off|webcam is broken|camera doesn't work|video is off|cam is down)\\b"
 examples:
   positive:
-  - I'll turn on the camera in a moment.
-  - My camera is off right now.
-  - The webcam is broken unfortunately.
-  - My camera doesn't work right now.
-  - Sorry, I can't use the webcam today.
-  - Let me turn the video on quickly.
-  - Camera is down for technical reasons.
-  - Webcam isn't functioning properly today.
-  - Video feed is currently off.
-  - Camera setup needs troubleshooting first.
+  - Ich schalte gleich die Kamera an.
+  - Meine Kamera ist gerade aus.
+  - Die Webcam ist leider kaputt.
+  - Meine Kamera funktioniert nicht.
+  - Sorry, ich kann die Webcam heute nicht nutzen.
+  - Lass mich das Video kurz einschalten.
+  - Kamera ist aus technischen Gruenden down.
+  - Die Webcam funktioniert nicht richtig heute.
+  - Mein Video-Feed ist gerade aus.
+  - Das Kamera-Setup muss erstmal repariert werden.
+  - Ich mache die Kamera an, Moment.
+  - Meine Kamera geht nicht, sorry.
+  - Die Webcam streikt heute.
+  - Kamera ist off, tut mir leid.
+  - Mein Video ist gerade deaktiviert.
+  - Die Kamera haengt sich immer auf.
+  - Webcam ist kaputt seit gestern.
+  - Meine Kamera macht nicht mit.
+  - Ich schalte die Kamera gleich ein.
+  - Video ist aus bei mir.
+  - Die Webcam ist nicht angeschlossen.
+  - Kamera funktioniert leider nicht.
+  - Mein Video-Feed laeuft nicht.
+  - Die Webcam ist defekt.
+  - Ich kann die Kamera nicht einschalten.
+  - Kamera ist aus, sorry.
+  - Meine Webcam hat einen Fehler.
+  - Das Video laeuft nicht bei mir.
+  - Kamera geht heute nicht.
+  - Webcam kaputt, nur Audio.
+  - Mein Kameratreiber macht Probleme.
+  - Die Webcam ist disconnected.
+  - Video ist off bei mir.
+  - Kamera nicht verfuegbar.
+  - Meine Webcam braucht ein Update.
+  - Das Kamerabild ist schwarz.
+  - Video kann ich gerade nicht.
+  - Die Webcam reagiert nicht.
+  - Kamera ist deaktiviert.
+  - Mein Video funktioniert nicht richtig.
+  - Webcam-Problem, bitte Geduld.
+  - Kamera geht erst nach Neustart.
+  - Mein Video haengt.
+  - Die Webcam ist eingefroren.
+  - Kamera aus, bin trotzdem da.
+  - Meine Webcam zeigt nur ein schwarzes Bild.
+  - Video-Uebertragung stoert gerade.
+  - Kamera-Feed ist unterbrochen.
+  - Webcam macht heute Probleme.
+  - Mein Video ist leider nicht verfuegbar.
   negative:
-  - Sorry, I choose not to use the webcam today.
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
+  - Ich bin im Videocall, alles laeuft.
+  - Die Kamera funktioniert perfekt.
+  - Mein Video ist klar und stabil.
+  - Die Webcam laeuft einwandfrei.
+  - Kamera an, alles gut.
+  - Mein Video-Feed ist stabil.
+  - Die Webcam zeigt ein gutes Bild.
+  - Kamera funktioniert ohne Probleme.
+  - Mein Video ist scharf und deutlich.
+  - Die Webcam macht keine Probleme.
+  - Alles gut mit der Kamera.
+  - Video laeuft super.
+  - Meine Webcam funktioniert perfekt.
+  - Kamerabild ist klar.
+  - Video-Uebertragung ist stabil.
+  - Ich sehe dich gut auf dem Bildschirm.
+  - Die Kamera ist bereit.
+  - Mein Video ist eingeschaltet und laeuft.
+  - Webcam funktioniert wie gewohnt.
+  - Kamera-Qualitaet ist gut.
+  - Alles technisch in Ordnung bei mir.
+  - Video ist aktiviert.
+  - Meine Kamera zeigt ein klares Bild.
+  - Die Webcam laeuft stabil.
+  - Kein Problem mit der Kamera heute.
 tags:
 - atomic
 - v3.3

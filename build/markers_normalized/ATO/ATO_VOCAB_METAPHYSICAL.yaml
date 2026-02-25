@@ -14,20 +14,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - Präsenz
-  - Wesen
-  - Werden
-  - Raum
-  - Echo
-  - Spiegel
+  - Praesenz.
+  - Wesen.
+  - Werden.
+  - Raum.
+  - Echo.
+  - Spiegel.
+  - Die Praesenz war spuerbar im Raum.
+  - Mein Wesen hat sich veraendert.
+  - Im Werden begriffen.
+  - Ein Raum der Stille.
+  - Das Echo deiner Worte.
+  - Der Spiegel zeigt mir mein wahres Ich.
+  - In der Praesenz liegt Kraft.
+  - Das Wesen der Dinge erkennen.
+  - Alles ist im Werden.
+  - Raum fuer Transformation.
+  - Das Echo der Vergangenheit.
+  - Im Spiegel der Beziehung.
+  - Praesenz ist mehr als Anwesenheit.
+  - Das Wesen dieser Verbindung.
+  - Werden als staendiger Prozess.
+  - Raum halten fuer Gefuehle.
+  - Das Echo hallt nach.
+  - Spiegel meiner Seele.
+  - In Praesenz sein.
+  - Das Wesen meines Seins.
+  - Im Werden, nicht im Sein.
+  - Raum geben fuer das Ungesagte.
+  - Ein Echo von frueher.
+  - Der Spiegel truegt nicht.
+  - Praesenz spuere ich.
+  - Das Wesen des Gespraeches.
+  - Alles ist ein Werden.
+  - In diesem Raum fuehle ich mich sicher.
+  - Das Echo meiner Gefuehle.
+  - Im Spiegel des anderen.
+  - Praesenz als Geschenk.
+  - Das Wesen der Stille.
+  - Werden heisst Veraenderung.
+  - Raum fuer Neues schaffen.
+  - Ein Echo in der Ferne.
+  - Spiegel der Wahrheit.
+  - In voller Praesenz zuhoeren.
+  - Das Wesen ist fluechtig.
+  - Im ewigen Werden.
+  - Raum und Zeit.
+  - Echos vergangener Gespraeche.
+  - Sich im Spiegel erkennen.
+  - Praesenz ueben.
+  - Zum Wesen zurueckkehren.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Die Zahlen sprechen fuer sich.
+  - 'Konkret bedeutet das: drei Aufgaben erledigen.'
+  - Der Termin ist morgen um 10.
+  - Ich brauche die Unterlagen bis Freitag.
+  - Die Kosten betragen 500 Euro.
+  - Das Meeting dauert eine Stunde.
+  - Der Bericht ist fertig.
+  - Wir brauchen mehr Personal.
+  - Die Software hat einen Bug.
+  - Der Lieferant hat sich gemeldet.
+  - Die Produktion laeuft.
+  - Das Budget ist freigegeben.
+  - Ich habe den Vertrag gelesen.
+  - Die Maschine funktioniert wieder.
+  - Der Umsatz ist gestiegen.
+  - Wir muessen die Deadline einhalten.
+  - Das Lager ist voll.
+  - Die Bestellung ist raus.
+  - Der Techniker kommt morgen.
+  - Die Rechnung ist bezahlt.
+  - Das Projekt ist im Zeitplan.
+  - Wir haben genug Materialien.
+  - Der Kunde hat bestellt.
+  - Die Pruefung ist bestanden.
+  - Das System laeuft stabil.
 tags:
 - narion
 - vocab

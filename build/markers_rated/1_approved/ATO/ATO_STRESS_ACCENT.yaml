@@ -13,19 +13,82 @@ detect_class:
   params: {deviation_threshold: 0.3, prominence_factor: 1.5}
 examples:
   positive:
-  - "[Ungewöhnliche Wortbetonung]"
-  - "[Nachdruck auf unerwarteter Silbe]"
-  - "[Emphase durch Betonung]"
-  - "[Störung im Rhythmus]"
-  - "[Markierte Prosodie]"
+  - (Ungewöhnliche Wortbetonung erkannt)
+  - (Nachdruck auf unerwarteter Silbe)
+  - (Emphase durch Betonung)
+  - (Störung im Rhythmus durch Akzent)
+  - (Markierte Prosodie auf Schlüsselwort)
+  - (Betonung weicht von Norm ab)
+  - (Stress-Akzent auf Funktionswort)
+  - (Unerwartete Prominenz einer Silbe)
+  - (Rhythmusbruch durch Betonungsfehler)
+  - (Emphase auf normalerweise unbetontem Wort)
+  - (Akzentverschiebung bei emotionalem Wort)
+  - (Betonung auf falscher Silbe, emotional bedingt)
+  - (Stress-Pattern abweichend von Baseline)
+  - (Hervorhebung durch ungewöhnlichen Akzent)
+  - (Prosodischer Akzent auf Nebenwort)
+  - (Betonung signalisiert innere Anspannung)
+  - (Ungewöhnlicher Nachdruck auf Pronomen)
+  - (Akzentmuster untypisch für den Sprecher)
+  - (Stress auf Partikel statt Verb)
+  - (Emphase durch verdoppelten Akzent)
+  - (Rhythmusstörung durch Betonungswechsel)
+  - (Akzent auf Artikel statt Nomen)
+  - (Prosodische Deviation beim Kernwort)
+  - (Unerwartete Betonung am Satzende)
+  - (Stress-Akzent mitten im Wort verschoben)
+  - (Emphase durch verlangsamte Betonung)
+  - (Akzentverschiebung bei Verneinung)
+  - (Ungewöhnliche Hervorhebung eines Adjektivs)
+  - (Stress auf Konjunktion auffällig)
+  - (Betonung weicht von Sprecher-Baseline ab)
+  - (Akzent auf normalerweise stummem Wort)
+  - (Prosodische Markierung eines Schlüsselbegriffs)
+  - (Stress-Pattern zeigt emotionale Ladung)
+  - (Emphase durch Akzentdoppelung)
+  - (Rhythmusabweichung durch Stress-Shift)
+  - (Unerwarteter Akzent auf Hilfsverb)
+  - (Betonung signalisiert Widerspruch)
+  - (Akzentverschiebung bei Frage)
+  - (Stress auf Adverb statt Verb)
+  - (Emphase durch prosodische Hervorhebung)
+  - (Ungewöhnliche Betonung in der Mitte des Satzes)
+  - (Akzentmuster zeigt Unsicherheit)
+  - (Stress auf unbetonter Silbe)
+  - (Emphase durch Tonhöhenwechsel mit Akzent)
+  - (Rhythmusstörung bei emotionalem Inhalt)
+  - (Betonung auf Präposition auffällig)
+  - (Akzent verschoben bei persönlichem Thema)
+  - (Stress-Pattern inkonsistent)
+  - (Emphase auf Wort mit normalerweise flachem Akzent)
+  - (Prosodische Auffälligkeit bei Kernaussage)
   negative:
-  - Ich denke, wir sollten das sachlich betrachten.
-  - Mir geht es gut, danke der Nachfrage.
-  - Das ist ein interessanter Gedanke.
-  - Ich bin gerade entspannt.
-  - Alles in Ordnung bei mir.
-  - Ich fuehle mich heute ruhig und gelassen.
-  - Das ueberrascht mich, aber es ist okay.
+  - Spricht mit normaler, gleichmäßiger Betonung.
+  - Kein auffälliger Akzent erkennbar.
+  - Standard-Intonation ohne Abweichungen.
+  - Betonung folgt natürlichem Sprachrhythmus.
+  - Keine ungewöhnlichen prosodischen Muster.
+  - Monotone, aber korrekte Betonung.
+  - Natürlicher Satzakzent, nichts Auffälliges.
+  - Standardmäßige Wortbetonung durchgehend.
+  - Keine Akzentverschiebungen erkannt.
+  - Prosodie im Normbereich.
+  - Unauffällige Sprechmelodie.
+  - Betonung entspricht der Erwartung.
+  - Kein Stress-Shift erkennbar.
+  - Gleichmäßiger Sprechrhythmus.
+  - Normale Intonation, kein Emphase-Signal.
+  - Standardmäßige Akzentmuster.
+  - Keine prosodischen Auffälligkeiten.
+  - Betonung korrekt und unauffällig.
+  - Sprechrhythmus ohne Brüche.
+  - Normale Prosodie, keine Markierungen.
+  - Gleichförmige Betonung über den Satz.
+  - Kein ungewöhnlicher Nachdruck.
+  - Prosodie passt zum Inhalt.
+  - Standardbetonung, alles normal.
+  - Keine emotionalen Akzentverschiebungen.
 tags: [stress, audio, atomic]
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}

@@ -15,19 +15,82 @@ patterns:
   value: "(kann|können wir) (jetzt |gerade )?nicht (über|darüber) .+ (reden|sprechen)"
 examples:
   positive:
-  - Ich kann jetzt nicht über schwere Sachen reden, lass uns einfach den Abend genießen
-  - Du weißt, ich bin nicht gut mit Emotionen über Text, können wir das aufheben?
-  - Ich hatte so einen langen Tag, vielleicht können wir darüber reden, wenn ich besser drauf bin
-  - Das ist zu kompliziert für heute, lass uns das später besprechen
-  - Können wir nicht einen besseren Zeitpunkt dafür finden?
+  - Ich kann jetzt nicht ueber schwere Sachen reden, lass uns einfach den Abend geniessen.
+  - Du weisst, ich bin nicht gut mit Emotionen ueber Text, koennen wir das aufheben?
+  - Koennen wir bitte nicht jetzt darueber sprechen?
+  - Ich kann gerade nicht ueber meine Gefuehle reden.
+  - Lass uns das nicht jetzt besprechen, ich bin muede.
+  - Wir koennen jetzt nicht ueber das Thema reden, es ist zu spaet.
+  - Koennen wir nicht darueber diskutieren, wenn wir uns sehen?
+  - Ich kann jetzt nicht ueber die Trennung reden.
+  - Bitte, koennen wir gerade nicht darueber sprechen.
+  - Ich kann nicht ueber sowas am Telefon reden.
+  - Koennen wir das jetzt nicht besprechen?
+  - Ich will gerade nicht darueber reden, okay?
+  - Wir koennen jetzt nicht ueber Geld sprechen.
+  - Lass uns nicht jetzt darueber reden, bitte.
+  - Ich kann nicht ueber unsere Beziehung reden, wenn ich gestresst bin.
+  - Koennen wir gerade nicht ueber die Kinder sprechen?
+  - Ich kann jetzt nicht ueber die Arbeit reden.
+  - Bitte nicht jetzt darueber, ich bin nicht in der Stimmung.
+  - Wir koennen das nicht jetzt besprechen, ich muss los.
+  - Ich will nicht gerade ueber den Streit reden.
+  - Koennen wir nicht darueber sprechen, wenn ich mich beruhigt habe?
+  - Ich kann nicht ueber sowas auf WhatsApp reden.
+  - Lass uns das nicht jetzt anfangen.
+  - Koennen wir jetzt nicht darueber diskutieren?
+  - Ich bin nicht in der Lage, gerade darueber zu reden.
+  - Das ist mir jetzt zu schwer, koennen wir das lassen?
+  - Nicht jetzt, ich kann gerade nicht ueber sowas reden.
+  - Koennen wir bitte nicht jetzt ueber die Hochzeit sprechen?
+  - Ich kann gerade nicht darueber nachdenken, geschweige denn reden.
+  - Lass uns spaeter darueber reden, jetzt ist kein guter Zeitpunkt.
+  - Koennen wir nicht ueber schwierige Themen reden, wenn wir uns sehen?
+  - Ich bin zu muede, um jetzt darueber zu sprechen.
+  - Bitte nicht gerade jetzt, das ist mir zu emotional.
+  - Wir koennen gerade nicht darueber diskutieren.
+  - Ich moechte jetzt nicht ueber unsere Probleme reden.
+  - Koennen wir das nicht verschieben?
+  - Ich kann nicht darueber reden, wenn die Kinder da sind.
+  - Lass uns das auf morgen vertagen.
+  - Ich will jetzt nicht ueber Gefuehle sprechen.
+  - Koennen wir gerade nicht ueber den Umzug sprechen?
+  - Das Thema ist mir gerade zu belastend.
+  - Ich brauche Abstand davon, reden wir spaeter.
+  - Nicht jetzt, ich habe gerade keine Kraft fuer dieses Thema.
+  - Koennen wir das besprechen, wenn es uns beiden besser geht?
+  - Ich moechte das Thema gerade nicht anschneiden.
+  - Das ist mir zu heikel fuer eine Textnachricht.
+  - Lass uns das aufschieben, bis wir ruhiger sind.
+  - Ich kann das gerade nicht verarbeiten.
+  - Koennen wir das auf ein persoenliches Gespraech verschieben?
+  - Nicht am Telefon, das ist zu wichtig.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Lass uns in Ruhe darueber reden, ich bin bereit.
+  - Ich moechte jetzt gerne ueber unsere Situation sprechen.
+  - Erzaehl mir, was dich beschaeftigt.
+  - Ich bin offen fuer das Gespraech, wann immer du willst.
+  - Lass uns das jetzt klaeren.
+  - Ich hoere dir zu, rede einfach.
+  - Wir koennen ueber alles sprechen.
+  - Ich bin bereit, das Thema anzugehen.
+  - Sag mir, was dich bewegt.
+  - Ich moechte verstehen, was los ist.
+  - Lass uns das offen besprechen.
+  - Ich bin ganz Ohr.
+  - Was beschaeftigt dich gerade?
+  - Ich moechte darueber reden, wenn du magst.
+  - Wir sollten das jetzt klaeren.
+  - Ich bin da, rede einfach.
+  - Lass uns das gemeinsam durchgehen.
+  - Ich will wissen, wie es dir geht.
+  - Sag mir ehrlich, was du denkst.
+  - Ich bin bereit fuer dieses Gespraech.
+  - Wir koennen offen miteinander reden.
+  - Ich moechte dir zuhoeren.
+  - Lass uns das Thema jetzt angehen.
+  - Ich bin emotional verfuegbar.
+  - Wir reden jetzt, okay?
 tags:
 - attentional
 - gatekeeping

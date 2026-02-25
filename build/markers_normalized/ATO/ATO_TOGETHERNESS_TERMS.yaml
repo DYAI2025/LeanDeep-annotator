@@ -37,24 +37,82 @@ patterns:
   value: "(?i)\\bour (?:rules|way)\\b"
 examples:
   positive:
-  - Let's do this together.
-  - We both know this routine by heart.
-  - As a team, nothing can stop us.
-  - Our playlist needs a new anthem.
-  - We’re simply a great team.
-  - Together we’re strong.
-  - We’ve got this in the bag.
-  - Let’s tackle it as a unit.
-  - Our weekend itinerary looks epic.
-  - We’ll split the tasks and conquer.
+  - Lass uns das zusammen machen.
+  - Wir beide wissen, wie das läuft.
+  - Als Team sind wir unschlagbar.
+  - Unsere Playlist braucht ein neues Lied.
+  - Wir sind einfach ein tolles Team.
+  - Zusammen sind wir stark.
+  - Wir schaffen das gemeinsam.
+  - Lass uns das als Einheit angehen.
+  - Unser Wochenendplan steht.
+  - Wir teilen die Aufgaben und erobern.
+  - Gemeinsam geht alles besser.
+  - Wir beide haben das drauf.
+  - Als Team können wir alles schaffen.
+  - Unsere Routine funktioniert.
+  - Zusammen durch dick und dünn.
+  - Lass uns das als Team lösen.
+  - Wir sind ein eingespieltes Duo.
+  - Unser Projekt nimmt Form an.
+  - Wir schaffen das, wir zwei.
+  - Gemeinsam sind wir stärker als allein.
+  - Lass uns zusammen kochen.
+  - Wir beide sehen das gleich.
+  - Als Team rocken wir das.
+  - Unsere Traditionen sind mir wichtig.
+  - Zusammen ist es schöner.
+  - Lass uns das gemeinsam planen.
+  - Wir sind füreinander da.
+  - Unser gemeinsamer Weg.
+  - Wir packen das an, gemeinsam.
+  - Zusammen lachen, zusammen weinen.
+  - Lass uns das zusammen entscheiden.
+  - Wir beide schaffen das.
+  - Als Team unbesiegbar.
+  - Unser Vibe stimmt einfach.
+  - Zusammen ist alles leichter.
+  - Lass uns das als Paar angehen.
+  - Wir sind eine Einheit.
+  - Unser gemeinsames Ziel.
+  - Wir halten zusammen.
+  - Gemeinsam bis zum Schluss.
+  - Lass uns zusammen wachsen.
+  - Wir beide gegen den Rest.
+  - Als Team gibt es keine Hindernisse.
+  - Unsere gemeinsame Geschichte.
+  - Zusammen durch jede Krise.
+  - Lass uns das gemeinsam stemmen.
+  - Wir sind zusammen stärker.
+  - Unser Ding, unser Weg.
+  - Wir schaffen das, wenn wir zusammenhalten.
+  - Gemeinsam neue Wege gehen.
   negative:
-  - As a team, not much can stop us.
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
+  - Ich mache das alleine.
+  - Jeder für sich.
+  - Ich brauche Zeit für mich.
+  - Das ist mein Ding, nicht unseres.
+  - Ich gehe meinen eigenen Weg.
+  - Einzeln sind wir auch gut.
+  - Ich handle unabhängig.
+  - Das mache ich solo.
+  - Jeder hat seine eigene Aufgabe.
+  - Ich brauche meinen Freiraum.
+  - Getrennt voneinander arbeiten wir besser.
+  - Ich mache das auf meine Art.
+  - Jeder kümmert sich um seinen Teil.
+  - Ich bin lieber allein dabei.
+  - Unabhängig voneinander.
+  - Ich brauche Abstand.
+  - Das erledige ich selbst.
+  - Jeder geht seinen Weg.
+  - Ich mache das eigenständig.
+  - Allein bin ich effektiver.
+  - Getrennte Wege, getrennte Aufgaben.
+  - Ich handle eigenverantwortlich.
+  - Jeder für sich ist manchmal besser.
+  - Ich brauche meinen Raum.
+  - Solo unterwegs heute.
 tags:
 - atomic
 - bonding

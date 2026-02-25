@@ -18,23 +18,81 @@ patterns:
 examples:
   positive:
   - Ich habe den Preis gewonnen.
-  - Top‑Uni, beste Noten.
+  - Top-Uni, beste Noten.
   - Wir sind Marktführer.
   - Nr. 1 in der Kategorie.
   - Auszeichnung für Exzellenz erhalten.
-  - Top‑Unternehmen im Portfolio.
+  - Top-Unternehmen im Portfolio.
   - Beste Noten im Abschluss.
   - Prämiert als Team des Jahres.
   - Wir führen den Markt an.
-  - Award gewonnen – stolz darauf.
+  - Award gewonnen, stolz darauf.
+  - Ich war an einer Top-Universität.
+  - Marktführer seit drei Jahren.
+  - Auszeichnungen in allen Kategorien.
+  - Die besten Noten meines Jahrgangs.
+  - Nr. 1 im Ranking.
+  - Top Unternehmen, Weltklasse-Team.
+  - Preise gewonnen bei jedem Wettbewerb.
+  - Die beste Bewertung aller Zeiten.
+  - Marktführer in DACH.
+  - Auszeichnung vom Branchenverband.
+  - Top Uni und Prädikatsexamen.
+  - Nr. 1 im App Store.
+  - Wir haben den Innovationspreis gewonnen.
+  - Beste Noten im gesamten Studiengang.
+  - Top-Unternehmen laut Handelsblatt.
+  - Marktführer, und das schon seit Jahren.
+  - Auszeichnung als Employer of the Year.
+  - Die besten Zahlen der Branche.
+  - Nr. 1 in der Kundenzufriedenheit.
+  - Preise gewonnen, Anerkennung bekommen.
+  - Top Universität, erstklassige Ausbildung.
+  - Wir sind die Besten am Markt.
+  - Auszeichnungen für unsere Arbeit.
+  - Beste Noten, beste Referenzen.
+  - Marktführerschaft ist unser Anspruch.
+  - Nr. 1, das zeigen die Daten.
+  - Top-Unternehmen mit Top-Leuten.
+  - Preis für beste Innovation.
+  - Wir haben die Auszeichnung verdient.
+  - Beste Bewertungen von Kunden.
+  - Marktführer in unserem Segment.
+  - Nr. 1 in der Region.
+  - Auszeichnung für Nachhaltigkeit erhalten.
+  - Top Uni, Summa cum laude.
+  - Wir sind preisgekrönt.
+  - Die besten Ergebnisse seit Firmengründung.
+  - Nr. 1 bei Trustpilot.
+  - Top-Unternehmen mit Vision.
+  - Preise gewonnen, die andere nur träumen.
+  - Marktführer, unangefochten.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Wir sind ein normales Unternehmen.
+  - Keine besonderen Auszeichnungen bisher.
+  - Wir sind irgendwo im Mittelfeld.
+  - Solide Arbeit, nichts Spektakuläres.
+  - Durchschnittliche Leistung, aber konstant.
+  - Wir haben noch Luft nach oben.
+  - Keine Preise, aber zufriedene Kunden.
+  - Wir sind nicht die Größten.
+  - Ganz okay, nicht überragend.
+  - Wir arbeiten im Stillen.
+  - Keine Rankings, die uns auszeichnen.
+  - Bodenständig und pragmatisch.
+  - Wir machen unsere Arbeit, ohne Tamtam.
+  - Kein Prestige, aber Substanz.
+  - Wir sind klein, aber fein.
+  - Nicht die Besten, aber engagiert.
+  - Durchschnittlich, würde ich sagen.
+  - Keine Titel, keine Awards.
+  - Wir stehen nicht im Rampenlicht.
+  - Solide Basis, kein Glamour.
+  - Wir sind ein ganz normales Team.
+  - Ohne besondere Auszeichnungen.
+  - Wir messen uns nicht an Rankings.
+  - Bescheiden und fleißig.
+  - Kein Marktführer, aber wir wachsen.
 tags:
 - status
 - prestige

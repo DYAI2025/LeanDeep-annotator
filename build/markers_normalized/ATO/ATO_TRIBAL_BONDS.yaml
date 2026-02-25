@@ -15,21 +15,82 @@ patterns:
   value: "\\b(stamm|clan|tradition|ritual|aberglaube|magie|ahnenkult|zugehörigkeit)\\b"
 examples:
   positive:
-  - unser Stamm
-  - alte Traditionen
-  - magische Verbindung
-  - Clandenken
-  - Ahnenwissen
-  - Audio-Tokens (Discrete Units)
-  - Z48, Z102, Z9...
+  - Unser Stamm haelt zusammen.
+  - Alte Traditionen muessen bewahrt werden.
+  - Eine magische Verbindung zwischen uns.
+  - Clandenken praegt unsere Familie.
+  - Ahnenwissen wird weitergegeben.
+  - In unserem Stamm ist das so ueblich.
+  - Die Tradition verlangt es von uns.
+  - Rituale halten die Gemeinschaft zusammen.
+  - Aberglaube oder nicht, wir halten daran fest.
+  - Unsere Zugehoerigkeit ist tief verwurzelt.
+  - Der Clan erwartet Loyalitaet.
+  - Tradition geht ueber alles.
+  - Das Ritual ist Teil unserer Identitaet.
+  - Magische Verbindungen spuere ich in der Familie.
+  - Stammestraditionen praegen unser Leben.
+  - Ahnenkult gibt uns Halt.
+  - Die Zugehoerigkeit zum Clan definiert mich.
+  - Wir leben nach alten Ritualen.
+  - Die Tradition ist staerker als alles andere.
+  - Unser Stammesdenken bestimmt die Regeln.
+  - Magie verbindet uns ueber Generationen.
+  - Die Clanzugehoerigkeit ist unverhandelbar.
+  - Tradition ist unsere Identitaet.
+  - Rituale geben Struktur und Sicherheit.
+  - Aberglaube hat in unserer Familie seinen Platz.
+  - Die Ahnen wachen ueber uns.
+  - Stammesregeln gelten fuer alle.
+  - Die magische Kraft der Tradition.
+  - Clan-Treffen sind heilig.
+  - Unsere Traditionen sind uralt.
+  - Rituale markieren die wichtigen Momente.
+  - Zugehoerigkeit ist das Hoechste.
+  - Der Stamm schuetzt seine Mitglieder.
+  - Ahnenwissen ist kostbar.
+  - Die Clan-Bindung ist unzerbrechlich.
+  - Tradition wird bei uns grossgeschrieben.
+  - Magie ist Teil unserer Kultur.
+  - Rituale verbinden die Generationen.
+  - In unserem Stamm hilft man einander.
+  - Die alten Traditionen leben weiter.
+  - Aberglaube oder Weisheit, wer weiss das schon.
+  - Zugehoerigkeit zum Clan ist Pflicht.
+  - Stammesrituale pregen die Kindheit.
+  - Magische Traditionen werden weitergegeben.
+  - Der Clan ist die Familie.
+  - Tradition schafft Bindung.
+  - Rituale sind unser Anker.
+  - Ahnenkult gehoert zu uns.
+  - Die Zugehoerigkeit gibt mir Kraft.
+  - Im Stamm ist niemand allein.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich bin ein individueller Mensch.
+  - Jeder entscheidet fuer sich selbst.
+  - Tradition ist mir nicht so wichtig.
+  - Ich denke unabhaengig.
+  - Gruppendenken liegt mir nicht.
+  - Ich folge meinem eigenen Weg.
+  - Rituale interessieren mich nicht besonders.
+  - Ich bin nicht aberglaeuisch.
+  - Zugehoerigkeit hin oder her, ich bleibe bei meiner Meinung.
+  - Ich definiere mich nicht ueber eine Gruppe.
+  - Tradition ist keine Entschuldigung.
+  - Ich hinterfrage alles.
+  - Clan-Denken finde ich einschraenkend.
+  - Ich mache mein eigenes Ding.
+  - Magie gibt es nicht.
+  - Ich brauche keine Gruppe, um mich sicher zu fuehlen.
+  - Rituale sind mir egal.
+  - Ich denke rational und unabhaengig.
+  - Zugehoerigkeit ist mir nicht so wichtig.
+  - Ich gehe meinen eigenen Weg, ohne Stamm.
+  - Tradition kann man auch hinterfragen.
+  - Ich bin kein Gruppentier.
+  - Aberglaube hat keinen Platz in meinem Leben.
+  - Ich definiere mich selbst, nicht durch andere.
+  - Unabhaengigkeit ist mir wichtiger als Zugehoerigkeit.
 tags: []
 rating: 2
 semiotic:

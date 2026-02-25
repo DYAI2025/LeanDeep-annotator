@@ -13,11 +13,56 @@ detect_class:
   params: {modulation_freq_hz: [4, 8], modulation_depth_min: 0.15}
 examples:
   positive:
-  - "[Stimmzittern erkannt]"
-  - "[Emotionale Bewegung in der Stimme]"
-  - "[Vibrato in der Sprechstimme]"
-  - "[Unsichere Stimmführung]"
-  - "[Tremolo bei intensiver Emotion]"
+  - '[Stimmzittern erkannt]'
+  - '[Emotionale Bewegung in der Stimme]'
+  - '[Vibrato in der Sprechstimme]'
+  - '[Unsichere Stimmfuehrung]'
+  - '[Tremolo bei intensiver Emotion]'
+  - '[Stimme zittert hoerbar]'
+  - '[Emotionales Beben in der Stimme]'
+  - '[Brueche in der Stimmfuehrung]'
+  - '[Stockende, zitternde Stimme]'
+  - '[Stimmliche Unsicherheit spuerbar]'
+  - '[Vibrato verstaerkt sich bei diesem Thema]'
+  - '[Emotionale Stimmschwankung]'
+  - '[Zittern in der Stimme bei Erwaehnung des Themas]'
+  - '[Tremolo-Effekt beim Sprechen]'
+  - '[Stimme wird bruchig]'
+  - '[Deutliches Stimmzittern]'
+  - '[Emotionale Modulation in der Stimme]'
+  - '[Vibrato bei leiser Stimme]'
+  - '[Unsichere Tonlage]'
+  - '[Stimme bricht fast]'
+  - '[Hoerbares Zittern bei emotionalen Inhalten]'
+  - '[Tremolo verstaerkt sich]'
+  - '[Stimmfuehrung wird instabil]'
+  - '[Emotionales Vibrato]'
+  - '[Bruchige Stimme bei schwierigem Thema]'
+  - '[Stimme zittert beim Erinnern]'
+  - '[Wahrnehmbare Stimmunsicherheit]'
+  - '[Stimmtremolo bei Trauer]'
+  - '[Vibrato deutet auf Nervositaet]'
+  - '[Stimme wird zitternd]'
+  - '[Emotionale Stimme mit Tremolo-Effekt]'
+  - '[Stimmzittern bei Konfrontation]'
+  - '[Bruchige, unsichere Stimmfuehrung]'
+  - '[Vibrato im Redefluss]'
+  - '[Stimme zittert leicht]'
+  - '[Emotionale Instabilitaet in der Stimme]'
+  - '[Tremolo bei erhoehter Aufregung]'
+  - '[Stimmbeben waehrend der Aeusserung]'
+  - '[Zittern im Stimmansatz]'
+  - '[Emotionale Schwingung in der Stimme]'
+  - '[Vibrato bei Erinnerung an Vergangenes]'
+  - '[Stimme wird fragil]'
+  - '[Tremolo bei Angst]'
+  - '[Stimme zittert vor Wut]'
+  - '[Bruchige Stimme vor Ruehrung]'
+  - '[Stimmzittern bei Unsicherheit]'
+  - '[Vibrato bei innerer Anspannung]'
+  - '[Emotionale Stimmschwingung hoerbar]'
+  - '[Tremolo deutet auf tiefe Betroffenheit]'
+  - '[Stimme zittert unkontrolliert]'
   negative:
   - Ich denke, wir sollten das sachlich betrachten.
   - Mir geht es gut, danke der Nachfrage.
@@ -26,6 +71,24 @@ examples:
   - Alles in Ordnung bei mir.
   - Ich fuehle mich heute ruhig und gelassen.
   - Das ueberrascht mich, aber es ist okay.
+  - '[Klare, stabile Stimmfuehrung]'
+  - '[Ruhige und gleichmaessige Stimme]'
+  - '[Fester Tonfall]'
+  - '[Kontrollierte Stimme]'
+  - '[Gleichmaessige Lautstaerke und Tonhoehe]'
+  - Die Praesentation lief gut.
+  - Ich bin zufrieden mit dem Ergebnis.
+  - '[Selbstsichere Stimmfuehrung]'
+  - '[Kein Zittern erkennbar]'
+  - Erzaehl mir mehr darueber.
+  - Das klingt nachvollziehbar.
+  - '[Warme, ruhige Stimme]'
+  - Ich hoere dir aufmerksam zu.
+  - '[Stabile Intonation]'
+  - Wir finden eine Loesung.
+  - '[Klarer, fester Stimmansatz]'
+  - Das verstehe ich.
+  - '[Gleichmaessiger Redefluss]'
 tags: [emotion, audio, atomic]
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}

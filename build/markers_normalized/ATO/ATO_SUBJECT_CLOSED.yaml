@@ -23,14 +23,76 @@ examples:
   - Lassen wir das so.
   - Haken dran.
   - So viel dazu.
+  - Das Thema ist durch.
+  - Alles gesagt, alles klar.
+  - Haken dran, nächstes Thema.
+  - Passt für mich, fertig.
+  - Lassen wir das so stehen.
+  - So viel dazu, weiter geht's.
+  - Für mich ist das erledigt.
+  - Thema erledigt, danke.
+  - Alles gesagt, was zu sagen war.
+  - Haken dran, können wir weitermachen.
+  - Passt für mich, abgehakt.
+  - Lassen wir das so, ich bin zufrieden.
+  - So viel dazu, Punkt.
+  - Thema erledigt, kein Bedarf mehr.
+  - Für mich ist alles gesagt dazu.
+  - Haken dran, Ende der Diskussion.
+  - Passt für mich, lassen wir es.
+  - So viel dazu, das reicht.
+  - Alles gesagt, ich bin durch.
+  - Thema erledigt, abhaken.
+  - Haken dran, ab zum nächsten.
+  - Passt für mich, war's das.
+  - Lassen wir das so, einverstanden.
+  - So viel dazu, mehr gibt es nicht zu sagen.
+  - Für mich ist das abgeschlossen.
+  - Thema erledigt, fertig besprochen.
+  - Alles gesagt, von meiner Seite.
+  - Haken dran, kein Gesprächsbedarf mehr.
+  - Passt für mich, danke fürs Klären.
+  - Lassen wir das so, das passt.
+  - So viel dazu, ich habe fertig.
+  - Thema erledigt, können wir loslassen.
+  - Für mich ist das durch.
+  - Haken dran, erledigt.
+  - Passt für mich, ich bin zufrieden damit.
+  - Alles gesagt, alles getan.
+  - So viel dazu, und jetzt vorwärts.
+  - Thema erledigt, Deckel drauf.
+  - Haken dran, nicht mehr drüber reden.
+  - Passt für mich, wir sind uns einig.
+  - Lassen wir das so, alles gut.
+  - So viel dazu, ab ins Archiv.
+  - Für mich ist alles gesagt und erledigt.
+  - Thema erledigt, endgültig.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich möchte nochmal darauf zurückkommen.
+  - Das Thema ist noch nicht abgeschlossen.
+  - Wir sollten das nochmal besprechen.
+  - Da gibt es noch offene Fragen.
+  - Ich bin noch nicht fertig damit.
+  - Können wir nochmal darüber reden?
+  - Das ist noch nicht ausdiskutiert.
+  - Ich habe noch Gesprächsbedarf.
+  - Das Thema braucht mehr Aufmerksamkeit.
+  - Wir haben das noch nicht geklärt.
+  - Ich möchte nochmal nachhaken.
+  - Das ist mir noch nicht klar genug.
+  - Können wir das vertiefen?
+  - Es gibt noch ungeklärte Punkte.
+  - Ich finde, wir sollten weiterdiskutieren.
+  - Das ist noch offen.
+  - Ich brauche noch mehr Information.
+  - Können wir das Thema nochmal aufgreifen?
+  - Da fehlt mir noch etwas.
+  - Wir haben das nur angerissen.
+  - Ich möchte noch tiefer gehen.
+  - Das Thema verdient mehr Zeit.
+  - Wir sind noch nicht am Ende.
+  - Ich habe noch Fragen dazu.
+  - Das ist noch work in progress.
 tags:
 - closure
 - interaction

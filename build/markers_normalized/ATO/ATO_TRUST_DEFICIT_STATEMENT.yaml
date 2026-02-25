@@ -31,19 +31,80 @@ examples:
   positive:
   - Mein Misstrauen kommt nicht aus dem Nichts.
   - Ich brauche Beweise, sonst glaube ich das nicht.
-  - Ich fühle mich absichtlich im Unklaren gelassen.
+  - Ich fuehle mich absichtlich im Unklaren gelassen.
   - Du verheimlichst mir Dinge.
   - Es wirkt, als verschweigst du mir etwas.
   - Warum werde ich nicht einbezogen?
   - Mir fehlt die Sicherheit, dass du ehrlich bist.
+  - Ich misstraue deinen Absichten.
+  - Du laesst mich bewusst im Unklaren.
+  - Hinter meinem Ruecken ist irgendetwas passiert.
+  - Ich glaube dir nicht mehr ohne Beweis.
+  - Du verheimlichst mir etwas Wichtiges.
+  - Mein Misstrauen waechst mit jedem Schweigen.
+  - Ich fuehle mich im Unklaren gelassen.
+  - Vieles verschweigst du mir.
+  - Ich werde nicht einbezogen in Entscheidungen.
+  - Beweis mir, dass das stimmt.
+  - Ich misstraue dir, und das hat Gruende.
+  - Du hast hinter meinem Ruecken gehandelt.
+  - Verheimlichen ist fuer mich ein Vertrauensbruch.
+  - Ich fuehle Misstrauen, wenn du ausweichst.
+  - Etwas verschweigst du, ich spuere das.
+  - Ich brauche Transparenz, keine Geheimnisse.
+  - Du laesst mich absichtlich im Dunkeln.
+  - Mein Vertrauen ist erschuettert.
+  - Ich glaube nicht, dass du ehrlich warst.
+  - Es fuehlt sich an, als ob du etwas verbirgst.
+  - Ich misstraue der Situation.
+  - Du hast mich nicht einbezogen.
+  - Beweise deine Ehrlichkeit.
+  - Ich fuehle mich belogen.
+  - Im Unklaren zu sein macht mich nervoes.
+  - Vieles bleibt verschwiegen zwischen uns.
+  - Hinter meinem Ruecken passieren Dinge.
+  - Mein Misstrauen hat gute Gruende.
+  - Du verheimlichst mehr, als du zugibst.
+  - Ich frage mich, was du noch verschweigst.
+  - Beweise sind das Einzige, was mich beruhigt.
+  - Ich fuehle mich bewusst ausgeschlossen.
+  - Du bist nicht transparent mit mir.
+  - Ich misstraue deinen Worten.
+  - Absichtlich im Unklaren gehalten, so fuehlt es sich an.
+  - Warum verschweigst du mir das?
+  - Mein Misstrauen ist berechtigt.
+  - Ich brauche Beweise, nicht Worte.
+  - Du verheimlichst mir die Wahrheit.
+  - Hinter meinem Ruecken laufen Dinge.
+  - Ich werde bewusst aussen vor gelassen.
+  - Mein Misstrauen ist groesser als mein Vertrauen.
+  - Du bist nicht ehrlich zu mir.
   negative:
-  - ich wuensche mir Beweise, sonst glaube ich das nicht.
-  - Kannst du mir das Salz reichen?
-  - Der Termin ist um 14 Uhr.
-  - Ich war gestern einkaufen.
-  - Das Wetter soll morgen besser werden.
-  - Hast du die E-Mail gelesen?
-  - Ich muss noch tanken.
+  - Ich vertraue dir voll und ganz.
+  - Du bist ehrlich zu mir, das weiss ich.
+  - Ich glaube dir.
+  - Transparenz ist deine Staerke.
+  - Ich fuehle mich einbezogen.
+  - Du hast nichts zu verbergen.
+  - Ich vertraue deinen Absichten.
+  - Du bist offen mit mir.
+  - Mein Vertrauen in dich ist unerschuetterlich.
+  - Du verschweigst mir nichts.
+  - Ich weiss, dass du ehrlich bist.
+  - Du beziehst mich immer mit ein.
+  - Ich habe keinen Grund zu misstrauen.
+  - Du bist transparent in allem.
+  - Vertrauen ist das Fundament zwischen uns.
+  - Du bist ein offener Mensch.
+  - Ich glaube an deine guten Absichten.
+  - Du sagst mir immer die Wahrheit.
+  - Mein Vertrauen in dich ist gross.
+  - Du haeltst mich auf dem Laufenden.
+  - Ich fuehle mich sicher bei dir.
+  - Du verbirgst nichts vor mir.
+  - Ehrlichkeit ist zwischen uns selbstverstaendlich.
+  - Ich vertraue deinem Wort.
+  - Du bist mein sicherer Hafen.
 tags:
 - trust
 - insecurity

@@ -20,21 +20,89 @@ markers:
   score: 0.25
   metadata: {type: ATO}
   examples:
-  - "Ich bin immer pünktlich."
-  - "Ich war nie dort."
-  - "Er macht das ständig."
-  - "Jedes Mal passiert das."
-  - "Nie habe ich dem zugestimmt."
+  - Ich bin immer pünktlich.
+  - Ich war nie dort.
+  - Er macht das ständig.
+  - Jedes Mal passiert das.
+  - Nie habe ich dem zugestimmt.
 examples:
-  positive: []
+  positive:
+  - Ich bin immer pünktlich.
+  - Ich war nie dort.
+  - Er macht das ständig.
+  - Jedes Mal passiert das.
+  - Nie habe ich dem zugestimmt.
+  - Immer muss ich alles alleine machen.
+  - Nie hörst du zu.
+  - Ständig vergisst du das.
+  - Jedes Mal ist es dasselbe.
+  - Immer bin ich der Letzte.
+  - Nie nimmst du mich ernst.
+  - Ständig wechselst du das Thema.
+  - Jedes Mal muss ich nachfragen.
+  - Immer reagierst du so.
+  - Nie sagst du Danke.
+  - Ständig bist du abgelenkt.
+  - Jedes Mal kommt eine Ausrede.
+  - Immer muss ich den Anfang machen.
+  - Nie ist genug für dich.
+  - Ständig machst du Fehler.
+  - Jedes Mal ist es mein Problem.
+  - Immer habe ich recht gehabt.
+  - Nie klappt das mit uns.
+  - Ständig streitest du.
+  - Jedes Mal endet es so.
+  - Immer soll ich nachgeben.
+  - Nie zeigst du Verständnis.
+  - Ständig redest du dagegen.
+  - Jedes Mal wird es schlimmer.
+  - Immer kommt was dazwischen.
+  - Nie bist du pünktlich.
+  - Ständig beschwerst du dich.
+  - Jedes Mal bin ich enttäuscht.
+  - Immer muss ich warten.
+  - Nie hilfst du von alleine.
+  - Ständig bist du müde.
+  - Jedes Mal sage ich dasselbe.
+  - Immer am Ende bin ich schuld.
+  - Nie stimmst du mir zu.
+  - Ständig planst du um.
+  - Jedes Mal ist Drama.
+  - Immer dasselbe Spiel.
+  - Nie lernst du dazu.
+  - Ständig muss ich mich erklären.
+  - Jedes Mal das gleiche Muster.
+  - Immer die gleiche Leier.
+  - Nie änderst du dich.
+  - Ständig gibt es Probleme.
+  - Jedes Mal eine Enttäuschung.
+  - Immer, immer, immer.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Manchmal bin ich pünktlich.
+  - Selten war ich dort.
+  - Er macht das gelegentlich.
+  - Ab und zu passiert das.
+  - Einige Male habe ich nicht zugestimmt.
+  - Meistens mache ich das alleine.
+  - Hin und wieder hörst du nicht zu.
+  - Gelegentlich vergisst du das.
+  - Einige Male war es so.
+  - Oft bin ich der Letzte.
+  - In letzter Zeit nimmst du mich nicht ernst.
+  - Zweimal hast du das Thema gewechselt.
+  - Manchmal muss ich nachfragen.
+  - In der Regel reagierst du so.
+  - Selten sagst du Danke.
+  - Häufig bist du abgelenkt.
+  - Einige Male kam eine Ausrede.
+  - Oft mache ich den Anfang.
+  - Meistens ist es nicht genug.
+  - Gelegentlich machst du Fehler.
+  - Einige Male war es mein Problem.
+  - Oft hatte ich recht.
+  - Manchmal klappt es nicht.
+  - Hin und wieder streitest du.
+  - Ab und zu endet es so.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
 semiotic: {peirce: symbol, signifikat: Absolutheit/Schwarz-Weiss, framing_type: polarisierung, cultural_frame: '', myth: Es gibt nur Schwarz und Weiss — Differenzierung ist Schwaeche}

@@ -11,24 +11,82 @@ frame:
 pattern: ["(?i)\\b(emoji language|symbol language|pictograms|symbolic language|emoji communication|visual symbols)\\b"]
 examples:
   positive:
-  - "Emoji language can be quite ambiguous sometimes."
-  - "They used a symbol language instead of words."
-  - "Pictograms carry significant cultural meaning here."
-  - "Symbolic language always needs proper context."
-  - "We analyze emoji language separately from text."
-  - "Visual symbols communicate across language barriers."
-  - "Emoji communication has its own grammar rules."
-  - "Symbol language evolved with digital platforms."
-  - "Pictographic elements enhance text meaning."
-  - "Symbolic representation varies between cultures."
+  - Emoji-Sprache kann ziemlich mehrdeutig sein.
+  - Sie haben eine Symbolsprache statt Worte benutzt.
+  - Piktogramme tragen hier eine kulturelle Bedeutung.
+  - Symbolische Sprache braucht immer Kontext.
+  - Wir analysieren Emoji-Sprache separat vom Text.
+  - Visuelle Symbole kommunizieren über Sprachbarrieren hinweg.
+  - Emoji-Kommunikation hat eigene Grammatikregeln.
+  - Symbolsprache hat sich mit digitalen Plattformen entwickelt.
+  - Piktografische Elemente verstärken die Textbedeutung.
+  - Symbolische Darstellung variiert zwischen Kulturen.
+  - Die Emoji-Sprache ist eine eigene Ausdrucksform.
+  - Symbolsprache ersetzt manchmal ganze Sätze.
+  - Piktogramme sind universell verständlich.
+  - Emoji-Kommunikation ist nicht trivial.
+  - Visuelle Symbole sind eine Sprache für sich.
+  - Symbolsprache in Chats wird immer komplexer.
+  - Piktogramme haben eine lange Geschichte.
+  - Emoji-Sprache entwickelt sich ständig weiter.
+  - Symbolische Kommunikation braucht Interpretation.
+  - Visuelle Symbole ergänzen den Text.
+  - Die Emoji-Sprache hat Nuancen, die man lernen muss.
+  - Symbolsprache kann Missverständnisse erzeugen.
+  - Piktogramme sind nicht immer eindeutig.
+  - Emoji-Kommunikation hat kulturelle Unterschiede.
+  - Visuelle Symbole kommunizieren Emotionen direkt.
+  - Symbolsprache ist effizienter als Text manchmal.
+  - Piktogramme ersetzen verbale Ausdrücke.
+  - Emoji-Sprache ist Teil der modernen Kommunikation.
+  - Symbolische Darstellung hat Tiefgang.
+  - Visuelle Symbole sind eine Ergänzung zum Wort.
+  - Die Emoji-Sprache kennt eigene Konventionen.
+  - Symbolsprache braucht Übung zum Verstehen.
+  - Piktogramme vermitteln Stimmungen.
+  - Emoji-Kommunikation ist generationsabhängig.
+  - Visuelle Symbole haben semiotische Kraft.
+  - Symbolsprache ist nonverbal, aber mächtig.
+  - Piktogramme sind ikonisch in ihrer Bedeutung.
+  - Emoji-Sprache kann Ironie transportieren.
+  - Symbolische Kommunikation überbrückt Distanzen.
+  - Visuelle Symbole haben pragmatische Funktion.
+  - Die Emoji-Sprache ist global vernetzt.
+  - Symbolsprache reflektiert soziale Normen.
+  - Piktogramme sind in jeder Kultur präsent.
+  - Emoji-Kommunikation verändert unsere Textkultur.
+  - Visuelle Symbole als Sprachersatz.
+  - Symbolsprache ist älter als Schrift.
+  - Piktogramme sind die neue Lingua franca.
+  - Emoji-Sprache ist Ausdruck und Kunst.
+  - Symbolische Darstellung ist universell.
+  - Visuelle Symbole sind mehr als Dekoration.
   negative:
-  - Symbolic language sometimes needs proper context.
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
+  - Ich schreibe dir eine ausführliche Nachricht.
+  - Worte drücken das besser aus als Bilder.
+  - Ich benutze keine Emojis, nur Text.
+  - Klartext ist mir lieber als Symbole.
+  - Ich formuliere das in ganzen Sätzen.
+  - Schriftliche Kommunikation bevorzuge ich.
+  - Ohne Bilder, nur mit Worten.
+  - Ich drücke mich verbal aus, nicht bildlich.
+  - Text reicht mir, keine Icons nötig.
+  - Ich schreibe lieber als Symbole zu nutzen.
+  - Verbale Kommunikation ist mein Stil.
+  - Keine Piktogramme, nur Sprache.
+  - Ich bevorzuge ausgeschriebene Nachrichten.
+  - Worte sind mein Werkzeug.
+  - Kein Bildersprache, sondern Textsprache.
+  - Ich schreibe alles aus, keine Abkürzungen.
+  - Verbalisieren ist mir wichtiger.
+  - Ohne visuelle Hilfsmittel, nur Sprache.
+  - Text pur, ohne Schnickschnack.
+  - Ich drücke mich schriftlich klar aus.
+  - Keine Emojis in meinen Nachrichten.
+  - Worte über Bilder, immer.
+  - Ich bevorzuge sachliche Textform.
+  - Schrift statt Symbol.
+  - Ausgeschriebene Gedanken, keine Icons.
 tags: [atomic, v3.3, symbols, communication]
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}

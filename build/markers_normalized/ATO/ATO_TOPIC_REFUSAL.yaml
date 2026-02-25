@@ -15,17 +15,82 @@ patterns:
   value: (?i)\b(I don't want to talk about it|let's not go there|I can't remember)\b
 examples:
   positive:
-  - I don't want to talk about that incident.
-  - Let's not go there, it's too painful.
-  - I can't remember the details right now.
-  - Please change the subject, I feel uncomfortable.
-  - I prefer not to discuss my past experiences.
+  - Ich will nicht darueber reden.
+  - Lass uns bitte nicht dahin gehen.
+  - Ich kann mich daran nicht erinnern.
+  - Bitte wechsel das Thema, mir ist unwohl.
+  - Ich moechte nicht ueber meine Vergangenheit sprechen.
+  - Darauf gehe ich nicht ein.
+  - Das Thema ist fuer mich tabu.
+  - Ich rede nicht ueber sowas.
+  - Frag mich bitte nicht danach.
+  - Ich moechte das nicht besprechen.
+  - Lass uns das Thema aussen vor lassen.
+  - Ich kann darueber nicht sprechen.
+  - Das ist zu schmerzhaft, bitte nicht.
+  - Ich verweigere jede Diskussion darueber.
+  - Dieses Thema ist erledigt fuer mich.
+  - Ich will da nicht dran ruehren.
+  - Bitte lass das, ich mag nicht.
+  - Ich bin nicht bereit, darueber zu reden.
+  - Das Thema macht mir zu schaffen, lass es.
+  - Ich will nicht darueber nachdenken.
+  - Frag mich nicht nach Details.
+  - Dieses Gespraech fuehre ich nicht.
+  - Ich will das nicht aufwaermen.
+  - Vergiss es, ich rede nicht drueber.
+  - Nein, darueber spreche ich nicht.
+  - Bitte akzeptiere, dass ich nicht darueber reden will.
+  - Das Kapitel ist geschlossen.
+  - Ich habe kein Beduerfnis, darueber zu reden.
+  - Lass es einfach, okay?
+  - Darueber moechte ich schweigen.
+  - Ich kann und will das nicht besprechen.
+  - Das Thema ist fuer mich abgehakt.
+  - Bitte draeng mich nicht dazu.
+  - Ich weigere mich, da nochmal drueber zu reden.
+  - Das Thema hat sich fuer mich erledigt.
+  - Nein, ich gehe da nicht drauf ein.
+  - Lass mich damit in Ruhe.
+  - Ich rede da nicht drueber, Punkt.
+  - Keine Diskussion ueber dieses Thema.
+  - Ich moechte nicht zurueckblicken.
+  - Das ist mein wunder Punkt, bitte nicht.
+  - Ich bin nicht in der Lage, das zu besprechen.
+  - Das geht zu tief, lass uns aufhoeren.
+  - Ich sage dazu nichts.
+  - Bitte respektiere, dass ich nicht will.
+  - Das Thema ist mir zu sensibel.
+  - Ich moechte da nicht draengen lassen.
+  - Ich rede nicht drueber, und fertig.
+  - Kein Kommentar zu diesem Thema.
+  - Ich habe Gruende, warum ich nicht darueber rede.
   negative:
-  - I want to talk about that incident.
-  - Let's discuss it openly.
-  - I remember the details clearly.
-  - I'm comfortable talking about it.
-  - I can share my past experiences.
+  - Ich moechte offen darueber sprechen.
+  - Lass uns das Thema angehen.
+  - Ich bin bereit, darueber zu reden.
+  - Erzaehl mir mehr davon.
+  - Ich stelle mich dem Gespraech.
+  - Wir sollten das aufarbeiten.
+  - Ich moechte meine Gefuehle teilen.
+  - Lass uns ehrlich miteinander sein.
+  - Ich oeffne mich gerne dafuer.
+  - Das Thema verdient unsere Aufmerksamkeit.
+  - Ich moechte das mit dir besprechen.
+  - Lass uns gemeinsam hinschauen.
+  - Ich will nichts verdraengen.
+  - Wir sollten das Thema nicht meiden.
+  - Ich bin bereit, mich zu stellen.
+  - Lass uns offen sein.
+  - Ich moechte darueber reden, auch wenn es wehtut.
+  - Wir sollten das nicht totschweigen.
+  - Ich oeffne mich fuer dieses Gespraech.
+  - Lass uns mutig sein und reden.
+  - Ich will das klaren.
+  - Das verdient ein ehrliches Gespraech.
+  - Ich stelle mich meinen Gefuehlen.
+  - Wir muessen darueber sprechen.
+  - Ich bin offen und bereit.
 tags:
 - behavioral_pattern
 - atomic

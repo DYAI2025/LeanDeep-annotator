@@ -9,19 +9,82 @@ tags: [narion, structure, pause, atomic]
 activation: {rule: "ELLIPSIS_OR_FRAGMENT: '...' or sentence_length<=3"}
 examples:
   positive:
-  - "..."
-  - "Ich halte."
-  - "Jetzt."
-  - "Still."
-  - "... danke."
+  - '...'
+  - Ich halte.
+  - Jetzt.
+  - Still.
+  - '... danke.'
+  - Pause.
+  - Hmm.
+  - Ja.
+  - Nein.
+  - Okay.
+  - '... und dann?'
+  - Hier.
+  - So.
+  - Moment.
+  - '... warte.'
+  - Atme.
+  - Tief.
+  - '... ja.'
+  - Gut.
+  - Fertig.
+  - '... genau.'
+  - Stille.
+  - Raum.
+  - '... hm.'
+  - Da.
+  - Nichts.
+  - '... bitte.'
+  - Ende.
+  - Oh.
+  - '... ach.'
+  - Genug.
+  - Eben.
+  - '... also.'
+  - Klar.
+  - '... naja.'
+  - Doch.
+  - '... stopp.'
+  - Leer.
+  - '... und?'
+  - Punkt.
+  - '... hm, ja.'
+  - Ruhig.
+  - '... okay?'
+  - Tja.
+  - Wow.
+  - '... aha.'
+  - Na.
+  - '... ganz still.'
+  - Kurz.
+  - '... ich warte.'
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich finde, wir sollten das mal ausführlich besprechen, weil es ein komplexes Thema ist.
+  - Lass uns das Schritt für Schritt durchgehen und alle Details klären.
+  - Ich habe mehrere Punkte, die ich ansprechen möchte, und zwar in dieser Reihenfolge.
+  - Das ist ein längerer Gedanke, den ich hier ausbreiten möchte.
+  - Ich erkläre dir jetzt in Ruhe, wie ich das sehe und warum.
+  - Es gibt viele Aspekte zu berücksichtigen, deshalb rede ich etwas länger.
+  - Meine Überlegung dazu ist folgende, und die hat mehrere Ebenen.
+  - Ich möchte das ausführlich darlegen, damit keine Fragen offen bleiben.
+  - Das ist ein vielschichtiges Thema, das ich nicht in einem Satz abhandeln kann.
+  - Lass mich das in mehreren Sätzen erklären, es ist nicht trivial.
+  - Ich habe viel dazu zu sagen und nehme mir die Zeit.
+  - Das braucht mehr Kontext, also hole ich etwas aus.
+  - Mein Standpunkt ist folgender und ich begründe ihn ausführlich.
+  - Es gibt da verschiedene Perspektiven, die ich alle beleuchten will.
+  - Ich erkläre das detailliert, weil es wichtig ist.
+  - Das ist ein langer Absatz, aber er ist nötig.
+  - Ich lege meine Argumente der Reihe nach dar.
+  - Das Thema verdient eine ausführliche Behandlung.
+  - Ich rede jetzt etwas länger, weil das Thema es verlangt.
+  - Lass mich das in Ruhe und vollständig erklären.
+  - Mein Beitrag hat mehrere Teile, ich fange mal an.
+  - Das ist komplex, deshalb brauche ich mehr Worte.
+  - Ich beschreibe das ausführlich und mit Beispielen.
+  - Es folgt eine längere Erklärung meinerseits.
+  - Ich breite das jetzt aus, Schritt für Schritt.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
 semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

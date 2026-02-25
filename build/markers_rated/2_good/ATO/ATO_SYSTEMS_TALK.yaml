@@ -10,19 +10,82 @@ pattern:
   tokens: ["System", "Komplex", "Kontext", "Interdependenz", "Modell", "Pattern"]
 examples:
   positive:
-  - "Systeme vernetzen … Komplexität integrieren"
-  - "mehrperspektivisch denken"
-  - "Kontext abhängige Lösung"
-  - "Patterns über Zeit"
-  - "Metaebene betrachten"
+  - Systeme vernetzen, Komplexität integrieren.
+  - Mehrperspektivisch denken ist hier gefragt.
+  - Kontextabhängige Lösung, nicht pauschal.
+  - Patterns über Zeit beobachten.
+  - Die Metaebene betrachten wir jetzt.
+  - Das System hat Rückkopplungsschleifen.
+  - Komplexe Interdependenzen beachten.
+  - Das Modell zeigt nichtlineare Dynamik.
+  - Systemdenken ist hier der Schlüssel.
+  - Der Kontext bestimmt die Interpretation.
+  - Patterns erkennen und nutzen.
+  - Interdependenz zwischen den Faktoren.
+  - Das System reguliert sich selbst.
+  - Komplexität nicht reduzieren, sondern managen.
+  - Der Kontext verschiebt die Bedeutung.
+  - Das Modell passt sich an.
+  - Systemische Betrachtung ist nötig.
+  - Patterns wiederholen sich auf verschiedenen Ebenen.
+  - Interdependenz erkennen und nutzen.
+  - Die Metaebene hilft beim Verständnis.
+  - Systeme kommunizieren miteinander.
+  - Komplexe Zusammenhänge verstehen.
+  - Der Kontext ist alles.
+  - Patterns bilden sich über Zeit.
+  - Interdependenz von Mensch und System.
+  - Modellierung der Dynamik.
+  - Systemisch gesehen ergibt das Sinn.
+  - Komplexität als Feature, nicht als Bug.
+  - Kontextuelle Analyse zeigt mehr.
+  - Das Modell hat mehrere Ebenen.
+  - Systemdenken für Fortgeschrittene.
+  - Patterns aus Daten extrahieren.
+  - Interdependenz beachten bei der Planung.
+  - Die Metaebene einnehmen.
+  - Systeme emergieren aus Interaktion.
+  - Komplexe Systeme brauchen Adaptivität.
+  - Der Kontext moduliert den Effekt.
+  - Patterns als Navigationshilfe.
+  - Interdependenz ist kein Zufall.
+  - Das Modell beschreibt die Realität nur annähernd.
+  - Systemische Perspektive einnehmen.
+  - Komplexität annehmen und navigieren.
+  - Kontextbewusst handeln.
+  - Patterns zeigen Regelmäßigkeiten.
+  - Interdependenz von Theorie und Praxis.
+  - Die Metaebene offenbart neue Einsichten.
+  - Systeme verändern sich ständig.
+  - Komplexe Wechselwirkungen berücksichtigen.
+  - Der Kontext macht den Unterschied.
+  - Patterns sind überall, wenn man hinschaut.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Das ist ganz einfach, schwarz oder weiß.
+  - Kein Grund, das zu verkomplizieren.
+  - Ein Schritt nach dem anderen, mehr nicht.
+  - Das hat eine einfache Ursache.
+  - Keine Zusammenhänge, nur Fakten.
+  - Linear denken reicht hier.
+  - Das ist isoliert zu betrachten.
+  - Kein Kontext nötig, die Zahlen sprechen.
+  - Einfache Lösung für ein einfaches Problem.
+  - Das hat nichts miteinander zu tun.
+  - Keine Muster, nur Einzelfälle.
+  - Das ist unkompliziert.
+  - Kein System dahinter, nur Zufall.
+  - Einfach und direkt, kein Hintergrund.
+  - Das braucht keine Analyse.
+  - Punkt A führt zu Punkt B, fertig.
+  - Keine Wechselwirkungen zu beachten.
+  - Das steht für sich allein.
+  - Simpel und klar.
+  - Kein tieferer Zusammenhang.
+  - Das ist offensichtlich.
+  - Keine Metaebene nötig.
+  - Einfache Kausalität.
+  - Das erklärt sich von selbst.
+  - Kein komplexes Denken erforderlich.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
 semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

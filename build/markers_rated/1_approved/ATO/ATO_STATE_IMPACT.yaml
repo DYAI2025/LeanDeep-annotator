@@ -13,19 +13,82 @@ pattern:
 - '(?i)\b(dadurch|damit)\s+bin\s+ich\s+\w+\b'
 examples:
   positive:
-  - "Das hat mich verunsichert."
-  - "Es macht mich traurig, wenn ich im Unklaren bleibe."
-  - "Dadurch bin ich misstrauisch geworden."
-  - "Das hat mich gefreut."
-  - "Es hat mich verletzt."
+  - Das hat mich verunsichert.
+  - Es macht mich traurig, wenn ich im Unklaren bleibe.
+  - Dadurch bin ich misstrauisch geworden.
+  - Das hat mich gefreut.
+  - Es hat mich verletzt.
+  - Das macht mich wütend, wenn du das sagst.
+  - Es hat mich berührt, wie offen du warst.
+  - Dadurch bin ich ruhiger geworden.
+  - Das macht mich nervös.
+  - Es hat mich überrascht, wie direkt du warst.
+  - Dadurch bin ich unsicher geworden.
+  - Das macht mich glücklich.
+  - Es hat mich enttäuscht.
+  - Dadurch bin ich entspannter geworden.
+  - Das macht mich nachdenklich.
+  - Es hat mich verärgert.
+  - Dadurch bin ich offener geworden.
+  - Das macht mich ängstlich.
+  - Es hat mich stolz gemacht.
+  - Dadurch bin ich vorsichtiger geworden.
+  - Das macht mich hoffnungsvoll.
+  - Es hat mich beschämt.
+  - Dadurch bin ich stärker geworden.
+  - Das macht mich eifersüchtig.
+  - Es hat mich erleichtert.
+  - Dadurch bin ich motivierter geworden.
+  - Das macht mich unruhig.
+  - Es hat mich inspiriert.
+  - Dadurch bin ich frustriert geworden.
+  - Das macht mich zuversichtlich.
+  - Es hat mich irritiert.
+  - Dadurch bin ich einsamer geworden.
+  - Das macht mich dankbar.
+  - Es hat mich zum Nachdenken gebracht.
+  - Dadurch bin ich gelassener geworden.
+  - Das macht mich sprachlos.
+  - Es hat mich bestärkt.
+  - Dadurch bin ich skeptischer geworden.
+  - Das macht mich betroffen.
+  - Es hat mich aufgewühlt.
+  - Dadurch bin ich achtsamer geworden.
+  - Das macht mich fassungslos.
+  - Es hat mich ermutigt.
+  - Dadurch bin ich verschlossener geworden.
+  - Das macht mich traurig und wütend zugleich.
+  - Es hat mich kalt gelassen, ehrlich gesagt.
+  - Dadurch bin ich sensibler geworden für das Thema.
+  - Das macht mich fertig.
+  - Es hat mich geprägt.
+  - Dadurch bin ich empfindlicher geworden.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich finde das Thema interessant.
+  - Der Bericht hat zwölf Seiten.
+  - Wir treffen uns morgen um zehn.
+  - Das Wetter ist heute mild.
+  - Die Präsentation dauert eine Stunde.
+  - Der Kaffee ist kalt geworden.
+  - Ich bin mit dem Auto gekommen.
+  - Das Meeting war um drei.
+  - Ich habe den Report gelesen.
+  - Die Deadline ist nächsten Freitag.
+  - Der Zug hatte Verspätung.
+  - Ich war beim Zahnarzt.
+  - Die Rechnung ist bezahlt.
+  - Wir haben neue Bürostühle bestellt.
+  - Der Server läuft wieder.
+  - Ich habe die Mail weitergeleitet.
+  - Das Dokument ist im Anhang.
+  - Die Besprechung fand online statt.
+  - Ich brauche noch die Unterschrift.
+  - Der Drucker ist wieder repariert.
+  - Die Unterlagen liegen bereit.
+  - Wir hatten zwanzig Teilnehmer.
+  - Ich fahre um fünf nach Hause.
+  - Das Protokoll wird verschickt.
+  - Der Parkplatz war voll.
 tags: [impact, feedback, atomic]
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}

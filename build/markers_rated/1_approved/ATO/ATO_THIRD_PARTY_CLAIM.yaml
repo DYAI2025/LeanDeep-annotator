@@ -11,19 +11,82 @@ frame:
 pattern: ["(?i)\\b(told me|said about you|everyone thinks|others agree)\\b"]
 examples:
   positive:
-  - "Someone told me you were upset."
-  - "They said about you that..."
-  - "Everyone thinks you're being difficult."
-  - "Others agree with me on this."
-  - "I heard from someone that you..."
+  - Jemand hat mir erzählt, dass du sauer warst.
+  - Die haben über dich gesagt, dass...
+  - Alle denken, du bist schwierig.
+  - Andere sind meiner Meinung.
+  - Ich habe von jemandem gehört, dass du...
+  - Meine Freundin hat mir gesagt, was du über mich sagst.
+  - Die anderen finden das auch so.
+  - Man hat mir zugetragen, dass du unzufrieden bist.
+  - Alle sehen das wie ich.
+  - Jemand hat mir verraten, was du denkst.
+  - Die Kollegen sagen, du bist unmotiviert.
+  - Andere bestätigen meinen Eindruck.
+  - Ich habe gehört, dass du dich beschwert hast.
+  - Alle reden darüber.
+  - Jemand hat mir erzählt, was wirklich los war.
+  - Die anderen geben mir recht.
+  - Man hat mir berichtet, dass du dich so verhältst.
+  - Alle denken dasselbe über dich.
+  - Jemand hat mir gesagt, du planst was.
+  - Die Nachbarn haben mir erzählt, was du machst.
+  - Andere haben dasselbe beobachtet.
+  - Ich habe von Dritten erfahren, dass...
+  - Alle im Team sehen das so.
+  - Jemand hat mir gesteckt, dass du lügst.
+  - Die anderen sind auch unzufrieden mit dir.
+  - Man hat mir zugeflüstert, was du vorhast.
+  - Alle haben mir zugestimmt.
+  - Jemand hat mir bestätigt, was ich vermutet habe.
+  - Die Freunde finden das auch nicht okay.
+  - Andere haben sich über dich beschwert.
+  - Ich habe von mehreren gehört, dass...
+  - Alle wissen Bescheid.
+  - Jemand hat mir erzählt, du bist untreu.
+  - Die Eltern haben mir das gesagt.
+  - Andere haben mich gewarnt.
+  - Man hat mir berichtet, was du gesagt hast.
+  - Alle in der Firma reden darüber.
+  - Jemand hat mir verraten, dass du kündigst.
+  - Die Nachbarschaft redet.
+  - Andere sehen das genau wie ich.
+  - Ich habe von Bekannten erfahren, dass...
+  - Alle haben es bemerkt.
+  - Jemand hat mir erzählt, wie du wirklich bist.
+  - Die Geschwister haben mir das bestätigt.
+  - Andere haben sich auch gewundert.
+  - Man hat mir gesagt, du bist unzuverlässig.
+  - Alle finden, du solltest dich ändern.
+  - Jemand hat mir gesteckt, was los ist.
+  - Die Freunde sind auch deiner Meinung nicht.
+  - Andere haben mir dasselbe gesagt.
   negative:
-  - I see it differently, but I respect your view.
-  - I want to be honest with you, even though it's hard.
-  - You're right, that was my mistake. I'm sorry.
-  - Let's both explain our side.
-  - I feel uncomfortable about this and want to talk about it.
-  - I understand why you see it that way.
-  - Thank you for telling me that. I'll think about it.
+  - Ich sage dir direkt, was ich denke.
+  - Das ist meine persönliche Meinung.
+  - Ich spreche nur für mich.
+  - Das basiert auf meiner eigenen Beobachtung.
+  - Ich sage dir offen, wie ich das sehe.
+  - Das ist mein Eindruck, nicht der von anderen.
+  - Ich rede nicht über Dritte.
+  - Meine eigene Wahrnehmung ist folgende.
+  - Ich beziehe mich nur auf das, was ich erlebt habe.
+  - Das habe ich selbst beobachtet.
+  - Ich zitiere niemand anderen.
+  - Meine Einschätzung, ohne Einfluss von außen.
+  - Ich sage dir, was ich fühle.
+  - Das kommt von mir, nicht von anderen.
+  - Ich spreche aus eigener Erfahrung.
+  - Keine Gerüchte, nur Fakten.
+  - Meine Meinung, ohne Rückendeckung.
+  - Ich behaupte das auf Basis meiner Beobachtung.
+  - Nur was ich selbst gesehen habe.
+  - Ich rede direkt mit dir.
+  - Das ist zwischen uns.
+  - Keine Drittquellen, nur ich.
+  - Ich gebe meine eigene Sicht wieder.
+  - Das sage ich dir unter vier Augen.
+  - Keine anderen Stimmen, nur meine.
 tags: [atomic, v3.3, auto-generated]
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}

@@ -16,22 +16,82 @@ pattern:
 activation_logic: "ANY 1"
 examples:
   positive:
-  - "… (langsamer) Ich … denke … wir … sollten … warten."
-  - "Also … ich … weiß … nicht."
-  - "Können … wir … das … später … klären?"
-  - "Ich … äh … bin … unsicher."
-  - "Lass … uns … kurz … nachdenken."
-  - "Okay … hm … ich … prüfe das."
-  - "Vielleicht … ist … das … riskant."
-  - "Ich … brauche … einen … Moment."
+  - '... (langsamer) Ich ... denke ... wir ... sollten ... warten.'
+  - Also ... ich ... weiß ... nicht.
+  - Können ... wir ... das ... später ... klären?
+  - Ich ... äh ... bin ... unsicher.
+  - Lass ... uns ... kurz ... nachdenken.
+  - Okay ... hm ... ich ... prüfe das.
+  - Vielleicht ... ist ... das ... riskant.
+  - Ich ... brauche ... einen ... Moment.
+  - Das ... ist ... schwierig ... für ... mich.
+  - Ich ... muss ... darüber ... nachdenken.
+  - Hm ... also ... ich ... sehe ... das ... anders.
+  - Warte ... ich ... formuliere ... das ... nochmal.
+  - Das ... Thema ... ist ... sensibel.
+  - Ich ... finde ... das ... nicht ... einfach.
+  - Lass ... mich ... kurz ... überlegen.
+  - Also ... das ... Problem ... ist ...
+  - Ich ... weiß ... nicht ... ob ... das ... stimmt.
+  - Hmm ... vielleicht ... sollten ... wir ...
+  - Das ... war ... nicht ... so ... gemeint.
+  - Ich ... spreche ... gerade ... bewusst ... langsam.
+  - Es ... fällt ... mir ... schwer ... das ... zu ... sagen.
+  - Okay ... ich ... versuche ... es ... nochmal.
+  - Das ... hat ... mich ... getroffen.
+  - Ich ... suche ... die ... richtigen ... Worte.
+  - Hm ... das ... berührt ... mich.
+  - Lass ... mich ... das ... sortieren.
+  - Ich ... bin ... da ... vorsichtig.
+  - Moment ... ich ... denke ... nach.
+  - Also ... das ... Ding ... ist ...
+  - Ich ... möchte ... nichts ... Falsches ... sagen.
+  - Hm ... ja ... also ... ähm ...
+  - Das ... geht ... mir ... nahe.
+  - Ich ... rede ... absichtlich ... langsam.
+  - Können ... wir ... das ... in ... Ruhe ... besprechen?
+  - Ich ... will ... das ... richtig ... formulieren.
+  - Also ... ehrlich ... gesagt ...
+  - Das ... ist ... ein ... heikles ... Thema.
+  - Ich ... zögere ... weil ... ich ... unsicher ... bin.
+  - Hm ... wie ... sage ... ich ... das ... am ... besten?
+  - Lass ... mich ... nachdenken ... bevor ... ich ... antworte.
+  - Das ... überrascht ... mich ... jetzt.
+  - Ich ... muss ... das ... erstmal ... verarbeiten.
+  - Okay ... also ... von ... vorne.
+  - Hm ... das ... klingt ... nach ... viel.
+  - Ich ... taste ... mich ... da ... vor.
+  - Also ... wenn ... ich ... ehrlich ... bin ...
+  - Das ... braucht ... Zeit.
+  - Ich ... bin ... noch ... nicht ... so ... weit.
+  - Hm ... ja ... ich ... verstehe.
+  - Lass ... mich ... das ... sacken ... lassen.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ja klar, machen wir so, kein Problem!
+  - Ich weiß genau, was ich sagen will.
+  - Das ist einfach, passt alles.
+  - Kein Thema, erledige ich sofort.
+  - Alles klar, ich bin dabei.
+  - Logisch, das machen wir fix.
+  - Super Idee, bin sofort dafür.
+  - Kein Problem, läuft bei mir.
+  - Ja, das klingt gut, los geht's!
+  - Einfach, schnell, fertig.
+  - Da muss ich nicht lange überlegen.
+  - Passt perfekt, machen wir.
+  - Genau so sehe ich das auch.
+  - Sofort, kein Zögern nötig.
+  - Das ist doch klar, oder?
+  - Bin voll dabei, null Bedenken.
+  - Ja, machen wir, einfach so.
+  - Das steht für mich fest.
+  - Ich rede schnell weiter.
+  - Flüssig und ohne Pause formuliert.
+  - Direkt und ohne Umschweife.
+  - Das sage ich ohne zu zögern.
+  - Klare Ansage, fertig.
+  - Zack, das war's.
+  - Ohne Unterbrechung durchgesprochen.
 tags: [atomic, audio, prosody]
 metadata:
   modality: audio

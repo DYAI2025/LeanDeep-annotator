@@ -15,47 +15,82 @@ patterns:
   value: (?i)\b(just one more|it's not a problem|I can stop anytime|everyone does it|not addicted)\b
 examples:
   positive:
-  - Just one more drink won't hurt.
-  - It's not a problem, I have it under control.
-  - I can stop anytime I want.
-  - Everyone does this, it's normal.
-  - I'm not addicted, I just enjoy it.
-  - One more cigarette is fine.
-  - No issue here, I manage it.
-  - I quit whenever I choose.
-  - Friends do it too.
-  - Not hooked, just recreational.
-  - Another pill won't matter.
-  - It's under control, trust me.
-  - I stop on my terms.
-  - Common habit, nothing wrong.
-  - Enjoyment, not addiction.
-  - One last hit is okay.
-  - No problem at all.
-  - I control it fully.
-  - Others do worse.
-  - Not dependent.
+  - Nur noch ein Glas, das schadet nicht.
+  - Es ist kein Problem, ich hab alles unter Kontrolle.
+  - Ich kann jederzeit aufhören.
+  - Jeder macht das, ist ganz normal.
+  - Ich bin nicht abhängig, ich genieße es nur.
+  - Noch eine Zigarette ist okay.
+  - Ist alles im Griff, keine Sorge.
+  - Ich höre auf, wann ich will.
+  - Freunde machen das auch.
+  - Nicht süchtig, nur gewohnheitsmäßig.
+  - Eine Pille mehr macht nichts.
+  - Es ist unter Kontrolle, glaub mir.
+  - Ich entscheide selbst, wann Schluss ist.
+  - Ganz normale Gewohnheit, nichts Schlimmes.
+  - Genuss, keine Sucht.
+  - Ein letzter Joint ist in Ordnung.
+  - Null Problemo, ich manage das.
+  - Ich kontrolliere das vollständig.
+  - Andere machen Schlimmeres.
+  - Nicht abhängig, niemals.
+  - Nur zum Entspannen, sonst nichts.
+  - Es ist alles kein Problem bei mir.
+  - Aufhören? Jederzeit möglich.
+  - Alle trinken doch.
+  - Ich bin definitiv nicht süchtig.
+  - Noch ein Bier, was soll's.
+  - Ich hab das völlig unter Kontrolle.
+  - Wenn ich will, höre ich sofort auf.
+  - Meine Freunde konsumieren mehr als ich.
+  - Das ist Genuss, nicht Abhängigkeit.
+  - Nur am Wochenende, das zählt nicht.
+  - Kein Thema, ich schaffe das.
+  - Ich brauche das nicht wirklich.
+  - Andere haben echte Probleme, ich nicht.
+  - Nicht abhängig, ich wähle das.
+  - Ein Gläschen zum Essen, ganz normal.
+  - Ich habe alles im Griff.
+  - Aufhören ist keine Frage des Könnens.
+  - So machen das alle in meinem Alter.
+  - Rekreativ, nicht pathologisch.
+  - Noch ein letztes Mal, dann ist gut.
+  - Es ist kein Problem, wirklich nicht.
+  - Ich kontrolliere meinen Konsum.
+  - Normal, machen alle so.
+  - Nicht abhängig, nur gewöhnt.
+  - Ein Schluck schadet nicht.
+  - Alles unter Kontrolle hier.
+  - Ich entscheide, nicht die Substanz.
+  - Ganz normales Verhalten.
+  - Ich bin nicht süchtig, Punkt.
   negative:
-  - I need to stop after this drink.
-  - It's becoming a problem.
-  - I can't stop easily.
-  - Not everyone does this.
-  - I might be addicted.
-  - No more cigarettes for me.
-  - This is an issue.
-  - Stopping is hard.
-  - Not normal for most.
-  - I am hooked.
-  - No more pills.
-  - Out of control.
-  - I can't quit.
-  - Uncommon and bad.
-  - Definitely addicted.
-  - No last hit.
-  - Big problem.
-  - No control.
-  - Worse than others.
-  - Totally dependent.
+  - Ich muss aufhören, nach diesem Drink.
+  - Es wird zu einem Problem.
+  - Ich kann nicht so einfach aufhören.
+  - Das machen nicht alle, nur ich.
+  - Ich bin vielleicht abhängig.
+  - Keine Zigaretten mehr für mich.
+  - Das ist ein echtes Problem.
+  - Aufhören fällt mir schwer.
+  - Nicht normal für die meisten.
+  - Ich bin süchtig.
+  - Keine Pillen mehr, Schluss.
+  - Außer Kontrolle geraten.
+  - Ich kann nicht aufhören.
+  - Ungewöhnlich und schädlich.
+  - Definitiv abhängig.
+  - Kein letzter Zug mehr.
+  - Großes Problem.
+  - Keine Kontrolle mehr.
+  - Schlimmer als andere.
+  - Total abhängig.
+  - Ich brauche Hilfe damit.
+  - Es ist ein ernstes Thema.
+  - Ich habe die Kontrolle verloren.
+  - 'Ich bin ehrlich: Es ist ein Problem.'
+  - Ich muss was ändern.
 tags:
 - atomic
 - v3.4

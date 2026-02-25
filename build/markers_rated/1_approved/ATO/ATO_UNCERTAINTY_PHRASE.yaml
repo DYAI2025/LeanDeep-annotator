@@ -16,19 +16,82 @@ pattern:
 activation_logic: "ANY 1"
 examples:
   positive:
-  - "Vielleicht mache ich das später."
-  - "Mal sehen, ob das klappt."
-  - "Ich weiß nicht genau, ob ich dabei bin."
-  - "Könnte sein, dass ich nicht schaffe."
-  - "Bin mir da gerade nicht sicher."
+  - Vielleicht mache ich das spaeter.
+  - Mal sehen, ob das klappt.
+  - Ich weiss nicht genau, ob ich dabei bin.
+  - Koennte sein, dass ich nicht schaffe.
+  - Bin mir da gerade nicht sicher.
+  - Vielleicht aendere ich meine Meinung.
+  - Mal sehen, wie es laeuft.
+  - Weiss nicht, ob das eine gute Idee ist.
+  - Koennte sein, dass ich recht habe.
+  - Bin mir nicht sicher, ob ich das will.
+  - Vielleicht warte ich noch.
+  - Mal sehen, was morgen bringt.
+  - Ich weiss nicht, ob ich kommen kann.
+  - Koennte sein, dass sich alles aendert.
+  - Bin mir unsicher, ob das passt.
+  - Vielleicht ist es besser so.
+  - Mal sehen, vielleicht sage ich ja.
+  - Weiss nicht, wie ich das finde.
+  - Koennte sein, dass ich zu spaet komme.
+  - Bin mir nicht sicher, ob das stimmt.
+  - Vielleicht gehe ich doch hin.
+  - Mal sehen, ob ich Lust habe.
+  - Ich weiss nicht, was ich davon halten soll.
+  - Koennte sein, dass wir uns vertan haben.
+  - Bin mir gerade echt unsicher.
+  - Vielleicht war das ein Fehler.
+  - Mal sehen, ich entscheide spontan.
+  - Weiss nicht, ob ich das verdient habe.
+  - Koennte sein, vielleicht auch nicht.
+  - Bin mir nicht sicher, wie du das meinst.
+  - Vielleicht brauche ich mehr Zeit.
+  - Mal sehen, was das Leben bringt.
+  - Ich weiss es einfach nicht.
+  - Koennte sein, ich muss nachdenken.
+  - Bin mir unsicher, ob wir das richtig machen.
+  - Vielleicht aendert sich das noch.
+  - Mal sehen, keine Ahnung ehrlich.
+  - Weiss nicht, ob ich das kann.
+  - Koennte sein, dass ich mich irre.
+  - Bin mir nicht sicher, ob es richtig war.
+  - Vielleicht sollte ich loslassen.
+  - Mal sehen, ob sich eine Tuer oeffnet.
+  - Ich weiss nicht, was ich fuehle.
+  - Koennte sein, dass das nur Angst ist.
+  - Bin mir nicht sicher, ob ich bereit bin.
+  - Vielleicht verstehen wir uns falsch.
+  - Mal sehen, wie die naechste Woche wird.
+  - Weiss nicht, ob ich dem gewachsen bin.
+  - Koennte sein, dass du recht hast.
+  - Bin mir nicht sicher, und das ist okay.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich bin mir ganz sicher.
+  - Das steht fuer mich fest.
+  - Ganz klar, ich bin dabei.
+  - Definitiv, das mache ich.
+  - Keine Frage, so ist es.
+  - Ich bin entschlossen.
+  - Hundertprozentig ja.
+  - Das ist meine feste Ueberzeugung.
+  - Darauf kannst du dich verlassen.
+  - Ich bin mir absolut sicher.
+  - Ja, ohne Zweifel.
+  - Meine Entscheidung ist gefallen.
+  - Da gibt es kein Wenn und Aber.
+  - Ich weiss genau, was ich will.
+  - Eindeutig.
+  - Sicher ist sicher.
+  - Das ist klar.
+  - Ganz bestimmt.
+  - Ohne jede Unsicherheit.
+  - Mein Entschluss steht.
+  - Das ist fuer mich eindeutig.
+  - Ja, auf jeden Fall.
+  - Ich bin fest entschlossen.
+  - Da bin ich mir sicher.
+  - Klares Ja von mir.
 tags: [uncertainty, atomic]
 vad_estimate: {valence: -0.1, arousal: 0.3, dominance: 0.25}
 effect_on_state: {trust: 0.25, conflict: -0.1, deesc: 0.15}

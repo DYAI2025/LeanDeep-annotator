@@ -10,44 +10,82 @@ pattern:
   regex: '(?i)\b(spontan|ohne\s+grund|von\s+selbst)\b'
 examples:
   positive:
-  - "**Spontan** fange ich an zu lachen."
-  - "Er lächelt **ohne Grund**."
-  - "Ich singe **spontan** mit."
-  - "Sie hilft **von selbst**."
-  - "Wir entscheiden **spontan**."
-  - "Er ruft **spontan** an."
-  - "Ich tanze **ohne Grund**."
-  - "Die Freude kommt **von selbst**."
-  - "Ich gehe **spontan** raus."
-  - "Sie lacht **ohne Grund**."
-  - "**Spontan** fange ich an zu tanzen."
-  - "Sie lächelt **ohne jeden Grund**."
-  - "Ich summe **spontan** ein Lied mit."
-  - "Er hilft **von ganz selbst**."
-  - "Wir entscheiden uns **spontan** für den Ausflug."
-  - "Sie ruft **spontan** ihre Freundin an."
-  - "Ich springe **ohne Grund** vor Freude."
-  - "Die gute Laune kommt **von selbst**."
-  - "Ich gehe **spontan** spazieren."
-  - "Er lacht **ohne besonderen Grund**."
-  - "**Spontan** umarme ich sie."
-  - "Sie weint **ohne Grund** vor Rührung."
-  - "Ich pfeife **spontan** vor mich hin."
-  - "Das Lächeln kommt **von selbst**."
-  - "Wir fahren **spontan** ans Meer."
-  - "Er singt **spontan** unter der Dusche."
-  - "Ich kaufe **ohne Grund** Blumen."
-  - "Die Tränen kommen **von selbst**."
-  - "Ich rufe **spontan** meine Mutter an."
-  - "Sie hilft **ohne Grund** dem Nachbarn."
+  - Spontan fange ich an zu lachen.
+  - Er lächelt ohne Grund.
+  - Ich singe spontan mit.
+  - Sie hilft von selbst.
+  - Wir entscheiden spontan.
+  - Er ruft spontan an.
+  - Ich tanze ohne Grund.
+  - Die Freude kommt von selbst.
+  - Ich gehe spontan raus.
+  - Sie lacht ohne Grund.
+  - Spontan fange ich an zu tanzen.
+  - Sie lächelt ohne jeden Grund.
+  - Ich summe spontan ein Lied mit.
+  - Er hilft von ganz selbst.
+  - Wir entscheiden uns spontan für den Ausflug.
+  - Sie ruft spontan ihre Freundin an.
+  - Ich springe ohne Grund vor Freude.
+  - Die gute Laune kommt von selbst.
+  - Ich gehe spontan spazieren.
+  - Er lacht ohne besonderen Grund.
+  - Spontan umarme ich sie.
+  - Sie weint ohne Grund vor Rührung.
+  - Ich pfeife spontan vor mich hin.
+  - Das Lächeln kommt von selbst.
+  - Wir fahren spontan ans Meer.
+  - Er singt spontan unter der Dusche.
+  - Ich kaufe ohne Grund Blumen.
+  - Die Tränen kommen von selbst.
+  - Ich rufe spontan meine Mutter an.
+  - Sie hilft ohne Grund dem Nachbarn.
+  - Spontan beschließe ich, das Buch zu lesen.
+  - Die Idee kommt von selbst, ohne Planung.
+  - Er beginnt spontan zu kochen.
+  - Ich schreibe spontan eine Nachricht.
+  - Sie fängt ohne Grund an zu klatschen.
+  - Spontan mache ich einen Umweg durch den Park.
+  - Das Gespräch ergibt sich von selbst.
+  - Ich halte spontan an und schaue den Sonnenuntergang.
+  - Er erzählt spontan eine Geschichte.
+  - Von selbst fängt sie an zu summen.
+  - Spontan lade ich Freunde zum Essen ein.
+  - Die Kreativität kommt von selbst.
+  - Ich ändere spontan den Plan.
+  - Sie reagiert spontan mit einem Lachen.
+  - Ohne Grund fühle ich mich plötzlich gut.
+  - Spontan nehme ich mir frei.
+  - Das Vertrauen kommt von selbst.
+  - Ich sage spontan zu.
+  - Er hilft spontan beim Aufräumen.
+  - Von selbst löst sich die Anspannung.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich habe das genau geplant.
+  - Das war alles durchdacht.
+  - Ich habe mir vorher überlegt, was ich sage.
+  - Das Treffen war lange geplant.
+  - Ich habe mich bewusst dafür entschieden.
+  - Das war kein Zufall, sondern Absicht.
+  - Ich habe das strategisch gemacht.
+  - Das war Teil meines Plans.
+  - Ich habe mich vorbereitet.
+  - Das war kalkuliert.
+  - Ich habe darüber nachgedacht, bevor ich handelte.
+  - Es war eine bewusste Entscheidung.
+  - Das war nicht impulsiv, sondern überlegt.
+  - Ich hatte das schon länger vor.
+  - Das war geplant und abgestimmt.
+  - Ich handle nach Vorgabe.
+  - Das folgt einem klaren Ablauf.
+  - Ich mache das nach Terminplan.
+  - Die Reaktion war vorhersehbar.
+  - Alles nach Protokoll.
+  - Ich entscheide nicht aus dem Bauch.
+  - Das war ein geplanter Schritt.
+  - Keine Improvisation, alles vorbereitet.
+  - Ich handle nach Checkliste.
+  - Das war keine Laune, sondern Strategie.
 negatives:
 - "Wir planen ein **spontanes** Meeting."         # neutral
 tags: [discourse]

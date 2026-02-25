@@ -16,66 +16,82 @@ patterns:
   feature: "answers-emotion-with-task"
 examples:
   positive:
-  - 'Zurück zum Thema: To-do Liste aktualisieren.'
-  - 'Konkret: Schritt 3 heute abschließen.'
+  - 'Zurueck zum Thema: To-do Liste aktualisieren.'
+  - 'Konkret: Schritt 3 heute abschliessen.'
   - 'Aufgabe: Angebote einholen bis Freitag.'
-  - 'Nächster Punkt: Freigabe einholen.'
+  - 'Naechster Punkt: Freigabe einholen.'
   - Liefertermin bleibt der 30.09.
-  - 'To-do: Budget prüfen.'
-  - 'Schritt 1: Daten sammeln.'
-  - 'Schritt 2: Review ansetzen.'
-  - Bitte die Checkliste durchgehen.
-  - Wir tracken das im Ticket.
-  - Lass uns zum Plan übergehen.
-  - 'Nächste Aufgabe: Bericht schreiben.'
-  - Konzentrieren wir uns auf die Frist.
-  - 'To-do: Meeting planen.'
-  - 'Schritt 4: Abschluss.'
-  - Zurück zur Agenda.
-  - Aufgabe priorisieren.
-  - 'Nächster Item: Update.'
-  - Lieferung tracken.
-  - Checkliste abarbeiten.
-  - Agenda einhalten.
-  - Review planen.
-  - Budget checken.
-  - Milestone setzen.
-  - Update teilen.
-  - Freigabe geben.
-  - Prozess folgen.
-  - Abnahme machen.
-  - Notiz nehmen.
-  - Status updaten.
+  - 'Zurueck zum Thema: wer uebernimmt das Protokoll?'
+  - 'Konkret: Budget bis morgen einreichen.'
+  - 'Aufgabe: Feedback sammeln und weiterleiten.'
+  - 'Schritt 1: Anforderungen definieren.'
+  - 'To-do: Termin mit dem Lieferanten vereinbaren.'
+  - 'Naechster Punkt: Zeitplan ueberarbeiten.'
+  - 'Zurueck zum Thema: Praesentation finalisieren.'
+  - 'Konkret heisst das: drei Optionen ausarbeiten.'
+  - 'Aufgabe fuer morgen: Bericht fertigstellen.'
+  - 'Schritt 2: Prototyp testen.'
+  - 'To-do: Kunden informieren.'
+  - Liefertermin ist der 15. Maerz.
+  - 'Naechster Punkt: Rollenverteilung.'
+  - 'Zurueck zum Thema: Kostenaufstellung.'
+  - 'Konkret: Entwurf bis Mittwoch.'
+  - 'Aufgabe: Meeting-Raum reservieren.'
+  - 'Schritt 4: Ergebnisse zusammenfassen.'
+  - 'To-do: Einladungen verschicken.'
+  - 'Zurueck zum Thema: naechste Meilensteine.'
+  - 'Konkret: Deadline einhalten.'
+  - 'Aufgabe: Status-Update vorbereiten.'
+  - 'Naechster Punkt: Tests durchfuehren.'
+  - 'Schritt 5: Abnahme organisieren.'
+  - 'To-do: Dokumentation aktualisieren.'
+  - 'Zurueck zum Thema: wer kuemmert sich um die Bestellung?'
+  - 'Konkret muessten wir jetzt: die Zahlen pruefen.'
+  - 'Aufgabe fuer diese Woche: Partnerkontakt aufnehmen.'
+  - 'Naechster Punkt: Qualitaetskontrolle.'
+  - 'Zurueck zum eigentlichen Thema: Projektplanung.'
+  - 'Schritt 6: Release vorbereiten.'
+  - 'To-do: Schulungsmaterial erstellen.'
+  - 'Aufgabe: Angebot ueberarbeiten.'
+  - 'Konkret: drei Varianten durchrechnen.'
+  - 'Naechster Punkt: Vertrag unterschreiben.'
+  - 'Zurueck zum Thema: Agenda fuer morgen.'
+  - 'Schritt 7: Feedback einarbeiten.'
+  - 'To-do: Reiseplanung abschliessen.'
+  - 'Aufgabe: Logo-Entwurf pruefen.'
+  - 'Konkret: Website-Texte finalisieren.'
+  - 'Naechster Punkt: Social-Media-Plan.'
+  - 'Zurueck zum Thema: Budgetverteilung.'
+  - 'Schritt 8: Launch-Datum festlegen.'
+  - 'To-do: Inventur machen.'
+  - 'Aufgabe: Vertragsdetails klaeren.'
+  - 'Konkret: den Prototyp dem Team vorstellen.'
   negative:
-  - Wie fühlst du dich damit?
-  - Das hat mich gestern verletzt.
-  - Ich will das erst besprechen.
-  - Können wir das emotional klären?
-  - Ich brauche Nähe, nicht To-dos.
-  - Lass uns über den Streit reden.
-  - Das ist mir gerade zu kalt.
-  - Ich bin verunsichert.
-  - Bitte hör mir zu.
-  - Ich brauche eine Entschuldigung.
-  - Lass uns tiefer gehen.
-  - Das fühlt sich falsch an.
-  - Erzähl mehr von dir.
-  - Ich teile meine Gefühle.
-  - Bleiben wir beim Emotionalen.
-  - Das triggert mich.
-  - Lass uns pausieren und fühlen.
-  - Ich brauche Unterstützung.
+  - Ich fuehle mich gerade ueberfordert.
+  - Das macht mich traurig.
+  - Ich bin enttaeuscht von der Situation.
+  - Meine Gefuehle sind gerade durcheinander.
+  - Ich brauche emotionale Unterstuetzung.
   - Das verletzt mich.
-  - Mehr Empathie bitte.
-  - Mehr Empathie.
-  - Lass uns fühlen.
-  - Ich teile Gefühle.
-  - Bleib beim Emotionalen.
-  - Das fühlt sich an.
-  - Erzähl von dir.
-  - Ich liebe das.
-  - Traurig heute.
-  - Feiern wir?
+  - Ich fuehle mich nicht gehoert.
+  - Das belastet mich sehr.
+  - Ich bin wuetend auf die Situation.
+  - Mein Herz ist schwer.
+  - Ich mache mir Sorgen um uns.
+  - Das aengstigt mich.
+  - Ich fuehle mich alleingelassen.
+  - Das frustriert mich.
+  - Ich bin emotional am Limit.
+  - Meine Gefuehle sind verletzt.
+  - Ich brauche Naehe.
+  - Das Gespraech macht mir Angst.
+  - Ich fuehle mich missverstanden.
+  - Das tut mir im Herzen weh.
+  - Ich bin verunsichert.
+  - Meine Emotionen kochen hoch.
+  - Ich brauche Trost.
+  - Das beruehrt mich zutiefst.
+  - Ich fuehle mich verletzlich gerade.
 tags: []
 rating: 1
 semiotic:

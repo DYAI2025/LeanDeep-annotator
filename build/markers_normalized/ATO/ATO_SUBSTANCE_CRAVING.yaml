@@ -15,47 +15,82 @@ patterns:
   value: (?i)\b(need it|craving|just a little|can't resist|one hit)\b
 examples:
   positive:
-  - I need it so badly right now.
-  - This craving is killing me.
-  - Just a little won't hurt.
-  - I can't resist the urge.
-  - One hit and I'll be fine.
-  - I crave it intensely.
-  - Must have it now.
-  - A small dose is enough.
-  - Urge is overwhelming.
-  - One puff will satisfy.
-  - Desperate for it.
-  - Craving hits hard.
-  - Tiny bit only.
-  - Can't fight it.
-  - One sip to calm down.
-  - Need it urgently.
-  - Craving consumes me.
-  - Just a taste.
-  - Resist? Impossible.
-  - One more time.
+  - Ich brauch das jetzt ganz dringend.
+  - Das Verlangen ist unerträglich.
+  - Nur ein bisschen, das reicht mir.
+  - Ich kann nicht widerstehen.
+  - Ein Zug und mir geht's besser.
+  - Ich brauche es so sehr gerade.
+  - Dieses Verlangen bringt mich um.
+  - Nur ein kleines bisschen, bitte.
+  - Ich schaffe es nicht, nein zu sagen.
+  - Einmal noch, dann höre ich auf.
+  - Ich brauche das dringend, sofort.
+  - Das Craving ist brutal heute.
+  - Nur ein Schluck zur Beruhigung.
+  - Ich kann dem Drang nicht widerstehen.
+  - Ein Hit und alles wird gut.
+  - Ich brauche es, ich halte es nicht aus.
+  - Das Verlangen frisst mich auf.
+  - Nur ein kleines Stück, mehr nicht.
+  - Ich kann nichts dagegen tun.
+  - Noch einmal, das letzte Mal.
+  - Ich brauche das zum Funktionieren.
+  - Das Verlangen kommt in Wellen.
+  - Nur ein Tropfen zur Entspannung.
+  - Ich widerstehe nicht mehr.
+  - Einmal probieren schadet nicht.
+  - Ich brauche das wie Luft zum Atmen.
+  - Das Craving ist unbeschreiblich.
+  - Nur ein winziges bisschen.
+  - Ich kann es nicht lassen.
+  - Einmal noch und dann Schluss.
+  - Mein Körper verlangt danach.
+  - Das Verlangen überwältigt mich.
+  - Nur eine Pille zur Beruhigung.
+  - Ich halte es ohne nicht aus.
+  - Ein Zug reicht, versprochen.
+  - Ich brauche das, um klarzukommen.
+  - Das Craving macht mich verrückt.
+  - Nur ein Glas, wirklich nur eins.
+  - Ich kann dem nicht entkommen.
+  - Noch einmal, für die Nerven.
+  - Ich brauche es wie eine Medizin.
+  - Das Verlangen ist wie Hunger.
+  - Nur eine Linie, dann bin ich ruhig.
+  - Ich widerstehe dem Drang nicht.
+  - Einmal noch, letzte Chance.
+  - Ich brauche das zum Einschlafen.
+  - Das Craving kontrolliert mich.
+  - Nur ein Hauch, ganz wenig.
+  - Ich kann nicht ohne.
+  - Noch einmal, ich verspreche, dann nie wieder.
   negative:
-  - I don't need it today.
-  - No craving at all.
-  - A little is too much.
-  - I can resist easily.
-  - No hits for me.
-  - No urge today.
-  - Don't want it.
-  - Even small is bad.
-  - Resistance is easy.
-  - No doses.
-  - Not desperate.
-  - No craving.
-  - Big bit is worse.
-  - Fight it successfully.
-  - No sip needed.
-  - No urgency.
-  - Craving absent.
-  - No taste.
-  - Resist completely.
-  - Never again.
+  - Ich brauche das nicht mehr.
+  - Kein Verlangen heute, zum Glück.
+  - Auch ein wenig ist zu viel.
+  - Ich widerstehe problemlos.
+  - Nein danke, ich bin clean.
+  - Kein Drang, ich bin stabil.
+  - Ich brauche das nicht zum Leben.
+  - Kein Craving, ich bin frei.
+  - Ich sage nein, und es fällt leicht.
+  - Nicht einmal ein bisschen.
+  - Ich bin über das Verlangen hinweg.
+  - Kein Bedarf, ich bin stark genug.
+  - Ich schaffe das ohne.
+  - Der Drang ist weg.
+  - Ich brauche keine Krücken mehr.
+  - Nein heißt nein, kein Problem.
+  - Kein Verlangen, keine Sorgen.
+  - Ich bin davon befreit.
+  - Der Entzug ist geschafft.
+  - Ich lebe ohne, und es geht mir gut.
+  - Kein Rückfall, kein Verlangen.
+  - Ich bin stärker als der Drang.
+  - Kein Bedürfnis mehr danach.
+  - Ich habe das hinter mir.
+  - Nüchtern und zufrieden.
 tags:
 - atomic
 - v3.4

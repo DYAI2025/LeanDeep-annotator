@@ -36,14 +36,76 @@ examples:
   - Jedes Mal versprichst du Hilfe und tauchst nicht auf.
   - Du reagierst ständig zu spät.
   - Er ist andauernd genervt von jedem Vorschlag.
+  - Du machst immer dasselbe falsch.
+  - Nie hörst du mir richtig zu.
+  - Jedes Mal muss ich das alleine machen.
+  - Ständig kommst du zu spät.
+  - Andauernd vergisst du, was ich sage.
+  - Immer muss ich alles wiederholen.
+  - Nie nimmst du dir Zeit für mich.
+  - Jedes Mal wenn ich frage, weichst du aus.
+  - Ständig streitest du dich.
+  - Immer das Gleiche mit dir.
+  - Nie bist du zufrieden.
+  - Jedes Mal ein Drama.
+  - Ständig beschwerst du dich.
+  - Andauernd machst du Fehler.
+  - Immer bin ich schuld bei dir.
+  - Nie sagst du danke.
+  - Jedes Mal muss ich nachfragen.
+  - Ständig wechselst du deine Meinung.
+  - Andauernd störst du mich.
+  - Immer wenn es wichtig ist, bist du weg.
+  - Nie hast du eine Lösung.
+  - Jedes Mal ist es dein Problem.
+  - Ständig redest du dagegen.
+  - Andauernd bist du müde.
+  - Immer muss ich die Entscheidung treffen.
+  - Nie zeigst du Initiative.
+  - Jedes Mal kommt eine Ausrede.
+  - Ständig bist du am Handy.
+  - Andauernd planst du um.
+  - Immer wenn ich was sage, rollst du die Augen.
+  - Nie ist es dir recht.
+  - Jedes Mal vergisst du den Termin.
+  - Ständig hast du andere Prioritäten.
+  - Andauernd kommt was dazwischen.
+  - Immer soll ich mich anpassen.
+  - Nie gibst du nach.
+  - Jedes Mal wird es kompliziert.
+  - Ständig muss ich mich erklären.
+  - Andauernd machst du dicht.
+  - Immer reagierst du über.
+  - Nie sagst du, was du wirklich denkst.
+  - Jedes Mal am Ende bin ich der Dumme.
+  - Ständig wiederholst du dich.
+  - Andauernd bist du unzufrieden.
   negative:
-  - manchmal wenn ich dich brauche, bist du nicht da!
+  - Manchmal wenn ich dich brauche, bist du nicht da.
   - Du übernimmst selten Verantwortung.
-  - oft versprichst du Hilfe und tauchst nicht auf.
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
+  - Oft versprichst du Hilfe und tauchst nicht auf.
+  - Ab und zu reagierst du zu spät.
+  - Gelegentlich vergisst du das.
+  - Hin und wieder passiert das.
+  - Meistens läuft es gut, aber nicht heute.
+  - Es kommt vor, dass du zu spät kommst.
+  - Einige Male war das so.
+  - Das passiert gelegentlich, nicht regelmäßig.
+  - Vereinzelt gibt es Probleme.
+  - In letzter Zeit war das häufiger.
+  - Zweimal diese Woche war es so.
+  - Es ist nicht die Regel, aber es kommt vor.
+  - Manchmal fällt es mir auf.
+  - Es gibt Momente, in denen das schwierig ist.
+  - Gelegentlich stimmt das Timing nicht.
+  - Hin und wieder vergisst du es.
+  - Einige Situationen waren so.
+  - Ab und zu erlebe ich das.
+  - Manchmal denke ich das auch.
+  - Es gibt Phasen, in denen das vorkommt.
+  - Gelegentlich ist das ein Thema.
+  - Nicht oft, aber manchmal schon.
+  - Es kommt ab und an vor.
 tags:
 - superlative
 - generalization
