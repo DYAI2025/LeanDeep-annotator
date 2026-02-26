@@ -414,11 +414,42 @@ class MarkerEngine:
     _URL_RE = re.compile(
         r'https?://[^\s<>\"\')]+|www\.[^\s<>\"\')]+', re.IGNORECASE
     )
+    _EMAIL_RE = re.compile(
+        r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', re.IGNORECASE
+    )
+    # WhatsApp / Chat metadata: [Date, Time] Name:, <Anhang: ...>, etc.
+    _META_RE = re.compile(
+        r'\[\d{2}\.\d{2}\.\d{2}, \d{2}:\d{2}(?::\d{2})?\]|<\w+: [^>]+>|\d{2}\.\d{2}\.\d{2}, \d{2}:\d{2} - ', 
+        re.IGNORECASE
+    )
 
     @classmethod
-    def _strip_urls(cls, text: str) -> str:
-        """Replace URLs with whitespace to prevent false pattern matches."""
-        return cls._URL_RE.sub(lambda m: ' ' * len(m.group()), text)
+    def _strip_technical_noise(cls, text: str) -> str:
+        """Replace URLs, emails, and chat metadata with whitespace."""
+        text = cls._URL_RE.sub(lambda m: ' ' * len(m.group()), text)
+        text = cls._EMAIL_RE.sub(lambda m: ' ' * len(m.group()), text)
+        text = cls._META_RE.sub(lambda m: ' ' * len(m.group()), text)
+        return text
+
+    @classmethod
+    def _is_noise_match(cls, text: str) -> bool:
+        """Determines if a match is likely non-linguistic noise (phone, ID, date)."""
+        t = text.strip()
+        if not t: return True
+        
+        # Purely numeric or numeric with separators (Phone numbers, IDs, Timestamps)
+        # e.g., +49 123 456, 2026-02-25, 12:34:56, 00000733
+        if re.match(r'^[+\d\s\.\-:/(),]+$', t) and any(c.isdigit() for c in t):
+            # If it's mostly digits and separators, it's noise
+            digit_count = sum(c.isdigit() for c in t)
+            if digit_count / len(t) > 0.6 or digit_count > 5:
+                return True
+        
+        # Very short matches without letters
+        if len(t) < 3 and not any(c.isalpha() for c in t):
+            return True
+            
+        return False
 
     # -----------------------------------------------------------------------
     # ATO Detection (Level 1): Pure regex matching
@@ -434,8 +465,8 @@ class MarkerEngine:
                 suppressed from the returned list (but should still be passed
                 to SEM via a separate call with include_context_only=True).
         """
-        # Strip URLs before matching to avoid FPs on link characters
-        text = self._strip_urls(text)
+        # Strip technical noise before matching to avoid FPs
+        text = self._strip_technical_noise(text)
         detections = []
 
         for mdef in self.ato_markers:
@@ -445,8 +476,8 @@ class MarkerEngine:
                     continue
                 for m in pat.compiled.finditer(text):
                     matched = m.group()
-                    # Skip noise: matches shorter than 3 chars or pure whitespace
-                    if len(matched.strip()) < 3:
+                    # Skip noise: purely numeric, phone numbers, or extremely short
+                    if self._is_noise_match(matched):
                         continue
                     matches.append(Match(
                         marker_id=mdef.id,
@@ -504,8 +535,8 @@ class MarkerEngine:
           - High intensifier → confidence +0.15
           - Low intensifier → confidence -0.1
         """
-        # Strip URLs before SEM's own pattern matching
-        text = self._strip_urls(text)
+        # Strip technical noise before SEM's own pattern matching
+        text = self._strip_technical_noise(text)
         active_atos = {d.marker_id for d in ato_detections}
 
         # Pre-compute DRA guard modifiers for this text
