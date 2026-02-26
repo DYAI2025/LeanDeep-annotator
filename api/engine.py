@@ -417,6 +417,11 @@ class MarkerEngine:
     _EMAIL_RE = re.compile(
         r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', re.IGNORECASE
     )
+    # Aggressive Phone Regex: +49..., 0170..., with spaces/dashes
+    _PHONE_RE = re.compile(
+        r'(?:phone|Phone|Tel|Tel\.)\s*[:\s]*\+?[\d\s\-\(\)]{7,25}|\+[\d\s\-\(\)]{7,25}',
+        re.IGNORECASE
+    )
     # WhatsApp / Chat metadata: [Date, Time] Name:, <Anhang: ...>, etc.
     _META_RE = re.compile(
         r'\[\d{2}\.\d{2}\.\d{2}, \d{2}:\d{2}(?::\d{2})?\]|<\w+: [^>]+>|\d{2}\.\d{2}\.\d{2}, \d{2}:\d{2} - ', 
@@ -425,9 +430,10 @@ class MarkerEngine:
 
     @classmethod
     def _strip_technical_noise(cls, text: str) -> str:
-        """Replace URLs, emails, and chat metadata with whitespace."""
+        """Replace URLs, emails, phone numbers and chat metadata with whitespace."""
         text = cls._URL_RE.sub(lambda m: ' ' * len(m.group()), text)
         text = cls._EMAIL_RE.sub(lambda m: ' ' * len(m.group()), text)
+        text = cls._PHONE_RE.sub(lambda m: ' ' * len(m.group()), text)
         text = cls._META_RE.sub(lambda m: ' ' * len(m.group()), text)
         return text
 
