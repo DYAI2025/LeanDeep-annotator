@@ -7,7 +7,7 @@ frame:
   pragmatics: "Integration"
   narrative: "surface"
 pattern:
-  tokens: ["holistisch", "ganzheitlich", "Verbundenheit", "Kosmos", "Ganzes"]
+- (?i)\b(holistisch|ganzheitlich|Verbundenheit|kosmisch|integrales?|Ganzheitlichkeit|das Ganze|Ganzheits|holistisches? Denken|ganzheitlicher Ansatz)\b
 examples:
   positive:
   - "ganzheitlicher Blick … Verbundenheit"

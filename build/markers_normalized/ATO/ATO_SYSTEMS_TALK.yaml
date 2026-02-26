@@ -10,7 +10,11 @@ frame:
   concept: System/Komplexität
   pragmatics: Meta
   narrative: surface
-patterns: []
+patterns:
+- type: regex
+  value: (?i)\b(systemisch|systemische[rs]?|Systemdenken|Feedbackschleife|Interdependenz|nichtlinear|emergent|Wechselwirkung|Subsystem|Metaebene|systemisches? Coaching|Systemebene)\b
+- type: regex
+  value: (?i)\b(Rückkopplung|Kausalkette|Selbstregulation|Komplexitätsmanagement|Mustererkennung|systemische[rs]? Betrachtung|Systemarchitektur)\b
 examples:
   positive:
   - Systeme vernetzen, Komplexität integrieren.

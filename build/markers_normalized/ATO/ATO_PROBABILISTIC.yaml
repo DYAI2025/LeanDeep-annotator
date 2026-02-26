@@ -10,7 +10,9 @@ frame:
   concept: Wahrscheinlichkeitssprache
   pragmatics: Unsicherheit
   narrative: surface
-patterns: []
+patterns:
+- type: regex
+  value: (?i)\b(wahrscheinlich|vermutlich|eventuell|tendenziell|möglicherweise|potenziell|dürfte|wohl|womöglich|vielleicht|es könnte|könnte sein|könnte auch)\b
 examples:
   positive:
   - vielleicht ist es so … bin mir nicht sicher

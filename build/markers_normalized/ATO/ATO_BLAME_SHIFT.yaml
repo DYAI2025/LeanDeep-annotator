@@ -2,7 +2,7 @@ id: ATO_BLAME_SHIFT
 schema: LeanDeep
 version: '5.1'
 layer: ATO
-lang: en
+lang: de
 description: Atomic pattern for blame shifting language
 frame:
   signal:
@@ -12,7 +12,9 @@ frame:
   narrative: surface
 patterns:
 - type: regex
-  value: "(?i)\\b(you made me|you forced me|because of you|your fault)\\b"
+  value: (?i)\b(you made me|you forced me|because of you|your fault)\b
+- type: regex
+  value: (?i)\b(du hast mich dazu gebracht|du hast mich gezwungen|wegen dir|deine Schuld|durch dich|dein Verhalten hat mich|du hast das verursacht|wegen deiner)\b
 examples:
   positive:
   - You made me do this.

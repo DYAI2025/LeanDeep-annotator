@@ -7,7 +7,7 @@ frame:
   pragmatics: "Ordnung"
   narrative: "surface"
 pattern:
-  tokens: ["Ordnung", "Pflicht", "Regel", "Autorität", "Gehorsam"]
+- (?i)\b(Ordnung|Pflicht|Regeln?|Autorität|Gehorsam|Vorschriften?|Hierarchie|Disziplin|Protokoll|Dienstanweisung|regeltreu|pflichtbewusst|Befehl|Dienstordnung|regelkonform|Regelwerk)\b
 examples:
   positive:
   - "Regeln sind Regeln … Pflicht zuerst"

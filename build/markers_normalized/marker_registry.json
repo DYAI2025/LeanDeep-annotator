@@ -2566,7 +2566,7 @@
       "schema": "LeanDeep",
       "version": "5.1",
       "layer": "ATO",
-      "lang": "en",
+      "lang": "de",
       "description": "Atomic pattern for blame shifting language",
       "frame": {
         "signal": [
@@ -2580,6 +2580,10 @@
         {
           "type": "regex",
           "value": "(?i)\\b(you made me|you forced me|because of you|your fault)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(du hast mich dazu gebracht|du hast mich gezwungen|wegen dir|deine Schuld|durch dich|dein Verhalten hat mich|du hast das verursacht|wegen deiner)\\b"
         }
       ],
       "examples": {
@@ -2642,23 +2646,15 @@
       "patterns": [
         {
           "type": "regex",
-          "value": "(?i)\\\\bdu\\ nicht\\\\b"
+          "value": "(?i)\\b(deine Schuld|dein Fehler|du bist schuld|wegen dir|selber schuld|durch dich)\\b"
         },
         {
           "type": "regex",
-          "value": "(?i)\\\\bdu\\ hast\\\\b"
+          "value": "(?i)\\b(du hast mich dazu gebracht|du hast angefangen|wenn du nicht wärst?|das liegt an dir|du hast das verursacht)\\b"
         },
         {
           "type": "regex",
-          "value": "(?i)\\\\bnicht\\ ich\\.\\\\b"
-        },
-        {
-          "type": "regex",
-          "value": "(?i)\\\\bwenn\\ du\\\\b"
-        },
-        {
-          "type": "regex",
-          "value": "(?i)\\\\bselber\\ schuld\\\\b"
+          "value": "(?i)\\b(wegen deinem? Verhalten|wärst? du nicht|du bist verantwortlich dafür|du hast mich gezwungen|du hast provoziert)\\b"
         }
       ],
       "examples": {
@@ -5873,19 +5869,23 @@
       "patterns": [
         {
           "type": "regex",
-          "value": "Ich wollte( doch)? nur helfen\\."
+          "value": "(?i)ich\\s+(?:hab(?:e)?|wollte)\\s+(?:es\\s+|das\\s+)?(?:doch\\s+)?nur\\s+(?:gut gemeint|helfen|das Beste gewollt)"
         },
         {
           "type": "regex",
-          "value": "Ich hab(?:e)? es doch nur gut gemeint(?: mit dir)?\\."
+          "value": "(?i)(?:das\\s+)?war\\s+(?:wirklich\\s+|doch\\s+)?nicht\\s+(?:meine|so)\\s+Absicht"
         },
         {
           "type": "regex",
-          "value": "Das war wirklich nicht meine Absicht,.*"
+          "value": "(?i)ich\\s+(?:meinte|meine)\\s+(?:es\\s+)?(?:doch\\s+)?nur\\s+gut"
         },
         {
           "type": "regex",
-          "value": "Ich dachte, ich helfe damit.*"
+          "value": "(?i)ich\\s+(?:konnte|wusste)\\s+(?:doch\\s+)?nicht\\s+(?:ahnen|wissen)"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(keine böse Absicht|nicht absichtlich|nicht so gemeint|hab(?:e)? es doch nur gut gemeint|wollte nur helfen)\\b"
         }
       ],
       "examples": {
@@ -16959,10 +16959,19 @@
       "patterns": [
         {
           "type": "regex",
-          "value": "(?i)\\b(niemand versteht mich|keiner hilft mir|immer bin ich der/die dumme|ich armes(\\s+ich)?|keiner steht hinter mir)\\b",
-          "flags": [
-            "IGNORECASE"
-          ]
+          "value": "(?i)\\b(niemand versteht mich|keiner hilft mir|keiner steht hinter mir|ich bin doch allein)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(immer bin ich (?:der|die) (?:Dumm|Blöd)|warum passiert das immer mir|alle lassen mich|alle gegen mich)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(ich armes? Ich|mir hilft niemand|ich habe niemanden|ich bin allein damit|keiner sieht das)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(immer treffe ich es|warum immer ich|ich komme da nie raus|es bringt doch nichts)\\b"
         }
       ],
       "examples": {
@@ -31360,19 +31369,19 @@
       "patterns": [
         {
           "type": "regex",
-          "value": "(?i)\baber\b"
+          "value": "(?i)\\baber\\b"
         },
         {
           "type": "regex",
-          "value": "(?i)\bjedoch\b"
+          "value": "(?i)\\bjedoch\\b"
         },
         {
           "type": "regex",
-          "value": "(?i)\bwobei\b"
+          "value": "(?i)\\bwobei\\b"
         },
         {
           "type": "regex",
-          "value": "(?i)\btrotzdem\b"
+          "value": "(?i)\\btrotzdem\\b"
         }
       ],
       "examples": {
@@ -53878,13 +53887,11 @@
         "closure"
       ],
       "rating": 1,
-      "composed_of": {
-        "any_of": [
-          "ATO_AVOIDANCE_PHRASE",
-          "ATO_TOPIC_SWITCH_ADVERSATIVE",
-          "ATO_SUBJECT_CLOSED"
-        ]
-      },
+      "composed_of": [
+        "ATO_AVOIDANCE_PHRASE",
+        "ATO_TOPIC_SWITCH_ADVERSATIVE",
+        "ATO_SUBJECT_CLOSED"
+      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 4 messages",
         "window": 4
@@ -66576,15 +66583,13 @@
         "identity"
       ],
       "rating": 1,
-      "composed_of": {
-        "any_of": [
-          "ATO_VICTIM_LANGUAGE",
-          "ATO_PITY_APPEAL",
-          "ATO_RESIGNATION_PHRASE",
-          "ATO_PREEMPTIVE_EXCUSE",
-          "ATO_BLAME_SHIFT"
-        ]
-      },
+      "composed_of": [
+        "ATO_VICTIM_LANGUAGE",
+        "ATO_PITY_APPEAL",
+        "ATO_RESIGNATION_PHRASE",
+        "ATO_PREEMPTIVE_EXCUSE",
+        "ATO_BLAME_SHIFT"
+      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 3 messages",
         "window": 3
@@ -70773,7 +70778,12 @@
         "pragmatics": "Prokrastination",
         "narrative": "surface"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(später|nachher|irgendwann|sobald|demnächst|bald|mach ich noch|erledige ich|kommt noch|mach ich morgen|mach ich dann)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "mach ich heute noch … vielleicht morgen",
@@ -70975,7 +70985,16 @@
         "pragmatics": "Durchsetzung",
         "narrative": "surface"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(dominier|Dominanz|setze? mich durch|ich bestimme|ich herrsche|ich regiere|Kontrolle behalten|Kontrolle übernehmen|dulde keinen|Unterwerfung|keine Gnade)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(ich bestimme hier|mein Wille|ich erzwinge|kein Widerspruch|Gehorche|wer nicht hört|ich nehme mir|ohne Erlaubnis|ich nehme die Kontrolle)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "ich setze mich durch … Stärke zählt",
@@ -71394,7 +71413,12 @@
         "pragmatics": "Integration",
         "narrative": "surface"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(holistisch|ganzheitlich|Verbundenheit|kosmisch|integrales?|Ganzheitlichkeit|das Ganze|Ganzheits|holistisches? Denken|ganzheitlicher Ansatz)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "ganzheitlicher Blick … Verbundenheit",
@@ -72463,7 +72487,12 @@
         "pragmatics": "Unsicherheit",
         "narrative": "surface"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(wahrscheinlich|vermutlich|eventuell|tendenziell|möglicherweise|potenziell|dürfte|wohl|womöglich|vielleicht|es könnte|könnte sein|könnte auch)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "vielleicht ist es so … bin mir nicht sicher",
@@ -73741,7 +73770,12 @@
         "pragmatics": "Ordnung",
         "narrative": "surface"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(Ordnung|Pflicht|Regeln?|Autorität|Gehorsam|Vorschriften?|Hierarchie|Disziplin|Protokoll|Dienstanweisung|regeltreu|pflichtbewusst|Befehl|Dienstordnung|regelkonform|Regelwerk)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "Regeln sind Regeln … Pflicht zuerst",
@@ -73858,7 +73892,12 @@
         "pragmatics": "Gemeinschaft",
         "narrative": "surface"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(Empathie|empathisch|Konsens|gleichwertig|Gemeinschaft|Mitgefühl|Inklusion|Fürsorge|Zusammenhalt|Harmonie|Solidarität|Anteilnahme|aufeinander|Rücksicht|einfühlsam|Wohlbefinden|Bedürfnisse)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "Konsens finden … Empathie zeigen",
@@ -73975,7 +74014,16 @@
         "pragmatics": "Leistung",
         "narrative": "surface"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(KPIs?|Performance|Effizienz|ergebnisorientiert|Zielerreichung|Benchmark|OKRs?|Metriken?|Kennzahlen?|Revenue|Umsatz|Wachstum|Marktführer|Produktivität|skalier|profitabel)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(optimier|Target|Pipeline|Profitabilität|Conversion.Rate|Leistungsträger|Spitzenleistung|Shareholder.Value|Output.maximier|Wettbewerb|High.Performance)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "Ziele setzen … Leistung messen",
@@ -74209,7 +74257,16 @@
         "pragmatics": "Macht",
         "narrative": "surface"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(setze? mich durch|Durchsetzung|Durchsetzungsvermögen|Alpha|Anführer|Machtposition|hier bestimm|hier regier|Machtkampf|Stärke zeig|Dominanz signalisier|niemand bremst mich)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(Respekt erzwing|dulde keinen Widerspruch|akzeptiere kein Nein|ich befehle|ich herrsche|ich regiere hier|Unterwerfung|kein Erbarmen|Widerstand ist zwecklos)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "ich setze mich durch … Stärke zählt",
@@ -74326,7 +74383,16 @@
         "pragmatics": "Holismus",
         "narrative": "surface"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(ganzheitlich|holistisch|kosmisch|Verbundenheit|planetar|Schwingung|kollektives Bewusstsein|Resonanz|Ganzheit|integrales?|universell|kollektive[rs]? Intelligenz)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(kollektive[rs]? Unbewusste|kosmische[rs]? Netzwerk|planetares? Bewusstsein|Erde.als.Organismus|Einheit.von|morphisches? Feld)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "ganzheitlicher Blick … Verbundenheit",
@@ -74443,7 +74509,16 @@
         "pragmatics": "Systemdenken",
         "narrative": "surface"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(systemisch|Systemdenken|mehrperspektivisch|Metaebene|Meta-Ebene|Feedbackschleife|Emergenz|Interdependenz|Adaptivität|nichtlinear|kontextabhängig|Wechselwirkung|Subsystem|Systemebene|systemische[rs]?)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(Second-Order|Polarity.Management|integrales?|Metakognition|Komplexitätskompetenz|Hebelpunkt|systemisches? Denken)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "Systeme vernetzen … Komplexität integrieren",
@@ -75933,7 +76008,16 @@
         "pragmatics": "Meta",
         "narrative": "surface"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(systemisch|systemische[rs]?|Systemdenken|Feedbackschleife|Interdependenz|nichtlinear|emergent|Wechselwirkung|Subsystem|Metaebene|systemisches? Coaching|Systemebene)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(Rückkopplung|Kausalkette|Selbstregulation|Komplexitätsmanagement|Mustererkennung|systemische[rs]? Betrachtung|Systemarchitektur)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "Systeme vernetzen, Komplexität integrieren.",

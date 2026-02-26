@@ -10,7 +10,11 @@ frame:
   concept: Dominanz/Macht
   pragmatics: Durchsetzung
   narrative: surface
-patterns: []
+patterns:
+- type: regex
+  value: (?i)\b(dominier|Dominanz|setze? mich durch|ich bestimme|ich herrsche|ich regiere|Kontrolle behalten|Kontrolle übernehmen|dulde keinen|Unterwerfung|keine Gnade)\b
+- type: regex
+  value: (?i)\b(ich bestimme hier|mein Wille|ich erzwinge|kein Widerspruch|Gehorche|wer nicht hört|ich nehme mir|ohne Erlaubnis|ich nehme die Kontrolle)\b
 examples:
   positive:
   - ich setze mich durch … Stärke zählt

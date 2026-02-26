@@ -4,34 +4,34 @@
     "total_messages": 99304,
     "total_chars": 3499257,
     "threshold": 0.3,
-    "total_detections": 121563,
-    "unique_markers_fired": 395,
-    "avg_detections_per_chunk": 78.8
+    "total_detections": 137047,
+    "unique_markers_fired": 429,
+    "avg_detections_per_chunk": 88.8
   },
   "layer_stats": {
     "ATO": {
-      "total_detections": 87363,
-      "unique_markers": 251,
-      "avg_confidence": 0.905,
-      "hits_per_1k_msgs": 879.75
+      "total_detections": 95917,
+      "unique_markers": 265,
+      "avg_confidence": 0.896,
+      "hits_per_1k_msgs": 965.89
     },
     "SEM": {
-      "total_detections": 21695,
-      "unique_markers": 58,
-      "avg_confidence": 0.821,
-      "hits_per_1k_msgs": 218.47
+      "total_detections": 27308,
+      "unique_markers": 66,
+      "avg_confidence": 0.858,
+      "hits_per_1k_msgs": 274.99
     },
     "CLU": {
-      "total_detections": 7192,
-      "unique_markers": 64,
-      "avg_confidence": 0.431,
-      "hits_per_1k_msgs": 72.42
+      "total_detections": 8131,
+      "unique_markers": 74,
+      "avg_confidence": 0.434,
+      "hits_per_1k_msgs": 81.88
     },
     "MEMA": {
-      "total_detections": 5313,
-      "unique_markers": 22,
-      "avg_confidence": 0.612,
-      "hits_per_1k_msgs": 53.5
+      "total_detections": 5691,
+      "unique_markers": 24,
+      "avg_confidence": 0.619,
+      "hits_per_1k_msgs": 57.31
     }
   },
   "marker_stats": [
@@ -108,6 +108,36 @@
       "chunks_hit": 1443,
       "chunk_coverage": 93.5,
       "de_count": 5579,
+      "en_count": 13
+    },
+    {
+      "marker_id": "ATO_TOPIC_SWITCH_ADVERSATIVE",
+      "layer": "ATO",
+      "family": null,
+      "description": "Adversative Konnektoren, häufiges Soft-Umschalten des Themas.",
+      "count": 5545,
+      "hits_per_1k_msgs": 55.84,
+      "avg_confidence": 0.701,
+      "min_confidence": 0.7,
+      "max_confidence": 0.8,
+      "chunks_hit": 1436,
+      "chunk_coverage": 93.1,
+      "de_count": 5532,
+      "en_count": 13
+    },
+    {
+      "marker_id": "SEM_REACTION_FORMATION_TEXT",
+      "layer": "SEM",
+      "family": null,
+      "description": "Positive Formulierungen in negativem Kontext mit adversativem Umschalten.",
+      "count": 5545,
+      "hits_per_1k_msgs": 55.84,
+      "avg_confidence": 1.0,
+      "min_confidence": 1.0,
+      "max_confidence": 1.0,
+      "chunks_hit": 1436,
+      "chunk_coverage": 93.1,
+      "de_count": 5532,
       "en_count": 13
     },
     {
@@ -321,6 +351,21 @@
       "en_count": 5
     },
     {
+      "marker_id": "ATO_PROBABILISTIC",
+      "layer": "ATO",
+      "family": null,
+      "description": "",
+      "count": 1494,
+      "hits_per_1k_msgs": 15.04,
+      "avg_confidence": 1.0,
+      "min_confidence": 1.0,
+      "max_confidence": 1.0,
+      "chunks_hit": 882,
+      "chunk_coverage": 57.2,
+      "de_count": 1489,
+      "en_count": 5
+    },
+    {
       "marker_id": "ATO_ACTIVITY_VERB",
       "layer": "ATO",
       "family": null,
@@ -439,6 +484,21 @@
       "chunk_coverage": 52.8,
       "de_count": 1304,
       "en_count": 20
+    },
+    {
+      "marker_id": "ATO_DELAY_WORD",
+      "layer": "ATO",
+      "family": null,
+      "description": "",
+      "count": 1268,
+      "hits_per_1k_msgs": 12.77,
+      "avg_confidence": 1.0,
+      "min_confidence": 1.0,
+      "max_confidence": 1.0,
+      "chunks_hit": 781,
+      "chunk_coverage": 50.6,
+      "de_count": 1267,
+      "en_count": 1
     },
     {
       "marker_id": "ATO_GRATITUDE_APPRECIATION",
@@ -619,6 +679,21 @@
       "chunk_coverage": 32.2,
       "de_count": 662,
       "en_count": 2
+    },
+    {
+      "marker_id": "CLU_VERBAL_PROSODY_INCONGRUENCE",
+      "layer": "CLU",
+      "family": null,
+      "description": "Wortlaut vs. Prosodie kollidieren (Text×Audio-Inkongruenz).",
+      "count": 661,
+      "hits_per_1k_msgs": 6.66,
+      "avg_confidence": 0.401,
+      "min_confidence": 0.4,
+      "max_confidence": 0.7,
+      "chunks_hit": 661,
+      "chunk_coverage": 42.8,
+      "de_count": 658,
+      "en_count": 3
     },
     {
       "marker_id": "ATO_SURPRISE_ASTONISHMENT",
@@ -889,6 +964,36 @@
       "chunk_coverage": 22.7,
       "de_count": 466,
       "en_count": 0
+    },
+    {
+      "marker_id": "MEMA_ZERO_PUNISHMENT_GUARD",
+      "layer": "MEMA",
+      "family": null,
+      "description": "",
+      "count": 460,
+      "hits_per_1k_msgs": 4.63,
+      "avg_confidence": 0.777,
+      "min_confidence": 0.75,
+      "max_confidence": 1.0,
+      "chunks_hit": 460,
+      "chunk_coverage": 29.8,
+      "de_count": 457,
+      "en_count": 3
+    },
+    {
+      "marker_id": "MEMA_META_DRIFT",
+      "layer": "MEMA",
+      "family": null,
+      "description": "",
+      "count": 453,
+      "hits_per_1k_msgs": 4.56,
+      "avg_confidence": 0.622,
+      "min_confidence": 0.6,
+      "max_confidence": 0.8,
+      "chunks_hit": 453,
+      "chunk_coverage": 29.4,
+      "de_count": 451,
+      "en_count": 2
     },
     {
       "marker_id": "ATO_MORAL_AUTHORITY",
@@ -1251,21 +1356,6 @@
       "en_count": 0
     },
     {
-      "marker_id": "MEMA_META_DRIFT",
-      "layer": "MEMA",
-      "family": null,
-      "description": "",
-      "count": 284,
-      "hits_per_1k_msgs": 2.86,
-      "avg_confidence": 0.606,
-      "min_confidence": 0.6,
-      "max_confidence": 0.7,
-      "chunks_hit": 284,
-      "chunk_coverage": 18.4,
-      "de_count": 283,
-      "en_count": 1
-    },
-    {
       "marker_id": "ATO_DIRECT_ACCUSATION",
       "layer": "ATO",
       "family": null,
@@ -1335,21 +1425,6 @@
       "avg_confidence": 0.412,
       "min_confidence": 0.412,
       "max_confidence": 0.412,
-      "chunks_hit": 270,
-      "chunk_coverage": 17.5,
-      "de_count": 269,
-      "en_count": 1
-    },
-    {
-      "marker_id": "MEMA_ZERO_PUNISHMENT_GUARD",
-      "layer": "MEMA",
-      "family": null,
-      "description": "",
-      "count": 270,
-      "hits_per_1k_msgs": 2.72,
-      "avg_confidence": 0.75,
-      "min_confidence": 0.75,
-      "max_confidence": 0.75,
       "chunks_hit": 270,
       "chunk_coverage": 17.5,
       "de_count": 269,
@@ -1428,6 +1503,21 @@
       "chunks_hit": 205,
       "chunk_coverage": 13.3,
       "de_count": 252,
+      "en_count": 2
+    },
+    {
+      "marker_id": "CLU_UNCERTAINTY_CASCADE",
+      "layer": "CLU",
+      "family": null,
+      "description": "",
+      "count": 240,
+      "hits_per_1k_msgs": 2.42,
+      "avg_confidence": 0.6,
+      "min_confidence": 0.6,
+      "max_confidence": 0.6,
+      "chunks_hit": 240,
+      "chunk_coverage": 15.6,
+      "de_count": 238,
       "en_count": 2
     },
     {
@@ -1746,21 +1836,6 @@
       "en_count": 0
     },
     {
-      "marker_id": "CLU_ACTIVE_REPAIR",
-      "layer": "CLU",
-      "family": null,
-      "description": "Aktive Versuche, Konflikte zu reparieren durch Entschuldigungen, Empathie oder Zugeständnisse",
-      "count": 125,
-      "hits_per_1k_msgs": 1.26,
-      "avg_confidence": 0.41,
-      "min_confidence": 0.4,
-      "max_confidence": 0.8,
-      "chunks_hit": 125,
-      "chunk_coverage": 8.1,
-      "de_count": 123,
-      "en_count": 2
-    },
-    {
       "marker_id": "ATO_AFFECT_FLAT",
       "layer": "ATO",
       "family": null,
@@ -1789,6 +1864,21 @@
       "chunk_coverage": 6.3,
       "de_count": 119,
       "en_count": 3
+    },
+    {
+      "marker_id": "CLU_ACTIVE_REPAIR",
+      "layer": "CLU",
+      "family": null,
+      "description": "Aktive Versuche, Konflikte zu reparieren durch Entschuldigungen, Empathie oder Zugeständnisse",
+      "count": 122,
+      "hits_per_1k_msgs": 1.23,
+      "avg_confidence": 0.411,
+      "min_confidence": 0.4,
+      "max_confidence": 0.8,
+      "chunks_hit": 122,
+      "chunk_coverage": 7.9,
+      "de_count": 120,
+      "en_count": 2
     },
     {
       "marker_id": "SEM_CONDITIONALITY_FRAME",
@@ -1833,6 +1923,21 @@
       "chunks_hit": 100,
       "chunk_coverage": 6.5,
       "de_count": 111,
+      "en_count": 0
+    },
+    {
+      "marker_id": "ATO_SD_BLUE_LEX",
+      "layer": "ATO",
+      "family": null,
+      "description": "",
+      "count": 110,
+      "hits_per_1k_msgs": 1.11,
+      "avg_confidence": 1.0,
+      "min_confidence": 1.0,
+      "max_confidence": 1.0,
+      "chunks_hit": 94,
+      "chunk_coverage": 6.1,
+      "de_count": 110,
       "en_count": 0
     },
     {
@@ -2556,6 +2661,21 @@
       "en_count": 0
     },
     {
+      "marker_id": "ATO_HOLISM_LEX",
+      "layer": "ATO",
+      "family": null,
+      "description": "",
+      "count": 43,
+      "hits_per_1k_msgs": 0.43,
+      "avg_confidence": 1.0,
+      "min_confidence": 1.0,
+      "max_confidence": 1.0,
+      "chunks_hit": 43,
+      "chunk_coverage": 2.8,
+      "de_count": 43,
+      "en_count": 0
+    },
+    {
       "marker_id": "ATO_ATTENTION_TO_FEELINGS",
       "layer": "ATO",
       "family": null,
@@ -2764,6 +2884,36 @@
       "chunk_coverage": 2.1,
       "de_count": 31,
       "en_count": 4
+    },
+    {
+      "marker_id": "ATO_SD_GREEN_LEX",
+      "layer": "ATO",
+      "family": null,
+      "description": "",
+      "count": 33,
+      "hits_per_1k_msgs": 0.33,
+      "avg_confidence": 1.0,
+      "min_confidence": 1.0,
+      "max_confidence": 1.0,
+      "chunks_hit": 30,
+      "chunk_coverage": 1.9,
+      "de_count": 33,
+      "en_count": 0
+    },
+    {
+      "marker_id": "SEM_SD_GREEN_EMPATHY",
+      "layer": "SEM",
+      "family": null,
+      "description": "",
+      "count": 33,
+      "hits_per_1k_msgs": 0.33,
+      "avg_confidence": 1.0,
+      "min_confidence": 1.0,
+      "max_confidence": 1.0,
+      "chunks_hit": 30,
+      "chunk_coverage": 1.9,
+      "de_count": 33,
+      "en_count": 0
     },
     {
       "marker_id": "ATO_CRITICISM",
@@ -3006,6 +3156,21 @@
       "en_count": 21
     },
     {
+      "marker_id": "CLU_HEATED_CONFLICT",
+      "layer": "CLU",
+      "family": null,
+      "description": "Erhöhte Spannung durch Vorwürfe, Defensive oder Eskalation",
+      "count": 26,
+      "hits_per_1k_msgs": 0.26,
+      "avg_confidence": 0.4,
+      "min_confidence": 0.4,
+      "max_confidence": 0.4,
+      "chunks_hit": 26,
+      "chunk_coverage": 1.7,
+      "de_count": 26,
+      "en_count": 0
+    },
+    {
       "marker_id": "ATO_ANTICIPATION_EXPRESSION",
       "layer": "ATO",
       "family": null,
@@ -3019,21 +3184,6 @@
       "chunk_coverage": 1.6,
       "de_count": 23,
       "en_count": 3
-    },
-    {
-      "marker_id": "CLU_HEATED_CONFLICT",
-      "layer": "CLU",
-      "family": null,
-      "description": "Erhöhte Spannung durch Vorwürfe, Defensive oder Eskalation",
-      "count": 25,
-      "hits_per_1k_msgs": 0.25,
-      "avg_confidence": 0.4,
-      "min_confidence": 0.4,
-      "max_confidence": 0.4,
-      "chunks_hit": 25,
-      "chunk_coverage": 1.6,
-      "de_count": 25,
-      "en_count": 0
     },
     {
       "marker_id": "ATO_WEDDING_TASK_NEGOTIATION",
@@ -3366,6 +3516,21 @@
       "en_count": 0
     },
     {
+      "marker_id": "SEM_BOUNDARY_INVERSION",
+      "layer": "SEM",
+      "family": null,
+      "description": "",
+      "count": 16,
+      "hits_per_1k_msgs": 0.16,
+      "avg_confidence": 0.569,
+      "min_confidence": 0.56,
+      "max_confidence": 0.7,
+      "chunks_hit": 16,
+      "chunk_coverage": 1.0,
+      "de_count": 16,
+      "en_count": 0
+    },
+    {
       "marker_id": "ATO_SHUTDOWN_SYMPTOM",
       "layer": "ATO",
       "family": null,
@@ -3456,6 +3621,21 @@
       "en_count": 0
     },
     {
+      "marker_id": "MEMA_SD_TRANSITION",
+      "layer": "MEMA",
+      "family": null,
+      "description": "",
+      "count": 13,
+      "hits_per_1k_msgs": 0.13,
+      "avg_confidence": 0.583,
+      "min_confidence": 0.583,
+      "max_confidence": 0.583,
+      "chunks_hit": 13,
+      "chunk_coverage": 0.8,
+      "de_count": 13,
+      "en_count": 0
+    },
+    {
       "marker_id": "ATO_UNCERTAINTY",
       "layer": "ATO",
       "family": null,
@@ -3469,6 +3649,21 @@
       "chunk_coverage": 0.8,
       "de_count": 2,
       "en_count": 11
+    },
+    {
+      "marker_id": "ATO_SD_ORANGE_LEX",
+      "layer": "ATO",
+      "family": null,
+      "description": "",
+      "count": 13,
+      "hits_per_1k_msgs": 0.13,
+      "avg_confidence": 0.8,
+      "min_confidence": 0.8,
+      "max_confidence": 0.8,
+      "chunks_hit": 9,
+      "chunk_coverage": 0.6,
+      "de_count": 13,
+      "en_count": 0
     },
     {
       "marker_id": "ATO_GOTTMAN_CONTEMPT",
@@ -3561,6 +3756,21 @@
       "en_count": 0
     },
     {
+      "marker_id": "CLU_PERSONA_SWITCH_RAPID",
+      "layer": "CLU",
+      "family": null,
+      "description": "",
+      "count": 12,
+      "hits_per_1k_msgs": 0.12,
+      "avg_confidence": 0.412,
+      "min_confidence": 0.412,
+      "max_confidence": 0.412,
+      "chunks_hit": 12,
+      "chunk_coverage": 0.8,
+      "de_count": 12,
+      "en_count": 0
+    },
+    {
       "marker_id": "ATO_EXPRESSIVE_APHASIA",
       "layer": "ATO",
       "family": null,
@@ -3589,6 +3799,51 @@
       "chunk_coverage": 0.6,
       "de_count": 3,
       "en_count": 8
+    },
+    {
+      "marker_id": "ATO_BLAME_SHIFT",
+      "layer": "ATO",
+      "family": null,
+      "description": "Atomic pattern for blame shifting language",
+      "count": 11,
+      "hits_per_1k_msgs": 0.11,
+      "avg_confidence": 0.8,
+      "min_confidence": 0.8,
+      "max_confidence": 0.8,
+      "chunks_hit": 11,
+      "chunk_coverage": 0.7,
+      "de_count": 11,
+      "en_count": 0
+    },
+    {
+      "marker_id": "CLU_VALUE_REFRAME",
+      "layer": "CLU",
+      "family": null,
+      "description": "",
+      "count": 11,
+      "hits_per_1k_msgs": 0.11,
+      "avg_confidence": 0.475,
+      "min_confidence": 0.475,
+      "max_confidence": 0.475,
+      "chunks_hit": 11,
+      "chunk_coverage": 0.7,
+      "de_count": 11,
+      "en_count": 0
+    },
+    {
+      "marker_id": "CLU_SD_STAGE_GREEN",
+      "layer": "CLU",
+      "family": null,
+      "description": "",
+      "count": 11,
+      "hits_per_1k_msgs": 0.11,
+      "avg_confidence": 0.6,
+      "min_confidence": 0.6,
+      "max_confidence": 0.6,
+      "chunks_hit": 11,
+      "chunk_coverage": 0.7,
+      "de_count": 11,
+      "en_count": 0
     },
     {
       "marker_id": "ATO_COMMITMENT_PHRASES",
@@ -3756,6 +4011,36 @@
       "en_count": 0
     },
     {
+      "marker_id": "ATO_BLAME_SHIFT_MARKER",
+      "layer": "ATO",
+      "family": null,
+      "description": "",
+      "count": 9,
+      "hits_per_1k_msgs": 0.09,
+      "avg_confidence": 0.733,
+      "min_confidence": 0.733,
+      "max_confidence": 0.733,
+      "chunks_hit": 9,
+      "chunk_coverage": 0.6,
+      "de_count": 9,
+      "en_count": 0
+    },
+    {
+      "marker_id": "SEM_VICTIM_OFFENDER_REVERSAL",
+      "layer": "SEM",
+      "family": null,
+      "description": "",
+      "count": 9,
+      "hits_per_1k_msgs": 0.09,
+      "avg_confidence": 0.8,
+      "min_confidence": 0.8,
+      "max_confidence": 0.8,
+      "chunks_hit": 9,
+      "chunk_coverage": 0.6,
+      "de_count": 9,
+      "en_count": 0
+    },
+    {
       "marker_id": "ATO_MISC",
       "layer": "ATO",
       "family": null,
@@ -3831,6 +4116,21 @@
       "en_count": 7
     },
     {
+      "marker_id": "ATO_SYSTEMS_TALK",
+      "layer": "ATO",
+      "family": null,
+      "description": "",
+      "count": 8,
+      "hits_per_1k_msgs": 0.08,
+      "avg_confidence": 0.8,
+      "min_confidence": 0.8,
+      "max_confidence": 0.8,
+      "chunks_hit": 6,
+      "chunk_coverage": 0.4,
+      "de_count": 8,
+      "en_count": 0
+    },
+    {
       "marker_id": "CLU_SPIRAL_PERSONA_GRUEN",
       "layer": "CLU",
       "family": null,
@@ -3902,6 +4202,36 @@
       "max_confidence": 1.0,
       "chunks_hit": 7,
       "chunk_coverage": 0.5,
+      "de_count": 7,
+      "en_count": 0
+    },
+    {
+      "marker_id": "ATO_SD_YELLOW_LEX",
+      "layer": "ATO",
+      "family": null,
+      "description": "",
+      "count": 7,
+      "hits_per_1k_msgs": 0.07,
+      "avg_confidence": 0.8,
+      "min_confidence": 0.8,
+      "max_confidence": 0.8,
+      "chunks_hit": 5,
+      "chunk_coverage": 0.3,
+      "de_count": 7,
+      "en_count": 0
+    },
+    {
+      "marker_id": "SEM_SD_YELLOW_SYSTEMS",
+      "layer": "SEM",
+      "family": null,
+      "description": "",
+      "count": 7,
+      "hits_per_1k_msgs": 0.07,
+      "avg_confidence": 1.0,
+      "min_confidence": 1.0,
+      "max_confidence": 1.0,
+      "chunks_hit": 5,
+      "chunk_coverage": 0.3,
       "de_count": 7,
       "en_count": 0
     },
@@ -4071,6 +4401,21 @@
       "en_count": 0
     },
     {
+      "marker_id": "MEMA_FAMILY_SYSTEM_DYSFUNCTION",
+      "layer": "MEMA",
+      "family": null,
+      "description": "Meta-Muster dysfunktionaler Familiensysteme mit multiplen Konfliktebenen.",
+      "count": 6,
+      "hits_per_1k_msgs": 0.06,
+      "avg_confidence": 0.5,
+      "min_confidence": 0.5,
+      "max_confidence": 0.5,
+      "chunks_hit": 6,
+      "chunk_coverage": 0.4,
+      "de_count": 6,
+      "en_count": 0
+    },
+    {
       "marker_id": "CLU_SHAME_ALERT_TEXT",
       "layer": "CLU",
       "family": null,
@@ -4146,6 +4491,21 @@
       "en_count": 5
     },
     {
+      "marker_id": "ATO_SD_TURQUOISE_LEX",
+      "layer": "ATO",
+      "family": null,
+      "description": "",
+      "count": 5,
+      "hits_per_1k_msgs": 0.05,
+      "avg_confidence": 0.8,
+      "min_confidence": 0.8,
+      "max_confidence": 0.8,
+      "chunks_hit": 5,
+      "chunk_coverage": 0.3,
+      "de_count": 5,
+      "en_count": 0
+    },
+    {
       "marker_id": "CLU_CONSISTENCY_BIAS_PATTERN",
       "layer": "CLU",
       "family": null,
@@ -4206,15 +4566,15 @@
       "en_count": 0
     },
     {
-      "marker_id": "SEM_BOUNDARY_INVERSION",
-      "layer": "SEM",
+      "marker_id": "ATO_DOMINANCE",
+      "layer": "ATO",
       "family": null,
       "description": "",
       "count": 5,
       "hits_per_1k_msgs": 0.05,
-      "avg_confidence": 0.588,
-      "min_confidence": 0.56,
-      "max_confidence": 0.7,
+      "avg_confidence": 0.8,
+      "min_confidence": 0.8,
+      "max_confidence": 0.8,
       "chunks_hit": 5,
       "chunk_coverage": 0.3,
       "de_count": 5,
@@ -4566,6 +4926,21 @@
       "en_count": 0
     },
     {
+      "marker_id": "SEM_SD_BLUE_ORDER",
+      "layer": "SEM",
+      "family": null,
+      "description": "",
+      "count": 3,
+      "hits_per_1k_msgs": 0.03,
+      "avg_confidence": 1.0,
+      "min_confidence": 1.0,
+      "max_confidence": 1.0,
+      "chunks_hit": 3,
+      "chunk_coverage": 0.2,
+      "de_count": 3,
+      "en_count": 0
+    },
+    {
       "marker_id": "ATO_TEAM_EXPERIENCE",
       "layer": "ATO",
       "family": null,
@@ -4695,6 +5070,21 @@
       "avg_confidence": 1.0,
       "min_confidence": 1.0,
       "max_confidence": 1.0,
+      "chunks_hit": 3,
+      "chunk_coverage": 0.2,
+      "de_count": 3,
+      "en_count": 0
+    },
+    {
+      "marker_id": "ATO_DEFENSIVE_JUSTIFICATION",
+      "layer": "ATO",
+      "family": null,
+      "description": "Atomic Marker für verteidigende Rechtfertigungen, die oft eine Schuldumkehr einleiten. Die eigene Handlung wird als gut gemeint oder als Reaktion dargestellt.",
+      "count": 3,
+      "hits_per_1k_msgs": 0.03,
+      "avg_confidence": 0.68,
+      "min_confidence": 0.68,
+      "max_confidence": 0.68,
       "chunks_hit": 3,
       "chunk_coverage": 0.2,
       "de_count": 3,
@@ -4926,6 +5316,21 @@
       "en_count": 3
     },
     {
+      "marker_id": "SEM_SD_TURQUOISE_HOLISM",
+      "layer": "SEM",
+      "family": null,
+      "description": "",
+      "count": 2,
+      "hits_per_1k_msgs": 0.02,
+      "avg_confidence": 1.0,
+      "min_confidence": 1.0,
+      "max_confidence": 1.0,
+      "chunks_hit": 2,
+      "chunk_coverage": 0.1,
+      "de_count": 2,
+      "en_count": 0
+    },
+    {
       "marker_id": "ATO_PROACTIVE_INTENTION",
       "layer": "ATO",
       "family": null,
@@ -4950,6 +5355,21 @@
       "avg_confidence": 0.65,
       "min_confidence": 0.65,
       "max_confidence": 0.65,
+      "chunks_hit": 2,
+      "chunk_coverage": 0.1,
+      "de_count": 2,
+      "en_count": 0
+    },
+    {
+      "marker_id": "CLU_COVERT_RESPONSIBILITY_INVERSION",
+      "layer": "CLU",
+      "family": null,
+      "description": "",
+      "count": 2,
+      "hits_per_1k_msgs": 0.02,
+      "avg_confidence": 0.412,
+      "min_confidence": 0.412,
+      "max_confidence": 0.412,
       "chunks_hit": 2,
       "chunk_coverage": 0.1,
       "de_count": 2,
@@ -5031,15 +5451,15 @@
       "en_count": 0
     },
     {
-      "marker_id": "CLU_VERBAL_PROSODY_INCONGRUENCE",
-      "layer": "CLU",
+      "marker_id": "SEM_AVOIDANCE_LOOP",
+      "layer": "SEM",
       "family": null,
-      "description": "Wortlaut vs. Prosodie kollidieren (Text×Audio-Inkongruenz).",
+      "description": "",
       "count": 2,
       "hits_per_1k_msgs": 0.02,
-      "avg_confidence": 0.4,
-      "min_confidence": 0.4,
-      "max_confidence": 0.4,
+      "avg_confidence": 0.9,
+      "min_confidence": 0.9,
+      "max_confidence": 0.9,
       "chunks_hit": 2,
       "chunk_coverage": 0.1,
       "de_count": 2,
@@ -5116,6 +5536,21 @@
       "min_confidence": 1.0,
       "max_confidence": 1.0,
       "chunks_hit": 1,
+      "chunk_coverage": 0.1,
+      "de_count": 2,
+      "en_count": 0
+    },
+    {
+      "marker_id": "CLU_AUTHORITY_SHIFT",
+      "layer": "CLU",
+      "family": null,
+      "description": "",
+      "count": 2,
+      "hits_per_1k_msgs": 0.02,
+      "avg_confidence": 0.475,
+      "min_confidence": 0.475,
+      "max_confidence": 0.475,
+      "chunks_hit": 2,
       "chunk_coverage": 0.1,
       "de_count": 2,
       "en_count": 0
@@ -5466,6 +5901,21 @@
       "en_count": 2
     },
     {
+      "marker_id": "CLU_DESTRUCTIVE_SELF_PROTECTION_MARKER",
+      "layer": "CLU",
+      "family": null,
+      "description": "",
+      "count": 1,
+      "hits_per_1k_msgs": 0.01,
+      "avg_confidence": 0.412,
+      "min_confidence": 0.412,
+      "max_confidence": 0.412,
+      "chunks_hit": 1,
+      "chunk_coverage": 0.1,
+      "de_count": 1,
+      "en_count": 0
+    },
+    {
       "marker_id": "SEM_TOXIC_PERSONA",
       "layer": "SEM",
       "family": null,
@@ -5520,6 +5970,36 @@
       "avg_confidence": 0.68,
       "min_confidence": 0.68,
       "max_confidence": 0.68,
+      "chunks_hit": 1,
+      "chunk_coverage": 0.1,
+      "de_count": 1,
+      "en_count": 0
+    },
+    {
+      "marker_id": "CLU_PERSONA_INTEGRATION",
+      "layer": "CLU",
+      "family": null,
+      "description": "",
+      "count": 1,
+      "hits_per_1k_msgs": 0.01,
+      "avg_confidence": 0.412,
+      "min_confidence": 0.412,
+      "max_confidence": 0.412,
+      "chunks_hit": 1,
+      "chunk_coverage": 0.1,
+      "de_count": 1,
+      "en_count": 0
+    },
+    {
+      "marker_id": "CLU_SD_STAGE_YELLOW",
+      "layer": "CLU",
+      "family": null,
+      "description": "",
+      "count": 1,
+      "hits_per_1k_msgs": 0.01,
+      "avg_confidence": 0.6,
+      "min_confidence": 0.6,
+      "max_confidence": 0.6,
       "chunks_hit": 1,
       "chunk_coverage": 0.1,
       "de_count": 1,
@@ -5646,6 +6126,21 @@
       "en_count": 0
     },
     {
+      "marker_id": "CLU_SD_STAGE_BLUE",
+      "layer": "CLU",
+      "family": null,
+      "description": "",
+      "count": 1,
+      "hits_per_1k_msgs": 0.01,
+      "avg_confidence": 0.6,
+      "min_confidence": 0.6,
+      "max_confidence": 0.6,
+      "chunks_hit": 1,
+      "chunk_coverage": 0.1,
+      "de_count": 1,
+      "en_count": 0
+    },
+    {
       "marker_id": "CLU_EMOTION_VOLATILITY",
       "layer": "CLU",
       "family": null,
@@ -5655,6 +6150,21 @@
       "avg_confidence": 0.412,
       "min_confidence": 0.412,
       "max_confidence": 0.412,
+      "chunks_hit": 1,
+      "chunk_coverage": 0.1,
+      "de_count": 1,
+      "en_count": 0
+    },
+    {
+      "marker_id": "SEM_SD_ORANGE_ACHIEVE",
+      "layer": "SEM",
+      "family": null,
+      "description": "",
+      "count": 1,
+      "hits_per_1k_msgs": 0.01,
+      "avg_confidence": 1.0,
+      "min_confidence": 1.0,
+      "max_confidence": 1.0,
       "chunks_hit": 1,
       "chunk_coverage": 0.1,
       "de_count": 1,

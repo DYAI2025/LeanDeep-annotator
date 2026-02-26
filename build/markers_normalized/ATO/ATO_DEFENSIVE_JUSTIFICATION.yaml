@@ -15,13 +15,15 @@ frame:
   narrative: Selbstverteidigung im Gespräch
 patterns:
 - type: regex
-  value: "Ich wollte( doch)? nur helfen\\."
+  value: (?i)ich\s+(?:hab(?:e)?|wollte)\s+(?:es\s+|das\s+)?(?:doch\s+)?nur\s+(?:gut gemeint|helfen|das Beste gewollt)
 - type: regex
-  value: "Ich hab(?:e)? es doch nur gut gemeint(?: mit dir)?\\."
+  value: (?i)(?:das\s+)?war\s+(?:wirklich\s+|doch\s+)?nicht\s+(?:meine|so)\s+Absicht
 - type: regex
-  value: "Das war wirklich nicht meine Absicht,.*"
+  value: (?i)ich\s+(?:meinte|meine)\s+(?:es\s+)?(?:doch\s+)?nur\s+gut
 - type: regex
-  value: "Ich dachte, ich helfe damit.*"
+  value: (?i)ich\s+(?:konnte|wusste)\s+(?:doch\s+)?nicht\s+(?:ahnen|wissen)
+- type: regex
+  value: (?i)\b(keine böse Absicht|nicht absichtlich|nicht so gemeint|hab(?:e)? es doch nur gut gemeint|wollte nur helfen)\b
 examples:
   positive:
   - Ich wollte doch nur helfen.

@@ -7,7 +7,8 @@ frame:
   pragmatics: "Systemdenken"
   narrative: "surface"
 pattern:
-  tokens: ["System", "Komplexität", "Kontext", "Integration", "Meta"]
+- (?i)\b(systemisch|Systemdenken|mehrperspektivisch|Metaebene|Meta-Ebene|Feedbackschleife|Emergenz|Interdependenz|Adaptivität|nichtlinear|kontextabhängig|Wechselwirkung|Subsystem|Systemebene|systemische[rs]?)\b
+- (?i)\b(Second-Order|Polarity.Management|integrales?|Metakognition|Komplexitätskompetenz|Hebelpunkt|systemisches? Denken)\b
 examples:
   positive:
   - "Systeme vernetzen … Komplexität integrieren"
