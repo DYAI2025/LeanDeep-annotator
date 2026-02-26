@@ -241,6 +241,71 @@ class SemioticExplainer:
         return f"**{expl['metaphor']}**: {expl['layman']}"
 
 # ---------------------------------------------------------------------------
+# Barthesian Myth Categories (LD 5.1)
+# ---------------------------------------------------------------------------
+
+MYTH_CATEGORIES = {
+    "politischer_mythos": {
+        "label": "Macht & Ordnung",
+        "demasking": "Hier wird Macht oder Kontrolle als 'natuerliche Notwendigkeit' oder 'Fuersorge' getarnt.",
+        "example": "Dominanz als Schutz"
+    },
+    "sozialer_mythos": {
+        "label": "Beziehungs-Moral",
+        "demasking": "Kulturelle Erwartungen an Harmonie oder Konflikt werden als 'unvermeidbare Essenz' der Beziehung gesetzt.",
+        "example": "Liebe als bedingungslose Pflicht"
+    },
+    "technologischer_mythos": {
+        "label": "Loesungs-Glaube",
+        "demasking": "Die Hoffnung auf eine rein technische oder prozedurale Loesung ersetzt die emotionale Auseinandersetzung.",
+        "example": "Klaerung als Erlösung"
+    },
+    "kultureller_mythos": {
+        "label": "Identitaets-Essenz",
+        "demasking": "Persoenlichkeitszuege (z.B. Introvertiertheit) werden als 'Schicksal' naturalisiert, um Agency zu vermeiden.",
+        "example": "Schweigen als Charakter"
+    }
+}
+
+class GuedelsatzSynthesizer:
+    """Performs semiotic abduction to find the 'core truth' (Güdelsatz) via demasking."""
+
+    @staticmethod
+    def extract_core(genre_id: str, framings: list[dict], missing: list[str], 
+                     safe: list[str], relational_pattern: str | None) -> str:
+        """The 'abductive jump': demasking the naturalized ideology in the signs."""
+        if not framings:
+            return "Ein Austausch ohne ausgepraegte semiotische Richtung."
+
+        top_f = framings[0]
+        ft = top_f["framing_type"]
+        intensity = top_f["intensity"]
+        
+        # 1. Demasking Political/Control Dynamics (Barthes: Power as Nature)
+        if ft == "kontrollnarrative" or genre_id == "konflikt":
+            if "abwertung" not in safe:
+                return "Destruktive Naturalisierung: Die Entwertung des Gegners wird hier als 'notwendige Wahrheit' inszeniert, um die eigene Machtposition zu schuetzen."
+            if "empathie" in missing:
+                return "Politischer Stillstand: Die Beziehungs-Struktur wird durch Machtansprueche stabilisiert, waehrend die emotionale Bruecke bewusst nicht gebaut wird."
+
+        # 2. Demasking Social/Relational Myths (Habermas vs Foucault)
+        if ft == "reparatur" and "responsibility" in missing:
+            return "Der Mythos der Pseudo-Klaerung: Es wird ein Ritual der Verstaendigung simuliert, um den Status Quo zu erhalten, ohne reale Verantwortung zu uebernehmen."
+
+        # 3. Demasking Incongruence (The 'Shadow' Güdelsatz)
+        if relational_pattern and "vermeidung" in relational_pattern.lower():
+            return "Der Tanz der Distanz: Rueckzug wird hier nicht als Entscheidung, sondern als 'natuerliche Grenze' (Mythos) verhandelt, was jede Annaeherung blockiert."
+
+        # 4. Specialized Crisis Logic
+        if genre_id == "krisenmodus":
+            if intensity > 0.8:
+                return "Das Sakrale in der Krise: Die emotionale Ueberwaeltigung wird zur 'unabaenderlichen Realität', die alle anderen Handlungsmöglichkeiten unsichtbar macht."
+
+        # Fallback: Semiotic Synthesis
+        label = GENRE_EXPECTATIONS.get(genre_id, {}).get("label", "Austausch")
+        return f"Ein {label.lower()}, in dem die {top_f['label'].lower()} zur zentralen Deutungsebene erhoben wird."
+
+# ---------------------------------------------------------------------------
 # Core functions
 # ---------------------------------------------------------------------------
 
@@ -537,7 +602,13 @@ def synthesize_narrative(framings: list[dict], semiotic_map: dict[str, dict],
     if logic_explanation:
         key_points.append(f"Erklaerungs-Logik: {logic_explanation}")
 
+    # ── GÜDELSATZ: The Semiotic Abduction (LD 5.1) ──
+    guedelsatz = GuedelsatzSynthesizer.extract_core(
+        genre_id, framings, missing, safe_boundaries, relational_pattern
+    )
+
     return {
+        "guedelsatz": guedelsatz,
         "narrative": narrative,
         "key_points": key_points,
         "relational_pattern": relational_pattern,
