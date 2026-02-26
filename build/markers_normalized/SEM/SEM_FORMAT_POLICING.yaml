@@ -45,6 +45,12 @@ composed_of:
 activation:
   rule: "AT_LEAST 1 IN 2 messages"
   window: 2
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: -0.5

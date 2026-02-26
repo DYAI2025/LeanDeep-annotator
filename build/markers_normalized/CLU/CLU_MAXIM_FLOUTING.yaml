@@ -13,19 +13,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - Ironie + Ambiguität dicht beieinander.
+  - Ironie plus Ambiguität dicht beieinander.
   - Register-Clash gefolgt von Antiphrase.
   - Mehrere Maximenflouts in kurzer Folge.
-  - Quotes + Slang + formales Cue.
-  - Clash → Ironie → Rätselturn.
+  - Quotes plus Slang plus formales Cue.
+  - Clash, dann Ironie, dann Rätselturn.
+  - Oh ja, SUPER Idee, genau wie deine letzte 'super' Idee. Ich bin begeistert, Herr Kollege.
+  - Klar, das ist völlig logisch. So logisch wie ein Schokoladen-Teekessel.
+  - Nein nein, bitte, erzähl mir MEHR davon. Ich bin ganz Ohr. Seit drei Stunden.
+  - Ja genau, und ich bin der Papst. Aber Spaß beiseite, Frau Vorsitzende...
+  - Achso, du 'vergisst' das immer. Wie praktisch. Naja egal, zurück zum Tagesordnungspunkt.
+  - Was für eine ÜBERRASCHUNG. Wer hätte das gedacht. Also ich nicht. Oder doch?
+  - Perfekt, einfach perfekt. Wie im Märchen. Also im Albtraum-Märchen.
+  - jo klar digga, ganz sicher lol. als ob. aber whatever
+  - Das ist natürlich ein ganz hervorragender Plan. Bestimmt klappt das. Wie beim letzten Mal.
+  - Ich liebe Meetings. Besonders die, die auch eine E-Mail hätten sein können.
+  - Ach WIE schön, dass du auch mal kommst. Wir warten ja erst seit gestern.
+  - "'Kommunikation' ist ja deine Stärke. In Anführungszeichen."
+  - Natürlich, selbstverständlich, mit dem größten Vergnügen. NOT.
+  - Total nachvollziehbar. Ich mein, für einen Hamster wäre das auch logisch.
+  - Bravo, Standing Ovation, Konfetti. Darf ich jetzt gehen?
+  - ey mega plan bro. literally der beste plan aller zeiten. no cap. (lüge)
+  - Vielen herzlichen Dank für diese äußerst erhellende Präsentation. Ich bin tief bewegt. Zutiefst.
+  - Klar, macht total Sinn. Wie Suppe mit der Gabel essen. Effizient.
+  - Oh, du 'meinst es nur gut'? Na dann ist ja alles klar. Problem gelöst.
+  - Wow, deine Pünktlichkeit ist wirklich legendär. Wie die von meinem Wecker - den ich nie stelle.
+  - Ja sicher, und Schweine können fliegen. Aber hey, Herr Doktor, Sie sind der Experte.
+  - Großartig, einfach großartig. Ich bin sprachlos. Wirklich. Komplett. Total.
+  - Ach du hast dich 'geirrt'? Passiert ja nur jeden Tag.
+  - Super Analyse, Sherlock. Da wäre Watson nie drauf gekommen.
+  - lol ja klar. und ich bin die queen. aber ernst jetzt mal
+  - Was für ein Zufall, SCHON WIEDER. Reiner Zufall natürlich.
+  - Das ist so... wie soll ich sagen... 'interessant'. Ja. Interessant.
+  - Brillant. Absolut brillant. Ich verneige mich. Im Geiste.
+  - 'Dein Plan hat nur einen kleinen Fehler: ALLES.'
+  - Oh, 'nur ein kleines Missverständnis'? Klar. Wie Fukushima.
+  - Natürlich hast DU Recht. Wie immer. Tag und Nacht. Seit Anbeginn der Zeit.
+  - Sehr geehrte Kollegin, Ihre 'kreative Interpretation' der Datenlage ist bemerkenswert.
+  - naja gut, wenn du das so siehst. also ich seh da nix. aber du bist ja der chef lmao
+  - Wow, diese Erkenntnis ist ja bahnbrechend. Das muss sofort in Nature publiziert werden.
+  - Klar doch, mein Fehler. Wie immer mein Fehler. Ich bin der Fehler.
+  - TOLLE Kommunikation. Einfach Weltklasse. Die UN könnte von dir lernen.
+  - Achso, das war 'Ironie'? Sorry, ich dachte das war dein Ernst. Wie immer.
+  - Oh, du bist 'beschäftigt'? Klar, Netflix gucken ist auch anstrengend.
+  - Ja ja, 'gleich'. Dein 'gleich' sind bekanntlich 3 Stunden.
+  - Super, noch ein Meeting über Meetings. Meta-Produktivität at its finest.
+  - Ach, du 'hilfst' mir? So wie letztes Mal? Danke, lieber nicht.
+  - Ja genau, deine 'konstruktive Kritik' war ja SO hilfreich. Herr Professor.
+  - Wunderbar, noch eine E-Mail mit 'kurzer Frage'. Bisher waren es nur 47 Fragen.
+  - oh wow, DAS hat ja NOCH NIE jemand gesagt. bahnbrechend. nobelpreis incoming
+  - Na klar, 'nur fünf Minuten'. Wie deine letzten 'fünf Minuten' die zwei Stunden dauerten.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Das war wirklich eine gute Idee von dir.
+  - Danke für deine Hilfe, das war sehr nett.
+  - Ich finde deinen Vorschlag interessant.
+  - Lass uns darüber in Ruhe sprechen.
+  - Das Meeting war produktiv heute.
+  - Ich schätze deine Pünktlichkeit.
+  - Der Plan klingt durchdacht.
+  - Vielen Dank für die schnelle Rückmeldung.
+  - Das ist eine kreative Lösung.
+  - Ich bin beeindruckt von deinem Engagement.
+  - Gut, dass du das ansprichst.
+  - Das war ein konstruktives Gespräch.
+  - Ich stimme dir zu, das ergibt Sinn.
+  - Super gemacht, weiter so.
+  - Dein Feedback war hilfreich, danke.
+  - ich find das echt gut was du machst
+  - Das Ergebnis überzeugt mich.
+  - Tolle Arbeit, bin stolz auf das Team.
+  - Das war eine schwierige Situation, gut gelöst.
+  - Danke für dein Verständnis.
+  - Ich bin froh, dass wir das klären konnten.
+  - Die Zusammenarbeit mit dir macht Spaß.
+  - Guter Punkt, den hatte ich übersehen.
+  - Schön, dass du dir die Zeit nimmst.
+  - Das war eine faire Einschätzung von dir.
 tags:
 - humor
 - grice
@@ -41,3 +104,9 @@ activation:
 scoring:
   base: 2.0
   weight: 1.4
+semiotic:
+  peirce: icon
+  signifikat: Humor/Leichtigkeit
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme

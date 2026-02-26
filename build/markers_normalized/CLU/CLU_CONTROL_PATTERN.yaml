@@ -22,6 +22,46 @@ examples:
   - Ich entscheide.
   - Regeln befolgen.
   - Autoritäre Ansage.
+  - Du machst das so, wie ich es sage, Ende der Diskussion.
+  - Ich dulde keinen Widerspruch in dieser Angelegenheit.
+  - Ab sofort gelten meine Regeln hier.
+  - Wenn ich sage Schluss, dann ist Schluss.
+  - Das steht nicht zur Debatte, das ist eine Anweisung.
+  - Du tust was ich dir sage, und zwar jetzt.
+  - In meinem Haus gelten meine Regeln, fertig.
+  - Ich erwarte Gehorsam, nicht Diskussion.
+  - Das wird so gemacht wie ich das will, Punkt.
+  - Solange du hier wohnst, bestimme ich.
+  - Ich habe das letzte Wort, kapiert?
+  - Mach was man dir sagt und frag nicht so viel.
+  - Das ist nicht verhandelbar.
+  - Du hältst dich gefälligst an das, was wir vereinbart haben.
+  - Ich bestimme den Ablauf, du führst aus.
+  - Ohne meine Erlaubnis passiert hier gar nichts.
+  - Widerrede ist zwecklos.
+  - Als dein Chef sage ich dir was zu tun ist.
+  - Du fragst nicht, du machst.
+  - Ich hab genug diskutiert, jetzt wird gehandelt.
+  - Du hast kein Mitspracherecht bei diesem Thema.
+  - Hör auf zu diskutieren und mach einfach.
+  - Ich sage dir wie der Hase läuft.
+  - Meine Entscheidung steht fest, da gibt es nichts zu rütteln.
+  - Du richtest dich nach mir, ist das klar?
+  - Ab heute wird das anders laufen, und zwar nach meinen Vorstellungen.
+  - Ich verlange von dir, dass du das bis Freitag erledigst.
+  - Schluss jetzt, ich will nichts mehr davon hören.
+  - Das Thema ist durch, ich habe entschieden.
+  - Du machst das gefälligst so wie ich es angeordnet habe.
+  - Keine Extrawürste, alle halten sich an meine Vorgaben.
+  - Wenn du nicht spurst, gibt es Konsequenzen.
+  - Ich erwarte bedingungslosen Einsatz von dir.
+  - In dieser Familie bestimme ich die Regeln.
+  - Das läuft hier nicht demokratisch.
+  - Ab morgen wird nach meinem Plan gearbeitet.
+  - Du hast zu funktionieren, nicht zu diskutieren.
+  - Ich will Ergebnisse sehen, keine Ausreden.
+  - Füg dich oder geh.
+  - Alles muss über meinen Tisch laufen.
   negative:
   - Lass uns besprechen.
   - Deine Meinung zählt.
@@ -33,6 +73,21 @@ examples:
   - Keine Vorgaben.
   - Offen für Ideen.
   - Partnerschaftlich.
+  - Ich respektiere deine Grenzen, nimm dir die Zeit die du brauchst.
+  - Was denkst du, wie sollen wir vorgehen?
+  - Ich vertraue deinem Urteil in der Sache.
+  - Lass uns das gemeinsam abstimmen.
+  - Ich möchte dir nichts aufzwingen.
+  - Du kennst dich da besser aus, entscheide du.
+  - Mir ist wichtig, dass du dich wohlfühlst dabei.
+  - Wir sind ein Team, jeder hat eine Stimme.
+  - Ich schlage vor, aber du entscheidest.
+  - Was wäre dir am liebsten?
+  - Es gibt kein richtig oder falsch, nur unsere gemeinsame Lösung.
+  - Ich zwinge niemanden zu etwas.
+  - Lass uns einen Kompromiss finden, der für alle passt.
+  - Ich bin offen für deine Vorschläge.
+  - Dein Beitrag ist mir wichtig, erzähl mal.
 tags: []
 rating: 1
 composed_of:
@@ -54,6 +109,11 @@ semiotic:
   connotation:
   - "autorität"
   - "pattern"
+  peirce: index
+  signifikat: Kontrolle/Dominanz
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
+  myth: Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge
 temperature_semantics:
   external: AUTORITÄT
   latent: MACHT

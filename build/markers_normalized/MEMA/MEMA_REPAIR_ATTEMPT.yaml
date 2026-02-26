@@ -1,0 +1,116 @@
+id: MEMA_REPAIR_ATTEMPT
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - repair
+  - attempt
+  concept: Reparaturversuch in Konfliktsituationen
+  pragmatics: Erkennt aktive Versuche, Beziehungsbrüche zu kitten
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Es tut mir leid, dass ich laut geworden bin. Können wir nochmal von vorne anfangen?
+  - Ich möchte das nicht so stehen lassen – lass uns nochmal reden.
+  - Sorry, das war unfair von mir. Ich meinte das nicht so.
+  - Ich merke, dass ich dich verletzt habe, und das war nicht meine Absicht.
+  - Können wir einen Schritt zurück machen? Ich war zu hart.
+  - Hey, ich will nicht, dass wir uns deswegen streiten.
+  - Lass mich das anders formulieren, das kam falsch rüber.
+  - Ich hab überreagiert. Das sehe ich jetzt ein.
+  - Bitte sei nicht sauer. Ich versuche, dich zu verstehen.
+  - Mir ist klar geworden, dass ich nicht richtig zugehört habe.
+  - Ich will uns nicht kaputt machen wegen sowas. Friede?
+  - Ich hab Mist gebaut und möchte es wiedergutmachen.
+  - Lass uns bitte nicht ins Bett gehen, ohne das geklärt zu haben.
+  - Ich verstehe jetzt, was du meinst, und es tut mir leid.
+  - War doof von mir. Entschuldige bitte.
+  - Ich möchte dich umarmen und nochmal neu anfangen.
+  - Ich hab nachgedacht und du hattest recht.
+  - Können wir das bitte vergessen und zusammen was Schönes machen?
+  - Ich möchte, dass es uns gut geht. Was brauchst du von mir?
+  - Es tut mir wirklich leid. Ich arbeite daran.
+  - Mir ist bewusst, dass ich deine Grenzen überschritten habe.
+  - Sorry dass ich so reagiert hab. Lass uns nochmal ruhig reden.
+  - Ich hab den Streit angefangen und will ihn jetzt beenden.
+  - Bitte gib mir eine Chance, das richtigzustellen.
+  - Ich war im Unrecht und stehe dazu.
+  - Können wir von vorne anfangen? Ohne Vorwürfe?
+  - Ich weiß, das war nicht ok. Wie kann ich es wiedergutmachen?
+  - Tut mir leid, dass ich dich ignoriert habe. Erzähl weiter.
+  - Ich will nicht, dass das zwischen uns steht.
+  - Mein Ton war daneben. Entschuldigung.
+  - Lass uns das klären, bevor es noch größer wird.
+  - Du bist mir wichtiger als recht zu haben.
+  - Ich merke, dass ich zu weit gegangen bin. Es tut mir leid.
+  - Können wir einen Kompromiss finden?
+  - Ich möchte mich bei dir entschuldigen – aufrichtig.
+  - Ich sehe ein, dass mein Verhalten verletzend war.
+  - Lass uns morgen in Ruhe darüber reden, wenn wir beide abgekühlt sind.
+  - Ich hab einen Fehler gemacht und will daran arbeiten.
+  - Du bedeutest mir viel und ich will das hier nicht kaputt machen.
+  - Ich höre dir jetzt zu, ohne zu unterbrechen. Versprochen.
+  - Mir ist aufgefallen, dass ich deinen Schmerz nicht ernst genommen habe.
+  - Ich will mich ändern. Sag mir, was du brauchst.
+  - Das hätte ich nicht sagen sollen. Es tut mir sehr leid.
+  - Ich schicke dir das als Zeichen, dass mir die Beziehung wichtig ist.
+  - Lass uns die Sache hinter uns lassen und gemeinsam weitergehen.
+  - Ich bin bereit, mich zu entschuldigen, so oft es nötig ist.
+  - Danke, dass du mir die Chance gibst, es besser zu machen.
+  - Ich war zu stolz, um mich zu entschuldigen. Jetzt nicht mehr.
+  - 'Ich möchte, dass du weißt: du hast nichts falsch gemacht.'
+  - Können wir morgen nochmal sprechen? Mit mehr Ruhe?
+  negative:
+  - Du bist selbst schuld, dass es so weit gekommen ist.
+  - Na gut, wenn du meinst. Mir egal.
+  - Entschuldigung, aber du hast angefangen.
+  - Ich entschuldige mich halt, wenn du es brauchst. Zufrieden?
+  - Tut mir leid, ABER du hast doch auch...
+  - Sorry, aber ich hatte keine andere Wahl.
+  - Ich entschuldige mich, wenn du dich auch entschuldigst.
+  - Vergiss es einfach.
+  - Ja ok sorry. Können wir jetzt über was anderes reden?
+  - Das ist jetzt auch nicht so schlimm, oder?
+  - Ich hab mich entschuldigt, was willst du noch?
+  - Mach nicht so ein Drama draus.
+  - Ich sage ja schon sorry, reicht das nicht?
+  - Du überreagierst total.
+  - Wenn du nicht so empfindlich wärst, müsste ich mich nicht entschuldigen.
+  - Tja, ist passiert. Nächstes Thema.
+  - Du kennst mich doch, so bin ich halt.
+  - Ich entschuldige mich unter Protest.
+  - Gut, dann bin ich halt der Böse.
+  - Sorry dass du dich so fühlst. – Nicht sorry für das, was ich getan habe.
+  - Ich hab mich entschuldigt. Schluss jetzt.
+  - Ok ok, Entschuldigung. Jetzt lass gut sein.
+  - Immer muss ich den ersten Schritt machen.
+  - Na toll, jetzt bin ich wieder der Schuldige.
+  - Spar dir die Vorwürfe. Ich hab gesagt, es tut mir leid.
+tags:
+- mema
+- repair
+- conflict_resolution
+- positive
+rating: 2
+composed_of:
+  required_any:
+  - SEM_REPAIR_SIGNAL
+  - CLU_CONSTRUCTIVE_CONFLICT
+  supportive:
+  - ATO_APOLOGY
+  - SEM_EMPATHIC_RESONANCE
+activation:
+  rule: "ANY 1 IN 10 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+semiotic:
+  peirce: index
+  signifikat: Reparatur
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

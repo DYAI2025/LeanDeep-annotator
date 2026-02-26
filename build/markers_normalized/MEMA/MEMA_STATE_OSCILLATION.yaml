@@ -1,0 +1,116 @@
+id: MEMA_STATE_OSCILLATION
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - state
+  - oscillation
+  concept: Zustandsoszillation – schnelle Wechsel zwischen emotionalen Zuständen
+  pragmatics: Erkennt rapide Stimmungswechsel innerhalb kurzer Zeitfenster
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Gerade noch glücklich, jetzt in Tränen. In fünf Minuten.
+  - Ich schwanke zwischen Liebe und Hass – mehrmals am Tag.
+  - Eben war alles gut, jetzt will ich schreien.
+  - 'Ich bin ein Pendel: hin und her zwischen Wut und Trauer.'
+  - Meine Stimmung wechselt so schnell, dass ich selbst nicht mitkomme.
+  - Mal Euphorie, mal Depression – und nichts dazwischen.
+  - Ich bin emotional wie eine Achterbahn.
+  - Von 'ich liebe dich' zu 'ich hasse alles' in einer Nachricht.
+  - Meine Gefühle schwanken so extrem, dass es mir Angst macht.
+  - Eben noch optimistisch, jetzt am Boden zerstört.
+  - 'Ich schwanke ständig: will ich gehen oder bleiben?'
+  - Meine emotionalen Zustände wechseln schneller als das Wetter.
+  - Von Freude zu Panik in Sekunden.
+  - Ich bin emotional instabil gerade – rauf, runter, rauf, runter.
+  - Ein Moment der Nähe, der nächste totale Distanz.
+  - Meine Stimmung oszilliert unkontrollierbar.
+  - Ich bin verliebt. Nein, wütend. Nein, traurig. Nein, verliebt.
+  - Die Schwankungen machen mich verrückt.
+  - Von Gelassenheit zu Rage in einem Herzschlag.
+  - Ich bin wie ein Stimmungsbarometer, das verrücktspielt.
+  - Eben noch Hoffnung, jetzt Verzweiflung.
+  - Meine Emotionen sind wie ein Jo-Jo.
+  - Ich wechsle zwischen Zuversicht und Resignation im Minutentakt.
+  - Von warmherzig zu eiskalt und zurück.
+  - Mein emotionaler Zustand ist ein einziges Chaos.
+  - Ich liebe dich, ich hasse dich, ich brauche dich, lass mich in Ruhe.
+  - Die Schwingungen sind so heftig, dass ich seekrank werde.
+  - Meine Stimmung schwankt wie eine Sinuskurve.
+  - Von Gleichmut zu Panik – ohne Vorwarnung.
+  - Ich bin emotional nicht greifbar – nicht mal für mich selbst.
+  - Eben Lachen, jetzt Weinen. Eben Weinen, jetzt Wut.
+  - Die Oszillation ist erschöpfend.
+  - Ich kann meine Emotionen nicht steuern – sie steuern mich.
+  - Von Zuneigung zu Ablehnung in einem Atemzug.
+  - Meine Gefühlswelt ist ein Sturm.
+  - Ich schwanke zwischen Annäherung und Flucht.
+  - Emotional bin ich gerade überall und nirgends.
+  - Ein Moment bin ich stark, der nächste zerbrochen.
+  - Meine Stimmung kennt keine Mitte – nur Extreme.
+  - Von Dankbarkeit zu Bitterkeit in einem Satz.
+  - Ich fühle alles gleichzeitig und nichts davon macht Sinn.
+  - Die Pendelbewegung zwischen den Extremen ist erschöpfend.
+  - Mein Herz sagt ja, mein Kopf sagt nein, und beide wechseln sich ab.
+  - Ich bin emotional auf einer Berg-und-Tal-Fahrt.
+  - Von tiefem Vertrauen zu totaler Panik in Minuten.
+  - Mein emotionaler Kompass dreht sich im Kreis.
+  - Mal will ich alles retten, mal will ich alles hinschmeißen.
+  - Die Schwankungen sind so krass, dass andere es bemerken.
+  - Ich bin ein emotionales Erdbeben.
+  - Von Hoffnung zu Hoffnungslosigkeit – und wieder zurück.
+  negative:
+  - Meine Stimmung ist gerade ausgeglichen und stabil.
+  - Ich fühle mich emotional konstant.
+  - Es gibt Höhen und Tiefen, aber insgesamt bin ich stabil.
+  - Meine Emotionen sind vorhersagbar und handhabbar.
+  - Ich bin in einem guten, gleichmäßigen Zustand.
+  - Es gibt keine extremen Schwankungen bei mir.
+  - Ich fühle mich geerdet und ausgeglichen.
+  - Meine Stimmung ist konstant – nicht aufregend, aber stabil.
+  - Ich habe meine Emotionen im Griff.
+  - Es geht mir weder besonders gut noch besonders schlecht – einfach okay.
+  - Mein emotionaler Zustand ist ruhig.
+  - Ich bin emotional ausbalanciert.
+  - Keine dramatischen Schwankungen bei mir.
+  - Ich fühle mich innerlich ruhig.
+  - Meine Stimmung ist beständig.
+  - Es gibt eine angenehme Stabilität in meinem Gefühlsleben.
+  - Ich bin gelassen und gleichmäßig gestimmt.
+  - Meine Emotionen sind kontrollierbar.
+  - Es gibt eine Grundzufriedenheit, die mich trägt.
+  - Ich bin emotional zentriert.
+  - Keine Achterbahn – eher eine ruhige Fahrt.
+  - Mein Befinden ist stabil seit Wochen.
+  - Ich bin in einer guten emotionalen Verfassung.
+  - Es herrscht Ruhe in mir.
+  - Mein emotionaler Zustand ist ausgeglichen und vorhersagbar.
+tags:
+- mema
+- oscillation
+- state
+- mood_swings
+rating: 2
+composed_of:
+  required_any:
+  - SEM_EMOTIONAL_OVERWHELM
+  - CLU_EMOTIONAL_ESCALATION
+  supportive:
+  - ATO_TOPIC_SHIFT
+  - SEM_SHAME_SIGNAL
+activation:
+  rule: "ANY 3 IN 10 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+semiotic:
+  peirce: icon
+  signifikat: Ambivalenz/Zwiespalt
+  framing_type: unsicherheit
+  cultural_frame: Emotionsregulation
+  myth: Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet

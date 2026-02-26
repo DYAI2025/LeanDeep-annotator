@@ -23,6 +23,49 @@ examples:
   - 'Pattern over time: Always stress/difficulty + vague promises, never concrete plans'
   - Repeated deflection with stress as excuse across multiple interactions
   - Consistent pattern of avoiding commitment while maintaining plausible deniability
+  - "Ach, grad ist so viel los, schreib dir wenn sich das legt"
+  - "Ja müsste eigentlich gehen... schau ich mal"
+  - "Puh schwierig, bin voll eingespannt. Meld mich!"
+  - "Klingt gut, muss aber erstmal schauen wegen Arbeit und so"
+  - "Diese Woche wird nix, aber danach bestimmt!"
+  - "Sorry bin grad so verplant, ruf dich an wenns ruhiger wird"
+  - "Wollte mich melden aber kam nicht dazu, du kennst das ja"
+  - "Treffen klingt super, mal gucken ob ich das hinbekomme"
+  - "Hab grad keinen Kopf dafür, liegts am Stress"
+  - "Uff, Timing ist schlecht. Vielleicht nächste Woche?"
+  - "Bin gerade voll im Projekt, meld mich sobald ich kann"
+  - "Ja auf jeden Fall, sobald sich das beruhigt hat hier"
+  - "Schaff ich grad zeitlich nicht, aber auf keinen Fall vergessen!"
+  - "Total gerne! Nur jetzt ist wirklich ungünstig..."
+  - "Will ich total, aber du weißt ja wie das ist mit der Arbeit"
+  - "Muss mal in den Kalender schauen, meld mich dazu!"
+  - "Wär schön, mal sehen ob es klappt"
+  - "Lass uns das planen wenn der Monat rum ist"
+  - "Klar, gerne! Nur aktuell is halt echt schwierig"
+  - "Ich sag dir Bescheid sobald ich weiß wann ich kann"
+  - "Grundsätzlich ja, muss nur erstmal diese Deadline schaffen"
+  - "Schreib mir nochmal nächste Woche, dann weiß ich mehr"
+  - "Hmm wird knapp, aber ich versuch's einzurichten"
+  - "Sorry sorry, lag nicht an dir, bin einfach voll im Tunnel"
+  - "Bestimmt bald, versprochen! Muss nur erstmal das eine Ding klären"
+  - "Ja kommt, wir machen das, nur grad is der Wurm drin"
+  - "Oh man, schon wieder verpasst, war echt nicht geplant"
+  - "Ich meld mich bei dir, ich schwör!"
+  - "Total gerne, sobald sich bei mir was entspannt"
+  - "Nächste Woche sieht besser aus, hoff ich"
+  - "Klar irgendwann, muss nur noch xyz fertig machen"
+  - "Meld mich am WE, versprochen (wieder)"
+  - "Ahhh sorry, die Woche war Chaos, nächste Woche fix!"
+  - "Ich will ja, aber es geht grad einfach nicht"
+  - "Lass bald was machen, nur DIESE Woche passt nicht"
+  - "Du hörst von mir, dauert aber noch etwas"
+  - "100% machen wir das, nur noch nicht jetzt"
+  - "Jaa eigentlich total gerne, muss nur erstmal klären ob ich kann"
+  - "Die Idee ist super, mal schauen wann es zeitlich passt"
+  - "Klar klar, sobald ich den Kopf frei hab sag ich Bescheid"
+  - "Ach sorry, bin wieder nicht dazugekommen, echt blöd"
+  - "Grundsätzlich bin ich dabei! Nur aktuell halt schwierig, weißt du"
+  - "Boah ja lass uns das unbedingt machen... irgendwann 😅"
   negative:
   - 'Pattern over time: sometimes stress/difficulty + vague promises, rarely concrete plans'
   - Ich finde, wir sollten das in Ruhe besprechen.
@@ -31,7 +74,26 @@ examples:
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
+  - "Sorry, Mittwoch kann ich nicht, aber Freitag 15 Uhr?"
+  - "Hab grad Stress, aber ich komm trotzdem. Um 18 Uhr bei dir?"
+  - "Diese Woche ist voll, aber ich hab den 15. fest eingeplant."
+  - "Klar, Samstag 14 Uhr im Café am Markt!"
+  - "Schaffe es zeitlich nicht vor Donnerstag, aber dann gerne."
+  - "Bin verplant, aber lass uns einen konkreten Termin machen: Sonntag?"
+  - "Treffen wir uns um 4 am Bahnhof?"
+  - "Ja cool, morgen Abend Pizza bei Luigi?"
+  - "Lass uns Dienstag telefonieren, 19 Uhr passt mir."
+  - "Nee sorry, will ich ehrlich gesagt nicht. Ist nix Persönliches."
+  - "Danke für die Einladung, aber das ist nicht so meins."
+  - "Ich kann leider nicht, hab schon was anderes vor."
+  - "Müssen wir nicht machen, ich hab kein Interesse daran."
+  - "Ehrlich gesagt will ich lieber zuhause bleiben."
+  - "Nee das passt grad nicht, vielleicht ein anderes Mal."
+  - "Ich sag lieber direkt ab statt rumzueiern."
+  - "Gute Idee, aber ich mach heute was anderes."
+  - "Hab Montag Urlaub, lass uns dann treffen!"
 tags:
 - rejection
 - avoidance
 - ghosting
+semiotic: {peirce: index, signifikat: Vermeidungsverhalten, framing_type: vermeidung, cultural_frame: '', myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'}

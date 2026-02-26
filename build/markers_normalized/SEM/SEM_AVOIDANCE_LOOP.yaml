@@ -40,16 +40,21 @@ tags:
 - closure
 rating: 1
 composed_of:
-  any_of:
-  - ATO_AVOIDANCE_PHRASE
-  - ATO_TOPIC_SWITCH_ADVERSATIVE
-  - ATO_SUBJECT_CLOSED
+- ATO_AVOIDANCE_PHRASE
+- ATO_TOPIC_SWITCH_ADVERSATIVE
+- ATO_SUBJECT_CLOSED
 activation:
   rule: AT_LEAST 2 IN 4 messages
   window: 4
 scoring:
   base: 0.6
   weight: 1.12
+semiotic:
+  peirce: index
+  signifikat: Vermeidungsverhalten
+  framing_type: vermeidung
+  cultural_frame: ''
+  myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'
 compositionality: deterministic
 vad_estimate:
   valence: -0.2

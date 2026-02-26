@@ -42,6 +42,12 @@ composed_of:
 - ATO_IRONY
 window:
   messages: 2
+semiotic:
+  peirce: icon
+  signifikat: Aerger/Wut
+  framing_type: eskalation
+  cultural_frame: Emotionsregulation
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'
 compositionality: deterministic
 vad_estimate:
   valence: -0.6

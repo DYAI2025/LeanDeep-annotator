@@ -1,0 +1,115 @@
+id: MEMA_REPETITION_PATTERN
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - repetition
+  - pattern
+  concept: Wiederkehrendes Gesprächsmuster ohne Variation
+  pragmatics: Erkennt starre Wiederholungsschleifen in Kommunikation
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Wir haben dieses Gespräch schon hundert Mal geführt und es ändert sich nie was.
+  - 'Immer dasselbe: ich sage was, du wirst laut, ich ziehe mich zurück. Endlosschleife.'
+  - Jedes Wochenende derselbe Streit über den Haushalt.
+  - Wir wiederholen uns ständig – gleiche Argumente, gleiches Ergebnis.
+  - 'Das Muster ist immer gleich: du vergisst es, ich werde wütend, du sagst sorry, nichts ändert sich.'
+  - 'Seit Jahren dasselbe Thema: Geld. Und seit Jahren keine Lösung.'
+  - Mir fällt auf, dass wir jede Woche den gleichen Konflikt durchspielen.
+  - Immer wenn deine Mutter anruft, streiten wir danach. Jedes. Mal.
+  - Kennst du das? Wir reden, streiten, versöhnen uns, und dann fängt alles von vorne an.
+  - 'Es ist wie ein Skript: du sagst A, ich sage B, dann Stille.'
+  - 'Drei Jahre lang: gleiche Beschwerde, gleiche Ausrede.'
+  - Ich könnte dir minutengenau sagen, wie unser nächster Streit abläuft.
+  - Wir laufen auf derselben Kreisbahn – ohne Ausweg.
+  - Jeden Montag dasselbe Drama mit dem Meeting-Termin.
+  - Ich hab unsere alten Chats gelesen – ich sage seit 2022 das Gleiche.
+  - 'Das Schema ist vorhersagbar: Provokation, Eskalation, Rückzug, Stille.'
+  - 'Jedes Mal: du versprichst Besserung, drei Tage später alles beim Alten.'
+  - Wir hängen in einer Endlosschleife fest.
+  - Gleicher Film, andere Woche.
+  - Du machst das wieder – genau wie letzte Woche und die Woche davor.
+  - Wir können das Thema noch zehnmal besprechen, das Ergebnis bleibt gleich.
+  - Jedes Mal wenn ich sage 'lass uns reden', passiert exakt dasselbe.
+  - Mir reicht es – wir treten seit Monaten auf der Stelle.
+  - 'Es ist eine Schallplatte mit Sprung: immer an derselben Stelle hängen.'
+  - 'Vorhersagbar wie ein Uhrwerk: Freitag Abend, Streit, Samstag Schweigen.'
+  - Unsere Therapie-Sitzungen drehen sich seit 3 Monaten ums selbe Thema.
+  - Du versprichst jedes Mal, weniger zu trinken. Passiert nie.
+  - Gleiches Muster wie bei meiner letzten Beziehung – ich erkenne es wieder.
+  - 'Jedes Mal: Hoffnung, Enttäuschung, Wut, Resignation. Repeat.'
+  - 'Ich sage seit Jahren: ich brauche mehr Unterstützung. Nichts ändert sich.'
+  - Wir spielen dasselbe Stück immer wieder durch.
+  - Immer derselbe Trigger, immer dieselbe Reaktion.
+  - 'Mir ist aufgefallen: wir streiten uns über verschiedene Themen, aber das Muster ist immer gleich.'
+  - Wieder der gleiche Vorwurf, wieder die gleiche Verteidigung.
+  - Du weißt ganz genau, wie das hier endet, und machst es trotzdem.
+  - Wir drehen uns im Kreis wie Hamster im Rad.
+  - 'Jede Diskussion endet gleich: einer geht, der andere wartet.'
+  - Zehn Mal das gleiche Gespräch – nullmal ein anderes Ergebnis.
+  - Wir recyceln unsere Konflikte, anstatt sie zu lösen.
+  - Immer wenn wir Fortschritt machen, fallen wir in alte Muster zurück.
+  - Dasselbe Theater. Jedes. Verdammte. Mal.
+  - Es hat sich ein festes Drehbuch entwickelt, das wir beide auswendig kennen.
+  - Ich sage A, du sagst B, Schweigen, und in zwei Wochen von vorne.
+  - 'Unser Beziehungszyklus: 3 gute Tage, 1 Streit, 2 Tage Stille. Repeat.'
+  - 'Wir haben feste Rollen in unserem Streit-Script: Ankläger und Verteidiger.'
+  - Erinnerst du dich? Genau dieses Gespräch hatten wir Weihnachten auch.
+  - Muster erkannt, aber nicht gebrochen. Wie immer.
+  - Gleicher Konflikt, neues Datum.
+  - Ich erkenne das Muster und trotzdem kann ich nicht ausbrechen.
+  - Unser Beziehungs-Grundhog-Day.
+  negative:
+  - Wir hatten das Thema schon mal, aber diesmal haben wir eine Lösung gefunden.
+  - Ja, das kommt mir bekannt vor, aber ich merke, dass wir beide anders reagieren als letztes Mal.
+  - Ich erkenne das Muster und schlage vor, dass wir es diesmal anders machen.
+  - Wir haben das Thema mehrfach besprochen und jedes Mal sind wir einen Schritt weitergekommen.
+  - Stimmt, das hatten wir schon. Aber ich habe inzwischen nachgedacht und eine Idee.
+  - Es fühlt sich ähnlich an wie letztes Mal, aber ich reagiere bewusst anders.
+  - Das Thema wiederholt sich, aber ich sehe Fortschritt in unserer Art zu reden.
+  - Wir haben Muster erkannt und arbeiten aktiv daran.
+  - Ja, der Konflikt ist alt, aber meine Haltung dazu ist neu.
+  - Wir sprechen wieder darüber, weil es wichtig ist – nicht weil wir feststecken.
+  - Ich merke, dass ich mich seit unserem letzten Gespräch verändert habe.
+  - Das Thema kommt hoch, und diesmal sind wir vorbereitet.
+  - Wir haben ein Ritual entwickelt, wie wir mit diesem Thema umgehen.
+  - Obwohl das Thema wiederkehrt, gehen wir jetzt konstruktiver damit um.
+  - Ich erkenne das alte Muster und wähle bewusst einen neuen Weg.
+  - Dieses Thema braucht mehrere Gespräche – das ist ok.
+  - Wir haben letzte Woche schon drüber geredet und das hat geholfen.
+  - Es gibt Fortschritte, auch wenn sie klein sind.
+  - Manche Dinge muss man öfter besprechen, bevor sie sich klären.
+  - Ja, wir kennen das Thema, aber wir haben jetzt neue Werkzeuge.
+  - Wir kommen immer wieder drauf zurück, aber mit mehr Verständnis.
+  - Das Muster hat sich verändert seit der Therapie.
+  - Wir wiederholen uns weniger als früher – das ist doch was.
+  - Ich sehe den Fortschritt, auch wenn das Thema sich ähnelt.
+  - Wir haben gelernt, das Muster früher zu erkennen und zu unterbrechen.
+tags:
+- mema
+- repetition
+- stagnation
+- loop
+rating: 2
+composed_of:
+  required_any:
+  - CLU_REPETITIVE_CONFLICT
+  supportive:
+  - SEM_EMOTIONAL_OVERWHELM
+  - ATO_REPETITION
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.1
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

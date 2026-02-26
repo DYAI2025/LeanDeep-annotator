@@ -1,0 +1,117 @@
+id: MEMA_VALUE_CONVERGENCE
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - value
+  - convergence
+  concept: Werte-Konvergenz – Annäherung oder Auseinanderdriften gemeinsamer Werte
+  pragmatics: Erkennt, ob sich Wertvorstellungen in einer Beziehung annähern oder divergieren
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Wir haben immer ähnlich gedacht – und jetzt immer weniger.
+  - Unsere Werte driften auseinander.
+  - Du findest plötzlich wichtig, was mir egal ist – und umgekehrt.
+  - Wir hatten mal dieselben Ziele. Jetzt will jeder was anderes.
+  - Unsere Vorstellungen vom Leben passen nicht mehr zusammen.
+  - Du hast dich verändert – deine Prioritäten sind nicht mehr meine.
+  - Wir entwickeln uns in verschiedene Richtungen.
+  - Was mir wichtig ist, zählt für dich nicht.
+  - Unsere Lebensentwürfe passen nicht mehr zusammen.
+  - Du willst Karriere, ich will Familie – das geht nicht zusammen.
+  - Wir haben verschiedene Wertvorstellungen und finden keinen Kompromiss.
+  - Unsere Prioritäten haben sich verschoben.
+  - Was für dich richtig ist, ist für mich falsch.
+  - Wir teilen nicht mehr dieselbe Vision.
+  - Unsere Vorstellung von Partnerschaft ist grundverschieden.
+  - Du willst Abenteuer, ich will Sicherheit.
+  - Wir haben keine gemeinsame Wertebasis mehr.
+  - Deine Lebensphilosophie und meine könnten nicht verschiedener sein.
+  - Was für mich ein Dealbreaker ist, ist für dich egal.
+  - Wir haben uns in verschiedene Richtungen entwickelt.
+  - Unsere Vorstellungen von Treue unterscheiden sich fundamental.
+  - Du schätzt Freiheit, ich Verbindlichkeit – das reibt.
+  - Wir haben keine gemeinsamen Ziele mehr.
+  - Deine Werte und meine Werte – zwei verschiedene Welten.
+  - Was mir heilig ist, interessiert dich nicht.
+  - Wir stehen für verschiedene Dinge.
+  - Unsere Erziehungsvorstellungen sind komplett unterschiedlich.
+  - Du investierst in Karriere, ich in Beziehung – wir driften ab.
+  - Unsere Werte-Konvergenz ist Geschichte.
+  - Was uns mal verbunden hat – gemeinsame Träume – gibt es nicht mehr.
+  - Du bist materialistisch geworden, ich spirituell. Oder umgekehrt.
+  - Unsere Lebensphilosophien divergieren.
+  - Was du unter Respekt verstehst, unterscheidet sich von meiner Definition.
+  - Wir haben verschiedene Vorstellungen von Gerechtigkeit.
+  - Du willst ein Kind, ich nicht. Das ist ein Wertekonflikt.
+  - Unsere Vorstellungen von Freiheit sind unvereinbar.
+  - Die Basis, auf der wir mal zusammengekommen sind, hat sich aufgelöst.
+  - Wir finden keinen gemeinsamen Nenner mehr.
+  - Deine Prioritäten spiegeln nicht mehr wider, was wir mal gemeinsam wollten.
+  - Wir haben uns wertemäßig auseinandergelebt.
+  - Unsere Vorstellungen vom Zusammenleben sind grundverschieden.
+  - Du willst in die Stadt, ich aufs Land – symbolisch und buchstäblich.
+  - Wir teilen keine Vision mehr.
+  - Was mich antreibt, lässt dich kalt.
+  - Unsere Wertekompatibilität ist gesunken.
+  - Wir haben verschiedene Lebensziele und keinen Plan, sie zu vereinen.
+  - Du hast dich verändert – oder ich. Jedenfalls passen wir nicht mehr.
+  - Unsere Vorstellungen von Treue, Ehrlichkeit und Respekt divergieren.
+  - Wir wollen beide was anderes aus diesem Leben.
+  - Die Kluft zwischen unseren Werten wird größer.
+  negative:
+  - Wir teilen dieselben Werte und das verbindet uns.
+  - Unsere Lebensziele passen perfekt zusammen.
+  - Wir wollen dasselbe aus dem Leben.
+  - Unsere Werte haben sich angeglichen über die Jahre.
+  - Wir sind uns einig, was wirklich zählt.
+  - Unsere Prioritäten stimmen überein.
+  - Wir haben eine gemeinsame Vision.
+  - Wir stehen für dieselben Dinge.
+  - Unsere Vorstellungen von Partnerschaft passen zusammen.
+  - Wir wachsen in dieselbe Richtung.
+  - Unsere Werte nähern sich an.
+  - Wir haben eine gemeinsame Basis, die uns trägt.
+  - Was dir wichtig ist, ist auch mir wichtig.
+  - Wir haben ähnliche Erziehungsvorstellungen.
+  - Unsere Lebensentwürfe ergänzen sich.
+  - Wir teilen dieselbe Vorstellung von Treue und Respekt.
+  - Unsere Ziele sind kompatibel.
+  - 'Wir wollen beide: Familie, Sicherheit, Vertrauen.'
+  - Unsere Wertebasis ist stark.
+  - Wir haben eine gemeinsame Richtung.
+  - Was uns verbindet, ist stärker als was uns trennt.
+  - Unsere Prioritäten sind im Einklang.
+  - Wir teilen dieselben Träume.
+  - Unsere Vorstellungen vom Zusammenleben stimmen überein.
+  - Wir sind wertemäßig auf einer Wellenlänge.
+tags:
+- mema
+- values
+- convergence
+- divergence
+- alignment
+rating: 2
+composed_of:
+  required_any:
+  - SEM_SYSTEMS_THINKING
+  - CLU_AGREE_TO_DISAGREE
+  supportive:
+  - SEM_EMPATHIC_RESONANCE
+  - ATO_SELF_DISCLOSURE
+activation:
+  rule: "ANY 2 IN 25 messages"
+scoring:
+  base: 1.5
+  weight: 1.1
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

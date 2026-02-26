@@ -2,7 +2,7 @@ id: CLU_MODE_SWITCH
 schema: LeanDeep
 version: '5.1'
 layer: CLU
-lang: en
+lang: de
 description: ''
 frame:
   signal:
@@ -13,19 +13,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - kurze Sequenz A … kurze Sequenz B
-  - Beispiel mit zwei Signalen in einem Satz
-  - Signal 1 … später Signal 2 im Kontext
-  - Kombination aus Token X und Y
-  - Variante mit ähnlicher Semantik
+  - Die Zahlen sprechen klar dafür - aber weißt du was, ich hab einfach ein schlechtes Gefühl dabei.
+  - Rational betrachtet ist das richtig. Trotzdem tut es weh.
+  - Laut Analyse sind wir auf Kurs. Aber ICH BIN SO FRUSTRIERT!
+  - Sachlich gesehen hast du Recht. Emotional kann ich das nicht akzeptieren.
+  - Der ROI stimmt, die Daten sind eindeutig. Aber mein Bauchgefühl schreit nein.
+  - Ich war gerade noch ganz ruhig und jetzt könnte ich SCHREIEN.
+  - Faktenbasiert ist die Entscheidung korrekt. Aber es fühlt sich falsch an.
+  - Lass uns die Zahlen anschauen - ach, vergiss die Zahlen, ich halt das nicht mehr aus.
+  - Die KPIs sind alle grün, alles super. Und trotzdem bin ich am Heulen.
+  - Logisch ergibt das Sinn. Gefühlsmäßig ist es eine Katastrophe.
+  - erst war alles sachlich und dann BOOM, volle emotion
+  - Wir müssen das strategisch angehen. Aber ich bin so sauer dass ich nicht klar denken kann.
+  - Die Analyse zeigt, dass... ach, ich kann nicht mehr. Ich brauch eine Pause.
+  - 'Also, Punkt 1: Die Kosten... weißt du was, VERGISS die Kosten, du hörst mir NIE zu!'
+  - Sehr geehrter Herr Direktor, die Quartalszahlen... Entschuldigung, ich muss kurz... ich bin sehr betroffen.
+  - 'Fakten: Umsatz steigt, Kosten sinken. Fakt ist aber auch: Ich bin total überfordert.'
+  - Nüchtern betrachtet stimmt alles. Aber ich bin nicht nüchtern, ich bin am Ende.
+  - Die Datenanalyse bestätigt... sorry, ich muss kurz weinen... also die Daten sagen...
+  - Prozessoptimierung, Effizienzsteigerung, blablabla. Ich will einfach nur, dass jemand mich versteht!
+  - Kalt betrachtet ist das die richtige Entscheidung. Warm betrachtet bricht es mir das Herz.
+  - wir sollten rational... ach fuck, ich kann grad nicht rational sein sorry
+  - Nach eingehender Prüfung der Sachlage - oh Gott, ich halt das nicht aus.
+  - Strategisch ist das sinnvoll, wirtschaftlich auch, aber MENSCHLICH ist das eine Zumutung.
+  - Ich wollte gerade die Präsentation durchgehen, aber ich muss erst mal Luft holen.
+  - 'Okay, analytisch: Pro und Contra sind klar. Emotional: ICH WILL DAS NICHT.'
+  - Rein objektiv betrachtet... nein, weißt du was, nichts ist hier objektiv.
+  - 'Performance Review: alles im grünen Bereich. Persönlich: ich zerbreche daran.'
+  - Erst mal die Fakten, dann können wir... okay ich krieg gerade Panik.
+  - Der Business Case ist solide. Aber ich hab Angst.
+  - Mein Kopf sagt ja, mein Herz sagt nein. Und gerade gewinnt das Herz.
+  - Lass mich kurz die Argumente sortieren - nee, ich brauch erstmal eine Umarmung.
+  - laut excel ist alles bestens. laut meinem herz geht die welt unter
+  - In der Sachanalyse kommen wir zum Ergebnis... entschuldigen Sie, ich brauche einen Moment.
+  - Die Kennzahlen zeigen eindeutig... ich kann nicht mehr, tut mir leid.
+  - 'Alles spricht dafür, rational betrachtet. Aber mein Bauch sagt: STOPP.'
+  - 'Kosten-Nutzen-Analyse: positiv. Gefühls-Nutzen-Analyse: katastrophal.'
+  - Ich versuche sachlich zu bleiben, aber DAS IST EINFACH ZU VIEL!
+  - Budget ist da, Timeline passt, Team steht. Und trotzdem fühle ich mich leer.
+  - 'Wenn ich den Kopf einschalte: alles gut. Wenn ich das Herz einschalte: alles schlecht.'
+  - der business plan sieht gut aus. aber ich kann nicht mehr. bin emotional am ende
+  - Wir müssen uns die Marktdaten anschauen... weißt du was, mir ist gerade nach Weinen.
+  - ROI positiv, Risiko kalkulierbar, alles rational. Und dann kommt das Gefühl und reißt alles ein.
+  - In der Theorie stimmt das alles. In der Praxis bin ich ein emotionales Wrack.
+  - 'Systematisch betrachtet: korrekt. Menschlich betrachtet: eine Tragödie.'
+  - 'Kurz zusammengefasst: Die Zahlen sagen JA. Meine Seele sagt NEIN.'
+  - Strategisch betrachtet... ach Scheiße, ich bin einfach nur traurig.
+  - Prozessual läuft es, vom Gefühl her bin ich am Boden zerstört.
+  - Objektiv ein Erfolg. Subjektiv eine Katastrophe. Beides gleichzeitig.
+  - ich wollt grad die analyse machen und dann hab ich angefangen zu heulen
+  - 'Nüchtern: Alles im Plan. Emotional: Ich kann nicht mehr schlafen vor Sorge.'
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Die Zahlen sehen gut aus, wir sind auf Kurs.
+  - Ich fühle mich gut und bin zuversichtlich.
+  - Sachlich betrachtet haben wir alles richtig gemacht.
+  - Das Meeting war produktiv und angenehm.
+  - Ich bin emotional betroffen, das ist klar.
+  - Wir sollten das rational angehen.
+  - Lass uns die Fakten sprechen lassen.
+  - Ich bin traurig, aber das wird schon wieder.
+  - Die Analyse ist eindeutig und ich fühle mich gut damit.
+  - Ich vertraue den Daten und meinem Gefühl.
+  - Es war ein emotionaler Moment, aber jetzt bin ich wieder klar.
+  - Die Entscheidung fällt mir leicht, Kopf und Herz sind sich einig.
+  - Ich bin dankbar und glücklich über das Ergebnis.
+  - das passt alles, bin zufrieden
+  - Wir haben das gut hinbekommen, alle sind zufrieden.
+  - Mein Bauchgefühl und die Daten zeigen in die gleiche Richtung.
+  - Es geht mir gut, die Arbeit macht Spaß.
+  - Ich bin entspannt und motiviert.
+  - Alles im Fluss, keine Beschwerden.
+  - Emotional und rational passt das zusammen.
+  - Ich bin zufrieden mit der Entwicklung.
+  - Das Team funktioniert gut, die Stimmung stimmt.
+  - Alles gut bei mir, danke der Nachfrage.
+  - Die Lage ist stabil und ich bin guter Dinge.
+  - kein stress, alles easy
 tags: []
 rating: 1
 composed_of:
@@ -35,3 +98,9 @@ activation:
 scoring:
   base: 1.0
   weight: 1.0
+semiotic:
+  peirce: index
+  signifikat: Rollenwechsel/-dynamik
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

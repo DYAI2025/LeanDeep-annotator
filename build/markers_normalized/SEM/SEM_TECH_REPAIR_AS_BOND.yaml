@@ -38,6 +38,12 @@ rating: 1
 composed_of:
 - ATO_TECH_FIX
 - ATO_SAFETY_AFFECT
+semiotic:
+  peirce: index
+  signifikat: Beziehungsreparatur
+  framing_type: reparatur
+  cultural_frame: Gottman
+  myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.45

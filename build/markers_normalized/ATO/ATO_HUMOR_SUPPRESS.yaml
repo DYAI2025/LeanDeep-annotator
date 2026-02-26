@@ -69,6 +69,11 @@ semiotic:
   - "unterdrückt"
   - "humorlos"
   interpretant: "effect_on_state: {affekt: flat, deesc: -0.05}"
+  peirce: icon
+  signifikat: Humor/Leichtigkeit
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 vad_estimate:
   valence: 0.8
   arousal: 0.6

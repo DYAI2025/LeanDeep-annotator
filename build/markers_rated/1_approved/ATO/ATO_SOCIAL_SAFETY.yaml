@@ -1,0 +1,95 @@
+id: ATO_SOCIAL_SAFETY
+schema: LeanDeep
+version: '5.1'
+layer: ATO
+lang: de
+description: ''
+frame:
+  signal:
+  - token
+  concept: Soziale Sicherheit
+  pragmatics: Schutz durch Zugehörigkeit
+  narrative: Teil des Systems sein
+patterns:
+- type: regex
+  value: "(dazugehören|nicht auffallen|sicher|Teil sein|wie man das macht)"
+examples:
+  positive:
+  - ich will dazugehören
+  - bloß nicht auffallen
+  - so macht man das eben
+  - ich bin Teil davon
+  - das ist sicher so
+  - Ich will einfach dazugehören.
+  - Bloß nicht auffallen, das ist mein Motto.
+  - So macht man das eben.
+  - Ich bin Teil davon, das ist sicher so.
+  - Das ist sicher so, wie man das macht.
+  - Dazugehören ist mir wichtig.
+  - Nicht auffallen, einfach mitschwimmen.
+  - So wie man das eben macht.
+  - Teil sein der Gemeinschaft.
+  - Sicher sein durch Zugehörigkeit.
+  - Ich will dazugehören, um jeden Preis.
+  - Bloß nicht auffallen im Meeting.
+  - So macht man das in unserer Firma.
+  - Ich bin Teil des Teams, das zählt.
+  - Das ist doch sicher so richtig, oder?
+  - Dazugehören wollen ist doch normal.
+  - Nicht auffallen, nicht anecken.
+  - So wie es alle machen.
+  - Teil sein reicht mir.
+  - Sicher fühlen durch Anpassung.
+  - Einfach dazugehören, mehr will ich nicht.
+  - Bloß nicht negativ auffallen.
+  - So ist das eben, so macht man das.
+  - Ich bin ein Teil von etwas Größerem.
+  - Sicher, weil ich dazugehöre.
+  - Dazugehören gibt mir Halt.
+  - Nicht auffallen, das ist am sichersten.
+  - Man macht das so, Punkt.
+  - Teil der Gruppe sein ist mir wichtig.
+  - Sicher ist sicher, ich passe mich an.
+  - Ich will dazugehören und akzeptiert werden.
+  - Bloß nicht aus der Reihe tanzen.
+  - So wie man das macht in der Gesellschaft.
+  - Teil des Systems sein.
+  - Das ist sicher der richtige Weg.
+  - Dazugehören heißt Sicherheit.
+  - Nicht auffallen, das habe ich gelernt.
+  - So macht man das hier.
+  - Ich bin Teil der Lösung.
+  - Sicher durch Konformität.
+  - Hauptsache dazugehören.
+  - Bloß nicht anders sein.
+  - So ist es Brauch, so macht man das.
+  - Teil des Ganzen sein ist mein Ziel.
+  - Sicher fühle ich mich nur in der Gruppe.
+  negative:
+  - Ich bin anders, und das ist gut so.
+  - Ich schwimme gegen den Strom.
+  - Mir ist es egal, was andere denken.
+  - Ich mache mein eigenes Ding.
+  - Ich brauche keine Gruppe.
+  - Ich stehe für mich allein.
+  - Anpassung ist nichts für mich.
+  - Ich bin gerne der Außenseiter.
+  - Konformität langweilt mich.
+  - Ich tanze aus der Reihe.
+  - Ich bin ein Individualist.
+  - Gruppendenken lehne ich ab.
+  - Ich mache es auf meine Art.
+  - Angepasst sein ist mir egal.
+  - Ich falle gerne auf.
+  - Ich brauche keine Bestätigung von anderen.
+  - Ich bin unabhängig.
+  - Normal sein ist überbewertet.
+  - Ich stehe zu meiner Andersartigkeit.
+  - Mainstream ist nicht mein Ding.
+  - Ich rebelliere gegen die Norm.
+  - Einzelgänger aus Überzeugung.
+  - Ich definiere meine eigenen Regeln.
+  - Anders sein ist meine Stärke.
+  - Ich brauche keine Zugehörigkeit.
+tags: []
+rating: 1

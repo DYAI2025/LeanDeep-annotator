@@ -27,6 +27,49 @@ examples:
   - Mein Bankkonto wurde gesperrt, kannst du mir 300 € leihen?
   - Das war doch nur ein Scherz, du übertreibst mal wieder.
   - Du schuldest mir eine Erklärung, Alter!
+  - "Nein ich hab nicht telefoniert, du bildest dir das ein."
+  - "Kannst du mir nicht einfach vertrauen?? Du bist so paranoid."
+  - "Ich war bei der Arbeit, was soll die Fragerei?"
+  - "Du übertreibst wie immer, da war nichts."
+  - "Wenn du mir nicht glaubst ist das dein Problem."
+  - "Die Nachricht? Ach die war für wen anders, verwechselt."
+  - "Du spinnst doch, ich hab das nie gesagt!"
+  - "Leih mir nur kurz Geld, ich geb's morgen zurück, versprochen."
+  - "Du bist die Einzige die mich versteht, ohne dich bin ich nichts."
+  - "Deine Freunde mögen mich nicht? Die sind eifersüchtig auf uns."
+  - "Das war ein Arbeitskollege, stell dich nicht so an."
+  - "Ich hab das Passwort geändert weil... Sicherheit halt."
+  - "Wenn du mich wirklich lieben würdest, würdest du nicht fragen."
+  - "Gib mir deine PIN, ich muss was überweisen."
+  - "Du verwechselst da was, SO war das nicht."
+  - "Das hast du falsch verstanden, ich hab das ganz anders gemeint."
+  - "Ich isoliere dich nicht, ich beschütze dich vor denen."
+  - "Du brauchst nicht mit ihm zu reden, der lügt nur."
+  - "Ohne mich wärst du aufgeschmissen, das weißt du."
+  - "Ich kontrolliere dein Handy nur weil ich dich liebe."
+  - "Warum willst du wissen wo ich war? Kontrollierst du mich?"
+  - "Ich hab dir ALLES gegeben und so dankst du mir?"
+  - "Das Geld? Das hab ich für UNS ausgegeben."
+  - "Du schuldest mir was, vergiss das nicht."
+  - "Niemand wird dich so lieben wie ich, merk dir das."
+  - "Deine Familie hat dir den Kopf verdreht."
+  - "Reg dich ab, das war nur ein Scherz, hast keinen Humor."
+  - "Ich hab das Recht auf dein Vertrauen, ich bin dein Partner!"
+  - "Du machst mich krank mit deinem Misstrauen."
+  - "Glaub mir einfach, warum ist das so schwer??"
+  - "Ich hab nie gelogen... naja vielleicht ein kleines bisschen."
+  - "Die SMS? Die hab ich gelöscht weil sie unwichtig war."
+  - "Du bildest dir Sachen ein, vielleicht brauchst du nen Therapeuten."
+  - "Frag die anderen, die werden dir das gleiche sagen wie ich."
+  - "Es war DEINE Idee, ich hab nur mitgemacht."
+  - "Ohne mich kannst du eh keine Entscheidungen treffen."
+  - "Ich hab das Geld nur geliehen, nicht gestohlen."
+  - "Du warst ja nicht da, also musste ich das alleine regeln."
+  - "Warum bist du so misstrauisch? Das sagt viel über DICH aus."
+  - "Hab dir doch gesagt du sollst dich nicht mit ihr treffen."
+  - "Ich mach das alles nur für uns, du undankbares..."
+  - "Klar, glaub denen und nicht mir. Typisch."
+  - "Du wärst ohne mich total verloren."
   negative:
   - Dieser alte Brief? Der lag hier selten. Du musst ihn selbst verlegt haben.
   - Ich hab dich noch selten so geliebt wie jetzt.
@@ -35,6 +78,25 @@ examples:
   - Ich verstehe deine Perspektive.
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
+  - "Stimmt, ich war bei Max, hab vergessen dir Bescheid zu sagen."
+  - "Du hast recht, ich hätte dir das sofort erzählen sollen."
+  - "Klar, schau gerne mein Handy an, ich hab nix zu verbergen."
+  - "Ja, ich hab einen Fehler gemacht und steh dazu."
+  - "Ich verstehe dein Misstrauen, lass uns drüber reden."
+  - "Sorry dass ich mich nicht gemeldet hab, war im Meeting."
+  - "Guter Punkt, ich hätte transparenter sein sollen."
+  - "Ich liebe dich und will dass du dich sicher fühlst."
+  - "Lass uns ein Paartherapie machen, ich will das klären."
+  - "Ich geb zu das sah komisch aus, lass mich erklären."
+  - "Heute war ein normaler Tag auf der Arbeit."
+  - "Sollen wir morgen zusammen Abendessen kochen?"
+  - "Ich freu mich auf unseren Urlaub."
+  - "Der Film war echt gut gestern."
+  - "Danke dass du immer für mich da bist."
+  - "Hab an dich gedacht und dir Blumen mitgebracht."
+  - "Wie war dein Tag? Erzähl mal."
+  - "Ich hab die Steuererklärung fertig gemacht."
 tags:
 - suspicious
 - deception
+semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

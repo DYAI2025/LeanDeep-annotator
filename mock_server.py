@@ -604,6 +604,130 @@ async def analyze_dynamics(request: Request):
     }
 
 
+# POST /v1/analyze/interpret
+@app.post("/v1/analyze/interpret")
+async def analyze_interpret(request: Request):
+    body = await request.json()
+    messages = body.get("messages", [])
+    scenario = _scenario(request)
+    is_conflict = scenario == "conflict_escalation"
+
+    text_len = sum(len(m.get("text", "")) for m in messages)
+
+    if is_conflict:
+        semiotic_map = {
+            "ATO_CONTEMPT": {"peirce": "index", "signifikat": "Verachtung/Ueberlegenheit", "cultural_frame": "Gottman", "framing_type": "abwertung", "myth": "Ueberlegenheit schuetzt — wer abwertet, vermeidet eigene Verletzlichkeit"},
+            "ATO_STONEWALLING": {"peirce": "index", "signifikat": "Emotionaler Rueckzug", "cultural_frame": "Gottman", "framing_type": "vermeidung", "myth": "Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres"},
+            "ATO_DEMAND": {"peirce": "index", "signifikat": "Dominanz/Forderung", "cultural_frame": "", "framing_type": "kontrollnarrative", "myth": "Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge"},
+            "SEM_GUILT_TRIP": {"peirce": "symbol", "signifikat": "Verdeckte Einflussnahme", "cultural_frame": "Sozialpsychologie", "framing_type": "kontrollnarrative", "myth": "Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge"},
+            "SEM_GASLIGHTING": {"peirce": "symbol", "signifikat": "Realitaetsverzerrung", "cultural_frame": "Sozialpsychologie", "framing_type": "kontrollnarrative", "myth": "Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge"},
+            "SEM_EMOTIONAL_FLOODING": {"peirce": "icon", "signifikat": "Emotionale Ueberwaeltigung", "cultural_frame": "Emotionsregulation", "framing_type": "ueberflutung", "myth": "Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet"},
+            "CLU_ESCALATION_SPIRAL": {"peirce": "index", "signifikat": "Eskalationsdynamik", "cultural_frame": "Gottman", "framing_type": "eskalation", "myth": "Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht"},
+            "CLU_WITHDRAWAL_PATTERN": {"peirce": "index", "signifikat": "Rueckzugsmuster", "cultural_frame": "Gottman", "framing_type": "vermeidung", "myth": "Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres"},
+            "MEMA_RELATIONSHIP_CRISIS": {"peirce": "symbol", "signifikat": "Meta-Organismusdiagnose", "cultural_frame": "Systemisch", "framing_type": "meta", "myth": "Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich"},
+        }
+        framings = [
+            {"framing_type": "kontrollnarrative", "label": "Kontroll-/Manipulations-Framing",
+             "intensity": 0.93, "evidence_markers": ["ATO_DEMAND", "SEM_GUILT_TRIP", "SEM_GASLIGHTING"],
+             "message_indices": [2, 4], "detection_count": 5,
+             "myth": "Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge"},
+            {"framing_type": "abwertung", "label": "Abwertungsmodus (Verachtung/Sarkasmus)",
+             "intensity": 0.94, "evidence_markers": ["ATO_CONTEMPT"],
+             "message_indices": [0], "detection_count": 2,
+             "myth": "Ueberlegenheit schuetzt — wer abwertet, vermeidet eigene Verletzlichkeit"},
+            {"framing_type": "eskalation", "label": "Eskalationsdynamik",
+             "intensity": 0.78, "evidence_markers": ["CLU_ESCALATION_SPIRAL"],
+             "message_indices": [0, 2, 4], "detection_count": 3,
+             "myth": "Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht"},
+            {"framing_type": "vermeidung", "label": "Vermeidungs-/Rueckzugsmodus",
+             "intensity": 0.90, "evidence_markers": ["ATO_STONEWALLING", "CLU_WITHDRAWAL_PATTERN"],
+             "message_indices": [1, 3], "detection_count": 4,
+             "myth": "Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres"},
+            {"framing_type": "ueberflutung", "label": "Emotionale Ueberflutung",
+             "intensity": 0.85, "evidence_markers": ["SEM_EMOTIONAL_FLOODING"],
+             "message_indices": [5], "detection_count": 2,
+             "myth": "Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet"},
+            {"framing_type": "meta", "label": "Meta-Organismusdiagnose",
+             "intensity": 0.61, "evidence_markers": ["MEMA_RELATIONSHIP_CRISIS"],
+             "message_indices": [0, 1, 2, 3, 4, 5], "detection_count": 1,
+             "myth": "Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich"},
+        ]
+        dominant = "abwertung"
+        n_markers = 9
+    else:
+        semiotic_map = {
+            "ATO_HESITATION": {"peirce": "icon", "signifikat": "Zoegern/Ambivalenz", "cultural_frame": "", "framing_type": "unsicherheit", "myth": "Zweifel ist Schwaeche — wer zoegert, verliert"},
+            "ATO_VALIDATION": {"peirce": "icon", "signifikat": "Einfuehlung/Validierung", "cultural_frame": "Rogers", "framing_type": "empathie", "myth": "Verstehen heisst zustimmen — Empathie fordert Parteinahme"},
+            "ATO_SELF_BLAME": {"peirce": "index", "signifikat": "Selbstbeschuldigung", "cultural_frame": "", "framing_type": "schuld", "myth": "Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung"},
+            "ATO_REPAIR_BID": {"peirce": "index", "signifikat": "Beziehungswiederherstellung", "cultural_frame": "Gottman", "framing_type": "reparatur", "myth": "Kommunikation loest alles — reden heilt, schweigen zerstoert"},
+            "SEM_REPAIR_ATTEMPT": {"peirce": "index", "signifikat": "Beziehungswiederherstellung", "cultural_frame": "Gottman", "framing_type": "reparatur", "myth": "Kommunikation loest alles — reden heilt, schweigen zerstoert"},
+            "SEM_SECURE_BASE": {"peirce": "symbol", "signifikat": "Sichere-Basis-Signal", "cultural_frame": "Bowlby", "framing_type": "bindung", "myth": "Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat"},
+            "CLU_REPAIR_SEQUENCE": {"peirce": "index", "signifikat": "Reparatursequenz", "cultural_frame": "Gottman", "framing_type": "reparatur", "myth": "Kommunikation loest alles — reden heilt, schweigen zerstoert"},
+            "MEMA_THERAPEUTIC_PROGRESS": {"peirce": "symbol", "signifikat": "Meta-Organismusdiagnose", "cultural_frame": "Systemisch", "framing_type": "meta", "myth": "Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich"},
+        }
+        framings = [
+            {"framing_type": "reparatur", "label": "Reparatur-/Wiederherstellungsmodus",
+             "intensity": 0.95, "evidence_markers": ["ATO_REPAIR_BID", "SEM_REPAIR_ATTEMPT", "CLU_REPAIR_SEQUENCE"],
+             "message_indices": [3, 4, 5], "detection_count": 5,
+             "myth": "Kommunikation loest alles — reden heilt, schweigen zerstoert"},
+            {"framing_type": "empathie", "label": "Empathie-/Validierungsmodus",
+             "intensity": 0.88, "evidence_markers": ["ATO_VALIDATION"],
+             "message_indices": [1], "detection_count": 2,
+             "myth": "Verstehen heisst zustimmen — Empathie fordert Parteinahme"},
+            {"framing_type": "schuld", "label": "Schuld-/Selbstattributions-Framing",
+             "intensity": 0.91, "evidence_markers": ["ATO_SELF_BLAME"],
+             "message_indices": [2], "detection_count": 2,
+             "myth": "Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung"},
+            {"framing_type": "unsicherheit", "label": "Unsicherheits-/Ambivalenz-Framing",
+             "intensity": 0.92, "evidence_markers": ["ATO_HESITATION"],
+             "message_indices": [0], "detection_count": 2,
+             "myth": "Zweifel ist Schwaeche — wer zoegert, verliert"},
+            {"framing_type": "bindung", "label": "Bindungs-/Sicherheitssignal",
+             "intensity": 0.80, "evidence_markers": ["SEM_SECURE_BASE"],
+             "message_indices": [5], "detection_count": 1,
+             "myth": "Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat"},
+            {"framing_type": "meta", "label": "Meta-Organismusdiagnose",
+             "intensity": 0.65, "evidence_markers": ["MEMA_THERAPEUTIC_PROGRESS"],
+             "message_indices": [0, 1, 2, 3, 4, 5], "detection_count": 1,
+             "myth": "Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich"},
+        ]
+        dominant = "reparatur"
+        n_markers = 8
+
+    if is_conflict:
+        findings = {
+            "narrative": "Kontroll- und Eskalationssignale (9 Marker) praegen den Austausch. Muster wie Contempt, Demand, Guilt Trip deuten auf eine zunehmend verhaertete Dynamik hin. Vermeidungs- und Rueckzugsmuster (2 Marker) sind praesent. Stonewalling, Withdrawal Pattern signalisieren emotionale Distanzierung.",
+            "key_points": [
+                "Abwertungsmodus: 1 Marker, 94% Intensitaet",
+                "Kontroll-/Manipulations-Framing: 3 Marker, 93% Intensitaet",
+                "Vermeidungs-/Rueckzugsmodus: 2 Marker, 90% Intensitaet",
+                "Demand-Withdraw-Muster erkennbar",
+            ],
+            "relational_pattern": "Es zeigt sich ein Demand-Withdraw-Muster: Waehrend eine Seite eskaliert, zieht sich die andere zurueck — ein klassischer Teufelskreis.",
+            "bias_check": None,
+        }
+    else:
+        findings = {
+            "narrative": "Reparatursignale (3 Marker) zeigen Versuche der Wiederherstellung. Repair Bid, Repair Attempt, Repair Sequence deuten auf aktive Beziehungsarbeit hin. Empathie- und Validierungssignale (1 Marker) zeigen einfuehlsame Anteile.",
+            "key_points": [
+                "Reparatur-/Wiederherstellungsmodus: 3 Marker, 95% Intensitaet",
+                "Unsicherheits-/Ambivalenz-Framing: 1 Marker, 92% Intensitaet",
+                "Schuld-/Selbstattributions-Framing: 1 Marker, 91% Intensitaet",
+                "Empathie und Reparatur dominieren — konstruktive Kommunikation",
+            ],
+            "relational_pattern": "Empathie und Reparatur dominieren — konstruktive Kommunikation mit echten Verstaendigungsversuchen.",
+            "bias_check": None,
+        }
+
+    return {
+        "framings": framings,
+        "semiotic_map": semiotic_map,
+        "dominant_framing": dominant,
+        "findings": findings,
+        "meta": _meta(text_len, n_markers, ["ATO", "SEM", "CLU", "MEMA"], ms=4.2),
+    }
+
+
 # POST /v1/personas
 @app.post("/v1/personas")
 async def create_persona():

@@ -6,9 +6,9 @@ frame:
   pragmatics: Erwartungsmanagement
   narrative: qa_loop
 composed_of:
-  - SEM_FLOUT_QUALITY_IRONY
-  - SEM_SHARED_HUMOR
-  - SEM_HYPERBOLE_SIGNAL
+- SEM_FLOUT_QUALITY_IRONY
+- SEM_SHARED_HUMOR
+- SEM_HYPERBOLE_SIGNAL
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 20 messages
 scoring:
@@ -37,3 +37,4 @@ tags:
 - narrative
 - cluster
 - v33
+semiotic: {peirce: icon, signifikat: Humor/Leichtigkeit, framing_type: empathie, cultural_frame: '', myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme}

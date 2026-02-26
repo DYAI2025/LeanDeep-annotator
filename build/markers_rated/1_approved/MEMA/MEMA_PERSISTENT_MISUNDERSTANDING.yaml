@@ -24,6 +24,48 @@ examples:
   - "Wiederholtes Muster im Wochenverlauf."
   - "Zweimalige Sequenz während Review."
   - "Langfristig mehrere Vorkommen."
+  - Dasselbe Missverständnis taucht im dritten Meeting in Folge auf.
+  - Bruch → Erregung → gescheiterte Reparatur, zum wiederholten Mal in dieser Woche.
+  - Der gleiche Punkt wird falsch verstanden, obwohl er dreimal erklärt wurde.
+  - 'Im Sprint: Anforderung wird wiederholt missverstanden, trotz Nachfragen.'
+  - 'Therapeut bemerkt: Patient missversteht dieselbe Intervention in jeder Sitzung.'
+  - Wiederkehrendes Missverständnis zwischen Abteilungen über drei Projekte hinweg.
+  - 'Muster: Jedes Gespräch über das Thema endet mit demselben Missverständnis.'
+  - Zwei Prozesse innerhalb einer Retrospektive zeigen dasselbe Verständnisproblem.
+  - 'Im Paar: Dieselbe Bitte wird seit Monaten falsch interpretiert.'
+  - 'Persistierender Fehlschluss: Beide Seiten verstehen das Gleiche anders, Woche für Woche.'
+  - 'Im Teamcall: Klärungsversuch scheitert zum dritten Mal am gleichen Punkt.'
+  - 'Das Missverständnis hat sich verselbständigt: Jede Klärung erzeugt neues Unverständnis.'
+  - 'Über den Monat: Dreimal dasselbe Problem besprochen, dreimal anders verstanden.'
+  - 'In der Paartherapie: Das Kernmissverständnis reproduziert sich in jeder Sitzung.'
+  - 'Wiederkehrender Prozess: Erklärung → Zustimmung → Umsetzung → falsches Ergebnis.'
+  - 'Muster über Projekt-Calls: Absprache → Missverständnis → Nacharbeit, in jeder Phase.'
+  - 'Persistenz über drei Sitzungen: Derselbe Inhalt wird jedes Mal anders aufgefasst.'
+  - 'Im Daily: Dasselbe Ticket wird von verschiedenen Leuten unterschiedlich verstanden, täglich.'
+  - 'Kommunikationsmuster: Je öfter es erklärt wird, desto verwirrender wird es.'
+  - Zwei Missverständnis-Zyklen innerhalb eines einzigen Gesprächs.
+  - Das Thema wurde viermal besprochen und viermal anders verstanden.
+  - 'Im Coaching: Klient zeigt persistierendes Missverständnis einer zentralen Botschaft.'
+  - 'Langfristiger Trend: Das gleiche Missverständnis taucht in verschiedenen Kontexten auf.'
+  - 'Wiederholt: Bruch → Versuch der Reparatur → Scheitern → neuer Bruch, über Wochen.'
+  - 'Im Unterricht: Schüler missversteht dasselbe Konzept trotz verschiedener Erklärungsansätze.'
+  - 'Persistenz: Der Kern des Problems wird nie erreicht, die Oberfläche wird immer neu missverstanden.'
+  - 'Therapeut dokumentiert: Drei aufeinanderfolgende Sitzungen mit dem gleichen Verständnisproblem.'
+  - "Im Paar: 'Das meine ich doch gar nicht!' – 'Doch, du sagst immer...' Seit Monaten."
+  - 'Wiederkehrend: Beide denken, sie hätten es geklärt, bis das nächste Mal dasselbe passiert.'
+  - 'Über fünf Meetings: Immer dasselbe Missverständnis, trotz verschiedener Formulierungen.'
+  - 'Das Missverständnis ist strukturell: Es liegt nicht an den Worten, sondern an den Rahmen.'
+  - 'Persistierender Zyklus: Verständigung → kurze Klarheit → Rückfall ins Missverständnis.'
+  - 'Im Familiensystem: Generationenübergreifendes Missverständnis, das sich wiederholt.'
+  - 'Langstrecke: Missverständnis überlebt jeden Klärungsversuch und reproduziert sich.'
+  - 'In der Mediation: Trotz Vermittlung kehrt das Missverständnis immer wieder.'
+  - 'Analyse zeigt: Zwei separate Missverständnis-Sequenzen in einer einzigen Sitzung.'
+  - 'Das Muster ist persistent: Erklärung → scheinbares Verständnis → Rückfall → Frustration.'
+  - 'Über den Sprint: Anforderungen werden in jedem Planning anders interpretiert.'
+  - Wiederkehrender Missverständnisprozess korreliert mit emotionaler Aktivierung.
+  - 'Im Teamkontext: Gleiche Information, unterschiedliches Verständnis, jede Woche aufs Neue.'
+  - 'Persistenz-Marker: Dasselbe Problem wurde in drei verschiedenen Meetings unterschiedlich gelöst.'
+  - Das Missverständnis hat sich chronifiziert und ist zum festen Bestandteil der Dynamik geworden.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -32,7 +74,26 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Es gab ein Missverständnis, aber wir haben es sofort geklärt.
+  - Kurze Verwirrung, die sich durch Nachfragen aufgelöst hat.
+  - Einmaliges Missverständnis, das nicht wieder aufgetreten ist.
+  - Wir haben unterschiedlich verstanden, aber eine schnelle Klärung hat geholfen.
+  - Es gab einen Kommunikationsfehler, der sofort korrigiert wurde.
+  - Kurzfristiges Missverständnis bei einem neuen Thema, das sich von selbst gelöst hat.
+  - 'Einmalig: Unterschiedliche Interpretation, die durch Rückfrage aufgelöst wurde.'
+  - Das Missverständnis war kontextbedingt und trat nicht wieder auf.
+  - Kurze Verständnislücke, die durch bessere Formulierung geschlossen wurde.
+  - Einmaliger Kommunikationsfehler ohne Wiederholung.
+  - Das Thema war komplex, aber nach einer Erklärung war es klar.
+  - Missverständnis bei der ersten Besprechung, danach problemfrei.
+  - Verschiedene Interpretation, die konstruktiv aufgelöst wurde.
+  - Kurze Phase der Verwirrung, die zu besserem Verständnis geführt hat.
+  - Einmaliges Missverständnis, das als Lernchance genutzt wurde.
+  - Die Klärung hat beim zweiten Mal funktioniert und das Thema war erledigt.
+  - Kurzzeitiges Reden aneinander vorbei, das schnell bemerkt und korrigiert wurde.
+  - Ein einziges Missverständnis, das durch Visualisierung sofort gelöst wurde.
 tags: [meta, multimodal, misunderstanding]
 metadata:
   type: MEMA
   family: "MISUNDERSTANDING"
+semiotic: {peirce: symbol, signifikat: Meta-Diagnose, framing_type: meta, cultural_frame: Systemisch, myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

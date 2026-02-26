@@ -45,6 +45,12 @@ composed_of:
 activation:
   rule: "AT_LEAST 1 IN 2 messages"
   window: 2
+semiotic:
+  peirce: index
+  signifikat: Handlungsorientierung/Leistung
+  framing_type: kontrollnarrative
+  cultural_frame: ''
+  myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

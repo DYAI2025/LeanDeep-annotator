@@ -20,14 +20,77 @@ examples:
   - Secure- und Anxious-Cluster wechseln, doch Anxious überwiegt drei Chunks lang.
   - "System meldet: 'Dominanter Stil: Secure (p = 0.82)'."
   - Profilergebnis wird als Feature an Coaching-Modul übergeben.
+  - 'Ueber 20 Nachrichten zeigt sich: Sie vermeidet konsequent emotionale Naehe. Vermeidendes Profil.'
+  - 'In drei Gesprächsabschnitten: Klammern, Angst vor Verlust, Nachfragen ob alles gut ist. Aengstliches Profil.'
+  - 'Muster ueber Wochen: Er spricht offen, zeigt Verletzlichkeit, repariert Konflikte. Sicherer Bindungsstil.'
+  - 'Therapieverlauf zeigt: Desorganisiertes Bindungsmuster. Naehe wird gesucht und gleichzeitig abgewehrt.'
+  - 'Drei Sessions lang: Jedes Mal emotionale Distanz, kein Eingehen auf Beziehungsthemen. Vermeidend.'
+  - 'Klientin zeigt ueber Monate: Aengstliche Bindung. Staendige Rueckversicherung, Angst verlassen zu werden.'
+  - 'Chat-Analyse: Partner reagiert konsistent mit Rueckzug auf emotionale Angebote. Avoidant-Profil.'
+  - 'Ueber den gesamten Gesprächsverlauf: Sichere Basis, angemessene Selbstoffenbarung, konstruktive Konflikte.'
+  - 'Nachrichten zeigen Muster: Immer sofort antworten, Panik bei Stille, Kontrolle durch Praesenz. Aengstlich.'
+  - 'Langzeitanalyse: Desorganisiert. Zwischen Anklammern und Wegstoessen, kein stabiles Muster.'
+  - 'In 5 Chunks: Konsistent sichere Kommunikation, angemessene Grenzen, emotionale Offenheit.'
+  - 'Dominanter Stil: Vermeidend. Ueber alle analysierten Segmente hinweg keine emotionale Tiefe.'
+  - 'Profil-Ergebnis: Aengstlich-praeokkupiert. 80% der Nachrichten zeigen Bindungsangst-Signale.'
+  - 'Verlauf ueber Wochen: Abwechselnd klammern und sich entziehen. Desorganisiertes Bindungsprofil.'
+  - Der Sprecher zeigt in 4 von 5 Gesprächssegmenten sichere Bindungssignale.
+  - 'Therapeutin bemerkt: In 3 Sitzungen konsistent vermeidendes Verhalten bei Beziehungsthemen.'
+  - 'A: Ich melde mich wenn ich soweit bin. [12h Stille] A: Alles okay? Du sagst gar nichts. [Aengstlich-Profil emergiert]'
+  - 'Ueber 50 Nachrichten: Kein einziges Mal Verletzlichkeit gezeigt. Immer Kontrolle, immer sachlich. Vermeidend.'
+  - 'Bindungsprofil: Secure. Konsistente Muster ueber Monate: Offenheit, Repair, angemessene Autonomie.'
+  - 'Partner zeigt ueber 3 Chunk-Fenster: Staendige Angst vor Ablehnung, Ueberanpassung. Aengstlich-Profil.'
+  - 'Analyse zeigt: Wechsel zwischen Naehe-suchen und Flucht. Disorganisiertes Muster dominant.'
+  - 'In der Langzeitanalyse: Sichere Bindung. Emotionsregulation intakt, Naehe und Distanz ausbalanciert.'
+  - 'Der Klient zeigt ueber alle Sitzungen: Vermeidung von Intimität, Ablenkung bei emotionalen Themen.'
+  - 'Meta-Analyse der Chat-Verlaeufe: Aengstlicher Bindungsstil. Uebermaessiges Nachfragen, Bestaetigung suchen.'
+  - 'Profil nach 3 Chunks: Vermeidend. Kein Reparaturverhalten, kein emotionales Eingehen auf Partner.'
+  - 'Ueber den Therapieverlauf: Patient entwickelt sich von aengstlich zu sicherer Bindung. Fortschritt erkennbar.'
+  - 'Chat zeigt konsistentes Muster: Sofortige Verfuegbarkeit, Angst bei Nicht-Antwort, aengstlich.'
+  - 'Langzeitprofil: Desorganisiert. In manchen Phasen klammend, in anderen voellig distanziert.'
+  - 'System erkennt: Dominanter Bindungsstil = vermeidend (p=0.78). Ueber 30 Nachrichten stabil.'
+  - 'Bindungsanalyse zeigt: Sichere Basis mit leichter aengstlicher Tendenz in Stresssituationen.'
+  - 'Der Sprecher vermeidet systematisch alle Beziehungsthemen. Ueber 5 Segmente. Profil: Vermeidend.'
+  - 'Therapie-Fortschritt: Vom desorganisierten zum aengstlich-sicheren Profil. Positive Entwicklung.'
+  - 'Aengstliches Profil: Jede Nicht-Antwort wird als Ablehnung interpretiert. Muster ueber Wochen stabil.'
+  - 'In 4 Chunks: Immer emotional verfuegbar, reparaturbereit, selbstreflektiert. Sicherer Bindungsstil.'
+  - 'Vermeidendes Profil: Keine Selbstoffenbarung, kein Eingehen auf emotionale Beduerfnisse des Partners.'
+  - 'Bindungsprofil emergiert ueber 3 Sitzungen: Aengstlich. Konsistent uebermaessige Naehe-Suche.'
+  - Der Patient zeigt in allen analysierten Segmenten desorganisierte Bindungsmuster.
+  - 'Langzeit-Trend: Von vermeidend zu leicht aengstlich. Therapeutischer Fortschritt erkennbar.'
+  - 'System-Output: Sicherer Bindungsstil dominant (85%). Konsistent ueber alle Analyse-Fenster.'
+  - 'Profil nach Langzeitanalyse: Aengstlich-praeokkupiert. Kernsignal: Angst vor Verlassenwerden.'
+  - 'Chat-Verlauf ueber Monate: Vermeidendes Bindungsprofil. Emotionale Themen werden systematisch umgangen.'
+  - 'Langzeit-Analyse: Der Klient zeigt in 90% der Segmente aengstliche Bindungssignale. Profil eindeutig.'
+  - 'Vermeidendes Profil bestaetigt: In 5 Chunks kein einziges Mal emotionale Naehe zugelassen.'
+  - 'Sicherer Bindungsstil ueber 4 Analyse-Fenster: Offenheit, Reparaturverhalten, gesunde Grenzen.'
+  - 'Multi-Chunk-Analyse: Desorganisiertes Muster. Abwechselnd Klammern und Abstoessen. Stabil instabil.'
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich brauche heute Abend Ruhe, das hat nichts mit dir zu tun.
+  - Ich moechte ueber meine Gefuehle reden, wenn du Zeit hast.
+  - Manchmal bin ich unsicher in Beziehungen, aber wer ist das nicht.
+  - Ich vermisse dich, schreib mir wenn du kannst.
+  - Lass uns morgen telefonieren, ich freue mich.
+  - Ich bin gerade beschaeftigt, melde mich spaeter.
+  - Ich brauche Zeit fuer mich, aber ich freue mich auf unser Treffen.
+  - Ich bin manchmal eifersüchtig, aber ich arbeite daran.
+  - Ich mag es, Zeit allein zu verbringen, das ist gesund.
+  - Manchmal fällt mir Naehe schwer, aber ich versuche es.
+  - Ich liebe dich und ich sage es gern.
+  - Ich reagiere nicht immer sofort, aber ich denke an dich.
+  - Wir hatten einen Streit, aber wir klären das.
+  - Ich bin offen fuer Gespräche, wenn du bereit bist.
+  - Abstand tut manchmal gut, aber ich bin nicht weg.
+  - Ich bin heute emotionaler als sonst, sorry.
+  - Unsere Beziehung ist mir wichtig, ich investiere gern.
+  - Ich hatte einen schwierigen Tag und brauche Zuwendung.
+  - Ich bin noch nicht bereit ueber alles zu reden.
+  - Danke dass du da bist, das bedeutet mir viel.
+  - Ich bin manchmal kompliziert, aber ich meine es gut.
+  - Lass uns mal wieder was Schoenes zusammen machen.
+  - Ich hab dich lieb, auch wenn ich es nicht immer zeige.
+  - Heute brauche ich Naehe, komm her.
+  - Ich bin froh dass wir offen miteinander reden koennen.
 tags: []
 rating: 1
 composed_of:
@@ -36,3 +99,9 @@ composed_of:
 - SEM_CARING_FRIEND_EXPRESSIONS_MARKER
 activation:
   rule: "ANY 1 IN 3 chunks"
+semiotic:
+  peirce: symbol
+  signifikat: Bindungsmuster
+  framing_type: bindung
+  cultural_frame: Bowlby
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'

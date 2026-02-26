@@ -47,6 +47,12 @@ activation:
 scoring:
   base: 0.65
   weight: 1.12
+semiotic:
+  peirce: index
+  signifikat: Kontrolle/Dominanz
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
+  myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'
 compositionality: deterministic
 vad_estimate:
   valence: -0.05

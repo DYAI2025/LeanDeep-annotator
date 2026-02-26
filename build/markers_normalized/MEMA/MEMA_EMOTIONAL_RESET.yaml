@@ -1,0 +1,116 @@
+id: MEMA_EMOTIONAL_RESET
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - emotional
+  - reset
+  concept: Emotionaler Reset – Versuch eines Neuanfangs nach Konflikten
+  pragmatics: Erkennt bewusste Neustarts in der emotionalen Dynamik
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Lass uns einfach nochmal von vorne anfangen. Sauberer Tisch.
+  - Ich möchte alles vergessen und neu beginnen.
+  - Können wir bitte den Reset-Knopf drücken?
+  - Ab heute zählt nur noch die Zukunft, nicht die Vergangenheit.
+  - Lass uns so tun, als wäre heute der erste Tag.
+  - Ich will einen Neuanfang – mit dir, mit uns.
+  - Vergessen wir die letzten Wochen. Starten wir durch.
+  - Ich bin bereit, alles hinter mir zu lassen und nochmal von null anzufangen.
+  - Neues Kapitel. Alte Fehler zählen nicht mehr.
+  - Wollen wir nochmal starten? Ohne Altlasten?
+  - Ich möchte einen frischen Start. Sind wir beide bereit dafür?
+  - Ab jetzt beginnt unsere neue Zeitrechnung.
+  - Lass die Vergangenheit los. Ich tue es auch.
+  - Wir drücken auf Neustart. Alles auf Anfang.
+  - Strich drunter. Morgen ist ein neuer Tag.
+  - Ich will, dass wir nochmal die Chance bekommen, es richtig zu machen.
+  - Clean Slate – kein Nachtragen, kein Aufrechnen.
+  - Ich vergebe dir alles und bitte dich, mir auch zu vergeben.
+  - Lass uns die Uhr zurückdrehen und es besser machen.
+  - Ich will nicht mehr zurückschauen. Nur noch nach vorne.
+  - Neuer Anfang, neue Regeln, neues Wir.
+  - Ich bin bereit, zu vergessen und zu vergeben.
+  - Ab morgen ist alles anders. Das verspreche ich.
+  - Wir löschen die Schiefertafel und schreiben neu.
+  - Keine Vorwürfe mehr. Ab jetzt zählt nur, was kommt.
+  - Ich möchte dir eine neue Chance geben – und mir auch.
+  - Reset. Reboot. Restart. Jetzt.
+  - Die alten Geschichten lassen wir hinter uns.
+  - Ich will nochmal bei null anfangen – bist du dabei?
+  - Ab jetzt gelten neue Spielregeln.
+  - Lass uns alles zurücksetzen und frisch starten.
+  - 'Ich hab entschieden: Vergangenheit ist vorbei, Zukunft beginnt jetzt.'
+  - Können wir bitte einfach nochmal von Anfang an starten?
+  - Ich will nicht mehr daran denken. Neuanfang.
+  - Wie wäre es, wenn wir so tun, als hätten wir uns gerade erst kennengelernt?
+  - Ich lösche gedanklich alles und fange neu an.
+  - 'Ab diesem Moment: nur noch positiv.'
+  - Lass die Altlasten los. Wir schaffen das.
+  - Ich wünsche mir einen echten Neustart.
+  - Reset-Taste. Drücken wir sie zusammen?
+  - Die Vergangenheit hat uns nicht gut getan. Die Zukunft wird besser.
+  - Ich bin ready für ein neues Kapitel.
+  - Wir verdienen einen Neuanfang.
+  - Alles auf null. Alles auf Anfang.
+  - Ich schenke uns beiden einen frischen Start.
+  - Tabula rasa – ab jetzt.
+  - 'Der Strich ist gezogen. Ab hier: neues Spiel.'
+  - Ich will nicht nachtragen. Ich will neu anfangen.
+  - Lass uns unsere Geschichte neu schreiben.
+  - Ich glaube an uns – und an einen Neustart.
+  negative:
+  - Wir müssen über das sprechen, was passiert ist – einfach vergessen geht nicht.
+  - Ich kann nicht so tun, als wäre nichts gewesen.
+  - Neuanfang? Dafür müssen wir erstmal aufarbeiten, was war.
+  - Man kann nicht einfach einen Reset-Knopf drücken.
+  - Die Vergangenheit gehört dazu, die können wir nicht ignorieren.
+  - Vergessen geht nicht so einfach – das muss verarbeitet werden.
+  - Ich brauche Aufarbeitung, nicht Verdrängung.
+  - Einfach weitermachen ist keine Lösung.
+  - Wir müssen das klären, bevor wir weitergehen können.
+  - Ein Neuanfang braucht mehr als gute Vorsätze.
+  - Ich kann nicht vergessen, was du getan hast.
+  - Vergeben ja, vergessen nein.
+  - Die Vergangenheit hat Konsequenzen, die können wir nicht ignorieren.
+  - Wir brauchen mehr als einen Reset – wir brauchen echte Veränderung.
+  - Einfach alles löschen? So funktioniert das nicht.
+  - Die Wunden heilen nicht, indem man so tut, als wären sie nicht da.
+  - Aufarbeitung ist wichtiger als Verdrängung.
+  - Ich muss das verarbeiten, bevor ich weitermachen kann.
+  - Vergessen wäre der einfache Weg – aber nicht der richtige.
+  - Wir können nicht neu anfangen, ohne die alten Themen zu klären.
+  - Ein echter Neuanfang braucht Verständnis, nicht Amnesie.
+  - Ich will aufarbeiten, nicht verdrängen.
+  - Die Geschichte lässt sich nicht einfach zurücksetzen.
+  - Bevor wir nach vorne schauen, müssen wir zurückblicken.
+  - Tabula rasa gibt es in Beziehungen nicht.
+tags:
+- mema
+- emotional
+- reset
+- restart
+rating: 2
+composed_of:
+  required_any:
+  - SEM_REPAIR_SIGNAL
+  - CLU_AGREE_TO_DISAGREE
+  supportive:
+  - ATO_APOLOGY
+  - SEM_EMPATHIC_RESONANCE
+activation:
+  rule: "ANY 1 IN 10 messages"
+scoring:
+  base: 1.5
+  weight: 1.1
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

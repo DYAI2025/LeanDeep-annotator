@@ -40,3 +40,9 @@ composed_of:
   - CLU_LL_PROFILE
   - CLU_LL_PROFILE
   condition: top(self) != top(partner)
+semiotic:
+  peirce: symbol
+  signifikat: Liebe/Zuneigung
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'

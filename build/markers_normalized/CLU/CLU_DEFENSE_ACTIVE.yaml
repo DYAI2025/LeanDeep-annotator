@@ -23,12 +23,72 @@ examples:
   - Klar, ich bin immer der Böse, ne?
   - Ich sag ja nichts mehr, dann bin ich wenigstens nicht schuld
   - Was soll ich denn noch machen? Egal was ich tue es reicht dir nicht
+  - ICH hab das so nicht gemeint, du interpretierst das falsch!
+  - Wieso soll ICH schuld sein?? Du bist doch eskaliert!
+  - Ich hab mich nur gewehrt weil du angefangen hast
+  - Du nimmst alles persönlich, ich kann nix mehr sagen
+  - Ich muss mich ja verteidigen wenn du mich ständig angreifst!
+  - Klar, schieb mir wieder alles in die Schuhe
+  - Ich hab nur gesagt was alle denken, und jetzt bin ich der Böse
+  - Das war NICHT aggressiv, das war direkt. Großer Unterschied!
+  - Ich wehre mich halt wenn ich angegriffen werde, ist das verboten?
+  - Du unterstellst mir Sachen die so nicht stimmen
+  - Okay dann bin ich halt immer schuld, bitte sehr
+  - ICH muss mich nicht rechtfertigen, DU hast das provoziert
+  - Ich hab das Recht mich zu verteidigen!
+  - Dreh mir nicht die Worte im Mund um!
+  - Wenn du nicht so wärst müsste ich nicht SO reagieren
+  - Was willst du hören? Dass alles meine Schuld ist? Bitte.
+  - Ich reagiere nur auf das was DU machst
+  - Ach komm, als ob du nie Fehler machst
+  - Das ist unfair, du siehst nur MEINE Fehler
+  - Ich weigere mich das alleine auf mich zu nehmen
+  - Bin ich hier vor Gericht oder was?
+  - Du willst einfach nur Recht haben, mehr nicht
+  - Ich sag ja gar nix mehr, dann kann ich auch nix falsch machen
+  - Das hab ich gemacht weil du mich dazu GEZWUNGEN hast
+  - Du provozierst und wunderst dich dass ich reagiere?
+  - Ich hab mich nichts vorzuwerfen, mein Gewissen ist rein
+  - Was soll ich sagen, du glaubst mir ja eh nicht
+  - Gut, dann bin ich halt der Schuldige, Hauptsache du bist zufrieden
+  - Du weißt ganz genau dass DU angefangen hast
+  - Ich hab das nicht gesagt, du hast das falsch verstanden
+  - Warum muss ich mich dauernd erklären?
+  - Immer soll ich mich ändern, was ist mit DIR?
+  - Das ist MEINE Wahrnehmung und die ist genauso gültig
+  - Ich muss mich dafür nicht entschuldigen
+  - Du suchst dir immer das raus was gegen mich spricht
+  - Nee, SO war das nicht, du verdrehst die Tatsachen
+  - Ich bin nicht defensiv, ich stelle die Fakten richtig!
+  - Du hast ja keine Ahnung wie das für MICH ist
+  - Klar, immer soll ICH mich ändern
+  - Ich hab nur reagiert, du hast agiert!
   negative:
   - Stimmt, da hast du recht, das war mein Fehler.
   - Ich sehe ein dass ich da besser hätte reagieren können.
   - Danke dass du mir das sagst, ich denke drüber nach.
   - Ja, das hätte ich anders machen sollen.
   - Ich nehme mir das zu Herzen.
+  - Du hast recht, ich war unfair, sorry.
+  - Ich hab darüber nachgedacht und meinen Anteil erkannt.
+  - Ja, ich war zu impulsiv, das tut mir leid.
+  - Ich akzeptiere die Kritik und arbeite daran.
+  - Das war mein Fehler, ich übernehme Verantwortung.
+  - Ich verstehe warum dich das verletzt hat.
+  - Danke für deine Ehrlichkeit, auch wenn es wehtut.
+  - Ich muss zugeben dass du da einen Punkt hast.
+  - Okay, ich höre dir zu ohne mich zu verteidigen.
+  - Ich war zu stolz um das einzusehen, sorry.
+  - Lass mich das sacken lassen und drüber nachdenken.
+  - Du hast mir die Augen geöffnet, danke.
+  - Ich war Teil des Problems und das seh ich jetzt.
+  - Morgen gehen wir einkaufen, brauchst du was?
+  - Soll ich Pizza bestellen?
+  - Ich höre dir zu und nehme das an.
+  - Danke für die Geduld mit mir.
+  - Ich versuche das anders zu sehen.
+  - Du hast einen guten Punkt, lass mich drüber nachdenken.
+  - Ich bin bereit das einzugestehen.
 tags:
 - cluster
 - defense
@@ -46,6 +106,12 @@ scoring:
   decay: 0.01
 window:
   messages: 15
+semiotic:
+  peirce: index
+  signifikat: Cluster-Muster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 metadata:
   repair_log:
   - rule: R10

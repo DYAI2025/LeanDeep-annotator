@@ -63,3 +63,4 @@ negation_guard:
 
 vad_estimate: {valence: 0.2, arousal: 0.4, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Positive Grundhaltung, framing_type: empathie, cultural_frame: '', myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme}

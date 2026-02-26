@@ -41,6 +41,12 @@ tags:
 rating: 1
 activation:
   rule: ANY 2 IN 3 messages
+semiotic:
+  peirce: symbol
+  signifikat: Narratives Muster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

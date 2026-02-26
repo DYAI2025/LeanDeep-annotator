@@ -83,13 +83,31 @@ examples:
   - Das überrascht mich immer wieder positiv.
   - Ich bin total amazed und happy!
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Das lässt mich kalt, ehrlich gesagt.
+  - Nichts Neues, alles wie gehabt.
+  - Das war absehbar, keine Verwunderung.
+  - Ganz ruhig, das war erwartbar.
+  - Ich bin gelassen, das überrascht mich nicht.
+  - Alles im Rahmen, nichts Besonderes.
+  - Das war vorhersehbar.
+  - Keine Reaktion meinerseits, erwartbar.
+  - Das berührt mich nicht, es war klar.
+  - Ruhig und gefasst, keine Überraschung.
+  - Erwartungsgemäß, alles normal.
+  - Kein Erstaunen, alles bekannt.
+  - Das wusste ich bereits.
+  - Routine, nichts Überraschendes.
+  - Vorhersehbar und erwartbar.
+  - Keine Verwunderung meinerseits.
+  - Standard, nichts Ungewöhnliches.
+  - Das hatte ich erwartet.
+  - Null Überraschung, alles im Plan.
+  - Ich bin nicht erstaunt.
+  - Wie ich dachte, genau so.
+  - Langweilig, weil vorhersehbar.
+  - Kein Wow-Effekt bei mir.
+  - Alles wie prognostiziert.
+  - 'Nüchtern betrachtet: erwartbar.'
 tags:
 - atomic
 - emotion
@@ -100,6 +118,12 @@ tags:
 - amazement
 - v3.4
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Ueberraschung
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

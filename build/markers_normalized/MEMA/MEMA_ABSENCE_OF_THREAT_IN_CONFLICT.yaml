@@ -18,14 +18,77 @@ examples:
   - "A: So kann es nicht weitergehen.\nB: Stimmt, das war mein Fehler.\nA: Wie lösen wir das?\nB: Schritt eins: ich übernehme morgen den Part."
   - "A: Ich bin verletzt.\nB: Danke, dass du es sagst.\nA: Bitte nimm das ernst.\nB: Ich nehme Verantwortung."
   - "A: Ich fühle mich übergangen.\nB: Das wollte ich nicht.\nA: Was können wir konkret tun?\nB: Ich blocke mir dafür Zeit am Freitag."
+  - "A: Ich bin total frustriert.\nB: Verstehe ich. Was kann ich tun?\nA: Hoer mir einfach zu.\nB: Okay, ich bin ganz Ohr."
+  - "A: Das hat mich wirklich verletzt.\nB: Das tut mir leid.\nA: Ich will dass das nicht nochmal passiert.\nB: Einverstanden, ich passe auf."
+  - "A: Du hast mich im Stich gelassen.\nB: Das war nicht meine Absicht.\nA: Trotzdem fuehlt es sich so an.\nB: Ich moechte es wiedergutmachen."
+  - "A: Ich bin wuetend auf dich.\nB: Ich verstehe das.\nA: Was hast du dir dabei gedacht?\nB: Lass mich erklaeren."
+  - "A: Das geht so nicht weiter.\nB: Da stimme ich dir zu.\nA: Was schlägst du vor?\nB: Wir setzen uns morgen zusammen hin."
+  - "A: Ich bin am Ende meiner Geduld.\nB: Das merke ich.\nA: Ich brauche eine konkrete Loesung.\nB: Hier ist mein Vorschlag."
+  - "A: Du enttaeuschst mich.\nB: Warum, was habe ich getan?\nA: Du hast das vergessen, was mir wichtig ist.\nB: Es tut mir leid, ich merke es mir."
+  - "A: Mich macht das wahnsinnig.\nB: Ich weiss, sorry.\nA: Bitte aendere das.\nB: Ich versuche es, ehrlich."
+  - "A: Du redest nicht mit mir.\nB: Ich brauche manchmal Ruhe.\nA: Dann sag mir das wenigstens.\nB: Okay, mache ich kuenftig."
+  - "A: Das war ein Vertrauensbruch.\nB: Ja, das sehe ich ein.\nA: Wie baust du das Vertrauen wieder auf?\nB: Mit Taten, nicht mit Worten."
+  - "A: Du hoerst nie zu.\nB: Das stimmt nicht ganz, aber ich kann besser werden.\nA: Fang jetzt damit an.\nB: Ich bin ganz bei dir, rede."
+  - "A: Ich habe genug von deinen Ausreden.\nB: Du hast recht, keine Ausreden mehr.\nA: Ich will Taten sehen.\nB: Morgen frueh fange ich an."
+  - "A: Mir reicht es.\nB: Was genau meinst du?\nA: Diese staendigen Verspaetungen.\nB: Ich verstehe, ich aendere das."
+  - "A: Du nimmst mich nicht ernst.\nB: Doch, und es tut mir leid wenn das so wirkt.\nA: Dann zeig es mir.\nB: Was brauchst du von mir?"
+  - "A: Ich fuehle mich uebergangen.\nB: Das wollte ich nicht.\nA: Aber so ist es.\nB: Lass uns einen besseren Weg finden."
+  - "A: Ich bin stinksauer.\nB: Okay, lass uns drueber reden.\nA: Du hast mich angelogen.\nB: Es tut mir leid, das war falsch."
+  - "A: Dein Verhalten ist inakzeptabel.\nB: Was genau stoert dich?\nA: Du hast hinter meinem Ruecken geredet.\nB: Das war falsch, ich entschuldige mich."
+  - "A: Ich vertraue dir nicht mehr.\nB: Das verstehe ich.\nA: Du musst dir das zurueckverdienen.\nB: Ja, ich weiss. Ich arbeite dran."
+  - "A: Wir haben ein ernstes Problem.\nB: Ja, ich sehe das auch.\nA: Es muss sich grundsaetzlich was aendern.\nB: Einverstanden, lass uns das angehen."
+  - "A: Ich bin fertig mit Diskutieren.\nB: Was brauchst du stattdessen?\nA: Handlung.\nB: Okay, hier ist mein Plan."
+  - "A: Das war egoistisch von dir.\nB: Ja, das war es.\nA: Denk auch mal an andere.\nB: Du hast recht."
+  - "A: Du haettest mich fragen sollen.\nB: Stimmt, das haette ich sollen.\nA: In Zukunft bitte vorher fragen.\nB: Mache ich."
+  - "A: Ich bin traurig und wuetend gleichzeitig.\nB: Das kann ich nachvollziehen.\nA: Ich brauche eine Pause.\nB: Okay, reden wir morgen weiter."
+  - "A: Du verletzt mich immer wieder mit dem gleichen Verhalten.\nB: Das ist mir nicht bewusst.\nA: Dann werde dir bitte bewusst.\nB: Ich reflektiere das."
+  - "A: Ich bin enttaeuscht ueber dein Verhalten gestern.\nB: Was habe ich falsch gemacht?\nA: Du bist einfach gegangen ohne was zu sagen.\nB: Das war ruecksichtslos, tut mir leid."
+  - "A: Wir drehen uns im Kreis.\nB: Stimmt, wir brauchen einen neuen Ansatz.\nA: Was schlägst du vor?\nB: Profi-Hilfe?"
+  - "A: Du bevorzugst deinen Bruder, das sieht jeder.\nB: Das stimmt nicht, aber ich verstehe warum du das denkst.\nA: Dann erklaer mir das.\nB: Gerne, lass uns darueber reden."
+  - "A: Ich bin so sauer, ich koennte platzen.\nB: Lass es raus.\nA: Du hast mein Vertrauen missbraucht!\nB: Ja, und das tut mir unendlich leid."
+  - "A: So kann das nicht weitergehen.\nB: Nein, da hast du recht.\nA: Was schlägst du konkret vor?\nB: Therapie fuer uns beide."
+  - "A: Du hast mich blossgestellt.\nB: Das tut mir aufrichtig leid.\nA: Ich brauche Zeit.\nB: Nimm dir die Zeit die du brauchst."
+  - "A: Ich kann dir nicht mehr glauben.\nB: Ich verstehe.\nA: Vertrauen muss man sich verdienen.\nB: Und das werde ich tun."
+  - "A: Du wirkst desinteressiert an uns.\nB: Das stimmt nicht.\nA: Dann zeig es mir.\nB: Ab sofort, versprochen."
+  - "A: Mir platzt gleich der Kragen.\nB: Was ist los?\nA: Du hast schon wieder vergessen einzukaufen.\nB: Mist, sorry. Ich geh jetzt sofort."
+  - "A: Ich bin wahnsinnig wuetend.\nB: Okay, ich hoere zu.\nA: Du hast das Geld ausgegeben ohne zu fragen!\nB: Das haette ich absprechen muessen."
+  - "A: Dein Ton gerade war verletzend.\nB: Entschuldigung.\nA: Bitte sprich respektvoll mit mir.\nB: Du hast recht, tut mir leid."
+  - "A: Ich halte das nicht mehr aus.\nB: Was genau?\nA: Deine staendige Unpuenktlichkeit.\nB: Ich verstehe, ich bessere mich."
+  - "A: Du haettest das nicht tun duerfen.\nB: Du hast recht.\nA: Das war ein grober Fehler.\nB: Ja, und ich stehe dazu."
+  - "A: Warum tust du mir das an?\nB: Das war nicht meine Absicht.\nA: Aber das Ergebnis ist dasselbe.\nB: Es tut mir leid, was kann ich tun?"
+  - "A: Ich bin am Limit.\nB: Ich sehe das.\nA: Hilf mir.\nB: Natuerlich, was brauchst du?"
+  - "A: Dieser Streit muss aufhoeren.\nB: Einverstanden.\nA: Dann lass uns Regeln aufstellen.\nB: Gute Idee, fang an."
+  - "A: Du hast mich wirklich veraergert.\nB: Es tut mir leid.\nA: Bitte entschuldige dich aufrichtig.\nB: Es tut mir wirklich leid, von Herzen."
+  - "A: Mir reicht es mit den Luegen.\nB: Ich weiss, ich war nicht ehrlich.\nA: Ab jetzt Ehrlichkeit, ja?\nB: Ja, immer."
+  - "A: Dein Verhalten war inakzeptabel.\nB: Was kann ich tun?\nA: Zeig mir dass du es ernst meinst.\nB: Ab sofort, durch Taten."
+  - "A: Ich fühle mich betrogen.\nB: Das verstehe ich.\nA: Erklaer mir was passiert ist.\nB: Ich erzaehl dir alles, ehrlich."
+  - "A: Du hast mein Vertrauen beschaedigt.\nB: Ich weiss und es tut mir leid.\nA: Wie reparieren wir das?\nB: Schritt fuer Schritt, mit Geduld."
   negative:
-  - "A: Das nervt mich extrem.\nB: Okay, ich höre zu.\nA: ich wuensche mir eine Änderung.\nB: Vorschlag: wir teilen die Aufgaben neu."
-  - Ich sehe das anders, aber ich respektiere deine Sicht.
-  - Ich moechte ehrlich mit dir sein, auch wenn es schwer ist.
-  - Du hast recht, das war mein Fehler. Es tut mir leid.
-  - Lass uns beide unsere Seite erklaeren.
-  - Ich fuehle mich unwohl dabei und moechte darueber reden.
-  - Ich verstehe, warum du das so siehst.
+  - "A: Wenn du das nochmal machst, bin ich weg.\nB: Du kannst mich nicht erpressen.\nA: Das ist kein Erpressung, das ist eine Warnung.\nB: Droh mir nicht!"
+  - "A: Mach das nochmal und du wirst sehen was passiert.\nB: Was soll denn passieren?\nA: Du willst es nicht rausfinden."
+  - "A: Wenn du gehst, sorge ich dafuer dass du die Kinder nie wieder siehst.\nB: Das darfst du nicht!\nA: Ueberlass das meinem Anwalt."
+  - "A: Ich schwöre dir, das wird Konsequenzen haben.\nB: Was fuer Konsequenzen?\nA: Wart's ab."
+  - "A: Wenn du mich verlaesst, bringe ich mich um.\nB: Das ist emotionale Erpressung!\nA: Mir ist alles egal."
+  - "A: Du wirst schon sehen was du davon hast.\nB: Drohe mir nicht.\nA: Ich drohe nicht, ich verspreche."
+  - "A: Pass auf was du sagst, sonst...\nB: Sonst was?\nA: Du weisst was ich meine."
+  - Heute war ein anstrengender Tag.
+  - Hast du die Milch gekauft?
+  - Ich bin muede, lass uns morgen reden.
+  - Das Meeting war langweilig.
+  - Wann kommt der Bus?
+  - Ich habe Hunger.
+  - Das Wetter ist schoen heute.
+  - Ich gehe frueh ins Bett.
+  - Hast du den Schluessel?
+  - Der Kuchen ist fertig.
+  - Wir muessen noch tanken.
+  - Ich hab den Termin verschoben.
+  - Schoen, dich zu sehen.
+  - Das Buch war gut.
+  - Ich melde mich spaeter.
+  - Alles klar, mach ich.
+  - Gute Nacht, schlaf gut.
+  - Bis morgen!
 tags:
 - mema
 - omission
@@ -47,3 +110,9 @@ criteria:
   window_messages: 30
   min_E_hits: 3
   strict_zero: true
+semiotic:
+  peirce: index
+  signifikat: Konfliktdynamik
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'

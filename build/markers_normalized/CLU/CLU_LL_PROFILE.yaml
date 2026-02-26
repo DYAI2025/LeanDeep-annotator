@@ -45,3 +45,9 @@ composed_of:
 - ATO_LL_PHYSICAL_TOUCH
 detect_class:
   rule: "normalize(w)->ranking; mixed if top2_delta < 0.15"
+semiotic:
+  peirce: symbol
+  signifikat: Liebe/Zuneigung
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'

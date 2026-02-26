@@ -27,6 +27,48 @@ examples:
   - Du bist unfähig, Verantwortung zu übernehmen.
   - Ihr seid arrogant ohne Grund.
   - Du bist unsicher und projizierst.
+  - Du bist faul, gib's zu.
+  - Du bist total arrogant.
+  - Ihr seid so egoistisch.
+  - Du bist einfach faul.
+  - Du bist wirklich unfähig.
+  - Ihr seid alle unsicher.
+  - Du bist so verdammt arrogant.
+  - Du bist egoistisch bis ins Mark.
+  - Ihr seid faul und bequem.
+  - Du bist unfähig, zuzuhören.
+  - Du bist unsicher, das sieht jeder.
+  - Ihr seid arrogant und überheblich.
+  - Du bist egoistisch, und das weißt du.
+  - Du bist so faul, es ist peinlich.
+  - Du bist unfähig, dich zu ändern.
+  - Ihr seid einfach unfähig.
+  - Du bist arrogant und eingebildet.
+  - Du bist unsicher in jeder Hinsicht.
+  - Ihr seid egoistisch, nur an euch denkend.
+  - Du bist so unfähig, das nervt.
+  - Du bist arrogant ohne Substanz.
+  - Ihr seid faul und unzuverlässig.
+  - Du bist egoistisch und rücksichtslos.
+  - Du bist unsicher und das strahlt du aus.
+  - Du bist arrogant, das sage nicht nur ich.
+  - Ihr seid unfähig, Kompromisse zu machen.
+  - Du bist faul, änder das endlich.
+  - Du bist so unfähig, es ist traurig.
+  - Ihr seid arrogant, das merkt jeder.
+  - Du bist egoistisch, denk mal an andere.
+  - Du bist unsicher und merkst es nicht.
+  - Ihr seid faul und desinteressiert.
+  - Du bist unfähig, das zu begreifen.
+  - Du bist arrogant, obwohl du nichts kannst.
+  - Ihr seid egoistisch und herzlos.
+  - Du bist so faul geworden.
+  - Du bist unfähig, Gefühle zu zeigen.
+  - Ihr seid unsicher und versteckt euch.
+  - Du bist arrogant gegenüber allen.
+  - Du bist egoistisch, das steht fest.
+  - Du bist faul und motivationslos.
+  - Ihr seid unfähig, das Team zu führen.
   negative:
   - Ich sehe das anders, aber ich respektiere deine Sicht.
   - Ich moechte ehrlich mit dir sein, auch wenn es schwer ist.
@@ -35,11 +77,31 @@ examples:
   - Ich fuehle mich unwohl dabei und moechte darueber reden.
   - Ich verstehe, warum du das so siehst.
   - Danke, dass du mir das sagst. Ich denke darueber nach.
+  - Ich möchte ehrlich mit dir sein.
+  - Du hast recht, das war mein Fehler.
+  - Lass uns beide unsere Seite erklären.
+  - Ich fühle mich unwohl dabei.
+  - Danke, dass du mir das sagst.
+  - Mir fällt auf, dass wir unterschiedlich ticken.
+  - Ich nehme deine Kritik ernst.
+  - Lass uns gemeinsam eine Lösung finden.
+  - Ich bin bereit, mich zu ändern.
+  - Dein Feedback hilft mir weiter.
+  - Ich möchte daran arbeiten.
+  - Ich höre dir zu.
+  - Das ist ein wichtiger Punkt.
+  - Ich schätze deine Ehrlichkeit.
+  - Lass uns darüber reden.
+  - Ich sehe deinen Standpunkt.
+  - Danke für die Offenheit.
+  - Ich werde darüber nachdenken.
 tags:
 - atomic
 - projection
 - text
 rating: 1
+activation:
+  rule: "ANY 1"
 vad_estimate:
   valence: 0.0
   arousal: 0.3
@@ -48,8 +110,6 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
-activation:
-  rule: "ANY 1"
 metadata:
   repair_log:
   - rule: "R09"

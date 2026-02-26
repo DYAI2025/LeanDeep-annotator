@@ -23,12 +23,72 @@ examples:
   - Wenn du reden willst, ich bin da, immer
   - Du machst das richtig gut, auch wenns sich grad nicht so anfühlt
   - Danke für deine Unterstützung vorhin, hat mir echt geholfen
+  - Ich steh hinter dir, egal was die anderen sagen
+  - Dein Mut beeindruckt mich, das war stark von dir
+  - Wenn du mich brauchst, ruf einfach an, Tag und Nacht
+  - Das hast du so gut gemacht, darauf kannst du stolz sein
+  - Ich verstehe deine Sorgen, die sind absolut berechtigt
+  - Wir halten zusammen, das ist das Wichtigste
+  - Danke dass du so offen mit mir bist, das schätze ich sehr
+  - Du verdienst es, dass man dir zuhört
+  - Lass dir Zeit, es gibt keinen Druck, ich warte
+  - Ich bewundere wie du das alles schaffst trotz allem
+  - Deine Gefühle sind wichtig und ich nehme sie ernst
+  - Ich bin froh dass du dich mir anvertraust
+  - Du bist nicht allein mit dem Problem, wir finden einen Weg
+  - Was du durchmachst ist hart, ich anerkenne das
+  - Ich hab Respekt vor deiner Ehrlichkeit, nicht jeder kann das
+  - Sag mir was du brauchst und ich bin da
+  - Deine Stärke inspiriert mich, wirklich
+  - Ich höre dir zu ohne zu urteilen, versprochen
+  - Das was du erlebst ist nicht deine Schuld, das will ich dir sagen
+  - Wir sind ein Team und lassen niemanden allein
+  - Ich schätze unsere Freundschaft mehr als du denkst
+  - Dein Vertrauen bedeutet mir die Welt
+  - Du machst das Beste aus einer schwierigen Situation
+  - Ich unterstütze dich bei der Entscheidung, egal welche du triffst
+  - Wir haben schon ganz andere Sachen zusammen durchgestanden
+  - Ich bin stolz auf dich, wie weit du gekommen bist
+  - Ruf mich an wenn es dir schlecht geht, ich bin immer erreichbar
+  - Du hast alle Recht der Welt so zu fühlen
+  - Ich trage das gerne mit dir zusammen, du musst nicht allein sein
+  - Was du sagst ist mir wichtig, ich vergesse das nicht
+  - Du bist wertvoll, auch wenn es sich grad nicht so anfühlt
+  - Ich stehe an deiner Seite, komme was wolle
+  - Danke dass du mir geholfen hast, das hat viel bedeutet
+  - Ich glaube an dich und deine Fähigkeiten
+  - Wir finden das zusammen raus, Schritt für Schritt
+  - Dein Beitrag wird gesehen und geschätzt, von mir auf jeden Fall
+  - Ich nehme mir Zeit für dich, das ist mir nicht zu viel
+  - Du bist stärker als du denkst, ich sehe das
+  - Danke für deinen Einsatz, ohne dich hätte es nicht geklappt
+  - Ich halte dir den Rücken frei, konzentrier dich auf dich
   negative:
   - Kannst du mir das Salz reichen?
   - Der Termin ist um 14 Uhr
   - Ich war gestern einkaufen
   - Das Wetter soll morgen besser werden
   - Hast du die E-Mail gelesen?
+  - Ich muss noch tanken
+  - Die Besprechung ist im Konferenzraum
+  - Morgen ist Feiertag, oder?
+  - Der Müll muss noch raus
+  - Vergiss den Zahnarzttermin nicht
+  - Ich hab den Bericht abgeschickt
+  - Die Heizung ist kaputt, ich ruf den Monteur
+  - Hast du die Rechnung überwiesen?
+  - Der Aufzug ist wieder außer Betrieb
+  - Meeting wurde abgesagt, wusste ich auch nicht
+  - Die neue Software ist installiert
+  - Ich komme heute später, Stau auf der A3
+  - Wir brauchen neues Druckerpapier
+  - Die Deadline ist nächsten Dienstag
+  - Ich fahr am Wochenende zu meinen Eltern
+  - Hast du schon gegessen?
+  - Der Hund muss noch Gassi
+  - Ich schick dir die Adresse gleich
+  - Können wir den Termin verschieben?
+  - Wer hat die Fernbedienung gesehen?
 tags: []
 rating: 1
 composed_of:
@@ -41,3 +101,9 @@ activation:
 scoring:
   base: 1.0
   weight: 1.0
+semiotic:
+  peirce: index
+  signifikat: Unterstuetzung/Beistand
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'

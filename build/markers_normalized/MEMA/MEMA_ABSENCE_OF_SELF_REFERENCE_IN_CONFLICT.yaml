@@ -24,6 +24,46 @@ examples:
   - "A: Du gehst wieder mit Halbwissen in die Präsentation.\nB: Du sabotierst die Vorbereitung durch ständige Änderungen.\nA: Du spielst Risiken herunter.\nB: Du blendest jede Konsequenz aus."
   - "A: Du bringst das Team in Schwierigkeiten mit deinen Zusagen.\nB: Du verteilst Aufgaben ohne Ressourcen zu prüfen.\nA: Du setzt Meetings an, obwohl nichts geklärt ist.\nB: Du siehst die Auswirkungen
     auf die Partner nicht."
+  - "A: Du hast das Budget überschritten.\nB: Du hast die Genehmigung verweigert.\nA: Du gefährdest das ganze Quartal.\nB: Du planst unrealistisch."
+  - "A: Dein Team liefert nicht.\nB: Deine Erwartungen sind absurd.\nA: Du kontrollierst nichts.\nB: Du überlässt alles dem Zufall."
+  - "A: Du hast den Fehler im System nicht gemeldet.\nB: Du hast den Patch nicht eingespielt.\nA: Du setzt die Sicherheit aufs Spiel.\nB: Du kümmert dich nicht um Updates."
+  - "A: Du hast das Meeting torpediert.\nB: Du hast provoziert.\nA: Du achtest nicht auf die Wirkung.\nB: Du betonst nur deine Position."
+  - "A: Du hast die Kunden verärgert.\nB: Du hast den Vertrieb nicht informiert.\nA: Du gefährdest die Partnerschaft.\nB: Du kommunizierst nicht."
+  - "A: Du wirst persönlich.\nB: Du bist unfair.\nA: Du unterstellst Absicht.\nB: Du verdrehst die Fakten."
+  - "A: Du verschwendest Ressourcen.\nB: Du nutzt das Budget falsch.\nA: Du hast keine Vision.\nB: Du agierst planlos."
+  - "A: Du überforderst das Team.\nB: Du setzt unrealistische Ziele.\nA: Du hörst nie auf die Warnsignale.\nB: Du rennst in die Katastrophe."
+  - "A: Du bist der Flaschenhals.\nB: Du blockierst den Fortschritt.\nA: Du entscheidest zu langsam.\nB: Du riskierst alles durch Untätigkeit."
+  - "A: Du gibst schlechtes Feedback.\nB: Du bist destruktiv.\nA: Du motivierst niemanden.\nB: Du drückst die Moral."
+  - "A: Du lässt das Chaos zu.\nB: Du greifst nicht ein.\nA: Du schaust nur zu.\nB: Du wartest bis alles zusammenbricht."
+  - "A: Du ignorierst die Anzeichen.\nB: Du verdrängst Probleme.\nA: Du tust so, als wäre alles ok.\nB: Du belügst dich selbst."
+  - "A: Du bremst die Innovation.\nB: Du bist risikoavers.\nA: Du verhinderst Wachstum.\nB: Du klebst am Status quo."
+  - "A: Du schaffst ein toxisches Umfeld.\nB: Du lässt Mobbing zu.\nA: Du reagierst nicht auf Beschwerden.\nB: Du tolerierst Fehlverhalten."
+  - "A: Du vertrittst nur deine Interessen.\nB: Du spielst auf Zeit.\nA: Du blockierst die Abstimmung.\nB: Du verzögerst absichtlich."
+  - "A: Du demotivierst das Team.\nB: Du gibst nie Anerkennung.\nA: Du forderst nur.\nB: Du gibst nichts zurück."
+  - "A: Du hast die Deadline bewusst ignoriert.\nB: Du provozierst den Konflikt.\nA: Du testest Grenzen.\nB: Du respektierst keine Autorität."
+  - "A: Du machst alles kompliziert.\nB: Du überdenkst jede Kleinigkeit.\nA: Du verlierst dich in Details.\nB: Du verpasst das große Bild."
+  - "A: Du lieferst immer die gleiche Ausrede.\nB: Du versteckst dich hinter Prozessen.\nA: Du weigerst dich, Stellung zu beziehen.\nB: Du redest dich raus."
+  - "A: Du übernimmst nie den Lead.\nB: Du wartest immer auf Anweisungen.\nA: Du zeigst keine Initiative.\nB: Du bist passiv."
+  - "A: Du eskalierst unnötig.\nB: Du machst aus jeder Kleinigkeit ein Drama.\nA: Du übertreibst maßlos.\nB: Du dramatisierst."
+  - "A: Du bist für den Schaden verantwortlich.\nB: Du hast die Warnung ignoriert.\nA: Du hast gegen die Regeln verstoßen.\nB: Du hast dich schuldig gemacht."
+  - "A: Du stellst das Team bloß.\nB: Du machst öffentlich Fehler sichtbar.\nA: Du respektierst keine Vertraulichkeit.\nB: Du plauderst alles aus."
+  - "A: Du unterschätzt das Risiko.\nB: Du spielst mit dem Feuer.\nA: Du wirst es bereuen.\nB: Du ziehst alle mit runter."
+  - "A: Du verhältst dich unprofessionell.\nB: Du überschreitest Grenzen.\nA: Du benimmst dich daneben.\nB: Du schadest dem Ansehen."
+  - "A: Du hast keine Ahnung vom Markt.\nB: Du ignorierst die Konkurrenz.\nA: Du lebst in einer Blase.\nB: Du verlierst den Realitätsbezug."
+  - "A: Du forderst Disziplin, lebst sie aber nicht vor.\nB: Du predigst Wasser und trinkst Wein.\nA: Du bist unglaubwürdig.\nB: Du hast Doppelstandards."
+  - "A: Du hast den Mitarbeiter fertiggemacht.\nB: Du warst zu hart.\nA: Du zerstörst das Vertrauen.\nB: Du regierst mit Angst."
+  - "A: Du hast die Zusammenarbeit beendet.\nB: Du hast die Brücken abgebrochen.\nA: Du hast keine Kompromisse gemacht.\nB: Du warst stur bis zum Schluss."
+  - "A: Du hast die Entscheidung allein getroffen.\nB: Du hast niemanden gefragt.\nA: Du riskierst die Teamdynamik.\nB: Du machst alles im Alleingang."
+  - "A: Du arbeitest gegen die Strategie.\nB: Du verfolgst eigene Ziele.\nA: Du untergräbst die Führung.\nB: Du handelst eigenmächtig."
+  - "A: Du verbreitest Gerüchte.\nB: Du redest schlecht über andere.\nA: Du spaltest das Team.\nB: Du vergiftest die Atmosphäre."
+  - "A: Du hast den Kunden belogen.\nB: Du hast falsche Versprechen gemacht.\nA: Du gefährdest die Geschäftsbeziehung.\nB: Du setzt den Ruf aufs Spiel."
+  - "A: Dein Vorschlag ist realitätsfern.\nB: Du ignorierst die Fakten.\nA: Du hörst nicht auf Experten.\nB: Du denkst, du weißt es besser."
+  - "A: Du hast die Übergabe schlampig gemacht.\nB: Du lässt andere die Suppe auslöffeln.\nA: Du kümmerst dich nicht um Nachfolge.\nB: Du schaust nicht zurück."
+  - "A: Du nutzt Krankheit als Ausrede.\nB: Du fehlst immer, wenn es drauf ankommt.\nA: Du lässt das Team im Stich.\nB: Du erscheinst nur zu den leichten Aufgaben."
+  - "A: Du bist unberechenbar.\nB: Du wechselst ständig die Meinung.\nA: Du schafft keine Verlässlichkeit.\nB: Du verunsicherst alle."
+  - "A: Du hast die Compliance verletzt.\nB: Du schiebst es auf die Grauzone.\nA: Du spielst mit Regulierungen.\nB: Du riskierst Strafen."
+  - "A: Du überlässt die schwierigen Gespräche anderen.\nB: Du drückst dich vor Konfrontation.\nA: Du bist feige.\nB: Du stellst dich nicht der Kritik."
+  - "A: Du hast den Konflikt eskaliert statt gelöst.\nB: Du hast Öl ins Feuer gegossen.\nA: Du hast die Situation verschlimmert.\nB: Du bist nicht Teil der Lösung."
   negative:
   - "A: Seit Wochen wartest du nicht auf Rückmeldung.\nB: Du hättest den Termin selbst sichern können.\nA: Du verschiebst manchmal wieder die Verantwortung.\nB: Du siehst nur deinen Kalender, nicht den
     Prozess."
@@ -33,6 +73,24 @@ examples:
   - Das ist ein guter Punkt, den du da machst.
   - Ich verstehe deine Perspektive.
   - Lass uns gemeinsam eine Loesung finden.
+  - "A: Ich merke, dass ich da auch einen Fehler gemacht habe.\nB: Du hast recht, ich hätte besser aufpassen sollen."
+  - "A: Ich gebe zu, mein Anteil an dem Problem ist nicht gering.\nB: Ich sehe auch meinen Beitrag dazu."
+  - "A: Ich frage mich, was ich anders hätte machen können.\nB: Ich reflektiere gerade auch meinen Teil."
+  - Wenn ich ehrlich bin, habe ich dazu beigetragen, dass es eskaliert ist.
+  - Ich muss zugeben, ich war auch nicht gerade diplomatisch.
+  - Mein Verhalten hat sicher dazu beigetragen.
+  - Ich hätte da aufmerksamer sein sollen, das sehe ich ein.
+  - Ich muss mich auch hinterfragen, warum ich so reagiert habe.
+  - Aus meiner Sicht habe ich Fehler gemacht.
+  - Ich war ungerecht, das erkenne ich an.
+  - Ich überlege gerade, ob ich da auch falsch gelegen habe.
+  - Wenn ich auf mich schaue, sehe ich auch Versäumnisse.
+  - "A: Ich hätte früher eingreifen sollen.\nB: Und ich hätte deutlicher sein müssen."
+  - Ich muss mir eingestehen, dass ich Teil des Problems bin.
+  - Ich war zu stolz, um meinen Fehler zuzugeben. Das ändere ich jetzt.
+  - Mir ist klar geworden, dass ich mich da verrannt habe.
+  - Ich reflektiere gerade mein eigenes Verhalten in der Situation.
+  - Ich nehme mir vor, meinen eigenen Anteil besser zu sehen.
 tags:
 - meta
 - absence
@@ -58,3 +116,9 @@ absence_sets:
     - ATO_SELF_STATEMENT
 emit:
   per_speaker: true
+semiotic:
+  peirce: index
+  signifikat: Konfliktdynamik
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'

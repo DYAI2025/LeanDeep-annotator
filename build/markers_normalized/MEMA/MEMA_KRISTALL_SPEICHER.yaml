@@ -18,17 +18,86 @@ examples:
   - Signal 1 … später Signal 2 im Kontext
   - Kombination aus Token X und Y
   - Variante mit ähnlicher Semantik
+  - "Ueber 20 Nachrichten hinweg: Die Aussage 'Familie geht ueber alles' erscheint 5 Mal, nahezu identisch. Kristallisiert."
+  - "Stabiler Kern: 'Ich bin nicht gut genug' wiederholt sich in 4 Varianten ueber den gesamten Verlauf. Wissensanker."
+  - Der Satz 'Vertrauen muss man sich verdienen' taucht seit Wochen auf. Minimal variiert. Kristall.
+  - "Wiederkehrend und stabil: 'Ich brauche Kontrolle.' Gleiche Semantik, gleicher Kontext. 5 Mal in 20 Nachrichten."
+  - "Patient wiederholt: 'Wenn ich nicht perfekt bin, werde ich verlassen.' Stabile Ueberzeugung. Kristall-Knoten."
+  - "Muster: 'Das Leben ist ein Kampf' erscheint in 3 Varianten, Varianz minimal. Kristallisierte Ueberzeugung."
+  - "Wissensanker erkannt: 'Ich darf keine Schwaeche zeigen.' Stabil ueber 15 Nachrichten, niedrige Varianz."
+  - "Er sagt es immer wieder: 'Geld ist Sicherheit.' Fast woertlich gleich. Seit Wochen. Kristall."
+  - "Stabile Wiederholung: 'Ich bin allein.' In Therapie, Chat, E-Mail. Immer gleich. Kristallisiert."
+  - "'Liebe ist Schmerz' - diese Ueberzeugung ist kristallisiert. Taucht 4 Mal auf, minimale Variation."
+  - "Wiederkehrendes Muster: 'Man kann niemandem vertrauen.' Wortlaut fast identisch jedes Mal."
+  - "Therapeut erkennt Kristall: 'Ich muss alles alleine schaffen.' Stabil ueber 5 Sitzungen."
+  - "Wissensanker: 'Wer Fehler macht, versagt.' Unveraendert seit Therapiebeginn. Kristallisiert."
+  - "Chat zeigt stabilen Kern: 'Ich bin nicht liebenswert.' 6 Varianten, alle semantisch gleich."
+  - Die Ueberzeugung 'Gefuehle zeigen ist Schwaeche' ist kristallisiert. Minimale Varianz ueber 20 Nachrichten.
+  - "Paar-Dynamik: 'Du verstehst mich nie' wiederholt sich woertlich. Kristall-Knoten."
+  - "'Ich muss funktionieren' - stabiler Anker. Taucht in jedem schwierigen Gespraech auf. Gleiche Worte."
+  - "Stabile Ueberzeugung: 'Maenner weinen nicht.' Seit Jahren. Varianz nahe Null. Kristall."
+  - "Meta-Analyse: 'Ich verdiene das nicht' ist ein fester Knoten. 5 Mal, semantisch identisch."
+  - "Wiederkehrender Wissensanker: 'Wenn ich nett bin, wird man mich moegen.' Kristallisiert."
+  - "'Die Welt ist unfair' - stabiles Muster. Ueber den gesamten Verlauf, kaum Variation."
+  - "Patient sagt in jeder Sitzung: 'Ich bin nicht wie die anderen.' Gleiche Worte. Kristall."
+  - "Kristall erkannt: 'Naehe ist gefaehrlich.' Stabil ueber Monate, minimale Variation."
+  - "'Ich muss stark sein' - Wissensanker der in 4 Kontexten auftaucht. Gleiche Semantik."
+  - "Stabiler Kern im Chat: 'Das hat keinen Sinn' erscheint wiederholt, fast identisch."
+  - "Therapeut notiert: 'Ich bin schuld an allem' ist kristallisiert. Varianz unter 0.2."
+  - "'Wenn ich rede, hoert keiner zu.' Kristallisierter Glaubenssatz. 5 Wiederholungen, gleiche Form."
+  - 'Meta-Muster: Eine zentrale Ueberzeugung bleibt ueber den gesamten Verlauf stabil. Kristall-Speicher.'
+  - "'Familie ist alles' - unveraendert seit dem ersten Gespraech. Stabiler Wissensanker."
+  - Die Aussage 'Ich bin eben so' taucht regelmaessig auf. Gleicher Wortlaut. Kristallisiert.
+  - "Kristall-Knoten: 'Man muss hart arbeiten um etwas wert zu sein.' Stabil, 6 Wiederholungen."
+  - "'Vertrauen wird immer enttaeuscht.' Gleiche Ueberzeugung, gleiche Worte. Ueber 20 Nachrichten."
+  - "Stabile Ueberzeugung im Verlauf: 'Ich bin doch nur im Weg.' Kristallisiert, niedrige Varianz."
+  - "Patient wiederholt monoton: 'Es aendert sich ja doch nichts.' Kristall. Stabil seit Monaten."
+  - "'Andere haben es leichter.' Stabiler Wissensanker. Minimal variiert ueber den gesamten Verlauf."
+  - 'Kristall erkannt: Die zentrale Ueberzeugung wiederholt sich in 20 Nachrichten, immer gleich.'
+  - "Wiederkehrender Kern: 'Ich darf nicht versagen.' Fast woertlich gleich. Kristallisiert."
+  - "'Wenn ich nicht aufpasse, geht alles kaputt.' Stabile Ueberzeugung. Kristall-Speicher."
+  - "Meta-System erkennt: Stabile Knotenbildung bei 'Ich bin nicht genug.' Varianz: 0.12."
+  - Der Glaubenssatz 'Man muss immer kaempfen' wiederholt sich 7 Mal. Kristall.
+  - "Wissensanker: 'Ohne Kontrolle geht nichts.' Gleiche Semantik in jedem schwierigen Gespraech."
+  - "'Niemand versteht mich wirklich.' Kristallisiert. Taucht in 5 von 20 Nachrichten auf."
+  - 'Stabiler Kern der Persoenlichkeit: Eine Ueberzeugung die sich nie aendert. Kristall.'
+  - 'Meta: Die Ueberzeugung hat sich verfestigt. Keine Bewegung. Stabiler Speicher.'
+  - 'Kristall-Speicher aktiv: Zentrale Ueberzeugung bleibt ueber Wochen unveraendert.'
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Verschiedene Themen, keine Wiederholung, kein stabiles Muster.
+  - Er aendert seine Meinung regelmaessig, nichts kristallisiert.
+  - Unterschiedliche Ueberzeugungen in jedem Gespraech.
+  - Keine Wiederholung, jedes Gespraech ist anders.
+  - 'Patient zeigt Flexibilitaet: Ueberzeugungen aendern sich mit neuen Einsichten.'
+  - Kein stabiler Kern erkennbar, alles ist in Bewegung.
+  - Verschiedene Aussagen, hohe Varianz, kein Muster.
+  - Meinungswechsel sind haeufig und bewusst.
+  - Das Thema wurde einmal erwaehnt und nie wieder.
+  - Keine kristallisierte Ueberzeugung, alles ist verhandelbar.
+  - Patient ist offen fuer Veraenderung, nichts ist fest.
+  - Aussagen variieren stark, kein stabiler Anker.
+  - Einmalige Erwaehnung, keine Wiederholung.
+  - Gespraech zeigt hohe Varianz in den Aussagen.
+  - Flexible Haltung, keine festen Ueberzeugungen erkennbar.
+  - Themen wechseln staendig, kein roter Faden.
+  - 'Patient zeigt Wachstum: Alte Ueberzeugungen werden revidiert.'
+  - Keine Wiederholung, kein Muster, keine Kristallisation.
+  - Ueberzeugungen sind fluid und veraenderbar.
+  - Verschiedene Perspektiven in verschiedenen Gespraechen.
+  - Kein stabiler Glaubenssatz erkennbar.
+  - Meinungen aendern sich mit dem Kontext.
+  - Patient reflektiert und revidiert regelmaessig.
+  - Hohe Varianz bei allen Aussagen, kein Kristall.
+  - Kein wiederkehrendes Muster, jedes Gespraech ist frisch.
 tags: []
 rating: 1
 detect_class: "node_crystallizer"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 metadata:
   stability_window: 20
   min_repeats: 3

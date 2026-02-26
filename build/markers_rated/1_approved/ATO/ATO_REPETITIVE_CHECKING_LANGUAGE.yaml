@@ -18,15 +18,81 @@ examples:
   - "Repeat the process one more time."
   - "Double-check everything before proceeding."
   - "I have to do it again to be sure."
+  - Ich muss das nochmal checken, ob alles stimmt.
+  - Lass mich das noch einmal überprüfen.
+  - Ich muss nochmal nachschauen, ob alles perfekt ist.
+  - 'Check again: Ist die Tür wirklich zu?'
+  - Das muss perfekt sein, lass mich nochmal schauen.
+  - Ich wiederhole das lieber noch einmal.
+  - 'Double-check: Hast du den Herd ausgemacht?'
+  - One more time, lass mich nochmal prüfen.
+  - Ich kontrolliere das lieber noch einmal.
+  - Nochmal checken, ob die Mail raus ist.
+  - Das muss ich wiederholen, um sicherzugehen.
+  - Lass mich das nochmal double-checken.
+  - Hast du wirklich abgeschlossen? Check nochmal.
+  - Ich muss das nochmal kontrollieren.
+  - Das muss alles perfekt stimmen.
+  - Lass mich one more time drüberschauen.
+  - Ich check das nochmal, sicher ist sicher.
+  - 'Repeat: Ist das Fenster zu?'
+  - Nochmal prüfen, ob die Zahlen stimmen.
+  - Double-check bitte die Adresse.
+  - Ich schaue nochmal nach, ob alles passt.
+  - 'One more time: Stimmt die Uhrzeit?'
+  - Das muss perfekt sein, nochmal checken.
+  - Lass mich das wiederholen, zur Sicherheit.
+  - Habe ich das Licht ausgemacht? Nochmal checken.
+  - 'Double-check: Alle Anhänge dabei?'
+  - Ich prüfe das lieber noch einmal.
+  - 'One more time: Sind alle Teilnehmer eingeladen?'
+  - Das muss perfekt sein, deshalb nochmal.
+  - 'Repeat: Passwort richtig eingegeben?'
+  - Nochmal schauen, ob der Drucker funktioniert.
+  - 'Check again: Termin steht wirklich?'
+  - Ich muss das nochmal durchgehen.
+  - 'Double-check: Wurde die Rechnung bezahlt?'
+  - Lieber nochmal kontrollieren.
+  - 'One more time: Ist der Alarm eingeschaltet?'
+  - Das muss alles stimmen, nochmal prüfen.
+  - 'Repeat: Habe ich die richtige Datei gespeichert?'
+  - Nochmal checken, ob der Zugang funktioniert.
+  - 'Check again: Ist das Backup durchgelaufen?'
+  - Ich überprüfe das sicherheitshalber nochmal.
+  - 'Double-check: Stimmen die Kontodaten?'
+  - Lieber one more time drüber schauen.
+  - Nochmal, ob die Adresse richtig ist.
+  - 'Repeat: Ist das Mikro an?'
   negative:
   - "The door is locked."
   - "It's good enough."
   - "The process is done."
   - "Check it once."
   - "I'm sure it's fine."
+  - Das passt so, weitermachen.
+  - Einmal prüfen reicht.
+  - Ich vertraue darauf, dass es stimmt.
+  - Das habe ich schon gecheckt.
+  - Alles in Ordnung, kein Grund zur Sorge.
+  - Passt, nächstes Thema.
+  - Ich bin mir sicher, das stimmt.
+  - Kein Bedarf, nochmal zu schauen.
+  - Das ist erledigt.
+  - Ich vertraue meiner Arbeit.
+  - Ein Blick reicht.
+  - Das ist gut genug.
+  - Fertig, weiter geht's.
+  - Ich mach mir da keine Sorgen.
+  - Das stimmt schon so.
+  - Hab ich einmal geprüft, passt.
+  - Kein Grund zur Panik.
+  - Einmal reicht.
+  - Ich bin zufrieden damit.
+  - Alles gecheckt, alles gut.
 tags:
 - behavioral_pattern
 - atomic
 - v3.4
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

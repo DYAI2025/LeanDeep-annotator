@@ -27,6 +27,48 @@ examples:
   - "Objektiv betrachtet war das notwendig."
   - "Statistisch gesehen kaum relevant."
   - "Logisch gesehen die einzige Option."
+  - Objektiv betrachtet ist das die richtige Entscheidung.
+  - Rational betrachtet macht das keinen Sinn.
+  - Logisch gesehen müsste es anders sein.
+  - Statistisch ist das sehr unwahrscheinlich.
+  - Aus Gründen der Effizienz sollten wir das ändern.
+  - Rein objektiv war das kein Fehler.
+  - Rational betrachtet habe ich richtig gehandelt.
+  - Logisch gesehen war das der einzige Weg.
+  - Statistisch gesehen passiert das selten.
+  - Aus Gründen der Fairness müssen wir das tun.
+  - Wenn man das objektiv sieht, hatte ich recht.
+  - Rational betrachtet gibt es keine Alternative.
+  - Logisch gesehen ist das die Konsequenz.
+  - Statistisch belegt ist das Risiko gering.
+  - Aus Gründen der Sicherheit war das nötig.
+  - Das ist objektiv die beste Lösung.
+  - Rational betrachtet war das unvermeidbar.
+  - Logisch gesehen hat das Hand und Fuß.
+  - Statistisch sind die Chancen minimal.
+  - Aus Gründen der Vernunft habe ich das getan.
+  - Objektiv gesehen war ihr Verhalten unangemessen.
+  - Rational betrachtet hätte das jeder so gemacht.
+  - Logisch gesehen musste ich so reagieren.
+  - Statistisch kann mir das nicht noch einmal passieren.
+  - Aus Gründen der Selbsterhaltung war das richtig.
+  - Wenn man das objektiv analysiert, bin ich im Recht.
+  - Rational betrachtet hatte ich keine Wahl.
+  - Logisch gesehen war die Trennung unvermeidlich.
+  - Statistisch gesehen sind Beziehungen eh zum Scheitern verurteilt.
+  - Aus Gründen der persönlichen Entwicklung war das notwendig.
+  - Objektiv gesehen habe ich nichts falsch gemacht.
+  - Rational betrachtet war es der richtige Zeitpunkt.
+  - Logisch gesehen ergibt sich das aus den Fakten.
+  - Statistisch sind solche Konflikte normal.
+  - Aus Gründen der Professionalität musste ich das tun.
+  - Rein objektiv ist das ein Fortschritt.
+  - Rational betrachtet war meine Reaktion angemessen.
+  - Logisch gesehen konnte ich nicht anders handeln.
+  - Statistisch gesehen war das erwartbar.
+  - Aus Gründen der Gerechtigkeit habe ich mich gewehrt.
+  - Objektiv war das die beste Option unter den Umständen.
+  - Rational betrachtet war das die einzig logische Konsequenz.
   negative:
   - Rational betrachtet ist das wenige Problem.
   - Ich finde, wir sollten das in Ruhe besprechen.
@@ -35,6 +77,24 @@ examples:
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
+  - Ich fühle mich einfach schlecht dabei.
+  - Das tut mir in der Seele weh.
+  - Mein Bauchgefühl sagt mir was anderes.
+  - Ich habe ein ungutes Gefühl.
+  - Es fühlt sich falsch an.
+  - Mir geht es nicht gut damit.
+  - Ich bin emotional aufgewühlt.
+  - Das bedrückt mich sehr.
+  - Ich kann das nicht in Worte fassen.
+  - Es tut einfach weh.
+  - Ich bin traurig darüber.
+  - Das bricht mir das Herz.
+  - Mein Gefühl sagt nein.
+  - Ich spüre, dass etwas nicht stimmt.
+  - Es macht mich wütend.
+  - Ich habe Angst davor.
+  - Das verunsichert mich total.
+  - Ich bin enttäuscht.
 tags: [atomic, rationalization, text]
 metadata:
   repair_log:
@@ -42,3 +102,4 @@ metadata:
   - {rule: "R10", note: "ATO-Default", date: "2025-08-29"}
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

@@ -10,10 +10,10 @@ frame:
   narrative: "healing"
 tags: [semantic, repair, deescalation, positive]
 composed_of:
-  - ATO_DEESCALATION_OFFER
-  - ATO_APOLOGY
-  - ATO_APOLOGY_DE
-  - ATO_SOFTENING
+- ATO_DEESCALATION_OFFER
+- ATO_APOLOGY
+- ATO_APOLOGY_DE
+- ATO_SOFTENING
 activation:
   mode: "co_occurrence"
   min_components: 1
@@ -42,3 +42,4 @@ examples:
   - "Ich habe nichts falsch gemacht."
   - "Das musst du jetzt aushalten."
   - "Reg dich nicht so auf."
+semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: reparatur, cultural_frame: Gottman, myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'}

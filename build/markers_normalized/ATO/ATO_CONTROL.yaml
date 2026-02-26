@@ -34,6 +34,12 @@ tags:
 - control
 - dominance
 rating: 1
+semiotic:
+  peirce: index
+  signifikat: Kontrolle/Dominanz
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
+  myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'
 vad_estimate:
   valence: -0.05
   arousal: 0.4

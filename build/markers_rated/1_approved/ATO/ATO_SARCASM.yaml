@@ -16,6 +16,51 @@ examples:
   - "Obviously, this is going well."
   - "Great, another brilliant idea."
   - "Wonderful, exactly what I needed."
+  - Oh really, how surprising.
+  - Sure, because that always works.
+  - Obviously everything is fine.
+  - Great, just great.
+  - Wonderful, another disaster.
+  - Oh really? Tell me more.
+  - Sure, I believe every word.
+  - Obviously this was planned perfectly.
+  - Great, we're making progress. Not.
+  - Wonderful timing, as always.
+  - Oh really? What a revelation.
+  - Sure, that's totally realistic.
+  - Obviously I have nothing better to do.
+  - Great, now what?
+  - Wonderful, my favorite problem.
+  - Really? I never would have guessed.
+  - Sure, because I love overtime.
+  - Obviously, who needs sleep?
+  - Great idea, genius.
+  - Wonderful, another meeting about meetings.
+  - Oh really? Color me shocked.
+  - Sure, I'll just drop everything.
+  - Obviously, no one saw that coming.
+  - Great, more work. Yay.
+  - Wonderful, absolutely wonderful.
+  - Really? That's so original.
+  - Sure, I have infinite patience.
+  - Obviously, it's always my fault.
+  - Great, because we needed more complications.
+  - Wonderful, I'm thrilled. Can you tell?
+  - Oh really? How insightful.
+  - Sure, that'll fix everything.
+  - Obviously, because life is easy.
+  - Great solution. Truly inspired.
+  - Wonderful, another Monday.
+  - Really? No way. I'm stunned.
+  - Sure, let's add more to the pile.
+  - Obviously, the best decision ever.
+  - Great, just what the doctor ordered.
+  - Wonderful, I'm overjoyed. Obviously.
+  - Oh really, that's earth-shattering news.
+  - Sure, sounds like a plan. A terrible plan.
+  - Obviously, because simplicity is overrated.
+  - Great, I was bored anyway.
+  - Wonderful, perfectly wonderful.
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -24,6 +69,25 @@ examples:
   - I've noticed we think differently about this.
   - I want to understand what you mean.
   - That sounds like an important topic for you.
+  - That's genuinely a good idea.
+  - I'm honestly impressed.
+  - You did a great job.
+  - I really appreciate your help.
+  - That's truly wonderful news.
+  - I mean it, this is excellent.
+  - You're right, I agree.
+  - That's a fair point.
+  - I'm grateful for your support.
+  - This turned out really well.
+  - Honestly, I'm happy about this.
+  - You deserve the recognition.
+  - That's a solid plan.
+  - I'm genuinely excited.
+  - Your work is outstanding.
+  - I sincerely thank you.
+  - That's exactly what we needed.
+  - You nailed it.
 tags: [atomic, v3.3, auto-generated]
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: index, signifikat: Sarkasmus/Ironie als Waffe, framing_type: abwertung, cultural_frame: '', myth: 'Ueberlegenheit schuetzt — wer abwertet, vermeidet eigene Verletzlichkeit'}

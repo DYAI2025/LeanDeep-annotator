@@ -14,19 +14,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - Glockenschmied
-  - Schwellenhüterin
-  - Flügel
-  - Moiré
-  - Glockenschlag
+  - Glockenschmied.
+  - Schwellenhueterin.
+  - Fluegel.
+  - Moire.
+  - Glockenschlag.
+  - Der Glockenschmied formt Klaenge.
+  - Die Schwellenhueterin oeffnet den Weg.
+  - Fluegel tragen mich.
+  - Ein Moire-Muster in meinem Leben.
+  - Zum Glockenschlag beginnt das Neue.
+  - Ich fuehle mich wie ein Glockenschmied.
+  - Die Schwellenhueterin in mir.
+  - Auf Fluegeln der Sehnsucht.
+  - Moire der Erinnerung.
+  - Der Glockenschlag laeutet eine neue Phase ein.
+  - Der innere Glockenschmied haemmert.
+  - Eine Schwellenhueterin am Uebergang.
+  - Fluegel der Freiheit.
+  - Ein Moire aus Licht und Schatten.
+  - Der Glockenschlag der Erkenntnis.
+  - Wie ein Glockenschmied forme ich mein Leben.
+  - Die Schwellenhueterin wartet.
+  - Meine Fluegel entfalten sich.
+  - Moire-Muster ueberlappen sich.
+  - Beim naechsten Glockenschlag.
+  - Der Glockenschmied in der Geschichte.
+  - Schwellenhueterin zwischen den Welten.
+  - Gebrochene Fluegel.
+  - Das Moire der Zeit.
+  - Ein Glockenschlag zur rechten Zeit.
+  - Der Glockenschmied ruft.
+  - Die Schwellenhueterin zeigt den Pfad.
+  - Mit Fluegeln fliegen.
+  - Moire-artige Ueberlagungen.
+  - Glockenschlag um Mitternacht.
+  - Der Ruf des Glockenschmieds.
+  - Schwellenhueterin meiner Traeume.
+  - Fluegel des Wandels.
+  - Ein Moire entsteht.
+  - Der letzte Glockenschlag.
+  - Ich bin der Glockenschmied meines Schicksals.
+  - Die Schwellenhueterin bewacht den Uebergang.
+  - Neue Fluegel wachsen.
+  - Moire im Bewusstsein.
+  - Glockenschlag als Signal.
+  - Der Glockenschmied schmiedet weiter.
+  - Schwellenhueterin am Tor.
+  - Fluegel aus Hoffnung.
+  - Das Moire des Lebens.
+  - Ein sanfter Glockenschlag.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich gehe einkaufen.
+  - Der Bus kommt in 5 Minuten.
+  - Ich muss die Steuer machen.
+  - Das Essen ist fertig.
+  - Die Waeschmaschine laeuft.
+  - Ich fahre morgen zur Arbeit.
+  - Der Hund muss raus.
+  - Ich brauche neue Batterien.
+  - Das Fenster klemmt.
+  - Der Rasen muss gemaest werden.
+  - Ich habe den Muell rausgebracht.
+  - Die Gluehbirne ist kaputt.
+  - Ich kaufe Brot.
+  - Der Zahnarzttermin ist am Montag.
+  - Das Auto braucht Oel.
+  - Ich raeuume den Keller auf.
+  - Die Post ist da.
+  - Ich muss tanken.
+  - Das Kind hat Hausaufgaben.
+  - Der Kuhlschrank ist leer.
+  - Ich gehe zum Friseur.
+  - Die Heizung laeuft.
+  - Ich muss die Blumen giessen.
+  - Der Fernseher ist an.
+  - Ich koche heute Abend.
 tags:
 - narion
 - vocab
@@ -35,6 +98,12 @@ tags:
 rating: 2
 activation:
   rule: "REGEX: \\b(Glockenschmied|Schwellenhüterin|Flügel|Moiré|Glockenschlag)\\b"
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

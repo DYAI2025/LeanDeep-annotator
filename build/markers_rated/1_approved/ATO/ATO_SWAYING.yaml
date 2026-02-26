@@ -22,24 +22,82 @@ activation_logic: "ANY 1"
 scoring: {base: 1.0, weight: 1.0}
 examples:
   positive:
-  - "I'm torn between taking the offer and staying put."
-  - "On the one hand it’s exciting, on the other hand it scares me."
-  - "I can't decide—both options have downsides."
-  - "I'm going back and forth on this all week."
-  - "Honestly, I'm sitting on the fence right now."
-  - "I keep changing my mind about the trip."
-  - "Unsure whether to say yes or wait."
-  - "I waver between 'do it' and 'leave it'."
-  - "Not ready to commit to either plan."
-  - "I'm split—part of me wants it, part of me doesn't."
+  - Ich bin hin- und hergerissen.
+  - Einerseits will ich, andererseits nicht.
+  - Ich kann mich nicht entscheiden.
+  - Mal denke ich so, mal so.
+  - Ich schwanke zwischen den Optionen.
+  - Auf der einen Seite reizt es mich, auf der anderen macht es mir Angst.
+  - Ich bin unschlüssig, was ich tun soll.
+  - Hin und her, hin und her.
+  - Ich weiß nicht, ob ich ja oder nein sagen soll.
+  - Einerseits ja, andererseits nein.
+  - Ich kann mich einfach nicht festlegen.
+  - Ich wechsle ständig meine Meinung.
+  - Mal will ich es, mal nicht.
+  - Ich bin total unentschlossen.
+  - Auf der einen Seite stimmt es, auf der anderen nicht.
+  - Ich schwanke hin und her.
+  - Ich bin gespalten, ein Teil will, der andere nicht.
+  - Einerseits logisch, andererseits riskant.
+  - Ich kann mich nicht entscheiden, beides hat Vor- und Nachteile.
+  - Hin und her gerissen zwischen zwei Optionen.
+  - Mal sage ich ja, mal nein.
+  - Ich bin noch nicht bereit, mich festzulegen.
+  - Einerseits Chance, andererseits Risiko.
+  - Ich schwanke und kann mich nicht festlegen.
+  - Ich bin unentschlossen und es nervt mich.
+  - Auf der einen Seite verlockend, auf der anderen beängstigend.
+  - Ich kann mich partout nicht entscheiden.
+  - Hin und her, ich drehe mich im Kreis.
+  - Einerseits vernünftig, andererseits langweilig.
+  - Ich schwanke zwischen Ja und Nein.
+  - Gespalten, definitiv.
+  - Mal so, mal so, ich weiß es nicht.
+  - Ich bin hin und her gerissen bei der Frage.
+  - Einerseits sicher, andererseits einengend.
+  - Ich kann mich nicht entscheiden und leide darunter.
+  - Hin und her, keine klare Richtung.
+  - Ich schwanke seit Tagen.
+  - Einerseits aufregend, andererseits beunruhigend.
+  - Ich bin unentschlossen wie selten zuvor.
+  - Auf der einen Seite Freiheit, auf der anderen Verantwortung.
+  - Ich kann mich nicht entscheiden, was wichtiger ist.
+  - Hin und her zwischen Kopf und Bauch.
+  - Ich bin hin und her gerissen, ehrlich.
+  - Einerseits fair, andererseits hart.
+  - Ich schwanke und brauche Rat.
+  - Gespalten zwischen Pflicht und Neigung.
+  - Mal will ich gehen, mal bleiben.
+  - Ich bin total ambivalent gerade.
+  - Einerseits mutig, andererseits leichtsinnig.
+  - Ich schwanke, und das schon lange.
   negative:
-  - I choose not to decide—both options have downsides.
-  - I'm going back and forth on this some week.
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
+  - Ich habe mich entschieden, das steht fest.
+  - Kein Zweifel, das ist der richtige Weg.
+  - Meine Entscheidung ist klar.
+  - Ich weiß genau, was ich will.
+  - Keine Unsicherheit, alles entschieden.
+  - Ich bin fest entschlossen.
+  - Die Wahl ist getroffen.
+  - Ich schwanke nicht, ich bin sicher.
+  - Mein Entschluss steht.
+  - 'Klar und deutlich: Ja.'
+  - Keine Ambivalenz, alles klar.
+  - Ich bin überzeugt und handle.
+  - Die Entscheidung fiel leicht.
+  - Ich habe keine Zweifel.
+  - Entschieden und fertig.
+  - Meine Position ist eindeutig.
+  - Ich bin mir sicher, keine Frage.
+  - Das steht außer Frage.
+  - Ich habe mich festgelegt.
+  - Klare Sache, kein Hin und Her.
+  - Meine Entscheidung ist endgültig.
+  - Ich weiß, was ich will und handle danach.
+  - Keine Schwankungen, alles klar.
+  - Fest entschlossen, ohne Wenn und Aber.
+  - Die Richtung stimmt, ich gehe.
 tags: [atomic, indecision, hesitation]
 metadata:
   repair_log:
@@ -53,3 +111,4 @@ metadata:
     created: "2025-07-25T21:17:00Z"
 vad_estimate: {valence: 0.2, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.25, conflict: -0.1, deesc: 0.15}
+semiotic: {peirce: icon, signifikat: Zoegern/Unentschlossenheit, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

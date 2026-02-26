@@ -45,3 +45,9 @@ composed_of:
 activation:
   rule: "ANY 1 IN 10 messages"
   window: 10
+semiotic:
+  peirce: index
+  signifikat: Cluster-Muster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

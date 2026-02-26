@@ -14,6 +14,11 @@ semiotic:
   object: "acknowledgement"
   interpretant: "effect_on_state: {sync: +0.2, affekt: neutral}"
   connotation: ["bestätigung", "mikro"]
+  peirce: icon
+  signifikat: Minimal-Antwort/Mikrobestaetigung
+  framing_type: vermeidung
+  cultural_frame: ''
+  myth: Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres
 examples:
   positive_de:
   - "Ok."

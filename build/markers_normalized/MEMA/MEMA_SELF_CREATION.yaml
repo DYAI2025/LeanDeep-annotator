@@ -35,3 +35,9 @@ tags:
 rating: 1
 activation:
   rule: "SELF_REFERENCE + CREATION_VERB >= 2 in 10 messages"
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

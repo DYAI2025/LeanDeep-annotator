@@ -11,19 +11,83 @@ frame:
 pattern: ["(?i)\\b(I'm not sure|maybe|perhaps|I don't know|unclear)\\b"]
 examples:
   positive:
-  - "I'm not sure how to handle this."
-  - "Maybe we should try something else."
-  - "Perhaps there's another way."
-  - "I don't know what the right answer is."
-  - "This is unclear to me."
+  - Ich bin mir nicht sicher, wie ich damit umgehen soll.
+  - Vielleicht sollten wir etwas anderes versuchen.
+  - Es ist mir unklar, was das Richtige ist.
+  - Ich weiss nicht, was die richtige Antwort ist.
+  - Vielleicht gibt es einen anderen Weg.
+  - Ich bin unsicher, ob das stimmt.
+  - Weiss nicht genau, was ich davon halten soll.
+  - Vielleicht irre ich mich auch.
+  - Es ist unklar, was passiert.
+  - Ich bin mir nicht sicher, ob das passt.
+  - Vielleicht habe ich das falsch verstanden.
+  - Ich weiss nicht, wie es weitergeht.
+  - Vielleicht brauchenwir mehr Informationen.
+  - Es ist unklar, wer zustaendig ist.
+  - Ich bin mir nicht sicher, was du meinst.
+  - Vielleicht taeusche ich mich.
+  - Ich weiss nicht, ob das der richtige Zeitpunkt ist.
+  - Es ist mir unklar, wie das funktioniert.
+  - Bin mir nicht sicher, ob ich das schaffe.
+  - Vielleicht habe ich Unrecht.
+  - Ich weiss nicht genau.
+  - Vielleicht ist es besser, zu warten.
+  - Es ist unklar, was als Naechstes kommt.
+  - Bin mir unsicher, ehrlich gesagt.
+  - Vielleicht sehen wir das morgen klarer.
+  - Ich weiss nicht, wie ich reagieren soll.
+  - Vielleicht gibt es da einen Irrtum.
+  - Es ist mir nicht klar, was du willst.
+  - Ich bin mir unsicher ueber meine Entscheidung.
+  - Vielleicht ist das zu frueh.
+  - Weiss nicht, ob ich dem vertrauen kann.
+  - Es ist unklar, wo wir stehen.
+  - Bin mir nicht sicher, ob das Sinn macht.
+  - Vielleicht sollte ich nochmal drueber schlafen.
+  - Ich weiss es wirklich nicht.
+  - Es ist mir unklar, was das bedeutet.
+  - Vielleicht uebertreibe ich auch.
+  - Bin mir nicht sicher, wie du das siehst.
+  - Ich weiss nicht, ob das die Loesung ist.
+  - Vielleicht brauche ich Rat.
+  - Es ist unklar, was erwartet wird.
+  - Ich bin mir unsicher ueber alles gerade.
+  - Vielleicht verstehe ich das falsch.
+  - Weiss nicht, was ich sagen soll.
+  - Es ist mir nicht klar, wohin das fuehrt.
+  - Bin mir unsicher, ob ich richtig liege.
+  - Vielleicht ist das alles ein Missverstaendnis.
+  - Ich weiss nicht, ob ich bereit bin.
+  - Es ist unklar, ob das funktioniert.
+  - Vielleicht muessen wir nochmal reden.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich bin mir absolut sicher.
+  - Das steht fest.
+  - Ganz klar, so machen wir das.
+  - Ich weiss genau, was ich will.
+  - Da gibt es keinen Zweifel.
+  - Definitiv, das ist der richtige Weg.
+  - Ich bin ueberzeugt davon.
+  - Das ist eindeutig.
+  - Ohne Zweifel.
+  - Ich bin mir hundertprozentig sicher.
+  - Das ist glasklar.
+  - Ja, ganz sicher.
+  - Ich habe keinen Zweifel.
+  - Meine Entscheidung steht fest.
+  - Das ist unbestreitbar.
+  - Ich weiss es mit Sicherheit.
+  - Da bin ich mir ganz sicher.
+  - Eindeutig Ja.
+  - Das ist nicht verhandelbar.
+  - Ich bin felsenfest ueberzeugt.
+  - Kein Zweifel moeglich.
+  - Das ist die einzige Loesung.
+  - Definitiv.
+  - Ich bin mir absolut im Klaren.
+  - Da gibt es nichts zu diskutieren.
 tags: [atomic, v3.3, auto-generated]
 vad_estimate: {valence: -0.1, arousal: 0.3, dominance: 0.25}
 effect_on_state: {trust: 0.25, conflict: -0.1, deesc: 0.15}
+semiotic: {peirce: icon, signifikat: Unsicherheit, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

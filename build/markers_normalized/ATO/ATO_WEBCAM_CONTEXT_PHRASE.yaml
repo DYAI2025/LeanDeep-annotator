@@ -15,30 +15,94 @@ patterns:
   value: "(?i)\\b(bandwidth is low|bad connection for video|no privacy for video|not comfortable on camera|poor lighting|background noise)\\b"
 examples:
   positive:
-  - Bandwidth is too low for video calling.
-  - The connection is bad for camera use.
-  - No privacy to turn on video right now.
-  - I'm not comfortable on camera today.
-  - Let's keep the camera off for now.
-  - Poor lighting makes video look terrible.
-  - Background noise would be distracting on video.
-  - Internet connection can't handle video properly.
-  - Camera quality is too poor to use.
-  - Privacy concerns prevent video activation.
+  - Die Bandbreite reicht nicht fuer Video.
+  - Schlechte Verbindung fuer Kamera.
+  - Keine Privatsphaere fuer Video gerade.
+  - Ich bin heute nicht kamerabereit.
+  - Lassen wir die Kamera aus fuer jetzt.
+  - Schlechte Beleuchtung macht Video sinnlos.
+  - Hintergrundgeraeusche waeren stoerend bei Video.
+  - Die Internetverbindung schafft kein Video.
+  - Kameraqualitaet ist zu schlecht zum Nutzen.
+  - Datenschutzbedenken verhindern Video.
+  - Mein WLAN ist zu schwach fuer Kamera.
+  - Keine Privatsphaere hier fuer Video.
+  - Die Verbindung ist zu schlecht fuer Bild.
+  - Ich bin nicht in der Stimmung fuer Kamera.
+  - Das Licht ist hier zu schlecht fuer Video.
+  - Es ist zu laut hier fuer einen Videocall.
+  - Bandwidth reicht nicht, sorry.
+  - Kein guter Ort fuer Video gerade.
+  - Die Technik macht bei Video nicht mit.
+  - Ich sitze im Zug, Kamera geht nicht.
+  - Mein Hintergrund ist nicht vorzeigbar.
+  - Die Verbindung ist instabil, Video wuerde stocken.
+  - Keine passende Umgebung fuer Kamera.
+  - Das Internet hier ist zu langsam fuer Video.
+  - Ich bin unterwegs, Video ist nicht moeglich.
+  - Schlechte Beleuchtung verhinert Video.
+  - Mein Setup ist gerade nicht fuer Kamera geeignet.
+  - Zu viel Hintergrundlaerm fuer Video.
+  - Die Verbindung bricht bei Video ein.
+  - Kein geeigneter Raum fuer Kamera.
+  - Bandwidth-Probleme machen Video unmoeglich.
+  - Ich habe keinen ruhigen Platz fuer Video.
+  - Die Technik streikt bei Video.
+  - Mein Laptop schafft Video nicht.
+  - Kein Licht hier fuer Kamera.
+  - Die Verbindung waere zu instabil.
+  - Im Grossraumbuero geht kein Video.
+  - Mein Internet reicht nicht fuer Bild.
+  - Zu viele Leute um mich herum fuer Video.
+  - Die Kameraqualitaet ist nicht gut genug.
+  - Kein WLAN hier, nur mobile Daten.
+  - Die Beleuchtung ist miserabel fuer Kamera.
+  - Hintergrundgeraeusche wuerden stoeren.
+  - Die Verbindung waere zu schlecht.
+  - Kein passender Ort fuer Videocall.
+  - Mein Akku haelt nicht fuer Video.
+  - Die Technik laesst es nicht zu.
+  - Zu dunkel hier fuer Kamera.
+  - Das Internet hier ist unzuverlaessig.
+  - Keine geeignete Umgebung gerade.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Klar, ich schalte die Kamera an.
+  - Video ist kein Problem, mache ich.
+  - Ich bin bereit fuer den Videocall.
+  - Meine Kamera laeuft, alles gut.
+  - Verbindung ist stabil, Video geht.
+  - Ich schalte die Kamera gerne ein.
+  - Kein Problem mit Video heute.
+  - Meine Technik funktioniert einwandfrei.
+  - Video ist vorbereitet, los gehts.
+  - Ich bin kamerabereit.
+  - Gute Beleuchtung hier, Video passt.
+  - WLAN ist stabil, Video machen wir.
+  - Kein Problem, schalte Kamera ein.
+  - Die Verbindung ist super, Video klappt.
+  - Mein Setup steht fuer Video.
+  - Ich freue mich auf den Videocall.
+  - Kamera ist an, bin bereit.
+  - Technik funktioniert, Video ist okay.
+  - Bin im Buero, Video geht gut.
+  - Alles vorbereitet fuer den Videocall.
+  - Kamera laeuft schon.
+  - Video ist heute moeglich.
+  - Mein Internet schafft Video problemlos.
+  - Gerne Video, kein Thema.
+  - Ich schalte jetzt die Kamera ein.
 tags:
 - atomic
 - v3.3
 - webcam-context
 - excuses
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

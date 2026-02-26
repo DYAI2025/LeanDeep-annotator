@@ -13,6 +13,11 @@ semiotic:
   level: pragmatic
   object: "quality_time"
   interpretant: "effect_on_state: {intimacy: +0.15, sync: +0.15}"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: Zweifel ist Schwaeche — wer zoegert, verliert
 examples:
   positive_de:
   - "Zeit zusammen verbringen."

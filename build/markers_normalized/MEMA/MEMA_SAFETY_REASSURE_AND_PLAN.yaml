@@ -58,3 +58,9 @@ scoring:
 evidence_capture:
   keep_snippets: 6
 fire_when: "conditions_met_first_time"
+semiotic:
+  peirce: symbol
+  signifikat: Sicherheitssignal
+  framing_type: bindung
+  cultural_frame: Bowlby
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'

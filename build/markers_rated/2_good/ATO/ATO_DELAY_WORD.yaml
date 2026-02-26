@@ -7,7 +7,7 @@ frame:
   pragmatics: "Prokrastination"
   narrative: "surface"
 pattern:
-  tokens: ["später", "morgen", "gleich", "bald", "nachher"]
+- (?i)\b(später|nachher|irgendwann|sobald|demnächst|bald|mach ich noch|erledige ich|kommt noch|mach ich morgen|mach ich dann)\b
 examples:
   positive:
   - "mach ich heute noch … vielleicht morgen"
@@ -25,3 +25,4 @@ examples:
   - Ich moechte verstehen, was du meinst.
 vad_estimate: {valence: -0.2, arousal: 0.5, dominance: 0.3}
 effect_on_state: {trust: -0.1, conflict: 0.1, deesc: -0.05}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

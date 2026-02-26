@@ -13,6 +13,11 @@ semiotic:
   level: pragmatic
   object: "apology_expression"
   interpretant: "effect_on_state: {trust: +0.15, conflict: -0.2}"
+  peirce: index
+  signifikat: Entschuldigung/Reue
+  framing_type: reparatur
+  cultural_frame: Gottman
+  myth: Kommunikation loest alles — reden heilt, schweigen zerstoert
 examples:
   positive_de:
   - "Tut mir leid."

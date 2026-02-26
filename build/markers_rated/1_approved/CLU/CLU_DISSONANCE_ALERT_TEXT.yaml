@@ -35,12 +35,72 @@ examples:
   - Ich fühl mich gar nicht gehört obwohl du sagst du verstehst mich
   - Jedes Mal sagst du es wird besser und dann passiert das gleiche
   - Wir haben doch gestern drüber geredet und jetzt machst du es wieder
+  - Du sagst mir ich bin dir wichtig aber meldest dich tagelang nicht
+  - Erst Entschuldigung, dann dasselbe Verhalten, das ist Dissonanz pur
+  - Deine Worte sagen Liebe aber dein Verhalten schreit Gleichgültigkeit
+  - Du versprichst Besserung und nächste Woche dasselbe Spiel
+  - Sorry sagen und es dann wieder tun ist keine Entschuldigung
+  - Du sagst du willst reden aber blockst jedes Gespräch
+  - Ich soll dir vertrauen aber du lügst mich an, wie soll das gehen?
+  - Erst "ich ändere mich" und dann nix, jedes Mal
+  - Du sagst alles ist okay aber dein Tonfall sagt was anderes
+  - Wir haben Regeln vereinbart und du brichst sie am nächsten Tag
+  - Du willst dass ich offen bin aber reagierst mit Schweigen
+  - Entschuldigung gestern, gleicher Fehler heute, wo ist die Änderung?
+  - Du erzählst mir eine Geschichte und deiner Mutter eine andere
+  - Ich glaub dir nicht mehr weil Worte und Taten nicht matchen
+  - Du sagst du liebst mich und flirtest mit anderen, was jetzt?
+  - Erst "ich kümmere mich drum" und dann passiert wochenlang nix
+  - Du bittest um Verständnis aber zeigst keins für mich
+  - Versprechen gebrochen. Schon wieder. Wie letztes Mal.
+  - Du sagst du hast dich geändert aber alles ist wie vorher
+  - Drei Entschuldigungen und dreimal dasselbe Verhalten danach
+  - Du redest von Respekt und behandelst mich respektlos
+  - Sorry + gleicher Fehler = keine echte Reue
+  - Du sagst "nie wieder" und es passiert WIEDER
+  - Ich höre deine Worte aber ich sehe dein Verhalten
+  - "Gesagt: ich passe mich an. Getan: genau das gleiche wie immer"
+  - Du willst Vertrauen aber bist nicht vertrauenswürdig
+  - Erst ja dann nein dann ja, ich komm nicht mehr mit
+  - Reden über Veränderung ohne jede tatsächliche Veränderung
+  - Du forderst Nähe und schaffst Distanz, gleichzeitig
+  - "Immer das gleiche Muster: Versprechen, Bruch, Entschuldigung, repeat"
+  - Du sagst du verstehst mich aber dein nächster Satz zeigt dass nicht
+  - Zwischen deinem "ich liebe dich" und deinem Verhalten liegen Welten
+  - Du bittest mich offen zu sein und bestrafst mich dafür
+  - Erst Verständnis, dann Vorwurf, ich blick nicht mehr durch
+  - Du sagst du bist da für mich und verschwindest wenn ich dich brauche
+  - "Jedes Mal wenn du sagst 'ab jetzt anders' weiß ich es wird nicht so sein"
+  - Deine Versprechen sind wertlos geworden durch dein Handeln
+  - Du predigst Ehrlichkeit und lebst Verstellung
+  - Sorry ist nur ein Wort wenn kein Handeln folgt
+  - Du lebst in einer anderen Realität als der die du mir erzählst
   negative:
   - Ja stimmt, da war ich widersprüchlich, sorry.
   - Ich merke dass ich mich anders verhalten muss.
   - Danke dass du das ansprichst, lass uns das klären.
   - Du hast recht, das passt nicht zusammen was ich gesagt hab.
   - Ich verstehe warum dich das verwirrt.
+  - Ich sehe den Widerspruch und arbeite daran.
+  - Du hast recht, mein Verhalten muss sich ändern, nicht nur meine Worte.
+  - Danke dass du ehrlich bist, ich nehme das ernst.
+  - Ich will dass meine Taten meinen Worten entsprechen.
+  - Lass mich dir zeigen dass ich es diesmal ernst meine.
+  - Ich verstehe dass Worte allein nicht reichen.
+  - Ich bin bereit konkrete Schritte zu machen.
+  - Du verdienst Konsistenz und die will ich dir geben.
+  - Ich hab mich widersprüchlich verhalten und das war nicht fair.
+  - Lass uns besprechen wie ich das besser machen kann.
+  - Ich stehe zu meinem Fehler und ändere es ab jetzt.
+  - Heute Abend grillen bei Tim?
+  - Soll ich den Wocheneinkauf machen?
+  - Die Heizung tropft, ich ruf morgen den Handwerker an.
+  - Hab die Karten fürs Konzert bestellt!
+  - Ich achte ab jetzt darauf dass Worte und Taten passen.
+  - Mir ist Verlässlichkeit wichtig, ich steh zu meinem Wort.
+  - Ich hab gesagt ich mache es und hab es gemacht.
+  - Konsistenz ist mir wichtig in unserer Beziehung.
+  - Wenn ich was verspreche, halte ich es auch.
 tags:
 - cluster
 - dissonance
@@ -49,3 +109,4 @@ metadata:
   - rule: R03
     note: Feldreihenfolge geprüft
     date: '2025-08-29'
+semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

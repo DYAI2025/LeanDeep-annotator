@@ -12,10 +12,10 @@ tags:
 - TURQUOISE
 - screening
 composed_of:
-  - SEM_TUERKIS_COSMIC_FLOW
-  - SEM_SD_TURQUOISE_HOLISM
-  - SEM_GELB_SYSTEMIC_INTEGRATION
-  - SEM_META_REFLECTION
+- SEM_TUERKIS_COSMIC_FLOW
+- SEM_SD_TURQUOISE_HOLISM
+- SEM_GELB_SYSTEMIC_INTEGRATION
+- SEM_META_REFLECTION
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 6 messages
 scoring:
@@ -36,9 +36,70 @@ examples:
   - "Mir geht es nicht um mich oder dich, sondern um das größere Feld"
   - "Bewusstsein entfaltet sich in Spiralen, wir sind nur ein Ausdruck davon"
   - "Die Lösung liegt nicht im Verstand sondern im Sein selbst"
+  - "Wir sind alle Zellen eines größeren Organismus, das spüre ich zutiefst"
+  - "Die Trennung zwischen Mensch und Natur ist eine Illusion, wir sind eins"
+  - "Globale Verantwortung bedeutet dass jede Handlung Auswirkungen hat"
+  - "Ich erlebe mich als Teil eines kosmischen Gewebes, alles ist miteinander verwoben"
+  - "Heilung geschieht nicht im Individuum allein, sondern im kollektiven Feld"
+  - "Was wir der Erde antun, tun wir uns selbst an, das ist keine Metapher"
+  - "Bewusstseinsevolution ist keine lineare Sache, es entfaltet sich spiralförmig"
+  - "Die Weisheit der indigenen Völker zeigt uns den Weg zurück zur Ganzheit"
+  - "Jenseits von richtig und falsch gibt es einen Ort, da treffen wir uns"
+  - "Systemisches Denken reicht nicht, wir brauchen systemisches Fühlen"
+  - "Die Antwort auf unsere Krise ist nicht mehr Technologie sondern mehr Verbundenheit"
+  - "Ich diene dem größeren Ganzen, mein Ego ist nur ein Instrument"
+  - "Transzendenz bedeutet nicht Flucht, sondern tieferes Engagement mit dem Leben"
+  - "Jedes Lebewesen hat eine Würde die über menschliche Kategorien hinausgeht"
+  - "Die Erde ist nicht unser Besitz, wir sind ihre Hüter"
+  - "In der Stille zwischen den Gedanken liegt die wahre Erkenntnis"
+  - "Wir sind die Generation die den Übergang gestalten muss, von Ego zu Eco"
+  - "Das kollektive Trauma braucht kollektive Heilung, nicht individuelle Therapie allein"
+  - "Ich sehe in jedem Konflikt einen Ausdruck des universellen Ringens um Balance"
+  - "Unsere Kinder erben nicht nur eine Welt sondern ein Bewusstseinsfeld"
+  - "Mitgefühl ist keine Schwäche, es ist die höchste Form von Intelligenz"
+  - "Alles was existiert ist Ausdruck eines gemeinsamen Feldes"
+  - "Ich übe mich darin, das Göttliche in allem Lebendigen zu erkennen"
+  - "Nachhaltigkeit ist keine Strategie, es ist eine Seinsweise"
+  - "Die Lösung globaler Probleme beginnt in der inneren Transformation jedes Einzelnen"
+  - "Wir brauchen eine neue Geschichte über das Menschsein, eine die uns alle einschließt"
+  - "Im Grunde gibt es keine getrennten Probleme, nur ein vernetztes Ganzes"
+  - "Ich erlebe Synchronizität als Bestätigung dass alles zusammenhängt"
+  - "Planetares Bewusstsein heißt in Äonen denken statt in Quartalszahlen"
+  - "Die Weisheitstraditionen aller Kulturen zeigen auf denselben Grund"
+  - "Mein Mitgefühl gilt allen Wesen, nicht nur denen die mir nahestehen"
+  - "Evolution des Bewusstseins ist die eigentliche Aufgabe unserer Spezies"
+  - "Wir sind Brücken zwischen dem was war und dem was kommen will"
+  - "Die Antwort liegt im Zwischen, nicht im Entweder-Oder"
+  - "Ganzheit bedeutet auch die dunklen Seiten zu integrieren, nicht abzuspalten"
+  - "Ich spüre wie sich das kollektive Feld gerade transformiert"
+  - "Interbeing ist keine Philosophie, es ist eine gelebte Erfahrung"
+  - "Wir sind die Augen und Ohren des Universums, durch die es sich selbst erkennt"
+  - "Was in der Welt passiert spiegelt unseren inneren Zustand wider"
+  - "Die Zeit der Einzelkämpfer ist vorbei, jetzt brauchen wir Symbiose"
   negative:
   - "Ich will einfach nur meine Ruhe haben"
   - "Das müssen wir strategisch angehen, Zahlen auf den Tisch"
   - "Regeln sind Regeln, da gibts nix zu diskutieren"
   - "Mir egal was die anderen sagen, ich mach mein Ding"
   - "Hauptsache mir gehts gut, der Rest ist mir egal"
+  - "Ich will einfach meine Ruhe, lasst mich in Frieden"
+  - "Das betrifft mich nicht, sollen die das mal selber regeln"
+  - "Profit first, der Rest ergibt sich von allein"
+  - "Ich bin nur für mich verantwortlich, nicht für die ganze Welt"
+  - "Spiritualität? Nee danke, ich bin Realist"
+  - "Jeder ist seines eigenen Glückes Schmied, fertig"
+  - "Umweltschutz schön und gut, aber mein Lebensstil ändere ich nicht"
+  - "Entweder du bist für mich oder gegen mich, dazwischen gibts nix"
+  - "Die sollen mal ihre eigenen Probleme lösen statt rumzuheulen"
+  - "Tradition ist Tradition, das haben wir schon immer so gemacht"
+  - "Ich denk an meine Familie, den Rest der Welt können andere retten"
+  - "Esoterik und so ein Zeug ist doch totaler Quatsch"
+  - "Was bringt mir das? Wo ist der ROI?"
+  - "Natur ist nett für den Urlaub, aber im Alltag zählen harte Fakten"
+  - "Ich glaub nur was ich sehe und messen kann"
+  - "Die da oben sollen das regeln, ich hab genug zu tun"
+  - "Mein Auto, mein Haus, mein Boot, das zählt für mich"
+  - "Hierarchien sind wichtig, ohne Ordnung gibts Chaos"
+  - "Gefühle haben im Business nichts verloren"
+  - "Ich schau auf mich, das ist schon anstrengend genug"
+semiotic: {peirce: symbol, signifikat: Persoenlichkeitsmuster, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

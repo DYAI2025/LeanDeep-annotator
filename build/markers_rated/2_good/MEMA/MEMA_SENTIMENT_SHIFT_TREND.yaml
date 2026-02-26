@@ -1,0 +1,104 @@
+id: MEMA_SENTIMENT_SHIFT_TREND
+version: "3.4"
+frame:
+  signal: ["sentiment", "shift"]
+  concept: "Stimmungswechsel-Trend im Gesprächsverlauf"
+  pragmatics: "Erkennt systematische Veränderung der emotionalen Tonalität über Nachrichten"
+  narrative: "meta_pattern"
+tags: [mema, sentiment, shift, trend, dynamics]
+composed_of:
+  required_any:
+  - SEM_EMOTIONAL_OVERWHELM
+  - SEM_EMPATHIC_RESONANCE
+  supportive:
+  - ATO_TOPIC_SHIFT
+  - CLU_EMOTIONAL_ESCALATION
+activation:
+  rule: "ANY 2 IN 15 messages"
+scoring:
+  base: 1.5
+  weight: 1.1
+examples:
+  positive_de:
+  - "Am Anfang war alles nett, aber jetzt wird dein Ton immer kälter."
+  - "Du hast freundlich angefangen und jetzt bist du nur noch genervt."
+  - "Mir fällt auf, dass unsere Gespräche immer negativer werden."
+  - "Vor einer Stunde hast du noch gelacht, jetzt schreist du mich an."
+  - "Die Stimmung hat sich komplett gedreht seit deiner letzten Nachricht."
+  - "Erst warmherzig, dann Sarkasmus, dann Eiseskälte. Innerhalb von 10 Minuten."
+  - "Unsere Chats werden von Woche zu Woche aggressiver."
+  - "Ich merke, wie die Grundstimmung zwischen uns kippt."
+  - "Heute Morgen war alles gut. Seit dem Telefonat nur noch Frost."
+  - "Die letzten fünf Nachrichten werden immer kürzer und kälter."
+  - "Wir haben angefangen zu planen und jetzt streiten wir nur noch."
+  - "Der Ton wird härter – Nachricht für Nachricht."
+  - "Erst Kooperation, dann Widerstand, dann Blockade."
+  - "Du klingst bei jeder Nachricht ein Stück frustrierter."
+  - "Die Stimmung kippt immer am Abend – tagsüber geht es uns gut."
+  - "Am Anfang unseres Chats warst du noch offen, jetzt machst du dicht."
+  - "Ich sehe einen klaren Trend: immer weniger Verständnis, immer mehr Vorwürfe."
+  - "Gestern waren wir noch liebevoll, heute ist nur noch Anspannung."
+  - "Der Stimmungswechsel in unserem Gespräch ist krass."
+  - "Jede dritte Nachricht ist negativer als die vorherige."
+  - "Am Montag bist du motiviert, am Freitag am Ende."
+  - "Der Übergang von fröhlich zu wütend passiert bei dir in Sekunden."
+  - "Unsere Stimmung folgt einem Muster: gut, gut, schlecht, schlecht, katastrophal."
+  - "Die Energie in unseren Gesprächen schwindet täglich."
+  - "Du fängst immer mit Smalltalk an und endest bei Vorwürfen."
+  - "Seit dem Vorfall wird der Ton zwischen uns immer rauer."
+  - "Ich merke eine Verschlechterung in der Art, wie wir miteinander reden."
+  - "Die Emojis sind verschwunden. Nur noch trockene Sätze."
+  - "Erst Herzen, dann nichts, dann Sarkasmus. Die Kurve geht nur nach unten."
+  - "Unsere Nachrichten werden von Tag zu Tag distanzierter."
+  - "Die Wärme ist verschwunden aus unseren Gesprächen."
+  - "Am Anfang hast du mich Schatz genannt, jetzt nur noch beim Nachnamen."
+  - "Der Verfall unserer Kommunikation ist spürbar."
+  - "Jede Woche etwas kälter, etwas distanzierter."
+  - "Der Trend geht Richtung Gleichgültigkeit."
+  - "Ich lese unsere alten Chats und erschrecke, wie anders wir heute schreiben."
+  - "Die Atmosphäre verschlechtert sich mit jeder Nachricht."
+  - "Dein Enthusiasmus hat sich in Zynismus verwandelt."
+  - "Mir fällt auf: seit drei Wochen keine liebevolle Nachricht mehr."
+  - "Die Kurve geht nur noch runter – emotional gesehen."
+  - "Wir haben den Übergang von Wärme zu Kälte in nur einer Woche geschafft."
+  - "Erst Begeisterung, dann Ernüchterung, dann Rückzug."
+  - "Die Tendenz ist eindeutig negativ."
+  - "Von herzlich zu funktional in vier Nachrichten."
+  - "Mir fällt der Tonwechsel auf, auch wenn du ihn leugnest."
+  - "Das Gespräch gleitet ab – von Austausch zu Anklage."
+  - "Am Anfang Lachen, am Ende Tränen. Jedes Mal."
+  - "Die Stimmungskurve unserer Beziehung zeigt nach unten."
+  - "Ich spüre den Drift – Nachricht für Nachricht etwas weiter weg."
+  - "Unsere Kommunikation verarmt emotional."
+  negative_de:
+  - "Wir haben ein gutes Gespräch geführt, mit Höhen und Tiefen, aber insgesamt positiv."
+  - "Heute hatten wir Streit, aber am Ende konnten wir lachen."
+  - "Die Stimmung wechselt mal, aber insgesamt sind wir stabil."
+  - "Wir hatten einen Durchhänger, aber jetzt gehts wieder bergauf."
+  - "Manchmal bin ich genervt, manchmal gut drauf – das ist normal."
+  - "Der Streit war heftig, aber wir haben es gelöst und fühlen uns näher."
+  - "Es gibt gute und schlechte Tage, aber der Trend stimmt."
+  - "Wir haben Phasen, in denen es angespannt ist, aber es pendelt sich ein."
+  - "Heute war ein emotionaler Tag, aber wir sind stärker daraus hervorgegangen."
+  - "Mal warm, mal kühl – aber nie wirklich kalt."
+  - "Die Stimmung wechselt, aber wir fangen uns gegenseitig auf."
+  - "Wir haben heftig diskutiert, aber am Ende umarmt."
+  - "Es gab Spannung, aber die hat sich konstruktiv gelöst."
+  - "Gute und schlechte Phasen gehören dazu."
+  - "Heute war angespannt, morgen wird besser."
+  - "Wir schwanken, aber unser Fundament ist stabil."
+  - "Emotionale Schwankungen sind normal in einer Beziehung."
+  - "Es war ein schwieriges Gespräch, aber ich fühle mich danach erleichtert."
+  - "Wir haben Tiefpunkte, aber auch echte Höhepunkte."
+  - "Die Stimmung war heute auf und ab, aber am Ende war es gut."
+  - "Wir reden auch über schwierige Dinge, aber der Grundton ist respektvoll."
+  - "Nicht jeder Tag ist sonnig, aber wir wachsen daran."
+  - "Auch wenn es gerade ruckelt – ich sehe Fortschritte."
+  - "Wir haben eine Phase, aber ich bin zuversichtlich."
+  - "Die Atmosphäre war angespannt, aber wir haben es aufgelöst."
+semiotic:
+  peirce: index
+  signifikat: Stimmungswandel
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

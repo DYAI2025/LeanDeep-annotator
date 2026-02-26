@@ -23,6 +23,46 @@ examples:
   - "A: Du legst Berichte vor und verschwindest dann.\nB: Du forderst Stellungnahmen ohne Ankündigung.\nA: Du schmeißt uns Tabellen hin.\nB: Du reagierst nur auf Eskalationen von oben."
   - "A: Du bringst jeden Morgen neue Kritikpunkte.\nB: Du wiederholst einfach die Beschwerden des Kunden.\nA: Du lässt keine Diskussion zu.\nB: Du drohst nur mit Konsequenzen."
   - "A: Du hast wiederholt das Review gerissen.\nB: Du merkst nicht, wie viele Umwege du aufmachst.\nA: Du holst rein gar keinen Input ein.\nB: Du klemmst jede Rückfrage ab."
+  - "A: Du machst das immer falsch.\nB: Du verstehst den Punkt nicht.\nA: Du hörst nie richtig zu.\nB: Du redest nur über Probleme."
+  - "A: Du wirfst mir Sachen vor.\nB: Du bist nie konstruktiv.\nA: Du beschuldigst nur andere.\nB: Du gibst nie eine Lösung."
+  - "A: Du hast die Aufgabe nicht erledigt.\nB: Du hast sie mir nie klar zugewiesen.\nA: Du weißt, was zu tun ist.\nB: Du wälzt alles ab."
+  - "A: Du kritisierst, ohne selbst etwas beizutragen.\nB: Du siehst nur das Negative.\nA: Du stöhnst über alles.\nB: Du blockierst jeden Vorschlag."
+  - "A: Du bist unzuverlässig.\nB: Du übertreibst ständig.\nA: Du machst Panik.\nB: Du reagierst immer über."
+  - "A: Du hast die Zahlen nicht geliefert.\nB: Du fragst immer erst im letzten Moment.\nA: Du bist unorganisiert.\nB: Du machst alles hektisch."
+  - "A: Du ziehst uns runter.\nB: Du sabotierst den Prozess.\nA: Du bist der Grund für die Verzögerung.\nB: Du trägst nichts Konstruktives bei."
+  - "A: Du fällst uns in den Rücken.\nB: Du untergräbst die Teamarbeit.\nA: Du spielst Spielchen.\nB: Du bist nicht loyal."
+  - "A: Du meckerst nur.\nB: Du bringst nie eigene Ideen ein.\nA: Du wartest nur darauf, dass andere scheitern.\nB: Du freust dich über Fehler."
+  - "A: Du bist nicht erreichbar.\nB: Du antwortest nicht.\nA: Du bist abgetaucht.\nB: Du lässt uns hängen."
+  - "A: Du hast schon wieder die Agenda geändert.\nB: Du kannst dich nicht entscheiden.\nA: Du bringst Chaos rein.\nB: Du machst alles unsicher."
+  - "A: Du bist nicht teamfähig.\nB: Du denkst nur an dich.\nA: Du ziehst dein Ding durch.\nB: Du ignorierst alle anderen."
+  - "A: Du verursachst immer Mehrarbeit.\nB: Du denkst nicht nach, bevor du handelst.\nA: Du machst uns mehr Arbeit als du abnimmst.\nB: Du kostest mehr als du bringst."
+  - "A: Du lügst mich an.\nB: Du verdrehst die Tatsachen.\nA: Du erzählst jedem was anderes.\nB: Du bist nicht glaubwürdig."
+  - "A: Du wiederholst immer denselben Fehler.\nB: Du lernst nie dazu.\nA: Du bist beratungsresistent.\nB: Du machst immer weiter wie bisher."
+  - "A: Du sprichst über uns statt mit uns.\nB: Du hast hinten rum geredet.\nA: Du bist hinterhältig.\nB: Du arbeitest gegen uns."
+  - "A: Du erzählst nur Halbwahrheiten.\nB: Du hältst Informationen zurück.\nA: Du lässt immer Details aus.\nB: Du sagst nie die ganze Geschichte."
+  - "A: Du hast keinen Plan.\nB: Du improvisierst ständig.\nA: Du machst alles aus dem Bauch.\nB: Du hast keine Strategie."
+  - "A: Du sabotierst die Deadline.\nB: Du lieferst immer zu spät.\nA: Du nimmst nichts ernst.\nB: Du kümmerst dich um nichts."
+  - "A: Du bist schuld an dem Disaster.\nB: Du hast den Fehler gemacht.\nA: Du hast es verbockt.\nB: Du trägst die Verantwortung."
+  - "A: Du machst das Team kaputt.\nB: Du vergiftest die Stimmung.\nA: Du treibst Leute raus.\nB: Du machst alles toxisch."
+  - "A: Du verlierst den Überblick.\nB: Du hast die Kontrolle verloren.\nA: Du kannst das nicht managen.\nB: Du bist überfordert."
+  - "A: Du delegierst alles und machst nichts.\nB: Du sitzt nur in Meetings.\nA: Du produzierst heiße Luft.\nB: Du lieferst nie Ergebnisse."
+  - "A: Du nimmst jede Kritik persönlich.\nB: Du verkraftest kein Feedback.\nA: Du wirst sofort emotional.\nB: Du reagierst immer beleidigt."
+  - "A: Du stellst dich dumm.\nB: Du spielst ahnungslos.\nA: Du weichst aus.\nB: Du vermeidest klare Aussagen."
+  - "A: Du hast uns das eingebrockt.\nB: Du trägst die Konsequenzen nicht.\nA: Du machst dich aus dem Staub.\nB: Du drückst dich vor der Verantwortung."
+  - "A: Du warst bei dem Meeting völlig daneben.\nB: Du hast dich unmöglich verhalten.\nA: Du machst dich lächerlich.\nB: Du beschädigst unseren Ruf."
+  - "A: Du überschreitest Grenzen.\nB: Du respektierst keine Regeln.\nA: Du brichst Vereinbarungen.\nB: Du hältst dich an nichts."
+  - "A: Du verhinderst jede Einigung.\nB: Du bestehst immer auf deinem Standpunkt.\nA: Du bist kompromissunfähig.\nB: Du blockierst alles."
+  - "A: Du hast das absichtlich gemacht.\nB: Du provozierst bewusst.\nA: Du willst Streit.\nB: Du suchst die Konfrontation."
+  - "A: Du bist nie da, wenn man dich braucht.\nB: Du tauchst nur auf, wenn es dir passt.\nA: Du bist ein Schönwetterpartner.\nB: Du verschwindest bei Problemen."
+  - "A: Du hast unsere Abmachung gebrochen.\nB: Du hältst dich nie an dein Wort.\nA: Du bist unzuverlässig.\nB: Du sagst eins und machst was anderes."
+  - "A: Du spielst dich als Chef auf.\nB: Du hast keine Autorität dafür.\nA: Du überschreitest deine Kompetenzen.\nB: Du maßt dir Entscheidungen an."
+  - "A: Du bist rücksichtslos.\nB: Du denkst nie an andere.\nA: Du siehst nur dich.\nB: Du bist egoistisch."
+  - "A: Du blockierst unsere Budgetanfrage.\nB: Du sparst an der falschen Stelle.\nA: Du erstickst Innovation.\nB: Du denkst nur in Kosten."
+  - "A: Du nervst mit deinen ständigen Nachfragen.\nB: Du vertraust niemandem.\nA: Du kontrollierst alles.\nB: Du mikromanagst."
+  - "A: Du hast mich vor dem Kunden blamiert.\nB: Du hast mich nicht unterstützt.\nA: Du hast mich hängen lassen.\nB: Du hast aktiv gegen mich gearbeitet."
+  - "A: Du unterschlägst Informationen.\nB: Du filterst, was du weitergibst.\nA: Du manipulierst die Wahrnehmung.\nB: Du kontrollierst das Narrativ."
+  - "A: Du hast den Sprint schon wieder gesprengt.\nB: Du arbeitest gegen die Planung.\nA: Du untergräbst den Prozess.\nB: Du sabotierst unsere Methodik."
+  - "A: Du nimmst dir nie Zeit für 1-on-1s.\nB: Du bist als Führungskraft unsichtbar.\nA: Du kümmerst dich nicht um Mitarbeiter.\nB: Du leitest nur auf dem Papier."
   negative:
   - "A: Du schneidest die Anforderungen oft neu.\nB: Du wechselst mitten im Sprint ab und zu die Richtung.\nA: Du kippst nur Probleme auf uns.\nB: Du hältst niemanden auf dem Laufenden."
   - "A: Du stoppst Releases ohne Erklärung.\nB: Du reichst manchmal nur rote Karten ein.\nA: Du kommentierst jede Initiative abfällig.\nB: Du verweigerst jede Abstimmung."
@@ -31,6 +71,24 @@ examples:
   - Ich verstehe deine Perspektive.
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
+  - "A: Ich möchte, dass wir gemeinsam eine Lösung finden.\nB: Mein Ziel ist es, die Deadline einzuhalten."
+  - "A: Was ich erreichen will, ist ein klar definierter Prozess.\nB: Mir ist wichtig, dass wir uns einigen."
+  - "A: Mein Ziel wäre, dass wir die Aufgaben besser verteilen.\nB: Ich will, dass jeder weiß, woran er ist."
+  - "A: Können wir uns darauf einigen, das nächste Mal früher zu planen?\nB: Ja, mein Ziel ist bessere Vorlaufzeit."
+  - "A: Ich schlage vor, wir setzen klare Meilensteine.\nB: Gute Idee, damit haben wir ein gemeinsames Ziel."
+  - Lasst uns definieren, was wir bis Freitag erreicht haben wollen.
+  - Mein Vorschlag wäre, dass wir zuerst die Prioritäten klären.
+  - Was ist unser gemeinsames Ziel hier eigentlich?
+  - Ich möchte, dass wir uns auf eine Richtung einigen, bevor wir weiterdiskutieren.
+  - Können wir festhalten, was jeder von diesem Meeting mitnehmen will?
+  - "A: Ich will ehrlich sein: Mein Ziel ist, die Kundenbeziehung zu retten.\nB: Und meins ist, die Qualität zu sichern."
+  - Was wäre denn der ideale Ausgang für dich? Für mich wäre es X.
+  - "A: Lass uns definieren, welches Ergebnis wir uns wünschen.\nB: Ich will, dass das Team wieder funktioniert."
+  - Mir geht es darum, dass wir eine klare Verantwortungsverteilung haben.
+  - "A: Mein Wunsch wäre, dass wir das strukturiert angehen.\nB: Einverstanden, lass uns einen Plan machen."
+  - Was möchtest du konkret verändern?
+  - Lass uns klären, was das Ziel dieses Gesprächs sein soll.
+  - Ich schlage vor, wir einigen uns zuerst auf die Kriterien für eine gute Lösung.
 tags:
 - meta
 - absence
@@ -56,3 +114,9 @@ absence_sets:
     - SEM_TARGET_STATEMENT
 emit:
   per_speaker: true
+semiotic:
+  peirce: index
+  signifikat: Konfliktdynamik
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'

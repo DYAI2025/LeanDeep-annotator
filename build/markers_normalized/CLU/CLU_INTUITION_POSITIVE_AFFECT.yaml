@@ -48,6 +48,12 @@ activation:
 scoring:
   base: 0.6
   weight: 1.1
+semiotic:
+  peirce: icon
+  signifikat: Positive Grundhaltung
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 metadata:
   family: AFFECT
   intuition:

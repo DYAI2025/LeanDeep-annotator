@@ -36,14 +36,57 @@ examples:
   - Das Mikro ist okay, aber das Bild geht schon wieder nicht.
   - Ich habe eine Panikattacke, wenn ich mich selbst auf Video sehe.
   - Sorry, das Licht ist so schlecht, du würdest eh nichts erkennen.
+  - Mein Handy hat keinen Speicher mehr, da stürzt die Kamera-App immer ab.
+  - Ich bin auf Dienstreise in einem Hotel ohne stabiles WLAN.
+  - Meine Kamera wird gerade von einem anderen Programm blockiert.
+  - Die Kinder schlafen nebenan, ich kann kein Video machen.
+  - Mein Gesicht ist geschwollen von einer Behandlung, das möchte ich dir nicht zumuten.
+  - Ich habe gerade einen Sonnenbrand und sehe furchtbar aus.
+  - Auf dem Schiff hier gibt es nur Satelliteninternet, Video unmöglich.
+  - Ich bin im Krankenhaus, die erlauben hier keine Videoanrufe.
+  - Mein Arbeitgeber verbietet private Videocalls auf dem Diensthandy.
+  - Die Webcam meines PCs ist abgeklebt wegen Datenschutz, geht gerade nicht ab.
+  - Ich bin zu müde für Video, sehe aus wie ein Zombie.
+  - FaceTime spinnt mal wieder, das geht einfach nicht.
+  - Ich sitze gerade im Zug, Video geht bei dem Empfang nicht.
+  - Ich mag keine Videocalls, das macht mich nervös.
+  - Mein Akku ist fast leer und Video frisst zu viel Strom.
+  - Ich bin auf einer Baustelle, da wäre ein Videocall zu laut.
+  - Meine Kamera hat einen Grünstich, das sieht total komisch aus.
+  - Ich habe kein Datenvolumen mehr, Video geht nur über WLAN.
+  - Ich bin in einer Zone ohne Netzabdeckung, kaum Internet hier.
+  - Mein Gesicht hat gerade eine allergische Reaktion, ich möchte nicht vor die Kamera.
+  - Die App will ein Update, und ich habe gerade keine Zeit dafür.
+  - Ich telefoniere lieber, Video ist mir zu aufwändig.
+  - Mein Bildschirm flackert, ich muss den erst reparieren lassen.
+  - In meinem Land ist FaceTime gesperrt wegen Regulierung.
+  - Ich habe eine Augenverletzung und muss Augenpflaster tragen, geht nicht.
   negative:
   - Ich sehe heute schwierig aus, habe kaum geschlafen. Lass uns das auf morgen verschieben.
   - Ich sehe das anders, aber ich respektiere deine Sicht.
-  - Ich moechte ehrlich mit dir sein, auch wenn es schwer ist.
+  - Ich möchte ehrlich mit dir sein, auch wenn es schwer ist.
   - Du hast recht, das war mein Fehler. Es tut mir leid.
-  - Lass uns beide unsere Seite erklaeren.
-  - Ich fuehle mich unwohl dabei und moechte darueber reden.
+  - Lass uns beide unsere Seite erklären.
+  - Ich fühle mich unwohl dabei und möchte darüber reden.
   - Ich verstehe, warum du das so siehst.
+  - Klar, lass uns jetzt videotelefonieren! Einen Moment, ich schalte die Kamera ein.
+  - Ja super, FaceTime klingt gut, ich bin bereit!
+  - Ich ruf dich gleich per Video an, freue mich dich zu sehen.
+  - Hey, Kamera läuft, kannst du mich sehen?
+  - Na endlich, ich wollte schon lange mal videochatten mit dir!
+  - Zoom oder Teams? Sag an, ich bin für beides bereit.
+  - Lass uns morgen Abend einen Videocall machen, da hab ich Zeit.
+  - Ich freu mich total auf den Videocall!
+  - Meine neue Webcam ist super, die Qualität ist echt gut.
+  - Ich hab das Video extra für dich aufgenommen, guck mal.
+  - Wir können auch Google Meet nehmen, das funktioniert immer.
+  - Ich zeig dir per Video meine neue Wohnung!
+  - Hey, ich schick dir erstmal ein Video von mir.
+  - Klar können wir skypen, wann passt es dir?
+  - Ich hab mir extra eine Ring-Lampe gekauft für unsere Calls.
+  - Der Videocall gestern war so schön, lass das öfter machen.
+  - Ich hab gerade Discord offen, willst du kurz reinkommen?
+  - Video geht klar, ich bin in 5 Minuten ready.
 tags:
 - webcam
 - excuse
@@ -55,3 +98,9 @@ composed_of:
 compositionality: deterministic
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'

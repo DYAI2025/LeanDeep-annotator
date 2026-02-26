@@ -7,10 +7,10 @@ frame:
   pragmatics: "Schnelle Spiral-Ebenen-Wechsel"
   narrative: "Das Selbst springt zwischen Ebenen"
 composed_of:
-  - SEM_SD_RED_ASSERT
-  - SEM_SD_GREEN_EMPATHY
-  - SEM_SD_ORANGE_ACHIEVE
-  - SEM_SD_BLUE_ORDER
+- SEM_SD_RED_ASSERT
+- SEM_SD_GREEN_EMPATHY
+- SEM_SD_ORANGE_ACHIEVE
+- SEM_SD_BLUE_ORDER
 activation:
   rule: AT_LEAST 3 DISTINCT SEMs IN 10 messages
   window_size: 10
@@ -36,3 +36,4 @@ examples:
   - "Ich fühle mich stabil und ausgeglichen heute"
   - "Wir sind uns einig und ziehen das gemeinsam durch"
   - "Ich weiß was ich will und wie ich dahin komme"
+semiotic: {peirce: symbol, signifikat: Persoenlichkeitsmuster, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

@@ -13,11 +13,56 @@ frame:
 patterns: []
 examples:
   positive:
-  - ich bin da für dich … wir schaffen das
-  - danke dir … fühl mich gesehen
-  - gemeinsam kriegen wir das hin
-  - du kannst dich auf mich verlassen
-  - ich hör dir zu … okay?
+  - Ich bin da für dich, wir schaffen das.
+  - Danke dir, ich fühl mich gesehen.
+  - Gemeinsam kriegen wir das hin.
+  - Du kannst dich auf mich verlassen.
+  - Ich hör dir zu, okay?
+  - Ich bin da, was auch passiert.
+  - Du schaffst das, ich glaub an dich.
+  - An deiner Seite, immer.
+  - Kann helfen, sag einfach Bescheid.
+  - Gemeinsam sind wir stark.
+  - Ich bin da und ich bleibe bei dir.
+  - Du schaffst das, das weiß ich.
+  - An deiner Seite stehe ich.
+  - Ich kann helfen, lass mich.
+  - Gemeinsam finden wir eine Lösung.
+  - Ich bin da, auch in schweren Zeiten.
+  - Du schaffst das, Schritt für Schritt.
+  - An deiner Seite, komme was wolle.
+  - Kann ich dir irgendwie helfen?
+  - Gemeinsam geht es leichter.
+  - Ich bin da, du musst das nicht allein tragen.
+  - Du schaffst das, ich unterstütze dich.
+  - An deiner Seite, dafür bin ich da.
+  - Ich kann helfen, sag nur wie.
+  - Gemeinsam packen wir das an.
+  - Ich bin da, verlier nicht den Mut.
+  - Du schaffst das, davon bin ich überzeugt.
+  - An deiner Seite zu sein ist mir wichtig.
+  - Kann helfen, kein Problem.
+  - Gemeinsam bewältigen wir das.
+  - Ich bin da, auch wenn es unbequem wird.
+  - Du schaffst das, du bist stärker als du denkst.
+  - An deiner Seite, durch dick und dünn.
+  - Ich kann helfen, wirklich.
+  - Gemeinsam schaffen wir alles.
+  - Ich bin da, egal wann.
+  - Du schaffst das, hab Vertrauen.
+  - An deiner Seite, ohne Wenn und Aber.
+  - Kann helfen, meld dich einfach.
+  - Gemeinsam ist es weniger schwer.
+  - Ich bin da für dich, hörst du?
+  - Du schaffst das, ich bin sicher.
+  - An deiner Seite zu stehen macht mich froh.
+  - Ich kann helfen, jederzeit.
+  - Gemeinsam kommen wir durch.
+  - Ich bin da, das verspreche ich.
+  - Du schaffst das, eins nach dem anderen.
+  - An deiner Seite, so lange du mich brauchst.
+  - Kann helfen, das ist selbstverständlich.
+  - Gemeinsam, das ist das Wichtigste.
   negative:
   - Kannst du mir das Salz reichen?
   - Der Termin ist um 14 Uhr.
@@ -26,8 +71,32 @@ examples:
   - Hast du die E-Mail gelesen?
   - Ich muss noch tanken.
   - Die Besprechung ist im Konferenzraum.
+  - Der Zug hatte Verspätung.
+  - Ich brauche neue Batterien.
+  - Das Fenster klemmt.
+  - Wir haben noch Milch im Kühlschrank.
+  - Der Rasen muss gemäht werden.
+  - Ich habe den Schlüssel gefunden.
+  - Die Waschmaschine ist fertig.
+  - Morgen regnet es laut Vorhersage.
+  - Ich nehme den Bus statt die Bahn.
+  - Das Restaurant hat montags zu.
+  - Der Akku ist fast leer.
+  - Ich war beim Optiker.
+  - Die Straße ist wegen Bauarbeiten gesperrt.
+  - Ich brauche neue Socken.
+  - Der Film fängt um acht an.
+  - Die Pizza ist bestellt.
+  - Ich habe den Müll rausgebracht.
+  - Das Buch liegt auf dem Nachttisch.
 tags: []
 rating: 2
+semiotic:
+  peirce: index
+  signifikat: Unterstuetzung/Beistand
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 vad_estimate:
   valence: 0.4
   arousal: 0.35

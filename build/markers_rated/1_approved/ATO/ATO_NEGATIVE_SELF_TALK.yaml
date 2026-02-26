@@ -30,3 +30,4 @@ tags:
 - v3.4
 vad_estimate: {valence: -0.6, arousal: 0.3, dominance: 0.2}
 effect_on_state: {trust: -0.1, conflict: 0.1, deesc: -0.05}
+semiotic: {peirce: icon, signifikat: Verneinung/Ablehnung, framing_type: eskalation, cultural_frame: '', myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'}

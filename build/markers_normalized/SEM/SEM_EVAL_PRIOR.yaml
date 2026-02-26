@@ -46,6 +46,12 @@ composed_of:
 activation:
   rule: AT_LEAST 2 IN 4 messages
   window: 4
+semiotic:
+  peirce: symbol
+  signifikat: Kognitive Verzerrung/Framing
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
+  myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

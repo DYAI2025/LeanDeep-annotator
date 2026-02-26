@@ -7,10 +7,10 @@ frame:
   pragmatics: "Stress-induzierte Degeneration"
   narrative: "Das System fällt zurück"
 composed_of:
-  - SEM_ROT_POWER_ERUPTION
-  - SEM_PURPUR_TRIBAL_MAGIC
-  - SEM_BEIGE_SURVIVAL_MODE
-  - SEM_EMOTIONAL_OVERWHELM
+- SEM_ROT_POWER_ERUPTION
+- SEM_PURPUR_TRIBAL_MAGIC
+- SEM_BEIGE_SURVIVAL_MODE
+- SEM_EMOTIONAL_OVERWHELM
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 8 messages
   window_size: 8
@@ -36,3 +36,4 @@ examples:
   - "Auch wenn es schwer ist, ich versuche beide Seiten zu sehen"
   - "Ich brauch kurz ne Pause, dann können wir weiterreden"
   - "Das triggert mich grad, aber ich weiß dass das mein Thema ist"
+semiotic: {peirce: symbol, signifikat: Persoenlichkeitsmuster, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

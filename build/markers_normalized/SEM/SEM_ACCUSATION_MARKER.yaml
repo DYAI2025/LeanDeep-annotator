@@ -36,6 +36,36 @@ examples:
   - Du bist immer so schnell mit dem Fingerzeig, aber nie bereit, selbst Verantwortung zu übernehmen.
   - Du redest viel, aber am Ende bleibst du immer stumm, wenn es darauf ankommt.
   - Du hast mich wie immer im Stich gelassen, und jetzt soll ich dir noch glauben?
+  - Wann hast du das letzte Mal wirklich zu deinem Wort gestanden?
+  - Du nutzt mich aus und merkst es nicht mal!
+  - Jedes Mal dasselbe Theater mit dir, ich bin es so leid!
+  - Du hast kein Recht, mich so zu behandeln!
+  - Warum tust du mir das immer wieder an?
+  - Du bist der Grund, warum ich niemandem mehr vertraue!
+  - Ständig diese leeren Versprechungen von dir!
+  - Du denkst nur an dich, ich bin dir doch völlig egal!
+  - Du hättest wenigstens anrufen können, aber nein!
+  - Du bist so unzuverlässig, das ist echt nicht mehr auszuhalten!
+  - Nie hältst du dich an Abmachungen, nie!
+  - Du hast alles zerstört, was wir aufgebaut haben!
+  - Warum sagst du nie die Wahrheit? Immer diese Lügen!
+  - Du behandelst mich wie Dreck und erwartest Dankbarkeit!
+  - Hast du überhaupt ein Gewissen? Anscheinend nicht!
+  - Du bist der Letzte, der mir Vorwürfe machen darf!
+  - Du verdrehst immer alles, damit ich am Ende schuld bin!
+  - Wie oft soll ich dir noch sagen, dass das nicht geht?
+  - Du bist so undankbar, nach allem was ich für dich getan habe!
+  - Jedes Mal, wenn ich dir vertraue, werde ich enttäuscht!
+  - Du hast mich absichtlich ausgeschlossen, gib es zu!
+  - Warum machst du immer genau das Gegenteil von dem, was du versprichst?
+  - Du hast es geschafft, dass ich an allem zweifle!
+  - Immer bist du es, der die Stimmung kaputt macht!
+  - Hast du jemals darüber nachgedacht, wie sich das für mich anfühlt?
+  - Du ziehst mich runter, jedes einzelne Mal!
+  - Du weißt genau, was du tust, und machst es trotzdem!
+  - Ich kann nicht fassen, dass du mich schon wieder angelogen hast!
+  - Du bist schuld, dass es so weit gekommen ist!
+  - Wegen dir muss ich mich vor allen rechtfertigen!
   negative:
   - Ey, warum lässt du mich manchmal hängen, Alter?
   - manchmal wenn ich dich brauche, bist du nicht da!
@@ -44,6 +74,23 @@ examples:
   - Du hast recht, das war mein Fehler. Es tut mir leid.
   - Lass uns beide unsere Seite erklaeren.
   - Ich fuehle mich unwohl dabei und moechte darueber reden.
+  - Ich finde es schade, dass es so gelaufen ist.
+  - Mir faellt es schwer, darueber zu sprechen, aber ich will es versuchen.
+  - Vielleicht habe ich das falsch verstanden.
+  - Ich wuensche mir, dass wir besser kommunizieren.
+  - Das hat mich verletzt, aber ich bin offen fuer deine Sicht.
+  - Ich bin enttaeuscht, aber nicht wuetend.
+  - Wir haben beide Fehler gemacht, finde ich.
+  - Kannst du mir helfen zu verstehen, warum das passiert ist?
+  - Es gibt bestimmt eine Erklaerung dafuer, oder?
+  - Ich war traurig darueber, aber ich moechte nicht streiten.
+  - Ich glaube, da gab es ein Missverstaendnis zwischen uns.
+  - Das war sicher nicht boese gemeint von dir.
+  - Ich bin nicht sauer, aber ich moechte darueber reden.
+  - Mich hat das beschaeftigt, aber ich weiss, du hattest deine Gruende.
+  - Wir sehen das unterschiedlich, und das ist auch okay.
+  - Ich moechte verstehen, nicht anklagen.
+  - Lass uns nach vorne schauen und eine Loesung finden.
 tags:
 - accusation
 - blame
@@ -57,6 +104,12 @@ activation:
 scoring:
   base: 1.5
   weight: 1.2
+semiotic:
+  peirce: index
+  signifikat: Schuldzuweisung/Anklage
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'
 compositionality: deterministic
 vad_estimate:
   valence: -0.5

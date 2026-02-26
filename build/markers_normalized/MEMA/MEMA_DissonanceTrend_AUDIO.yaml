@@ -21,6 +21,48 @@ examples:
   - Mehrfach CLU_DISSONANCE_ALERT_AUDIO pro Stunde.
   - EWMA der Dissonanz über 0.6 im Verlauf.
   - Serien von Unsicherheits-Prosodie.
+  - 'Über den gesamten Call hinweg: mindestens vier Passagen mit Scham-Prosodie.'
+  - 'Trendanalyse zeigt: Die Dissonanz-Cluster werden dichter über die letzten drei Sitzungen.'
+  - Wiederholtes nervöses Lachen bei ernsten Themen über den gesamten Verlauf.
+  - 'Prosodie zeigt: Stimme wird bei Emotionsthemen regelmäßig flach und monoton.'
+  - Mehrere Passagen mit inkongruenter Heiterkeit innerhalb einer therapeutischen Sitzung.
+  - 'EWMA über 0.65: Dissonanz steigt kontinuierlich über die letzten Wochen.'
+  - 'Im Teammeeting: Wiederkehrende Unsicherheits-Prosodie bei jeder Statusfrage.'
+  - 'Trend in drei aufeinanderfolgenden Sessions: Stimme bricht bei Bindungsthemen.'
+  - 'Audio-Analyse: Lachen-Trauer-Dissonanz tritt in jeder Sitzung mindestens zweimal auf.'
+  - 'Über zehn Turns: Steigende Dissonanz zwischen Inhalt und Tonfall.'
+  - 'Wiederholte Muster: Fröhlicher Ton bei traurigen Inhalten, über mehrere Gespräche.'
+  - 'Prosodie-Trend: Die Stimme wird bei jedem emotionalen Thema unsicherer.'
+  - 'Audio zeigt: Scham-Signale häufen sich im Verlauf der Therapiesitzung.'
+  - 'Über den Monat: Die Dissonanz-Rate pro Stunde steigt von 2 auf 5.'
+  - 'Im Podcast: Sprecher zeigt zunehmende Unsicherheit, die sich in der Stimme manifestiert.'
+  - Wiederkehrende Atempausen vor emotional geladenen Wörtern über mehrere Calls.
+  - 'Trend: Die Audio-Dissonanz korreliert mit Nähe-Themen und wird stärker.'
+  - 'In der Supervision: Therapeut bemerkt steigende Inkongruenz in der Stimme des Klienten.'
+  - Serien von Flüstern → lauter Ausbruch → Flüstern über 20 Turns.
+  - 'Analyse zeigt: Lach-Episoden treten systematisch vor Scham-Themen auf.'
+  - 'Im Teamcall: Person lacht nervös bei jedem Feedbackpunkt, über alle Meetings hinweg.'
+  - 'Prosodie-Verdichtung: Zitternde Stimme bei Verantwortungsthemen, Trend steigend.'
+  - 'Audio-Marker: Die Inkongruenz zwischen Worten und Ton wird im Verlauf deutlicher.'
+  - 'Über fünf Sitzungen: Jede Sitzung zeigt mindestens einen Dissonanz-Cluster.'
+  - 'Stimmanalyse: Monotonie bei emotionalen Themen nimmt über Wochen zu.'
+  - 'Wiederholte Phänomene: Stimme bricht, Lachen als Abwehr, Flüstern bei Schmerz.'
+  - 'Im Paargespräch: Partner zeigt zunehmende Audio-Dissonanz bei Bindungsthemen.'
+  - 'Trend bestätigt: CLU_DISSONANCE_ALERT_AUDIO feuert in immer kürzeren Abständen.'
+  - 'Therapeutische Sitzung: Drei distinkte Dissonanz-Cluster innerhalb von 45 Minuten.'
+  - 'Über Monate: Die Audio-Dissonanz hat sich von gelegentlich zu durchgehend entwickelt.'
+  - 'Langzeit-Trend: Unsicherheits-Prosodie bei immer mehr Themen, nicht nur beim Kernkonflikt.'
+  - 'Im Coaching: Klient zeigt steigende stimmliche Inkongruenz bei Veränderungsthemen.'
+  - 'Audio-Muster verdichten sich: Lach-Scham-Wechsel in jeder zweiten Interaktion.'
+  - 'Prosodie-Analyse über 30 Turns: Dissonanz-Rate übersteigt Schwellenwert.'
+  - 'Im Teammeeting: Person spricht zunehmend leiser bei kontroversen Themen, Trend über Monate.'
+  - 'Klient zeigt in der Audio-Therapie: Stimme wird bei jedem Trauma-Thema flacher.'
+  - 'Wiederkehrende stimmliche Dissonanz: Humor als Abwehr bei Scham, mehrfach pro Sitzung.'
+  - 'Trend: Die Diskrepanz zwischen gesprochenem Inhalt und Prosodie wächst über die Wochen.'
+  - 'Audio zeigt: Atempausen bei emotionalen Themen werden länger und häufiger.'
+  - 'Im Weekly-Call: Die Dissonanz-Marker haben sich über drei Monate verdoppelt.'
+  - 'Langzeitanalyse: Stimmliche Inkongruenz als stabiler Trend über den gesamten Therapieprozess.'
+  - 'Über 15 Turns: Drei separate Dissonanz-Episoden mit steigender Intensität.'
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -29,6 +71,24 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Einmaliges nervöses Lachen, das sich nicht wiederholt.
+  - Kurze Unsicherheit in der Stimme, danach stabile Prosodie.
+  - Eine Passage mit inkongruenter Heiterkeit, sonst konsistente Stimmung.
+  - Leichte Nervosität zu Beginn, die sich im Verlauf auflöst.
+  - Einmalige Stimm-Dissonanz bei einem besonders schwierigen Thema.
+  - Gelegentliches Lachen in einem ansonsten kongruenten Gespräch.
+  - Kurze Phase der Unsicherheit, danach sichere und klare Stimme.
+  - Einmaliger Moment der Inkongruenz, der nicht zum Pattern wird.
+  - Stimme bricht einmal kurz, Person fängt sich aber schnell wieder.
+  - Leichte Prosodie-Schwankung bei einem neuen Thema, normalisiert sich sofort.
+  - Ein einziger Dissonanz-Moment in einer ansonsten kongruenten Sitzung.
+  - Kurzzeitiges Flüstern bei einem emotionalen Thema, danach normal.
+  - Gelegentliche Unsicherheit, die sich nicht verdichtet oder verstärkt.
+  - Ein Lach-Moment bei einem peinlichen Thema, kein wiederkehrendes Muster.
+  - Die Stimme ist insgesamt konsistent, ein einzelner Ausreißer ist normal.
+  - Leichte Nervosität beim ersten Termin, die mit der Zeit verschwindet.
+  - Einmaliges Zögern bei einem heiklen Thema, sonst flüssig und kongruent.
+  - Kurze Phase der stimmlichen Anspannung, die sich natürlich löst.
 tags:
 - meta
 - audio
@@ -39,6 +99,12 @@ composed_of:
 scoring:
   base: 0.65
   cap: 1.0
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 activation:
   rule: "COUNT(CLU_DISSONANCE_ALERT_AUDIO in 30 turns) >= 3 OR EWMA(alpha=0.2) >= 0.6"
 metadata:

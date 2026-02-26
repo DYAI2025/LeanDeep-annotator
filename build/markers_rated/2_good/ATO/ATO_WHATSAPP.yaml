@@ -11,19 +11,83 @@ frame:
 pattern: ["(?i)\\bwhatsapp\\b"]
 examples:
   positive:
-  - "Let's continue on WhatsApp"
-  - "Do you have WhatsApp?"
-  - "WhatsApp is more convenient"
-  - "Send me your WhatsApp number"
-  - "We could use WhatsApp instead"
+  - Lass uns auf WhatsApp weiterschreiben.
+  - Hast du WhatsApp?
+  - WhatsApp ist bequemer.
+  - Schick mir deine WhatsApp-Nummer.
+  - Wir koennten WhatsApp stattdessen nutzen.
+  - Ich habe dir auf WhatsApp geschrieben.
+  - Schreib mir lieber auf WhatsApp.
+  - WhatsApp ist einfacher fuer mich.
+  - Ich bin besser ueber WhatsApp erreichbar.
+  - Koennen wir auf WhatsApp wechseln?
+  - WhatsApp-Nachricht hab ich geschickt.
+  - Meld dich per WhatsApp.
+  - Auf WhatsApp antworte ich schneller.
+  - Lieber WhatsApp als E-Mail.
+  - WhatsApp-Gruppe ist erstellt.
+  - Schick das mal ueber WhatsApp.
+  - Ich lese WhatsApp-Nachrichten sofort.
+  - Kannst du mir auf WhatsApp antworten?
+  - WhatsApp ist mein Hauptkanal.
+  - Ueber WhatsApp geht das schneller.
+  - Hab dir eine WhatsApp-Sprachnachricht geschickt.
+  - WhatsApp ist am unkompliziertesten.
+  - Bitte per WhatsApp, nicht per Mail.
+  - WhatsApp-Video waere auch eine Option.
+  - Ich check WhatsApp staendig.
+  - Wir machen eine WhatsApp-Gruppe dafuer.
+  - WhatsApp ist der einfachste Weg.
+  - Schreib mir gerne auf WhatsApp.
+  - Ich habe die WhatsApp-Nachricht gesehen.
+  - Ueber WhatsApp koennen wir das klaeren.
+  - WhatsApp-Call waere auch moeglich.
+  - Bitte ueber WhatsApp koordinieren.
+  - WhatsApp passt mir am besten.
+  - Ich bin den ganzen Tag auf WhatsApp.
+  - Sende mir das per WhatsApp.
+  - WhatsApp fuer schnelle Abstimmung.
+  - Meine WhatsApp-Nummer ist dieselbe.
+  - Lass uns eine WhatsApp-Gruppe aufmachen.
+  - WhatsApp-Status hast du gesehen?
+  - Per WhatsApp ist es am bequemsten.
+  - Schick mir deinen Standort per WhatsApp.
+  - WhatsApp ist mein bevorzugter Messenger.
+  - Ich antworte schneller auf WhatsApp.
+  - Ueber WhatsApp bleiben wir in Kontakt.
+  - WhatsApp-Anruf statt normalem Telefonat.
+  - Meld dich per WhatsApp, wenn du magst.
+  - WhatsApp fuer die schnelle Kommunikation.
+  - Ich habe WhatsApp immer an.
+  - Schick das Foto per WhatsApp.
+  - WhatsApp ist am praktischsten fuer uns.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich schreibe dir eine E-Mail.
+  - Ruf mich einfach an.
+  - Wir koennen uns persoenlich treffen.
+  - Ich schicke dir einen Brief.
+  - Per SMS erreichst du mich am besten.
+  - Lass uns telefonieren.
+  - Ich bevorzuge E-Mail.
+  - Schreib mir eine SMS.
+  - Wir sehen uns morgen persoenlich.
+  - Per Post geht das auch.
+  - Ich bin am Telefon am besten erreichbar.
+  - Lass uns ein Meeting machen.
+  - Per Slack koennen wir das klaeren.
+  - Ich schicke dir das per Mail.
+  - Ruf einfach kurz durch.
+  - Wir besprechen das persoenlich.
+  - Per Signal ist es sicherer.
+  - Ich schreibe dir im Chat.
+  - Lass uns einen Termin machen.
+  - Per Teams ist es offizieller.
+  - Ich schicke dir eine Nachricht per Telegram.
+  - Lass uns face-to-face reden.
+  - Per Mail ist es dokumentiert.
+  - Ich bevorzuge Anrufe.
+  - Wir koennen das bei Zoom besprechen.
 tags: [atomic, v3.3, auto-generated]
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

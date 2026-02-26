@@ -6,10 +6,10 @@ frame:
   pragmatics: Aggressiver Stilcluster
   narrative: jab_series
 composed_of:
-  - SEM_SARCASTIC_DRIFT
-  - SEM_MICRO_AGGRESSION_LIGHT
-  - SEM_STATUS_RECOGNITION
-  - SEM_HYPERBOLE_SIGNAL
+- SEM_SARCASTIC_DRIFT
+- SEM_MICRO_AGGRESSION_LIGHT
+- SEM_STATUS_RECOGNITION
+- SEM_HYPERBOLE_SIGNAL
 activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 15 messages
 scoring:
@@ -38,3 +38,4 @@ tags:
 - superiority
 - cluster
 - v33
+semiotic: {peirce: icon, signifikat: Humor/Leichtigkeit, framing_type: empathie, cultural_frame: '', myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme}

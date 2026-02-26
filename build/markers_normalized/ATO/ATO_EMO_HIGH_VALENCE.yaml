@@ -62,6 +62,12 @@ tags:
 - emotion
 - positive
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Positive Grundhaltung
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 vad_estimate:
   valence: 0.0
   arousal: 0.3

@@ -32,6 +32,12 @@ composed_of:
 - ATO_DYAD_WE
 activation:
   rule: BOTH IN 2 messages
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

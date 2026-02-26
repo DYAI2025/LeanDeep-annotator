@@ -13,19 +13,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - Früher war ich anders – bin ich es noch?
+  - Früher war ich anders - bin ich es noch?
   - Wer bin ich geworden in den letzten Jahren?
   - Gestern sagte ich A, heute klingt B richtiger.
   - Bin ich noch dieselbe Person?
   - Wie passe ich jetzt zu dem, was ich früher sagte?
+  - Ich erkenne mich selbst nicht wieder, wenn ich an mein früheres Ich denke.
+  - Vor zehn Jahren hätte ich das nie gesagt. Was hat sich verändert?
+  - Manchmal frage ich mich, ob das alte Ich oder das neue Ich authentischer ist.
+  - Ich war mal mutig. Jetzt bin ich vorsichtig. Bin das noch ich?
+  - Wer war ich, wer bin ich, wer werde ich sein? Diese Fragen verfolgen mich.
+  - ich hab mich so verändert, manchmal weiß ich nicht mehr wer ich eigentlich bin
+  - Die Person, die ich vor fünf Jahren war, würde mich heute nicht wiedererkennen.
+  - Meine Überzeugungen von damals - stehe ich noch dazu? Ich bin unsicher.
+  - Ich habe mich so entwickelt, dass mein früheres Selbst mir fremd erscheint.
+  - Sehr geehrte Frau Therapeutin, ich frage mich, ob ich noch der bin, der ich war.
+  - Mein 20-jähriges Ich hätte mein 40-jähriges Ich nicht verstanden.
+  - Bin ich gewachsen oder habe ich mich verloren?
+  - Die Kluft zwischen meinem früheren und meinem heutigen Ich wächst.
+  - 'Ich schaue auf alte Fotos und frage mich: Wer ist diese Person?'
+  - Meine Werte haben sich verschoben. Ist das Wachstum oder Verrat an mir selbst?
+  - wer war ich damals? und wer bin ich jetzt? und passt das zusammen?
+  - Früher war mir Karriere wichtig, heute ist es Familie. Bin ich noch ich?
+  - Ich habe mich so verändert, dass meine alten Freunde mich nicht wiedererkennen.
+  - Die Person, die ich sein wollte, und die Person, die ich geworden bin - zwei verschiedene.
+  - Meine Vergangenheit und meine Gegenwart passen nicht zusammen.
+  - Ich frage mich, ob mein zukünftiges Ich mein heutiges versteht.
+  - War ich immer so? Oder habe ich mich fundamental verändert?
+  - Identität über die Zeit ist wie ein Fluss - immer in Bewegung.
+  - Heute stehe ich für Dinge, die ich früher abgelehnt hätte.
+  - das ich von vor 5 jahren und das ich von heute, das sind zwei verschiedene menschen
+  - Ich durchlaufe eine Transformation und weiß nicht, wer am Ende herauskommt.
+  - Meine früheren Überzeugungen wirken heute naiv auf mich.
+  - Bin ich authentisch, wenn ich mich ständig verändere?
+  - Der Teenager in mir und die erwachsene Frau in mir streiten manchmal.
+  - Ich vermisse mein altes Ich, aber ich kann nicht zurück.
+  - Wachstum heißt manchmal, sich von dem zu entfernen, was man war.
+  - Wenn sich alles verändert, was bleibt dann von mir?
+  - Ich war mal Idealistin, jetzt bin ich Realistin. Welche Version ist ehrlicher?
+  - mein früheres ich würde sich für mein heutiges schämen. oder umgekehrt?
+  - Meine Identität ist nicht statisch, sie wandelt sich ständig.
+  - Ich spüre, dass ich jemand anderes werde. Und das ist beängstigend.
+  - Meine alten Tagebücher zeigen mir jemanden, den ich kaum kenne.
+  - Die Frage 'Wer bin ich?' beantworte ich jedes Jahr anders.
+  - Ich bin ein anderer Mensch geworden, seit ich Kinder habe.
+  - Meine Vergangenheit formt mich, aber sie definiert mich nicht mehr.
+  - Früher hätte ich gelacht, heute weine ich. Über dasselbe.
+  - Die zeitliche Distanz zu meinem früheren Selbst wächst.
+  - wie konnte ich mich so verändern? ich erkenn mich kaum wieder
+  - Ich navigiere zwischen dem, was ich war, und dem, was ich sein will.
+  - Veränderung ist Wachstum, aber auch Verlust des früheren Ichs.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich bin seit Jahren derselbe Mensch und daran ändert sich nichts.
+  - Meine Überzeugungen waren immer gleich.
+  - Ich kenne mich gut und weiß, wer ich bin.
+  - Veränderung ist nicht mein Thema, ich bin zufrieden wie ich bin.
+  - Ich habe mich nie gefragt, ob ich noch dieselbe Person bin.
+  - Früher war es besser, aber das hängt nicht mit mir zusammen.
+  - Ich reflektiere nicht so viel über Identität.
+  - ich bin ich, fertig
+  - Mein Charakter ist stabil und beständig.
+  - Ich habe klare Werte und die ändern sich nicht.
+  - Identitätsfragen sind mir fremd.
+  - Ich weiß genau, wer ich bin und was ich will.
+  - Darüber denke ich nicht nach.
+  - Meine Persönlichkeit ist gefestigt.
+  - Ich hab mich nie groß verändert.
+  - Veränderung ja, aber mein Kern bleibt gleich.
+  - Ich bin authentisch und weiß das.
+  - Selbstfindung war nie mein Thema.
+  - Ich bin seit meiner Jugend im Grunde gleich geblieben.
+  - Mein Selbstbild ist klar und stabil.
+  - ich weiß wer ich bin, da gibt es keine fragen
+  - Identität ist für mich kein Thema.
+  - Ich bin wie ich bin, und das reicht mir.
+  - Über mein früheres Ich denke ich selten nach.
+  - Mein Leben hat sich verändert, aber ich nicht.
 tags: []
 rating: 1
 composed_of:
@@ -37,3 +100,9 @@ activation:
 scoring:
   base: 0.6
   weight: 1.0
+semiotic:
+  peirce: index
+  signifikat: Cluster-Muster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

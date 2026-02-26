@@ -26,12 +26,72 @@ examples:
   - Was soll's, ist doch eh alles das Gleiche
   - Mach du, mir ist alles wurscht
   - Ich bin so leer gerade, ich weiss nicht
+  - Fuehle mich wie eine leere Huelle
+  - Da drin ist einfach nichts mehr
+  - Essen, Schlafen, Arbeiten, alles egal
+  - Ich funktioniere nur noch, fuehlen tu ich nix
+  - Kein Interesse an nichts und niemandem
+  - Innerlich taub, als ob jemand den Stecker gezogen hat
+  - Mir ist alles wurscht, ob ich hier bin oder nicht
+  - Ich steh morgens auf und weiss nicht wofuer
+  - Leer, einfach nur leer
+  - Keine Freude, keine Trauer, einfach nichts
+  - Ich fuehle mich wie ein Roboter der nur funktioniert
+  - Ob Sonne oder Regen, mir egal
+  - Ich geh durch den Tag wie im Autopilot
+  - Hab den ganzen Tag auf dem Sofa gelegen und ins Nichts gestarrt
+  - Antriebslos, lustlos, hoffnungslos
+  - Die Welt dreht sich weiter und ich steh daneben und schau zu
+  - Nichts macht mehr Spass, nicht mal die Sachen die ich frueher geliebt hab
+  - Ich existiere nur noch, leben kann man das nicht nennen
+  - Emotional auf null, da kommt nix mehr
+  - Alles grau, egal wohin ich schaue
+  - Ich hab keinen Antrieb mehr, null Energie
+  - Wozu ueberhaupt aufstehen? Ist doch eh egal
+  - Ich bin komplett abgestumpft
+  - Es ist als ob ein Loch in mir ist das nichts fuellen kann
+  - Mach du das, mir ist wirklich alles egal
+  - Ich reagiere auf nichts mehr, weder positiv noch negativ
+  - Fuehle mich wie ausgebrannt, aber von innen
+  - Die Leere frisst mich auf
+  - Frueher hat mich das aufgeregt, jetzt? Egal.
+  - Ich bin emotional bankrott
+  - Nichts berührt mich mehr, gar nichts
+  - Ich hab vergessen wie sich Freude anfuehlt
+  - Leer, muede, gleichgueltig, das beschreibt es gut
+  - Ob ich da bin oder nicht macht keinen Unterschied
+  - Ich fuehle weder Glueck noch Schmerz, nur Nichts
+  - Alles ist mir zu viel und gleichzeitig alles egal
+  - Ich bin eine Huelse ohne Inhalt
+  - Kein Hunger, kein Durst, keine Wuensche
+  - Einfach nur da sein und warten dass der Tag vorbeigeht
+  - Ich bin eine leere Batterie die sich nicht mehr aufladen lässt
   negative:
   - Ich freu mich voll auf heute Abend
   - Das regt mich echt auf, so eine Frechheit
   - Ich bin so gluecklich gerade
   - Boah das macht mich richtig wuetend
   - Ich kann's kaum erwarten dich zu sehen
+  - Ich bin mega aufgeregt wegen morgen!
+  - Das macht mich traurig, ehrlich
+  - Ich bin so dankbar fuer euch alle
+  - Wow, das hat mich echt beruehrt
+  - Ich bin so wuetend auf mich selbst
+  - Total begeistert von dem Konzert gestern!
+  - Das Buch hat mich zum Weinen gebracht
+  - Ich hab so Lust auf den Urlaub
+  - Mich nervt das total dass die immer zu spaet kommen
+  - Ich bin so stolz auf dich!
+  - Das macht mir Angst, ehrlich gesagt
+  - Ich bin so erleichtert dass alles gut gegangen ist
+  - Das war der schoenste Tag seit langem
+  - Ich bin richtig geruehrt gerade
+  - Boah ich freu mich so auf Weihnachten!
+  - Ich hab Lust auf was Neues heute
+  - Die Musik hat mir echt gut getan
+  - Ich bin gespannt was morgen kommt
+  - Schöner Sonnenuntergang, guck mal!
+  - Ich hab gelacht bis mir der Bauch weh tat
 tags:
 - emotional_state
 - apathy
@@ -45,3 +105,9 @@ activation:
 scoring:
   base: 1.5
   weight: 1.2
+semiotic:
+  peirce: index
+  signifikat: Cluster-Muster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

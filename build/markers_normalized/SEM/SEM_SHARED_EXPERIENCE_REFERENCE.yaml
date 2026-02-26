@@ -39,6 +39,12 @@ composed_of:
 scoring:
   base: 1.4
   weight: 1.1
+semiotic:
+  peirce: symbol
+  signifikat: Geteilte Erfahrung
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

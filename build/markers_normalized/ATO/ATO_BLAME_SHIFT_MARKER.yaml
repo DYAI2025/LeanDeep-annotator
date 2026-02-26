@@ -12,15 +12,11 @@ frame:
   narrative: abwälzen
 patterns:
 - type: regex
-  value: (?i)\\bdu\ nicht\\b
+  value: (?i)\b(deine Schuld|dein Fehler|du bist schuld|wegen dir|selber schuld|durch dich)\b
 - type: regex
-  value: (?i)\\bdu\ hast\\b
+  value: (?i)\b(du hast mich dazu gebracht|du hast angefangen|wenn du nicht wärst?|das liegt an dir|du hast das verursacht)\b
 - type: regex
-  value: (?i)\\bnicht\ ich\.\\b
-- type: regex
-  value: (?i)\\bwenn\ du\\b
-- type: regex
-  value: (?i)\\bselber\ schuld\\b
+  value: (?i)\b(wegen deinem? Verhalten|wärst? du nicht|du bist verantwortlich dafür|du hast mich gezwungen|du hast provoziert)\b
 examples:
   positive:
   - Das ist deine Schuld.
@@ -83,6 +79,12 @@ tags:
 - schuld
 - abwälzung
 rating: 1
+semiotic:
+  peirce: index
+  signifikat: Schuldzuweisung/Anklage
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'
 vad_estimate:
   valence: -0.5
   arousal: 0.75

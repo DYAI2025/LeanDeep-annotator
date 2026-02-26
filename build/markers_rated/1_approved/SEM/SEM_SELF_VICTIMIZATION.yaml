@@ -8,12 +8,11 @@ frame:
   narrative: "identity"
 tags: [victimization, identity]
 composed_of:
-  any_of:
-  - ATO_VICTIM_LANGUAGE
-  - ATO_PITY_APPEAL
-  - ATO_RESIGNATION_PHRASE
-  - ATO_PREEMPTIVE_EXCUSE
-  - ATO_BLAME_SHIFT
+- ATO_VICTIM_LANGUAGE
+- ATO_PITY_APPEAL
+- ATO_RESIGNATION_PHRASE
+- ATO_PREEMPTIVE_EXCUSE
+- ATO_BLAME_SHIFT
 activation:
   rule: "AT_LEAST 2 IN 3 messages"
   window: 3
@@ -41,3 +40,4 @@ examples:
 compositionality: deterministic
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: index, signifikat: Semantisches Muster, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

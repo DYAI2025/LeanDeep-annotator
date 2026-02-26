@@ -61,3 +61,9 @@ scoring:
   formula: "logistic"
 window:
   messages: 20
+semiotic:
+  peirce: index
+  signifikat: Beruhigung/Rueckversicherung
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme

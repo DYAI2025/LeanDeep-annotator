@@ -27,6 +27,12 @@ tags: []
 rating: 2
 composed_of:
 - ATO_NUMBER_MENTION
+semiotic:
+  peirce: index
+  signifikat: Konfliktdynamik
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'
 compositionality: deterministic
 vad_estimate:
   valence: -0.5

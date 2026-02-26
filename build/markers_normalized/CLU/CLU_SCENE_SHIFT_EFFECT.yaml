@@ -38,3 +38,9 @@ rating: 1
 composed_of:
   require: []
   condition: rank_in_scene(top_k=2) != rank_global(top_k=2)
+semiotic:
+  peirce: index
+  signifikat: Cluster-Muster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

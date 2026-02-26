@@ -54,7 +54,8 @@ semiotic:
   connotation:
   - manipulation
   - sequence
-composed_of:
-  require:
-  - SEM_REALITY_DISTORTION_FIELD
-  - CLU_COVERT_RESPONSIBILITY_INVERSION
+  peirce: symbol
+  signifikat: Realitaetsverzerrung
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
+  myth: Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge

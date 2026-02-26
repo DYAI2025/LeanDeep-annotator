@@ -18,6 +18,11 @@ semiotic:
   object: "neutral_acknowledgement"
   interpretant: "effect_on_state: {affekt: flat, sync: +0.1}"
   connotation: ["neutral", "flach"]
+  peirce: icon
+  signifikat: Flacher Affekt
+  framing_type: vermeidung
+  cultural_frame: Emotionsregulation
+  myth: Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres
 examples:
   positive_de:
   - "Ok."

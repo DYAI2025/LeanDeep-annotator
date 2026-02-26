@@ -34,6 +34,12 @@ composed_of:
 - ATO_PLACEHOLDER
 activation:
   rule: "ANY 1"
+semiotic:
+  peirce: icon
+  signifikat: Ambivalenz/Zwiespalt
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: -0.2

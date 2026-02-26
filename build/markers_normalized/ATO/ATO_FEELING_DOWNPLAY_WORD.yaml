@@ -39,6 +39,12 @@ tags:
 - invalidation
 - emotional-dismissal
 rating: 1
+semiotic:
+  peirce: index
+  signifikat: Validierung/Anerkennung
+  framing_type: empathie
+  cultural_frame: Rogers
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 vad_estimate:
   valence: 0.0
   arousal: 0.3

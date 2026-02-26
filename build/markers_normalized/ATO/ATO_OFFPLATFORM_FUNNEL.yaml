@@ -37,6 +37,12 @@ tags:
 - platform-switch
 - github
 rating: 1
+semiotic:
+  peirce: index
+  signifikat: Rollenwechsel/-dynamik
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 vad_estimate:
   valence: 0.0
   arousal: 0.3

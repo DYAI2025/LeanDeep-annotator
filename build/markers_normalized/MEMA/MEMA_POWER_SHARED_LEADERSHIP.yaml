@@ -55,3 +55,9 @@ scoring:
 evidence_capture:
   keep_snippets: 6
 fire_when: "conditions_met_first_time"
+semiotic:
+  peirce: index
+  signifikat: Machtausuebung
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
+  myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'

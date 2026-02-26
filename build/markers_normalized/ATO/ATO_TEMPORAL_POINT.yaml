@@ -28,12 +28,18 @@ examples:
   positive:
   - Gestern war ich kurz dort.
   - Heute sehe ich das anders.
-  - Letzte Woche sagtest du X.
-  - Vorhin meintest du Y.
+  - Letzte Woche sagtest du etwas anderes.
+  - Vorhin meintest du noch das Gegenteil.
   - Inzwischen ist es anders.
   negative: []
 tags: []
 rating: 2
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

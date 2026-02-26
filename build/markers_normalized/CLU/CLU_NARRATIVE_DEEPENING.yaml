@@ -42,3 +42,9 @@ composed_of:
 - SEM_FRAME_SHIFT
 activation:
   rule: "AT_LEAST 3 DISTINCT SEMs IN 6 messages"
+semiotic:
+  peirce: symbol
+  signifikat: Narratives Muster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

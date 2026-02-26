@@ -90,6 +90,24 @@ examples:
   - Alles in Ordnung bei mir.
   - Ich fuehle mich heute ruhig und gelassen.
   - Das ueberrascht mich, aber es ist okay.
+  - Ich bin gut drauf heute.
+  - Das war ein schöner Tag.
+  - Ich freue mich auf morgen.
+  - Mir geht es richtig gut.
+  - Was für ein toller Moment.
+  - Ich bin glücklich und zufrieden.
+  - Das Leben ist schön.
+  - Alles läuft nach Plan.
+  - Ich genieße den Sonnenschein.
+  - Was für ein Glück.
+  - Ich bin dankbar für alles.
+  - Heute war ein guter Tag.
+  - Ich fühle mich lebendig.
+  - Was für eine Freude.
+  - Mir geht es blendend.
+  - Ich lache gerade so viel.
+  - Das Wetter ist wunderbar.
+  - Ich habe gute Neuigkeiten.
 tags:
 - atomic
 - emotion
@@ -99,6 +117,12 @@ tags:
 - melancholy
 - v3.4
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Trauer/Verlust
+  framing_type: ueberflutung
+  cultural_frame: ''
+  myth: Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet
 vad_estimate:
   valence: -0.8
   arousal: 0.15

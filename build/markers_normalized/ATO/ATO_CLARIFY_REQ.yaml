@@ -35,6 +35,12 @@ tags:
 - clarify
 - question
 rating: 2
+semiotic:
+  peirce: icon
+  signifikat: Fragehaltung/Suchbewegung
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: -0.2
   arousal: 0.5

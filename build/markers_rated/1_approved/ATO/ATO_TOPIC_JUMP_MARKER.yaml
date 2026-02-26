@@ -13,50 +13,86 @@ pattern:
 - (?i)\b(anyway|oh wait|tangent|jumping topics|random thought)\b
 examples:
   positive:
-  - "Anyway, speaking of cats, did you see that movie?"
-  - "Oh wait, that reminds me of something else."
-  - "Tangent: why do birds fly south?"
-  - "Jumping topics, but about the weather..."
-  - "Random thought: ice cream is amazing."
-  - "By the way, that makes me think of my childhood."
-  - "Hold on, completely different idea now."
-  - "Speaking of which, let's talk about space."
-  - "Oh, and don't forget the party last week."
-  - "Tangent alert: why are clouds white?"
-  - "Jumping to this: my favorite color is blue."
-  - "Randomly, I love pizza."
-  - "Anyway, back to the original topic... or not."
-  - "Oh wait, this is unrelated but funny."
-  - "Tangent: how do magnets work?"
-  - "Jumping thoughts: from work to vacation."
-  - "Random idea: let's start a band."
-  - "By the way, I forgot to mention..."
-  - "Oh, that reminds me of a dream."
-  - "Tangent: the meaning of life."
+  - Ach uebrigens, da faellt mir was ein.
+  - Oh Moment, ganz anderes Thema.
+  - 'Kurze Abschweifung: weisst du was?'
+  - Apropos, das erinnert mich an was anderes.
+  - 'Tangente: warum regnet es eigentlich immer montags?'
+  - 'Zufaelliger Gedanke: ich mag Kekse.'
+  - Oh warte, ganz was anderes jetzt.
+  - Bevor ich es vergesse, voellig anderes Thema.
+  - Ach ja, mir faellt gerade ein...
+  - Kompletter Themenwechsel, aber das muss ich dir erzaehlen.
+  - Halt, mir ist gerade was eingefallen.
+  - Random, aber hast du den Film gesehen?
+  - 'Kleiner Seitenpfad: meine Schwester hat angerufen.'
+  - Oh, das erinnert mich an was Lustiges.
+  - 'Ich spring mal kurz: wie war dein Tag?'
+  - Apropos gar nichts, weisst du was ich heute gesehen habe?
+  - Uebrigens, voellig zusammenhangslos...
+  - Ach, da faellt mir noch was ein.
+  - Moment, anderes Thema ganz kurz.
+  - Ich weiss, das passt jetzt nicht, aber...
+  - 'Zufaellig: ich hab neue Schuhe.'
+  - Oh warte, bevor ich abschweife... na gut, ich schweife ab.
+  - Ganz anderer Gedanke gerade.
+  - Ach, und nochwas Unzusammenhaengendes.
+  - Sorry fuer den Themenwechsel, aber...
+  - Mir schiesst gerade was durch den Kopf.
+  - 'Kleiner Gedankensprung: ich will Pizza.'
+  - Achja, eine andere Sache noch...
+  - Warte, das hat nichts damit zu tun, aber...
+  - 'Bevor ich es vergesse, total random:'
+  - 'Und ganz was anderes: meine Katze hat heute...'
+  - 'Abschweifalarm: gestern im Supermarkt...'
+  - Moment, mir kommt gerade was in den Sinn.
+  - Unabhaengig davon, mir ist gerade aufgefallen...
+  - 'Ich springe gerade, sorry: wie war das Wetter?'
+  - 'Kurze Randbemerkung: das Essen gestern war gut.'
+  - Jetzt fang ich schon wieder an zu springen.
+  - Ach, noch ein ganz anderer Punkt.
+  - Oh, ich muss dir noch was erzaehlen, hat aber nix damit zu tun.
+  - 'Zufaellige Frage: magst du Sushi?'
+  - 'Themenhopping: kennst du den Song?'
+  - Wo war ich? Egal, anderes Thema.
+  - Da faellt mir ein, voellig losgeloest...
+  - Ich weiss nicht warum, aber ich muss gerade an die Schule denken.
+  - Uebrigens, ganz am Rande...
+  - Ich weiss, ich springe, aber das ist wichtig.
+  - Oh, bevor wir weitermachen, ganz kurz...
+  - Noch eine Abschweifung, tut mir leid.
+  - Halt, Stopp, ganz anderes Thema.
+  - Puh, mein Kopf springt gerade. Also...
   negative:
-  - "Speaking of cats, they are pets."
-  - "That reminds me of something similar."
-  - "Why do birds fly south?"
-  - "About the weather, it's nice."
-  - "Ice cream is good."
-  - "Continuing on the same topic."
-  - "That relates directly."
-  - "Staying focused here."
-  - "On topic, it's sunny."
-  - "Pizza is tasty."
-  - "Sticking to the plan."
-  - "No distractions."
-  - "Focused discussion."
-  - "Relevant point."
-  - "Organized thoughts."
-  - "Linear conversation."
-  - "No tangents."
-  - "Direct response."
-  - "Clear path."
-  - "Structured ideas."
+  - Um auf den Punkt zurueckzukommen.
+  - Wie ich gerade sagte...
+  - 'Zum Thema zurueck:'
+  - Bleiben wir beim Thema.
+  - Das passt gut zu dem, was du sagtest.
+  - In dem Zusammenhang...
+  - Das fuehrt uns direkt zum naechsten Punkt.
+  - Wie wir vorhin besprochen haben...
+  - Das ergibt sich logisch aus dem Gesagten.
+  - Daran anknuepfend moechte ich sagen...
+  - Genau, und da sind wir beim Kern.
+  - Das schliesst nahtlos an unser Thema an.
+  - Darauf aufbauend...
+  - Das passt perfekt dazu.
+  - In Bezug auf das, was du erwaehnt hast...
+  - 'Zum gleichen Thema:'
+  - 'Daran anschliessend:'
+  - Das haengt direkt damit zusammen.
+  - Folglich moechte ich sagen...
+  - Genau in dem Kontext...
+  - Das ist ein wichtiger Aspekt davon.
+  - Zusammenfassend zu dem Punkt...
+  - 'Im selben Zusammenhang:'
+  - Daraus ergibt sich...
+  - Bezogen auf unsere Diskussion...
 tags:
 - behavioral_pattern
 - atomic
 - v3.4
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

@@ -8,9 +8,9 @@ frame:
   pragmatics: Dialog führen
   narrative: exchange
 composed_of:
-  - SEM_ACCUSATION_MARKER
-  - SEM_CONTRADICTION
-  - SEM_PASSIVE_AGGRESSIVE_BEHAVIOR
+- SEM_ACCUSATION_MARKER
+- SEM_CONTRADICTION
+- SEM_PASSIVE_AGGRESSIVE_BEHAVIOR
 activation:
   rule: "AT_LEAST 2 DISTINCT SEMs IN 3 messages"
 scoring:
@@ -36,3 +36,4 @@ examples:
   - "Das Team hat toll gearbeitet heute"
 tags:
 - communication
+semiotic: {peirce: index, signifikat: Cluster-Muster, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

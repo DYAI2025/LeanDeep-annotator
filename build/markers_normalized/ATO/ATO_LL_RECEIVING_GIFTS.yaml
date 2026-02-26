@@ -27,6 +27,46 @@ examples:
   - Diese kleine Aufmerksamkeit soll dir zeigen, dass ich dich sehe.
   - Ich habe dir dein Lieblingsbuch besorgt, einfach so.
   - Ich schenke dir diesen Stift, weil du wieder mit dem Schreiben anfangen wolltest.
+  - Ich habe dir was Kleines mitgebracht, weil ich an dich gedacht habe.
+  - Schau mal, diese kleine Aufmerksamkeit hat mich an dich erinnert.
+  - Ich habe dir eine Überraschung gekauft, einfach so.
+  - Das Mitbringsel ist zwar klein, aber es kommt von Herzen.
+  - Ich habe dir ein Erinnerungsstück von unserer Reise aufgehoben.
+  - Hier, ein Geschenk für dich, ohne besonderen Anlass.
+  - Die Geste zählt, nicht der Preis.
+  - Ich habe dir Blumen mitgebracht, weil du sie so liebst.
+  - Diese kleine Aufmerksamkeit soll dich aufmuntern.
+  - Ich wollte dir etwas schenken, das dich an uns erinnert.
+  - Schau, ich habe dir deine Lieblingsschokolade besorgt.
+  - Die Überraschung war mir wichtig, weil du es verdienst.
+  - Ein kleines Mitbringsel aus dem Urlaub für dich.
+  - Ich habe dir ein Buch geschenkt, weil es mich an dich erinnert hat.
+  - Diese Kette ist ein Geschenk, damit du weißt, dass ich an dich denke.
+  - Ich habe dir Karten für das Konzert besorgt, einfach weil.
+  - Hier, eine kleine Aufmerksamkeit zum Feierabend.
+  - Das Erinnerungsstück von unserem ersten Treffen habe ich aufgehoben.
+  - Ich habe dir dein Lieblingseis mitgebracht.
+  - Das Geschenk ist selbstgemacht, weil es persönlicher ist.
+  - Für dich habe ich etwas ganz Besonderes ausgesucht.
+  - Ich schenke dir diese Kerze, weil du sie letztens so schön fandest.
+  - Hier ist eine Überraschung, die ich für dich aufgehoben habe.
+  - Ein kleines Geschenk als Dankeschön für alles.
+  - Ich habe dir dieses Parfüm mitgebracht, weil du es im Laden gemocht hast.
+  - Dieses Mitbringsel habe ich extra für dich ausgesucht.
+  - Ich wollte dir eine Freude machen und habe dir was Schönes geholt.
+  - Wichtig ist die Geste dahinter, nicht der materielle Wert.
+  - Schau mal, ich habe dir einen Talisman gebastelt.
+  - Dieses kleine Geschenk soll dir sagen, dass du wichtig bist.
+  - Ich habe dir aus dem Urlaub etwas mitgebracht.
+  - Hier, eine kleine Aufmerksamkeit für meinen Lieblingsmenschen.
+  - Ich schenke dir dieses Bild, weil es mich an unseren Moment erinnert.
+  - Für dich habe ich einen Gutschein für dein Lieblingsrestaurant besorgt.
+  - Ich habe diese Postkarte aufgehoben als Erinnerungsstück an uns.
+  - Hier, ein Geschenk, ich wollte dir einfach zeigen, dass ich dich liebe.
+  - Ich bringe dir immer gern etwas mit, wenn ich verreise.
+  - Schau, eine kleine Überraschung auf deinem Schreibtisch.
+  - Das Mitbringsel ist von mir, ich weiß, du magst sowas.
+  - Ich habe dir dein Lieblingsbrot mitgebracht, weil ich beim Bäcker war.
   negative:
   - ich finde gut Erinnerungsstücke wie die Eintrittskarte von unserem ersten Date.
   - Ich finde, wir sollten das in Ruhe besprechen.
@@ -35,10 +75,34 @@ examples:
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
+  - Ich muss noch Weihnachtsgeschenke kaufen.
+  - Hast du die Rechnung bezahlt?
+  - Der Laden hat um 20 Uhr zu.
+  - Ich brauche neue Schuhe.
+  - Was kostet das denn?
+  - Das war zu teuer.
+  - Ich möchte verstehen, was du meinst.
+  - Das ist ein guter Punkt.
+  - Wir müssen noch einkaufen gehen.
+  - Ich habe den Kassenbon verloren.
+  - Der Versand dauert drei Tage.
+  - Hast du den Gutschein eingelöst?
+  - Die Retoure wurde bearbeitet.
+  - Ich bestelle das online.
+  - Hast du dir das selbst gekauft?
+  - Das Paket kommt morgen.
+  - Ich finde das Kleid im Schaufenster hübsch.
+  - Er hat den ganzen Abend nur über Geld geredet.
 tags:
 - love_language
 - gifts
 rating: 1
+semiotic:
+  peirce: symbol
+  signifikat: Liebe/Zuneigung
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 vad_estimate:
   valence: 0.5
   arousal: 0.4

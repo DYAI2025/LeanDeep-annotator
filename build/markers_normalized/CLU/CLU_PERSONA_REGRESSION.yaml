@@ -43,3 +43,9 @@ activation:
 scoring:
   weight: 1.3
   decay: 0.8
+semiotic:
+  peirce: symbol
+  signifikat: Persoenlichkeitsmuster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

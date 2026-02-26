@@ -52,6 +52,19 @@ examples:
   - Täglicher Meme-Ping, nächtliche Tief-Voicenote, heimliches Treffen – aber 'wir lassen
   - Viermal Deep Talk in acht Tagen, dann Funkstille, dann 'Du fehlst mir' – alles im
   - Gemeinsame Playlist namens ‘Nobody knows’, tägliche Updates, aber kein offizieller
+  - Wochenlang tägliche Voicenotes, dann plötzlich Funkstille, dann 'Ich hab an dich gedacht' um Mitternacht.
+  - "A: 'Wir verstehen uns so gut, das ist unser Geheimnis.' B: 'Ja, aber sag keinem davon.'"
+  - 'Ständiger Wechsel: Nähe suchen → Angst bekommen → Rückzug → Sehnsucht → wieder Nähe suchen.'
+  - Er schickt Herz-Emojis morgens, distanziert sich mittags, schreibt abends 'Vermisse dich'.
+  - Geheime Playlist, tägliche Insider-Witze, aber offiziell 'nur Freunde' – über Monate.
+  - Abwechselnd Deep Talk über Kindheit und dann 'Sorry, war too much, lass uns was anderes reden'.
+  - Beide wissen, dass es mehr ist, aber keiner spricht es aus. Seit Wochen im emotionalen Limbo.
+  - Treffen wird vorgeschlagen, dann verschoben, dann wieder vorgeschlagen, nie fixiert.
+  - 'Muster über drei Monate: Intensive Phase → Rückzug → Entschuldigung → wieder intensiv.'
+  - "A: 'Ich denke ständig an dich.' [Nächster Tag] A: 'Ich glaub, wir sollten weniger schreiben.'"
+  - Geheime Nachrichten nachts, tagsüber tun beide so, als wäre nichts. Seit Wochen.
+  - 'Der Chat hat eine eigene Welt: Kosenamen, Insider, Zukunftspläne – aber kein reales Treffen.'
+  - 'Zwischen den Zeilen: Sehnsucht, Angst, Nähe, Distanz – alles in einer Woche.'
   negative:
   - Innerhalb einer Woche von 'Du bist der witzigste Mensch' zu 'Ich hab noch selten über meine Kindheit gesprochen' und dann zu 'Ich bin überfordert, lass uns das Thema wechseln'.
   - Die Konversation fühlt sich an wie eine exklusive, geheime Welt (SECRET_BONDING), in der die Regeln (Nähe/Distanz) ab und zu neu verhandelt werden (ADAPTIVE_POLARIZATION).
@@ -60,6 +73,24 @@ examples:
   - Ich verstehe deine Perspektive.
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
+  - Wir schreiben uns regelmäßig und treffen uns auch, alles offen und klar.
+  - "A: 'Ich mag dich.' B: 'Ich dich auch.' Beide wissen, woran sie sind."
+  - Die Kommunikation ist offen, es gibt keine Geheimnisse oder Ambivalenz.
+  - Wir haben von Anfang an klar über unsere Erwartungen gesprochen.
+  - 'Einfache Freundschaft: Wir schreiben uns manchmal, treffen uns gelegentlich, alles entspannt.'
+  - "A: 'Lass uns ein Date machen.' B: 'Gerne, wann?' Klare Kommunikation."
+  - Die Beziehung hat sich natürlich entwickelt, ohne Geheimhaltung oder Drama.
+  - Wir kennen uns gut und schätzen uns, ohne emotionale Achterbahn.
+  - Offene Kommunikation über Gefühle, keine versteckten Signale.
+  - "A: 'Ich brauche gerade Abstand.' B: 'Okay, melde dich wenn du bereit bist.' Klare Ansage."
+  - 'Kollegiale Beziehung: Netter Kontakt, keine emotionale Verstrickung.'
+  - Die Freundschaft ist unkompliziert, es gibt keine Ambivalenz.
+  - Wir haben offen geklärt, dass wir Freunde bleiben wollen.
+  - 'Klarer romantischer Verlauf: Kennenlernen, Verabreden, Zusammenkommen.'
+  - 'Gesunde Kommunikation: Interessen werden offen geäußert, Grenzen respektiert.'
+  - "A: 'Das war ein schöner Abend.' B: 'Finde ich auch, wollen wir das wiederholen?' Direkt."
+  - 'Keine Heimlichtuerei: Beide reden offen über ihre Beziehung mit Freunden.'
+  - Die Dynamik ist entspannt und klar, ohne Nähe-Distanz-Wechsel.
 tags:
 - communication
 rating: 1
@@ -68,3 +99,9 @@ activation:
 scoring:
   base: 2.0
   weight: 1.5
+semiotic:
+  peirce: index
+  signifikat: Themenwechsel/Abdriften
+  framing_type: vermeidung
+  cultural_frame: ''
+  myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'

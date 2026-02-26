@@ -68,6 +68,12 @@ tags:
 - shutdown
 - dizziness
 rating: 1
+semiotic:
+  peirce: index
+  signifikat: Schweigen/Verstummen
+  framing_type: vermeidung
+  cultural_frame: ''
+  myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'
 vad_estimate:
   valence: -0.6
   arousal: 0.3

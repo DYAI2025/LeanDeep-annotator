@@ -22,6 +22,46 @@ examples:
   - "Das ist meine Verantwortung."
   - "Ich nehme das Thema auf mich."
   - "Ich zeichne verantwortlich."
+  - Ich übernehme die Verantwortung dafür.
+  - Das geht auf mein Konto.
+  - Ich stehe dafür gerade.
+  - Ich übernehme die volle Verantwortung.
+  - Das war meine Entscheidung, die Verantwortung liegt bei mir.
+  - Ich nehme das auf mich.
+  - Ich übernehme die Konsequenzen.
+  - Die Verantwortung dafür trage ich allein.
+  - Ich nehme das auf meine Kappe, kein Problem.
+  - Ich übernehme die Verantwortung für das Ergebnis.
+  - Die Verantwortung liegt ganz klar bei mir.
+  - Ich nehme das auf meine Kappe, egal was passiert.
+  - Ich übernehme die Verantwortung für mein Team.
+  - Die Verantwortung liegt bei mir als Projektleiter.
+  - Ich nehme das auf meine Kappe und lerne daraus.
+  - Ich übernehme die Verantwortung und handle entsprechend.
+  - Die Verantwortung dafür übernehme ich gerne.
+  - Ich nehme das auf meine Kappe, war mein Fehler.
+  - Ich übernehme die Verantwortung für den Fehler.
+  - Die Verantwortung liegt vollständig bei mir.
+  - Ich nehme das auf meine Kappe und korrigiere es.
+  - Ich übernehme die Verantwortung als Führungskraft.
+  - Die Verantwortung liegt bei mir, ich habe entschieden.
+  - Ich stehe für meine Entscheidungen gerade.
+  - Ich nehme das persönlich auf meine Kappe.
+  - Ich übernehme die Verantwortung vor dem Kunden.
+  - Die Verantwortung liegt bei mir, nicht beim Team.
+  - Ich nehme alles auf meine Kappe.
+  - Ich übernehme die Verantwortung und entschuldige mich.
+  - Die Verantwortung trage ich, punkt.
+  - Ich nehme das auf mich, klar.
+  - Ich übernehme die Verantwortung gegenüber allen Beteiligten.
+  - Die Verantwortung liegt ausschließlich bei mir.
+  - Ich nehme das gerne auf meine Kappe.
+  - Ich stehe mit meinem Namen dafür.
+  - Die Verantwortung übernehme ich vollumfänglich.
+  - Ich nehme das auf meine Kappe, das ist fair.
+  - Ich übernehme die Verantwortung für alles.
+  - Die Verantwortung liegt bei mir, das ist klar.
+  - Ich nehme das auf mich und stehe dazu.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -30,5 +70,24 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Das war nicht meine Schuld.
+  - Dafür bin ich nicht zuständig.
+  - Das liegt nicht in meinem Bereich.
+  - Das hat jemand anders entschieden.
+  - Ich konnte nichts dafür.
+  - Das ist nicht mein Problem.
+  - Die anderen sind verantwortlich.
+  - Mir wurde das so gesagt.
+  - Ich habe damit nichts zu tun.
+  - Das liegt an den Umständen.
+  - Ich bin nur der Bote.
+  - Das war Teamleistung.
+  - Ich hatte keinen Einfluss darauf.
+  - Das wurde über meinen Kopf hinweg entschieden.
+  - Ich war da nicht beteiligt.
+  - Das fällt nicht in meine Zuständigkeit.
+  - Ich weiß von nichts.
+  - Das geht mich nichts an.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: index, signifikat: Verantwortungsuebernahme, framing_type: reparatur, cultural_frame: '', myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'}

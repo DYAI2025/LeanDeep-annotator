@@ -26,6 +26,46 @@ examples:
   - Ich nutze nur Bitcoin, Bankdaten sind mir zu riskant.
   - Sorry, Kamera defekt, aber vertrau mir bitte.
   - Pass auf, wir beide gegen den Rest der Welt, okay?
+  - Ich kann dir nicht videocallen, mein Handy hat keine Kamera.
+  - Schick mir bitte eine Paysafe-Karte als Beweis deiner Liebe.
+  - Ich bin Soldat im Ausland und darf mein Gesicht nicht zeigen.
+  - Wenn du mich wirklich liebst, hilfst du mir finanziell aus der Klemme.
+  - Mein Konto wurde gesperrt, kannst du mir schnell was ueberweisen?
+  - Du bist die Einzige die mir helfen kann, bitte vertrau mir.
+  - Sag niemandem dass wir schreiben, die verstehen das nicht.
+  - Ich bin Arzt bei den Vereinten Nationen, deshalb kann ich nicht skypen.
+  - Mein Erbe ist blockiert, ich brauche nur eine kleine Ueberbrueckung.
+  - Deine Freunde versuchen uns auseinanderzubringen, hoer nicht auf die.
+  - Kannst du mir dein Passwort geben? Ich will nur nachsehen ob alles sicher ist.
+  - Es eilt, die Frist laeuft heute Nacht ab, du musst jetzt ueberweisen.
+  - Ich hab Krebs und brauche Geld fuer die Behandlung, du bist meine letzte Hoffnung.
+  - Niemand sonst darf das wissen, nur wir zwei.
+  - Lokal treffen geht leider nicht, ich bin gerade in Syrien stationiert.
+  - Vertrau mir einfach, ich erklaer dir spaeter alles.
+  - Schick mir eine Google-Play-Karte, dann kann ich mein Handy reparieren lassen.
+  - Du hast doch gesagt du liebst mich, dann zeig es mir auch.
+  - Meine Familie hat mich verstossen, nur du bist noch da fuer mich.
+  - Frag nicht so viel, das macht mich traurig, vertrau mir einfach.
+  - Ich zeig dir mein Gesicht sobald wir uns treffen, versprochen.
+  - Das Geld kriegst du naechste Woche zurueck, Ehrenwort.
+  - Kauf mir bitte eine Amazon-Karte und schick mir den Code.
+  - Wenn du mir nicht hilfst, weiss ich nicht was ich tue.
+  - Mein Visum haengt davon ab, ich brauche 500 Euro sofort.
+  - Ich liebe dich mehr als alles andere, deshalb solltest du mir vertrauen.
+  - Deine Skepsis verletzt mich, nach allem was wir teilen.
+  - Du musst das Geld bar schicken, Western Union ist am sichersten.
+  - Ich bin wohlhabend, aber mein Vermoegen ist eingefroren wegen Krieg.
+  - Bitte loesch unseren Chatverlauf, ist besser so.
+  - Wir gehoeren zusammen, egal was andere sagen.
+  - Schalt die Ortung aus, die Regierung ueberwacht mich.
+  - Ich schwöre bei meiner toten Mutter, es stimmt alles was ich sage.
+  - Wenn du das Geld nicht schickst, muss ich die Fotos veröffentlichen.
+  - Erzaehl deiner Familie nichts von uns, die verstehen das nicht.
+  - Ich bin gerade im Krankenhaus, kannst du mir schnell Geld senden?
+  - Fuer mich bist du die Einzige, deshalb teil ich das nur mit dir.
+  - Mein Laptop wurde gehackt, ich brauche sofort neue Hardware.
+  - Ich kann nur ueber diese Nummer kommunizieren, WhatsApp geht nicht.
+  - Bitte kein Videocall, ich hab eine seltene Hautkrankheit im Gesicht.
   negative:
   - Ich sehe das anders, aber ich respektiere deine Sicht.
   - Ich moechte ehrlich mit dir sein, auch wenn es schwer ist.
@@ -34,6 +74,23 @@ examples:
   - Ich fuehle mich unwohl dabei und moechte darueber reden.
   - Ich verstehe, warum du das so siehst.
   - Danke, dass du mir das sagst. Ich denke darueber nach.
+  - Lass uns mal telefonieren, dann koennen wir das besser klaeren.
+  - Ich schick dir gerne ein Foto von mir, kein Problem.
+  - Nimm dir die Zeit die du brauchst, kein Druck von meiner Seite.
+  - Ich verstehe deine Bedenken, das ist voellig berechtigt.
+  - Wir koennen uns gerne erstmal an einem oeffentlichen Ort treffen.
+  - Klar koennen wir videocallen, sag mir wann es dir passt.
+  - Ich wuerde dir nie Geld abverlangen, das waere mir unangenehm.
+  - Frag ruhig deine Freunde was die davon halten.
+  - Ich bin da transparent, frag mich alles was du wissen willst.
+  - Mir ist Offenheit wichtig, ich hab nichts zu verbergen.
+  - Lass uns das in Ruhe klaeren, ohne Zeitdruck.
+  - Dein Vertrauen muss ich mir verdienen, das ist mir klar.
+  - Ich kann dir mein LinkedIn-Profil zeigen wenn du moechtest.
+  - Natuerlich ueberweisen wir ueber die Bank, was sonst?
+  - Ich moechte dass du dich sicher fuehlst bei allem was wir tun.
+  - Wir haben ja Zeit, es muss nichts ueberstuerzt werden.
+  - Selbstverstaendlich koennen wir mit Kamera telefonieren.
 tags:
 - manipulation
 - scam
@@ -48,3 +105,9 @@ scoring:
   base: 2.0
   weight: 1.3
   decay: 0.05
+semiotic:
+  peirce: symbol
+  signifikat: Verdeckte Einflussnahme
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
+  myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'

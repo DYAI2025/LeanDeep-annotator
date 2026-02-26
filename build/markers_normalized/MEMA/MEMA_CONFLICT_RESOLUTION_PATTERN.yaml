@@ -18,14 +18,77 @@ examples:
   - … Vorwurf/Sarkasmus … Deeskalation … Haken dran.
   - … Härtere Töne … Sorry+Verstanden … Einigung.
   - … Sticheleien … Reparatur … Commitment.
+  - 'A: Du hoerst mir nie zu! B: Das stimmt doch gar nicht! A: Doch! [Pause] B: Sorry, du hast recht, ich war abgelenkt. A: Danke. B: Passiert nicht wieder.'
+  - 'A: Das war respektlos. B: Was meinst du? A: Du hast mich unterbrochen! B: Oh, sorry. Das war nicht Absicht. A: Okay, achte bitte drauf. B: Mache ich.'
+  - Spannung steigt -> Vorwurf -> Gegenwehr -> Pause -> Entschuldigung -> Loesung -> Einigung.
+  - 'A: Immer muss ich alles machen! B: Das ist unfair! [Pause] B: Okay, stimmt, ich mache zu wenig. A: Danke. B: Ab jetzt teilen wir 50/50.'
+  - 'A: Dein Ton war aggressiv. B: War er nicht! A: Doch! B: ... Okay, vielleicht war er das. Sorry. A: Akzeptiert. Lass uns weitermachen.'
+  - 'Eskalation: Du machst das absichtlich! -> Deeskalation: Nein, lass mich erklaeren -> Repair: Sorry -> Einigung: Wir machen es kuenftig anders.'
+  - 'A: Schon wieder vergessen! B: Ist doch nicht so schlimm! A: Fuer mich schon! B: Du hast recht, sorry. Ich nehme das ernst. A: Gut.'
+  - 'Chat: Sticheleien -> haerterer Ton -> Stopp-Signal -> Entschuldigung -> Verstaendnis -> Einigung -> Haken dran.'
+  - 'A: Das nervt mich total. B: Was denn? A: Dass du nie puenktlich bist! B: Ich... stimmt. Tut mir leid. A: Okay. B: Ich komme naechstes Mal puenktlich.'
+  - 'Konflikt-Vorahnung: Gereizte Stimmung -> Vorwurf -> Reparatur: Ich hab ueberreagiert -> Abschluss: Alles gut.'
+  - 'A: Du hast hinter meinem Ruecken geredet! B: Nein! A: Doch, ich hab es gehoert! [Pause] B: Okay, ich habe es getan und es tut mir leid. A: Danke fuer die Ehrlichkeit. Bitte nie wieder.'
+  - 'Muster: Anfaengliche Spannung -> Eskalation -> Beide ziehen sich zurueck -> Einer kommt -> Reparatur -> Einigung.'
+  - 'A: Warum machst du das immer?! B: Weil du nie sagst was du willst! [Pause] A: Stimmt, ich kommuniziere schlecht. B: Und ich reagiere ueber. Sorry. A: Sorry auch. Lass uns besser kommunizieren.'
+  - 'Streit ums Geld: Du gibst zu viel aus! -> Du bist geizig! -> [Pause] -> Okay, lass uns ein Budget machen -> Einverstanden.'
+  - 'A: Ich bin sauer! B: Ich auch! [30 Min Pause] A: Okay, koennen wir reden? B: Ja. A: Es tut mir leid. B: Mir auch. A: Wie loesen wir das?'
+  - 'Typisches Muster: Sticheleien -> Eskalation -> Timeout -> Reparatur -> Commitment -> Resolution.'
+  - 'A: Das war egoistisch! B: Und du bist kontrollierend! [Stille] B: Sorry, das war unfair. A: Stimmt. Ich war auch unfair. Lass uns das klaeren.'
+  - 'Haertere Toene im Chat -> Dann: Sorry, war uebertrieben -> Okay, verstanden -> Wir machen es anders -> Deal.'
+  - 'A: Warum tust du mir das an? B: Ich tue dir gar nichts an! [Pause] B: Okay, erklaer mir was dich verletzt. A: [Erklaerung] B: Verstehe, tut mir leid. Nie wieder.'
+  - 'Vorwurf: Du bist unzuverlaessig -> Verteidigung -> Einsicht -> Entschuldigung -> Konkreter Plan -> Einigung.'
+  - Paar-Streit -> Beide werden laut -> Einer sagt Stopp -> Beide beruhigen sich -> Reden -> Loesen es.
+  - 'A: Du bevorzugst deine Freunde! B: Quatsch! A: Nicht Quatsch! [Tag spaeter] B: Ich hab nachgedacht, du hast recht. A: Danke. B: Naechste Woche nur wir zwei.'
+  - 'A: Dein Kommentar war verletzend. B: War nicht so gemeint! A: Trotzdem! [Pause] B: Du hast recht, sorry. A: Okay, Schwamm drueber.'
+  - Eskalation im Team -> Mediator greift ein -> Beide Seiten erklaeren -> Verstaendnis -> Einigung -> Haken dran.
+  - 'Chat: Gereizte Nachrichten -> Vorwuerfe -> Stille -> Jemand bricht das Eis -> Entschuldigung -> Loesung.'
+  - 'A: Mir reicht es! B: Mir auch! [Pause] A: Okay, lass uns vernuenftig reden. B: Ja, lass uns. [Reden] -> Einigung.'
+  - 'Geschwister-Streit: Du nervst! -> Du auch! -> [Papa vermittelt] -> Entschuldigung -> Frieden.'
+  - 'Arbeitskonflikt: Kritik -> Verteidigung -> Sachliche Klaerung -> Sorry -> Loesung -> Commit.'
+  - 'A: So geht das nicht weiter! B: Was soll ich denn machen?! [Pause] B: Okay, sag mir was du brauchst. A: [Erklaerung] B: Mache ich. A: Danke.'
+  - 'Muster: Spannung baut sich auf -> Explosion -> Abkuehlung -> Reparatur -> Resolution -> Commitment.'
+  - 'A: Ich bin verletzt. B: Tut mir leid. A: Was aendert sich? B: Ich passe besser auf. A: Okay. B: Versprochen. A: Gut, Thema abgeschlossen.'
+  - Streit um Haushalt -> Wird laut -> Beide merken es -> Entschuldigung -> Plan erstellen -> Fertig.
+  - 'A: Deine Kritik hat mich getroffen. B: Sorry, war zu hart. A: Ja, war es. B: Ich formuliere naechstes Mal besser. A: Okay, danke.'
+  - 'Team-Konflikt: Spannung -> Aussprache -> Perspektivenwechsel -> Loesung -> Alle zufrieden.'
+  - 'A: Warum hast du gelogen?! B: Ich... [Pause] B: Du hast recht, ich war feige. Sorry. A: Das hat mich verletzt. B: Ich weiss. Nie wieder. A: Okay.'
+  - 'Klassisches Muster: Vorwurf -> Gegenvorwurf -> Eskalation -> Pause -> Einsicht -> Repair -> Resolution.'
+  - 'A: Du bist gemein! B: Bin ich nicht! [5 Min] B: Okay, was war gemein? A: [Erklaert] B: Verstehe, sorry. Passiert nicht mehr.'
+  - 'Ehe-Streit: Kritik -> Verteidigung -> Steinmauer -> Timeout -> Reparatur -> Einigung -> Commitment.'
+  - 'A: Ich bin so sauer! B: Ich auch! [Naechster Tag] A: Koennen wir reden? B: Ja. -> Reparatur -> Resolution.'
+  - 'Chat-Verlauf: Gereiztheit -> Eskalation -> Timeout -> Entschuldigung von beiden -> Klare Abmachung.'
+  - 'A: Das war unprofessionell! B: Stimmt, sorry. A: Okay. B: Wie loesen wir das? A: So und so. B: Einverstanden.'
+  - 'Muster: Sticheleien eskalieren -> Einer stoppt -> Reparatur -> Beide committen zu besserer Kommunikation.'
+  - 'A: Du haettest das nicht sagen sollen! B: Okay, du hast recht. Tut mir leid. A: Danke. Lass uns nach vorne schauen.'
+  - 'Freundschafts-Konflikt: Vorwurf -> Schock -> Klaerung -> Verstaendnis -> Versoehnug -> Alles gut.'
+  - 'Kollegensteit: Ton wird schaerfer -> Timeout -> Sachliche Klaerung -> Einigung -> Handschlag.'
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - 'A: Du nervst. B: Du auch. A: Tschuess.'
+  - 'A: Es gibt kein Problem. B: Alles gut. Normale Unterhaltung.'
+  - 'A: Du hast recht, sorry. B: Kein Ding. Kein Konflikt vorab.'
+  - 'A: Der Termin passt. B: Super. Rein sachlich.'
+  - 'A: Ich bin sauer! B: Mir egal. [Kein Repair, kein Abschluss]'
+  - Normales Gespraech ohne jede Spannung oder Eskalation.
+  - 'A: Sorry fuer gestern. B: Schon gut. Ohne vorherige Eskalation.'
+  - 'A: Wir streiten! B: Nein tun wir nicht! [Keine Loesung]'
+  - Rein sachlicher Austausch ohne emotionale Komponente.
+  - 'A: Ich bin enttaeuscht. [Keine Antwort, kein Repair, kein Abschluss]'
+  - Streit eskaliert und wird nie geloest.
+  - 'A: Wir muessen reden. B: Nicht jetzt. [Nie aufgegriffen]'
+  - Sachliche Diskussion ohne persoenliche Ebene.
+  - 'A: Gut gemacht! B: Danke! Kein Konflikt, nur Lob.'
+  - 'A: Ich verstehe. B: Danke. Harmonischer Austausch.'
+  - Endloser Streit ohne Repair und ohne Loesung.
+  - Smalltalk ueber Wetter und Alltag.
+  - 'A: Mir geht es gut. B: Mir auch. Nett.'
+  - Einseitige Entschuldigung ohne vorherigen Konflikt.
+  - 'A: Das hat mich verletzt. B: [Schweigen auf unbestimmte Zeit]'
+  - Normaler Chat ohne jede Spannung.
+  - 'A: Lass uns Pizza bestellen. B: Ja gern. Kein Streit.'
+  - 'Konflikt ohne Loesung: Streit -> Streit -> Abbruch.'
+  - 'A: Wie war dein Tag? B: Gut. Keine Eskalation, kein Repair noetig.'
+  - Ein einzelner Vorwurf ohne Folge-Dynamik.
 tags: []
 rating: 1
 composed_of:
@@ -40,3 +103,9 @@ activation:
 scoring:
   base: 0.7
   weight: 1.2
+semiotic:
+  peirce: index
+  signifikat: Konfliktdynamik
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'

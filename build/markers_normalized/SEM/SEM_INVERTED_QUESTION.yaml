@@ -35,6 +35,12 @@ composed_of:
 - ATO_STRUCT_PAUSE
 activation:
   rule: "IF previous_message_is_question THEN (current_contains '?') AND (ELLIPSIS '...' OR reflective counter-question)"
+semiotic:
+  peirce: icon
+  signifikat: Fragehaltung/Suchbewegung
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

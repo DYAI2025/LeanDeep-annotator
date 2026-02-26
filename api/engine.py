@@ -100,6 +100,7 @@ class MarkerDef:
     compositionality: str | None = None  # deterministic | contextual | emergent
     vad_estimate: dict | None = None        # {valence, arousal, dominance}
     effect_on_state: dict | None = None     # {trust, conflict, deesc}
+    semiotic: dict | None = None            # {peirce, signifikat, cultural_frame, framing_type, ...}
 
 
 @dataclass
@@ -140,7 +141,17 @@ class MarkerEngine:
         self._loaded = False
 
     def load(self, registry_path: str | None = None):
-        """Load and compile all markers from the registry."""
+        """Load and compile all markers from the registry.
+
+        Idempotent: clears all state before loading so calling load()
+        twice does not accumulate duplicate markers.
+        """
+        self.markers.clear()
+        self.ato_markers.clear()
+        self.sem_markers.clear()
+        self.clu_markers.clear()
+        self.mema_markers.clear()
+
         path = Path(registry_path or settings.registry_path)
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -375,6 +386,7 @@ class MarkerEngine:
             compositionality=data.get("compositionality"),
             vad_estimate=data.get("vad_estimate"),
             effect_on_state=data.get("effect_on_state"),
+            semiotic=data.get("semiotic"),
         )
 
     def _compile_pattern(self, raw: str, flags: list[str]) -> re.Pattern | None:

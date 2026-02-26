@@ -11,19 +11,83 @@ frame:
 pattern: ["(?i)\\b(or else|you'll be sorry|I'll make you|watch what happens)\\b"]
 examples:
   positive:
-  - "Do this or else."
-  - "You'll be sorry if you don't."
-  - "I'll make you regret this."
-  - "Watch what happens if you disobey."
-  - "You don't want to find out what I'll do."
+  - Mach das, oder es hat Konsequenzen.
+  - Du wirst es bereuen, wenn du nicht gehorchst.
+  - Ich werde dafür sorgen, dass du das büßt.
+  - Pass auf, was passiert, wenn du dich weigerst.
+  - Du willst nicht wissen, was ich dann tue.
+  - Entweder du machst mit, oder du bekommst Ärger.
+  - Ich warne dich, unterschätze mich nicht.
+  - Du wirst schon sehen, was du davon hast.
+  - Wage es nicht, dich mir zu widersetzen.
+  - Ich mache dein Leben schwer, wenn du so weitermachst.
+  - Das wird Folgen haben, glaub mir.
+  - Du wirst es büßen.
+  - Pass bloß auf, was du sagst.
+  - Ich sorge dafür, dass du das nicht vergisst.
+  - Du weißt nicht, wozu ich fähig bin.
+  - Mach das nicht nochmal, oder...
+  - Du wirst schon sehen.
+  - Ich warne dich ein letztes Mal.
+  - Das hat Konsequenzen, die du nicht willst.
+  - Pass auf, ich meine das ernst.
+  - Du bekommst Probleme, wenn du das durchziehst.
+  - Ich mache das nicht mit, und du wirst es merken.
+  - Wehe, du machst das noch einmal.
+  - Ich sorge dafür, dass das Folgen hat.
+  - Du spielst mit dem Feuer.
+  - Mach weiter so, und du wirst sehen.
+  - Ich habe Mittel und Wege.
+  - Du wirst es bereuen, das verspreche ich.
+  - Pass auf, ich vergesse das nicht.
+  - Das wird nicht ohne Folgen bleiben.
+  - Ich warne dich, das hat einen Preis.
+  - Du willst mich nicht zum Feind haben.
+  - Mach das, oder es wird unangenehm.
+  - Du wirst dafür bezahlen.
+  - Ich bin nicht bereit, das hinzunehmen.
+  - Pass auf, was du tust, ich beobachte dich.
+  - Du bekommst die Quittung dafür.
+  - Ich mache Ernst, das ist kein Spaß.
+  - Wehe, du lügst mich an.
+  - Ich sorge dafür, dass du das nicht nochmal machst.
+  - Du wirst Konsequenzen tragen.
+  - Pass bloß auf dich auf.
+  - Ich vergesse so etwas nicht.
+  - Du wirst schon merken, was du angerichtet hast.
+  - Mach das nicht, oder...
+  - Du hast keine Ahnung, was auf dich zukommt.
+  - Ich warne dich zum letzten Mal.
+  - Das wird ein Nachspiel haben.
+  - Du bekommst das zurück, was du gibst.
+  - Pass auf, ich bin nicht mehr geduldig.
   negative:
-  - I see it differently, but I respect your view.
-  - I want to be honest with you, even though it's hard.
-  - You're right, that was my mistake. I'm sorry.
-  - Let's both explain our side.
-  - I feel uncomfortable about this and want to talk about it.
-  - I understand why you see it that way.
-  - Thank you for telling me that. I'll think about it.
+  - Ich respektiere deine Entscheidung.
+  - Lass uns das in Ruhe besprechen.
+  - Ich möchte das friedlich klären.
+  - Deine Meinung ist mir wichtig.
+  - Wir finden gemeinsam eine Lösung.
+  - Ich bin offen für deinen Standpunkt.
+  - Lass uns kooperativ vorgehen.
+  - Ich verstehe deine Perspektive.
+  - Wir können das sachlich diskutieren.
+  - Ich bin bereit, Kompromisse zu finden.
+  - Dein Wohlbefinden ist mir nicht egal.
+  - Lass uns das einvernehmlich regeln.
+  - Ich schätze deine Ehrlichkeit.
+  - Wir lösen das zusammen.
+  - Ich bin nicht nachtragend.
+  - Lass uns nach vorne schauen.
+  - Ich respektiere deine Grenzen.
+  - Wir schaffen das ohne Druck.
+  - Ich bin geduldig.
+  - Lass uns ruhig bleiben.
+  - Ich drohe nicht, ich rede.
+  - Wir können das vernünftig lösen.
+  - Ich höre dir zu.
+  - Lass uns konstruktiv sein.
+  - Ich bin für Dialog, nicht für Konfrontation.
 tags: [atomic, v3.3, auto-generated]
 vad_estimate: {valence: -0.6, arousal: 0.9, dominance: 0.85}
 effect_on_state: {trust: -0.3, conflict: 0.4, deesc: -0.2}
+semiotic: {peirce: index, signifikat: Forderung/Drohung, framing_type: eskalation, cultural_frame: '', myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'}

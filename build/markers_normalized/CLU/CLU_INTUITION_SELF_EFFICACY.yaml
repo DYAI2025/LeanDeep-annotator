@@ -44,6 +44,12 @@ activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 4 messages
   confirm_window: 3
   cooldown_messages: 4
+semiotic:
+  peirce: icon
+  signifikat: Cluster-Intuition
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 metadata:
   maintainer: marker-bot
   family: SELF_EFFICACY

@@ -54,3 +54,4 @@ tags:
 - avoidance
 vad_estimate: {valence: -0.2, arousal: 0.5, dominance: 0.3}
 effect_on_state: {trust: -0.1, conflict: 0.1, deesc: -0.05}
+semiotic: {peirce: index, signifikat: Vermeidungsverhalten, framing_type: vermeidung, cultural_frame: '', myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'}

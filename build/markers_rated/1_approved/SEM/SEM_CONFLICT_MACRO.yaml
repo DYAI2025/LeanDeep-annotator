@@ -41,3 +41,4 @@ tags: [semantic, conflict, gottman, escalation]
 compositionality: deterministic
 vad_estimate: {valence: -0.5, arousal: 0.8, dominance: 0.6}
 effect_on_state: {trust: -0.3, conflict: 0.4, deesc: -0.2}
+semiotic: {peirce: index, signifikat: Konfliktdynamik, framing_type: eskalation, cultural_frame: Gottman, myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'}

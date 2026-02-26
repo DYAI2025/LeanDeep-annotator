@@ -28,6 +28,12 @@ activation:
 scoring:
   base: 0.65
   cap: 1.0
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 metadata:
   type: MEMA
   family: "INCONSISTENCY"

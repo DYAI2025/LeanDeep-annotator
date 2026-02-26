@@ -47,3 +47,9 @@ scoring:
   weight: 1.15
 window:
   messages: 50
+semiotic:
+  peirce: symbol
+  signifikat: Verbundenheitssignal
+  framing_type: bindung
+  cultural_frame: Bowlby
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'

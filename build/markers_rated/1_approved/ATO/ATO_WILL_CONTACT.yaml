@@ -16,20 +16,84 @@ pattern:
 examples:
   positive:
   - Ja ja, alles gut. Meld mich!
-  - Ich melde mich später
-  - Du hörst von mir!
-  - Schreib dir dann
-  - Meld mich, wenn ich wieder Zeit habe
+  - Ich melde mich spaeter.
+  - Du hoerst von mir!
+  - Schreib dir dann.
+  - Meld mich, wenn ich wieder Zeit habe.
+  - Ich melde mich, versprochen.
+  - Du hoerst von mir, spaetestens morgen.
+  - Schreibe dir dann, wenn ich Bescheid weiss.
+  - Meld mich bald, okay?
+  - Ich melde mich die Tage.
+  - Du hoerst von mir, mach dir keine Sorgen.
+  - Schreib dir spaeter.
+  - Meld mich, sobald ich kann.
+  - Ich melde mich mal.
+  - Du hoerst von mir, ganz bestimmt.
+  - Schreib dir dann dazu.
+  - Meld mich, wenn ich weiss, wie es laeuft.
+  - Ich melde mich naechste Woche.
+  - Du hoerst von mir, keine Angst.
+  - Schreib dir bald.
+  - Meld mich noch, okay?
+  - Ich melde mich, wenn es passt.
+  - Du hoerst von mir, ehrlich.
+  - Schreib dir dann was dazu.
+  - Meld mich morgen.
+  - Ich melde mich, wenn ich Luft habe.
+  - Du hoerst von mir, auf jeden Fall.
+  - Schreib dir, sobald ich mehr weiss.
+  - Meld mich spaeter nochmal.
+  - Ich melde mich bei dir, versprochen.
+  - Du hoerst von mir, gib mir etwas Zeit.
+  - Schreibe dir am Wochenende.
+  - Meld mich, wenn der Stress nachlässt.
+  - Ich melde mich, wenn es ruhiger wird.
+  - Du hoerst von mir, bald.
+  - Schreib dir dann eine Nachricht.
+  - Meld mich, ja?
+  - Ich melde mich definitiv.
+  - Du hoerst von mir, spätestens uebermorgen.
+  - Schreib dir, versprochen.
+  - Meld mich bei Gelegenheit.
+  - Ich melde mich zeitnah.
+  - Du hoerst von mir, das weisst du.
+  - Schreib dir in den naechsten Tagen.
+  - Meld mich, sobald es geht.
+  - Ich melde mich Ende der Woche.
+  - Du hoerst von mir, mach dir keinen Kopf.
+  - Schreibe dir dann eine kurze Nachricht.
+  - Meld mich, keine Sorge.
+  - Ich melde mich noch, ganz sicher.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich rufe jetzt sofort an.
+  - Lass uns das jetzt klaeren.
+  - Ich bin gerade erreichbar, rede jetzt.
+  - Hier ist meine Antwort.
+  - Ich antworte sofort.
+  - Lass uns das jetzt besprechen.
+  - Ich bin jetzt da.
+  - Hier meine direkte Rueckmeldung.
+  - Ich reagiere sofort.
+  - Jetzt ist ein guter Zeitpunkt.
+  - Ich bin erreichbar, leg los.
+  - Lass uns das nicht aufschieben.
+  - Meine Antwort kommt jetzt.
+  - Ich bin sofort dabei.
+  - Kein Aufschieben, lass uns reden.
+  - Ich antworte dir gleich.
+  - Lass uns das jetzt festmachen.
+  - Ich gebe dir sofort Bescheid.
+  - Jetzt passt es mir.
+  - Ich bin gerade frei, lass uns reden.
+  - 'Direkte Antwort: Ja.'
+  - Kein Vertroesten, ich sage es jetzt.
+  - Ich bin jetzt verfuegbar.
+  - Lass uns das sofort angehen.
+  - Hier und jetzt, lass uns das klaeren.
 tags:
 - false_promise
 - conversation_ender
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

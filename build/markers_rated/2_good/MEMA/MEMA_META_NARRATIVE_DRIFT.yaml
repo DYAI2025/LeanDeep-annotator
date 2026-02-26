@@ -1,0 +1,104 @@
+id: MEMA_META_NARRATIVE_DRIFT
+version: "3.4"
+frame:
+  signal: ["narrative", "drift"]
+  concept: "Meta-Narrativ-Drift: schleichende Veränderung der Beziehungserzählung"
+  pragmatics: "Erkennt, wie sich das gemeinsame Narrativ einer Beziehung verändert"
+  narrative: "meta_pattern"
+tags: [mema, narrative, drift, story, identity]
+composed_of:
+  required_any:
+  - CLU_REPETITIVE_CONFLICT
+  - SEM_PROJECTION
+  supportive:
+  - ATO_TOPIC_SHIFT
+  - SEM_BLAME_SIGNAL
+activation:
+  rule: "ANY 2 IN 25 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+  positive_de:
+  - "Früher haben wir gesagt 'wir gegen die Welt'. Jetzt ist es 'du gegen mich'."
+  - "Unsere Geschichte hat sich verändert – vom Liebesroman zum Krimi."
+  - "Wir erzählen unsere Beziehung anders als früher."
+  - "Früher warst du mein Held. Jetzt bist du mein Problem."
+  - "Die Geschichte, die wir uns über uns erzählen, stimmt nicht mehr."
+  - "Wir haben mal gesagt, wir sind ein Dream-Team. Das sagt keiner mehr."
+  - "Unser Narrativ hat sich verschoben – von Hoffnung zu Resignation."
+  - "Ich erzähle meinen Freunden unsere Geschichte jetzt ganz anders."
+  - "Früher haben wir über gemeinsame Träume geredet. Jetzt nur noch über Probleme."
+  - "Die Art, wie du über uns sprichst, hat sich verändert."
+  - "Wir haben unser 'Wir' verloren und reden nur noch in 'Ich' und 'Du'."
+  - "Unsere Liebesgeschichte ist zu einer Leidensgeschichte geworden."
+  - "Ich merke, dass du unsere Vergangenheit umschreibst."
+  - "Du erzählst es anders, als es war – das verändert, wer wir sind."
+  - "Unser gemeinsames Narrativ zerfällt."
+  - "Früher haben wir gesagt 'unsere Krise hat uns stärker gemacht'. Jetzt ist sie nur noch Last."
+  - "Du sprichst über uns, als wäre die Beziehung ein Fehler gewesen."
+  - "Unsere Geschichte wird von Mal zu Mal düsterer."
+  - "Ich erzähle meinem Therapeuten eine andere Version unserer Beziehung als vor einem Jahr."
+  - "Das Narrativ hat sich verschoben: von 'wir schaffen das' zu 'es hat keinen Sinn'."
+  - "Du definierst mich um – von Partner zu Gegner."
+  - "Unsere Erinnerungen haben verschiedene Versionen."
+  - "Die Erzählung unserer Beziehung wird toxischer."
+  - "Wir haben unsere gemeinsame Geschichte verloren."
+  - "Früher warst du 'die Liebe meines Lebens'. Jetzt 'der größte Fehler'."
+  - "Unser Narrativ driftet auseinander."
+  - "Du beschreibst unseren Anfang jetzt als Täuschung."
+  - "Die Geschichte, die wir uns erzählen, bestimmt, wie wir uns behandeln."
+  - "Unser Beziehungsnarrativ hat sich unmerklich verändert."
+  - "Wir schreiben die Geschichte um – und nicht zum Besseren."
+  - "Ich merke, wie sich unsere Erzählung verschiebt."
+  - "Früher haben wir über Zukunft geredet, jetzt nur noch über Vergangenheit."
+  - "Unser gemeinsames 'Wir-Gefühl' ist einer 'Ich-gegen-Dich'-Erzählung gewichen."
+  - "Die Art, wie du über unsere Anfänge sprichst, hat sich drastisch verändert."
+  - "Unser Narrativ hat einen Knick bekommen."
+  - "Wir definieren uns neu – und nicht als Team."
+  - "Die Beziehungsgeschichte, die wir erzählen, wird zunehmend negativ."
+  - "Du stellst alles in ein anderes Licht als damals."
+  - "Unsere gemeinsame Erzählung zerfällt in zwei getrennte."
+  - "Wir haben verschiedene Versionen der Wahrheit."
+  - "Ich höre dich und erkenne unsere Geschichte nicht wieder."
+  - "Du sagst jetzt 'ich war nie glücklich' – das stimmt so nicht."
+  - "Unser Narrativ driftet ab – von Partnerschaft zu Kampf."
+  - "Früher: 'Wir haben Krisen überstanden.' Jetzt: 'Wir waren nie wirklich glücklich.'"
+  - "Die Geschichte, die du über uns erzählst, macht mir Angst."
+  - "Unser gemeinsames Bild zerfällt."
+  - "Du schreibst unsere Vergangenheit um."
+  - "Wir erinnern uns an verschiedene Beziehungen."
+  - "Das Narrativ kippt – und damit auch die Beziehung."
+  - "Unsere Geschichte wird von Tag zu Tag ein Stück weniger 'unsere'."
+  negative_de:
+  - "Wir erzählen gern, wie wir uns kennengelernt haben – das macht uns glücklich."
+  - "Unsere Geschichte ist komplex, aber wir stehen beide dazu."
+  - "Wir haben verschiedene Perspektiven, aber dieselbe Geschichte."
+  - "Unsere Beziehung hat Höhen und Tiefen, und wir erzählen beides."
+  - "Ich liebe es, unsere gemeinsame Geschichte zu erzählen."
+  - "Wir haben eine schöne Geschichte zusammen."
+  - "Ja, es gab Krisen, aber die haben uns stärker gemacht."
+  - "Unsere Erzählung hat sich weiterentwickelt – zum Besseren."
+  - "Wir sind stolz auf das, was wir aufgebaut haben."
+  - "Unsere gemeinsame Geschichte gibt uns Halt."
+  - "Wir erzählen es vielleicht unterschiedlich, aber die Essenz stimmt."
+  - "Ich bin dankbar für jedes Kapitel unserer Geschichte."
+  - "Wir haben eine Erzählung, die uns verbindet."
+  - "Unsere Geschichte ist noch nicht zu Ende – und das ist gut so."
+  - "Wir reflektieren gemeinsam über unsere Vergangenheit."
+  - "Unsere Erinnerungen sind ein Schatz."
+  - "Wir haben gelernt, unsere Geschichte differenziert zu betrachten."
+  - "Unsere Beziehungserzählung wächst mit uns."
+  - "Ich liebe die Geschichte, die wir zusammen schreiben."
+  - "Wir sind auf derselben Seite – buchstäblich und im übertragenen Sinne."
+  - "Unsere Geschichte hat tiefe und schöne Momente."
+  - "Wir können über alte Zeiten lachen und aus Fehlern lernen."
+  - "Die gemeinsame Erzählung stärkt unsere Identität als Paar."
+  - "Wir teilen eine Geschichte und das verbindet uns."
+  - "Ich bin froh, dass wir diese Geschichte zusammen erleben."
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

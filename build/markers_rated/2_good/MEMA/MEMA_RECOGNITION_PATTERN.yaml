@@ -1,0 +1,104 @@
+id: MEMA_RECOGNITION_PATTERN
+version: "3.4"
+frame:
+  signal: ["recognition", "pattern"]
+  concept: "Anerkennungsmuster – Dynamik von Anerkennung und Missachtung"
+  pragmatics: "Erkennt Muster der Wertschätzung oder deren Fehlen"
+  narrative: "meta_pattern"
+tags: [mema, recognition, appreciation, validation]
+composed_of:
+  required_any:
+  - SEM_VALIDATION_SEEKING
+  - SEM_EMPATHIC_RESONANCE
+  supportive:
+  - ATO_APPRECIATION
+  - ATO_MINIMIZING
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.1
+examples:
+  positive_de:
+  - "Du siehst nie, was ich alles mache. Keine Anerkennung, nie."
+  - "Ich wünsche mir, dass du mal sagst, dass du das schätzt, was ich tue."
+  - "Wann hast du mir zuletzt gesagt, dass du stolz auf mich bist?"
+  - "Ich fühle mich unsichtbar in dieser Beziehung."
+  - "Du nimmst alles als selbstverständlich hin."
+  - "Ich hätte gerne ein Danke gehört, einfach mal."
+  - "Du lobst andere, aber mich nie."
+  - "Ich gebe alles und bekomme keine Anerkennung."
+  - "Du siehst nur die Fehler, nie das Gute."
+  - "Mir fehlt Wertschätzung von dir."
+  - "Ich brauche von dir das Gefühl, gesehen zu werden."
+  - "Du bedankst dich nie bei mir."
+  - "Ich tue so viel für diese Familie und es wird nicht bemerkt."
+  - "Dein Schweigen zu meinen Leistungen verletzt mich."
+  - "Ich wünsche mir mehr Anerkennung von dir."
+  - "Du hast noch nie gesagt, dass ich das gut gemacht habe."
+  - "Wertschätzung ist ein Fremdwort in unserer Beziehung."
+  - "Ich brauche positive Rückmeldung, sonst verliere ich die Motivation."
+  - "Du erkennst nicht an, was ich alles opfere."
+  - "Mir fehlt ein einfaches 'gut gemacht'."
+  - "Du nimmst alles, was ich tue, als gegeben hin."
+  - "Ich fühle mich wie eine Dienstleisterin – funktional, aber unsichtbar."
+  - "Du bemerkst nur, wenn was schiefgeht. Nie wenn es läuft."
+  - "Ich bräuchte mal ein Lob. Einfach so."
+  - "Deine Gleichgültigkeit gegenüber meinen Bemühungen tut weh."
+  - "Ich wünsche mir, dass du mich wahrnimmst."
+  - "Du sagst nie, dass du mich schätzt."
+  - "Ich fühle mich nicht wertgeschätzt von dir."
+  - "Wann hast du mir zuletzt ein Kompliment gemacht?"
+  - "Ich arbeite hart und du siehst es nicht."
+  - "Anerkennung – das Einzige, was ich von dir möchte."
+  - "Du reagierst nicht auf meine Erfolge."
+  - "Ich wünsche mir, dass du mal sagst: 'Ich sehe, was du tust.'"
+  - "Meine Leistungen sind für dich Luft."
+  - "Du erkennst mich nicht an als gleichwertigen Partner."
+  - "Ich brauche deine Bestätigung und bekomme sie nie."
+  - "Du hast kein Wort zu meinem Geburtstag gesagt."
+  - "Deine fehlende Wertschätzung zerfrisst mich."
+  - "Ich fühle mich unterschätzt und übersehen."
+  - "Ein 'Danke' würde so viel bedeuten."
+  - "Du ignorierst, was ich leiste."
+  - "Mir fehlt das Gefühl, dass mein Beitrag zählt."
+  - "Ich wünsche mir Anerkennung für den Alltag, den ich stemme."
+  - "Du weißt nicht mal, was ich alles mache."
+  - "Ich brauche Bestätigung, nicht Kritik."
+  - "Du bemerkst mich nur, wenn ich Fehler mache."
+  - "Mir fehlt die emotionale Belohnung für meine Arbeit."
+  - "Du sagst nie danke. Nie."
+  - "Ich sehne mich nach einem anerkennenden Blick."
+  - "Deine Indifferenz gegenüber meinem Einsatz ist schmerzhaft."
+  negative_de:
+  - "Danke, dass du das gemacht hast – ich schätze es sehr."
+  - "Du bist toll und ich bin stolz auf dich."
+  - "Ich sehe, wie viel du für uns tust."
+  - "Ich möchte dir sagen, wie dankbar ich bin."
+  - "Du bist großartig – das sage ich dir viel zu selten."
+  - "Ich bewundere, wie du das gemeistert hast."
+  - "Danke für alles, was du jeden Tag leistest."
+  - "Ich schätze dich – als Mensch und als Partner."
+  - "Du machst das richtig gut."
+  - "Ich bin froh, dass du in meinem Leben bist."
+  - "Ich habe heute gemerkt, wie viel du für die Familie tust. Danke."
+  - "Du verdienst mehr Anerkennung und ich gebe sie dir hiermit."
+  - "Ich sehe deinen Einsatz und bin dankbar."
+  - "Du bist ein wunderbarer Mensch."
+  - "Ich schätze deine Stärke und Geduld."
+  - "Danke, dass du immer für mich da bist."
+  - "Ich bewundere dich für das, was du leistest."
+  - "Du bist unersetzlich."
+  - "Ich sage dir nicht oft genug, wie toll du bist."
+  - "Dein Beitrag wird von mir gesehen und geschätzt."
+  - "Ich bin so dankbar für dich."
+  - "Du machst unser Leben besser – jeden Tag."
+  - "Ich anerkenne deinen Einsatz und deine Liebe."
+  - "Du bist mein Held – im Alltag und darüber hinaus."
+  - "Ich schätze dich mehr, als Worte sagen können."
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

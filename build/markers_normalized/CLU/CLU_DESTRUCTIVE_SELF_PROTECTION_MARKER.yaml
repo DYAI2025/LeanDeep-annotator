@@ -25,12 +25,72 @@ examples:
   - Ich muss mich verteidigen weil du mich staendig angreifst
   - Immer soll ich schuld sein, aber was ist mit DIR?
   - Ich hab nur reagiert weil du mich provoziert hast
+  - Dann bin ich halt das Monster, wenn du das brauchst, bitte
+  - Du hast mich in die Ecke gedrängt, was soll ich machen?
+  - ICH bin hier das Opfer, nicht du!
+  - Du gibst mir keine andere Wahl als so zu reagieren
+  - Wenn du mich nicht so behandeln würdest, wär ich auch anders
+  - Ich muss mich wehren, du greifst mich ständig an
+  - Du verdrehst die Realität, ICH war nicht der Aggressor
+  - Ich schütze mich nur weil DU die Grenzen überschreitest
+  - Tja, wer Scheiße baut kriegt Scheiße zurück
+  - Ich hab nie behauptet dass ich perfekt bin, aber du hast ANGEFANGEN
+  - Das machst DU aus mir, so bin ich eigentlich nicht
+  - Ich wär nicht so wenn du anders wärst
+  - Meine Reaktion war vielleicht übertrieben aber deine AKTION war schlimmer
+  - Du stellst dich als Opfer dar aber ich bin es der leidet
+  - Klar, dreh den Spieß um, du kannst das ja gut
+  - Ich verteidige nur das was mir noch geblieben ist
+  - Du machst mich kaputt und wunderst dich dass ich zurückschlage
+  - Ach jetzt bin ICH der Schuldige? Wie bequem für dich
+  - Ich hab das nur getan weil ich keinen anderen Ausweg mehr hatte
+  - Jeder würde so reagieren wenn man so behandelt wird wie ich
+  - Ich bin nicht aggressiv, ich bin verletzt und wütend
+  - Du treibst mich absichtlich in die Ecke
+  - Meine einzige Option war der Gegenangriff
+  - Ich brech lieber alles ab als mich weiter verletzen zu lassen
+  - Du hast mich dazu gezwungen, merk dir das
+  - Ich musste das tun, du hast mir keine Wahl gelassen!
+  - Ja ich war gemein, aber du warst GEMEIN
+  - Wenn du aufhören würdest mich zu attackieren, wär ich auch netter
+  - Ich sag schlimme Sachen weil du mich an meine Grenze bringst
+  - Ich hab mich nur verteidigt, mehr nicht!
+  - Du machst mich zum Täter aber eigentlich bin ICH das Opfer hier
+  - Okay ich war hart aber du hast es verdient
+  - Ich krieg Panik und dann schlag ich um mich, das ist DEINE Schuld
+  - Hättest du nicht angefangen wär das nicht passiert
+  - Ich beschütze mich, egal ob du das aggressiv findest
+  - Du vergiftest alles und ich bin der der die Konsequenzen trägt
+  - Mein Angriff war nur Notwehr
+  - Ich wollte nicht so sein aber du hast mich dahin getrieben
+  - Du lässt mir ja keine andere Wahl als zurückzuschlagen
+  - Gut, dann zerstör ich halt alles bevor DU es tust
   negative:
   - Du hast recht, tut mir leid, ich hab Mist gebaut
   - Ich ueberleg mal was mein Anteil daran ist
   - Ich versteh warum dich das verletzt hat
   - Treffen wir uns um 4?
   - Soll ich Brot mitbringen?
+  - Ich übernehme Verantwortung für mein Verhalten
+  - Das war falsch von mir, egal was davor war
+  - Ich hab überreagiert und das tut mir leid
+  - Mein Verhalten war nicht okay, da gibt es keine Ausrede
+  - Ich will verstehen was ich besser machen kann
+  - Du hattest recht, ich war im Unrecht
+  - Ich seh ein dass ich einen Fehler gemacht hab
+  - Lass uns beide reflektieren was schief gelaufen ist
+  - Ich entschuldige mich ohne Wenn und Aber
+  - Ich bin Teil des Problems und das ändere ich
+  - Heute war ein schöner Tag im Park
+  - Soll ich nachher kochen?
+  - Hast du den Schlüssel?
+  - Morgen kommt der Elektriker
+  - Ich hol die Kinder ab
+  - Ich hab nachgedacht und seh meinen Fehler
+  - Mein Verhalten war nicht in Ordnung
+  - Ich will mich bessern, ehrlich
+  - Das lag an mir, nicht an dir
+  - Ich übernehme Verantwortung ohne Ausreden
 tags:
 - affect
 - emotion
@@ -45,3 +105,9 @@ activation:
 scoring:
   base: 1.5
   weight: 1.2
+semiotic:
+  peirce: index
+  signifikat: Cluster-Muster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

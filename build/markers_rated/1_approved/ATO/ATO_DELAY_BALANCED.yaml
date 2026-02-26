@@ -14,6 +14,11 @@ semiotic:
   object: "latency_balance"
   connotation: ["balanciert", "latenz"]
   interpretant: "effect_on_state: {sync: +0.1, impulsivity: -0.1}"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: Zweifel ist Schwaeche — wer zoegert, verliert
 examples:
   positive_de:
   - "Antworten im 10–20-Minuten-Raster."

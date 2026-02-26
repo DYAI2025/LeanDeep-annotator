@@ -49,12 +49,277 @@ examples:
     B: Okay, ich kündige es vorher an.
     A: Das hilft mir.
     B: Danke fürs Feedback.
+  - |
+    A: Du hast den Termin vergessen.
+    B: Stimmt, mein Fehler.
+    A: Passiert leider oefter.
+    B: Ich schreibe mir alles auf ab jetzt.
+  - |
+    A: Ich bin frustriert mit der Situation.
+    B: Was koennen wir aendern?
+    A: Bessere Absprachen.
+    B: Einverstanden, lass uns einen Plan machen.
+  - |
+    A: Du haettest mir helfen sollen.
+    B: Ja, haette ich.
+    A: Ich brauche deine Unterstuetzung.
+    B: Die hast du, versprochen.
+  - |
+    A: Das hat mich verletzt.
+    B: Es tut mir wirklich leid.
+    A: Bitte achte drauf kuenftig.
+    B: Mache ich.
+  - |
+    A: Ich fuehle mich nicht gehoert.
+    B: Das tut mir leid.
+    A: Ich moechte einbezogen werden.
+    B: Selbstverstaendlich.
+  - |
+    A: Wir streiten zu oft ueber Kleinigkeiten.
+    B: Stimmt, das muessen wir aendern.
+    A: Vielleicht brauchen wir Regeln.
+    B: Gute Idee, machen wir.
+  - |
+    A: Du warst abwesend den ganzen Abend.
+    B: Das stimmt, tut mir leid.
+    A: Ich moechte gemeinsame Zeit.
+    B: Morgen ganz fuer dich, versprochen.
+  - |
+    A: Das Ergebnis ist nicht gut genug.
+    B: Was fehlt?
+    A: Mehr Details und Sorgfalt.
+    B: Ich ueberarbeite es heute.
+  - |
+    A: Du haettest anrufen koennen.
+    B: Ja, haette ich sollen.
+    A: Mach das bitte naechstes Mal.
+    B: Natuerlich.
+  - |
+    A: Dein Verhalten stört mich.
+    B: Was genau?
+    A: Dass du immer am Handy bist wenn wir reden.
+    B: Du hast recht, ich lege es weg.
+  - |
+    A: Ich brauche mehr Engagement von dir.
+    B: Was kann ich konkret tun?
+    A: Mehr Initiative zeigen.
+    B: Okay, ich fange morgen an.
+  - |
+    A: Warum redest du nicht mit mir darueber?
+    B: Ich hatte Angst vor deiner Reaktion.
+    A: Rede trotzdem mit mir.
+    B: Okay, ich versuche es.
+  - |
+    A: Das war nicht fair.
+    B: Du hast recht.
+    A: Was tun wir jetzt?
+    B: Ich mache es fair.
+  - |
+    A: Du haettest ehrlich sein sollen.
+    B: Ja, ich haette dir die Wahrheit sagen sollen.
+    A: Ehrlichkeit ist die Basis.
+    B: Stimmt, ab jetzt immer ehrlich.
+  - |
+    A: Ich bin ueberfordert mit allem.
+    B: Wie kann ich helfen?
+    A: Nimm mir was ab.
+    B: Was soll ich uebernehmen?
+  - |
+    A: Unsere Kommunikation funktioniert nicht.
+    B: Was koennen wir besser machen?
+    A: Mehr zuhoeren, weniger unterstellen.
+    B: Guter Punkt, ich achte drauf.
+  - |
+    A: Du vergisst immer die wichtigen Sachen.
+    B: Stimmt, ich muss das besser organisieren.
+    A: Bitte tu das.
+    B: Ich nutze ab jetzt eine App dafuer.
+  - |
+    A: Ich bin traurig wegen gestern.
+    B: Was ist passiert?
+    A: Dein Kommentar hat mich verletzt.
+    B: Das war nicht meine Absicht, sorry.
+  - |
+    A: Du nimmst dir keine Zeit fuer mich.
+    B: Das aendere ich.
+    A: Wirklich?
+    B: Ja, Freitag Abend gehoert dir.
+  - |
+    A: Warum machst du das immer so?
+    B: Ich wusste nicht, dass dich das stoert.
+    A: Jetzt weisst du es.
+    B: Okay, ich aendere das.
+  - |
+    A: Ich brauche mehr Verstaendnis.
+    B: Wie kann ich das zeigen?
+    A: Einfach zuhoeren ohne zu bewerten.
+    B: Mache ich.
+  - |
+    A: Der Haushalt bleibt immer an mir haengen.
+    B: Stimmt, das ist nicht gerecht.
+    A: Wir muessen das besser aufteilen.
+    B: Lass uns einen Plan machen.
+  - |
+    A: Dein Ton war verletzend.
+    B: Entschuldigung.
+    A: Sprich bitte respektvoll mit mir.
+    B: Du hast recht, das mache ich.
+  - |
+    A: Ich will mehr Ehrlichkeit.
+    B: Was meinst du genau?
+    A: Keine Halbwahrheiten mehr.
+    B: Einverstanden.
+  - |
+    A: Das Thema muessen wir endlich klaeren.
+    B: Ja, du hast recht.
+    A: Wann passt es dir?
+    B: Heute Abend nach dem Essen.
+  - |
+    A: Ich fuehle mich vernachlaessigt.
+    B: Das stimmt, ich war zu beschaeftigt.
+    A: Ich brauche Aufmerksamkeit.
+    B: Du bekommst sie, versprochen.
+  - |
+    A: Dein Verhalten nervt mich.
+    B: Was genau?
+    A: Dass du nie aufraemst.
+    B: Okay, ich aendere das.
+  - |
+    A: Wir haben unterschiedliche Erwartungen.
+    B: Ja, lass uns die abgleichen.
+    A: Gerne.
+    B: Was erwartest du?
+  - |
+    A: Du haettest das anders machen sollen.
+    B: Ja, das sehe ich ein.
+    A: Naechstes Mal bitte vorher fragen.
+    B: Mache ich.
+  - |
+    A: Ich brauche eine Veraenderung.
+    B: Was genau?
+    A: Mehr gemeinsame Aktivitaeten.
+    B: Gute Idee, was moechtest du machen?
+  - |
+    A: Du ignorierst meine Wuensche.
+    B: Das wollte ich nicht.
+    A: Dann beruecksichtige sie bitte.
+    B: Okay, sag mir nochmal was dir wichtig ist.
+  - |
+    A: Ich bin genervt von den Streitereien.
+    B: Ich auch.
+    A: Lass uns einen anderen Weg finden.
+    B: Ja, vielleicht mit einer Mediatorin.
+  - |
+    A: Du bist nie ehrlich zu mir.
+    B: Das stimmt nicht, aber ich verstehe den Frust.
+    A: Zeig mir dass du ehrlich bist.
+    B: Ab jetzt sage ich dir alles.
+  - |
+    A: Ich kann so nicht weiterarbeiten.
+    B: Was brauchst du?
+    A: Klarere Strukturen.
+    B: Ich erstelle einen Projektplan.
+  - |
+    A: Das Thema ist mir wichtig.
+    B: Mir auch.
+    A: Dann nimm es bitte ernst.
+    B: Mache ich, rede weiter.
+  - |
+    A: Wir muessen uns zusammensetzen.
+    B: Ja, wann passt dir?
+    A: Samstag Morgen.
+    B: Okay, blocke ich mir.
+  - |
+    A: Ich fuehle mich ausgenutzt.
+    B: Das tut mir leid.
+    A: Es muss sich was aendern.
+    B: Was schlägst du vor?
+  - |
+    A: Dein Verhalten macht mich traurig.
+    B: Was genau?
+    A: Dass du nicht zuhoerst.
+    B: Ich hoere jetzt zu, erzaehl.
+  - |
+    A: Wir brauchen bessere Regeln.
+    B: Einverstanden.
+    A: Zum Beispiel keine Handys beim Essen.
+    B: Gute Regel, bin dabei.
+  - |
+    A: Ich bin unzufrieden mit unserer Situation.
+    B: Was stoert dich am meisten?
+    A: Die fehlende Kommunikation.
+    B: Lass uns das aendern.
+  - |
+    A: Wir haben ein Zeitproblem.
+    B: Wie meinst du das?
+    A: Wir sehen uns zu selten.
+    B: Lass uns feste Zeiten einplanen.
+  - |
+    A: Du bist oft abwesend, auch wenn du da bist.
+    B: Stimmt, ich bin oft in Gedanken.
+    A: Sei bitte praesenter.
+    B: Ich versuche es.
+  - |
+    A: Ich bin frustriert.
+    B: Warum?
+    A: Weil nichts vorangeht.
+    B: Was konkret? Lass uns das angehen.
+  - |
+    A: Ich erwarte mehr Initiative von dir.
+    B: In welchem Bereich?
+    A: Im Haushalt und bei Unternehmungen.
+    B: Okay, ich uebernehme die Planung fuer naechstes Wochenende.
+  - |
+    A: Mir fehlt Wertschaetzung.
+    B: Das tut mir leid zu hoeren.
+    A: Ein Danke ab und zu wuerde reichen.
+    B: Du hast recht, danke dass du das sagst.
   negative:
-  - "A: ich wuensche mir Verlässlichkeit.\nB: Ich kann an meiner Planung arbeiten.\nA: Mir hilft ein klarer Rhythmus.\nB: Lass uns montags abstimmen.\n"
-  - "A: Ich mag wenige plötzlichen Änderungen.\nB: Okay, ich kündige es vorher an.\nA: Das hilft mir.\nB: Danke fürs Feedback.\n"
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
+  - |
+    A: Entweder du aenderst dich oder ich gehe.
+    B: Das ist ein Ultimatum!
+    A: Nenn es wie du willst.
+    B: So kann man nicht miteinander reden.
+  - |
+    A: Wenn du das noch einmal machst, sind wir fertig.
+    B: Du drohst mir?
+    A: Ich sage dir nur die Konsequenz.
+  - |
+    A: Du hast bis Freitag Zeit, danach ist Schluss.
+    B: Das ist Erpressung!
+    A: Das ist Realitaet.
+  - |
+    A: Letzte Chance. Aendere dich oder ich ziehe aus.
+    B: Das machst du nicht.
+    A: Willst du es drauf ankommen lassen?
+  - |
+    A: Ich gebe dir eine Woche. Wenn nichts passiert, bin ich weg.
+    B: Du kannst mich nicht so unter Druck setzen.
+  - |
+    A: Entweder Therapie oder Trennung. Deine Wahl.
+    B: Das ist unfair.
+    A: Das Leben ist unfair.
+  - |
+    A: Wenn du nochmal zu spaet kommst, koennen wir das Ganze vergessen.
+    B: Du uebertreibst.
+    A: Nein, ich meine es ernst.
+  - "Der Kuchen ist gut geworden."
+  - "Hast du den Wetterbericht gesehen?"
+  - "Ich muss noch einkaufen."
+  - "Wann faengt der Film an?"
+  - "Ich habe die Rechnung bezahlt."
+  - "Das Buch ist interessant."
+  - "Morgen regnet es."
+  - "Ich bin muede."
+  - "Hast du Lust auf Pizza?"
+  - "Der Garten sieht schoen aus."
+  - "Ich brauche neue Socken."
+  - "Das Auto muss zum TUeV."
+  - "Wir haben noch Milch."
+  - "Ich ruf dich an."
+  - "Schoenes Wochenende!"
+  - "Danke fuer die Hilfe."
+  - "Tschuess, bis bald."
+  - "Guten Morgen!"
 tags: [mema, omission, deeskalation, positiv]
+semiotic: {peirce: index, signifikat: Konfliktdynamik, framing_type: eskalation, cultural_frame: Gottman, myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'}

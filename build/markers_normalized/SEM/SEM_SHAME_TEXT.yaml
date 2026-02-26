@@ -40,6 +40,12 @@ composed_of:
 scoring:
   base: 1.4
   weight: 1.1
+semiotic:
+  peirce: icon
+  signifikat: Scham
+  framing_type: schuld
+  cultural_frame: ''
+  myth: 'Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung'
 compositionality: deterministic
 vad_estimate:
   valence: -0.65

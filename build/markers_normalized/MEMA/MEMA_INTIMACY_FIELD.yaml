@@ -1,0 +1,116 @@
+id: MEMA_INTIMACY_FIELD
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - intimacy
+  - field
+  concept: Intimitätsfeld – Grad der emotionalen Nähe im Gespräch
+  pragmatics: Erkennt die aktuelle Intimitätsstufe und -veränderung
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Ich hab dir gerade etwas erzählt, das ich noch nie jemandem gesagt habe.
+  - Ich fühle mich dir so nah wie schon lange nicht mehr.
+  - In diesem Moment fühlt es sich an, als wärst du der einzige Mensch auf der Welt.
+  - Ich will, dass du alles von mir weißt – auch die dunklen Seiten.
+  - Wenn ich mit dir rede, lasse ich alle Masken fallen.
+  - Ich spüre eine Verbindung zu dir, die ich nicht erklären kann.
+  - Du bist der Mensch, dem ich am meisten vertraue.
+  - Ich hab dir mein Herz geöffnet und es fühlt sich richtig an.
+  - In deiner Gegenwart kann ich einfach ich sein.
+  - Ich hab noch nie so offen über meine Ängste gesprochen.
+  - Diese Nähe zwischen uns – die ist selten und kostbar.
+  - Ich fühle mich bei dir sicher genug, um verletzlich zu sein.
+  - Du kennst mich besser als ich mich selbst.
+  - Ich möchte alles mit dir teilen – Freude und Schmerz.
+  - Unsere Gespräche gehen tiefer als bei jedem anderen Menschen.
+  - Ich fühle eine Seelenverwandtschaft mit dir.
+  - Du berührst mich emotional auf eine Art, die mich überwältigt.
+  - Ich hab noch nie so viel von mir preisgegeben.
+  - In diesem Moment fühle ich mich dir unendlich nah.
+  - Ich zeige dir Teile von mir, die sonst niemand sieht.
+  - Unsere Intimität geht über das Körperliche hinaus.
+  - Ich kann vor dir weinen, ohne mich zu schämen.
+  - Du siehst mich wirklich – nicht nur die Oberfläche.
+  - Dieses Gespräch hat uns näher gebracht als die letzten Monate.
+  - Ich vertraue dir mit meinem Innersten.
+  - Die Verbindung zwischen uns ist auf einem Level, das mich erstaunt.
+  - Ich hab das Gefühl, du verstehst mich ohne Worte.
+  - Ich bin emotional ganz bei dir in diesem Moment.
+  - Unsere Nähe gibt mir Kraft.
+  - Ich hab mich noch nie so verbunden gefühlt.
+  - Du bist mein sicherer Hafen.
+  - Ich kann mit dir über alles reden – wirklich alles.
+  - Unsere Beziehung hat eine Tiefe erreicht, die mich berührt.
+  - Ich fühle mich gesehen und angenommen von dir.
+  - In deinen Armen ist die Welt in Ordnung.
+  - Du bist der Mensch, zu dem ich morgens um drei anrufen würde.
+  - Ich hab dir mehr erzählt als meinem Therapeuten.
+  - Unsere emotionale Verbindung ist das Wertvollste, was ich habe.
+  - Ich fühle Geborgenheit bei dir.
+  - Du weißt Dinge über mich, die ich kaum mir selbst eingestehe.
+  - Diese Nähe macht mir Angst – und gleichzeitig will ich mehr davon.
+  - Ich bin emotional nackt vor dir und das ist okay.
+  - Du bist mein Zuhause.
+  - Ich hab noch nie jemanden so nah an mich rangelassen.
+  - Die Intimität zwischen uns ist atemberaubend.
+  - Ich teile mit dir, was in mir vorgeht – ungefiltert.
+  - Du bist die Person, mit der ich alt werden will.
+  - Ich hab mich komplett geöffnet und fühle mich gehalten.
+  - Unsere Verbindung ist einzigartig.
+  - Ich liebe die Tiefe unserer Gespräche.
+  negative:
+  - Wir reden über Oberflächliches – Wetter, Arbeit, Alltag.
+  - Ich kenne dich gar nicht wirklich.
+  - Wir reden viel, aber nichts Tiefgründiges.
+  - Unsere Gespräche bleiben an der Oberfläche.
+  - Ich weiß nicht, was in dir vorgeht.
+  - Wir haben Smalltalk, aber keine echten Gespräche.
+  - Emotional sind wir uns fremd.
+  - Du erzählst mir nie, wie du dich wirklich fühlst.
+  - Wir funktionieren zusammen, aber wir verbinden uns nicht.
+  - Die Tiefe fehlt in unserer Kommunikation.
+  - Ich wüsste gerne, was du denkst – aber du sagst es nicht.
+  - Wir leben nebeneinander her.
+  - Du bist verschlossen und ich komme nicht an dich ran.
+  - Unsere Gespräche sind nett, aber leer.
+  - Ich vermisse die emotionale Nähe.
+  - Wir reden über Termine, aber nie über Gefühle.
+  - Du weichst tiefgehenden Gesprächen aus.
+  - Ich fühle mich dir fern, obwohl wir zusammenleben.
+  - Wir haben keine Verbindung auf emotionaler Ebene.
+  - Du lässt mich nicht rein.
+  - Unsere Beziehung ist funktional, aber nicht intim.
+  - Ich sehne mich nach Nähe, die wir nicht haben.
+  - Du erzählst mir nichts Persönliches.
+  - Wir sind wie Mitbewohner – freundlich, aber distanziert.
+  - Die emotionale Tiefe fehlt uns.
+tags:
+- mema
+- intimacy
+- closeness
+- connection
+rating: 2
+composed_of:
+  required_any:
+  - SEM_EMPATHIC_RESONANCE
+  - CLU_EMOTIONAL_DEEPENING
+  supportive:
+  - ATO_SELF_DISCLOSURE
+  - SEM_VALIDATION_SEEKING
+activation:
+  rule: "ANY 2 IN 15 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+semiotic:
+  peirce: icon
+  signifikat: Nähe/Intimität
+  framing_type: meta
+  cultural_frame: Beziehungsdynamik
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

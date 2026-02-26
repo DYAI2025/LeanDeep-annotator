@@ -12,21 +12,56 @@ activation: {rule: "ANY 1 IN 1 message"}
 scoring: {base: 0.55, weight: 1.0}
 examples:
   positive:
-  - "Ich mache mir selbst Mut."
-  - "Ich muntere mich selbst auf."
-  - "Ich stehe mir selbst zur Seite."
-  - "Ich sage mir: Du schaffst das."
-  - "Ich stärke mich innerlich."
-  - "Ich rede mir gut zu."
-  - "Ich erinnere mich an meine Stärken."
-  - "Ich halte zu mir."
-  - "Ich beruhige mich selbst."
-  - "Ich gebe mir Halt."
-  - "Ich baue mich wieder auf."
-  - "Ich bin freundlich zu mir."
-  - "Ich bleibe zugewandt mit mir."
-  - "Ich sporne mich an."
-  - "Ich motiviere mich selbst."
+  - Ich mache mir selbst Mut.
+  - Ich muntere mich selbst auf.
+  - Ich stehe mir selbst zur Seite.
+  - 'Ich sage mir: Du schaffst das.'
+  - Ich stärke mich innerlich.
+  - Ich rede mir gut zu.
+  - Ich erinnere mich an meine Stärken.
+  - Ich halte zu mir.
+  - Ich beruhige mich selbst.
+  - Ich gebe mir Halt.
+  - Ich baue mich wieder auf.
+  - Ich bin freundlich zu mir.
+  - Ich bleibe zugewandt mit mir.
+  - Ich sporne mich an.
+  - Ich motiviere mich selbst.
+  - 'Ich sage mir immer wieder: Du bist stark genug.'
+  - Ich stehe morgens auf und rede mir Mut zu.
+  - Ich hab mir vorgenommen, heute nett zu mir zu sein.
+  - Ich feiere meine kleinen Erfolge bewusst.
+  - Ich gebe mir die Erlaubnis, Fehler zu machen.
+  - Ich erlaube mir, langsam zu sein.
+  - 'Ich sage mir: Es ist okay, nicht perfekt zu sein.'
+  - Ich klopfe mir innerlich auf die Schulter.
+  - Ich spreche liebevoll mit mir selbst.
+  - Ich nehme mich selbst in den Arm, so mental halt.
+  - 'Ich atme durch und sage mir: Es wird besser.'
+  - Ich gönne mir Pausen ohne schlechtes Gewissen.
+  - Ich stärke mich mit positiven Gedanken.
+  - Ich sage mir, dass ich das Recht habe, traurig zu sein.
+  - Ich bin mein eigener bester Freund gerade.
+  - Ich mache mir bewusst, was ich alles geschafft habe.
+  - Ich halte mich an meinen eigenen Worten fest.
+  - Ich ermutige mich selbst, weiterzumachen.
+  - 'Ich sage mir: Du hast schon Schlimmeres überstanden.'
+  - Ich versuche, mir selbst eine gute Beraterin zu sein.
+  - Ich tröste mich damit, dass morgen ein neuer Tag ist.
+  - Ich nehme mir vor, gut auf mich aufzupassen.
+  - 'Ich höre auf meine innere Stimme, die sagt: Das packst du.'
+  - Ich behandle mich so, wie ich eine Freundin behandeln würde.
+  - Ich bin geduldig mit mir, auch wenn es schwer fällt.
+  - Ich lobe mich für das, was ich heute geschafft hab.
+  - Ich halte mir vor Augen, dass ich wertvoll bin.
+  - 'Ich rede mir ein: Schritt für Schritt.'
+  - Ich gebe mir den Raum, den ich brauche.
+  - 'Ich sage mir: Du darfst auch mal schwach sein.'
+  - Ich stehe hinter mir, egal was die anderen sagen.
+  - Ich vertraue darauf, dass ich das hinkriege.
+  - Ich unterstütze mich selbst in dieser Phase.
+  - Ich achte auf meine Bedürfnisse und nehme sie ernst.
+  - Ich bin stolz auf mich, auch wenn es nur Kleinigkeiten sind.
   negative:
   - Kannst du mir das Salz reichen?
   - Der Termin ist um 14 Uhr.
@@ -35,6 +70,25 @@ examples:
   - Hast du die E-Mail gelesen?
   - Ich muss noch tanken.
   - Die Besprechung ist im Konferenzraum.
+  - Ich habe den Zug verpasst.
+  - Der Film war echt langweilig.
+  - Hast du schon gegessen?
+  - Morgen kommt meine Schwester zu Besuch.
+  - Ich hab vergessen, Milch zu kaufen.
+  - Die Waschmaschine ist kaputt.
+  - Er hat mir gesagt, ich solle stärker sein.
+  - Mein Chef hat mich heute gelobt.
+  - Die Kinder waren heute brav.
+  - Ich habe die Rechnung bezahlt.
+  - Das Meeting wurde verschoben.
+  - Wann hast du Feierabend?
+  - Ich brauche neue Schuhe.
+  - Der Supermarkt schließt um 20 Uhr.
+  - Du solltest mal einen Therapeuten aufsuchen.
+  - Mein Kollege hat mir geholfen.
+  - Wir haben morgen frei.
+  - Ich schaue heute Abend Netflix.
 compositionality: deterministic
 vad_estimate: {valence: 0.4, arousal: 0.35, dominance: 0.5}
 effect_on_state: {trust: 0.3, conflict: -0.25, deesc: 0.3}
+semiotic: {peirce: index, signifikat: Unterstuetzung/Beistand, framing_type: bindung, cultural_frame: '', myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

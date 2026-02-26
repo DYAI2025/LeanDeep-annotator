@@ -39,6 +39,12 @@ composed_of:
 - ATO_POWER_ASSERTION
 activation:
   rule: AT_LEAST 2 IN 3 messages
+semiotic:
+  peirce: icon
+  signifikat: Ambivalenz/Zwiespalt
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: -0.2

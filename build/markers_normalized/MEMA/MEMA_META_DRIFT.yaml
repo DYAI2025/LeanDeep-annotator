@@ -18,14 +18,77 @@ examples:
   - Signal 1 … später Signal 2 im Kontext
   - Kombination aus Token X und Y
   - Variante mit ähnlicher Semantik
+  - Erst Konflikteskalation, dann Themenwechsel, dann Unsicherheitskaskade. Zwei CLUs in 10 Nachrichten. Meta-Drift.
+  - 'Nachricht 1-3: Streit eskaliert. Nachricht 5-7: Thema wechselt. Nachricht 8-10: Kreisargumentation. Drift erkannt.'
+  - CLU_CONFLICT_ESCALATION + CLU_TOPIC_DRIFT in einem Fenster. Gespraech driftet auf Meta-Ebene.
+  - Erst Unsicherheitskaskade, dann Werte-Reframe. Zwei verschiedene CLUs in 10 Nachrichten. Meta-Drift.
+  - 'Chat zeigt: Eskalation -> Abdriften -> Kreisschluss. Mindestens 2 CLUs aktiv. Drift.'
+  - Themenwechsel mitten im Konflikt, dann Kreisargumentation. Das Gespraech verliert die Richtung.
+  - 'A: Wir streiten ueber Geld. [Dann ploetzlich] A: Das Grundproblem ist Vertrauen. [Dann] A: Wir drehen uns im Kreis.'
+  - 'Meta-Drift: Erst esklaiert der Konflikt, dann wird er umgedeutet, dann wird ueber das Reden geredet.'
+  - CLU_UNCERTAINTY_CASCADE + CLU_CIRCULAR_REASONING in einem Fenster. Der Drift ist messbar.
+  - 'Gespraech zeigt: Eskalation -> Werte-Reframe -> Kreisschluss -> Neuer Konflikt. Meta-Drift im Gang.'
+  - 'In 10 Nachrichten: Erst Streit, dann Topic-Drift, dann zurueck zum Streit in anderer Form. Meta-Drift.'
+  - 'Dominante Muster wechseln: Erst Eskalation, dann Unsicherheit, dann neues Thema. Drift erkennbar.'
+  - 'A: Warum tust du das? B: Du verstehst nicht! A: Wir reden immer ueber das Gleiche. B: Nein, wir reden nie richtig.'
+  - 'Chat driftet: Vom konkreten Thema zum Grundsatzproblem zum Beziehungsthema zum Schweigen.'
+  - 'Meta-Drift erkannt: Konflikt -> Themenwechsel -> Werteverschiebung. Mindestens 2 CLUs in 10 Nachrichten.'
+  - Erst wird gestritten, dann wird das Thema gewechselt, dann wird kreisfoermig argumentiert. Klassischer Drift.
+  - 'Nachricht 1: Konkretes Problem. Nachricht 5: Grundsatzfrage. Nachricht 10: Existenzkrise. Drift.'
+  - 'CLU_TOPIC_DRIFT + CLU_VALUE_REFRAME: Thema wechselt und wird gleichzeitig neu bewertet. Meta-Drift.'
+  - 'Der Gespraechsverlauf zeigt: Mindestens 2 verschiedene CLU-Muster in 10 Nachrichten. Drift bestätigt.'
+  - 'A: Es geht ums Aufraemen. [Dann] A: Es geht um Respekt. [Dann] A: Es geht um alles. Drift.'
+  - Unsicherheit -> Themenwechsel -> Eskalation. Drei Muster in 10 Nachrichten. Meta-Drift.
+  - 'Das Gespraech driftet systematisch: Jedes Thema fuehrt zum naechsten, keines wird geloest.'
+  - 'Meta-Drift: Erst wird der Konflikt benannt, dann der Wert dahinter, dann die Unsicherheit dahinter.'
+  - 'In 10 Nachrichten: Konflikt-Eskalation und Topic-Drift gleichzeitig. Das Gespraech zerfaellt.'
+  - 'A: Wir streiten ueber die Spuelmaschine. B: Nein, wir streiten ueber Verantwortung. A: Nein, ueber unsere Beziehung!'
+  - 'CLU_CONFLICT_ESCALATION + CLU_UNCERTAINTY_CASCADE: Streit eskaliert und Unsicherheit waechst. Drift.'
+  - 'Gespraech zeigt Drift-Muster: Vom Konkreten zum Abstrakten zum Unloebaren.'
+  - 'Meta-Ebene erreicht: Wir reden nicht mehr ueber das Problem, sondern darueber wie wir darueber reden.'
+  - 'In einem Fenster: Themenwechsel + Kreisargumentation. Das Gespraech driftet auf Meta-Ebene.'
+  - 'Drift erkannt: Erst sachlich, dann emotional, dann existenziell. Die Ebenen wechseln unkontrolliert.'
+  - 'A: Das nervt mich. -> B: Du nervst mich! -> A: Wir nerven uns immer. -> B: Warum sind wir zusammen?'
+  - 'Der Chat zeigt: Mindestens 2 distinkte CLU-Muster innerhalb von 10 Nachrichten. Meta-Drift aktiv.'
+  - 'Drift-Spirale: Thema -> Themenwechsel -> Wertekonflikt -> Unsicherheit -> neues Thema -> Drift.'
+  - In 10 Nachrichten von 'Wer bringt den Muell raus' zu 'Unsere Beziehung hat ein Grundproblem'. Meta-Drift.
+  - 'CLU_CIRCULAR_REASONING + CLU_CONFLICT_ESCALATION: Im Kreis streiten, dabei eskalieren. Drift.'
+  - 'Muster: Das Gespraech wird immer abstrakter, verliert den Boden. Von konkret zu meta. Drift.'
+  - 'A: Ich bin sauer wegen gestern. -> A: Eigentlich bin ich sauer wegen immer. -> A: Was machen wir falsch?'
+  - 'Meta-Drift messbar: Dominante Familien wechseln im Fenster. Erst Eskalation, dann Vermeidung.'
+  - 'Gespraech driftet: Konfrontation -> Ausweichen -> Neues Thema -> Wieder Konfrontation. Zyklisch.'
+  - 'In 8 Nachrichten: Werteverschiebung + Themenwechsel. Das Gespraech hat keinen festen Kern mehr.'
+  - "Meta-Drift: Von 'Du hast vergessen einzukaufen' zu 'Du vergisst immer alles' zu 'Bin ich dir egal?'"
+  - 'Der Drift ist klar: Erst konkretes Problem, dann Grundsatzstreit, dann Beziehungsfrage, dann Schweigen.'
+  - 'Zwei CLUs in 10 Nachrichten: Das Gespraech ist auf Meta-Ebene angekommen. Drift bestaetigt.'
+  - Von Alltagsthema zu Lebensthema in 10 Nachrichten. Klassischer Meta-Drift.
+  - 'CLU_VALUE_REFRAME + CLU_TOPIC_DRIFT: Werte werden verschoben waehrend das Thema wechselt. Doppelter Drift.'
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Wir reden ueber ein Thema, bleiben dabei, loesen es.
+  - Normaler Gespraechsverlauf ohne Abdriften.
+  - Ein Streit, der bei dem Thema bleibt.
+  - Sachliche Diskussion, kein Themenwechsel.
+  - Wir besprechen ein Problem und finden eine Loesung.
+  - Keine Eskalation, kein Drift, alles beim Thema.
+  - 'A: Das nervt mich. B: Okay, was machen wir? Problem geloest.'
+  - Gespraech ueber Alltag, ohne Meta-Ebene.
+  - Ein einzelnes CLU-Muster, kein zweites. Kein Drift.
+  - Lineares Gespraech von A nach B.
+  - Wir streiten, aber ueber genau ein Thema.
+  - Sachlicher Austausch ohne emotionale Eskalation.
+  - Das Gespraech hat einen roten Faden.
+  - Ein Thema, durchbesprochen, abgeschlossen.
+  - Keine Kreisargumentation, keine Eskalation.
+  - Wir wechseln das Thema bewusst und klar.
+  - Normaler Chat ohne Drift-Muster.
+  - Sachlich, fokussiert, loesungsorientiert.
+  - Ein Streit, aber er bleibt beim Punkt.
+  - Kein Meta-Drift, einfach ein Gespraech.
+  - Wir reden ueber Wetter und Alltag. Kein Drift.
+  - Klares Thema, klare Loesung, fertig.
+  - Gespraech ohne Eskalation oder Themenwechsel.
+  - Problemloesung in 5 Nachrichten. Kein Drift.
+  - Fokussierter Austausch, jeder bleibt beim Thema.
 tags: []
 rating: 1
 composed_of:
@@ -39,6 +102,12 @@ activation:
 scoring:
   base: 1.5
   weight: 1.2
+semiotic:
+  peirce: index
+  signifikat: Themenwechsel/Abdriften
+  framing_type: vermeidung
+  cultural_frame: ''
+  myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'
 metadata:
   report:
     emit: true

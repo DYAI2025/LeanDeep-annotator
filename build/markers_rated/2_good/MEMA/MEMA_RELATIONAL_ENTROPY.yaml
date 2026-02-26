@@ -1,0 +1,104 @@
+id: MEMA_RELATIONAL_ENTROPY
+version: "3.4"
+frame:
+  signal: ["relational", "entropy"]
+  concept: "Relationale Entropie – zunehmender Ordnungsverlust in der Beziehung"
+  pragmatics: "Erkennt schleichenden Verfall von Beziehungsstrukturen"
+  narrative: "meta_pattern"
+tags: [mema, entropy, deterioration, chaos]
+composed_of:
+  required_any:
+  - CLU_REPETITIVE_CONFLICT
+  - SEM_EMOTIONAL_OVERWHELM
+  supportive:
+  - SEM_CONFLICT_AVOIDANCE
+  - ATO_WITHDRAWAL
+activation:
+  rule: "ANY 3 IN 25 messages"
+scoring:
+  base: 2.0
+  weight: 1.3
+examples:
+  positive_de:
+  - "Alles zerfällt langsam – unsere Rituale, unsere Gespräche, unser Zusammenhalt."
+  - "Wir haben aufgehört, uns Gute-Nacht zu sagen. Dann aufgehört zu reden. Dann aufgehört zu versuchen."
+  - "Es gibt keine Struktur mehr in unserem Zusammenleben."
+  - "Früher hatten wir Regeln und Rituale. Jetzt herrscht Chaos."
+  - "Unsere Beziehung löst sich auf wie Zucker im Wasser – langsam, aber unaufhaltsam."
+  - "Die kleinen Dinge sind verschwunden: kein Guten-Morgen, kein Kuss, keine Frage nach dem Tag."
+  - "Wir driften auseinander und keiner steuert dagegen."
+  - "Es herrscht Unordnung auf allen Ebenen – emotional, organisatorisch, kommunikativ."
+  - "Früher wussten wir, wo wir stehen. Jetzt ist alles unklar."
+  - "Die Beziehung zerfällt und ich kann es nicht aufhalten."
+  - "Wir haben keine gemeinsamen Abende mehr, keine Pläne, keine Ziele."
+  - "Die Struktur unserer Beziehung bricht zusammen."
+  - "Nichts funktioniert mehr: die Kommunikation nicht, der Alltag nicht, die Intimität nicht."
+  - "Wir verlieren den Zusammenhalt Stück für Stück."
+  - "Es ist wie Erosion – langsam, aber unaufhaltsam."
+  - "Unsere Routinen sind zerbrochen und nichts Neues tritt an ihre Stelle."
+  - "Das Chaos nimmt zu und die Ordnung schwindet."
+  - "Wir haben aufgehört, uns zu kümmern – um die Beziehung und umeinander."
+  - "Alles verfällt: die Kommunikation, die Zuneigung, das Vertrauen."
+  - "Die Beziehung ist wie ein vernachlässigter Garten – alles verwildert."
+  - "Früher hatten wir eine Struktur. Jetzt ist nur noch Verfall."
+  - "Wir sind nicht mal mehr in der Lage, einen normalen Tagesablauf zu organisieren."
+  - "Es löst sich alles auf – wie Nebel, der sich verteilt."
+  - "Die Bindung wird schwächer, die Distanz größer."
+  - "Unsere Beziehung stirbt einen leisen Tod."
+  - "Wir haben keine gemeinsame Basis mehr."
+  - "Es gibt keine Verlässlichkeit mehr – alles ist im Fluss, aber nicht im guten Sinne."
+  - "Der Verfall ist spürbar: weniger reden, weniger teilen, weniger fühlen."
+  - "Wir funktionieren nur noch auf dem absoluten Minimum."
+  - "Die Entropie hat gewonnen – Ordnung gibt es hier nicht mehr."
+  - "Unsere Beziehung ist ein Wrack in Zeitlupe."
+  - "Früher hatten wir Energie füreinander. Jetzt nur noch Gleichgültigkeit."
+  - "Alles zerfällt und keiner hat die Kraft, es aufzuhalten."
+  - "Wir haben keine gemeinsamen Mahlzeiten mehr, keine Gespräche, keine Berührungen."
+  - "Die Beziehung verwest – langsam und leise."
+  - "Es gibt keine Grundlage mehr, auf der wir aufbauen können."
+  - "Der Zerfall ist allgegenwärtig."
+  - "Wir leben in einem Zustand permanenter Auflösung."
+  - "Die Beziehung hat ihre Form verloren."
+  - "Unsere Welt zusammen schrumpft täglich."
+  - "Es gibt kein Fundament mehr – nur noch Ruinen."
+  - "Wir verlieren uns, Stück für Stück, Tag für Tag."
+  - "Die Qualität unserer Beziehung sinkt kontinuierlich."
+  - "Alles, was uns verbunden hat, löst sich auf."
+  - "Die Beziehung ist wie ein leckes Boot – sie sinkt langsam."
+  - "Wir haben die Kontrolle über uns verloren."
+  - "Es gibt keine Stabilität mehr in unserem Zusammenleben."
+  - "Die Entropie unserer Beziehung beschleunigt sich."
+  - "Wir sind auf dem Weg in die totale Auflösung."
+  - "Nichts hält uns mehr zusammen."
+  negative_de:
+  - "Wir haben eine gute Struktur in unserem Zusammenleben."
+  - "Unsere Routinen geben uns Halt."
+  - "Wir pflegen unsere Beziehung bewusst."
+  - "Es gibt feste Rituale, die uns verbinden."
+  - "Wir haben einen stabilen Rahmen für unseren Alltag."
+  - "Unsere Beziehung hat ein starkes Fundament."
+  - "Wir investieren regelmäßig in unsere Partnerschaft."
+  - "Es gibt Struktur und Verlässlichkeit bei uns."
+  - "Wir haben gemeinsame Ziele und Pläne."
+  - "Unsere Beziehung ist stabil und gepflegt."
+  - "Wir kümmern uns aktiv umeinander."
+  - "Es gibt Ordnung und Harmonie in unserem Zusammenleben."
+  - "Wir haben bewährte Muster, die funktionieren."
+  - "Unsere Rituale geben uns Sicherheit."
+  - "Wir sind aufeinander abgestimmt."
+  - "Die Basis stimmt und wir arbeiten daran, sie zu stärken."
+  - "Unsere Beziehung wächst und gedeiht."
+  - "Wir haben eine gesunde Routine."
+  - "Die Struktur unseres Alltags funktioniert gut."
+  - "Wir sind ein eingespieltes Team."
+  - "Es gibt Verbindlichkeit und Wärme bei uns."
+  - "Unsere Beziehung hat Bestand."
+  - "Wir pflegen unsere Verbindung aktiv."
+  - "Es herrscht Ordnung und Zufriedenheit."
+  - "Wir haben ein stabiles Netz, das uns trägt."
+semiotic:
+  peirce: index
+  signifikat: Beziehungsdynamik
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

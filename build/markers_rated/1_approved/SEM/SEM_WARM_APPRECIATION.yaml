@@ -10,9 +10,9 @@ frame:
   narrative: "care"
 tags: [semantic, gratitude, warmth, positive]
 composed_of:
-  - ATO_GRATITUDE
-  - ATO_COURTESY_FORMAL
-  - ATO_GRATITUDE_APPRECIATION
+- ATO_GRATITUDE
+- ATO_COURTESY_FORMAL
+- ATO_GRATITUDE_APPRECIATION
 activation:
   mode: "co_occurrence"
   min_components: 1
@@ -41,3 +41,4 @@ examples:
   - "Danke für nichts."
   - "Brauchst du nicht, ich komme alleine klar."
   - "Das hilft mir jetzt auch nicht weiter."
+semiotic: {peirce: icon, signifikat: Waerme/Herzlichkeit, framing_type: bindung, cultural_frame: '', myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

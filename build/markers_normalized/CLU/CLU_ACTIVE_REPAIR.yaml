@@ -32,6 +32,36 @@ examples:
   - Klärung jetzt.
   - Entschuldigung.
   - 'Zugeständnis: Ok.'
+  - Hey, das vorhin war nicht in Ordnung von mir, tut mir aufrichtig leid
+  - Ich merke dass ich dich verletzt habe und das wollte ich nicht
+  - Können wir nochmal von vorn anfangen? Ich war unfair
+  - Du hattest recht und ich lag falsch, das gebe ich zu
+  - Ich möchte mich entschuldigen für meinen Ton gestern Abend
+  - Lass mich dir erklären warum ich so reagiert habe, und dann hör ich dir zu
+  - Ich sehe ein dass mein Verhalten nicht ok war, sorry dafür
+  - Was kann ich tun damit es dir besser geht? Sag mir was du brauchst
+  - Ich nehme mir das zu Herzen was du gesagt hast
+  - Entschuldige bitte, ich war gestresst und hab es an dir ausgelassen
+  - Ich will das zwischen uns wieder in Ordnung bringen, echt jetzt
+  - Du bist mir wichtig und ich will nicht dass wir so weitermachen
+  - Ich hab drüber nachgedacht und du hattest in vielen Punkten recht
+  - Lass uns einen Kompromiss finden, ich bin bereit dafür
+  - Es tut mir leid, ich hätte besser zuhören sollen statt zu reagieren
+  - Ich weiß ich war zu hart, das war nicht gerechtfertigt
+  - Können wir bitte in Ruhe darüber reden? Ohne Vorwürfe, von beiden Seiten
+  - Ich übernehme die Verantwortung für meinen Anteil am Streit
+  - Ich will dich verstehen, bitte erkläre mir nochmal was dich so verletzt hat
+  - 'Mein Vorschlag: wir setzen uns heute Abend zusammen und klären das'
+  - Ich war im Unrecht, das ist mir jetzt klar, sorry
+  - Ich schätze dich als Mensch und will diese Beziehung nicht riskieren
+  - Lass uns aufeinander zugehen, ich mache den ersten Schritt
+  - Ich verspreche dir beim nächsten Mal anders zu reagieren
+  - Es lag an mir, nicht an dir, das will ich klarstellen
+  - Ich respektiere deine Gefühle und es tut mir leid dass ich sie verletzt habe
+  - Wollen wir einen Neuanfang versuchen? Ich bin dazu bereit
+  - Danke dass du mir gesagt hast wie es dir geht, ich höre das
+  - Ich brauche dich und will das hier reparieren
+  - Es war ein Fehler und ich stehe dazu, entschuldige bitte
   negative:
   - Das nervt mich.
   - Du bist schuld.
@@ -53,6 +83,11 @@ examples:
   - Ignoranz.
   - Weiterkämpfen.
   - Kein Repair.
+  - Das ist mir jetzt egal, denk was du willst
+  - Ich hab nichts falsch gemacht, DU bist das Problem
+  - Red doch mit der Wand, mir reicht es
+  - Interessiert mich nicht wie du dich fühlst
+  - Selber schuld, hättest du mal nachgedacht
 tags: []
 rating: 1
 composed_of:
@@ -86,6 +121,11 @@ semiotic:
   - "reparatur"
   - "aktiv"
   interpretant: "effect_on_state: {trust: +0.2, conflict: -0.2}"
+  peirce: index
+  signifikat: Beziehungsreparatur
+  framing_type: reparatur
+  cultural_frame: Gottman
+  myth: Kommunikation loest alles — reden heilt, schweigen zerstoert
 temperature_semantics:
   external: RUHE
   latent: REPARIEREND

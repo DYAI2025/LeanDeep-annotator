@@ -52,6 +52,32 @@ examples:
   - "Ich fühle mich so hilflos und verzweifelt. → [später] Ich muss noch die Wäsche machen."
   - "Das ist ein Verrat, ich werde das nie vergessen! → [am nächsten Tag] Ich habe gut geschlafen."
   - "Ich bin so glücklich mit dir, ich könnte die ganze Welt umarmen! → [ein paar Stunden später] Ich muss noch die Spülmaschine ausräumen."
+  - Ich sterbe ohne dich → [wenige Stunden später] Hast du das Rezept für den Kuchen?
+  - Mein Herz bricht gerade → [am nächsten Morgen] Na, was steht heute an?
+  - Ich habe noch nie so geweint → [kurz danach] Übrigens, neues Profilbild!
+  - Das ist der schlimmste Moment meines Lebens → [gleichen Abend] Sollen wir Pizza bestellen?
+  - Ich bin am Rande eines Nervenzusammenbruchs → [nächste Nachricht] Ok cool, mach das so.
+  - Ich liebe dich unendlich, du bist mein Fels → [12 Stunden später] Hmm, whatever.
+  - Ich bin so verletzt, ich weiß nicht weiter → [kurz darauf] Ach ja, wegen dem Meeting morgen...
+  - Das macht mich fertig, ich halte das nicht aus → [am nächsten Tag] Hey, alles gut bei dir?
+  - Du bedeutest mir so viel, ich brauche dich zum Atmen → [nächster Tag] Egal, vergiss es.
+  - Ich fühle mich so einsam und verlassen → [Stunden später] Hast du die neue Folge gesehen?
+  - Ich bin zutiefst erschüttert → [am Morgen danach] Wie war dein Wochenende?
+  - Mein Herz ist gebrochen, ich fühle nichts mehr → [kurz danach] Schick mir mal den Link.
+  - Ich habe panische Angst, dich zu verlieren → [nächste Nachricht] Ok, bis dann.
+  - Das zerstört mich innerlich → [wenig später] Sollen wir heute Abend rausgehen?
+  - Ohne dich hat mein Leben keinen Sinn → [12 Stunden später] Hmm, bin beschäftigt.
+  - Ich bin am Boden, ich kann nicht mehr → [kurz danach] Achso, hab den Schlüssel gefunden.
+  - Du hast mich zutiefst verletzt → [am nächsten Tag] Komm, lass uns was Schönes machen.
+  - Ich fühle so viel Schmerz gerade → [Stunden später] Egal, muss ja weitergehen.
+  - Das ist ein Trauma für mich → [kurz danach] Hey, hast du mein Ladekabel gesehen?
+  - Ich brauche dich so sehr → [am Morgen] Hmm, ok.
+  - Meine Welt bricht zusammen → [wenige Stunden später] Was essen wir heute?
+  - Ich habe solche Angst → [kurz darauf] Ach übrigens, ich bin morgen unterwegs.
+  - Alles tut weh, ich bin am Ende → [nächste Nachricht] Sicher, mach das.
+  - Du bist das Wichtigste in meinem Leben → [am nächsten Tag] Ok, tschüss.
+  - Ich sterbe vor Sehnsucht → [wenig später] Hm, nö, kein Bock.
+  - Mein Herz zerspringt → [am Morgen danach] Guten Morgen, brauchst du was vom Supermarkt?
   negative:
   - ich finde gut dich so sehr, du bedeutest mir alles → [nächster Tag] hey
   - Das ist so wichtig für mich, ich wuensche mir dich → [später] ok, egal
@@ -60,5 +86,24 @@ examples:
   - Das ist ein guter Punkt, den du da machst.
   - Ich verstehe deine Perspektive.
   - Lass uns gemeinsam eine Loesung finden.
+  - Ich war gestern traurig, und heute fühle ich mich etwas besser, das ist ein natürlicher Verlauf.
+  - Ich bin emotional aufgewühlt, aber ich versuche, das zu verarbeiten.
+  - Das hat mich verletzt, und ich brauche Zeit, um das zu verarbeiten. Können wir morgen reden?
+  - Ich bin traurig, aber ich weiß, dass das Gefühl vorübergehen wird.
+  - Mir geht es heute besser als gestern, ich arbeite daran.
+  - Es war ein harter Tag, aber ich fühle mich bereit für morgen.
+  - Ich war wütend, habe mich aber beruhigt und kann jetzt klarer denken.
+  - Die Trauer kommt in Wellen, aber ich lasse sie zu.
+  - Gestern war schlimm, heute ist es leichter. Schritt für Schritt.
+  - Ich habe geweint, aber es hat mir geholfen, klarer zu werden.
+  - Mir geht es emotional auf und ab, aber ich reflektiere das bewusst.
+  - Das Thema belastet mich noch, aber ich kann trotzdem funktionieren.
+  - Ich war gestern verzweifelt, heute bin ich ruhiger. Das ist normal.
+  - Die Emotionen sind da, aber ich gehe bewusst damit um.
+  - Ich bin traurig und gleichzeitig hoffnungsvoll, beides gehört dazu.
+  - Es war ein emotionaler Tag, aber ich habe mit jemandem darüber gesprochen.
+  - Die Intensität hat nachgelassen, aber das Thema beschäftigt mich weiter.
+  - Ich bin verwundbar, zeige es aber bewusst und gehe offen damit um.
 tags: [behavioral_pattern, meta, dissociation, compartmentalization, attachment_trauma]
 schema_version: "3.3"
+semiotic: {peirce: symbol, signifikat: Bindungsmuster, framing_type: bindung, cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

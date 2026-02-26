@@ -12,23 +12,82 @@ pattern:
   flags: ["IGNORECASE"]
 examples:
   positive:
-  - "Ich bin wehrlos."
-  - "Fühle mich ausgeliefert."
-  - "Immer das Opfer."
-  - "Hilflos gerade."
-  - "Ohne Chance."
-  - "Ich komme da nie raus."
-  - "Man macht mit mir, was man will."
-  - "Ich bin ausgeliefert."
-  - "Kein Ausweg für mich."
-  - "Ich hab keine Chance."
+  - Ich bin wehrlos.
+  - Fuehle mich ausgeliefert.
+  - Immer das Opfer.
+  - Hilflos gerade.
+  - Ohne Chance.
+  - Ich komme da nie raus.
+  - Man macht mit mir, was man will.
+  - Ich bin ausgeliefert.
+  - Kein Ausweg fuer mich.
+  - Ich habe keine Chance.
+  - Ich bin voellig wehrlos in der Situation.
+  - Ausgeliefert und allein.
+  - Ich bin immer das Opfer, egal was ich tue.
+  - Hilflos und ohnmaechtig.
+  - Ohne Chance auf Besserung.
+  - Ich kann nichts daran aendern, ich bin wehrlos.
+  - Fuehle mich dem ganzen ausgeliefert.
+  - Ich werde zum Opfer gemacht.
+  - Hilflos gegen die Umstaende.
+  - Ohne jede Chance.
+  - Wehrlos gegen die Ungerechtikeit.
+  - Ich bin der Situation ausgeliefert.
+  - Niemand hilft dem Opfer.
+  - Ich fuehle mich hilflos und klein.
+  - Keine Chance, mich zu wehren.
+  - Ich bin wehrlos gegen seine Argumente.
+  - Ausgeliefert dem System.
+  - Das Opfer bin immer ich.
+  - Hilflos zusehen muessen.
+  - Ohne jede Chance auf Gerechtigkeit.
+  - Ich bin wehrlos und allein.
+  - Fuehle mich dem Schicksal ausgeliefert.
+  - Immer werde ich zum Opfer.
+  - Hilflos und verzweifelt.
+  - Keine Chance, gehoert zu werden.
+  - Wehrlos in dieser Beziehung.
+  - Ich bin ausgeliefert und machtlos.
+  - Das Opfer ist immer der Gleiche.
+  - Hilflos gegen die Uebermacht.
+  - Ohne Chance, etwas zu aendern.
+  - Ich fuehle mich wehrlos und uebergangen.
+  - Ausgeliefert den Entscheidungen anderer.
+  - Immer bin ich das Opfer in der Geschichte.
+  - Hilflos und ohne Stimme.
+  - Keine Chance gegen das System.
+  - Wehrlos, das beschreibt mein Gefuehl.
+  - Dem Ganzen ausgeliefert.
+  - Ich bin das ewige Opfer.
+  - Hilflos zusehen, wie alles zerfaellt.
+  - Ohne Chance und ohne Hoffnung.
   negative:
-  - manchmal das Opfer.
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
+  - Ich nehme die Sache in die Hand.
+  - Ich bin nicht hilflos.
+  - Ich habe die Kontrolle.
+  - Ich kann etwas aendern.
+  - Ich bin handlungsfaehig.
+  - Die Situation ist schwierig, aber ich habe Optionen.
+  - Ich uebernehme Verantwortung.
+  - Ich bin staerker als die Umstaende.
+  - Ich finde einen Weg.
+  - Ich lasse mich nicht unterkriegen.
+  - Ich habe Einfluss auf das Ergebnis.
+  - Ich bin aktiv und gestalte mit.
+  - Ich bin kein Opfer, ich bin ein Gestalter.
+  - Ich habe die Kraft, das zu aendern.
+  - Ich bin selbstbestimmt.
+  - Die Loesung liegt in meinen Haenden.
+  - Ich bin resilient.
+  - Ich lasse mich nicht zum Opfer machen.
+  - Ich bin handlungsfaehig und mutig.
+  - Ich uebernehme die Initiative.
+  - Ich bin nicht machtlos.
+  - Ich kann und werde handeln.
+  - Ich bin staerker als das.
+  - Ich gestalte mein Leben aktiv.
+  - Ich habe immer eine Wahl.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

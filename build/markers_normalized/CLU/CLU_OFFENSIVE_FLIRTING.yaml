@@ -40,3 +40,9 @@ composed_of:
 - SEM_BOUNDARY_VIOLATION
 activation:
   rule: BOTH IN 5 messages
+semiotic:
+  peirce: symbol
+  signifikat: Grenzsetzung
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'

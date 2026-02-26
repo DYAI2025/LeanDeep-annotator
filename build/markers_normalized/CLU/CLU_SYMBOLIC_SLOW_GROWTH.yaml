@@ -43,3 +43,9 @@ activation:
 scoring:
   base: 0.80
   weight: 1.0
+semiotic:
+  peirce: icon
+  signifikat: Lernbereitschaft/Wachstum
+  framing_type: reparatur
+  cultural_frame: ''
+  myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'

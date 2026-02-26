@@ -47,6 +47,12 @@ activation:
 scoring:
   base: 1.5
   weight: 1.2
+semiotic:
+  peirce: icon
+  signifikat: Einfuehlung/Empathie
+  framing_type: empathie
+  cultural_frame: Rogers
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 compositionality: deterministic
 vad_estimate:
   valence: 0.5

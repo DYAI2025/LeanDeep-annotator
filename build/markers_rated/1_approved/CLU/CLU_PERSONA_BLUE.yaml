@@ -24,16 +24,80 @@ metadata:
     evidence_policy: family-scoped
 examples:
   positive:
-  - <Pflicht>
-  - <muss/soll>
-  - <laut Vorschrift>
-  - <Regelwerk>
-  - <Autorität sagt>
+  - "Das ist unsere Pflicht, daran gibt es nichts zu rütteln."
+  - "Man muss sich an die Regeln halten, sonst bricht alles zusammen."
+  - "Laut Vorschrift ist das eindeutig geregelt."
+  - "Das Regelwerk sieht vor, dass wir so handeln."
+  - "Die Autorität hat entschieden, und das akzeptiere ich."
+  - "Ordnung muss sein, das ist die Grundlage von allem."
+  - "Wir sollten uns an das halten, was vereinbart wurde."
+  - "So steht es in der Satzung, und so wird es gemacht."
+  - "Disziplin und Pflichtbewusstsein - das zeichnet einen guten Mitarbeiter aus."
+  - "Die Hierarchie ist klar, wir respektieren die Entscheidungsträger."
+  - "das muss so gemacht werden, punkt. keine diskussion"
+  - "Gehorsam gegenüber den Regeln ist nicht verhandelbar."
+  - "Wer die Vorschriften nicht einhält, muss mit Konsequenzen rechnen."
+  - "Mein Pflichtgefühl lässt mich das nicht ignorieren."
+  - "Die Dienstanweisung ist eindeutig, bitte halten Sie sich daran."
+  - "So hat es die Geschäftsführung beschlossen, und so machen wir es."
+  - "Tradition und bewährte Verfahren haben ihren Sinn."
+  - "Ich tue das, weil es richtig ist. Weil es die Regel ist."
+  - "Es gibt klare Zuständigkeiten und die sollte man respektieren."
+  - "Verlässlichkeit und Treue sind die wichtigsten Werte."
+  - "Sehr geehrter Herr Vorsitzender, gemäß Paragraf 12 der Geschäftsordnung..."
+  - "soll ich dir mal zeigen was in der hausordnung steht? lies mal."
+  - "Das verstößt gegen die Betriebsvereinbarung und das dulde ich nicht."
+  - "Wir haben Regeln und die gelten für alle. Ausnahmslos."
+  - "Der Vorgesetzte weiß Bescheid, ihm vertraue ich."
+  - "So wurde es uns beigebracht und so geben wir es weiter."
+  - "Pflicht geht vor Vergnügen, das war schon immer so."
+  - "Die Institution steht über dem Einzelnen."
+  - "Respekt vor der Autorität ist die Basis einer funktionierenden Gesellschaft."
+  - "man sollte nicht alles hinterfragen. manche dinge sind einfach so"
+  - "Es gibt einen richtigen Weg, und den müssen wir gehen."
+  - "Die Vorschrift existiert aus gutem Grund."
+  - "Loyalität gegenüber der Organisation ist mir wichtig."
+  - "Das Gesetz ist das Gesetz, Punkt."
+  - "Wer Regeln bricht, untergräbt das System."
+  - "Ich halte mich an meine Pflichten, egal was kommt."
+  - "Struktur und Ordnung geben mir Sicherheit."
+  - "Der Dienstweg muss eingehalten werden."
+  - "so gehört sich das und fertig"
+  - "Wir brauchen klare Regeln, sonst herrscht Chaos."
+  - "Ich stehe zu meinem Wort, das ist eine Frage der Ehre."
+  - "Das Protokoll muss eingehalten werden, ohne Wenn und Aber."
+  - "Meine Erziehung hat mir Respekt und Gehorsam beigebracht."
+  - "Die Autoritäten wissen, was richtig ist."
+  - "Das wurde von oben entschieden und das respektiere ich."
+  - "Verfahrensregeln sind nicht optional."
+  - "Ohne Ordnung gibt es keine Freiheit."
+  - "Es steht so im Vertrag, also gilt es."
+  - "Pflichterfüllung ist für mich keine Last, sondern ein Wert."
+  - "ich mach das weil es meine pflicht ist, nicht weil es spaß macht"
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - "Man muss nicht immer den Regeln folgen, manchmal muss man kreativ sein."
+  - "Ich hinterfrage alles, auch die Autorität."
+  - "Vorschriften sind gut, aber manchmal muss man improvisieren."
+  - "Ich entscheide selbst, was richtig ist."
+  - "Regeln sind Leitlinien, keine Gesetze."
+  - "Ich orientiere mich an meinem eigenen Kompass."
+  - "Manchmal muss man Regeln brechen, um das Richtige zu tun."
+  - "Die Hierarchie ist mir egal, es zählt das Argument."
+  - "Ich höre auf mein Bauchgefühl, nicht auf die Vorschrift."
+  - "Flexibilität ist wichtiger als starre Regeln."
+  - "jeder soll machen wie er will, solange es passt"
+  - "Ordnung ist gut, aber Kreativität ist besser."
+  - "Die Chefin hat nicht immer Recht."
+  - "Ich bin für flache Hierarchien."
+  - "Regeln können auch falsch sein."
+  - "Eigenverantwortung statt Gehorsam."
+  - "Das Regelwerk ist veraltet und muss angepasst werden."
+  - "Ich vertraue meiner eigenen Einschätzung."
+  - "Nicht alles was Tradition hat, ist auch gut."
+  - "Ich mache mir meine eigenen Regeln."
+  - "freiheit geht vor ordnung, für mich zumindest"
+  - "Vorschriften sind Empfehlungen, nicht mehr."
+  - "Ich respektiere Personen, nicht Positionen."
+  - "Innovation braucht Regelbrüche."
+  - "Die beste Entscheidung ist nicht immer die regelkonforme."
+semiotic: {peirce: symbol, signifikat: Persoenlichkeitsmuster, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

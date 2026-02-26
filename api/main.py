@@ -39,7 +39,10 @@ from .models import (
     EmotionScore,
     EngineConfig,
     Episode,
+    FramingHypothesis,
     HealthResponse,
+    InterpretFindings,
+    InterpretResponse,
     Layer,
     MarkerDetail,
     MarkerListResponse,
@@ -48,6 +51,7 @@ from .models import (
     PersonaSessionSummary,
     PredictionReservoir,
     PredictionResponse,
+    SemioticEntry,
     SpeakerBaselines,
     SpeakerDelta,
     SpeakerSummary,
@@ -56,6 +60,7 @@ from .models import (
     UEDMetrics,
     VADPoint,
 )
+from .interpret import aggregate_framings, build_semiotic_map, dominant_framing, synthesize_narrative
 from .personas import PersonaStore
 
 _start_time = time.time()
@@ -85,7 +90,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=settings.cors_origins_list,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -347,6 +352,55 @@ async def analyze_dynamics(
             processing_ms=result["timing_ms"],
             text_length=sum(len(m.text) for m in req.messages),
             markers_detected=len(markers),
+            layers_scanned=layers,
+        ),
+    )
+
+
+# ---------------------------------------------------------------------------
+# POST /v1/analyze/interpret — Semiotic interpretation
+# ---------------------------------------------------------------------------
+
+@app.post("/v1/analyze/interpret", response_model=InterpretResponse)
+async def analyze_interpret(
+    req: ConversationRequest,
+    api_key: str = Depends(verify_api_key),
+):
+    """
+    Semiotic interpretation of a conversation.
+
+    Runs the full detection engine with a lower threshold (0.3) to catch
+    subtle signals, then overlays Peirce classification (icon/index/symbol),
+    framing hypotheses, cultural frame analysis, and narrative synthesis.
+
+    Returns grouped framings with intensity scores, evidence markers,
+    and a synthesized narrative summary with key points.
+    """
+    messages = [{"role": m.role, "text": m.text} for m in req.messages]
+    layers = [l.value for l in req.layers]
+
+    # Use lower threshold for interpretation to catch subtle signals
+    interpret_threshold = min(req.threshold, 0.3)
+    result = engine.analyze_conversation(messages, layers=layers, threshold=interpret_threshold)
+
+    detections = result["detections"]
+    sem_map = build_semiotic_map(detections, engine)
+    framings = aggregate_framings(detections, sem_map)
+    dom = dominant_framing(framings)
+
+    # Narrative synthesis
+    findings_raw = synthesize_narrative(framings, sem_map, num_messages=len(messages))
+    findings = InterpretFindings(**findings_raw)
+
+    return InterpretResponse(
+        framings=[FramingHypothesis(**f) for f in framings],
+        semiotic_map={k: SemioticEntry(**v) for k, v in sem_map.items()},
+        dominant_framing=dom,
+        findings=findings,
+        meta=AnalyzeMeta(
+            processing_ms=result["timing_ms"],
+            text_length=sum(len(m.text) for m in req.messages),
+            markers_detected=len(detections),
             layers_scanned=layers,
         ),
     )

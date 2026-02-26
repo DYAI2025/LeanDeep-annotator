@@ -8,10 +8,10 @@ frame:
   pragmatics: "Bonding by routine contact"
   narrative: "Communication ritual"
 composed_of:
-  - SEM_CONNECTION_POSITIVITY
-  - SEM_SHARED_EXPERIENCE_REFERENCE
-  - SEM_SOFT_COMMITMENT
-  - SEM_SOCIAL_AFFILIATION
+- SEM_CONNECTION_POSITIVITY
+- SEM_SHARED_EXPERIENCE_REFERENCE
+- SEM_SOFT_COMMITMENT
+- SEM_SOCIAL_AFFILIATION
 activation:
   rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
 scoring:
@@ -38,3 +38,4 @@ examples:
   - "Antworte wenn du Zeit hast, kein Stress"
   - "Einmalige Frage: weißt du zufällig wo der Laden ist?"
 tags: [cluster, frequency, bonding]
+semiotic: {peirce: symbol, signifikat: Verbundenheitssignal, framing_type: bindung, cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

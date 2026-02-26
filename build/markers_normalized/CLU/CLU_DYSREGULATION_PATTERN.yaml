@@ -45,6 +45,12 @@ activation:
 scoring:
   base: 0.6
   weight: 1.15
+semiotic:
+  peirce: icon
+  signifikat: Emotionale Ueberwaeltigung
+  framing_type: ueberflutung
+  cultural_frame: Emotionsregulation
+  myth: Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet
 metadata:
   family: AFFECT
   constraints:

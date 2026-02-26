@@ -9,10 +9,10 @@ frame:
   pragmatics: "Verdeckte Abwertung hinter sachlicher Fassade"
   narrative: "Gespaltene Kommunikation"
 composed_of:
-  - SEM_ACCUSATION_MARKER
-  - SEM_CONTRADICTION
-  - SEM_MICRO_AGGRESSION_LIGHT
-  - SEM_PASSIVE_AGGRESSIVE_BEHAVIOR
+- SEM_ACCUSATION_MARKER
+- SEM_CONTRADICTION
+- SEM_MICRO_AGGRESSION_LIGHT
+- SEM_PASSIVE_AGGRESSIVE_BEHAVIOR
 activation:
   rule: "AT_LEAST 2 DISTINCT SEMs IN 3 messages"
 scoring:
@@ -43,3 +43,4 @@ tags:
 - schulz_von_thun
 - inkongruenz
 - konflikt
+semiotic: {peirce: index, signifikat: Konfliktdynamik, framing_type: eskalation, cultural_frame: Gottman, myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'}

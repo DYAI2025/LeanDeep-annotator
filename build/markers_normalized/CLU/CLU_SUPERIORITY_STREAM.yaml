@@ -45,3 +45,9 @@ activation:
 scoring:
   base: 2.1
   weight: 1.45
+semiotic:
+  peirce: icon
+  signifikat: Humor/Leichtigkeit
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme

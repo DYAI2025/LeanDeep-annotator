@@ -40,3 +40,9 @@ composed_of:
 - SEM_SELF_REFLECTION
 - SEM_VALIDATION_SEEKING
 criteria: Persistent pattern of resistance to therapeutic change across multiple interventions and contexts
+semiotic:
+  peirce: index
+  signifikat: Vermeidungsverhalten
+  framing_type: vermeidung
+  cultural_frame: ''
+  myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'

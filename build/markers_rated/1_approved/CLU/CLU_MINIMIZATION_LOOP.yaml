@@ -16,38 +16,43 @@ score:
   threshold: 0.5
 composed_of:
   require:
-    - SEM_MINIMIZATION
-    - ATO_MINIMIZING
+  - SEM_MINIMIZATION
+  - ATO_MINIMIZING
 emits:
   indices:
     conflict: -0.1
     deesc: +0.05
 examples:
   positive_de:
-    - "Es war nur eine Kleinigkeit."
-    - "Mach keinen Aufriss, ist nicht der Rede wert."
-    - "Du übertreibst, das war fast nichts."
-    - "Halb so wild, ehrlich."
-    - "Lass gut sein, kein Drama."
-    - "Ist doch egal, vergiss es."
-    - "Nicht so wichtig, weiter."
-    - "Übertreib nicht."
-    - "Kein Ding."
-    - "Bagatelle, wirklich."
+  - "Es war nur eine Kleinigkeit."
+  - "Mach keinen Aufriss, ist nicht der Rede wert."
+  - "Du übertreibst, das war fast nichts."
+  - "Halb so wild, ehrlich."
+  - "Lass gut sein, kein Drama."
+  - "Ist doch egal, vergiss es."
+  - "Nicht so wichtig, weiter."
+  - "Übertreib nicht."
+  - "Kein Ding."
+  - "Bagatelle, wirklich."
   negative_de:
-    - "Das ist ein großes Problem!"
-    - "Wir müssen das ernst nehmen."
-    - "Das verletzt mich tief."
-    - "Lass uns das besprechen."
-    - "Das ist relevant."
-    - "Ignorier das nicht."
-    - "Wichtig für mich."
-    - "Das eskaliert."
-    - "Ernsthaft jetzt."
-    - "Nicht herunterspielen."
+  - "Das ist ein großes Problem!"
+  - "Wir müssen das ernst nehmen."
+  - "Das verletzt mich tief."
+  - "Lass uns das besprechen."
+  - "Das ist relevant."
+  - "Ignorier das nicht."
+  - "Wichtig für mich."
+  - "Das eskaliert."
+  - "Ernsthaft jetzt."
+  - "Nicht herunterspielen."
 semiotic:
   mode: symbolic
   level: pragmatic
   object: "minimization"
   interpretant: "effect_on_state: {conflict: -0.1}"
   connotation: ["herunterspielen", "loop"]
+  peirce: index
+  signifikat: Cluster-Muster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

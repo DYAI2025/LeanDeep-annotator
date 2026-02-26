@@ -32,6 +32,49 @@ examples:
   - Jetzt bin ich mal ehrlich vulnerabel
   - Ich zeige ja nun meine Verletzlichkeit, warum kommt da kein Feedback?
   - Ich bin jetzt mal ganz authentisch
+  - Ich öffne mich jetzt, das fällt mir schwer.
+  - Ich zeige mich verletzlich, bewusst.
+  - Ich möchte authentisch sein.
+  - Ich öffne mich hier für euch.
+  - Verletzlich zeigen ist mutig.
+  - Authentizität ist mir wichtig.
+  - Transparent mache ich mich jetzt.
+  - Ehrlich und vulnerabel zugleich.
+  - Ich öffne mich jetzt ganz bewusst.
+  - Verletzlich zu sein ist keine Schwäche.
+  - Authentisch sein, auch wenn es wehtut.
+  - Ich mache mich transparent.
+  - Ehrlich vulnerabel stehe ich hier.
+  - Ich öffne mich, weil ich euch vertraue.
+  - Verletzlich zeige ich mich heute.
+  - Authentizität über alles.
+  - Transparent sein in meinen Gefühlen.
+  - Ehrlich und vulnerabel, das bin ich.
+  - Jetzt öffne ich mich wirklich.
+  - Ich zeige mich verletzlich vor euch.
+  - Authentisch sein heißt, Masken ablegen.
+  - Ich mache mich ganz transparent.
+  - Vulnerabel und ehrlich zugleich.
+  - Ich öffne mich jetzt komplett.
+  - Verletzlich zeigen und stark fühlen.
+  - Ich bin authentisch, auch wenn es schwer ist.
+  - Transparent mache ich meine Gedanken.
+  - 'Ehrlich vulnerabel: So bin ich wirklich.'
+  - Ich öffne mich hier und jetzt.
+  - Bewusst verletzlich zeige ich mich.
+  - Authentizität ist mein Weg.
+  - Transparent und offen stehe ich vor dir.
+  - Ich bin ehrlich vulnerabel in diesem Moment.
+  - Ich öffne mich zum ersten Mal so.
+  - Verletzlich sein ist meine Stärke.
+  - Authentisch und echt.
+  - Transparent in meiner Kommunikation.
+  - Ehrlich und verletzlich, vulnerabel stehe ich da.
+  - Ich öffne mich dir gegenüber.
+  - Verletzlich zeigen, ohne Schutzmauer.
+  - Authentisch bleiben, egal was passiert.
+  - Ich mache mich transparent, auch wenn es riskant ist.
+  - Vulnerabel und ehrlich, das kostet Überwindung.
   negative:
   - Ich denke, wir sollten das sachlich betrachten.
   - Mir geht es gut, danke der Nachfrage.
@@ -40,12 +83,36 @@ examples:
   - Alles in Ordnung bei mir.
   - Ich fuehle mich heute ruhig und gelassen.
   - Das ueberrascht mich, aber es ist okay.
+  - Ich behalte das für mich.
+  - Das geht niemanden etwas an.
+  - Ich zeige keine Schwäche.
+  - Meine Gefühle behalte ich bei mir.
+  - Ich lasse niemanden so nah ran.
+  - Darüber rede ich nicht.
+  - Ich bin professionell und sachlich.
+  - Emotionen haben hier keinen Platz.
+  - Ich zeige nicht, was in mir vorgeht.
+  - Das ist privat.
+  - Ich bleibe auf Distanz.
+  - Meine Maske sitzt.
+  - Ich offenbare nichts.
+  - Das bleibt unter Verschluss.
+  - Ich bin nicht der Typ dafür.
+  - Gefühle zeigen liegt mir nicht.
+  - Ich schütze mich.
+  - Das geht zu weit.
 tags:
 - atomic
 - performance
 - verletzlichkeit
 - strategie
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: -0.6
   arousal: 0.3

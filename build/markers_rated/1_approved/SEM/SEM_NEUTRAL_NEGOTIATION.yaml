@@ -10,10 +10,10 @@ frame:
   narrative: "logistics"
 tags: [semantic, neutral, coordination, negotiation]
 composed_of:
-  - ATO_NEGATION
-  - ATO_CONTRASTIVE_CONNECTOR_ABER
-  - ATO_CONTRAST_CONJUNCTION
-  - ATO_MODAL_VERBS
+- ATO_NEGATION
+- ATO_CONTRASTIVE_CONNECTOR_ABER
+- ATO_CONTRAST_CONJUNCTION
+- ATO_MODAL_VERBS
 activation:
   mode: "co_occurrence"
   min_components: 2
@@ -42,3 +42,4 @@ examples:
   - "Das macht mich wütend."
   - "Ich bin so traurig gerade."
   - "Wow das ist ja unglaublich!"
+semiotic: {peirce: index, signifikat: Kooperation/Koordination, framing_type: reparatur, cultural_frame: '', myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'}

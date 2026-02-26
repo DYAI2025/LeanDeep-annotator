@@ -30,6 +30,12 @@ composed_of:
 - ATO_CONTRADICTION_LEX
 scoring:
   base: 0.65
+semiotic:
+  peirce: index
+  signifikat: Externe Attribution
+  framing_type: vermeidung
+  cultural_frame: ''
+  myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

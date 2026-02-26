@@ -34,6 +34,12 @@ tags: []
 rating: 2
 activation:
   rule: ANY 1
+semiotic:
+  peirce: index
+  signifikat: Handlungsorientierung/Leistung
+  framing_type: kontrollnarrative
+  cultural_frame: ''
+  myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

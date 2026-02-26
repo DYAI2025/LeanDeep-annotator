@@ -61,6 +61,11 @@ semiotic:
   level: pragmatic
   object: "criticism_attack"
   interpretant: "effect_on_state: {conflict: +0.25, trust: -0.2}"
+  peirce: index
+  signifikat: Destruktive Kritik
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht
 vad_estimate:
   valence: -0.5
   arousal: 0.8

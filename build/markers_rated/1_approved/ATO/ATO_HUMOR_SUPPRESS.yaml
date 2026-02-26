@@ -17,6 +17,11 @@ semiotic:
   object: "humor_absence"
   connotation: ["unterdrückt", "humorlos"]
   interpretant: "effect_on_state: {affekt: flat, deesc: -0.05}"
+  peirce: icon
+  signifikat: Humor/Leichtigkeit
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 examples:
   positive_de:
   - "Ok. Ich sende die Liste heute."

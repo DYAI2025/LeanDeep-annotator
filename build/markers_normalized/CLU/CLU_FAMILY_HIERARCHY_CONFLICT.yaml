@@ -23,12 +23,72 @@ examples:
   - Warum darf Leon alles und ich nichts?? Das ist so unfair von euch
   - Du gehst jetzt in dein Zimmer und denkst drüber nach
   - Ich lass mir von dir nicht vorschreiben was ich anziehen soll
+  - Mein Zimmer, meine Regeln! Du hast da nichts verloren
+  - Mama sagt nein aber Papa sagt ja, was gilt jetzt??
+  - Ihr bestimmt immer über meinen Kopf hinweg!
+  - Ich bin alt genug um selbst zu entscheiden was ich anziehe
+  - Handy wegnehmen als Strafe?? Das ist Machtmissbrauch!
+  - Du behandelst mich wie 5, ich bin 14!
+  - Oma mischt sich immer ein, das geht sie nix an
+  - Weil ich es sage, DESHALB! Reicht das als Begründung?
+  - Ich will auch mal mitentscheiden was wir am Wochenende machen
+  - Papa du bist so unfair, bei Lisa durftest du das nie!
+  - Wenn Opa das sagt müssen wir es machen, oder?? Warum??
+  - Ich hab ein Recht auf Privatsphäre, auch als Kind!
+  - Du kannst mich nicht zwingen, ich mach das nicht!
+  - Typisch, die Erwachsenen entscheiden und wir haben nix zu sagen
+  - Mama hat gesagt ich darf, und jetzt sagst DU nein??
+  - Immer muss ich machen was du willst, nie was ICH will
+  - Solange du deine Füße unter MEINEN Tisch stellst...
+  - Ihr seid so altmodisch, das ist nicht mehr 1990!
+  - Mein Stiefvater hat mir gar nichts zu sagen
+  - Du bist nicht mein richtiger Vater, du kannst mir nichts verbieten!
+  - Alle meine Freunde dürfen das, nur ICH nicht!
+  - Das geht Tante Inge einen Scheißdreck an was ich mache
+  - Ihr kontrolliert mich, ich zieh aus sobald ich 18 bin
+  - Mama hat kein Recht mein Handy zu durchsuchen
+  - Gehorchen? Ich bin kein Hund!
+  - Wenn ihr nicht wollt dass ich rebelliere, hört auf mich einzusperren
+  - Opa, du hast Mama früher auch nicht so streng erzogen!
+  - Meine Schwester darf ALLES und ich NICHTS, das ist so unfair
+  - Du bestimmst immer über mein Leben!
+  - Ich will mein eigenes Geld verdienen damit ihr mir nichts verbieten könnt
+  - Papa mischt sich in ALLES ein, sogar in meine Freundschaften
+  - Das sind MEINE Freunde, ihr habt kein Recht zu sagen mit wem ich mich treffe
+  - Ich hass diese Familienregeln, niemand anders hat so strenge Eltern
+  - Mama hat das letzte Wort, IMMER, das ist so ungerecht
+  - Ich bin kein kleines Kind mehr, behandelt mich endlich wie einen Erwachsenen!
+  - Oma darf alles sagen und wir müssen nicken, das ist so toxisch
+  - Du regierst hier wie ein Diktator, Papa
+  - Warum haben die Eltern IMMER recht und die Kinder NIE?
+  - Ich werd gemobbt von meiner eigenen Familie
+  - Mama du hast kein Recht meine Nachrichten zu lesen, ich bin 17!
   negative:
   - Können wir das heute Abend in Ruhe besprechen?
   - Ich verstehe dass du sauer bist, lass uns eine Lösung finden
   - Mein Kollege hat mir heute nen guten Tipp gegeben
   - Was wollen wir am Wochenende kochen?
   - Danke dass du mir bei Mathe geholfen hast
+  - Papa, kannst du mir bitte bei den Hausaufgaben helfen?
+  - Mama, ich hab Hunger, was gibt es zu essen?
+  - Oma hat heute angerufen, sie kommt am Sonntag
+  - Können wir am Wochenende in den Zoo gehen?
+  - Danke für das Taschengeld, Papa
+  - Mama, darf ich bei Lisa übernachten?
+  - Der Elternabend war ganz okay, meint die Klassenlehrerin
+  - Papa hat mir Fahrradfahren beigebracht, war lustig
+  - Oma bringt immer Kuchen mit, das find ich toll
+  - Ich hab aufgeräumt, darf ich jetzt raus?
+  - Zusammen frühstücken ist schön
+  - Mama, kannst du mir eine Gutenachtgeschichte vorlesen?
+  - Papa und ich waren heute im Schwimmbad
+  - Opa hat mir gezeigt wie man angelt
+  - Ich hab ein gutes Zeugnis, schaut mal!
+  - Mama und ich haben zusammen gebacken
+  - Papa liest mir immer vor dem Schlafen vor
+  - Ich frag mal ob ich mitkommen darf
+  - Danke Mama dass du mir das erlaubst
+  - Wir haben das gemeinsam entschieden als Familie
 tags:
 - cluster
 - family
@@ -53,3 +113,9 @@ window:
   messages: 50
 detect_class: "E"
 criteria: "Kombination von elterlicher Autorität und kindlichem Widerstand"
+semiotic:
+  peirce: index
+  signifikat: Konfliktdynamik
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'

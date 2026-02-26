@@ -7,18 +7,82 @@ frame:
 pattern: "\\b(überleben|instinkt|hunger|durst|angst|flucht|kampf|gefahr)\\b"
 examples:
   positive:
-  - "Ich muss überleben"
-  - "instinktiv reagiert"
-  - "pure Angst"
-  - "Fluchtreflex"
-  - "Grundbedürfnisse"
+  - Ich muss überleben, koste es was es wolle.
+  - Instinktiv habe ich reagiert.
+  - Pure Angst, ich konnte nicht denken.
+  - Fluchtreflex hat eingesetzt.
+  - Grundbedürfnisse, mehr geht gerade nicht.
+  - Es geht ums nackte Überleben.
+  - 'Mein Instinkt sagt mir: Lauf.'
+  - Hunger und Angst, mehr fühle ich nicht.
+  - Flucht war meine einzige Option.
+  - Kampf oder Flucht, ich habe gekämpft.
+  - Ich spüre nur noch Gefahr.
+  - Überleben ist alles, was zählt.
+  - Instinkt hat übernommen.
+  - Angst frisst mich auf.
+  - Fluchtreflex, total unkontrolliert.
+  - 'Mein Körper schreit: Gefahr!'
+  - Überleben, atmen, mehr nicht.
+  - Instinktiv habe ich mich geschützt.
+  - Durst und Erschöpfung, mehr gibt es nicht.
+  - Kampfmodus, ich bin bereit.
+  - Überleben ist der einzige Gedanke.
+  - Mein Instinkt hat mich gerettet.
+  - Angst bis in die Knochen.
+  - Flucht war das Einzige, was ging.
+  - Gefahr, überall nur Gefahr.
+  - Überleben, nichts anderes zählt jetzt.
+  - Instinktive Reaktion, ohne Nachdenken.
+  - Hunger treibt mich an.
+  - Flucht nach vorn.
+  - Kampfinstinkt erwacht.
+  - Ich spüre die Gefahr im Nacken.
+  - Überleben heißt durchhalten.
+  - Mein Instinkt warnt mich.
+  - Angst lähmt mich komplett.
+  - Fluchtgedanken, ständig.
+  - 'Grundbedürfnisse: Essen, Trinken, Sicherheit.'
+  - Überleben im Extremmodus.
+  - Instinktiv ziehe ich mich zurück.
+  - Durst nach Sicherheit.
+  - Kampf um jeden Tag.
+  - Gefahr überall, ich bin wachsam.
+  - Überleben ist mein einziges Ziel.
+  - 'Instinkt sagt: nicht sicher hier.'
+  - Angst vor dem, was kommt.
+  - Fluchtbereitschaft, jederzeit.
+  - Mein Körper ist im Alarmmodus.
+  - Überleben bedeutet Prioritäten setzen.
+  - Instinktiv handle ich, bevor ich denke.
+  - Hunger nach Normalität.
+  - Kampf ums Dasein, jeden Tag.
   negative:
-  - ich entscheide mich zu überleben
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
+  - Ich fühle mich sicher und geborgen.
+  - Alles ist ruhig und friedlich.
+  - Mir geht es gut, kein Stress.
+  - Ich bin entspannt und zufrieden.
+  - Keine Sorgen, alles im Griff.
+  - Ich fühle mich wohl und beschützt.
+  - Alles ist in Ordnung bei mir.
+  - Ich bin gelassen und frei von Angst.
+  - Sicherheit und Stabilität, das habe ich.
+  - Mir geht es blendend, danke.
+  - Kein Grund zur Sorge.
+  - Ich bin behütet und umsorgt.
+  - Alles friedlich hier.
+  - Ich fühle mich sicher in meiner Umgebung.
+  - Kein Alarmmodus, alles normal.
+  - Ich genieße die Ruhe.
+  - Sicher und stabil, so fühle ich mich.
+  - Keine Bedrohung, alles gut.
+  - Ich bin im Reinen mit mir.
+  - Friede und Zufriedenheit.
+  - Kein Fluchtgedanke, nur Ruhe.
+  - Ich fühle mich stark und sicher.
+  - Alles unter Kontrolle, kein Stress.
+  - Ich bin in Sicherheit.
+  - Entspannt und sorgenfrei.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

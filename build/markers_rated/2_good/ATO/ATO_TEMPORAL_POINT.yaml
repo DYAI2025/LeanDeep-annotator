@@ -19,20 +19,89 @@ markers:
   score: 0.20
   metadata: {type: ATO}
   examples:
-  - "Gestern war ich kurz dort."
-  - "Heute sehe ich das anders."
-  - "Letzte Woche sagtest du X."
-  - "Vorhin meintest du Y."
-  - "Inzwischen ist es anders."
+  - Gestern war ich kurz dort.
+  - Heute sehe ich das anders.
+  - Letzte Woche sagtest du etwas anderes.
+  - Vorhin meintest du noch das Gegenteil.
+  - Inzwischen ist es anders.
 examples:
-  positive: []
+  positive:
+  - Gestern war ich kurz dort.
+  - Heute sehe ich das anders.
+  - Letzte Woche sagtest du etwas anderes.
+  - Vorhin meintest du noch das Gegenteil.
+  - Inzwischen ist es anders.
+  - Gestern haben wir das besprochen.
+  - Heute fühle ich mich besser.
+  - Letzte Woche war alles noch okay.
+  - Vorhin habe ich daran gedacht.
+  - Inzwischen hat sich viel geändert.
+  - Gestern war ein schwieriger Tag.
+  - Heute ist mir das klar geworden.
+  - Letzte Woche hatten wir Streit.
+  - Vorhin habe ich es noch anders gesehen.
+  - Inzwischen bin ich ruhiger.
+  - Gestern kam die Nachricht.
+  - Heute denke ich positiver.
+  - Letzte Woche war die Deadline.
+  - Vorhin war ich noch unsicher.
+  - Inzwischen weiß ich Bescheid.
+  - Gestern war das Gespräch.
+  - Heute ist alles anders.
+  - Letzte Woche hat sich das ergeben.
+  - Vorhin habe ich mich geärgert.
+  - Inzwischen kann ich das einordnen.
+  - Gestern Abend haben wir telefoniert.
+  - Heute Morgen kam die Einsicht.
+  - Letzte Woche war ich krank.
+  - Vorhin war es noch unklar.
+  - Inzwischen verstehe ich es.
+  - Gestern habe ich nachgedacht.
+  - Heute nehme ich mir Zeit.
+  - Letzte Woche begann das Projekt.
+  - Vorhin war die Situation anders.
+  - Inzwischen sind Wochen vergangen.
+  - Gestern war ich optimistisch.
+  - Heute bin ich realistischer.
+  - Letzte Woche war das Meeting.
+  - Vorhin hast du das gesagt.
+  - Inzwischen hat sich meine Meinung geändert.
+  - Gestern habe ich es erfahren.
+  - Heute handle ich danach.
+  - Letzte Woche war der Beginn.
+  - Vorhin war ich noch zuversichtlich.
+  - Inzwischen bin ich skeptisch.
+  - Gestern war ein guter Tag.
+  - Heute fange ich neu an.
+  - Letzte Woche kam die Wendung.
+  - Vorhin habe ich zugehört.
+  - Inzwischen sehe ich klarer.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Das Thema hat keinen zeitlichen Bezug.
+  - Ohne Zeitangabe besprechen wir das.
+  - Ich rede allgemein, nicht über einen bestimmten Zeitpunkt.
+  - Das gilt generell, nicht nur für einen Tag.
+  - Zeitlos betrachtet ergibt das Sinn.
+  - Egal wann, das stimmt immer.
+  - Keine bestimmte Zeit gemeint.
+  - Das ist allgemeingültig.
+  - Ohne Bezug auf einen Termin.
+  - Das hat nichts mit einem Datum zu tun.
+  - Generell gesprochen, ohne Zeitfenster.
+  - Das ist zeitunabhängig.
+  - Kein bestimmter Moment gemeint.
+  - Das trifft jederzeit zu.
+  - Ohne zeitliche Einordnung.
+  - Allgemein formuliert, kein Zeitbezug.
+  - Das ist eine Grundsatzfrage.
+  - Unabhängig vom Zeitpunkt.
+  - Kein Verweis auf einen Tag.
+  - Das gilt immer, keine Einschränkung.
+  - Zeitneutral betrachtet.
+  - Ohne Referenz auf ein Ereignis.
+  - Das ist grundsätzlich so.
+  - Kein temporaler Marker hier.
+  - Allgemeine Aussage, kein Datum.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

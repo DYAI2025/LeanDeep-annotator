@@ -1,0 +1,118 @@
+id: MEMA_TRUST_BETRAYAL_CYCLE
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - trust
+  - betrayal
+  - cycle
+  concept: 'Vertrauens-Verrats-Zyklus: wiederholtes Vertrauen und Enttäuschung'
+  pragmatics: Erkennt sich wiederholende Muster von Vertrauensaufbau und -bruch
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Jedes Mal, wenn ich dir wieder vertraue, werde ich enttäuscht.
+  - Ich hab dir nochmal eine Chance gegeben und du hast sie wieder vermasselt.
+  - 'Der Zyklus ist immer gleich: Versprechen, Vertrauen, Verrat.'
+  - Wie oft noch? Ich vertraue dir, du brichst es, ich vergebe, du brichst es wieder.
+  - Ich schaffe es nicht mehr, dir zu vertrauen – zu oft enttäuscht worden.
+  - Du versprichst Besserung und dann passiert wieder dasselbe.
+  - Ich hab dir geglaubt, als du gesagt hast, es wird anders. Wurde es nicht.
+  - Vertrauen aufbauen dauert Jahre, du zerstörst es in Sekunden. Und das wiederholt sich.
+  - Ich geb dir immer wieder eine Chance und du nutzt sie nie.
+  - Der Vertrauensbruch ist kein Einzelfall – es ist ein Muster.
+  - Erst Treue schwören, dann hintergehen. Immer wieder.
+  - Ich will dir vertrauen, aber mein Bauch sagt nein – zu oft betrogen.
+  - Wir bauen auf und du reißt es nieder. Immer und immer wieder.
+  - "Jedes Mal sagst du: 'Diesmal ist es anders.' Ist es nie."
+  - Vertrauen-Verrat-Entschuldigung-Vertrauen-Verrat. Endlosschleife.
+  - Ich hab so oft verziehen, dass ich mich frage, ob ich dumm bin.
+  - Du verrätst mein Vertrauen und erwartest, dass ich einfach weitermache.
+  - Wieder eine Lüge. Wieder gebrochenes Vertrauen. Wieder von vorne.
+  - Ich hatte dir geglaubt, als du gesagt hast, es war das letzte Mal.
+  - Mein Vertrauen ist wie ein Konto, das du immer wieder leerräumst.
+  - Ich baue Brücken und du brennst sie ab. Jedes verdammte Mal.
+  - Du sagst 'vertrau mir' und ich lache innerlich, weil ich das schon kenne.
+  - 'Wie ein Hamster im Rad: vertrauen, verraten werden, verzeihen, repeat.'
+  - Ich kann mich nicht mehr überwinden, dir zu glauben.
+  - Letzte Chance, hast du gesagt. Die vorletzte auch.
+  - Der Verrat tut jedes Mal mehr weh, weil ich jedes Mal gehofft habe.
+  - Du hast mir wieder versprochen, ehrlich zu sein. Wieder gebrochen.
+  - Ich vertraue dir und du nutzt es aus. Dieses Spiel ist alt.
+  - Mein Vertrauen ist verbraucht. Du hast es zu oft missbraucht.
+  - 'Der Kreislauf: ich vergebe, du vergisst, es passiert wieder.'
+  - Wir sind gefangen in einem Zyklus aus Hoffnung und Enttäuschung.
+  - Du verrätst mich und wunderst dich, dass ich dir nicht mehr glaube.
+  - Ich hab dir mein Herz anvertraut und du hast es fallen lassen. Nicht zum ersten Mal.
+  - 'Wie ein gebranntes Kind: ich kann nicht mehr vertrauen.'
+  - Der Betrug von letztem Jahr, der von diesem Jahr – ein Muster.
+  - Ich wollte so gerne glauben, dass es sich ändert. Hat es nicht.
+  - Jedes Mal ein neues Versprechen, jedes Mal dieselbe Enttäuschung.
+  - 'Mein Vertrauen: aufgebaut, zerstört, aufgebaut, zerstört.'
+  - Du hast gezeigt, dass deine Worte nichts wert sind – immer wieder.
+  - Der Zyklus muss aufhören. Ich kann nicht mehr verzeihen.
+  - Vertrauen und Verrat wechseln sich ab wie Ebbe und Flut.
+  - Ich vertraue dir – und du tust es wieder. Wie ein schlechter Witz.
+  - 'Jedes Mal denke ich: jetzt wird es besser. Wird es nie.'
+  - Ich bin müde vom ewigen Hoffen und Enttäuschtsein.
+  - Du treibst ein Spiel mit meinem Vertrauen.
+  - Mir reicht es. Der Zyklus endet hier.
+  - Ich kann nicht mehr vertrauen – du hast den Brunnen vergiftet.
+  - 'Wir sind gefangen: ich kann nicht ohne dich, aber mit dir werde ich immer verraten.'
+  - Jedes Mal wenn ich glaube, es könnte gut werden, kommt der nächste Verrat.
+  - Mein Vertrauen ist ein Mosaik aus Scherben deiner Versprechen.
+  negative:
+  - Du hast einmal mein Vertrauen verletzt und dich danach wirklich verändert.
+  - Es gab einen Vertrauensbruch, aber wir haben in der Therapie daran gearbeitet.
+  - Ich bin vorsichtiger geworden, aber ich sehe, dass du dich bemühst.
+  - Vertrauen muss man sich verdienen – und du tust das gerade.
+  - Es war einmal eine schwere Situation, aber seitdem ist viel passiert.
+  - Ich baue langsam wieder Vertrauen auf und du respektierst mein Tempo.
+  - Ein Fehler macht nicht gleich ein Muster.
+  - Du hast mich enttäuscht, aber du stehst auch dazu.
+  - Wir arbeiten gemeinsam an unserem Vertrauen.
+  - Es braucht Zeit, aber ich sehe echte Veränderung bei dir.
+  - Ich war verletzt, aber wir sind daran gewachsen.
+  - Du hast gezeigt, dass du bereit bist, Verantwortung zu übernehmen.
+  - Ja, es gab einen Bruch. Aber der Wiederaufbau läuft.
+  - Ich vertraue dir wieder – Stück für Stück.
+  - Der Vorfall liegt hinter uns und wir sind stärker als vorher.
+  - Du hast mein Vertrauen verletzt und es seitdem nicht wieder getan.
+  - Ich sehe die Anstrengung, die du machst, und das hilft mir zu heilen.
+  - Wir haben eine Krise überstanden und daraus gelernt.
+  - Vertrauen aufbauen braucht Zeit – ich bin geduldig.
+  - Es war hart, aber wir haben es geschafft, wieder zueinander zu finden.
+  - Du hast aus deinem Fehler gelernt, das spüre ich.
+  - Unser Vertrauen ist angeknackst, aber nicht zerbrochen.
+  - Ich gebe dir eine Chance, weil ich sehe, dass du es ernst meinst.
+  - Wir haben Regeln vereinbart und du hältst dich daran.
+  - Einmal ist keinmal – solange es bei einmal bleibt.
+tags:
+- mema
+- trust
+- betrayal
+- cycle
+- repetition
+rating: 2
+composed_of:
+  required_any:
+  - SEM_BLAME_SIGNAL
+  - CLU_REPETITIVE_CONFLICT
+  supportive:
+  - SEM_SELF_VICTIMIZATION
+  - ATO_ACCUSATION
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 2.0
+  weight: 1.3
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

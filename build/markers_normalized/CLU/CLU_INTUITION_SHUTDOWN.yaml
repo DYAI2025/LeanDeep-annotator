@@ -44,6 +44,12 @@ activation:
   rule: AT_LEAST 2 DISTINCT SEMs IN 4 messages
   confirm_window: 4
   cooldown_messages: 5
+semiotic:
+  peirce: index
+  signifikat: Schweigen/Verstummen
+  framing_type: vermeidung
+  cultural_frame: ''
+  myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'
 metadata:
   maintainer: marker-bot
   family: SHUTDOWN

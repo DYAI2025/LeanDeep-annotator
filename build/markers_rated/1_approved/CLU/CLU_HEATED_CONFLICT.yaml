@@ -17,11 +17,11 @@ score:
   threshold: 0.75
 composed_of:
   require:
-    - ATO_ANGER
-    - ATO_DEFENSIVENESS
-    - ATO_BLAME_SHIFT
-    - ATO_CRITICISM_ATTACK_MARKER
-    - ATO_ESCALATION_LEXICON
+  - ATO_ANGER
+  - ATO_DEFENSIVENESS
+  - ATO_BLAME_SHIFT
+  - ATO_CRITICISM_ATTACK_MARKER
+  - ATO_ESCALATION_LEXICON
   negative_evidence:
     any_of: [ATO_DEESCALATION_PHRASE, ATO_APOLOGY]
 emits:
@@ -30,53 +30,93 @@ emits:
     trust: -0.2
     deesc: -0.3
 conflicts_with:
-  - CLU_ACTIVE_REPAIR
+- CLU_ACTIVE_REPAIR
 semiotic:
   mode: symbolic
   level: pragmatic
   object: "conflict_escalation"
   connotation: ["konflikt", "heiß"]
   interpretant: "effect_on_state: {conflict: +0.3, trust: -0.2}"
+  peirce: index
+  signifikat: Eskalation/Konfliktsteigerung
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht
 examples:
   positive_de:
-    - "Das nervt mich extrem!"
-    - "Du bist schuld!"
-    - "Ich hab recht, du nicht."
-    - "Das war unfair von dir."
-    - "Hör auf damit!"
-    - "Das eskaliert jetzt."
-    - "Ich bin sauer."
-    - "Deine Defensive nervt."
-    - "Vorwurf: Du immer!"
-    - "Kritik: Schlecht gemacht."
-    - "Das triggert mich."
-    - "Streit hoch."
-    - "Du machst Fehler."
-    - "Ich verteidige mich."
-    - "Blame dich."
-    - "Eskalation jetzt."
-    - "Wut hoch."
-    - "Kein Kompromiss."
-    - "Konflikt fort."
-    - "Heißer Streit."
+  - "Das nervt mich extrem!"
+  - "Du bist schuld!"
+  - "Ich hab recht, du nicht."
+  - "Das war unfair von dir."
+  - "Hör auf damit!"
+  - "Das eskaliert jetzt."
+  - "Ich bin sauer."
+  - "Deine Defensive nervt."
+  - "Vorwurf: Du immer!"
+  - "Kritik: Schlecht gemacht."
+  - "Das triggert mich."
+  - "Streit hoch."
+  - "Du machst Fehler."
+  - "Ich verteidige mich."
+  - "Blame dich."
+  - "Eskalation jetzt."
+  - "Wut hoch."
+  - "Kein Kompromiss."
+  - "Konflikt fort."
+  - "Heißer Streit."
+  - "Ich kann nicht glauben dass du das schon wieder machst, echt jetzt?!"
+  - "DU bist das Problem hier, nicht ich, merk dir das!"
+  - "Hör auf mich anzulügen, ich bin nicht blöd!"
+  - "Das war's, ich hab die Schnauze voll von deinem Verhalten!"
+  - "Jedes verdammte Mal dasselbe mit dir, ich raste aus!"
+  - "Red nicht so mit mir, ich bin nicht dein Fußabtreter!"
+  - "Du drehst mir die Worte im Mund um, das ist unfair!"
+  - "Ich SCHREIE weil du mir nicht zuhörst, kapierst du das nicht?!"
+  - "Seit wann bin ICH schuld an DEINEN Fehlern?!"
+  - "Du bist so egoistisch, immer nur du du du!"
+  - "Ach komm, jetzt spielst du auch noch das Opfer, typisch!"
+  - "Ich hab dir tausendmal gesagt du sollst das lassen!"
+  - "Weißt du was, mach doch was du willst, mir reicht's!"
+  - "Das ist eine FRECHHEIT was du da sagst!"
+  - "Du provozierst mich absichtlich, gib's zu!"
+  - "Ich bin STINKSAUER und du tust so als wär nix!"
+  - "Halt die Klappe und hör mir einmal zu!"
+  - "Du verdrehst alles, wie immer, typisch manipulativ!"
+  - "ICH BIN FERTIG MIT DIR UND DEINEM SCHEISS!"
+  - "Du machst mich wahnsinnig mit deiner Art!"
+  - "Das war unter der Gürtellinie, das vergesse ich nicht!"
+  - "Wie kannst du es wagen mir so was vorzuwerfen?!"
+  - "Du nimmst mich nie ernst, NIE, und das macht mich wütend!"
+  - "Deine Ausreden kann ich nicht mehr hören, echt nicht!"
+  - "Schieb nicht alles auf mich, du bist genauso schuld!"
+  - "Ich explodiere gleich wenn du so weitermachst!"
+  - "Das ist der letzte Tropfen, das Fass ist ÜBER!"
+  - "Du behandelst mich wie Dreck und merkst es nicht mal!"
+  - "Jetzt reicht's endgültig, ich will das nicht mehr!"
+  - "Du lügst mir ins Gesicht, das ist so respektlos!"
   negative_de:
-    - "Tut mir leid."
-    - "Lass uns klären."
-    - "Entschuldige."
-    - "Ich verstehe."
-    - "Deeskalieren wir."
-    - "Apologie jetzt."
-    - "Fair bleiben."
-    - "Zugeständnis."
-    - "Reparieren."
-    - "Verzeih mir."
-    - "Pause machen."
-    - "Höre zu."
-    - "Das tut leid."
-    - "Wir klären."
-    - "Offenheit danke."
-    - "Neu starten."
-    - "Verstehe Punkt."
-    - "Entschuldigung."
-    - "Bei dir."
-    - "Support."
+  - "Tut mir leid."
+  - "Lass uns klären."
+  - "Entschuldige."
+  - "Ich verstehe."
+  - "Deeskalieren wir."
+  - "Apologie jetzt."
+  - "Fair bleiben."
+  - "Zugeständnis."
+  - "Reparieren."
+  - "Verzeih mir."
+  - "Pause machen."
+  - "Höre zu."
+  - "Das tut leid."
+  - "Wir klären."
+  - "Offenheit danke."
+  - "Neu starten."
+  - "Verstehe Punkt."
+  - "Entschuldigung."
+  - "Bei dir."
+  - "Support."
+  - "Ich atme erstmal durch bevor ich antworte"
+  - "Du hast recht, ich war zu voreilig"
+  - "Können wir das in Ruhe besprechen?"
+  - "Ich möchte dir zuhören, erzähl mir mehr"
+  - "Entschuldigung, mein Fehler, das sehe ich ein"

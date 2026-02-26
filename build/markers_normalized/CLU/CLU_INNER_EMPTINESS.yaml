@@ -66,5 +66,11 @@ scoring:
   decay: 0.01
 window:
   messages: 20
+semiotic:
+  peirce: icon
+  signifikat: Beduerfnisausdruck
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 activation:
   rule: "AT_LEAST 2 IN 20 messages"

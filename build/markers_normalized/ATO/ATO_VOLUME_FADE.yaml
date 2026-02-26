@@ -14,18 +14,81 @@ patterns: []
 examples:
   positive:
   - '[Stimme wird leiser]'
-  - '[Verklingende Äußerung]'
-  - '[Energieverlust während Sprechen]'
+  - '[Verklingende Aeusserung]'
+  - '[Energieverlust waehrend Sprechen]'
   - '[Fade-out Effekt]'
-  - '[Schwächer werdende Stimme]'
+  - '[Schwaecher werdende Stimme]'
+  - '[Stimme verklint am Satzende]'
+  - '[Lautstaerke nimmt ab]'
+  - '[Leiser werdende Stimme]'
+  - '[Stimme fadet aus]'
+  - '[Verlust der Stimmenergie]'
+  - '[Stimme wird zum Ende hin schwaecher]'
+  - '[Verklingendes Sprechen]'
+  - '[Fade-out bei emotionalem Thema]'
+  - '[Stimme verliert an Kraft]'
+  - '[Leiser werdend waehrend der Aeusserung]'
+  - '[Stimme verschwindet fast]'
+  - '[Energieverlust in der Stimme]'
+  - '[Verklingo am Satzende]'
+  - '[Fade-out der Stimme]'
+  - '[Stimme wird unmerklich leiser]'
+  - '[Schwaecher werdende Lautstaerke]'
+  - '[Stimme verblasst]'
+  - '[Verklingende Stimme bei schwierigem Inhalt]'
+  - '[Energieverlust gegen Ende]'
+  - '[Stimme fadet langsam aus]'
+  - '[Leiser, leiser, fast still]'
+  - '[Stimme verliert Volumen]'
+  - '[Verklingendes Fluestern]'
+  - '[Fade-out bei Traurigkeit]'
+  - '[Schwaecher werdende Stimmfuehrung]'
+  - '[Stimme sinkt in der Lautstaerke]'
+  - '[Verklingo waehrend des Sprechens]'
+  - '[Energieverlust beim Erinnern]'
+  - '[Stimme wird zunehmend leiser]'
+  - '[Fade-out bei Erschoepfung]'
+  - '[Stimme verklingt]'
+  - '[Lautstaerke sinkt merklich]'
+  - '[Leiser werdend bei diesem Thema]'
+  - '[Stimme fadet bei Unsicherheit]'
+  - '[Verklingende Stimmenergie]'
+  - '[Stimme wird schwach]'
+  - '[Energieverlust am Ende des Satzes]'
+  - '[Fade-out Effekt der Stimme]'
+  - '[Stimme loest sich auf]'
+  - '[Verklingendes Murmeln]'
+  - '[Schwaecher, schwaecher, weg]'
+  - '[Stimme wird unmerklich still]'
+  - '[Lautstaerke fadet aus]'
+  - '[Stimme verliert sich]'
+  - '[Verklingt am Satzende]'
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - '[Klare, kraftvolle Stimme]'
+  - '[Gleichbleibende Lautstaerke]'
+  - '[Stabile Stimmfuehrung]'
+  - '[Energische Aeusserung]'
+  - '[Laute, deutliche Stimme]'
+  - '[Konstantes Volumen]'
+  - '[Kraftvoller Stimmansatz]'
+  - '[Gleichmaessige Lautstaerke durchgehend]'
+  - '[Starke Stimmenergie]'
+  - '[Kein Lautstaerke-Verlust]'
+  - '[Durchgehend klare Stimme]'
+  - '[Volumen bleibt stabil]'
+  - '[Energiegeladenes Sprechen]'
+  - '[Stimme bleibt kraeftig]'
+  - '[Konstante Stimmfuehrung]'
+  - Die Praesentation war energisch.
+  - Ich rede laut und deutlich.
+  - Meine Stimme ist klar.
+  - Ich spreche mit voller Kraft.
+  - Das war deutlich und bestimmt.
+  - '[Zunehmend lautere Stimme]'
+  - '[Stimme wird staerker]'
+  - Ich rede bewusst laut.
+  - '[Crescendo-Effekt]'
+  - '[Stabile, gleichmaessige Stimme]'
 tags:
 - dynamics
 - audio
@@ -38,6 +101,12 @@ detect_class:
     fade_duration_ms:
     - 800
     - 2000
+semiotic:
+  peirce: index
+  signifikat: Beziehungsdynamik
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 vad_estimate:
   valence: 0.0
   arousal: 0.3

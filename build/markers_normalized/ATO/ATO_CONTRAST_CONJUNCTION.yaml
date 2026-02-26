@@ -63,6 +63,12 @@ scoring:
   formula: "linear"
 window:
   messages: 5
+semiotic:
+  peirce: symbol
+  signifikat: Paradoxie/Widerspruch
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

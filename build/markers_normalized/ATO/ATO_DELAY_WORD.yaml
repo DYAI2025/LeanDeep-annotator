@@ -10,7 +10,9 @@ frame:
   concept: Aufschub
   pragmatics: Prokrastination
   narrative: surface
-patterns: []
+patterns:
+- type: regex
+  value: (?i)\b(später|nachher|irgendwann|sobald|demnächst|bald|mach ich noch|erledige ich|kommt noch|mach ich morgen|mach ich dann)\b
 examples:
   positive:
   - mach ich heute noch … vielleicht morgen
@@ -28,6 +30,12 @@ examples:
   - Ich moechte verstehen, was du meinst.
 tags: []
 rating: 2
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: -0.2
   arousal: 0.5

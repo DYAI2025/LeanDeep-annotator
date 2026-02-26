@@ -23,6 +23,50 @@ examples:
   - Wirklich?
   - Ernsthaft?
   - Weshalb meinst du, das passt?
+  - Warum machen wir das eigentlich so?
+  - Wieso wurde das nie hinterfragt?
+  - Weshalb ist das so und nicht anders?
+  - Inwiefern ist das relevant?
+  - Wirklich? Das glaube ich nicht.
+  - Ernsthaft? Das kann doch nicht stimmen.
+  - Warum wird das einfach akzeptiert?
+  - Wieso hat niemand nachgefragt?
+  - Weshalb sollte das funktionieren?
+  - Inwiefern ist das ein Fortschritt?
+  - Wirklich? Bist du dir da sicher?
+  - Ernsthaft? Wer hat das beschlossen?
+  - Warum genau muss das so sein?
+  - Wieso darf man das nicht hinterfragen?
+  - Weshalb gibt es keine Alternative?
+  - Inwiefern hilft uns das weiter?
+  - Wirklich? Das klingt seltsam.
+  - Ernsthaft? Das halte ich für fragwürdig.
+  - Warum wird das immer so gemacht?
+  - Wieso hat das vorher niemand bemerkt?
+  - Weshalb ignorieren wir das Problem?
+  - Inwiefern betrifft das unser Team?
+  - Wirklich? Zeig mir die Daten.
+  - Ernsthaft? Dafür hätte ich gern Belege.
+  - Warum steht das nicht zur Diskussion?
+  - Wieso ist das alternativlos?
+  - Weshalb gibt es keine Transparenz?
+  - Inwiefern ist das fair?
+  - Wirklich? Hast du das überprüft?
+  - Ernsthaft? Das überzeugt mich nicht.
+  - Warum wird das nicht evaluiert?
+  - Wieso hat sich daran nie was geändert?
+  - Weshalb akzeptieren alle das so?
+  - Inwiefern profitieren wir davon?
+  - Wirklich? Mir fehlt die Evidenz.
+  - Ernsthaft? Das erscheint mir absurd.
+  - Warum prüft das keiner?
+  - Wieso gab es kein Review?
+  - Weshalb halten wir daran fest?
+  - Inwiefern hat sich das bewährt?
+  - Wirklich? Ich bin skeptisch.
+  - Ernsthaft? Wer profitiert davon?
+  - Warum gibt es keine Alternativen?
+  - Wieso wurde der Prozess nie überarbeitet?
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -31,10 +75,34 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Das ist eine gute Frage.
+  - Ich bin neugierig, wie das weitergeht.
+  - Lass uns das genauer anschauen.
+  - Ich interessiere mich für das Thema.
+  - Das würde ich gerne verstehen.
+  - Können Sie mir das erklären?
+  - Ich hätte gerne mehr Informationen.
+  - Das Thema ist spannend.
+  - Ich lese mich gerade ein.
+  - Mich interessiert der Hintergrund.
+  - Ich bin offen für neue Perspektiven.
+  - Erzähl mir mehr davon.
+  - Das klingt interessant, bitte weiter.
+  - Ich möchte mehr darüber lernen.
+  - Das ist faszinierend.
+  - Bitte erkläre mir das genauer.
+  - Ich bin gespannt auf die Antwort.
+  - Lass mich darüber nachdenken.
 tags:
 - question
 - stance
 rating: 2
+semiotic:
+  peirce: icon
+  signifikat: Fragehaltung/Suchbewegung
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.2

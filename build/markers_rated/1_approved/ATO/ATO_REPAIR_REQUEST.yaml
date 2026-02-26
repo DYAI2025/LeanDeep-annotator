@@ -13,6 +13,11 @@ semiotic:
   level: pragmatic
   object: "repair_request"
   interpretant: "effect_on_state: {deesc: +0.1, trust: +0.1}"
+  peirce: index
+  signifikat: Beziehungsreparatur
+  framing_type: reparatur
+  cultural_frame: Gottman
+  myth: Kommunikation loest alles — reden heilt, schweigen zerstoert
 examples:
   positive_de:
   - "Lass uns das klären."
@@ -35,6 +40,36 @@ examples:
   - "Drüber reden."
   - "Reparatur jetzt."
   - "Finde Lösung."
+  - Lass uns das klären, bitte.
+  - Können wir darüber reden?
+  - Bitte erklär mir, was passiert ist.
+  - Lass uns reparieren, was kaputt gegangen ist.
+  - Können wir das klären?
+  - Bitte lass uns das in Ordnung bringen.
+  - Lass uns das reparieren.
+  - Können wir reden? Mir ist das wichtig.
+  - Bitte erklär mir deine Sicht.
+  - Wie können wir das wieder hinbekommen?
+  - Lass uns das klären, bevor es schlimmer wird.
+  - Können wir offen darüber reden?
+  - Bitte erklär mir, was los ist.
+  - Lass uns reparieren, was zwischen uns steht.
+  - Wie können wir das zusammen lösen?
+  - Können wir das bitte klären?
+  - Bitte lass uns reden.
+  - Lass uns das klären, ich möchte verstehen.
+  - Können wir gemeinsam eine Lösung finden?
+  - Bitte erklär mir, warum du so reagiert hast.
+  - Lass uns das reparieren, mir liegt viel daran.
+  - Wie können wir das Missverständnis lösen?
+  - Können wir darüber sprechen?
+  - Bitte erklär mir deinen Standpunkt.
+  - Lass uns klären, was schiefgelaufen ist.
+  - Können wir reden? Ich will das nicht so stehen lassen.
+  - Bitte erklär mir, was du brauchst.
+  - Wie können wir das wieder gut machen?
+  - Lass uns das klären und weitermachen.
+  - Können wir in Ruhe reden?
   negative_de:
   - "Kein Bedarf zu klären."
   - "Reden? Nein."
@@ -56,5 +91,12 @@ examples:
   - "Nicht reden."
   - "Keine Reparatur."
   - "Keine Lösung."
+  - Das ist mir egal, lass mich in Ruhe.
+  - Ich will darüber nicht reden.
+  - Es gibt nichts zu klären.
+  - Das Thema ist durch.
+  - Vergiss es einfach.
+  positive: []
+  negative: []
 vad_estimate: {valence: 0.3, arousal: 0.2, dominance: 0.35}
 effect_on_state: {trust: 0.35, conflict: -0.3, deesc: 0.4}

@@ -43,6 +43,12 @@ composed_of:
 - ATO_JITTER_SHIMMER_HIGH
 scoring:
   base: 0.68
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

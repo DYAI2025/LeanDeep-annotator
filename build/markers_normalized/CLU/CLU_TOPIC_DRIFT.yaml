@@ -41,3 +41,9 @@ activation:
 scoring:
   base: 1.0
   weight: 0.9
+semiotic:
+  peirce: index
+  signifikat: Themenwechsel/Abdriften
+  framing_type: vermeidung
+  cultural_frame: ''
+  myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'

@@ -10,7 +10,12 @@ frame:
   concept: SD Yellow
   pragmatics: Systemdenken
   narrative: surface
-patterns: []
+patterns:
+- type: regex
+  value: 
+    (?i)\b(systemisch|Systemdenken|mehrperspektivisch|Metaebene|Meta-Ebene|Feedbackschleife|Emergenz|Interdependenz|Adaptivität|nichtlinear|kontextabhängig|Wechselwirkung|Subsystem|Systemebene|systemische[rs]?)\b
+- type: regex
+  value: (?i)\b(Second-Order|Polarity.Management|integrales?|Metakognition|Komplexitätskompetenz|Hebelpunkt|systemisches? Denken)\b
 examples:
   positive:
   - Systeme vernetzen … Komplexität integrieren
@@ -18,6 +23,51 @@ examples:
   - Kontext abhängige Lösung
   - Patterns über Zeit
   - Metaebene betrachten
+  - Das System ist komplex.
+  - Komplexität erfordert neue Ansätze.
+  - Im Kontext betrachtet ergibt das Sinn.
+  - Integration aller Perspektiven ist nötig.
+  - Auf der Meta-Ebene sehe ich Muster.
+  - Systemisch denken.
+  - Die Komplexität reduzieren.
+  - Den Kontext verstehen.
+  - Integration verschiedener Ansätze.
+  - Meta-Perspektive einnehmen.
+  - Das System verstehen.
+  - Komplexität managen.
+  - Kontext ist alles.
+  - Integration als Schlüssel.
+  - Meta-Analyse durchführen.
+  - Systemisches Coaching.
+  - In Komplexität navigieren.
+  - Den Kontext berücksichtigen.
+  - Integrationsfähigkeit zeigen.
+  - Meta-Kommunikation nutzen.
+  - Das System als Ganzes.
+  - Komplexität akzeptieren.
+  - Im richtigen Kontext.
+  - Integration von Wissen.
+  - Meta-Kognition trainieren.
+  - Systemdenken lernen.
+  - Komplexität als Chance.
+  - Kontext wechseln.
+  - Integration unterschiedlicher Kulturen.
+  - Meta-Ebene betrachten.
+  - System-Architektur designen.
+  - Komplexität durchdringen.
+  - Im kulturellen Kontext.
+  - Integration in den Alltag.
+  - Meta-Reflexion üben.
+  - Systemische Beratung.
+  - Die Komplexität meistern.
+  - Kontext analysieren.
+  - Integration als Prozess.
+  - Meta-Perspektive hilft.
+  - Das System hinterfragen.
+  - Komplexität wertschätzen.
+  - Ohne Kontext kein Verständnis.
+  - Integration fördern.
+  - Meta-Level.
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -26,8 +76,32 @@ examples:
   - I've noticed we think differently about this.
   - I want to understand what you mean.
   - That sounds like an important topic for you.
+  - Das ist ganz einfach.
+  - Schwarz oder weiß.
+  - Entweder oder.
+  - Das ist doch klar.
+  - Da gibt es keine Diskussion.
+  - So ist es und nicht anders.
+  - Einfache Lösung für ein einfaches Problem.
+  - Das ist simpel.
+  - Ohne Wenn und Aber.
+  - Das ist offensichtlich.
+  - Ich mache das schon immer so.
+  - Das war schon immer so.
+  - Kein Grund, das zu hinterfragen.
+  - One size fits all.
+  - So läuft das hier.
+  - Punkt.
+  - Fertig, aus.
+  - Das ist Fakt.
 tags: []
 rating: 2
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

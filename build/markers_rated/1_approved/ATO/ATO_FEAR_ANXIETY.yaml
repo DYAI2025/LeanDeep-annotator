@@ -91,3 +91,4 @@ metadata:
   purpose: "Basic emotional pattern detection for fear and anxiety"
 vad_estimate: {valence: -0.6, arousal: 0.8, dominance: 0.0}
 effect_on_state: {trust: -0.1, conflict: 0.1, deesc: -0.05}
+semiotic: {peirce: icon, signifikat: Angst/Bedrohungserleben, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

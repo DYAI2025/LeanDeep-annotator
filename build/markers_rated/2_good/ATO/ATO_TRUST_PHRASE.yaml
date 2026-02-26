@@ -10,11 +10,56 @@ pattern:
   tokens: ["verlass dich auf mich", "ich vertrau dir", "du kannst mir glauben", "ich halte Wort", "ehrlich"]
 examples:
   positive:
-  - "ich bin da für dich … wir schaffen das"
-  - "danke dir … fühl mich gesehen"
-  - "gemeinsam kriegen wir das hin"
-  - "du kannst dich auf mich verlassen"
-  - "ich hör dir zu … okay?"
+  - Verlass dich auf mich.
+  - Ich vertrau dir.
+  - Du kannst mir glauben.
+  - Ich halte Wort.
+  - Ehrlich, das meine ich so.
+  - Du kannst dich auf mich verlassen.
+  - Ich bin da fuer dich, wir schaffen das.
+  - Danke dir, fuehle mich gesehen.
+  - Gemeinsam kriegen wir das hin.
+  - Ich hoer dir zu, okay?
+  - Du kannst mir vertrauen, zu 100 Prozent.
+  - Ich verspreche dir, ich halte Wort.
+  - Ehrlich gesagt, ich stehe hinter dir.
+  - Verlass dich drauf, das wird schon.
+  - Ich bin ehrlich zu dir, immer.
+  - Du kannst mir glauben, da hat sich nichts geaendert.
+  - Mein Wort gilt.
+  - Vertrau mir, ich enttaeusche dich nicht.
+  - Ich bin zuverlaessig, das weisst du.
+  - Auf mich ist Verlass.
+  - Ehrlich, ich meine jedes Wort.
+  - Du kannst dich auf mein Wort verlassen.
+  - Ich verspreche es dir.
+  - Vertrauen ist mir wichtig zwischen uns.
+  - Glaub mir, das schaffen wir.
+  - Ich bin treu und ehrlich.
+  - Du kannst mir blind vertrauen.
+  - Ich stehe zu dem, was ich sage.
+  - Verlass dich auf mein Versprechen.
+  - Ehrlich und direkt, so bin ich.
+  - Du kannst mir alles anvertrauen.
+  - Ich halte zu dir, egal was kommt.
+  - Vertrau mir einfach.
+  - Mein Wort ist mein Wort.
+  - Du kannst mir glauben, das ist die Wahrheit.
+  - Ich bin ehrlich, auch wenn es schwer ist.
+  - Auf mich kannst du bauen.
+  - Verlass dich drauf, ich bin da.
+  - Ehrlich gesprochen, du bist mir wichtig.
+  - Du kannst mir vertrauen, ich stehe zu dir.
+  - Ich verspreche Zuverlaessigkeit.
+  - Glaub mir, ich meine es ernst.
+  - Vertrau mir, das kommt von Herzen.
+  - Ich bin ein Mann bzw. eine Frau meines Wortes.
+  - Du kannst dich hundertprozentig auf mich verlassen.
+  - Ehrlich, ich wuerde dich nie belogen.
+  - Verlass dich auf meine Treue.
+  - Mein Versprechen steht.
+  - Du kannst mir vertrauen, das hat sich bewaehrt.
+  - Ich bin aufrichtig, das weisst du.
   negative:
   - Kannst du mir das Salz reichen?
   - Der Termin ist um 14 Uhr.
@@ -23,5 +68,24 @@ examples:
   - Hast du die E-Mail gelesen?
   - Ich muss noch tanken.
   - Die Besprechung ist im Konferenzraum.
+  - Der Zug hat 10 Minuten Verspaetung.
+  - Ich kaufe nachher Milch.
+  - Die Heizung ist kaputt.
+  - Der Paketbote war schon da.
+  - Morgen ist Muellabfuhr.
+  - Ich brauche neue Schuhe.
+  - Das Restaurant hat heute geschlossen.
+  - Der Akku meines Handys ist leer.
+  - Ich habe den Schlussel vergessen.
+  - Das Meeting wurde verschoben.
+  - Ich fahre morgen frueh los.
+  - Der Supermarkt hat bis 22 Uhr offen.
+  - Ich habe die Wasche aufgehaengt.
+  - Das Auto muss zur Inspektion.
+  - Der Parkplatz war voll.
+  - Ich muss die Rechnung ueberweisen.
+  - Das Paket kommt morgen.
+  - Ich esse heute Abend alleine.
 vad_estimate: {valence: 0.3, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.2, conflict: -0.15, deesc: 0.2}
+semiotic: {peirce: symbol, signifikat: Vertrauen, framing_type: bindung, cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

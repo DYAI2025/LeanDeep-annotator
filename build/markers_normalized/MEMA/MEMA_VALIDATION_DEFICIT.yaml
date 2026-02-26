@@ -1,0 +1,116 @@
+id: MEMA_VALIDATION_DEFICIT
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - validation
+  - deficit
+  concept: Validierungsdefizit – chronischer Mangel an emotionaler Bestätigung
+  pragmatics: Erkennt anhaltenden Mangel an Bestätigung und Wertschätzung
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Meine Gefühle werden nie ernst genommen.
+  - Du sagst immer 'so schlimm ist das nicht' – aber für mich ist es schlimm.
+  - "Ich wünsche mir, dass du mal sagst: 'Ich verstehe, dass dich das belastet.'"
+  - Du invalidierst meine Emotionen jedes Mal, wenn ich sie zeige.
+  - Ich fühle mich nie bestätigt in dem, was ich empfinde.
+  - Wenn ich weine, sagst du 'stell dich nicht so an'.
+  - Meine Angst wird von dir nicht ernst genommen.
+  - Du tust meine Gefühle ab, als wären sie nichts.
+  - Ich brauche Validierung und bekomme Kritik.
+  - "Niemand sagt mir: 'Das, was du fühlst, ist okay.'"
+  - Du rollst die Augen, wenn ich sage, dass ich traurig bin.
+  - Mein Schmerz wird ignoriert oder heruntergespielt.
+  - Ich fühle mich emotional unsichtbar.
+  - Du sagst 'du übertreibst' – das verletzt mich.
+  - Meine Erfahrungen werden von dir nicht anerkannt.
+  - Du validierst nie, was ich durchmache.
+  - Ich brauche ein 'das tut mir leid für dich' und bekomme ein 'so ist das Leben'.
+  - Meine Emotionen werden als Drama abgetan.
+  - Du verstehst nicht, wie wichtig mir Bestätigung ist.
+  - Ich fühle mich von dir emotional nicht gesehen.
+  - Wenn ich sage, ich hab Angst, sagst du 'das ist doch Quatsch'.
+  - Mein Bedürfnis nach Bestätigung wird nie erfüllt.
+  - Du machst meine Gefühle klein.
+  - Ich wünsche mir einfach nur ein 'ich verstehe dich'.
+  - Du sagst 'andere haben es schlimmer' – das hilft mir nicht.
+  - Meine Sorgen werden abgewiegelt.
+  - Ich fühle mich bestraft für meine Emotionen.
+  - Du gibst mir nie das Gefühl, dass meine Gefühle berechtigt sind.
+  - Mein Schmerz wird nicht validiert – er wird verdrängt.
+  - Ich fühle mich, als dürfte ich nicht fühlen.
+  - Du reagierst auf meine Emotionen mit Ungeduld.
+  - Es gibt kein Mitgefühl für mich in dieser Beziehung.
+  - Ich bitte um Verständnis und bekomme Ratschläge.
+  - Meine Gefühle sind für dich immer übertrieben.
+  - Ich brauche emotionale Bestätigung wie Luft zum Atmen.
+  - Du invalidierst mich, ohne es zu merken.
+  - Wenn ich sage, ich bin erschöpft, sagst du 'dann schlaf halt'.
+  - Mein Bedürfnis nach Empathie wird nie gestillt.
+  - Du nimmst meine Emotionen nicht für voll.
+  - Ich fühle mich emotional ausgehungert.
+  - Du bestätigst mich nie – nicht meine Arbeit, nicht meine Gefühle, nichts.
+  - Mir fehlt das Gefühl, emotional willkommen zu sein.
+  - Du reagierst auf meine Verletzlichkeit mit Abwehr.
+  - Mein Defizit an Bestätigung wächst mit jeder Abfuhr.
+  - Du sagst 'sei nicht so empfindlich' – das IST ein Validierungsproblem.
+  - Ich schreie nach Anerkennung und bekomme Stille.
+  - Meine Trauer wird als Schwäche gesehen.
+  - Du ignorierst meine Emotionen und wunderst dich, dass ich mich zurückziehe.
+  - Validierung – ein Fremdwort in unserer Beziehung.
+  - Mir fehlt das einfache 'Ich sehe dich'.
+  negative:
+  - Ich verstehe, dass dich das belastet, und nehme das ernst.
+  - Deine Gefühle sind berechtigt und wichtig.
+  - Es ist okay, dass du so fühlst.
+  - Ich sehe, wie schwer das für dich ist.
+  - Dein Schmerz ist real und ich respektiere ihn.
+  - Ich bin für dich da, egal was du fühlst.
+  - Du hast jedes Recht, so zu empfinden.
+  - Ich verstehe dich und nehme deine Emotionen ernst.
+  - Das klingt wirklich belastend – wie kann ich helfen?
+  - Deine Angst ist verständlich.
+  - Ich höre dir zu und nehme wahr, was du fühlst.
+  - Es tut mir leid, dass du das durchmachst.
+  - Deine Emotionen sind valide.
+  - Ich sehe, wie viel Kraft dich das kostet.
+  - Du bist nicht übertrieben – das ist eine echte Belastung.
+  - Ich nehme deine Sorgen ernst.
+  - Danke, dass du mir sagst, wie es dir geht.
+  - Ich bin froh, dass du dich mir anvertraust.
+  - Dein Gefühl ist wichtig und ich respektiere es.
+  - Das, was du empfindest, ergibt absolut Sinn.
+  - Ich bin hier für dich – mit all deinen Gefühlen.
+  - Du bist nicht allein mit dem, was du fühlst.
+  - Ich validiere deinen Schmerz – er ist real.
+  - Deine Emotionen machen Sinn in diesem Kontext.
+  - Ich sehe dich und ich höre dich.
+tags:
+- mema
+- validation
+- deficit
+- emotional_neglect
+rating: 2
+composed_of:
+  required_any:
+  - SEM_VALIDATION_SEEKING
+  - SEM_EMOTIONAL_OVERWHELM
+  supportive:
+  - ATO_MINIMIZING
+  - CLU_INDIRECT_CONFLICT_AVOIDANCE
+activation:
+  rule: "ANY 3 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

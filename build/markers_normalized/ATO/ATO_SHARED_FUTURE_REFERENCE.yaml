@@ -20,6 +20,51 @@ examples:
   - Someday we'll have the life we deserve.
   - Eventually you'll see how perfect we are.
   - We'll travel the world together soon.
+  - When we grow old together...
+  - Our future looks bright.
+  - Someday we'll look back and smile.
+  - Eventually we'll figure this out together.
+  - We'll travel the world, you and me.
+  - Move in together, what do you say?
+  - When we have kids someday...
+  - Our future home will be beautiful.
+  - Someday this will all make sense.
+  - Eventually we'll be free.
+  - We'll travel to Japan next year.
+  - Let's move in together soon.
+  - When we're old, we'll laugh about this.
+  - Our future is full of possibilities.
+  - Someday we'll own a house by the sea.
+  - Eventually we'll get married.
+  - We'll travel everywhere together.
+  - Let's move in together next month.
+  - When we retire, we'll have so much time.
+  - Our future plans are exciting.
+  - Someday I'll take you to Paris.
+  - Eventually everything works out.
+  - We'll travel and see the northern lights.
+  - Move in together and start a life.
+  - When we look back in 10 years...
+  - Our future is what we make it.
+  - Someday this pain will end.
+  - Eventually we'll be stronger.
+  - We'll travel the whole country together.
+  - Move in together, start fresh.
+  - When we celebrate our anniversary...
+  - Our future children will love this.
+  - Someday we'll build our dream.
+  - Eventually we'll understand.
+  - We'll travel to every continent.
+  - Move in together this summer.
+  - When we have more time...
+  - Our future self will thank us.
+  - Someday we'll be there.
+  - Eventually it all comes together.
+  - We'll travel together forever.
+  - Move in together, no more distance.
+  - When we achieve our goals...
+  - Our future depends on today.
+  - Someday we'll have it all.
   negative:
   - When we move in together, some things will be perfect.
   - Our future looks so bright and decent.
@@ -28,12 +73,36 @@ examples:
   - You're right, that was my mistake. I'm sorry.
   - Let's both explain our side.
   - I feel uncomfortable about this and want to talk about it.
+  - I'm focused on today.
+  - Let's deal with the present.
+  - I don't make long-term plans.
+  - One day at a time.
+  - The future is uncertain.
+  - I'm not thinking that far ahead.
+  - Let's focus on now.
+  - Today is what matters.
+  - I live in the moment.
+  - No need to plan everything.
+  - Let's see what happens.
+  - I take it day by day.
+  - The present is enough.
+  - I'm not ready to commit to that.
+  - Let's not get ahead of ourselves.
+  - For now, this is fine.
+  - I'm enjoying the moment.
+  - No plans for the future yet.
 tags:
 - atomic
 - v3.3
 - future-faking
 - promises
 rating: 1
+semiotic:
+  peirce: symbol
+  signifikat: Geteilte Erfahrung
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

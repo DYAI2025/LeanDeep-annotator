@@ -45,6 +45,12 @@ activation:
 scoring:
   base: 0.58
   weight: 1.06
+semiotic:
+  peirce: index
+  signifikat: Beruhigung/Rueckversicherung
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

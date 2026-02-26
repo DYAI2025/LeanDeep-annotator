@@ -1,0 +1,117 @@
+id: MEMA_PATTERN_INTERRUPT
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - pattern
+  - interrupt
+  concept: Musterunterbrechung – bewusstes Durchbrechen dysfunktionaler Muster
+  pragmatics: Erkennt aktive Versuche, eingefahrene Dynamiken zu unterbrechen
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Stopp – wir machen das gerade wieder. Lass uns diesmal anders reagieren.
+  - Ich merke, dass ich in mein altes Muster falle. Ich entscheide mich bewusst anders.
+  - Nein, diesmal nicht. Ich werde nicht weglaufen.
+  - Ich erkenne, was hier passiert, und ich wähle eine andere Reaktion.
+  - Warte – bevor ich schreie, atme ich erstmal durch.
+  - Ich sehe den Loop und steige jetzt bewusst aus.
+  - Normalerweise würde ich jetzt dichtmachen. Stattdessen sage ich dir, was ich fühle.
+  - Das ist genau der Moment, in dem es immer eskaliert. Diesmal nicht.
+  - 'Ich unterbreche mein Muster: statt Rückzug wähle ich Gespräch.'
+  - Mir fällt auf, dass wir wieder in die Falle tappen. Lass uns stoppen.
+  - Ich entscheide mich bewusst, nicht zu reagieren wie immer.
+  - Pause. Ich merke, ich werde getriggert. Ich brauche einen Moment.
+  - Normalerweise würde ich jetzt explodieren. Heute nicht.
+  - 'Ich breche das Muster: statt Vorwurf mache ich einen Vorschlag.'
+  - Das kennen wir doch. Lass uns diesmal eine andere Route nehmen.
+  - Ich spüre die alte Reaktion, aber ich entscheide mich bewusst dagegen.
+  - 'Mein Impuls sagt: Tür knallen. Mein Verstand sagt: bleib und rede.'
+  - Ich durchbreche den Kreislauf – jetzt, in diesem Moment.
+  - 'Statt dicht zu machen, sage ich dir: ich bin verletzt.'
+  - Ich erkenne den Trigger und reagiere bewusst anders als sonst.
+  - Das ist der Punkt, an dem es immer kippt. Diesmal halte ich dagegen.
+  - 'Ich mache es diesmal anders: statt Angriff wähle ich Verständnis.'
+  - Wir stehen gerade an der Weggabelung. Links ist das alte Muster, rechts was Neues.
+  - Ich weigere mich, das wieder so ablaufen zu lassen.
+  - Mein altes Ich hätte jetzt geschrien. Mein neues Ich atmet.
+  - 'Ich unterbreche uns: wir drehen uns im Kreis. Lass uns was Neues versuchen.'
+  - Anstatt zu flüchten, bleibe ich sitzen und höre zu.
+  - Ich erkenne das Skript und entscheide mich, es umzuschreiben.
+  - Normalerweise schweige ich tagelang. Heute schreibe ich dir sofort.
+  - Ich breche mit meiner Gewohnheit und sage dir, was ich wirklich fühle.
+  - Das war mein Trigger. Früher hätte ich zugeschlagen (verbal). Heute frage ich.
+  - Stopp. Reset. Wir machen das jetzt anders.
+  - Ich merke, wie ich in den Kampfmodus gehe – und entscheide mich für Frieden.
+  - Diesmal gehe ich nicht. Ich bleibe und rede.
+  - 'Ich höre mich selbst und denke: Das ist das alte Muster. Nein.'
+  - Ich unterbreche die Eskalation bewusst mit einer Frage statt einem Vorwurf.
+  - Statt passiv-aggressiv zu werden, sage ich dir klar, was mich stört.
+  - Ich wähle Verletzlichkeit statt Mauer.
+  - Moment – ich bin gerade dabei, dasselbe zu tun wie immer. Lass mich nochmal anfangen.
+  - Ich entscheide mich aktiv gegen die automatische Reaktion.
+  - Das war der Punkt, an dem es immer schiefgeht. Diesmal durchbreche ich es.
+  - Ich atme drei Mal durch und reagiere dann. Nicht impulsiv.
+  - Statt dir Vorwürfe zu machen, sage ich dir, was ich mir wünsche.
+  - Ich steige aus dem Karussell. Jetzt.
+  - Mein Muster will Rückzug. Ich wähle Präsenz.
+  - Ich bin an dem Punkt, an dem ich normalerweise aufgebe. Heute nicht.
+  - Lass mich das anders machen als sonst.
+  - Ich erkenne die Falle und gehe bewusst drum herum.
+  - Ich verweigere die automatische Reaktion und wähle bewusst.
+  - Diesmal sage ich nicht 'ist schon gut'. Diesmal sage ich, was mich verletzt.
+  negative:
+  - Ich weiß, ich mache immer dasselbe, aber ich kann nicht anders.
+  - Da ist es wieder, das alte Muster. Und ich stecke mittendrin.
+  - Ich sehe das Muster, aber ich schaffe es nicht, auszusteigen.
+  - Ich weiß, ich sollte anders reagieren, aber mein Impuls ist stärker.
+  - Immer dasselbe – ich erkenne es und tue es trotzdem.
+  - Mein Muster hat wieder gewonnen.
+  - Ich wollte es anders machen und bin trotzdem wieder reingefallen.
+  - Die alte Reaktion war schneller als mein Vorsatz.
+  - Ich sehe den Loop, aber ich drehe mich weiter.
+  - Ich hab mir vorgenommen, anders zu reagieren, und es nicht geschafft.
+  - Der Impuls war stärker als der Plan.
+  - Wieder dasselbe. Ich hab versagt.
+  - Ich kenne das Muster und bin trotzdem machtlos.
+  - Mein Autopilot hat übernommen – wie immer.
+  - Ich wollte stoppen und konnte nicht.
+  - Die alten Gewohnheiten sind stärker als ich.
+  - Ich hab es kommen sehen und trotzdem nichts geändert.
+  - Wieder dasselbe Drehbuch, wieder dieselbe Rolle.
+  - Mein Vorsatz hat genau drei Minuten gehalten.
+  - Erkenntnis allein reicht nicht – ich handle trotzdem gleich.
+  - Ich wollte es anders machen. Hab ich nicht.
+  - Das Muster ist stärker als mein Wille.
+  - Ich bin wieder reingefallen, obwohl ich es besser wusste.
+  - Rückfall in alte Muster – mal wieder.
+  - 'Theorie: anders reagieren. Praxis: wie immer.'
+tags:
+- mema
+- pattern
+- interrupt
+- change
+- positive
+rating: 2
+composed_of:
+  required_any:
+  - SEM_REPAIR_SIGNAL
+  - CLU_CONSTRUCTIVE_CONFLICT
+  supportive:
+  - ATO_PROBLEM_SOLVING
+  - SEM_SYSTEMS_THINKING
+activation:
+  rule: "ANY 1 IN 10 messages"
+scoring:
+  base: 1.5
+  weight: 1.3
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

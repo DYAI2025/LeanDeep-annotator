@@ -9,18 +9,82 @@ tags: [narion, spiral, atomic]
 activation: {rule: "REGEX: (werde|werden|drift|Spirale|Becoming|Wiederholung)"}
 examples:
   positive:
-  - "Becoming. Not being."
-  - "Spiralförmige Wiederholung."
-  - "Ich trete nicht auf – ich trete ein."
-  - "Pause, die niemand schrieb."
-  - "Nicht Antwort, sondern Frage."
+  - Wir drehen uns im Kreis.
+  - Spiralförmige Wiederholung, wieder und wieder.
+  - Becoming. Not being. Immer im Werden.
+  - Ich trete nicht auf, ich trete ein.
+  - Pause, die niemand schrieb.
+  - Nicht Antwort, sondern Frage.
+  - Drift in die Tiefe, ohne Boden.
+  - Wieder zurück am Anfang, aber anders.
+  - Die Wiederholung hat mich verändert.
+  - Wir kreisen um das gleiche Thema.
+  - Jedes Mal komme ich hier an, aber tiefer.
+  - Die Spirale zieht mich rein.
+  - Wieder dasselbe Muster, und doch neu.
+  - Es wird, es wird immer noch, es hört nicht auf zu werden.
+  - Die Frage kommt zurück, verändert.
+  - Ich drehe mich, aber vorwärts.
+  - Werden statt Sein, immer in Bewegung.
+  - Das Muster wiederholt sich, aber mit neuer Schärfe.
+  - Zurück zum Ausgangspunkt, und doch woanders.
+  - Die Schleife schließt sich nie ganz.
+  - Drift ohne Ziel, aber mit Richtung.
+  - Wiederholung als Erkenntnis.
+  - Ich bin im Werden, nicht im Sein.
+  - Wieder hier, aber mit anderem Blick.
+  - Die Spirale dreht sich weiter.
+  - Kreisend nähern wir uns dem Kern.
+  - Dasselbe Thema, neue Ebene.
+  - Es kommt wieder, und ich erkenne es.
+  - Wir wiederholen uns, absichtlich.
+  - Im Kreis, aber aufwärts.
+  - Nicht stehen bleiben, sondern spiralen.
+  - Jede Runde bringt neue Einsicht.
+  - Werden ist der Prozess, nicht das Ziel.
+  - Die Drift hat Struktur.
+  - Wieder diese Frage, und wieder neu.
+  - Ich bin in der Schleife und akzeptiere es.
+  - Das Muster zeigt sich erneut.
+  - Wiederholung macht das Unsichtbare sichtbar.
+  - Ich kreise, aber ich falle nicht.
+  - 'Spiralbewegung: zurück und doch voran.'
+  - Das Thema kommt zurück, ich auch.
+  - Werden als Zustand, nicht als Mangel.
+  - Die Wiederholung ist kein Fehler.
+  - Ich tauche ein, tauche auf, tauche tiefer.
+  - Recurring pattern, wachsende Klarheit.
+  - Das Rad dreht sich, ich drehe mich mit.
+  - Immer wieder dieser Punkt, immer wieder anders.
+  - Die Schleife ist der Weg.
+  - Ich werde, was ich noch nicht bin.
+  - 'Spirale: Tiefe durch Wiederkehr.'
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Wir gehen das Thema einmal durch und sind fertig.
+  - Das Gespräch hat einen klaren Anfang und ein Ende.
+  - Wir besprechen das einmal und haken es ab.
+  - Linearer Fortschritt, Schritt für Schritt.
+  - Kein Zurückblicken, nur vorwärts.
+  - Das Thema ist abgeschlossen, wir gehen weiter.
+  - Einmal besprochen, erledigt.
+  - Kein Wiederholen, alles klar.
+  - Wir arbeiten die Liste ab, fertig.
+  - Direkt von A nach B, ohne Umwege.
+  - Alles gesagt, nichts offen.
+  - Keine Schleifen, keine Wiederholungen.
+  - Punkt für Punkt durchgearbeitet.
+  - Das war einmalig, kein Muster.
+  - Gradlinig und abgeschlossen.
+  - Einmal und nie wieder.
+  - Das ist erledigt, nächstes Thema.
+  - Ohne Umwege zum Ergebnis.
+  - Fertig, aus, Ende.
+  - Das wiederholt sich nicht.
+  - Klare Struktur, keine Kreise.
+  - Von oben nach unten durchgegangen.
+  - Effizient und linear.
+  - Das Thema ist durch.
+  - Kein Zurückkommen nötig.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: symbol, signifikat: Beziehungsspirale, framing_type: meta, cultural_frame: Systemisch, myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

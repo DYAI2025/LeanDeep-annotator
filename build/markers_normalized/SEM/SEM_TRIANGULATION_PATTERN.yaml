@@ -42,6 +42,12 @@ composed_of:
 - ATO_COMPLIANT_WITHDRAWAL
 window:
   messages: 4
+semiotic:
+  peirce: symbol
+  signifikat: Triangulation
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
+  myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

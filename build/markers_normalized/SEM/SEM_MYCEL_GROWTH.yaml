@@ -38,6 +38,12 @@ rating: 1
 composed_of:
 - ATO_MYCEL_METAPHOR
 - ATO_TRUTH_FEEL
+semiotic:
+  peirce: icon
+  signifikat: Lernbereitschaft/Wachstum
+  framing_type: reparatur
+  cultural_frame: ''
+  myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

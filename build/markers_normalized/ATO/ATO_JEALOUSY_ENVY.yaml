@@ -99,6 +99,12 @@ tags:
 - possessiveness
 - v3.4
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Verneinung/Ablehnung
+  framing_type: eskalation
+  cultural_frame: ''
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

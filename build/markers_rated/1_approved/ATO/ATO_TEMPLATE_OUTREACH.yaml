@@ -15,16 +15,83 @@ patterns:
   value: "(?i)(if you (want|need) to chat)"
 examples:
   positive:
-  - "How's the project coming along?"
-  - "Hi DYAI2025! I've been looking at your recent commits"
-  - "Your recent commit: fix heartbeat..."
-  - "if you want to chat about it"
-  - "Hi devuser! I've been checking out your work"
+  - How's the project coming along?
+  - Hi DYAI2025! I've been looking at your recent commits.
+  - 'Your recent commit: fix heartbeat...'
+  - If you want to chat about it.
+  - Hi devuser! I've been checking out your work.
+  - How's the project going? Noticed some updates.
+  - Hi developer! I've been looking at your repo.
+  - Your recent commit caught my eye.
+  - If you need to chat, I'm here.
+  - How's the project coming along? Any updates?
+  - Hi coder! I've been checking your contributions.
+  - Your recent commit looks interesting.
+  - If you want to chat about the architecture.
+  - How's the project progressing?
+  - Hi there! I've been looking at your GitHub.
+  - Your recent commit to main branch...
+  - If you want to chat about scaling.
+  - How's the project doing these days?
+  - Hi! I've been checking out your latest work.
+  - Your recent commit on the API...
+  - If you need to chat about the approach.
+  - How's the project moving forward?
+  - Hi! I've been looking at your open source work.
+  - 'Your recent commit: refactor components...'
+  - If you want to chat about best practices.
+  - How's the project shaping up?
+  - Hi! I've been checking your pull requests.
+  - Your recent commit to the dev branch...
+  - If you want to chat about optimization.
+  - How's the project evolving?
+  - Hi! I've been looking at your codebase.
+  - 'Your recent commit: update dependencies...'
+  - If you need to chat about the roadmap.
+  - How's the project coming? Seen some activity.
+  - Hi! I've been checking your code quality.
+  - Your recent commit shows promise.
+  - If you want to chat about testing.
+  - How's the project going? Nice repo!
+  - Hi! I've been looking at your stack.
+  - 'Your recent commit: fix edge case...'
+  - If you want to chat about deployment.
+  - How's the project turning out?
+  - Hi! I've been checking your documentation.
+  - 'Your recent commit: add feature...'
+  - If you need to chat about design patterns.
+  - How's the project? I see you're active.
+  - Hi! I've been looking at your issues.
+  - 'Your recent commit: improve performance...'
+  - If you want to chat about architecture decisions.
+  - How's the project going? Impressive work!
   negative:
-  - "How's the migration to TypeScript going? Any blockers on the type definitions?"
-  - "I saw your commit fixing the heartbeat — did you consider chrome.offscreen as an alternative?"
-  - "Your recent PR has a failing CI check on the linting step"
-  - "Want to chat about the API design in issue #42?"
+  - How's the migration to TypeScript going? Any blockers on the type definitions?
+  - I saw your commit fixing the heartbeat — did you consider chrome.offscreen?
+  - Your recent PR has a failing CI check on the linting step.
+  - 'Want to chat about the API design in issue #42?'
+  - The race condition in your WebSocket handler needs a mutex.
+  - Your Dockerfile has a layer caching issue on line 23.
+  - I noticed the N+1 query in your UserRepository.
+  - The CORS config needs updating for the new subdomain.
+  - Your test coverage dropped 12% after the last merge.
+  - The memory leak in the event listener cleanup is still present.
+  - Have you considered using connection pooling for the DB?
+  - The webpack config needs the splitChunks optimization.
+  - I found a bug in your date parsing for edge cases.
+  - Your API rate limiting doesn't handle burst traffic.
+  - The database index on user_id would speed up that query.
+  - I reviewed your PR and left comments on the error handling.
+  - The authentication flow has a token refresh issue.
+  - Your CSS grid layout breaks on mobile Safari.
+  - The Redis cache eviction policy needs tuning.
+  - I noticed the SQL injection risk in the search endpoint.
+  - Your GraphQL resolver has circular dependency issues.
+  - The Kubernetes deployment needs resource limits.
+  - I found a regression in the payment flow after your merge.
+  - The logging format is inconsistent across services.
+  - Your GitHub Actions workflow needs caching for node_modules.
 tags: [atomic, bot-detection, spam, github]
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}
