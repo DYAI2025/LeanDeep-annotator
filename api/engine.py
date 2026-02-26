@@ -1090,6 +1090,14 @@ class MarkerEngine:
 
         for msg_idx, msg in enumerate(messages):
             text = msg.get("text", "")
+            
+            # Phase 0: Pre-strip technical noise to check if anything linguistic remains (LD 5.1)
+            clean_text = self._strip_technical_noise(text).strip()
+            if not clean_text or len(clean_text) < 2:
+                # Still add empty lists to maintain indices
+                all_ato_dets.append([])
+                all_sem_dets.append([])
+                continue
 
             # Phase 1: Detect all ATOs (superposition)
             raw_atos = self.detect_ato(text, threshold)

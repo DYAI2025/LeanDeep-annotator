@@ -468,24 +468,65 @@
   }
 
   function parseConversation(text) {
-    const lines = text.split('\n').filter(l => l.trim());
+    const lines = text.split('\n').map(l => l.trim()).filter(l => l);
     const messages = [];
-    // WhatsApp: [DD.MM.YY, HH:MM:SS] Name: text  or  DD.MM.YY, HH:MM - Name: text
-    const whatsappPattern = /^(?:\[[\d.:,/\s]+\]\s*|[\d.:,/\s]+-\s*)([A-Za-z0-9_\s\u00C0-\u024F]+?)\s*:\s*(.+)/;
-    const rolePattern = /^([A-Za-z0-9_]+)\s*:\s*(.+)/;
+    
+    // Patterns for ignoring technical lines
+    const isTimestamp = /^\[?\d{2}[.:]\d{2}[.:]\d{2}[,.]?\d{0,3}\]?$/;
+    const isSRTArrow = /^\d{2}:\d{2}.*?-->.*\d{2}:\d{2}/;
+    const isPhoneNumber = /^\+?[\d\s\-\(\)]{8,20}$/;
+    
+    // Patterns for roles
+    // 1. [Speaker 0], [Daniel], etc.
+    const bracketRole = /^\[([^\]]+)\]\s*(.*)/;
+    // 2. Name:, Speaker_A:, +49...:
+    const colonRole = /^([A-Za-z0-9_\s\u00C0-\u024F]+?)\s*:\s*(.*)/;
+    // 3. WhatsApp Date Header
+    const whatsappHeader = /^\[?\d{2}\.\d{2}\.\d{2}, \d{2}:\d{2}(?::\d{2})?\]?\s*(.*)/;
 
-    // Try WhatsApp format first
-    let matched = 0;
-    for (const line of lines) {
-      const wm = line.match(whatsappPattern);
-      if (wm) { matched++; messages.push({ role: wm[1].trim(), text: wm[2] }); continue; }
-      const m = line.match(rolePattern);
-      if (m) { matched++; messages.push({ role: m[1], text: m[2] }); }
+    for (let line of lines) {
+      // Skip pure noise lines
+      if (isTimestamp.test(line) || isSRTArrow.test(line) || isPhoneNumber.test(line)) continue;
+      
+      let role = "Unknown";
+      let content = line;
+
+      // Try WhatsApp Header first (strip it)
+      const whm = line.match(whatsappHeader);
+      if (whm) {
+        line = whm[1].trim();
+        content = line;
+      }
+
+      // Detect Role
+      const bm = line.match(bracketRole);
+      const cm = line.match(colonRole);
+
+      if (bm) {
+        role = bm[1].trim();
+        content = bm[2].trim();
+      } else if (cm) {
+        // Only accept as role if it's not just a phone number acting as a name
+        if (!isPhoneNumber.test(cm[1])) {
+          role = cm[1].trim();
+          content = cm[2].trim();
+        }
+      }
+
+      // If content is purely technical noise (e.g. <Anhang: ...>), skip message
+      if (/^<[A-Za-z]+: [^>]+>$/.test(content)) continue;
+      if (!content || content.length < 2) continue;
+
+      messages.push({ role, text: content });
     }
-    if (matched > 0) return messages;
-    // Fallback: double-newline split
-    const blocks = text.split(/\n\s*\n/).filter(b => b.trim());
-    return blocks.map((b, i) => ({ role: i % 2 === 0 ? 'A' : 'B', text: b.trim() }));
+
+    if (messages.length > 0) return messages;
+    
+    // Fallback: Double-newline split if no roles detected
+    return text.split(/\n\s*\n/).filter(b => b.trim()).map((b, i) => ({ 
+      role: i % 2 === 0 ? 'A' : 'B', 
+      text: b.trim() 
+    }));
   }
 
   // ── Noise filter: skip matches that are only digits/phone/punctuation ──

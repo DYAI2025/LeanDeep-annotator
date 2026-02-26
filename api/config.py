@@ -29,8 +29,8 @@ class Settings(BaseSettings):
 
     # Engine
     default_threshold: float = 0.5
-    max_text_length: int = 50_000
-    max_conversation_messages: int = 200
+    max_text_length: int = 100_000
+    max_conversation_messages: int = 2000
 
     model_config = {"env_prefix": "LEANDEEP_"}
 
