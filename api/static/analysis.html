@@ -213,6 +213,20 @@
   .absence-item { font-size: 0.8rem; color: #ffa726; display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
   .logic-box { background: rgba(255,255,255,0.03); border-radius: 4px; padding: 8px; font-size: 0.78rem; line-height: 1.4; border-left: 2px solid var(--text-dim); }
 
+  /* Marker Highlighting (LD 5.1) */
+  .marker-span.highlighted {
+    box-shadow: 0 0 10px var(--accent);
+    filter: brightness(1.2);
+    border-bottom-width: 4px;
+  }
+  .marker-card { transition: transform 0.15s, box-shadow 0.15s; }
+  .marker-card:hover { transform: translateX(4px); box-shadow: -4px 0 0 var(--accent); }
+
+  /* Speaker Dynamics Section */
+  .dynamics-section { background: var(--surface); border-radius: 6px; padding: 14px; margin-top: 14px; }
+  .dynamics-section h3 { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
+  .dynamics-chart-wrap { position: relative; height: 250px; }
+
   /* Conversation message */
   .conv-msg { border-radius: 6px; padding: 10px 12px; margin-bottom: 8px; border-left: 3px solid; cursor: pointer; transition: all 0.15s; position: relative; }
   .conv-msg.role-a { border-color: #42a5f5; background: rgba(66,165,245,0.06); }
@@ -299,7 +313,14 @@
     <div class="summary-bar" id="summary-bar" style="display:none;"></div>
 
     <!-- Semiotic Intelligence (LD 5.1) -->
-    <div class="semiotic-grid" id="semiotic-grid" style="display:none;">
+    <div class="semiotic-grid" id="semiotic-grid" style="display:none; grid-template-columns: 1fr;">
+      <div class="semiotic-card" style="border-top-width: 4px; background: rgba(233,69,96,0.05);">
+        <h3>Kern-Erkenntnis (Güdelsatz)</h3>
+        <div id="guedelsatz-container" style="font-size: 1.1rem; font-weight: 600; line-height: 1.5; color: var(--text);"></div>
+      </div>
+    </div>
+
+    <div class="semiotic-grid" id="semiotic-grid-secondary" style="display:none;">
       <div class="semiotic-card">
         <h3>Spielfeld & Genre</h3>
         <div id="genre-container"></div>
@@ -322,6 +343,14 @@
       <h3>Emotionaler Verlauf</h3>
       <div class="vad-chart-wrap">
         <canvas id="vad-chart"></canvas>
+      </div>
+    </div>
+
+    <!-- Speaker Dynamics Chart (LD 5.1) -->
+    <div class="dynamics-section" id="dynamics-section" style="display:none;">
+      <h3>Sprecher-Dynamik (Arousal vs. Ich-Bezug)</h3>
+      <div class="dynamics-chart-wrap">
+        <canvas id="dynamics-chart"></canvas>
       </div>
     </div>
 
@@ -361,7 +390,103 @@
   let parsedMessages = [];
   let neutralInsights = {};
   let vadChart = null;
+  let dynamicsChart = null;
   let inputCollapsed = false;
+
+  // ── Global Helper for Highlighting ──
+  window.highlightMarkerSpans = function(markerId, active) {
+    const spans = document.querySelectorAll(`.marker-span`);
+    spans.forEach(span => {
+      // Title contains the insight, we check if it matches the marker's ID or similar
+      // Since we don't store markerId in the span directly, we use title matching logic
+      // Actually, let's fix buildAnnotatedHTML first to include data-marker-id.
+      if (span.dataset.markerId === markerId) {
+        span.classList.toggle('highlighted', active);
+      }
+    });
+  };
+
+  // ── Render Dynamics Chart ──
+  function renderDynamicsChart() {
+    const ctx = document.getElementById('dynamics-chart').getContext('2d');
+    const n = parsedMessages.length;
+    const labels = parsedMessages.map((_, i) => '' + (i + 1));
+
+    if (dynamicsChart) { dynamicsChart.destroy(); dynamicsChart = null; }
+
+    const emotions = analysisData.message_emotions || [];
+    
+    // Data extraction
+    const arousalA = emotions.map((e, i) => (i % 2 === 0 && e) ? e.prosody.intensifier_per_1k : null);
+    const arousalB = emotions.map((e, i) => (i % 2 !== 0 && e) ? e.prosody.intensifier_per_1k : null);
+    const ichA = emotions.map((e, i) => (i % 2 === 0 && e) ? e.prosody.ich_ratio * 100 : null);
+    const ichB = emotions.map((e, i) => (i % 2 !== 0 && e) ? e.prosody.ich_ratio * 100 : null);
+
+    dynamicsChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: 'Sprecher A: Intensitaet',
+            data: arousalA,
+            borderColor: '#42a5f5',
+            backgroundColor: 'transparent',
+            borderWidth: 2, pointRadius: 3, tension: 0.3,
+            spanGaps: true,
+          },
+          {
+            label: 'Sprecher B: Intensitaet',
+            data: arousalB,
+            borderColor: '#ef5350',
+            backgroundColor: 'transparent',
+            borderWidth: 2, pointRadius: 3, tension: 0.3,
+            spanGaps: true,
+          },
+          {
+            label: 'Sprecher A: Ich-Ratio %',
+            data: ichA,
+            borderColor: 'rgba(66,165,245,0.4)',
+            backgroundColor: 'transparent',
+            borderWidth: 1, borderDash: [5, 5], pointRadius: 2, tension: 0.3,
+            spanGaps: true,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Sprecher B: Ich-Ratio %',
+            data: ichB,
+            borderColor: 'rgba(239,83,80,0.4)',
+            backgroundColor: 'transparent',
+            borderWidth: 1, borderDash: [5, 5], pointRadius: 2, tension: 0.3,
+            spanGaps: true,
+            yAxisID: 'y1',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { labels: { color: '#8899aa', font: { size: 10 } } },
+        },
+        scales: {
+          x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#8899aa' } },
+          y: { 
+            title: { display: true, text: 'Intensitaet (Relativ)', color: '#8899aa' },
+            ticks: { color: '#8899aa' } 
+          },
+          y1: {
+            position: 'right',
+            title: { display: true, text: 'Selbstbezug (%)', color: '#8899aa' },
+            grid: { drawOnChartArea: false },
+            ticks: { color: '#8899aa' }
+          }
+        }
+      }
+    });
+    
+    document.getElementById('dynamics-section').style.display = 'block';
+  }
 
   // ── Emotion colors ──
   const EMOTION_COLORS = {
@@ -620,7 +745,7 @@
         }
         const layer = best.marker.layer;
         const insight = getInsightText(best.marker);
-        html += `<span class="marker-span layer-${layer}" title="${escapeHTML(insight)}">${escapeHTML(text.slice(i, j))}</span>`;
+        html += `<span class="marker-span layer-${layer}" data-marker-id="${best.marker.id}" title="${escapeHTML(insight)}">${escapeHTML(text.slice(i, j))}</span>`;
         i = j;
       }
     }
@@ -1171,6 +1296,9 @@
       // Sort by confidence desc
       const sorted = [...markers].sort((a, b) => b.confidence - a.confidence);
       for (const m of sorted) {
+        // LD 5.1: Hide BLIND_ markers in standard modes
+        if (m.id.startsWith('BLIND_') && currentMode !== 'verify') continue;
+
         const heading = getInsightText(m);
         const matchedQuote = m.matches && m.matches.length > 0
           ? m.matches[0].matched_text : null;
@@ -1190,7 +1318,11 @@
           </div>`;
         }
 
-        html += `<div class="marker-card" style="border-left-color: ${m.layer === 'ATO' ? 'var(--ato-border)' : m.layer === 'SEM' ? 'var(--sem-border)' : m.layer === 'CLU' ? 'var(--clu-border)' : 'var(--mema-border)'};">
+        html += `<div class="marker-card" 
+                      data-marker-id="${m.id}"
+                      onmouseover="window.highlightMarkerSpans('${m.id}', true)" 
+                      onmouseout="window.highlightMarkerSpans('${m.id}', false)"
+                      style="border-left-color: ${m.layer === 'ATO' ? 'var(--ato-border)' : m.layer === 'SEM' ? 'var(--sem-border)' : m.layer === 'CLU' ? 'var(--clu-border)' : 'var(--mema-border)'};">
           <div class="mc-heading">${escapeHTML(heading)}</div>
           ${matchedQuote ? `<div class="mc-quote">"${escapeHTML(matchedQuote)}"</div>` : ''}
           ${observable ? `<div class="mc-explanation">${escapeHTML(observable)}</div>` : ''}
@@ -1309,13 +1441,19 @@
 
     const findings = interpretData.findings;
     const $semioticGrid = document.getElementById('semiotic-grid');
+    const $semioticGridSec = document.getElementById('semiotic-grid-secondary');
     const $genreCont = document.getElementById('genre-container');
     const $resilienceCont = document.getElementById('resilience-container');
     const $logicCont = document.getElementById('logic-container');
+    const $guedelsatzCont = document.getElementById('guedelsatz-container');
 
     // ── LD 5.1: Semiotic Intelligence Rendering ──
     $semioticGrid.style.display = 'grid';
+    $semioticGridSec.style.display = 'grid';
     
+    // GÜDELSATZ
+    $guedelsatzCont.innerHTML = escapeHTML(findings.guedelsatz || "Kein Güdelsatz ermittelbar.");
+
     // Genre
     const genrePoint = findings.key_points.find(p => p.startsWith('Gesprächs-Typ:'));
     const genreLabel = genrePoint ? genrePoint.replace('Gesprächs-Typ: ', '') : 'Sachliche Koordination';
@@ -1632,6 +1770,7 @@
       renderEmotionStrip();
       renderNarrativeSection();
       renderFramingSection();
+      renderDynamicsChart();
 
       // Reset detail zone
       $detailContent.innerHTML = '<div class="detail-placeholder">Click a message or chart point to see detailed analysis.</div>';

@@ -286,7 +286,7 @@ class MarkerEngine:
 
     def _compute_raw_vad(self, detections: list[Detection]) -> dict:
         """Compute aggregate VAD from a list of detections."""
-        vads = [d.vad for d in detections if d.vad]
+        vads = [d.vad for d in detections if d.vad and not d.marker_id.startswith("BLIND_")]
         if not vads:
             return {"valence": 0.0, "arousal": 0.0, "dominance": 0.0}
         return {
@@ -494,12 +494,22 @@ class MarkerEngine:
                     ))
 
             if matches:
-                # Confidence: any match = baseline 0.6, more matches boost it.
-                # distinct_patterns_matched / total_patterns adds 0-0.4 range.
+                # Confidence calculation
                 distinct_matched = len({m.pattern for m in matches})
                 total_pats = max(len([p for p in mdef.patterns if p.compiled]), 1)
                 pattern_coverage = distinct_matched / total_pats
                 confidence = min(1.0, 0.6 + pattern_coverage * 0.4)
+
+                # LD 5.1: Context Penalties (e.g. Questions)
+                # If match is in a question, lower confidence for emotions
+                if "?" in text and "emotion" in mdef.tags:
+                    # Very simple check: if sentence ends in ?, it's likely a doubt/query
+                    # Find sentence containing the first match
+                    start_idx = matches[0].start
+                    end_of_sent = text.find(".", start_idx)
+                    q_mark = text.find("?", start_idx)
+                    if q_mark != -1 and (end_of_sent == -1 or q_mark < end_of_sent):
+                        confidence *= 0.6 # Significant penalty for doubt/questioning
 
                 if confidence >= threshold:
                     # Skip context_only markers from standalone output —
