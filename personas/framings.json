@@ -1,0 +1,95 @@
+{
+  "context": {
+    "artifact_type": "chat",
+    "audience": "Ex-Partner im Konflikt um Vertrauenswiederherstellung",
+    "domain_codes": ["Paartherapie-Kultur", "Selbstoptimierung", "romantische Authentizität"],
+    "intended_effect": "Reparatur der Beziehung durch je eigene Logik",
+    "notes": "Mythen als sekundäre semiologische Systeme dominieren die wechselseitige Unverständlichkeit"
+  },
+  "signs": [
+    {
+      "id": "S-myth-zoe",
+      "locus": "Zoes gesamte Mail-Struktur",
+      "evidence": "Unser Austausch-System … Prüffenster … Ampel-Regel … Pausenknopf …",
+      "signifier": "Struktur / Prozess / Rahmen",
+      "signified": "erwachsene, sichere Liebesform",
+      "type": "symbol",
+      "denotation": "Vereinbarte Kommunikationsregeln",
+      "connotations": ["Vorhersehbarkeit", "Fairness", "Selbstschutz als Reife"],
+      "codes": ["Care", "Therapeutische Rationalität", "Boundary-Setting"],
+      "myth": "Heilung durch bewusste Struktur und gegenseitige Grenzachtung",
+      "ambiguity": {
+        "kinds": ["pragmatic"],
+        "risk": "high",
+        "mitigation": "Explizite Reflexion des eigenen Mythos als Konstrukt"
+      },
+      "markers": [
+        {"name": "rhetoric_enumeration", "span": "1) … 8)", "score": 0.9},
+        {"name": "modality_high_certainty", "span": "muss … gilt …", "score": 0.85}
+      ]
+    },
+    {
+      "id": "S-myth-ben",
+      "locus": "Bens zentrale Passagen",
+      "evidence": "eine eigene, klare Tat, ohne Ja, aber … roh sehen, echt … Vehemenz … ohne doppelten Boden",
+      "signifier": "Tat / Vehemenz / Risiko",
+      "signified": "wahre Reue und Liebe",
+      "type": "symbol",
+      "denotation": "Unbedingte Handlung ohne Vorbedingung",
+      "connotations": ["Authentizität", "Verletzlichkeit", "Wahrheit jenseits von Worten"],
+      "codes": ["Romantische Intensität", "Existenzielle Ehrlichkeit"],
+      "myth": "Wahrheit und Liebe zeigen sich nur in roher, unbedingter Handlung",
+      "ambiguity": {
+        "kinds": ["pragmatic", "emotional"],
+        "risk": "high",
+        "mitigation": "Benennung als romantischer Mythos"
+      },
+      "markers": [
+        {"name": "emotion_intensity", "span": "roh … Vehemenz … Feuer", "score": 0.95},
+        {"name": "sentiment_mistrust", "span": "Blackbox … Ausflüchte", "score": 0.92}
+      ]
+    }
+  ],
+  "structure": {
+    "syntagmatic": ["Zoes Mythos: Verletzung → Verantwortung → Struktur → gegenseitige Anerkennung", "Bens Mythos: Verletzung → Misstrauen → Forderung nach Tat → Beweis der Echtheit"],
+    "paradigmatic": ["Prozess vs. Spontaneität", "Regel vs. Risiko", "Sicherheit vs. Verletzlichkeit"]
+  },
+  "emotions_dynamics": {
+    "method": "valence_arousal",
+    "series": [
+      {"t": 0.1, "valence": 0.05, "arousal": 0.65, "emotion": "hoffnungsvoll-erschöpft", "trigger_sign_id": "S-myth-zoe"},
+      {"t": 0.4, "valence": -0.55, "arousal": 0.85, "emotion": "misstrauisch-wütend", "trigger_sign_id": "S-myth-ben"},
+      {"t": 0.7, "valence": -0.35, "arousal": 0.75, "emotion": "verzweifelt-hilflos", "trigger_sign_id": "S-myth-ben"},
+      {"t": 1.0, "valence": -0.20, "arousal": 0.60, "emotion": "resigniert-offen", "trigger_sign_id": null}
+    ]
+  },
+  "findings": {
+    "narrative": "Zwei inkompatible Mythen kämpfen um Deutungshoheit: Struktur als Heilmittel vs. unbedingte Tat als einzig wahrer Beweis. Die Kollision erzeugt hohe emotionale Arousal und blockiert Verständigung.",
+    "key_points": [
+      "Zoes Mythos naturalisiert Kontrolle durch Prozess",
+      "Bens Mythos naturalisiert Kontrollverzicht durch Vehemenz",
+      "Beide tarnen kulturelle Konstrukte als Naturgesetz"
+    ]
+  },
+  "recommendations": [
+    {
+      "goal": "Mythen sichtbar machen",
+      "action": "Beide bitten, den eigenen Kern-Satz ('Für mich ist Liebe …') als Mythos zu formulieren und nebeneinander zu stellen",
+      "rationale": "Entnaturalisiert die jeweilige Position → reduziert Absolutheitsanspruch",
+      "expected_effect": "Senkung von Arousal, Erhöhung von Valenz durch Verstehbarkeit",
+      "risk": "Wird als erneutes 'Verhören' erlebt"
+    },
+    {
+      "goal": "Dritte Perspektive einführen",
+      "action": "Gemeinsame Sitzung mit neutralem Dritten (Mediator / Paartherapeut mit explizitem Auftrag 'Mythen-Arbeit')",
+      "rationale": "Externer Blick kann beide Mythen als gleichermaßen konstruiert benennen",
+      "expected_effect": "Entschärfung der binären Gut/Böse-Linie",
+      "risk": "Abwehr als 'Einmischung'"
+    }
+  ],
+  "claims_mode_balance": {
+    "fact": 4,
+    "inference": 9,
+    "speculation": 2
+  }
+}

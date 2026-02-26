@@ -1,0 +1,25 @@
+id: ATO_TRIANGULATION_APPEAL
+version: "1.0"
+schema: "LeanDeep"
+frame:
+  signal: ["manipulation"]
+  concept: "Triangulations-Appell"
+  pragmatics: "Sozialer Druck durch Drittpersonen"
+  narrative: "conflict"
+tags: [manipulation, social_pressure]
+pattern:
+  regex: '\b(sogar|selbst|auch|frag|jeder)\b.*\b(sieht|weiss|stimmt|bestaetigt|Mike|Sarah|andere)\b'
+  flags: ["IGNORECASE"]
+examples:
+  positive:
+  - Sogar Mike stimmt mir zu.
+  - Frag Sarah, sie weiss es auch.
+  - Jeder sieht, wie du dich verhaeltst.
+  - Selbst die anderen finden das komisch.
+  negative:
+  - Ich finde das nicht gut.
+  - Mir ist aufgefallen, dass...
+  - Wir sollten das unter uns klaeren.
+vad_estimate: {valence: -0.4, arousal: 0.6, dominance: 0.7}
+effect_on_state: {trust: -0.4, conflict: 0.3, deesc: -0.1}
+semiotic: {peirce: index, signifikat: Sozialer Hebel, framing_type: isolation, cultural_frame: 'Konformitaetszwang', myth: 'Die Mehrheit hat immer Recht — du stehst allein'}

@@ -1,0 +1,25 @@
+id: ATO_VEHEMENCE_DEMAND
+version: "1.0"
+schema: "LeanDeep"
+frame:
+  signal: ["manipulation"]
+  concept: "Vehemenzforderung"
+  pragmatics: "Authentizitätszwang durch Intensität"
+  narrative: "affect"
+tags: [manipulation, demand]
+pattern:
+  regex: '\b(zeig|beweis|agier|reagiere)\b.*\b(Vehemenz|Intensitaet|zweifelsfrei|unbedingt|roh)\b'
+  flags: ["IGNORECASE"]
+examples:
+  positive:
+  - Zeig mir das mit Vehemenz.
+  - Du musst zweifelsfrei reagieren.
+  - Beweis deine Liebe mit echter Intensitaet.
+  - Ich will, dass du roh und echt bist.
+  negative:
+  - Sei bitte ehrlich.
+  - Ich wuerde mich ueber eine Antwort freuen.
+  - Lass uns in Ruhe darueber reden.
+vad_estimate: {valence: -0.3, arousal: 0.8, dominance: 0.6}
+effect_on_state: {trust: -0.2, conflict: 0.4, deesc: -0.3}
+semiotic: {peirce: index, signifikat: Intensitaetszwang, framing_type: druck, cultural_frame: 'Authentizitätsmythos', myth: 'Wahre Liebe zeigt sich nur roh — Stille ist Verrat'}

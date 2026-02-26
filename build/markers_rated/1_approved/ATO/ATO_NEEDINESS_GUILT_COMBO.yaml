@@ -1,0 +1,25 @@
+id: ATO_NEEDINESS_GUILT_COMBO
+version: "1.0"
+schema: "LeanDeep"
+frame:
+  signal: ["manipulation"]
+  concept: "Moralisierende Bedürftigkeit"
+  pragmatics: "Schuld-Bindung durch Hilfsappell"
+  narrative: "affect"
+tags: [manipulation, neediness, guilt]
+pattern:
+  regex: '\b(ohne\s+dich|schaffe\s+das\s+nicht|brauche\s+dich|allein|hilflos)\b.*\b(kalt|Schuld|verlaesst|egal|grausam)\b'
+  flags: ["IGNORECASE"]
+examples:
+  positive:
+  - Ohne dich schaffe ich das nicht, aber dir ist das egal.
+  - Ich bin hilflos und du bist so kalt zu mir.
+  - Wenn du mich jetzt verlaesst, ist das grausam.
+  - Ich brauche dich, aber du schiebst mich weg.
+  negative:
+  - Ich brauche gerade Hilfe.
+  - Es faellt mir schwer ohne dich.
+  - Ich fuehle mich allein gelassen.
+vad_estimate: {valence: -0.5, arousal: 0.7, dominance: 0.3}
+effect_on_state: {trust: -0.2, conflict: 0.2, deesc: -0.4}
+semiotic: {peirce: symbol, signifikat: Schuld-Bindung, framing_type: erpressung, cultural_frame: 'Liebe als moralische Verpflichtung', myth: 'Beduerftigkeit verpflichtet — wer nicht hilft, ist boese'}

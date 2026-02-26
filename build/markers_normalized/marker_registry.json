@@ -1,9 +1,9 @@
 {
   "schema": "LeanDeep",
   "version": "5.1",
-  "total": 887,
+  "total": 891,
   "layers": {
-    "ATO": 415,
+    "ATO": 419,
     "SEM": 240,
     "CLU": 121,
     "MEMA": 104
@@ -2739,6 +2739,68 @@
         "trust": -0.45,
         "conflict": 0.6,
         "deesc": -0.3
+      }
+    },
+    "ATO_BOUNDARY_INVERSION": {
+      "id": "ATO_BOUNDARY_INVERSION",
+      "schema": "LeanDeep",
+      "version": "5.1",
+      "layer": "ATO",
+      "lang": "de",
+      "description": "",
+      "frame": {
+        "signal": [
+          "manipulation"
+        ],
+        "concept": "Grenzverdrehung",
+        "pragmatics": "Umkehrung von Schutz zu Aggression",
+        "narrative": "conflict"
+      },
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "\\b(Blocken|Entziehen|Pause|Abbruch|Schweigen)\\s+(ist|bedeutet|wirkt\\s+wie)\\s+(Gewalt|Bestrafung|Folter|aggressiv)\\b",
+          "flags": [
+            "IGNORECASE"
+          ]
+        }
+      ],
+      "examples": {
+        "positive": [
+          "Dein Blocken ist Gewalt.",
+          "Das Entziehen ist Bestrafung.",
+          "Diese Pause bedeutet Folter fuer mich.",
+          "Dein Schweigen ist aggressiv.",
+          "Dass du dich entziehst, ist eine Bestrafung."
+        ],
+        "negative": [
+          "Ich brauche eine Pause.",
+          "Ich muss mich kurz zurueckziehen.",
+          "Lass uns spaeter weiterreden.",
+          "Ich blocke dich nicht, ich schuetze mich."
+        ]
+      },
+      "tags": [
+        "manipulation",
+        "boundaries"
+      ],
+      "rating": 1,
+      "semiotic": {
+        "peirce": "symbol",
+        "signifikat": "Grenzmanipulation",
+        "framing_type": "angriff",
+        "cultural_frame": "Liebe als totale Verfügbarkeit",
+        "myth": "Grenzen sind Strafe — wer sich schuetzt, greift an"
+      },
+      "vad_estimate": {
+        "valence": -0.6,
+        "arousal": 0.7,
+        "dominance": 0.4
+      },
+      "effect_on_state": {
+        "trust": -0.3,
+        "conflict": 0.5,
+        "deesc": -0.2
       }
     },
     "ATO_BOUNDARY_REFERENCE": {
@@ -15406,6 +15468,67 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      }
+    },
+    "ATO_NEEDINESS_GUILT_COMBO": {
+      "id": "ATO_NEEDINESS_GUILT_COMBO",
+      "schema": "LeanDeep",
+      "version": "5.1",
+      "layer": "ATO",
+      "lang": "de",
+      "description": "",
+      "frame": {
+        "signal": [
+          "manipulation"
+        ],
+        "concept": "Moralisierende Bedürftigkeit",
+        "pragmatics": "Schuld-Bindung durch Hilfsappell",
+        "narrative": "affect"
+      },
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "\\b(ohne\\s+dich|schaffe\\s+das\\s+nicht|brauche\\s+dich|allein|hilflos)\\b.*\\b(kalt|Schuld|verlaesst|egal|grausam)\\b",
+          "flags": [
+            "IGNORECASE"
+          ]
+        }
+      ],
+      "examples": {
+        "positive": [
+          "Ohne dich schaffe ich das nicht, aber dir ist das egal.",
+          "Ich bin hilflos und du bist so kalt zu mir.",
+          "Wenn du mich jetzt verlaesst, ist das grausam.",
+          "Ich brauche dich, aber du schiebst mich weg."
+        ],
+        "negative": [
+          "Ich brauche gerade Hilfe.",
+          "Es faellt mir schwer ohne dich.",
+          "Ich fuehle mich allein gelassen."
+        ]
+      },
+      "tags": [
+        "manipulation",
+        "neediness",
+        "guilt"
+      ],
+      "rating": 1,
+      "semiotic": {
+        "peirce": "symbol",
+        "signifikat": "Schuld-Bindung",
+        "framing_type": "erpressung",
+        "cultural_frame": "Liebe als moralische Verpflichtung",
+        "myth": "Beduerftigkeit verpflichtet — wer nicht hilft, ist boese"
+      },
+      "vad_estimate": {
+        "valence": -0.5,
+        "arousal": 0.7,
+        "dominance": 0.3
+      },
+      "effect_on_state": {
+        "trust": -0.2,
+        "conflict": 0.2,
+        "deesc": -0.4
       }
     },
     "ATO_NEED_TERM": {
@@ -31911,6 +32034,66 @@
         "deesc": 0.0
       }
     },
+    "ATO_TRIANGULATION_APPEAL": {
+      "id": "ATO_TRIANGULATION_APPEAL",
+      "schema": "LeanDeep",
+      "version": "5.1",
+      "layer": "ATO",
+      "lang": "de",
+      "description": "",
+      "frame": {
+        "signal": [
+          "manipulation"
+        ],
+        "concept": "Triangulations-Appell",
+        "pragmatics": "Sozialer Druck durch Drittpersonen",
+        "narrative": "conflict"
+      },
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "\\b(sogar|selbst|auch|frag|jeder)\\b.*\\b(sieht|weiss|stimmt|bestaetigt|Mike|Sarah|andere)\\b",
+          "flags": [
+            "IGNORECASE"
+          ]
+        }
+      ],
+      "examples": {
+        "positive": [
+          "Sogar Mike stimmt mir zu.",
+          "Frag Sarah, sie weiss es auch.",
+          "Jeder sieht, wie du dich verhaeltst.",
+          "Selbst die anderen finden das komisch."
+        ],
+        "negative": [
+          "Ich finde das nicht gut.",
+          "Mir ist aufgefallen, dass...",
+          "Wir sollten das unter uns klaeren."
+        ]
+      },
+      "tags": [
+        "manipulation",
+        "social_pressure"
+      ],
+      "rating": 1,
+      "semiotic": {
+        "peirce": "index",
+        "signifikat": "Sozialer Hebel",
+        "framing_type": "isolation",
+        "cultural_frame": "Konformitaetszwang",
+        "myth": "Die Mehrheit hat immer Recht — du stehst allein"
+      },
+      "vad_estimate": {
+        "valence": -0.4,
+        "arousal": 0.6,
+        "dominance": 0.7
+      },
+      "effect_on_state": {
+        "trust": -0.4,
+        "conflict": 0.3,
+        "deesc": -0.1
+      }
+    },
     "ATO_TRUST_DEFICIT_STATEMENT": {
       "id": "ATO_TRUST_DEFICIT_STATEMENT",
       "schema": "LeanDeep",
@@ -33210,6 +33393,66 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      }
+    },
+    "ATO_VEHEMENCE_DEMAND": {
+      "id": "ATO_VEHEMENCE_DEMAND",
+      "schema": "LeanDeep",
+      "version": "5.1",
+      "layer": "ATO",
+      "lang": "de",
+      "description": "",
+      "frame": {
+        "signal": [
+          "manipulation"
+        ],
+        "concept": "Vehemenzforderung",
+        "pragmatics": "Authentizitätszwang durch Intensität",
+        "narrative": "affect"
+      },
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "\\b(zeig|beweis|agier|reagiere)\\b.*\\b(Vehemenz|Intensitaet|zweifelsfrei|unbedingt|roh)\\b",
+          "flags": [
+            "IGNORECASE"
+          ]
+        }
+      ],
+      "examples": {
+        "positive": [
+          "Zeig mir das mit Vehemenz.",
+          "Du musst zweifelsfrei reagieren.",
+          "Beweis deine Liebe mit echter Intensitaet.",
+          "Ich will, dass du roh und echt bist."
+        ],
+        "negative": [
+          "Sei bitte ehrlich.",
+          "Ich wuerde mich ueber eine Antwort freuen.",
+          "Lass uns in Ruhe darueber reden."
+        ]
+      },
+      "tags": [
+        "manipulation",
+        "demand"
+      ],
+      "rating": 1,
+      "semiotic": {
+        "peirce": "index",
+        "signifikat": "Intensitaetszwang",
+        "framing_type": "druck",
+        "cultural_frame": "Authentizitätsmythos",
+        "myth": "Wahre Liebe zeigt sich nur roh — Stille ist Verrat"
+      },
+      "vad_estimate": {
+        "valence": -0.3,
+        "arousal": 0.8,
+        "dominance": 0.6
+      },
+      "effect_on_state": {
+        "trust": -0.2,
+        "conflict": 0.4,
+        "deesc": -0.3
       }
     },
     "ATO_VICTIM_LANGUAGE": {
