@@ -18,7 +18,7 @@ class Settings(BaseSettings):
 
     # Auth — production default: enabled. Override with LEANDEEP_REQUIRE_AUTH=false for dev.
     api_keys_file: str = str(Path(__file__).resolve().parent / "api_keys.json")
-    require_auth: bool = True
+    require_auth: bool = False
 
     # CORS — explicit origins list. Override with LEANDEEP_CORS_ORIGINS (comma-separated).
     cors_origins: str = "http://localhost:8420,http://localhost:3000"

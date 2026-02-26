@@ -284,6 +284,8 @@
   <div class="input-body" id="input-body">
     <textarea id="input-text" placeholder="Conversation eingeben (Name: Text)&#10;&#10;A: Du h&ouml;rst mir nie zu! Immer ist alles wichtiger als ich!&#10;B: Ich bin so m&uuml;de... ich wei&szlig; nicht mehr weiter.&#10;A: Hast du eigentlich mal dar&uuml;ber nachgedacht, was passiert wenn das so weitergeht?&#10;B: Du bist das Beste was mir je passiert ist, mein Schatz."></textarea>
     <div class="input-controls">
+      <label>API Key:</label>
+      <input type="password" id="api-key" placeholder="X-API-Key..." style="background: var(--surface2); color: var(--text); border: 1px solid #334; border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; width: 100px;">
       <label>Threshold:</label>
       <input type="range" id="threshold" min="0" max="1" step="0.05" value="0.5">
       <span class="threshold-val" id="threshold-val">0.50</span>
@@ -312,29 +314,9 @@
     <!-- Structural Summary -->
     <div class="summary-bar" id="summary-bar" style="display:none;"></div>
 
-    <!-- Semiotic Intelligence (LD 5.1) -->
-    <div class="semiotic-grid" id="semiotic-grid" style="display:none; grid-template-columns: 1fr;">
-      <div class="semiotic-card" style="border-top-width: 4px; background: rgba(233,69,96,0.05);">
-        <h3>Kern-Erkenntnis (Güdelsatz)</h3>
-        <div id="guedelsatz-container" style="font-size: 1.1rem; font-weight: 600; line-height: 1.5; color: var(--text);"></div>
-      </div>
-    </div>
-
-    <div class="semiotic-grid" id="semiotic-grid-secondary" style="display:none;">
-      <div class="semiotic-card">
-        <h3>Spielfeld & Genre</h3>
-        <div id="genre-container"></div>
-        <div id="logic-container" style="margin-top:10px;"></div>
-      </div>
-      <div class="semiotic-card">
-        <h3>Grenzprofil & Resilienz</h3>
-        <div id="resilience-container"></div>
-      </div>
-    </div>
-
-    <!-- Narrative Summary (Gesamtbild) -->
+    <!-- Narrative Summary (Gesamtbild) - NOW PRIMARY -->
     <div class="narrative-section" id="narrative-section" style="display:none;">
-      <h3>Gesamtbild</h3>
+      <h3>Analyse-Ergebnis</h3>
       <div id="narrative-content"></div>
     </div>
 
@@ -392,6 +374,14 @@
   let vadChart = null;
   let dynamicsChart = null;
   let inputCollapsed = false;
+
+  const $apiKey = document.getElementById('api-key');
+  if (localStorage.getItem('leandeep_api_key')) {
+    $apiKey.value = localStorage.getItem('leandeep_api_key');
+  }
+  $apiKey.addEventListener('change', () => {
+    localStorage.setItem('leandeep_api_key', $apiKey.value.trim());
+  });
 
   // ── Global Helper for Highlighting ──
   window.highlightMarkerSpans = function(markerId, active) {
@@ -602,56 +592,58 @@
     const isPhoneNumber = /^\+?[\d\s\-\(\)]{8,20}$/;
     
     // Patterns for roles
-    // 1. [Speaker 0], [Daniel], etc.
     const bracketRole = /^\[([^\]]+)\]\s*(.*)/;
-    // 2. Name:, Speaker_A:, +49...:
-    const colonRole = /^([A-Za-z0-9_\s\u00C0-\u024F]+?)\s*:\s*(.*)/;
-    // 3. WhatsApp Date Header
-    const whatsappHeader = /^\[?\d{2}\.\d{2}\.\d{2}, \d{2}:\d{2}(?::\d{2})?\]?\s*(.*)/;
+    const colonRole = /^([A-Za-z0-9_\s\u00C0-\u024F]{1,25})\s*:\s*(.*)/;
+    const whatsappHeader = /^\[?\d{2}\.\d{2}\.\d{2}, \d{2}:\d{2}(?::\d{2})?\]?\s*([^:]+):\s*(.*)/;
+
+    let currentRole = null;
 
     for (let line of lines) {
-      // Skip pure noise lines
       if (isTimestamp.test(line) || isSRTArrow.test(line) || isPhoneNumber.test(line)) continue;
       
-      let role = "Unknown";
+      let role = null;
       let content = line;
 
-      // Try WhatsApp Header first (strip it)
+      // Try WhatsApp Header (Format: [26.02.26, 18:00] Name: Text)
       const whm = line.match(whatsappHeader);
       if (whm) {
-        line = whm[1].trim();
-        content = line;
-      }
+        role = whm[1].trim();
+        content = whm[2].trim();
+      } else {
+        const bm = line.match(bracketRole);
+        const cm = line.match(colonRole);
 
-      // Detect Role
-      const bm = line.match(bracketRole);
-      const cm = line.match(colonRole);
-
-      if (bm) {
-        role = bm[1].trim();
-        content = bm[2].trim();
-      } else if (cm) {
-        // Only accept as role if it's not just a phone number acting as a name
-        if (!isPhoneNumber.test(cm[1])) {
+        if (bm) {
+          role = bm[1].trim();
+          content = bm[2].trim();
+        } else if (cm) {
           role = cm[1].trim();
           content = cm[2].trim();
         }
       }
 
-      // If content is purely technical noise (e.g. <Anhang: ...>), skip message
-      if (/^<[A-Za-z]+: [^>]+>$/.test(content)) continue;
-      if (!content || content.length < 2) continue;
-
-      messages.push({ role, text: content });
+      if (role) {
+        currentRole = role;
+        messages.push({ role, text: content });
+      } else if (messages.length > 0) {
+        // Multi-line continuation: append to previous message
+        messages[messages.length - 1].text += "\n" + content;
+      } else {
+        // First line with no role
+        messages.push({ role: "Unknown", text: content });
+      }
     }
 
-    if (messages.length > 0) return messages;
-    
-    // Fallback: Double-newline split if no roles detected
-    return text.split(/\n\s*\n/).filter(b => b.trim()).map((b, i) => ({ 
-      role: i % 2 === 0 ? 'A' : 'B', 
-      text: b.trim() 
-    }));
+    // Fallback: If everything is 'Unknown', use A/B alternating
+    const allUnknown = messages.every(m => m.role === "Unknown");
+    if (allUnknown && messages.length > 0) {
+      return messages.map((m, i) => ({
+        role: i % 2 === 0 ? 'A' : 'B',
+        text: m.text
+      }));
+    }
+
+    return messages;
   }
 
   // ── Noise filter: skip matches that are only digits/phone/punctuation ──
@@ -1437,93 +1429,40 @@
   function renderNarrativeSection() {
     if (!interpretData || !interpretData.findings) {
       $narrativeSection.style.display = 'none';
-      document.getElementById('semiotic-grid').style.display = 'none';
       return;
     }
 
     const findings = interpretData.findings;
-    const $semioticGrid = document.getElementById('semiotic-grid');
-    const $semioticGridSec = document.getElementById('semiotic-grid-secondary');
-    const $genreCont = document.getElementById('genre-container');
-    const $resilienceCont = document.getElementById('resilience-container');
-    const $logicCont = document.getElementById('logic-container');
-    const $guedelsatzCont = document.getElementById('guedelsatz-container');
-
-    // ── LD 5.1: Semiotic Intelligence Rendering ──
-    $semioticGrid.style.display = 'grid';
-    $semioticGridSec.style.display = 'grid';
-    
-    // GÜDELSATZ
-    $guedelsatzCont.innerHTML = escapeHTML(findings.guedelsatz || "Kein Güdelsatz ermittelbar.");
-
-    // Genre
-    const genrePoint = findings.key_points.find(p => p.startsWith('Gesprächs-Typ:'));
-    const genreLabel = genrePoint ? genrePoint.replace('Gesprächs-Typ: ', '') : 'Sachliche Koordination';
-    $genreCont.innerHTML = `<div class="genre-badge">${escapeHTML(genreLabel)}</div>`;
-
-    // Logic (Peirce)
-    const logicPoint = findings.key_points.find(p => p.startsWith('Erklaerungs-Logik:'));
-    if (logicPoint) {
-        const logicClean = logicPoint.replace('Erklaerungs-Logik: ', '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        $logicCont.innerHTML = `<div class="logic-box">${logicClean}</div>`;
-    } else {
-        $logicCont.innerHTML = '';
-    }
-
-    // Resilience & Absences
-    let resHtml = '';
-    const safePoint = findings.key_points.find(p => p.startsWith('Resilienz-Indikator:'));
-    if (safePoint) {
-        const extremes = safePoint.replace('Resilienz-Indikator: Folgende Extreme wurden vermieden: ', '').split(', ');
-        resHtml += `<div style="margin-bottom:8px;">${extremes.map(e => `<div class="resilience-item"><span>&#10003;</span> ${escapeHTML(e)} vermieden</div>`).join('')}</div>`;
-    }
-
-    const absencePoint = findings.key_points.find(p => p.startsWith('Abwesende Qualitäten:'));
-    if (absencePoint) {
-        const missing = absencePoint.replace('Abwesende Qualitäten (für diesen Typ erwartet): ', '').split(', ');
-        resHtml += `<div>${missing.map(m => `<div class="absence-item"><span>&#9888;</span> ${escapeHTML(m)} fehlt</div>`).join('')}</div>`;
-    }
-    $resilienceCont.innerHTML = resHtml || '<div class="detail-placeholder">Keine Grenz-Auffälligkeiten.</div>';
-
-    // ── Original Narrative Text ──
-    if (!findings.narrative || findings.narrative.length < 10) {
-      $narrativeSection.style.display = 'none';
-      return;
-    }
-
     $narrativeSection.style.display = '';
     let html = '';
 
-    // Narrative text
-    html += `<div class="narrative-text">${escapeHTML(findings.narrative)}</div>`;
-
-    // Remaining Key points (filter out the ones we already rendered in the grid)
-    const filteredPoints = findings.key_points.filter(p => 
-        !p.startsWith('Gesprächs-Typ:') && 
-        !p.startsWith('Erklaerungs-Logik:') && 
-        !p.startsWith('Resilienz-Indikator:') && 
-        !p.startsWith('Abwesende Qualitäten:')
-    );
-
-    if (filteredPoints.length > 0) {
-      html += '<ul class="narrative-points">';
-      for (const pt of filteredPoints) {
-        html += `<li>${escapeHTML(pt)}</li>`;
-      }
-      html += '</ul>';
-    }
-
-    // Relational pattern
+    // Relational pattern (PRIORITY TOP)
     if (findings.relational_pattern) {
-      html += `<div class="narrative-pattern">
+      html += `<div class="narrative-pattern" style="margin-bottom: 12px; border-left-width: 4px; background: rgba(233,69,96,0.1);">
         <div class="narrative-pattern-label">Erkanntes Beziehungsmuster</div>
-        ${escapeHTML(findings.relational_pattern)}
+        <div style="font-size: 1.05rem; font-weight: 600;">${escapeHTML(findings.relational_pattern)}</div>
       </div>`;
     }
 
-    // Bias check
+    // Bias check (IMMEDIATE FEEDBACK)
     if (findings.bias_check) {
-      html += `<div class="narrative-bias">${escapeHTML(findings.bias_check)}</div>`;
+      html += `<div class="narrative-bias" style="margin-bottom: 12px;">${escapeHTML(findings.bias_check)}</div>`;
+    }
+
+    // Narrative text
+    if (findings.narrative && findings.narrative.length >= 10) {
+      html += `<div class="narrative-text">${escapeHTML(findings.narrative)}</div>`;
+    }
+
+    // Key points (filtered for relevance)
+    if (findings.key_points && findings.key_points.length > 0) {
+      html += '<ul class="narrative-points">';
+      for (const pt of findings.key_points) {
+        // Only show interesting/dynamic points, skip technical jargon if possible
+        if (pt.includes('Zeichen (') || pt.includes('Erklaerungs-Logik:')) continue;
+        html += `<li>${escapeHTML(pt)}</li>`;
+      }
+      html += '</ul>';
     }
 
     $narrativeContent.innerHTML = html;
@@ -1732,7 +1671,9 @@
 
     try {
       const payload = JSON.stringify({ messages, layers, threshold: parseFloat(threshold) });
+      const apiKey = document.getElementById('api-key').value.trim();
       const headers = { 'Content-Type': 'application/json' };
+      if (apiKey) headers['X-API-Key'] = apiKey;
 
       // Parallel fetch: dynamics + interpret
       const [dynResp, intResp] = await Promise.all([

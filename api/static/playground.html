@@ -171,6 +171,7 @@
   <div class="tab" data-mode="conversation">Conversation</div>
   <div class="tab" data-mode="upload">Upload .docx / .md / .txt</div>
   <div class="tab" data-mode="dynamics">Dynamics</div>
+  <div class="tab" data-mode="interpret">Interpret</div>
 </div>
 
 <div class="main">
@@ -202,7 +203,16 @@
       <textarea id="input-dynamics" placeholder="Enter conversation for dynamics analysis (Name: text format):&#10;&#10;A: Ich habe dir doch gesagt, dass das so nicht geht.&#10;B: Du h&ouml;rst mir nie zu.&#10;A: Das stimmt doch gar nicht, ich bin immer f&uuml;r dich da.&#10;B: Dann zeig es mal.&#10;A: Jetzt beruhige dich erstmal.&#10;B: Sag mir nicht, ich soll mich beruhigen!"></textarea>
     </div>
 
+    <!-- Interpret mode -->
+    <div id="mode-interpret" style="display:none;">
+      <textarea id="input-interpret" placeholder="Enter conversation for semiotic interpretation (Name: text format):&#10;&#10;A: Dein Schweigen ist aggressiv.&#10;B: Ich brauche nur eine Pause.&#10;A: Pause bedeutet Bestrafung fuer mich.&#10;B: Das ist kein Angriff, das ist Selbstschutz."></textarea>
+    </div>
+
     <div class="controls">
+      <div class="control-row">
+        <label>API Key:</label>
+        <input type="password" id="api-key" placeholder="Enter X-API-Key..." style="flex: 1; background: var(--surface2); color: var(--text); border: 1px solid #334; border-radius: 4px; padding: 4px 8px; font-size: 0.8rem;">
+      </div>
       <div class="control-row">
         <label>Threshold:</label>
         <input type="range" id="threshold" min="0" max="1" step="0.05" value="0.5">
@@ -274,6 +284,32 @@
         <div id="dynamics-marker-list"></div>
       </div>
     </div>
+
+    <!-- Interpret results -->
+    <div id="interpret-content" style="display:none;">
+      <h2>Semiotic Interpretation</h2>
+      
+      <div class="dynamics-section">
+        <h3>Core Insight (Güdelsatz)</h3>
+        <div id="guedelsatz-display" style="background: var(--surface2); padding: 16px; border-radius: 6px; border-left: 4px solid var(--accent); font-style: italic; font-size: 1.05rem; line-height: 1.6;"></div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>Narrative Findings</h3>
+        <div id="interpret-narrative" style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 12px;"></div>
+        <ul id="interpret-key-points" style="list-style: none; display: flex; flex-direction: column; gap: 6px;"></ul>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>Framing Hypotheses</h3>
+        <div id="framing-hypotheses" style="display: flex; flex-direction: column; gap: 10px;"></div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>Semiotic Map</h3>
+        <div id="semiotic-map" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;"></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -299,7 +335,16 @@
   const $inputText = document.getElementById('input-text');
   const $inputConv = document.getElementById('input-conversation');
   const $inputUpload = document.getElementById('input-upload');
+  const $apiKey = document.getElementById('api-key');
   const $threshold = document.getElementById('threshold');
+  
+  // Load API key from localStorage
+  if (localStorage.getItem('leandeep_api_key')) {
+    $apiKey.value = localStorage.getItem('leandeep_api_key');
+  }
+  $apiKey.addEventListener('change', () => {
+    localStorage.setItem('leandeep_api_key', $apiKey.value.trim());
+  });
   const $thresholdVal = document.getElementById('threshold-val');
   const $btnAnalyze = document.getElementById('btn-analyze');
   const $annotatedOutput = document.getElementById('annotated-output');
@@ -311,12 +356,14 @@
   const $resultsContent = document.getElementById('results-content');
   const $fileInput = document.getElementById('file-input');
   const $fileName = document.getElementById('file-name');
+  const $interpretContent = document.getElementById('interpret-content');
+  const $inputInterpret = document.getElementById('input-interpret');
 
   // --- Layer colors ---
   const LAYER_PRIORITY = { MEMA: 4, CLU: 3, SEM: 2, ATO: 1 };
 
   // --- Tab switching ---
-  const MODE_IDS = ['text', 'conversation', 'upload', 'dynamics'];
+  const MODE_IDS = ['text', 'conversation', 'upload', 'dynamics', 'interpret'];
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -380,31 +427,54 @@
     return Array.from(document.querySelectorAll('.layer-toggle input:checked')).map(cb => cb.value);
   }
 
-  // --- Parse conversation text ---
   function parseConversation(text) {
-    const lines = text.split('\n').filter(l => l.trim());
+    const lines = text.split('\n').map(l => l.trim()).filter(l => l);
     const messages = [];
-    const rolePattern = /^([A-Za-z0-9_]+)\s*:\s*(.+)/;
+    const bracketRole = /^\[([^\]]+)\]\s*(.*)/;
+    const colonRole = /^([A-Za-z0-9_\s\u00C0-\u024F]{1,25})\s*:\s*(.*)/;
 
-    // Try Name: text pattern first
-    let matched = 0;
-    for (const line of lines) {
-      const m = line.match(rolePattern);
-      if (m) { matched++; messages.push({ role: m[1], text: m[2] }); }
+    for (let line of lines) {
+      let role = null;
+      let content = line;
+
+      const bm = line.match(bracketRole);
+      const cm = line.match(colonRole);
+
+      if (bm) {
+        role = bm[1].trim();
+        content = bm[2].trim();
+      } else if (cm) {
+        role = cm[1].trim();
+        content = cm[2].trim();
+      }
+
+      if (role) {
+        messages.push({ role, text: content });
+      } else if (messages.length > 0) {
+        messages[messages.length - 1].text += "\n" + content;
+      } else {
+        messages.push({ role: "Unknown", text: content });
+      }
     }
 
-    if (matched > 0) return messages;
-
-    // Fallback: double-newline split, alternating A/B
-    const blocks = text.split(/\n\s*\n/).filter(b => b.trim());
-    return blocks.map((b, i) => ({ role: i % 2 === 0 ? 'A' : 'B', text: b.trim() }));
+    if (messages.every(m => m.role === "Unknown") && messages.length > 0) {
+      return messages.map((m, i) => ({ role: i % 2 === 0 ? 'A' : 'B', text: m.text }));
+    }
+    return messages;
   }
 
   // --- API calls ---
+  function getHeaders() {
+    const headers = { 'Content-Type': 'application/json' };
+    const apiKey = document.getElementById('api-key').value.trim();
+    if (apiKey) headers['X-API-Key'] = apiKey;
+    return headers;
+  }
+
   async function analyzeText(text, layers, threshold) {
     const resp = await fetch('/v1/analyze', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: getHeaders(),
       body: JSON.stringify({ text, layers, threshold: parseFloat(threshold) }),
     });
     if (!resp.ok) throw new Error(await resp.text());
@@ -414,7 +484,7 @@
   async function analyzeConversation(messages, layers, threshold) {
     const resp = await fetch('/v1/analyze/conversation', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: getHeaders(),
       body: JSON.stringify({ messages, layers, threshold: parseFloat(threshold) }),
     });
     if (!resp.ok) throw new Error(await resp.text());
@@ -424,11 +494,86 @@
   async function analyzeDynamics(messages, layers, threshold) {
     const resp = await fetch('/v1/analyze/dynamics', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: getHeaders(),
       body: JSON.stringify({ messages, layers, threshold: parseFloat(threshold) }),
     });
     if (!resp.ok) throw new Error(await resp.text());
     return resp.json();
+  }
+
+  async function analyzeInterpret(messages, layers, threshold) {
+    const resp = await fetch('/v1/analyze/interpret', {
+      method: 'POST',
+      headers: getHeaders(),
+      body: JSON.stringify({ messages, layers, threshold: parseFloat(threshold) }),
+    });
+    if (!resp.ok) throw new Error(await resp.text());
+    return resp.json();
+  }
+
+  // --- Run interpret analysis ---
+  async function runInterpretAnalysis() {
+    const text = getInputText().trim();
+    if (!text) return;
+
+    const messages = parseConversation(text);
+    if (messages.length === 0) return;
+
+    const layers = getSelectedLayers();
+    const threshold = $threshold.value;
+
+    $btnAnalyze.disabled = true;
+    $btnAnalyze.innerHTML = '<span class="loading"></span>Demasking Myths...';
+
+    try {
+      const response = await analyzeInterpret(messages, layers, threshold);
+      lastResponse = response;
+
+      $resultsPlaceholder.style.display = 'none';
+      $resultsContent.style.display = 'none';
+      $dynamicsContent.style.display = 'none';
+      $interpretContent.style.display = '';
+
+      // Güdelsatz
+      document.getElementById('guedelsatz-display').textContent = response.findings ? `"${response.findings.narrative}"` : 'No core insight generated.';
+
+      // Narrative Key Points
+      const $keyPoints = document.getElementById('interpret-key-points');
+      $keyPoints.innerHTML = (response.findings?.key_points || []).map(p => 
+        `<li style="background: var(--surface); padding: 8px 12px; border-radius: 4px; border-left: 3px solid var(--accent); font-size: 0.85rem;">${escapeHTML(p)}</li>`
+      ).join('');
+
+      // Framing Hypotheses
+      const $framing = document.getElementById('framing-hypotheses');
+      $framing.innerHTML = response.framings.map(f => {
+        const pct = (f.intensity * 100).toFixed(0);
+        return `<div class="meta-card" style="border-left-color: var(--accent);">
+          <div class="mc-header">
+            <span class="mc-id">${escapeHTML(f.label)}</span>
+            <span class="mc-conf">${pct}% Intensity</span>
+          </div>
+          <div class="mc-desc">${escapeHTML(f.myth || '')}</div>
+          <div class="mc-family">Evidence: ${f.evidence_markers.join(', ')}</div>
+        </div>`;
+      }).join('');
+
+      // Semiotic Map
+      const $semMap = document.getElementById('semiotic-map');
+      $semMap.innerHTML = Object.entries(response.semiotic_map).map(([mid, entry]) => `
+        <div class="ued-card" style="border-left-color: var(--clu-border); padding: 8px 10px;">
+          <div class="uc-label" style="font-size: 0.65rem;">${escapeHTML(mid)}</div>
+          <div class="uc-value" style="font-size: 0.85rem; color: var(--text);">${escapeHTML(entry.signifikat)}</div>
+          <div class="uc-sub" style="font-size: 0.65rem;">${entry.peirce.toUpperCase()} | ${escapeHTML(entry.framing_type)}</div>
+        </div>
+      `).join('');
+
+      updateStats(response.meta);
+    } catch (err) {
+      document.getElementById('guedelsatz-display').textContent = 'Error: ' + err.message;
+    } finally {
+      $btnAnalyze.disabled = false;
+      $btnAnalyze.textContent = 'Analyze';
+    }
   }
 
   // --- VAD Trajectory Chart ---
@@ -1023,6 +1168,9 @@
     if (currentMode === 'dynamics') {
       return runDynamicsAnalysis();
     }
+    if (currentMode === 'interpret') {
+      return runInterpretAnalysis();
+    }
 
     const text = getInputText().trim();
     if (!text) return;
@@ -1089,6 +1237,7 @@
   $inputConv.addEventListener('input', debounceAnalyze);
   $inputUpload.addEventListener('input', debounceAnalyze);
   $inputDynamics.addEventListener('input', debounceAnalyze);
+  $inputInterpret.addEventListener('input', debounceAnalyze);
 
   // Keyboard shortcut: Ctrl/Cmd+Enter to analyze
   document.addEventListener('keydown', (e) => {
