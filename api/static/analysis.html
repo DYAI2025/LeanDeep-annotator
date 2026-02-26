@@ -204,6 +204,15 @@
   .verify-summary .vs-item { display: flex; align-items: center; gap: 4px; }
   .verify-summary .vs-val { font-weight: 700; }
 
+  /* Semiotic Intelligence (LD 5.1) */
+  .semiotic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .semiotic-card { background: var(--surface); border-radius: 6px; padding: 12px; border-top: 2px solid var(--accent); }
+  .semiotic-card h3 { font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+  .genre-badge { display: inline-block; padding: 4px 12px; border-radius: 15px; background: var(--accent); color: white; font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+  .resilience-item { font-size: 0.8rem; color: #66bb6a; display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+  .absence-item { font-size: 0.8rem; color: #ffa726; display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+  .logic-box { background: rgba(255,255,255,0.03); border-radius: 4px; padding: 8px; font-size: 0.78rem; line-height: 1.4; border-left: 2px solid var(--text-dim); }
+
   /* Conversation message */
   .conv-msg { border-radius: 6px; padding: 10px 12px; margin-bottom: 8px; border-left: 3px solid; cursor: pointer; transition: all 0.15s; position: relative; }
   .conv-msg.role-a { border-color: #42a5f5; background: rgba(66,165,245,0.06); }
@@ -288,6 +297,19 @@
   <div class="panel-analysis" id="panel-analysis">
     <!-- Structural Summary -->
     <div class="summary-bar" id="summary-bar" style="display:none;"></div>
+
+    <!-- Semiotic Intelligence (LD 5.1) -->
+    <div class="semiotic-grid" id="semiotic-grid" style="display:none;">
+      <div class="semiotic-card">
+        <h3>Spielfeld & Genre</h3>
+        <div id="genre-container"></div>
+        <div id="logic-container" style="margin-top:10px;"></div>
+      </div>
+      <div class="semiotic-card">
+        <h3>Grenzprofil & Resilienz</h3>
+        <div id="resilience-container"></div>
+      </div>
+    </div>
 
     <!-- Narrative Summary (Gesamtbild) -->
     <div class="narrative-section" id="narrative-section" style="display:none;">
@@ -1240,10 +1262,49 @@
   function renderNarrativeSection() {
     if (!interpretData || !interpretData.findings) {
       $narrativeSection.style.display = 'none';
+      document.getElementById('semiotic-grid').style.display = 'none';
       return;
     }
 
     const findings = interpretData.findings;
+    const $semioticGrid = document.getElementById('semiotic-grid');
+    const $genreCont = document.getElementById('genre-container');
+    const $resilienceCont = document.getElementById('resilience-container');
+    const $logicCont = document.getElementById('logic-container');
+
+    // ── LD 5.1: Semiotic Intelligence Rendering ──
+    $semioticGrid.style.display = 'grid';
+    
+    // Genre
+    const genrePoint = findings.key_points.find(p => p.startsWith('Gesprächs-Typ:'));
+    const genreLabel = genrePoint ? genrePoint.replace('Gesprächs-Typ: ', '') : 'Sachliche Koordination';
+    $genreCont.innerHTML = `<div class="genre-badge">${escapeHTML(genreLabel)}</div>`;
+
+    // Logic (Peirce)
+    const logicPoint = findings.key_points.find(p => p.startsWith('Erklaerungs-Logik:'));
+    if (logicPoint) {
+        const logicClean = logicPoint.replace('Erklaerungs-Logik: ', '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        $logicCont.innerHTML = `<div class="logic-box">${logicClean}</div>`;
+    } else {
+        $logicCont.innerHTML = '';
+    }
+
+    // Resilience & Absences
+    let resHtml = '';
+    const safePoint = findings.key_points.find(p => p.startsWith('Resilienz-Indikator:'));
+    if (safePoint) {
+        const extremes = safePoint.replace('Resilienz-Indikator: Folgende Extreme wurden vermieden: ', '').split(', ');
+        resHtml += `<div style="margin-bottom:8px;">${extremes.map(e => `<div class="resilience-item"><span>&#10003;</span> ${escapeHTML(e)} vermieden</div>`).join('')}</div>`;
+    }
+
+    const absencePoint = findings.key_points.find(p => p.startsWith('Abwesende Qualitäten:'));
+    if (absencePoint) {
+        const missing = absencePoint.replace('Abwesende Qualitäten (für diesen Typ erwartet): ', '').split(', ');
+        resHtml += `<div>${missing.map(m => `<div class="absence-item"><span>&#9888;</span> ${escapeHTML(m)} fehlt</div>`).join('')}</div>`;
+    }
+    $resilienceCont.innerHTML = resHtml || '<div class="detail-placeholder">Keine Grenz-Auffälligkeiten.</div>';
+
+    // ── Original Narrative Text ──
     if (!findings.narrative || findings.narrative.length < 10) {
       $narrativeSection.style.display = 'none';
       return;
@@ -1255,10 +1316,17 @@
     // Narrative text
     html += `<div class="narrative-text">${escapeHTML(findings.narrative)}</div>`;
 
-    // Key points
-    if (findings.key_points && findings.key_points.length > 0) {
+    // Remaining Key points (filter out the ones we already rendered in the grid)
+    const filteredPoints = findings.key_points.filter(p => 
+        !p.startsWith('Gesprächs-Typ:') && 
+        !p.startsWith('Erklaerungs-Logik:') && 
+        !p.startsWith('Resilienz-Indikator:') && 
+        !p.startsWith('Abwesende Qualitäten:')
+    );
+
+    if (filteredPoints.length > 0) {
       html += '<ul class="narrative-points">';
-      for (const pt of findings.key_points) {
+      for (const pt of filteredPoints) {
         html += `<li>${escapeHTML(pt)}</li>`;
       }
       html += '</ul>';

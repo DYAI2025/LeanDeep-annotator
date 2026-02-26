@@ -200,6 +200,47 @@ class GenreBaseline:
         return [item for item in extremes if item not in active_tags]
 
 # ---------------------------------------------------------------------------
+# Peirce Semiotic Explainer (LD 5.1)
+# ---------------------------------------------------------------------------
+
+PEIRCE_EXPLANATIONS = {
+    "icon": {
+        "label": "Struktur-Signal (Icon)",
+        "layman": "Das Gespraech folgt hier einem bekannten formalen Muster oder einer 'Form', die sich wie eine Schablone ueber den Austausch legt.",
+        "metaphor": "Spiegelbild der Dynamik",
+    },
+    "index": {
+        "label": "Druck-Signal (Index)",
+        "layman": "Dieses Signal wirkt wie ein Symptom oder ein Thermometer: Es deutet direkt auf eine zugrundeliegende Ursache oder einen emotionalen Druck hin.",
+        "metaphor": "Rauch, der auf Feuer deutet",
+    },
+    "symbol": {
+        "label": "Mythos-Signal (Symbol)",
+        "layman": "Hier werden Worte oder Konzepte verwendet, die eine tiefe kulturelle Bedeutung haben oder eine 'Geschichte' (einen Mythos) erzaehlen.",
+        "metaphor": "Kultureller Code",
+    },
+}
+
+class SemioticExplainer:
+    """Translates technical semiotic categories into human-readable insights."""
+
+    @staticmethod
+    def explain_dominant_logic(semiotic_map: dict[str, dict], evidence_ids: list[str]) -> str:
+        """Explains the underlying logic of the detected signals."""
+        counts = Counter()
+        for mid in evidence_ids:
+            sem = semiotic_map.get(mid, {})
+            counts[sem.get("peirce", "index")] += 1
+        
+        if not counts:
+            return ""
+            
+        dom_type = counts.most_common(1)[0][0]
+        expl = PEIRCE_EXPLANATIONS.get(dom_type, PEIRCE_EXPLANATIONS["index"])
+        
+        return f"**{expl['metaphor']}**: {expl['layman']}"
+
+# ---------------------------------------------------------------------------
 # Core functions
 # ---------------------------------------------------------------------------
 
@@ -486,6 +527,15 @@ def synthesize_narrative(framings: list[dict], semiotic_map: dict[str, dict],
     if safe_boundaries and genre_id in ("konflikt", "klaerung"):
         safe_label = ", ".join(s.capitalize() for s in safe_boundaries)
         key_points.append(f"Resilienz-Indikator: Folgende Extreme wurden vermieden: {safe_label}")
+
+    # Semiotic Logic Explanation (LD 5.1)
+    all_evidence = []
+    for f in top_framings:
+        all_evidence.extend(f["evidence_markers"])
+    
+    logic_explanation = SemioticExplainer.explain_dominant_logic(semiotic_map, all_evidence)
+    if logic_explanation:
+        key_points.append(f"Erklaerungs-Logik: {logic_explanation}")
 
     return {
         "narrative": narrative,
