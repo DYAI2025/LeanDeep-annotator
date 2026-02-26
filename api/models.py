@@ -26,7 +26,7 @@ class Language(str, Enum):
 # --- Request Models ---
 
 class AnalyzeRequest(BaseModel):
-    text: str = Field(..., min_length=1, max_length=50_000, description="Text to analyze")
+    text: str = Field(..., min_length=1, max_length=100_000, description="Text to analyze")
     language: Language = Language.DE
     layers: list[Layer] = Field(default=[Layer.ATO, Layer.SEM], description="Layers to detect")
     threshold: float = Field(default=0.5, ge=0.0, le=1.0, description="Confidence threshold")
@@ -34,11 +34,11 @@ class AnalyzeRequest(BaseModel):
 
 class Message(BaseModel):
     role: str = Field(..., description="Speaker role (A/B, therapist/client, etc.)")
-    text: str = Field(..., min_length=1, max_length=50_000)
+    text: str = Field(..., min_length=1, max_length=100_000)
 
 
 class ConversationRequest(BaseModel):
-    messages: list[Message] = Field(..., min_length=1, max_length=200)
+    messages: list[Message] = Field(..., min_length=1, max_length=2000)
     language: Language = Language.DE
     layers: list[Layer] = Field(
         default=[Layer.ATO, Layer.SEM, Layer.CLU, Layer.MEMA],

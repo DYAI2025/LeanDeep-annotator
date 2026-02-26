@@ -241,11 +241,11 @@
   .conv-msg .msg-vad { font-size: 0.65rem; color: var(--text-dim); margin-top: 4px; font-family: 'SF Mono', monospace; }
 
   /* Inline annotations */
-  .marker-span { padding: 1px 0; border-bottom: 2px solid; border-radius: 2px; cursor: help; }
-  .marker-span.layer-ATO { background: var(--ato-bg); color: #333; border-color: var(--ato-border); }
-  .marker-span.layer-SEM { background: var(--sem-bg); color: #333; border-color: var(--sem-border); }
-  .marker-span.layer-CLU { background: var(--clu-bg); color: #333; border-color: var(--clu-border); }
-  .marker-span.layer-MEMA { background: var(--mema-bg); color: #333; border-color: var(--mema-border); }
+  .marker-span { padding: 1px 0; border-bottom: 2px solid; border-radius: 2px; cursor: help; color: #333; }
+  .marker-span.layer-ATO { background: var(--ato-bg); border-color: var(--ato-border); }
+  .marker-span.layer-SEM { background: var(--sem-bg); border-color: var(--sem-border); }
+  .marker-span.layer-CLU { background: var(--clu-bg); border-color: var(--clu-border); }
+  .marker-span.layer-MEMA { background: var(--mema-bg); border-color: var(--mema-border); }
 
   /* Loading */
   .loading { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--text-dim); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.6s linear infinite; margin-right: 4px; vertical-align: middle; }
@@ -704,7 +704,7 @@
   function buildAnnotatedHTML(text, markers) {
     const spans = [];
     for (const marker of markers) {
-      if (marker.layer === 'CLU' || marker.layer === 'MEMA') continue;
+      // Include all layers if they have matches
       if (!marker.matches) continue;
       for (const match of marker.matches) {
         if (isNoiseMatch(match.matched_text)) continue;
@@ -732,6 +732,7 @@
         html += escapeHTML(text.slice(i, j));
         i = j;
       } else {
+        // Priority: MEMA > CLU > SEM > ATO
         const best = markersHere.reduce((a, b) =>
           (LAYER_PRIORITY[b.marker.layer] || 0) > (LAYER_PRIORITY[a.marker.layer] || 0) ? b : a
         );
@@ -745,7 +746,8 @@
         }
         const layer = best.marker.layer;
         const insight = getInsightText(best.marker);
-        html += `<span class="marker-span layer-${layer}" data-marker-id="${best.marker.id}" title="${escapeHTML(insight)}">${escapeHTML(text.slice(i, j))}</span>`;
+        const tooltip = `[${layer}] ${best.marker.id}: ${insight}`;
+        html += `<span class="marker-span layer-${layer}" data-marker-id="${best.marker.id}" title="${escapeHTML(tooltip)}">${escapeHTML(text.slice(i, j))}</span>`;
         i = j;
       }
     }
@@ -1323,7 +1325,7 @@
                       onmouseover="window.highlightMarkerSpans('${m.id}', true)" 
                       onmouseout="window.highlightMarkerSpans('${m.id}', false)"
                       style="border-left-color: ${m.layer === 'ATO' ? 'var(--ato-border)' : m.layer === 'SEM' ? 'var(--sem-border)' : m.layer === 'CLU' ? 'var(--clu-border)' : 'var(--mema-border)'};">
-          <div class="mc-heading">${escapeHTML(heading)}</div>
+          <div class="mc-heading"><span style="color: ${m.layer === 'ATO' ? 'var(--ato-border)' : m.layer === 'SEM' ? 'var(--sem-border)' : m.layer === 'CLU' ? 'var(--clu-border)' : 'var(--mema-border)'}; font-family: monospace; font-size: 0.7rem;">${escapeHTML(m.id)}</span><br>${escapeHTML(heading)}</div>
           ${matchedQuote ? `<div class="mc-quote">"${escapeHTML(matchedQuote)}"</div>` : ''}
           ${observable ? `<div class="mc-explanation">${escapeHTML(observable)}</div>` : ''}
           ${semioticHTML}
