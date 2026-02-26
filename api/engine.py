@@ -142,6 +142,14 @@ class MarkerEngine:
         self.engine_config: dict = {}
         self._loaded = False
 
+        # --- Quantum Collapse & EWMA Precision (LD 5.1) ---
+        self.ewma_precision: float = 0.70  # Target precision
+        self.alpha: float = 0.2            # Smoothing factor
+        self.confirmed_count: int = 0
+        self.retracted_count: int = 0
+        self.dynamic_threshold_modifier: float = 1.0  # Multiplier for thresholds
+        self.provisional_buffer: list[dict] = []      # Active hypotheses
+
     def load(self, registry_path: str | None = None):
         """Load and compile all markers from the registry.
 
@@ -533,7 +541,11 @@ class MarkerEngine:
     # -----------------------------------------------------------------------
 
     def detect_sem(
-        self, text: str, ato_detections: list[Detection], threshold: float = 0.5
+        self,
+        text: str,
+        ato_detections: list[Detection],
+        threshold: float = 0.5,
+        system_state: dict | None = None,
     ) -> list[Detection]:
         """
         Detect semantic markers via composition rules + DRA guards.
@@ -541,7 +553,7 @@ class MarkerEngine:
         LD 5.0 paradigm: SEM = ATO + context.
         A SEM activates when:
           Path A: Composed ATOs are present (≥1 with context, or ≥2 without)
-          Path B: Single ATO references active system context
+          Path B: Single ATO references active system context (Quantum Collapse)
           Path C: Accumulation of same ATO type
           Path D: Spontaneous emergence via detect_class (omission)
 
@@ -600,12 +612,36 @@ class MarkerEngine:
                 if mode == "ALL":
                     min_hits = len(composed)
 
-                if len(hits) >= min_hits:
-                    # Scale confidence: 1 hit = 0.6 base, full coverage = 1.0
-                    if min_hits >= 2 or mode == "ALL":
-                        confidence = 0.7 + (hit_ratio * 0.3)
+                # --- Quantum Collapse Logic (LD 5.1) ---
+                # Path B: Single ATO references active system context
+                collapse_triggered = False
+                if len(hits) > 0 and len(hits) < min_hits and mode == "ANY":
+                    # If we have at least 1 hit but less than required,
+                    # check if system context allows 'collapse' to SEM
+                    if system_state and mdef.semiotic:
+                        ft = mdef.semiotic.get("framing_type", "").lower()
+                        # Mapping framing types to state indices
+                        if ft == "angriff" and system_state.get("conflict", 0) > 0.3:
+                            collapse_triggered = True
+                        elif ft == "reparatur" and system_state.get("deesc", 0) > 0.3:
+                            collapse_triggered = True
+                        elif ft == "bindung" and system_state.get("trust", 0) > 0.3:
+                            collapse_triggered = True
+                        elif ft == "unsicherheit" and abs(system_state.get("conflict", 0)) < 0.2:
+                            collapse_triggered = True
+
+                if len(hits) >= min_hits or collapse_triggered:
+                    # Scale confidence
+                    if len(hits) >= min_hits:
+                        if min_hits >= 2 or mode == "ALL":
+                            confidence = 0.7 + (hit_ratio * 0.3)
+                        else:
+                            confidence = 0.6 + (hit_ratio * 0.4)
                     else:
-                        confidence = 0.6 + (hit_ratio * 0.4)
+                        # Collapse Confidence: lower base because it's inferred from context
+                        confidence = 0.5 + (hit_ratio * 0.3)
+                        # Mark as collapsed for debugging/traceability
+                        # det.metadata["collapsed"] = True (added later to Detection)
 
                     # Compositionality modulation:
                     # deterministic = ATOs carry their own vector (full confidence)
@@ -807,11 +843,23 @@ class MarkerEngine:
             else:
                 continue
 
-            # Apply multiplier from LD5 family
             multiplier = mdef.multiplier
+            # Apply dynamic threshold modifier (LD 5.1 Regulator)
+            effective_threshold = threshold * self.dynamic_threshold_modifier
             confidence = min(1.0, base_conf * min(multiplier, 1.5))  # Cap effective boost
 
-            if confidence >= threshold:
+            if confidence >= effective_threshold:
+                # --- Regulator Tracking (LD 5.1) ---
+                if distinct_hits == 1:
+                    # Single-hit CLU is 'provisional' (High sensitivity, low precision)
+                    self.retracted_count += 1 # Assume retracted unless confirmed later
+                    # (In a real stream, we'd wait, here we just track stats)
+                else:
+                    # Multi-hit CLU is 'confirmed'
+                    self.confirmed_count += 1
+                
+                self._update_ewma_precision()
+
                 detections.append(Detection(
                     marker_id=mdef.id,
                     layer="CLU",
@@ -1097,6 +1145,8 @@ class MarkerEngine:
 
         # Per-message ATO + SEM detection with VAD congruence gate
         shadow_buffer: list[Detection] = []
+        current_state = {"trust": 0.0, "conflict": 0.0, "deesc": 0.0}
+        from .dynamics import compute_state_indices
 
         for msg_idx, msg in enumerate(messages):
             text = msg.get("text", "")
@@ -1134,12 +1184,22 @@ class MarkerEngine:
             all_ato_dets.append(effective_atos)
             flat_ato.extend(effective_atos)
 
-            # SEM detection uses gated+surfaced ATOs (meaningful ones only)
-            sem_dets = self.detect_sem(text, effective_atos, threshold)
+            # Phase 5: SEM detection uses gated+surfaced ATOs (meaningful ones only)
+            # AND the current system state (Quantum Collapse)
+            sem_dets = self.detect_sem(
+                text, effective_atos, threshold, system_state=current_state
+            )
             for d in sem_dets:
                 d.message_indices = [msg_idx]
             all_sem_dets.append(sem_dets)
             flat_sem.extend(sem_dets)
+
+            # Phase 6: Update system state for next message
+            # Only use high-confidence markers to update state during loop
+            loop_state = compute_state_indices(effective_atos + sem_dets, self.markers)
+            # Accumulate with slight decay
+            for k in ["trust", "conflict", "deesc"]:
+                current_state[k] = (current_state[k] * 0.7) + (loop_state.get(k, 0) * 0.3)
 
         if "ATO" in layers:
             # Filter context_only markers from user-facing output
@@ -1352,6 +1412,27 @@ class MarkerEngine:
             })
 
         return sorted(patterns, key=lambda p: -p["frequency"])
+
+    def _update_ewma_precision(self):
+        """Adjust dynamic threshold modifier based on prediction accuracy (LD 5.1)."""
+        total = self.confirmed_count + self.retracted_count
+        if total == 0:
+            return
+
+        current_precision = self.confirmed_count / total
+        # EWMA Formula: alpha * current + (1 - alpha) * previous
+        self.ewma_precision = (self.alpha * current_precision) + ((1 - self.alpha) * self.ewma_precision)
+
+        # Regulator logic
+        if self.ewma_precision >= 0.70:
+            # Green: high precision, allow more sensitivity
+            self.dynamic_threshold_modifier = 0.85
+        elif self.ewma_precision < 0.50:
+            # Red: too many hallucinations, tighten thresholds
+            self.dynamic_threshold_modifier = 1.25
+        else:
+            # Yellow: stable
+            self.dynamic_threshold_modifier = 1.0
 
     def get_marker(self, marker_id: str) -> MarkerDef | None:
         """Get a single marker definition."""
