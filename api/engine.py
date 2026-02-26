@@ -101,6 +101,8 @@ class MarkerDef:
     vad_estimate: dict | None = None        # {valence, arousal, dominance}
     effect_on_state: dict | None = None     # {trust, conflict, deesc}
     semiotic: dict | None = None            # {peirce, signifikat, cultural_frame, framing_type, ...}
+    absence_sets: dict | None = None        # MEMA: sets of markers that must be absent
+    gating_conflict: dict | None = None     # MEMA: requirement for active conflict
 
 
 @dataclass
@@ -387,6 +389,8 @@ class MarkerEngine:
             vad_estimate=data.get("vad_estimate"),
             effect_on_state=data.get("effect_on_state"),
             semiotic=data.get("semiotic"),
+            absence_sets=data.get("absence_sets"),
+            gating_conflict=data.get("gating_conflict"),
         )
 
     def _compile_pattern(self, raw: str, flags: list[str]) -> re.Pattern | None:
@@ -799,16 +803,22 @@ class MarkerEngine:
         active_atos = {d.marker_id for d in (ato_detections or [])}
         all_active = active_clus | active_sems | active_atos
 
-        # Collect CLU families for detect_class inference
-        clu_families = set()
+        # Collect CLU families and tags for detect_class/gating inference
+        clu_info = set()
         for d in clu_detections:
             if d.family:
-                clu_families.add(d.family.upper())
+                clu_info.add(d.family.upper())
+            # Also extract tags from active CLUs
+            active_m = self.markers.get(d.marker_id)
+            if active_m:
+                for t in active_m.tags:
+                    clu_info.add(t.upper())
 
         detections = []
 
         for mdef in self.mema_markers:
             confidence = 0.0
+            found_evidence = False
 
             # Option A: composed_of check (with fuzzy resolution)
             composed = mdef.composed_of
@@ -826,6 +836,48 @@ class MarkerEngine:
                 if hits:
                     hit_ratio = len(hits) / max(len(composed), 1)
                     confidence = 0.5 + (hit_ratio * 0.5)
+                    found_evidence = True
+
+            # Option C: absence_sets check (New in LD 5.1)
+            # Fires if NONE of the markers/tags in the absence set triggered
+            absence_sets = mdef.absence_sets or mdef.frame.get("absence_sets")
+            if not found_evidence and absence_sets:
+                is_absent = True
+                for set_name, sdef in absence_sets.items():
+                    # Check IDs
+                    for mid in sdef.get("ids", []):
+                        if mid in all_active:
+                            is_absent = False
+                            break
+                    if not is_absent: break
+                    # Check Tags (Case-insensitive)
+                    set_tags = {t.upper() for t in sdef.get("tags", [])}
+                    if set_tags:
+                        for active_mid in all_active:
+                            active_m = self.markers.get(active_mid)
+                            if active_m and {t.upper() for t in active_m.tags} & set_tags:
+                                is_absent = False
+                                break
+                    if not is_absent: break
+
+                if is_absent:
+                    # Check gating_conflict (if any negative signals active)
+                    gating = mdef.gating_conflict or {}
+                    # Strong conflict detection: families or tags
+                    negative_indicators = {"CONFLICT", "GRIEF", "UNCERTAINTY", "ESCALATION", "ACCUSATION", "BLAME"}
+                    has_conflict = bool(clu_info & negative_indicators)
+                    
+                    if gating and not has_conflict:
+                        # Gated by conflict: if no conflict active, absence isn't meaningful
+                        confidence = 0.0
+                    else:
+                        # If a specific min_bias_hits or min_E_hits is required, check it
+                        min_hits = gating.get("min_bias_hits", gating.get("min_E_hits", 1))
+                        active_count = sum(1 for d in sem_detections if d.confidence > 0.6)
+                        
+                        if active_count >= min_hits:
+                            confidence = 0.65  # Base confidence for confirmed absence
+                            found_evidence = True
 
             # Option B: detect_class inference
             if confidence < threshold and mdef.detect_class:
@@ -833,35 +885,36 @@ class MarkerEngine:
 
                 # Extract MEMA keywords for matching (exclude structural noise)
                 _STRUCTURAL_KW = {"MARKER", "TEXT", "AUDIO", "PROSODY", "PATTERN",
-                                  "ALERT", "TREND", "PROFILE", "META", "CLUSTER"}
+                                  "ALERT", "TREND", "PROFILE", "META", "CLUSTER", "ABSENCE", "IN"}
                 mema_keywords = set(
                     kw.upper() for kw in mdef.id.replace("MEMA_", "").split("_")
-                    if len(kw) > 3 and kw.upper() not in _STRUCTURAL_KW
+                    if len(kw) >= 3 and kw.upper() not in _STRUCTURAL_KW
                 )
 
                 if not mema_keywords:
-                    # Skip detect_class if no meaningful keywords
-                    continue
+                    # Fallback to description keywords if ID is too generic
+                    desc_words = re.findall(r"\w+", mdef.description.upper())
+                    mema_keywords = {w for w in desc_words if len(w) > 4 and w not in _STRUCTURAL_KW}
 
                 if dc == "absence_meta":
                     # Fire when conflict/negative signals active but expected
                     # positive/repair signals are absent
-                    negative_families = {"CONFLICT", "GRIEF", "UNCERTAINTY"}
-                    if clu_families & negative_families:
-                        positive_families = {"SUPPORT", "COMMITMENT"}
-                        if not (clu_families & positive_families):
-                            confidence = max(confidence, 0.6)
+                    negative_families = {"CONFLICT", "GRIEF", "UNCERTAINTY", "ESCALATION"}
+                    if clu_info & negative_families:
+                        positive_families = {"SUPPORT", "COMMITMENT", "REPAIR"}
+                        if not (clu_info & positive_families):
+                            confidence = max(confidence, 0.65)
                         else:
                             confidence = max(confidence, 0.5)
 
                 elif dc == "trend_analysis":
                     # Check if active CLUs or SEMs match MEMA keywords
                     related = [
-                        c for c in (active_clus | active_sems)
+                        c for c in all_active
                         if any(kw in c.upper() for kw in mema_keywords)
                     ]
                     if related:
-                        confidence = max(confidence, 0.5 + min(0.3, len(related) * 0.1))
+                        confidence = max(confidence, 0.5 + min(0.4, len(related) * 0.12))
 
                 elif dc == "cycle_detection":
                     # Cycle needs escalation + recurring pattern
@@ -870,7 +923,7 @@ class MarkerEngine:
                         if any(kw in c.upper() for kw in mema_keywords)
                     ]
                     if len(related) >= 2:
-                        confidence = max(confidence, 0.55)
+                        confidence = max(confidence, 0.6)
                     elif related:
                         confidence = max(confidence, 0.45)
 
@@ -881,11 +934,10 @@ class MarkerEngine:
                         if any(kw in c.upper() for kw in mema_keywords)
                     ]
                     if related:
-                        confidence = max(confidence, 0.5 + min(0.2, len(related) * 0.1))
+                        confidence = max(confidence, 0.5 + min(0.3, len(related) * 0.1))
 
                 elif dc in ("composite_meta", "profile_composite", "archetype_composite"):
-                    # Composite: keyword overlap with any active CLU/SEM
-                    # CLU matches count more than SEM matches
+                    # Composite: keyword overlap with any active CLU/SEM/ATO
                     related_clus = [
                         c for c in active_clus
                         if any(kw in c.upper() for kw in mema_keywords)
@@ -896,8 +948,8 @@ class MarkerEngine:
                     ]
                     # Weighted: CLU match = 1.0, SEM match = 0.5
                     weighted = len(related_clus) * 1.0 + len(related_sems) * 0.5
-                    if weighted >= 1.5:
-                        confidence = max(confidence, 0.5 + min(0.3, weighted * 0.1))
+                    if weighted >= 1.0:
+                        confidence = max(confidence, 0.55 + min(0.35, weighted * 0.15))
                     elif weighted >= 0.5:
                         confidence = max(confidence, 0.5)
 
@@ -909,7 +961,7 @@ class MarkerEngine:
                         if any(kw in c.upper() for kw in mema_keywords)
                     ]
                     if related:
-                        confidence = max(confidence, 0.5)
+                        confidence = max(confidence, 0.55)
 
             if confidence >= threshold:
                 detections.append(Detection(

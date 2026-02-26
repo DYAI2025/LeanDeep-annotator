@@ -112,6 +112,94 @@ def _classify_runtime(marker_id: str, layer: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Genre & Baseline Definitions (LD 5.1)
+# ---------------------------------------------------------------------------
+
+GENRE_EXPECTATIONS = {
+    "konflikt": {
+        "label": "Hitziger Konflikt",
+        "required_tags": ["conflict", "escalation"],
+        "expected_positive": ["repair", "empathy", "validation"],
+        "absent_extremes": ["abwertung", "kontrollnarrative", "drohung", "einschuechterung"],
+        "description": "Ein offener Interessenskonflikt oder emotionaler Streit.",
+    },
+    "klaerung": {
+        "label": "Klaerungsgespraech",
+        "required_tags": ["repair", "perspective_taking"],
+        "expected_positive": ["responsibility", "listening", "compromise"],
+        "absent_extremes": ["eskalation", "abwertung", "kontrollnarrative"],
+        "description": "Versuch, ein Problem sachlich oder emotional aufzuarbeiten.",
+    },
+    "koordination": {
+        "label": "Sachliche Koordination",
+        "required_tags": ["task", "coordination"],
+        "expected_positive": ["clarity", "commitment"],
+        "absent_extremes": ["eskalation", "ueberflutung"],
+        "description": "Organisation von Alltag oder Arbeit ohne tiefen emotionalen Fokus.",
+    },
+    "bindung": {
+        "label": "Beziehungs-Pflege",
+        "required_tags": ["affection", "shared_humor"],
+        "expected_positive": ["intimacy", "support"],
+        "absent_extremes": ["eskalation", "vermeidung", "abwertung"],
+        "description": "Staerkung der emotionalen Verbindung und Vertrautheit.",
+    },
+    "krisenmodus": {
+        "label": "Emotionale Krise",
+        "required_tags": ["overwhelmed", "grief", "sadness"],
+        "expected_positive": ["support", "validation", "presence"],
+        "absent_extremes": ["abwertung", "kontrollnarrative"],
+        "description": "Hohe affektive Belastung, oft einseitig oder asymmetrisch.",
+    },
+}
+
+class GenreClassifier:
+    """Classifies conversation into a semiotic genre based on marker intensity."""
+
+    @staticmethod
+    def classify(framings: list[dict]) -> str:
+        """Determines the dominant genre from aggregated framings."""
+        if not framings:
+            return "koordination"  # Default fallback
+
+        # Map framing_type to potential genres
+        mapping = {
+            "eskalation": "konflikt",
+            "abwertung": "konflikt",
+            "reparatur": "klaerung",
+            "empathie": "klaerung",
+            "bindung": "bindung",
+            "ueberflutung": "krisenmodus",
+            "kontrollnarrative": "konflikt",
+        }
+
+        # Check top 2 framings
+        top_ft = framings[0]["framing_type"]
+        intensity = framings[0]["intensity"]
+
+        if intensity < 0.3:
+            return "koordination"
+
+        return mapping.get(top_ft, "koordination")
+
+class GenreBaseline:
+    """Provides expectations and identifies relevant absences for a genre."""
+
+    def __init__(self, genre: str):
+        self.genre = genre
+        self.config = GENRE_EXPECTATIONS.get(genre, GENRE_EXPECTATIONS["koordination"])
+
+    def get_missing_elements(self, active_tags: set[str]) -> list[str]:
+        """Identifies which expected positive markers are missing."""
+        expected = self.config.get("expected_positive", [])
+        return [item for item in expected if item not in active_tags]
+
+    def get_safe_boundaries(self, active_tags: set[str]) -> list[str]:
+        """Identifies which negative extremes were successfully avoided."""
+        extremes = self.config.get("absent_extremes", [])
+        return [item for item in extremes if item not in active_tags]
+
+# ---------------------------------------------------------------------------
 # Core functions
 # ---------------------------------------------------------------------------
 
@@ -328,8 +416,13 @@ def synthesize_narrative(framings: list[dict], semiotic_map: dict[str, dict],
 
     narrative = " ".join(sentences)
 
-    # Key points
-    key_points = []
+    # Genre Classification (LD 5.1)
+    genre_id = GenreClassifier.classify(framings)
+    genre_baseline = GenreBaseline(genre_id)
+    genre_label = GENRE_EXPECTATIONS.get(genre_id, {}).get("label", "Unbekannt")
+
+    # Key points - Start with Genre
+    key_points = [f"Gesprächs-Typ: {genre_label}"]
     for f in top_framings[:5]:
         point = f"{f['label']}: {f['detection_count']} Marker, {int(f['intensity']*100)}% Intensitaet"
         myth = f.get("myth", "")
@@ -377,9 +470,27 @@ def synthesize_narrative(framings: list[dict], semiotic_map: dict[str, dict],
             bias_check = "Gemischte Signale: {pos:.0f}% positive, {neg:.0f}% negative Framings — ambivalente Kommunikation.".format(
                 pos=ratio, neg=100 - ratio)
 
+    # Identify meaningful absences based on genre
+    all_tags = set()
+    for f in framings:
+        all_tags.add(f["framing_type"])
+        # Also could check individual marker tags here if available
+    
+    missing = genre_baseline.get_missing_elements(all_tags)
+    if missing:
+        missing_label = ", ".join(m.capitalize() for m in missing)
+        key_points.append(f"Abwesende Qualitäten (für diesen Typ erwartet): {missing_label}")
+
+    # Resilience check: safe boundaries (LD 5.1)
+    safe_boundaries = genre_baseline.get_safe_boundaries(all_tags)
+    if safe_boundaries and genre_id in ("konflikt", "klaerung"):
+        safe_label = ", ".join(s.capitalize() for s in safe_boundaries)
+        key_points.append(f"Resilienz-Indikator: Folgende Extreme wurden vermieden: {safe_label}")
+
     return {
         "narrative": narrative,
         "key_points": key_points,
         "relational_pattern": relational_pattern,
         "bias_check": bias_check,
+        "genre": genre_id,
     }

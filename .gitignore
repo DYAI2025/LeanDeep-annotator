@@ -12,3 +12,4 @@ eval/results.jsonl
 .DS_Store
 .claude/*
 !.claude/commands/
+testdata/
