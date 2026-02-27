@@ -1115,6 +1115,9 @@ class MarkerEngine:
             if "SEM" in layers:
                 all_detections.extend(sem_dets)
 
+        # --- Deduplication (LD 5.1) ---
+        all_detections = self._deduplicate_detections(all_detections)
+
         elapsed = (time.perf_counter() - start) * 1000
         return {"detections": all_detections, "timing_ms": round(elapsed, 2)}
 
@@ -1261,6 +1264,9 @@ class MarkerEngine:
 
         # Temporal patterns
         temporal = self._extract_temporal_patterns(flat_ato + flat_sem, len(messages))
+
+        # --- Deduplication (LD 5.1) ---
+        all_detections = self._deduplicate_detections(all_detections)
 
         elapsed = (time.perf_counter() - start) * 1000
         return {
@@ -1433,6 +1439,75 @@ class MarkerEngine:
         else:
             # Yellow: stable
             self.dynamic_threshold_modifier = 1.0
+
+    def _deduplicate_detections(self, detections: list[Detection]) -> list[Detection]:
+        """
+        Remove redundant detections that cover the exact same text span.
+        Prioritizes deeper layers (SEM > ATO) and better ratings.
+        """
+        if not detections:
+            return []
+
+        # 1. Map each match to its span
+        # Format: (start, end) -> [(Detection, Match), ...]
+        span_map: dict[tuple[int, int], list[tuple[Detection, Match]]] = {}
+        detections_without_matches: list[Detection] = []
+
+        for det in detections:
+            if not det.matches:
+                detections_without_matches.append(det)
+                continue
+            
+            for match in det.matches:
+                span = (match.start, match.end)
+                span_map.setdefault(span, []).append((det, match))
+
+        if not span_map:
+            return detections
+
+        # 2. For each span, pick the best candidate
+        layer_prio = {"MEMA": 4, "CLU": 3, "SEM": 2, "ATO": 1, "UNKNOWN": 0}
+        winner_matches_by_det_id: dict[str, list[Match]] = {}
+
+        for span, candidates in span_map.items():
+            def sort_key(c):
+                det, match = c
+                mdef = self.markers.get(det.marker_id)
+                rating = mdef.rating if mdef else 3
+                return (
+                    layer_prio.get(det.layer, 0),
+                    -rating,  # Lower rating (1) is better
+                    det.confidence
+                )
+            
+            candidates.sort(key=sort_key, reverse=True)
+            winner_det, winner_match = candidates[0]
+            
+            # Record this match for the winning detection
+            winner_matches_by_det_id.setdefault(winner_det.marker_id, []).append(winner_match)
+
+        # 3. Rebuild detection list using only winners
+        # Important: A detection might have multiple matches; we keep the detection
+        # if at least one of its matches won its span.
+        final_detections: list[Detection] = list(detections_without_matches)
+        
+        # Track which detections we've already added to avoid duplicates
+        added_ids = set()
+        
+        for det in detections:
+            if det.marker_id in added_ids:
+                continue
+                
+            winning_matches = winner_matches_by_det_id.get(det.marker_id, [])
+            if winning_matches:
+                # Update matches to only include the ones that won their spans
+                det.matches = winning_matches
+                final_detections.append(det)
+                added_ids.add(det.marker_id)
+
+        # Sort for consistent output
+        final_detections.sort(key=lambda d: (layer_prio.get(d.layer, 0), d.confidence), reverse=True)
+        return final_detections
 
     def get_marker(self, marker_id: str) -> MarkerDef | None:
         """Get a single marker definition."""

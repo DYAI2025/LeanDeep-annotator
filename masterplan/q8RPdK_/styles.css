@@ -1,0 +1,122 @@
+:root {
+    /* Palette: High Contrast Off-White vs Near-Black */
+    --color-bg: #FFFFFF;
+    --color-surface: #FFFFFF;
+    --color-surface-elevated: #F6F5F3; /* Off-white per prompt */
+    --color-border: #E8E8E8;
+    --color-text-primary: #1F2430; /* Near-black per prompt */
+    --color-text-secondary: #2D333F;
+    --color-text-muted: #71717A;
+    
+    /* Strict Accents */
+    --accent-blue: #0055FF; 
+    --accent-red: #E60000;  
+
+    /* Layer Colors from Reference */
+    --color-ato: #F26B63;
+    --color-sem: #7C6FF2;
+    --color-clu: #3FBCC1;
+    --color-mema: #F2B35C;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4 {
+    color: var(--color-text-primary);
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Markers Logic */
+.marker {
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+    display: inline;
+    position: relative;
+    border-radius: 1px;
+}
+
+.marker:hover {
+    background-color: rgba(0, 85, 255, 0.04);
+}
+
+.marker:focus {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 3px;
+}
+
+/* Patterns */
+.marker-ato { border-bottom: 2px solid var(--color-ato); }
+.marker-sem { border-bottom: 2px dashed var(--color-sem); }
+.marker-clu { border-bottom: 3px dotted var(--color-clu); }
+.marker-mema { border-bottom: 3px double var(--color-mema); }
+
+.marker-active {
+    background-color: rgba(0, 85, 255, 0.08) !important;
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+/* UI Components */
+.layer-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+}
+
+.layer-btn:hover {
+    background: var(--color-bg);
+    border-color: var(--color-border);
+}
+
+.layer-btn.active {
+    background: var(--color-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border-color: var(--color-border);
+}
+
+.layer-btn.inactive {
+    opacity: 0.25;
+}
+
+/* Panel Transitions */
+#right-panel.open {
+    transform: translateX(0);
+}
+
+.focus-ring:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Scrollbar refinement */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-text-primary); }
