@@ -199,6 +199,7 @@ async def analyze_conversation(
     return ConversationResponse(
         markers=sorted(markers, key=lambda m: (-m.confidence, m.id)),
         temporal_patterns=temporal,
+        topology=result.get("topology"),
         meta=AnalyzeMeta(
             processing_ms=result["timing_ms"],
             text_length=sum(len(m.text) for m in req.messages),
@@ -347,6 +348,7 @@ async def analyze_dynamics(
         state_indices=state_indices,
         speaker_baselines=speaker_baselines,
         temporal_patterns=temporal,
+        topology=result.get("topology"),
         persona_session=persona_session_summary,
         meta=AnalyzeMeta(
             processing_ms=result["timing_ms"],

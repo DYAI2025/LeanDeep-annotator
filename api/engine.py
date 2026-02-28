@@ -1265,6 +1265,11 @@ class MarkerEngine:
         # Temporal patterns
         temporal = self._extract_temporal_patterns(flat_ato + flat_sem, len(messages))
 
+        # --- Topology Analysis (LD 6.0 CTG) ---
+        from .topology import TopologyAnalyzer
+        topo_analyzer = TopologyAnalyzer()
+        topology = topo_analyzer.analyze(messages, all_detections, self.markers)
+
         # --- Deduplication (LD 5.1) ---
         all_detections = self._deduplicate_detections(all_detections)
 
@@ -1277,6 +1282,7 @@ class MarkerEngine:
             "ued_metrics": ued_metrics,
             "state_indices": state_indices,
             "speaker_baselines": speaker_baselines,
+            "topology": topology,
             "timing_ms": round(elapsed, 2),
         }
 

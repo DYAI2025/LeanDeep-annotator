@@ -112,6 +112,7 @@ class TemporalPattern(BaseModel):
 class ConversationResponse(BaseModel):
     markers: list[ConversationMarker]
     temporal_patterns: list[TemporalPattern] = []
+    topology: dict[str, Any] | None = None
     meta: AnalyzeMeta
 
 
@@ -178,6 +179,7 @@ class DynamicsResponse(BaseModel):
     state_indices: StateIndices
     speaker_baselines: SpeakerBaselines | None = None
     temporal_patterns: list[TemporalPattern] = []
+    topology: dict[str, Any] | None = None
     persona_session: "PersonaSessionSummary | None" = None
     meta: AnalyzeMeta
 
