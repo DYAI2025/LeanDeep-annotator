@@ -1266,8 +1266,23 @@ class MarkerEngine:
         temporal = self._extract_temporal_patterns(flat_ato + flat_sem, len(messages))
 
         # --- Topology Analysis (LD 6.0 CTG) ---
-        from .topology import compute_topology_report
+        from .topology import compute_topology_report, shadow_log
         topology = compute_topology_report(messages, all_detections)
+        
+        # --- Shadow Logging (Calibration) ---
+        shadow_log({
+            "n_messages": len(messages),
+            "timing_ms": round((time.perf_counter() - start) * 1000, 2),
+            "topology": {
+                "health_score": topology["health"]["score"],
+                "grade": topology["health"]["grade"],
+                "instability": topology["gates"]["instability"],
+                "summary": topology["summary"],
+                "failing_constraints": [c["id"] for c in topology["constraints"] if c["status"] == "fail"],
+                "warn_constraints": [c["id"] for c in topology["constraints"] if c["status"] == "warn"],
+            },
+            "engine": {"mode": "standard-recall", "marker_threshold": threshold},
+        })
 
         # --- Deduplication (LD 5.1) ---
         all_detections = self._deduplicate_detections(all_detections)

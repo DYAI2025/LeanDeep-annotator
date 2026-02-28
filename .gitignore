@@ -16,3 +16,4 @@ testdata/
 api/api_keys.json
 server.log
 leandeep-enrich.tar.gz
+logs/

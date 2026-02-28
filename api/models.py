@@ -124,6 +124,7 @@ class TopologyConstraint(BaseModel):
 
 class TopologyReport(BaseModel):
     version: str
+    mode: str = "shadow"
     health: TopologyHealth
     constraints: list[TopologyConstraint] = []
     summary: dict[str, Any] = {}
