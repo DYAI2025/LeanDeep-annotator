@@ -22,7 +22,7 @@ from typing import Any, Iterable
 DEFAULT_CONFIG: dict[str, Any] = {
     # Adjacency / response expectations
     "adjacency_window": 3,          # N
-    "min_answer_chars": 12,
+    "min_answer_chars": 3,          # Lowered for short mobile replies
 
     # Loops / streaks
     "clarify_window": 5,
@@ -54,13 +54,20 @@ DEFAULT_CONFIG: dict[str, Any] = {
 # Marker IDs used as hooks
 # ---------------------------------------------------------------------------
 
-M_QUESTION = {"ATO_QUESTION", "ATO_QUESTIONING"}
+M_QUESTION = {
+    "ATO_QUESTION", "ATO_QUESTIONING", "ATO_DEEPER_QUESTIONING", 
+    "SEM_DEEPENING_BY_QUESTIONING", "SEM_INVERTED_QUESTION", "ATO_CLARIFY_REQ"
+}
 M_CLARIFY = {"ATO_CLARIFY_REQ"}
-M_ACK = {"ATO_ACK", "ATO_ACK_MICRO", "ATO_ACKNOWLEDGE"}
-M_AVOID = {"ATO_AVOIDANCE_PHRASE", "SEM_AVOIDANCE_LOOP", "SEM_CONFLICT_AVOIDANCE"}
-M_REFUSAL = {"ATO_TOPIC_REFUSAL"}
+M_ACK = {"ATO_ACK", "ATO_ACK_MICRO", "ATO_ACKNOWLEDGE", "ATO_CONFIRM"}
+M_AVOID = {
+    "ATO_AVOIDANCE_PHRASE", "SEM_AVOIDANCE_LOOP", "SEM_CONFLICT_AVOIDANCE",
+    "ATO_TOPIC_REFUSAL", "ATO_DIALOGUE_REFUSAL", "ATO_SPEECH_REFUSAL",
+    "MEMA_TOPIC_AVOIDANCE_META"
+}
+M_REFUSAL = {"ATO_TOPIC_REFUSAL", "ATO_DIALOGUE_REFUSAL", "ATO_SPEECH_REFUSAL"}
 
-M_DEMAND = {"ATO_VEHEMENCE_DEMAND", "SEM_VEHEMENCE_DEMAND"}
+M_DEMAND = {"ATO_VEHEMENCE_DEMAND", "SEM_VEHEMENCE_DEMAND", "ATO_ACTION_VERBS"}
 M_APOLOGY = {"ATO_APOLOGY", "ATO_APOLOGY_DE"}
 M_THREAT = {"ATO_THREAT_LANGUAGE"}
 
@@ -69,22 +76,25 @@ M_TOPIC_SHIFT = {
     "ATO_TOPIC_SPLIT",
     "ATO_TOPIC_SWITCH_TECH",
     "ATO_TOPIC_SWITCH_ADVERSATIVE",
+    "ATO_TOPIC_SHIFT_TO_TASK",
     "CLU_TOPIC_DRIFT",
 }
 M_CIRCULAR = {"CLU_CIRCULAR_REASONING"}
-M_CONTRADICTION = {"SEM_CONTRADICTION", "CLU_SELF_CONTRADICTION", "ATO_CONTRADICTION_LEX"}
+M_CONTRADICTION = {"SEM_CONTRADICTION", "CLU_SELF_CONTRADICTION", "ATO_CONTRADICTION_LEX", "ATO_NEGATION"}
 
 M_COMMIT = {
     "ATO_COMMITMENT_PHRASE",
     "ATO_COMMITMENT_PHRASES",
     "SEM_COMMITMENT_LOCKIN",
     "SEM_SOFT_COMMITMENT",
+    "ATO_WANT_TERM",
+    "ATO_CONFIRM"
 }
 
 M_QUOTES = {"ATO_AMBIGUITY_QUOTES"}
-M_ABSOLUTIZER = {"ATO_ABSOLUTIZER"}
+M_ABSOLUTIZER = {"ATO_ABSOLUTIZER", "ATO_SUPERLATIVE_PHRASE"}
 M_GAS = {"SEM_GASLIGHTING", "SEM_GASLIGHTING_ATTEMPT", "CLU_GASLIGHTING_SEQUENCE", "MEMA_GASLIGHTER"}
-M_WITHDRAW_PURSUIT = {"MEMA_WITHDRAWAL_PURSUIT_DYNAMIC"}
+M_WITHDRAW_PURSUIT = {"MEMA_WITHDRAWAL_PURSUIT_DYNAMIC", "CLU_ATTACHMENT_STYLE_AVOIDANT_MARKER"}
 
 # ---------------------------------------------------------------------------
 # Types & Helpers
@@ -138,7 +148,7 @@ def shadow_log(event: dict, path: str = "logs/shadow_topology.jsonl") -> None:
         with open(path, "a", encoding="utf-8") as f:
             f.write(json.dumps(event_copy, ensure_ascii=True) + "\n")
     except Exception:
-        pass # Robustness: logging should never crash the engine
+        pass # Robustness
 
 # ---------------------------------------------------------------------------
 # Main Logic
@@ -155,7 +165,7 @@ def compute_topology_report(
     M = len(messages)
     results: list[ConstraintResult] = []
 
-    # Attribution guard
+    # Attribution guard indices
     quoted_msgs = {i for i in range(M) if _has(msg_markers, i, M_QUOTES)}
 
     # 1. CTG_QA_01: Adjacency (Question/Demand/Repair -> Response)
@@ -165,10 +175,11 @@ def compute_topology_report(
     
     for i in range(M):
         if _is_skip_message(messages, i): continue
+        if i in quoted_msgs: continue
         
-        # Determine trigger type
+        text = _safe_text(messages, i)
         trigger_type = None
-        if _has(msg_markers, i, M_QUESTION): trigger_type = "question"
+        if _has(msg_markers, i, M_QUESTION) or "?" in text: trigger_type = "question"
         elif _has(msg_markers, i, M_DEMAND): trigger_type = "demand"
         elif _has(msg_markers, i, M_APOLOGY): trigger_type = "repair"
         
@@ -183,15 +194,15 @@ def compute_topology_report(
             continue
             
         j0 = partner_turns[0]
+        resp_text = _safe_text(messages, j0)
         
-        # Resolution logic based on trigger type
         resolved = False
         if trigger_type == "question":
-            resolved = _has(msg_markers, j0, M_ACK | M_AVOID | M_REFUSAL) or (len(_safe_text(messages, j0)) >= cfg["min_answer_chars"])
+            resolved = _has(msg_markers, j0, M_ACK | M_AVOID | M_REFUSAL) or (len(resp_text) >= cfg["min_answer_chars"])
         elif trigger_type == "demand":
-            resolved = _has(msg_markers, j0, M_ACK | M_AVOID | M_REFUSAL | {"ATO_NEGATION"})
+            resolved = _has(msg_markers, j0, M_ACK | M_AVOID | M_REFUSAL | {"ATO_NEGATION"}) or (len(resp_text) >= cfg["min_answer_chars"])
         elif trigger_type == "repair":
-            resolved = _has(msg_markers, j0, M_ACK | M_COMMIT | M_APOLOGY)
+            resolved = _has(msg_markers, j0, M_ACK | M_COMMIT | M_APOLOGY) or (len(resp_text) >= cfg["min_answer_chars"])
             
         open_pairs.append({"idx": i, "type": trigger_type, "by": asker, "resolved": resolved, "response_idx": j0})
         if not resolved: unresolved += 1
@@ -217,21 +228,37 @@ def compute_topology_report(
     c_status = "fail" if circ_idxs else "pass"
     results.append(ConstraintResult("CTG_CIRC_01", "HARD", c_status, cfg[f"score_{c_status}"], circ_idxs))
 
-    # 4. CTG_COMMIT_02: Commitment Ledger & Contradiction
-    broken = 0
-    ledger = {} # role -> list of {idx, text_hash}
+    # 4. CTG_COMMIT_02: Ledger & Contradiction
+    broken_hard = 0
+    broken_soft = 0
+    ledger = {} 
     for i in range(M):
         role = _role(messages, i)
+        text = _safe_text(messages, i).lower()
         if _has(msg_markers, i, M_COMMIT) and i not in quoted_msgs:
-            text_hash = _safe_text(messages, i).strip().lower()[:30]
-            ledger.setdefault(role, []).append({"idx": i, "hash": text_hash})
+            text_hash = text.strip()[:30]
+            words = {w for w in text.split() if len(w) > 3}
+            # Circular check
+            if any(entry["hash"] == text_hash for entry in ledger.get(role, [])):
+                if "CTG_CIRC_01" not in [r.id for r in results]:
+                    results.append(ConstraintResult("CTG_CIRC_01", "HARD", "warn", 0.6, [i], {}, "Circular commitment detected."))
+            ledger.setdefault(role, []).append({"idx": i, "hash": text_hash, "words": words})
         
-        if _has(msg_markers, i, M_CONTRADICTION):
-            if any(entry["idx"] < i for entry in ledger.get(role, [])):
-                broken += 1
+        if _has(msg_markers, i, M_CONTRADICTION) and i not in quoted_msgs:
+            for entry in ledger.get(role, []):
+                if entry["words"] and any(w in text for w in entry["words"]):
+                    broken_hard += 1
+                    break
+                elif entry["idx"] < i:
+                    broken_soft += 1
+                    break
                 
-    b_status = "fail" if broken > 0 else "pass"
-    results.append(ConstraintResult("CTG_COMMIT_02", "HARD", b_status, cfg[f"score_{b_status}"], [], {"broken_count": broken}))
+    if broken_hard > 0:
+        results.append(ConstraintResult("CTG_COMMIT_02", "HARD", "fail", 0.0, [], {"broken_count": broken_hard}))
+    elif broken_soft > 0:
+        results.append(ConstraintResult("CTG_COMMIT_02", "SOFT", "warn", 0.6, [], {"broken_count": broken_soft}))
+    else:
+        results.append(ConstraintResult("CTG_COMMIT_02", "HARD", "pass", 1.0, []))
 
     # 5. CTG_TURN_01: Turn-taking Asymmetry
     a_status = "pass"
@@ -251,14 +278,19 @@ def compute_topology_report(
     e_status = "fail" if abs_count >= 4 else "warn" if abs_count >= 2 else "pass"
     results.append(ConstraintResult("CTG_EPIST_01", "SOFT", e_status, cfg[f"score_{e_status}"], []))
 
+    # 7. CTG_ATTR_01: Attribution Guard
+    results.append(ConstraintResult("CTG_ATTR_01", "HARD", "warn" if quoted_msgs else "pass", 
+                                   1.0, list(quoted_msgs), {"quoted_count": len(quoted_msgs)}, 
+                                   "Attribution guard applied to quoted segments."))
+
     # Aggregate Health
     total_w = sum(cfg["weight_hard"] if r.severity=="HARD" else cfg["weight_soft"] for r in results)
     total_s = sum((cfg["weight_hard"] if r.severity=="HARD" else cfg["weight_soft"]) * r.score for r in results)
     health = total_s / total_w if total_w > 0 else 1.0
     grade = "green" if health >= cfg["grade_green"] else "yellow" if health >= cfg["grade_yellow"] else "red"
 
-    # Instability gate (MVP)
-    instability = (grade == "red" or unresolved >= 3 or c_status == "fail")
+    # Instability gate
+    instability = (grade == "red" or unresolved >= 3 or any(r.status == "fail" for r in results if r.severity == "HARD"))
 
     return {
         "version": "ctg-0.1",
@@ -267,13 +299,19 @@ def compute_topology_report(
         "constraints": [r.__dict__ for r in results],
         "summary": {
             "unresolved_questions": unresolved,
-            "commitments_broken": broken,
+            "commitments_broken": broken_hard + broken_soft,
             "absolutizer_count": abs_count,
-            "total_messages": M
+            "total_messages": M,
+            "quoted_messages": len(quoted_msgs)
         },
         "gates": {
             "instability": instability,
             "gaslighting_present": any(_has(msg_markers, i, M_GAS) for i in range(M)),
             "attribution_guard_applied": bool(quoted_msgs)
+        },
+        "config_snapshot": {
+            "N": N,
+            "asymmetry_ratio": cfg["asymmetry_ratio"],
+            "grade_green": cfg["grade_green"]
         }
     }
