@@ -86,6 +86,7 @@ class AnalyzeMeta(BaseModel):
     text_length: int
     markers_detected: int
     layers_scanned: list[str]
+    shadow_mode: bool = False
 
 
 class ConversationMarker(BaseModel):

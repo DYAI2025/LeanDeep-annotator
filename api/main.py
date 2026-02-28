@@ -146,6 +146,7 @@ async def analyze_text(
             text_length=len(req.text),
             markers_detected=len(markers),
             layers_scanned=layers,
+            shadow_mode=result.get("shadow_mode", False),
         ),
     )
 
@@ -205,6 +206,7 @@ async def analyze_conversation(
             text_length=sum(len(m.text) for m in req.messages),
             markers_detected=len(markers),
             layers_scanned=layers,
+            shadow_mode=result.get("shadow_mode", False),
         ),
     )
 
@@ -355,6 +357,7 @@ async def analyze_dynamics(
             text_length=sum(len(m.text) for m in req.messages),
             markers_detected=len(markers),
             layers_scanned=layers,
+            shadow_mode=result.get("shadow_mode", False),
         ),
     )
 
@@ -404,6 +407,7 @@ async def analyze_interpret(
             text_length=sum(len(m.text) for m in req.messages),
             markers_detected=len(detections),
             layers_scanned=layers,
+            shadow_mode=result.get("shadow_mode", False),
         ),
     )
 

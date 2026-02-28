@@ -36,8 +36,8 @@ def test_absolutizer_gated_in_negative_context():
 
     eng = MarkerEngine()
     eng.load()
-    messages = [{"text": "Du hörst mir nie zu.", "speaker": "A"}]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    messages = [{"text": "Du hörst mir nie zu.", "role": "A"}]
+    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
     ato_ids = [d.marker_id for d in result["detections"] if d.layer == "ATO"]
     assert "ATO_ABSOLUTIZER" in ato_ids
 
@@ -49,8 +49,8 @@ def test_neutral_atos_gated_out_in_emotional_context():
     eng = MarkerEngine()
     eng.load()
     # In angry context, neutral markers like TIME_REFERENCE should be suppressed
-    messages = [{"text": "Du hörst mir nie zu!", "speaker": "A"}]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    messages = [{"text": "Du hörst mir nie zu!", "role": "A"}]
+    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
     ato_ids = [d.marker_id for d in result["detections"] if d.layer == "ATO"]
     # The key test: the gate is active and produces some ATOs
     assert len(ato_ids) > 0, "Gate should not suppress everything"
@@ -65,10 +65,10 @@ def test_love_context_passes_love_markers():
     messages = [
         {
             "text": "Ich könnte mich niemals in jemand anderes verlieben.",
-            "speaker": "A",
+            "role": "A",
         }
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
     ato_ids = [d.marker_id for d in result["detections"] if d.layer == "ATO"]
     # Should have some detections (may or may not include love-specific markers
     # depending on what patterns exist in the registry)
@@ -82,10 +82,10 @@ def test_shadow_buffer_surfaces_in_matching_context():
     eng = MarkerEngine()
     eng.load()
     messages = [
-        {"text": "Ich bin einfach nur müde.", "speaker": "A"},  # neutral/sad
-        {"text": "Ich bin so traurig und erschöpft.", "speaker": "A"},  # clearly sad
+        {"text": "Ich bin einfach nur müde.", "role": "A"},  # neutral/sad
+        {"text": "Ich bin so traurig und erschöpft.", "role": "A"},  # clearly sad
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
     # The gate should process both messages and potentially surface shadow ATOs
     assert "detections" in result
     assert "message_vad" in result
@@ -98,8 +98,8 @@ def test_neutral_message_no_gate():
 
     eng = MarkerEngine()
     eng.load()
-    messages = [{"text": "Ok.", "speaker": "A"}]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    messages = [{"text": "Ok.", "role": "A"}]
+    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
     # Should still work normally with minimal detections
     assert "detections" in result
 
@@ -113,11 +113,11 @@ def test_gate_reduces_ato_count():
     messages = [
         {
             "text": "Du bist immer so egoistisch und hörst nie zu!",
-            "speaker": "A",
+            "role": "A",
         },
-        {"text": "Das stimmt nicht, ich bin immer für dich da.", "speaker": "B"},
+        {"text": "Das stimmt nicht, ich bin immer für dich da.", "role": "B"},
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
     ato_count = sum(1 for d in result["detections"] if d.layer == "ATO")
     # Should be reasonably filtered (not zero, not too many)
     assert ato_count > 0, "Gate should not suppress everything"
@@ -131,11 +131,11 @@ def test_conversation_still_returns_all_fields():
     eng = MarkerEngine()
     eng.load()
     messages = [
-        {"text": "Ich bin wütend!", "speaker": "A"},
-        {"text": "Es tut mir leid.", "speaker": "B"},
-        {"text": "Lass uns reden.", "speaker": "A"},
+        {"text": "Ich bin wütend!", "role": "A"},
+        {"text": "Es tut mir leid.", "role": "B"},
+        {"text": "Lass uns reden.", "role": "A"},
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
     assert "message_vad" in result
     assert "ued_metrics" in result
     assert "state_indices" in result

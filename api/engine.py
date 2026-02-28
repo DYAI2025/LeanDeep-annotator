@@ -1080,6 +1080,7 @@ class MarkerEngine:
         text: str,
         layers: list[str] | None = None,
         threshold: float = 0.5,
+        deduplicate: bool = True,
     ) -> dict:
         """
         Analyze a single text against the marker hierarchy.
@@ -1116,10 +1117,15 @@ class MarkerEngine:
                 all_detections.extend(sem_dets)
 
         # --- Deduplication (LD 5.1) ---
-        all_detections = self._deduplicate_detections(all_detections)
+        if deduplicate:
+            all_detections = self._deduplicate_detections(all_detections)
 
         elapsed = (time.perf_counter() - start) * 1000
-        return {"detections": all_detections, "timing_ms": round(elapsed, 2)}
+        return {
+            "detections": all_detections,
+            "timing_ms": round(elapsed, 2),
+            "shadow_mode": True
+        }
 
     def analyze_conversation(
         self,
@@ -1127,6 +1133,7 @@ class MarkerEngine:
         layers: list[str] | None = None,
         threshold: float = 0.5,
         warm_start: dict[str, dict[str, float]] | None = None,
+        deduplicate: bool = True,
     ) -> dict:
         """
         Analyze a conversation (multiple messages) with temporal tracking.
@@ -1285,7 +1292,8 @@ class MarkerEngine:
         })
 
         # --- Deduplication (LD 5.1) ---
-        all_detections = self._deduplicate_detections(all_detections)
+        if deduplicate:
+            all_detections = self._deduplicate_detections(all_detections)
 
         elapsed = (time.perf_counter() - start) * 1000
         return {
@@ -1298,6 +1306,7 @@ class MarkerEngine:
             "speaker_baselines": speaker_baselines,
             "topology": topology,
             "timing_ms": round(elapsed, 2),
+            "shadow_mode": True
         }
 
     @staticmethod
