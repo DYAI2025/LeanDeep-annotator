@@ -65,6 +65,9 @@ python3 -m uvicorn api.main:app --port 8420 --reload
 # Run tests (72 tests: API, dynamics, VAD, personas, engine)
 python3 -m pytest tests/ -x -q
 
+# Run CTG Shadow Mode E2E tests (requires running server)
+python3 -m pytest tests/test_api_ctg_shadow.py -q
+
 # Run a single test file or test function
 python3 -m pytest tests/test_engine_vad.py -x -q
 python3 -m pytest tests/test_api_dynamics.py::test_function_name -x -q
