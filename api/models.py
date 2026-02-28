@@ -109,10 +109,30 @@ class TemporalPattern(BaseModel):
     trend: str = "stable"
 
 
+class TopologyHealth(BaseModel):
+    score: float
+    grade: str
+
+class TopologyConstraint(BaseModel):
+    id: str
+    severity: str
+    status: str
+    score: float
+    message_indices: list[int] = []
+    evidence: dict[str, Any] = {}
+    notes: str = ""
+
+class TopologyReport(BaseModel):
+    version: str
+    health: TopologyHealth
+    constraints: list[TopologyConstraint] = []
+    summary: dict[str, Any] = {}
+    gates: dict[str, Any] = {}
+
 class ConversationResponse(BaseModel):
     markers: list[ConversationMarker]
     temporal_patterns: list[TemporalPattern] = []
-    topology: dict[str, Any] | None = None
+    topology: TopologyReport | None = None
     meta: AnalyzeMeta
 
 
@@ -179,7 +199,7 @@ class DynamicsResponse(BaseModel):
     state_indices: StateIndices
     speaker_baselines: SpeakerBaselines | None = None
     temporal_patterns: list[TemporalPattern] = []
-    topology: dict[str, Any] | None = None
+    topology: TopologyReport | None = None
     persona_session: "PersonaSessionSummary | None" = None
     meta: AnalyzeMeta
 

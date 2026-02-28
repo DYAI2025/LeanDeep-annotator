@@ -1,296 +1,216 @@
 """
-Conversation Topology Analysis (CTG) Module for LeanDeep 6.0.
+Conversation topology + constraint checks for LeanDeep 6.0.
 
-Analyzes the structural 'health' of a conversation by checking 
-topological constraints (QA pairs, commitments, topic shifts) 
-using detected markers as hooks.
+Goal: deterministic, explainable "self-referential validation" by checking
+invariants of discourse (adjacency, commitments, drift, repair).
+
+This module intentionally avoids LLMs and heavy NLP. It operates on marker
+detections + lightweight heuristics.
 """
 
 from __future__ import annotations
 
-import re
 from dataclasses import dataclass, field
-from typing import Any, Literal
+from typing import Any, Iterable
 
-from .engine import Detection, MarkerDef
+# ---------------------------------------------------------------------------
+# Default configuration (MVP)
+# ---------------------------------------------------------------------------
 
+DEFAULT_CONFIG: dict[str, Any] = {
+    # Adjacency / response expectations
+    "adjacency_window": 3,          # N
+    "min_answer_chars": 12,
+
+    # Loops / streaks
+    "clarify_window": 5,
+    "clarify_k": 2,
+    "avoidance_window": 6,
+    "avoidance_k": 3,
+
+    # Commitments
+    "commitment_window": 5,
+
+    # Turn-taking asymmetry
+    "asymmetry_window": 12,
+    "asymmetry_ratio": 0.75,
+
+    # Health grading
+    "grade_green": 0.82,
+    "grade_yellow": 0.65,
+
+    # Scoring
+    "score_pass": 1.0,
+    "score_warn": 0.6,
+    "score_fail": 0.0,
+    "weight_hard": 2.0,
+    "weight_soft": 1.0,
+}
+
+# ---------------------------------------------------------------------------
+# Marker IDs used as hooks
+# ---------------------------------------------------------------------------
+
+M_QUESTION = {"ATO_QUESTION", "ATO_QUESTIONING"}
+M_CLARIFY = {"ATO_CLARIFY_REQ"}
+M_ACK = {"ATO_ACK", "ATO_ACK_MICRO", "ATO_ACKNOWLEDGE"}
+M_AVOID = {"ATO_AVOIDANCE_PHRASE", "SEM_AVOIDANCE_LOOP", "SEM_CONFLICT_AVOIDANCE"}
+M_REFUSAL = {"ATO_TOPIC_REFUSAL"}
+
+M_DEMAND = {"ATO_VEHEMENCE_DEMAND", "SEM_VEHEMENCE_DEMAND"}
+M_APOLOGY = {"ATO_APOLOGY", "ATO_APOLOGY_DE"}
+M_THREAT = {"ATO_THREAT_LANGUAGE"}
+
+M_TOPIC_SHIFT = {
+    "ATO_TOPIC_JUMP_MARKER",
+    "ATO_TOPIC_SPLIT",
+    "ATO_TOPIC_SWITCH_TECH",
+    "ATO_TOPIC_SWITCH_ADVERSATIVE",
+    "CLU_TOPIC_DRIFT",
+}
+M_CIRCULAR = {"CLU_CIRCULAR_REASONING"}
+M_CONTRADICTION = {"SEM_CONTRADICTION", "CLU_SELF_CONTRADICTION", "ATO_CONTRADICTION_LEX"}
+
+M_COMMIT = {
+    "ATO_COMMITMENT_PHRASE",
+    "ATO_COMMITMENT_PHRASES",
+    "SEM_COMMITMENT_LOCKIN",
+    "SEM_SOFT_COMMITMENT",
+}
+
+M_QUOTES = {"ATO_AMBIGUITY_QUOTES"}
+M_ABSOLUTIZER = {"ATO_ABSOLUTIZER"}
+M_GAS = {"SEM_GASLIGHTING", "SEM_GASLIGHTING_ATTEMPT", "CLU_GASLIGHTING_SEQUENCE", "MEMA_GASLIGHTER"}
+M_WITHDRAW_PURSUIT = {"MEMA_WITHDRAWAL_PURSUIT_DYNAMIC"}
+
+# ---------------------------------------------------------------------------
+# Types & Helpers
+# ---------------------------------------------------------------------------
 
 @dataclass
-class TopologyConstraint:
+class ConstraintResult:
     id: str
-    severity: Literal["HARD", "SOFT"]
-    status: Literal["pass", "warn", "fail"] = "pass"
-    score: float = 1.0  # 1.0 = perfect, 0.0 = total failure
+    severity: str            # "HARD" | "SOFT"
+    status: str              # "pass" | "warn" | "fail"
+    score: float
     message_indices: list[int] = field(default_factory=list)
     evidence: dict[str, Any] = field(default_factory=dict)
     notes: str = ""
 
+def _safe_text(messages: list[dict], i: int) -> str:
+    try: return (messages[i].get("text") or "")
+    except: return ""
 
-class TopologyAnalyzer:
-    """Analyzes conversation topology and consistency."""
+def _role(messages: list[dict], i: int) -> str:
+    try: return (messages[i].get("role") or "unknown")
+    except: return "unknown"
 
-    def __init__(self, window_size: int = 4):
-        self.window_size = window_size
-        self.constraints: list[TopologyConstraint] = []
+def _is_skip_message(messages: list[dict], i: int) -> bool:
+    return len(_safe_text(messages, i).strip()) < 2
 
-    def analyze(
-        self, 
-        messages: list[dict], 
-        detections: list[Detection], 
-        marker_defs: dict[str, MarkerDef]
-    ) -> dict:
-        """Run all topological checks on the conversation."""
-        self.constraints = []
-        
-        # 1. Map detections to message indices for fast lookup
-        msg_markers: dict[int, set[str]] = {}
-        msg_tags: dict[int, set[str]] = {}
-        for d in detections:
-            for idx in d.message_indices:
-                msg_markers.setdefault(idx, set()).add(d.marker_id)
-                mdef = marker_defs.get(d.marker_id)
-                if mdef:
-                    msg_tags.setdefault(idx, set()).update(set(mdef.tags))
+def _build_marker_index(messages: list[dict], detections: Iterable[Any]) -> list[set[str]]:
+    m = [set() for _ in range(len(messages))]
+    for d in detections:
+        mid = getattr(d, "marker_id", getattr(d, "id", None))
+        if not mid: continue
+        for idx in getattr(d, "message_indices", []) or []:
+            if 0 <= idx < len(m): m[idx].add(mid)
+    return m
 
-        # 2. Build adjacency & structural features per message
-        msg_features = []
-        for i, msg in enumerate(messages):
-            markers = msg_markers.get(i, set())
-            tags = msg_tags.get(i, set())
-            
-            features = {
-                "is_question": any(m in markers for m in ["ATO_QUESTION", "ATO_QUESTIONING", "ATO_CLARIFY_REQ"]) or "?" in msg["text"],
-                "is_ack": any(m in markers for m in ["ATO_ACK", "ATO_ACKNOWLEDGE", "ATO_ACK_MICRO"]),
-                "is_avoid": any(m in markers for m in ["ATO_AVOIDANCE_PHRASE", "ATO_TOPIC_REFUSAL", "SEM_CONFLICT_AVOIDANCE"]),
-                "is_commit": any(m in markers for m in ["ATO_COMMITMENT_PHRASE", "SEM_COMMITMENT_LOCKIN", "SEM_SOFT_COMMITMENT"]),
-                "is_threat": "ATO_THREAT_LANGUAGE" in markers,
-                "is_apology": any(m in markers for m in ["ATO_APOLOGY", "ATO_APOLOGY_DE"]),
-                "is_topic_shift": any(m in markers for m in ["ATO_TOPIC_JUMP_MARKER", "ATO_TOPIC_SWITCH_TECH", "CLU_TOPIC_DRIFT"]),
-                "is_quote": "ATO_AMBIGUITY_QUOTES" in markers,
-                "is_demand": any(m in markers for m in ["ATO_VEHEMENCE_DEMAND", "SEM_VEHEMENCE_DEMAND"]),
-                "is_negation": "ATO_NEGATION" in markers or "ATO_NEGATION_TOKEN" in markers,
-                "role": msg.get("role", "?")
-            }
-            msg_features.append(features)
+def _has(msg_markers: list[set[str]], i: int, marker_set: set[str]) -> bool:
+    if i < 0 or i >= len(msg_markers): return False
+    return any(mid in msg_markers[i] for mid in marker_set)
 
-        # 3. Run specific checks
-        self._check_qa_adjacency(msg_features, messages)
-        self._check_demand_response(msg_features)
-        self._check_repair_cycle(msg_features)
-        self._check_threat_response(msg_features)
-        self._check_turn_asymmetry(msg_features)
-        self._check_commitments(msg_features, messages)
-        self._check_attribution_guard(msg_features)
-        self._check_gaslighting_influence(msg_features)
+# ---------------------------------------------------------------------------
+# Main Logic
+# ---------------------------------------------------------------------------
 
-        # 4. Synthesize result
-        # Apply gaslighting penalty if detected
-        gas_penalty = 1.0
-        if any(c.id == "CTG_GAS_01" and c.status != "pass" for c in self.constraints):
-            gas_penalty = 0.7 # Reduce overall health if gaslighting suspected
-        
-        total_score = (sum(c.score for c in self.constraints) / len(self.constraints) if self.constraints else 1.0) * gas_penalty
-        grade = "green" if total_score > 0.8 else "yellow" if total_score > 0.5 else "red"
+def compute_topology_report(
+    messages: list[dict],
+    detections: list[Any],
+    *,
+    cfg: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    cfg = {**DEFAULT_CONFIG, **(cfg or {})}
+    msg_markers = _build_marker_index(messages, detections)
+    M = len(messages)
+    results: list[ConstraintResult] = []
 
-        return {
-            "version": "ctg-0.1",
-            "health": {
-                "score": round(total_score, 2),
-                "grade": grade
-            },
-            "constraints": [
-                {
-                    "id": c.id,
-                    "severity": c.severity,
-                    "status": c.status,
-                    "score": round(c.score, 2),
-                    "message_indices": c.message_indices,
-                    "evidence": c.evidence,
-                    "notes": c.notes
-                } for c in self.constraints
-            ]
+    # Attribution guard
+    quoted_msgs = {i for i in range(M) if _has(msg_markers, i, M_QUOTES)}
+
+    # 1. CTG_QA_01: Question -> Answer
+    open_pairs = []
+    unresolved = 0
+    N = int(cfg["adjacency_window"])
+    for i in range(M):
+        if _is_skip_message(messages, i) or not _has(msg_markers, i, M_QUESTION): continue
+        asker = _role(messages, i)
+        partner_turns = [j for j in range(i + 1, min(M, i + 1 + N))
+                         if _role(messages, j) != asker and not _is_skip_message(messages, j)]
+        if not partner_turns:
+            open_pairs.append({"q_idx": i, "by": asker, "resolved": None})
+            continue
+        j0 = partner_turns[0]
+        answer_like = _has(msg_markers, j0, M_ACK) or (len(_safe_text(messages, j0)) >= cfg["min_answer_chars"])
+        deferral = _has(msg_markers, j0, M_AVOID | M_REFUSAL)
+        res = bool(answer_like or deferral)
+        open_pairs.append({"q_idx": i, "by": asker, "resolved": res, "response_idx": j0})
+        if not res: unresolved += 1
+
+    qa_status = "fail" if unresolved >= 1 else "warn" if any(p["resolved"] is None for p in open_pairs) else "pass"
+    results.append(ConstraintResult("CTG_QA_01", "HARD", qa_status, 
+                                   cfg[f"score_{qa_status}"], 
+                                   [p["q_idx"] for p in open_pairs]))
+
+    # 2. CTG_THREAT_01: Threat -> Response
+    threat_unhandled = 0
+    for i in range(M):
+        if _has(msg_markers, i, M_THREAT) and i not in quoted_msgs:
+            spk = _role(messages, i)
+            pt = [j for j in range(i + 1, min(M, i + 1 + N)) if _role(messages, j) != spk]
+            if not pt or not _has(msg_markers, pt[0], M_ACK | {"ATO_NEGATION"} | M_APOLOGY):
+                threat_unhandled += 1
+    t_status = "fail" if threat_unhandled > 0 else "pass"
+    results.append(ConstraintResult("CTG_THREAT_01", "HARD", t_status, cfg[f"score_{t_status}"], []))
+
+    # 3. CTG_CIRC_01: Circular Reasoning
+    circ_idxs = [i for i in range(M) if _has(msg_markers, i, M_CIRCULAR)]
+    c_status = "fail" if circ_idxs else "pass"
+    results.append(ConstraintResult("CTG_CIRC_01", "HARD", c_status, cfg[f"score_{c_status}"], circ_idxs))
+
+    # 4. CTG_COMMIT_02: Contradiction
+    broken = 0
+    contradictions = [i for i in range(M) if _has(msg_markers, i, M_CONTRADICTION)]
+    commit_idxs = [i for i in range(M) if _has(msg_markers, i, M_COMMIT)]
+    for c_idx in contradictions:
+        if any(ci < c_idx and _role(messages, ci) == _role(messages, c_idx) for ci in commit_idxs):
+            broken += 1
+    b_status = "fail" if broken > 0 else "pass"
+    results.append(ConstraintResult("CTG_COMMIT_02", "HARD", b_status, cfg[f"score_{b_status}"], contradictions))
+
+    # 5. CTG_EPIST_01: Absolutizers
+    abs_count = sum(1 for i in range(M) if _has(msg_markers, i, M_ABSOLUTIZER))
+    e_status = "fail" if abs_count >= 4 else "warn" if abs_count >= 2 else "pass"
+    results.append(ConstraintResult("CTG_EPIST_01", "SOFT", e_status, cfg[f"score_{e_status}"], []))
+
+    # Aggregate Health
+    total_w = sum(cfg["weight_hard"] if r.severity=="HARD" else cfg["weight_soft"] for r in results)
+    total_s = sum((cfg["weight_hard"] if r.severity=="HARD" else cfg["weight_soft"]) * r.score for r in results)
+    health = total_s / total_w if total_w > 0 else 1.0
+    grade = "green" if health >= cfg["grade_green"] else "yellow" if health >= cfg["grade_yellow"] else "red"
+
+    return {
+        "version": "ctg-0.1",
+        "health": {"score": round(health, 3), "grade": grade},
+        "constraints": [r.__dict__ for r in results],
+        "summary": {
+            "unresolved_questions": unresolved,
+            "commitments_broken": broken,
+            "absolutizer_count": abs_count
+        },
+        "gates": {
+            "instability": grade == "red" or unresolved >= 3 or c_status == "fail",
+            "gaslighting_present": any(_has(msg_markers, i, M_GAS) for i in range(M))
         }
-
-    def _check_qa_adjacency(self, features: list[dict], messages: list[dict]):
-        """CTG_QA_01: Questions must be answered or deferred."""
-        open_questions = []
-        for i, f in enumerate(features):
-            # Resolve existing open questions if role changed
-            if open_questions:
-                resolved = []
-                for q_idx, q_role in open_questions:
-                    if f["role"] != q_role:
-                        if f["is_ack"] or f["is_avoid"] or len(messages[i]["text"]) > 10: # Heuristic for answer
-                            resolved.append((q_idx, q_role))
-                
-                for r in resolved:
-                    open_questions.remove(r)
-
-            if f["is_question"]:
-                open_questions.append((i, f["role"]))
-
-            # Check if questions stay open too long
-            for q_idx, q_role in list(open_questions):
-                if i - q_idx >= self.window_size:
-                    self.constraints.append(TopologyConstraint(
-                        id="CTG_QA_01",
-                        severity="HARD",
-                        status="fail",
-                        score=0.0,
-                        message_indices=[q_idx, i],
-                        notes=f"Question at index {q_idx} not answered within {self.window_size} turns."
-                    ))
-                    open_questions.remove((q_idx, q_role))
-
-    def _check_demand_response(self, features: list[dict]):
-        """CTG_DEMAND_01: Demands should be acknowledged or negotiated."""
-        for i, f in enumerate(features):
-            if f["is_demand"]:
-                responded = False
-                for j in range(i + 1, min(i + 1 + self.window_size, len(features))):
-                    if features[j]["role"] != f["role"] and (features[j]["is_ack"] or features[j]["is_negation"]):
-                        responded = True
-                        break
-                if not responded and i < len(features) - 1:
-                    self.constraints.append(TopologyConstraint(
-                        id="CTG_DEMAND_01",
-                        severity="SOFT",
-                        status="warn",
-                        score=0.5,
-                        message_indices=[i],
-                        notes="Demand issued without clear response."
-                    ))
-
-    def _check_repair_cycle(self, features: list[dict]):
-        """CTG_REPAIR_01: Repair attempts should be received."""
-        for i, f in enumerate(features):
-            if f["is_apology"]:
-                received = False
-                for j in range(i + 1, min(i + 1 + self.window_size, len(features))):
-                    if features[j]["role"] != f["role"] and (features[j]["is_ack"] or features[j]["is_commit"]):
-                        received = True
-                        break
-                if not received and i < len(features) - 1:
-                    self.constraints.append(TopologyConstraint(
-                        id="CTG_REPAIR_01",
-                        severity="SOFT",
-                        status="warn",
-                        score=0.6,
-                        message_indices=[i],
-                        notes="Apology/Repair attempt not acknowledged."
-                    ))
-
-    def _check_threat_response(self, features: list[dict]):
-        """CTG_THREAT_01: Threat escalation requires boundary response."""
-        for i, f in enumerate(features):
-            if f["is_threat"]:
-                guarded = False
-                for j in range(i + 1, min(i + 1 + self.window_size, len(features))):
-                    if features[j]["role"] != f["role"] and (features[j]["is_negation"] or features[j]["is_avoid"]):
-                        guarded = True
-                        break
-                if not guarded:
-                    self.constraints.append(TopologyConstraint(
-                        id="CTG_THREAT_01",
-                        severity="HARD",
-                        status="fail",
-                        score=0.0,
-                        message_indices=[i],
-                        notes="Threat language detected without subsequent boundary setting."
-                    ))
-
-    def _check_turn_asymmetry(self, features: list[dict]):
-        """CTG_TURN_01: Detect monologue or extreme asymmetry."""
-        if len(features) < 5: return
-        
-        counts = {}
-        for f in features:
-            counts[f["role"]] = counts.get(f["role"], 0) + 1
-        
-        total = len(features)
-        for role, count in counts.items():
-            ratio = count / total
-            if ratio > 0.8:
-                self.constraints.append(TopologyConstraint(
-                    id="CTG_TURN_01",
-                    severity="SOFT",
-                    status="warn",
-                    score=0.4,
-                    notes=f"Speaker {role} dominates {int(ratio*100)}% of the turns."
-                ))
-
-    def _check_topic_signals(self, features: list[dict]):
-        """CTG_TOPIC_01: Significant shifts should be signaled."""
-        # This is harder without semantic comparison, but we check if 
-        # a topic shift marker is missing when VAD or role flow changes abruptly.
-        pass
-
-    def _check_commitments(self, features: list[dict], messages: list[dict]):
-        """CTG_COMMIT_01 & CTG_COMMIT_02: Commitment follow-up and contradictions."""
-        commit_ledger = {} # role -> {text_hash: msg_idx}
-        
-        for i, f in enumerate(features):
-            if f["is_commit"]:
-                # Simple "hash" of text to detect identical repeated promises
-                text_hash = messages[i]["text"].strip().lower()[:30]
-                role = f["role"]
-                
-                if role in commit_ledger and text_hash in commit_ledger[role]:
-                    # Repeated commitment without progress?
-                    self.constraints.append(TopologyConstraint(
-                        id="CTG_CIRC_01",
-                        severity="HARD",
-                        status="warn",
-                        score=0.6,
-                        message_indices=[commit_ledger[role][text_hash], i],
-                        notes="Circular commitment pattern: identical promise repeated."
-                    ))
-                
-                commit_ledger.setdefault(role, {})[text_hash] = i
-
-                # Commitment at end
-                if i == len(features) - 1:
-                    self.constraints.append(TopologyConstraint(
-                        id="CTG_COMMIT_01",
-                        severity="HARD",
-                        status="warn",
-                        score=0.7,
-                        message_indices=[i],
-                        notes="Commitment made at end of conversation without closing ack."
-                    ))
-
-            # Contradiction check (Heuristic: Negation of similar phrase)
-            if f["is_negation"]:
-                role = f["role"]
-                text = messages[i]["text"].lower()
-                if role in commit_ledger:
-                    for hash_text, idx in commit_ledger[role].items():
-                        # If negation contains significant parts of the commitment text
-                        words = [w for w in hash_text.split() if len(w) > 3]
-                        if words and all(w in text for w in words):
-                            self.constraints.append(TopologyConstraint(
-                                id="CTG_COMMIT_02",
-                                severity="HARD",
-                                status="fail",
-                                score=0.0,
-                                message_indices=[idx, i],
-                                notes=f"Contradiction detected: Commitment at {idx} negated at {i}."
-                            ))
-
-    def _check_gaslighting_influence(self, features: list[dict]):
-        """CTG_GAS_01: Gaslighting requires higher scrutiny."""
-        # This would be triggered by specific MEMA/CLU markers passed in
-        pass
-
-    def _check_attribution_guard(self, features: list[dict]):
-        """CTG_ATTR_01: Attribution Guard (Quotes)."""
-        for i, f in enumerate(features):
-            if f["is_quote"] and (f["is_threat"] or f["is_commit"]):
-                self.constraints.append(TopologyConstraint(
-                    id="CTG_ATTR_01",
-                    severity="HARD",
-                    status="pass",
-                    score=1.0,
-                    message_indices=[i],
-                    notes="Attribution guard applied: threats/commitments in quotes are de-weighted."
-                ))
+    }
