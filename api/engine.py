@@ -469,6 +469,20 @@ class MarkerEngine:
     # ATO Detection (Level 1): Pure regex matching
     # -----------------------------------------------------------------------
 
+    @classmethod
+    def _is_formal_technical_text(cls, text: str) -> bool:
+        """Detect if a text is a technical manual or formal documentation."""
+        technical_keywords = {
+            "website", "klicken", "anzeigen", "bereitstellung", "richtlinien", 
+            "beantragen", "überprüfung", "einstellungen", "anfrage", "code",
+            "download", "update", "installation", "server", "adsense", "google"
+        }
+        words = set(re.findall(r"\w+", text.lower()))
+        matches = words.intersection(technical_keywords)
+        
+        # If more than 3 distinct technical keywords are found, it's highly likely NOT a personal chat
+        return len(matches) >= 3
+
     def detect_ato(
         self, text: str, threshold: float = 0.5, *, include_context_only: bool = True
     ) -> list[Detection]:
@@ -1008,8 +1022,11 @@ class MarkerEngine:
                         c for c in all_active
                         if any(kw in c.upper() for kw in mema_keywords)
                     ]
-                    if related:
+                    # LD 6.0: Require at least 2 related markers for meta-inference
+                    if len(related) >= 2:
                         confidence = max(confidence, 0.5 + min(0.4, len(related) * 0.12))
+                    else:
+                        confidence = 0.0
 
                 elif dc == "cycle_detection":
                     # Cycle needs escalation + recurring pattern
@@ -1017,19 +1034,22 @@ class MarkerEngine:
                         c for c in all_active
                         if any(kw in c.upper() for kw in mema_keywords)
                     ]
-                    if len(related) >= 2:
+                    if len(related) >= 3: # Stricter for cycles
                         confidence = max(confidence, 0.6)
-                    elif related:
+                    elif len(related) >= 2:
                         confidence = max(confidence, 0.45)
+                    else:
+                        confidence = 0.0
 
                 elif dc == "pattern_detection":
-                    # Pattern detection from active markers matching keywords
                     related = [
                         c for c in all_active
                         if any(kw in c.upper() for kw in mema_keywords)
                     ]
-                    if related:
+                    if len(related) >= 2:
                         confidence = max(confidence, 0.5 + min(0.3, len(related) * 0.1))
+                    else:
+                        confidence = 0.0
 
                 elif dc in ("composite_meta", "profile_composite", "archetype_composite"):
                     # Composite: keyword overlap with any active CLU/SEM/ATO
@@ -1041,12 +1061,14 @@ class MarkerEngine:
                         s for s in active_sems
                         if any(kw in s.upper() for kw in mema_keywords)
                     ]
-                    # Weighted: CLU match = 1.0, SEM match = 0.5
+                    # LD 6.0: Composite needs a CLU + SEM or multiple SEMs
                     weighted = len(related_clus) * 1.0 + len(related_sems) * 0.5
-                    if weighted >= 1.0:
+                    if weighted >= 1.5:
                         confidence = max(confidence, 0.55 + min(0.35, weighted * 0.15))
-                    elif weighted >= 0.5:
+                    elif weighted >= 1.0:
                         confidence = max(confidence, 0.5)
+                    else:
+                        confidence = 0.0
 
                 elif dc in ("E", "coherence_calculator", "echo_detector",
                             "evolution_pressure_analyzer", "node_crystallizer"):
@@ -1111,10 +1133,16 @@ class MarkerEngine:
 
         # Level 2: SEM
         sem_dets = []
-        if "SEM" in layers or "CLU" in layers or "MEMA" in layers:
+        is_formal = self._is_formal_technical_text(text)
+        if not is_formal and ("SEM" in layers or "CLU" in layers or "MEMA" in layers):
             sem_dets = self.detect_sem(text, ato_dets, threshold)
             if "SEM" in layers:
                 all_detections.extend(sem_dets)
+        elif is_formal:
+            # For technical texts, we might still want ATOs but we mark them as neutral
+            for d in all_detections:
+                d.confidence *= 0.5 # De-weight psychological impact
+                d.vad = {"valence": 0.0, "arousal": 0.0, "dominance": 0.0}
 
         # --- Deduplication (LD 5.1) ---
         if deduplicate:
@@ -1127,7 +1155,7 @@ class MarkerEngine:
             "shadow_mode": True
         }
 
-    def analyze_conversation(
+    async def analyze_conversation(
         self,
         messages: list[dict],
         layers: list[str] | None = None,
@@ -1291,6 +1319,11 @@ class MarkerEngine:
             "engine": {"mode": "standard-recall", "marker_threshold": threshold},
         })
 
+        # --- Neuro-Symbolic Reasoning (LD 6.0) ---
+        from .reasoning import reasoning_engine
+        vad_summary = {"mean_valence": sum(v["valence"] for v in message_vad)/len(message_vad)} if message_vad else {}
+        reasoning = await reasoning_engine.analyze(messages, all_detections, topology, vad_summary)
+
         # --- Deduplication (LD 5.1) ---
         if deduplicate:
             all_detections = self._deduplicate_detections(all_detections)
@@ -1305,6 +1338,7 @@ class MarkerEngine:
             "state_indices": state_indices,
             "speaker_baselines": speaker_baselines,
             "topology": topology,
+            "reasoning": reasoning.model_dump() if reasoning else None,
             "timing_ms": round(elapsed, 2),
             "shadow_mode": True
         }

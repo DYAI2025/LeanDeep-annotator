@@ -152,6 +152,14 @@ Input Text
 │  Organism-level pattern: absence detection,         │
 │  trend analysis, cycle detection, composite         │
 │  archetype inference.                               │
+└────────────────────┬────────────────────────────────┘
+                     │
+                     ▼
+┌─────────────────────────────────────────────────────┐
+│  Layer 5: REASONING (Neuro-Symbolic)                │
+│  Clinical integration: LLM-based synthesis of the  │
+│  marker report. Provides context-aware narrative    │
+│  grounded in deterministic evidence.                │
 └─────────────────────────────────────────────────────┘
 ```
 

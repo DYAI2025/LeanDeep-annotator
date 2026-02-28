@@ -457,8 +457,19 @@ def _format_markers(marker_ids: list[str], limit: int = 3) -> str:
 
 
 def synthesize_narrative(framings: list[dict], semiotic_map: dict[str, dict],
-                         num_messages: int = 0) -> dict:
+                         num_messages: int = 0, reasoning: dict[str, Any] | None = None) -> dict:
     """Synthesize a narrative summary from framings and detections."""
+    
+    # 0. Check for LLM Reasoning (Neuro-Symbolic)
+    if reasoning:
+        return {
+            "narrative": reasoning.get("narrative", ""),
+            "key_points": [f"Kontext: {'Formal/Technisch' if reasoning.get('is_formal_technical') else 'Personal'}"],
+            "relational_pattern": reasoning.get("relational_pattern"),
+            "bias_check": f"KI-Konfidenz: {int(reasoning.get('confidence_score', 0)*100)}%",
+            "genre": "koordination" if reasoning.get("is_formal_technical") else "unbekannt",
+        }
+
     if not framings:
         return {
             "narrative": "Keine ausreichenden Signale fuer eine Gesamtinterpretation.",
@@ -467,19 +478,25 @@ def synthesize_narrative(framings: list[dict], semiotic_map: dict[str, dict],
             "bias_check": None,
         }
 
-    # 1. Relational Pattern Detection
-    top_framings = [f for f in framings if f["intensity"] >= 0.15][:5]
+    # 1. Relational Pattern Detection (STRICTER)
+    # Require minimum intensity and real evidence to avoid "placeholder" results
+    top_framings = [f for f in framings if f["intensity"] >= 0.4][:5]
     relational_pattern = None
-    ft_set = {f["framing_type"] for f in top_framings[:4]}
-    for (ft1, ft2), pattern in _PATTERN_TEMPLATES.items():
-        if ft1 in ft_set and ft2 in ft_set:
-            relational_pattern = pattern
-            break
+    
+    if len(top_framings) >= 2:
+        ft_set = {f["framing_type"] for f in top_framings[:3]}
+        for (ft1, ft2), pattern in _PATTERN_TEMPLATES.items():
+            if ft1 in ft_set and ft2 in ft_set:
+                relational_pattern = pattern
+                break
 
     # 2. Narrative Generation
     sentences = []
     if relational_pattern:
         sentences.append(relational_pattern)
+    else:
+        # Fallback if no strong pattern detected
+        sentences.append("Der Austausch weist aktuell eine sachliche Grundstruktur auf, ohne dass sich ein dominantes psychodynamisches Konfliktmuster abzeichnet.")
     
     for f in top_framings[:2]:
         template = _FRAMING_NARRATIVES.get(f["framing_type"], "{top_markers} ({count} Marker) wurden erkannt.")

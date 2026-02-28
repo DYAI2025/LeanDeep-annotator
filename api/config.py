@@ -32,6 +32,10 @@ class Settings(BaseSettings):
     max_text_length: int = 100_000
     max_conversation_messages: int = 2000
 
+    # LLM Reasoning (Neuro-Symbolic)
+    google_api_key: str | None = None
+    reasoning_model: str = "gemini-1.5-flash" # Use flash for speed/cost by default
+
     model_config = {"env_prefix": "LEANDEEP_"}
 
     @property

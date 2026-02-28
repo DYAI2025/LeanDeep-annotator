@@ -68,6 +68,9 @@ python3 -m pytest tests/ -x -q
 # Run CTG Shadow Mode E2E tests (requires running server)
 python3 -m pytest tests/test_api_ctg_shadow.py -q
 
+# Run Neuro-Symbolic Reasoning unit tests
+python3 -m pytest tests/test_reasoning.py -v
+
 # Run a single test file or test function
 python3 -m pytest tests/test_engine_vad.py -x -q
 python3 -m pytest tests/test_api_dynamics.py::test_function_name -x -q
@@ -82,6 +85,12 @@ python3 tools/enrich_negatives.py    # Add negative examples
 python3 tools/eval_corpus.py         # Marker detection eval against gold corpus
 python3 tools/eval_dynamics.py       # Emotion dynamics eval (VAD/UED/state trends)
 ```
+
+## Environment Variables
+
+- `LEANDEEP_REQUIRE_AUTH` (bool) — Enable/disable API key auth (default: false in dev)
+- `LEANDEEP_GOOGLE_API_KEY` (str) — API key for Gemini reasoning layer
+- `LEANDEEP_REASONING_MODEL` (str) — Model to use (default: gemini-1.5-flash)
 
 ## API Endpoints
 

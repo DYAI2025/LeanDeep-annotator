@@ -169,7 +169,7 @@ async def analyze_conversation(
     """
     messages = [{"role": m.role, "text": m.text} for m in req.messages]
     layers = [l.value for l in req.layers]
-    result = engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
+    result = await engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
 
     markers = [
         ConversationMarker(
@@ -201,6 +201,7 @@ async def analyze_conversation(
         markers=sorted(markers, key=lambda m: (-m.confidence, m.id)),
         temporal_patterns=temporal,
         topology=result.get("topology"),
+        reasoning=result.get("reasoning"),
         meta=AnalyzeMeta(
             processing_ms=result["timing_ms"],
             text_length=sum(len(m.text) for m in req.messages),
@@ -244,7 +245,7 @@ async def analyze_dynamics(
             raise HTTPException(status_code=404, detail="Persona not found")
         warm_start = persona_store.extract_warm_start(persona)
 
-    result = engine.analyze_conversation(
+    result = await engine.analyze_conversation(
         messages, layers=layers, threshold=req.threshold, warm_start=warm_start
     )
 
@@ -351,6 +352,7 @@ async def analyze_dynamics(
         speaker_baselines=speaker_baselines,
         temporal_patterns=temporal,
         topology=result.get("topology"),
+        reasoning=result.get("reasoning"),
         persona_session=persona_session_summary,
         meta=AnalyzeMeta(
             processing_ms=result["timing_ms"],
@@ -386,7 +388,7 @@ async def analyze_interpret(
 
     # Use lower threshold for interpretation to catch subtle signals
     interpret_threshold = min(req.threshold, 0.3)
-    result = engine.analyze_conversation(messages, layers=layers, threshold=interpret_threshold)
+    result = await engine.analyze_conversation(messages, layers=layers, threshold=interpret_threshold)
 
     detections = result["detections"]
     sem_map = build_semiotic_map(detections, engine)
@@ -394,7 +396,9 @@ async def analyze_interpret(
     dom = dominant_framing(framings)
 
     # Narrative synthesis
-    findings_raw = synthesize_narrative(framings, sem_map, num_messages=len(messages))
+    findings_raw = synthesize_narrative(
+        framings, sem_map, num_messages=len(messages), reasoning=result.get("reasoning")
+    )
     findings = InterpretFindings(**findings_raw)
 
     return InterpretResponse(
