@@ -21,7 +21,7 @@ from pathlib import Path
 
 from fastapi import Depends, FastAPI, File, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
 from .auth import load_api_keys, verify_api_key
@@ -98,6 +98,12 @@ app.add_middleware(
 
 # Serve static assets (neutral_insights.json, etc.)
 app.mount("/static", StaticFiles(directory=Path(__file__).parent / "static"), name="static")
+
+
+@app.get("/", include_in_schema=False)
+async def root():
+    """Redirect root to the Analysis Studio."""
+    return RedirectResponse(url="/app")
 
 
 # ---------------------------------------------------------------------------
