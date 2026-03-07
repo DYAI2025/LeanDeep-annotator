@@ -11,6 +11,8 @@ COPY mcp_server.py .
 
 RUN mkdir -p personas
 
-EXPOSE 8420
+ENV PORT=8420
 
-CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8420"]
+EXPOSE ${PORT}
+
+CMD uvicorn api.main:app --host 0.0.0.0 --port ${PORT}
