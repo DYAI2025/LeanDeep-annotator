@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LeanDeep 6.0 — Analysis Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   Design System — LeanDeep 6.0 Analysis Studio
+   Aesthetic: Analytical Observatory (dark, precise, editorial)
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Surfaces */
+  --bg:           #0B0F1A;
+  --surface-0:    #111827;
+  --surface-1:    #1A2234;
+  --surface-2:    #232D42;
+  --surface-3:    #2C3A52;
+  --border:       #2E3A50;
+  --border-focus: #4B6A9B;
+
+  /* Text */
+  --text:         #E2E8F0;
+  --text-muted:   #7B8CA6;
+  --text-dim:     #4E5D78;
+
+  /* Layer Colors */
+  --ato:          #FACC15;
+  --ato-dim:      rgba(250,204,21,0.12);
+  --sem:          #FB923C;
+  --sem-dim:      rgba(251,146,60,0.12);
+  --clu:          #2DD4BF;
+  --clu-dim:      rgba(45,212,191,0.12);
+  --mema:         #A855F7;
+  --mema-dim:     rgba(168,85,247,0.12);
+
+  /* Accents */
+  --accent:       #3B82F6;
+  --accent-dim:   rgba(59,130,246,0.15);
+  --success:      #22C55E;
+  --danger:       #EF4444;
+  --warning:      #F59E0B;
+
+  /* Type */
+  --font-sans:    'Space Grotesk', system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', 'SF Mono', monospace;
+
+  /* Radii */
+  --radius-sm:    4px;
+  --radius:       8px;
+  --radius-lg:    12px;
+
+  /* Transitions */
+  --ease:         cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Skip Link ─── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 999;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: white;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-family: var(--font-sans);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+/* ─── Focus ─── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ─── Reset ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; }
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--surface-3); }
+
+/* ═══════════════════════════════════════════════════════════════
+   Header
+   ═══════════════════════════════════════════════════════════════ */
+
+.app-header {
+  background: var(--surface-0);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--ato), var(--sem), var(--clu), var(--mema));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.7rem;
+  color: var(--bg);
+}
+
+.logo-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.logo-text span { color: var(--text-muted); font-weight: 400; font-size: 0.8rem; margin-left: 6px; }
+
+.header-actions { display: flex; align-items: center; gap: 8px; }
+
+.health-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  padding: 4px 10px;
+  background: var(--surface-1);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+.health-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Navigation Tabs
+   ═══════════════════════════════════════════════════════════════ */
+
+.nav-tabs {
+  background: var(--surface-0);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  display: flex;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.nav-tab {
+  padding: 10px 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  border: none;
+  background: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s var(--ease);
+  font-family: var(--font-sans);
+}
+
+.nav-tab:hover { color: var(--text); }
+.nav-tab.active { color: var(--text); border-bottom-color: var(--accent); }
+
+/* ═══════════════════════════════════════════════════════════════
+   Main Layout
+   ═══════════════════════════════════════════════════════════════ */
+
+.app-body {
+  flex: 1;
+  overflow: hidden;
+}
+
+.view { display: none; height: 100%; }
+.view.active { display: flex; flex-direction: column; height: calc(100vh - 95px); }
+
+/* ═══════════════════════════════════════════════════════════════
+   View: Analyze (Text + Conversation)
+   ═══════════════════════════════════════════════════════════════ */
+
+.analyze-layout {
+  display: grid;
+  grid-template-columns: minmax(380px, 1fr) 2fr;
+  flex: 1;
+  overflow: hidden;
+}
+
+.input-panel {
+  background: var(--surface-0);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.input-panel-header {
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.input-panel-header h2 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+/* Mode switcher */
+.mode-switch {
+  display: flex;
+  gap: 2px;
+  margin-top: 10px;
+  background: var(--surface-1);
+  border-radius: var(--radius);
+  padding: 3px;
+}
+
+.mode-btn {
+  flex: 1;
+  padding: 6px 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s var(--ease);
+}
+
+.mode-btn.active {
+  background: var(--accent);
+  color: white;
+}
+
+.mode-btn:hover:not(.active) { color: var(--text); }
+
+/* Text input area */
+.input-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+
+.text-input {
+  width: 100%;
+  min-height: 160px;
+  background: var(--surface-1);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  resize: vertical;
+  line-height: 1.7;
+  transition: border-color 0.2s;
+}
+
+.text-input:focus { outline: none; border-color: var(--accent); }
+
+.text-input::placeholder { color: var(--text-dim); }
+
+/* Conversation builder */
+.conv-builder { display: none; }
+.conv-builder.active { display: block; }
+
+.conv-messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.conv-msg-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.conv-role-select {
+  width: 60px;
+  flex-shrink: 0;
+  padding: 8px 4px;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.conv-msg-input {
+  flex: 1;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  min-height: 36px;
+  resize: vertical;
+}
+
+.conv-msg-input:focus { outline: none; border-color: var(--accent); }
+
+.conv-msg-remove {
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.conv-msg-remove:hover { border-color: var(--danger); color: var(--danger); }
+
+.add-msg-btn {
+  width: 100%;
+  padding: 8px;
+  background: var(--surface-1);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.add-msg-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Controls */
+.input-controls {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.control-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  min-width: 72px;
+}
+
+.threshold-slider { flex: 1; accent-color: var(--accent); max-width: 140px; }
+.threshold-value { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); min-width: 32px; }
+
+.layer-toggles { display: flex; gap: 4px; flex-wrap: wrap; }
+
+.layer-chip {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.layer-chip input { display: none; }
+.layer-chip.ato  { border-color: var(--ato); color: var(--ato); }
+.layer-chip.sem  { border-color: var(--sem); color: var(--sem); }
+.layer-chip.clu  { border-color: var(--clu); color: var(--clu); }
+.layer-chip.mema { border-color: var(--mema); color: var(--mema); }
+.layer-chip.off  { opacity: 0.35; }
+
+.analyze-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.analyze-btn:hover { background: #2563EB; }
+.analyze-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.analyze-btn.loading { position: relative; color: transparent; }
+.analyze-btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+/* ═══════════════════════════════════════════════════════════════
+   Output Panel
+   ═══════════════════════════════════════════════════════════════ */
+
+.output-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.output-header {
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  background: var(--surface-0);
+}
+
+.output-meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.meta-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.meta-pill .val { color: var(--text); font-family: var(--font-mono); font-weight: 500; }
+
+.output-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+}
+
+/* Placeholder */
+.output-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-dim);
+  gap: 12px;
+}
+
+.output-placeholder .ph-icon {
+  font-size: 2.5rem;
+  opacity: 0.3;
+}
+
+.output-placeholder p {
+  font-size: 0.85rem;
+  max-width: 320px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ─── Annotated Text (Single Text Mode) ─── */
+.annotated-block {
+  background: var(--surface-0);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  line-height: 2;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.marker-hl {
+  padding: 1px 2px;
+  border-bottom: 2px solid;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.15s;
+}
+
+.marker-hl:hover { filter: brightness(1.15); }
+.marker-hl[data-layer="ATO"] { background: var(--ato-dim); border-color: var(--ato); }
+.marker-hl[data-layer="SEM"] { background: var(--sem-dim); border-color: var(--sem); }
+.marker-hl[data-layer="CLU"] { background: var(--clu-dim); border-color: var(--clu); }
+.marker-hl[data-layer="MEMA"] { background: var(--mema-dim); border-color: var(--mema); }
+
+/* ─── Conversation Messages ─── */
+.conv-output-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.conv-out-msg {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  border-left: 3px solid;
+  background: var(--surface-0);
+  position: relative;
+}
+
+.conv-out-msg.role-A { border-color: #60A5FA; }
+.conv-out-msg.role-B { border-color: #F472B6; }
+.conv-out-msg.role-therapist { border-color: var(--success); }
+.conv-out-msg.role-client { border-color: var(--warning); }
+
+.conv-out-role {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+  font-family: var(--font-mono);
+}
+
+.conv-out-text {
+  line-height: 1.9;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* ─── Marker Detail Sidebar ─── */
+.marker-sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 420px;
+  height: 100vh;
+  background: var(--surface-0);
+  border-left: 1px solid var(--border);
+  z-index: 200;
+  transform: translateX(100%);
+  transition: transform 0.3s var(--ease);
+  display: flex;
+  flex-direction: column;
+  box-shadow: -8px 0 32px rgba(0,0,0,0.4);
+}
+
+.marker-sidebar.open { transform: translateX(0); }
+
+.sidebar-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-close {
+  width: 32px; height: 32px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-close:hover { border-color: var(--text); color: var(--text); }
+
+.sidebar-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.sidebar-section {
+  margin-bottom: 20px;
+}
+
+.sidebar-section h4 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
+.sidebar-marker-id {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.sidebar-layer-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  margin-left: 8px;
+}
+
+.sidebar-layer-badge.ATO  { background: var(--ato-dim); color: var(--ato); }
+.sidebar-layer-badge.SEM  { background: var(--sem-dim); color: var(--sem); }
+.sidebar-layer-badge.CLU  { background: var(--clu-dim); color: var(--clu); }
+.sidebar-layer-badge.MEMA { background: var(--mema-dim); color: var(--mema); }
+
+.sidebar-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.sidebar-kv {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.sidebar-kv .k { color: var(--text-dim); font-weight: 500; }
+.sidebar-kv .v { color: var(--text); font-family: var(--font-mono); font-size: 0.78rem; }
+
+/* Quality Score Gauge */
+.quality-gauge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  background: var(--surface-1);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.gauge-ring {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.gauge-ring svg {
+  width: 56px;
+  height: 56px;
+  transform: rotate(-90deg);
+}
+
+.gauge-ring .bg-ring {
+  fill: none;
+  stroke: var(--surface-3);
+  stroke-width: 5;
+}
+
+.gauge-ring .fg-ring {
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s var(--ease), stroke 0.3s;
+}
+
+.gauge-score {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.gauge-breakdown {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.gauge-factor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+}
+
+.gauge-factor .label { color: var(--text-muted); min-width: 90px; }
+.gauge-factor .bar-track { flex: 1; height: 4px; background: var(--surface-3); border-radius: 2px; overflow: hidden; }
+.gauge-factor .bar-fill { height: 100%; border-radius: 2px; transition: width 0.4s var(--ease); }
+
+/* Composed-of references */
+.composed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.composed-ref {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 4px 8px;
+  background: var(--surface-1);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.composed-ref { cursor: pointer; }
+.composed-ref:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Examples */
+.example-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.example-item {
+  font-size: 0.8rem;
+  padding: 8px 10px;
+  background: var(--surface-1);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid;
+  line-height: 1.5;
+}
+
+.example-item.positive { border-color: var(--success); }
+.example-item.negative { border-color: var(--danger); }
+
+/* ─── Detected Markers List (under output) ─── */
+.detected-markers-panel {
+  margin-top: 20px;
+}
+
+.detected-markers-panel h3 {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.detected-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 8px;
+}
+
+.detected-card {
+  background: var(--surface-0);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+  border-left: 3px solid;
+}
+
+.detected-card { cursor: pointer; }
+.detected-card:hover { border-color: var(--border-focus); background: var(--surface-1); }
+
+.detected-card[data-layer="ATO"] { border-left-color: var(--ato); }
+.detected-card[data-layer="SEM"] { border-left-color: var(--sem); }
+.detected-card[data-layer="CLU"] { border-left-color: var(--clu); }
+.detected-card[data-layer="MEMA"] { border-left-color: var(--mema); }
+
+.dc-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.dc-id { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; }
+.dc-conf { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; }
+.dc-conf.high { color: var(--success); }
+.dc-conf.mid { color: var(--warning); }
+.dc-conf.low { color: var(--danger); }
+.dc-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
+.dc-family { font-size: 0.68rem; color: var(--text-dim); margin-top: 4px; font-family: var(--font-mono); }
+
+/* ═══════════════════════════════════════════════════════════════
+   View: Marker Explorer
+   ═══════════════════════════════════════════════════════════════ */
+
+.explorer-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  flex: 1;
+  overflow: hidden;
+}
+
+.explorer-list-panel {
+  background: var(--surface-0);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.explorer-search {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+}
+
+.search-input:focus { outline: none; border-color: var(--accent); }
+.search-input::placeholder { color: var(--text-dim); }
+
+.explorer-filters {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  border: 1px solid;
+  cursor: pointer;
+  background: none;
+  transition: all 0.15s;
+}
+
+.filter-chip.all  { border-color: var(--text-dim); color: var(--text-dim); }
+.filter-chip.all.active  { background: var(--text-dim); color: var(--bg); }
+.filter-chip.ato  { border-color: var(--ato); color: var(--ato); }
+.filter-chip.ato.active  { background: var(--ato); color: var(--bg); }
+.filter-chip.sem  { border-color: var(--sem); color: var(--sem); }
+.filter-chip.sem.active  { background: var(--sem); color: var(--bg); }
+.filter-chip.clu  { border-color: var(--clu); color: var(--clu); }
+.filter-chip.clu.active  { background: var(--clu); color: var(--bg); }
+.filter-chip.mema { border-color: var(--mema); color: var(--mema); }
+.filter-chip.mema.active { background: var(--mema); color: var(--bg); }
+
+.explorer-results {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.explorer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.1s;
+  border: 1px solid transparent;
+}
+
+.explorer-item { cursor: pointer; }
+.explorer-item:hover { background: var(--surface-1); }
+.explorer-item.selected { background: var(--surface-1); border-color: var(--border); }
+
+.ei-layer-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ei-layer-dot.ATO  { background: var(--ato); }
+.ei-layer-dot.SEM  { background: var(--sem); }
+.ei-layer-dot.CLU  { background: var(--clu); }
+.ei-layer-dot.MEMA { background: var(--mema); }
+
+.ei-info { flex: 1; min-width: 0; }
+.ei-id { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ei-desc { font-size: 0.72rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+
+.ei-score {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  flex-shrink: 0;
+}
+
+.explorer-count {
+  padding: 8px 16px;
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+}
+
+/* Explorer Detail Panel */
+.explorer-detail {
+  overflow-y: auto;
+  padding: 28px 32px;
+}
+
+.explorer-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.detail-header { margin-bottom: 24px; }
+
+.detail-id {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.detail-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 8px;
+  max-width: 600px;
+}
+
+.detail-tags {
+  display: flex;
+  gap: 4px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.detail-tag {
+  padding: 2px 8px;
+  background: var(--surface-2);
+  border-radius: 20px;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.detail-card {
+  background: var(--surface-0);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+}
+
+.detail-card h4 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+
+.detail-card.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Patterns in detail */
+.pattern-row {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 6px 10px;
+  background: var(--surface-1);
+  border-radius: var(--radius-sm);
+  margin-bottom: 4px;
+  word-break: break-all;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* ─── Tooltip ─── */
+.tooltip {
+  position: fixed;
+  z-index: 300;
+  background: var(--surface-0);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  max-width: 360px;
+  font-size: 0.78rem;
+  pointer-events: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.tooltip.visible { opacity: 1; }
+.tooltip .tt-id { font-family: var(--font-mono); font-weight: 600; margin-bottom: 3px; }
+.tooltip .tt-desc { color: var(--text-muted); line-height: 1.4; margin-bottom: 4px; }
+.tooltip .tt-match { background: var(--surface-1); padding: 4px 8px; border-radius: var(--radius-sm); font-family: var(--font-mono); word-break: break-all; }
+
+/* ─── Stats footer ─── */
+.stats-footer {
+  background: var(--surface-0);
+  border-top: 1px solid var(--border);
+  padding: 6px 24px;
+  display: flex;
+  gap: 20px;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+}
+
+.stats-footer .sf-val { color: var(--text-muted); margin-left: 4px; }
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .analyze-layout { grid-template-columns: 1fr; }
+  .explorer-layout { grid-template-columns: 1fr; }
+  .marker-sidebar { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+<!-- ═══════════════════════════════════════════════════════════
+     Header
+     ═══════════════════════════════════════════════════════════ -->
+<header class="app-header">
+  <div class="logo">
+    <div class="logo-mark">LD</div>
+    <div class="logo-text">LeanDeep <span>6.0</span></div>
+  </div>
+  <div class="header-actions">
+    <div class="health-badge" id="healthBadge">
+      <span class="health-dot"></span>
+      <span id="healthText">connecting...</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     Navigation
+     ═══════════════════════════════════════════════════════════ -->
+<nav class="nav-tabs">
+  <button class="nav-tab active" data-view="analyze">Analyze</button>
+  <button class="nav-tab" data-view="explorer">Marker Explorer</button>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     App Body
+     ═══════════════════════════════════════════════════════════ -->
+<div class="app-body" id="main-content">
+
+  <!-- ─── View: Analyze ─── -->
+  <div class="view active" id="view-analyze">
+    <div class="analyze-layout">
+
+      <!-- Input Panel -->
+      <div class="input-panel">
+        <div class="input-panel-header">
+          <h2>Input</h2>
+          <div class="mode-switch">
+            <button class="mode-btn active" data-mode="text">Einzeltext</button>
+            <button class="mode-btn" data-mode="conversation">Konversation</button>
+          </div>
+        </div>
+
+        <div class="input-body">
+          <!-- Single text mode -->
+          <div id="textMode">
+            <textarea class="text-input" id="textInput" placeholder="Text eingeben oder einfuegen...&#10;&#10;Beispiel: Ich weiss gar nicht mehr was ich sagen soll, du hoerst mir ja eh nie zu."></textarea>
+          </div>
+
+          <!-- Conversation mode -->
+          <div class="conv-builder" id="convMode">
+            <div class="conv-messages-list" id="convMessages">
+              <div class="conv-msg-row">
+                <select class="conv-role-select" aria-label="Rolle"><option>A</option><option>B</option></select>
+                <textarea class="conv-msg-input" rows="1" placeholder="Nachricht..."></textarea>
+                <button class="conv-msg-remove" title="Entfernen" aria-label="Nachricht entfernen">&times;</button>
+              </div>
+              <div class="conv-msg-row">
+                <select class="conv-role-select" aria-label="Rolle"><option>A</option><option selected>B</option></select>
+                <textarea class="conv-msg-input" rows="1" placeholder="Antwort..."></textarea>
+                <button class="conv-msg-remove" title="Entfernen" aria-label="Nachricht entfernen">&times;</button>
+              </div>
+            </div>
+            <button class="add-msg-btn" id="addMsgBtn">+ Nachricht hinzufuegen</button>
+          </div>
+        </div>
+
+        <div class="input-controls">
+          <div class="control-row">
+            <span class="control-label">Threshold</span>
+            <input type="range" class="threshold-slider" id="thresholdSlider" min="0" max="1" step="0.05" value="0.3">
+            <span class="threshold-value" id="thresholdValue">0.30</span>
+          </div>
+          <div class="control-row">
+            <span class="control-label">Layers</span>
+            <div class="layer-toggles">
+              <label class="layer-chip ato"><input type="checkbox" value="ATO" checked> ATO</label>
+              <label class="layer-chip sem"><input type="checkbox" value="SEM" checked> SEM</label>
+              <label class="layer-chip clu"><input type="checkbox" value="CLU" checked> CLU</label>
+              <label class="layer-chip mema"><input type="checkbox" value="MEMA" checked> MEMA</label>
+            </div>
+          </div>
+          <button class="analyze-btn" id="analyzeBtn">Analysieren</button>
+        </div>
+      </div>
+
+      <!-- Output Panel -->
+      <div class="output-panel">
+        <div class="output-header">
+          <div class="output-meta" id="outputMeta" style="display:none">
+            <div class="meta-pill">Marker <span class="val" id="metaCount">0</span></div>
+            <div class="meta-pill">Zeit <span class="val" id="metaTime">0ms</span></div>
+            <div class="meta-pill">Laenge <span class="val" id="metaLength">0</span></div>
+          </div>
+        </div>
+        <div class="output-body" id="outputBody">
+          <div class="output-placeholder" id="outputPlaceholder">
+            <svg class="ph-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <p>Text oder Konversation eingeben und <strong>Analysieren</strong> klicken.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── View: Marker Explorer ─── -->
+  <div class="view" id="view-explorer">
+    <div class="explorer-layout">
+      <div class="explorer-list-panel">
+        <div class="explorer-search">
+          <input type="text" class="search-input" id="explorerSearch" placeholder="Marker suchen (ID, Beschreibung, Family)...">
+        </div>
+        <div class="explorer-filters" id="explorerFilters">
+          <button class="filter-chip all active" data-layer="">Alle</button>
+          <button class="filter-chip ato" data-layer="ATO">ATO</button>
+          <button class="filter-chip sem" data-layer="SEM">SEM</button>
+          <button class="filter-chip clu" data-layer="CLU">CLU</button>
+          <button class="filter-chip mema" data-layer="MEMA">MEMA</button>
+        </div>
+        <div class="explorer-results" id="explorerResults"></div>
+        <div class="explorer-count" id="explorerCount"></div>
+      </div>
+      <div class="explorer-detail" id="explorerDetail">
+        <div class="explorer-placeholder">
+          <p>Marker auswaehlen um Details zu sehen</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Stats Footer -->
+<footer class="stats-footer" id="statsFooter">
+  <span>Marker geladen: <span class="sf-val" id="sfMarkers">—</span></span>
+  <span>Engine: <span class="sf-val" id="sfVersion">—</span></span>
+</footer>
+
+<!-- Tooltip -->
+<div class="tooltip" id="tooltip"></div>
+
+<!-- Marker Sidebar (slide-in detail from analysis) -->
+<div class="marker-sidebar" id="markerSidebar">
+  <div class="sidebar-header">
+    <span class="sidebar-marker-id" id="sbMarkerId"></span>
+    <button class="sidebar-close" id="sbClose" aria-label="Seitenleiste schliessen">&times;</button>
+  </div>
+  <div class="sidebar-body" id="sbBody"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     JavaScript
+     ═══════════════════════════════════════════════════════════ -->
+<script>
+const API = '';  // same origin
+
+// ─── State ───
+let currentMode = 'text';
+let allMarkers = [];
+let markerMap = {};
+let explorerFilter = '';
+let explorerQuery = '';
+
+// ─── Helpers ───
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const layerColor = l => ({ ATO:'#FACC15', SEM:'#FB923C', CLU:'#2DD4BF', MEMA:'#A855F7' }[l] || '#888');
+const confClass = c => c >= 0.7 ? 'high' : c >= 0.4 ? 'mid' : 'low';
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+// ─── Marker Quality Score ───
+function computeQualityScore(marker) {
+  const factors = {};
+
+  // 1. Composed_of connectivity (0-25)
+  let composed = marker.composed_of;
+  let compCount = 0;
+  if (Array.isArray(composed)) compCount = composed.length;
+  else if (composed && typeof composed === 'object') {
+    compCount = (composed.require || []).length + (composed.negative_evidence || []).length;
+  }
+  factors.connectivity = Math.min(25, compCount * 5);
+
+  // 2. Cross-compatibility: how many OTHER markers reference this one (0-25)
+  let refCount = 0;
+  for (const m of allMarkers) {
+    const co = m.composed_of;
+    if (Array.isArray(co) && co.includes(marker.id)) refCount++;
+    else if (co && typeof co === 'object') {
+      if ((co.require || []).includes(marker.id)) refCount++;
+    }
+  }
+  factors.compatibility = Math.min(25, refCount * 3);
+
+  // 3. Example count (0-25)
+  const examples = marker.examples || {};
+  let exCount = 0;
+  for (const arr of Object.values(examples)) {
+    if (Array.isArray(arr)) exCount += arr.length;
+  }
+  factors.examples = Math.min(25, Math.round(exCount / 3 * 25));
+
+  // 4. Description quality (0-25)
+  const desc = marker.description || '';
+  const descLen = desc.length;
+  if (descLen >= 80) factors.description = 25;
+  else if (descLen >= 40) factors.description = 18;
+  else if (descLen >= 20) factors.description = 10;
+  else factors.description = Math.round(descLen / 20 * 10);
+
+  const total = factors.connectivity + factors.compatibility + factors.examples + factors.description;
+  return { total, factors };
+}
+
+function renderGauge(score, factors) {
+  const pct = score / 100;
+  const circumference = 2 * Math.PI * 23;
+  const offset = circumference * (1 - pct);
+  const color = score >= 70 ? 'var(--success)' : score >= 40 ? 'var(--warning)' : 'var(--danger)';
+
+  return `
+    <div class="quality-gauge">
+      <div class="gauge-ring">
+        <svg viewBox="0 0 56 56">
+          <circle class="bg-ring" cx="28" cy="28" r="23"/>
+          <circle class="fg-ring" cx="28" cy="28" r="23"
+            stroke="${color}"
+            stroke-dasharray="${circumference}"
+            stroke-dashoffset="${offset}"/>
+        </svg>
+        <span class="gauge-score" style="color:${color}">${score}</span>
+      </div>
+      <div class="gauge-breakdown">
+        ${gaugeBar('Vernetzung', factors.connectivity, 25, 'var(--clu)')}
+        ${gaugeBar('Kompatibel', factors.compatibility, 25, 'var(--sem)')}
+        ${gaugeBar('Beispiele', factors.examples, 25, 'var(--accent)')}
+        ${gaugeBar('Beschreibung', factors.description, 25, 'var(--mema)')}
+      </div>
+    </div>`;
+}
+
+function gaugeBar(label, value, max, color) {
+  const pct = (value / max * 100).toFixed(0);
+  return `<div class="gauge-factor">
+    <span class="label">${label}</span>
+    <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${color}"></div></div>
+    <span style="font-family:var(--font-mono);color:var(--text-muted);min-width:24px;text-align:right">${value}</span>
+  </div>`;
+}
+
+// ─── Navigation ───
+$$('.nav-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    $$('.nav-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    $$('.view').forEach(v => v.classList.remove('active'));
+    $(`#view-${tab.dataset.view}`).classList.add('active');
+    if (tab.dataset.view === 'explorer' && allMarkers.length === 0) loadAllMarkers();
+  });
+});
+
+// ─── Mode Switch ───
+$$('.mode-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    $$('.mode-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMode = btn.dataset.mode;
+    $('#textMode').style.display = currentMode === 'text' ? 'block' : 'none';
+    $('#convMode').classList.toggle('active', currentMode === 'conversation');
+  });
+});
+
+// ─── Threshold Slider ───
+$('#thresholdSlider').addEventListener('input', e => {
+  $('#thresholdValue').textContent = parseFloat(e.target.value).toFixed(2);
+});
+
+// ─── Layer Toggles ───
+$$('.layer-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const cb = chip.querySelector('input');
+    chip.classList.toggle('off', !cb.checked);
+  });
+});
+
+// ─── Conversation Builder ───
+$('#addMsgBtn').addEventListener('click', () => {
+  const list = $('#convMessages');
+  const rows = list.querySelectorAll('.conv-msg-row');
+  const lastRole = rows.length > 0 ? rows[rows.length - 1].querySelector('select').value : 'A';
+  const nextRole = lastRole === 'A' ? 'B' : 'A';
+
+  const row = document.createElement('div');
+  row.className = 'conv-msg-row';
+  row.innerHTML = `
+    <select class="conv-role-select" aria-label="Rolle"><option${nextRole==='A'?' selected':''}>A</option><option${nextRole==='B'?' selected':''}>B</option></select>
+    <textarea class="conv-msg-input" rows="1" placeholder="Nachricht..."></textarea>
+    <button class="conv-msg-remove" title="Entfernen" aria-label="Nachricht entfernen">&times;</button>`;
+  list.appendChild(row);
+  row.querySelector('.conv-msg-remove').addEventListener('click', () => row.remove());
+  row.querySelector('.conv-role-select').setAttribute('aria-label', 'Rolle');
+  row.querySelector('.conv-msg-input').focus();
+});
+
+$$('.conv-msg-remove').forEach(btn => {
+  btn.addEventListener('click', () => btn.parentElement.remove());
+});
+
+// ─── Analyze ───
+$('#analyzeBtn').addEventListener('click', analyze);
+$('#textInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) analyze();
+});
+
+async function analyze() {
+  const btn = $('#analyzeBtn');
+  btn.disabled = true;
+  btn.classList.add('loading');
+
+  const threshold = parseFloat($('#thresholdSlider').value);
+  const layers = [...$$('.layer-chip input:checked')].map(c => c.value);
+
+  try {
+    let data;
+    if (currentMode === 'text') {
+      const text = $('#textInput').value.trim();
+      if (!text) return;
+      const resp = await fetch(`${API}/v1/analyze`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, threshold, layers })
+      });
+      data = await resp.json();
+      renderTextOutput(text, data);
+    } else {
+      const rows = $$('#convMessages .conv-msg-row');
+      const messages = [...rows].map(r => ({
+        role: r.querySelector('select').value,
+        text: r.querySelector('textarea').value.trim()
+      })).filter(m => m.text);
+      if (messages.length === 0) return;
+
+      const resp = await fetch(`${API}/v1/analyze/dynamics`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages, threshold, layers })
+      });
+      data = await resp.json();
+      renderConvOutput(messages, data);
+    }
+  } catch (err) {
+    $('#outputBody').innerHTML = `<div class="output-placeholder"><p style="color:var(--danger)">Fehler: ${esc(err.message)}</p></div>`;
+  } finally {
+    btn.disabled = false;
+    btn.classList.remove('loading');
+  }
+}
+
+// ─── Render: Single Text ───
+function renderTextOutput(text, data) {
+  $('#outputPlaceholder')?.remove();
+  const meta = data.meta || {};
+  $('#outputMeta').style.display = 'flex';
+  $('#metaCount').textContent = data.markers?.length || 0;
+  $('#metaTime').textContent = (meta.processing_ms || 0).toFixed(1) + 'ms';
+  $('#metaLength').textContent = meta.text_length || text.length;
+
+  const markers = data.markers || [];
+  const annotated = buildAnnotatedHTML(text, markers);
+
+  let html = `<div class="annotated-block">${annotated}</div>`;
+
+  if (markers.length > 0) {
+    html += `<div class="detected-markers-panel"><h3>Erkannte Marker (${markers.length})</h3><div class="detected-grid">`;
+    for (const m of markers) {
+      html += renderDetectedCard(m);
+    }
+    html += `</div></div>`;
+  }
+
+  $('#outputBody').innerHTML = html;
+  bindMarkerClicks();
+}
+
+function buildAnnotatedHTML(text, markers) {
+  // Build intervals from matches
+  const intervals = [];
+  for (const m of markers) {
+    for (const match of (m.matches || [])) {
+      const [start, end] = match.span;
+      intervals.push({ start, end, marker: m, matchedText: match.matched_text });
+    }
+  }
+
+  // Sort by start, then by length descending (longer spans first for nesting)
+  intervals.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start));
+
+  // Flatten overlapping intervals by using the first match at each position
+  let result = '';
+  let pos = 0;
+  const used = [];
+
+  for (const iv of intervals) {
+    if (iv.start < pos) continue; // skip overlap
+    if (iv.start > pos) result += esc(text.slice(pos, iv.start));
+    result += `<span class="marker-hl" data-layer="${iv.marker.layer}" data-marker-id="${esc(iv.marker.id)}" data-desc="${esc(iv.marker.description || '')}" data-conf="${iv.marker.confidence}" data-match="${esc(iv.matchedText)}">${esc(text.slice(iv.start, iv.end))}</span>`;
+    pos = iv.end;
+    used.push(iv);
+  }
+
+  if (pos < text.length) result += esc(text.slice(pos));
+  return result;
+}
+
+// ─── Render: Conversation ───
+function renderConvOutput(messages, data) {
+  $('#outputPlaceholder')?.remove();
+  const meta = data.meta || {};
+  $('#outputMeta').style.display = 'flex';
+  $('#metaCount').textContent = data.markers?.length || 0;
+  $('#metaTime').textContent = (meta.processing_ms || 0).toFixed(1) + 'ms';
+  $('#metaLength').textContent = meta.text_length || 0;
+
+  const markers = data.markers || [];
+
+  // Group markers by message index
+  const markersByMsg = {};
+  for (const m of markers) {
+    for (const idx of (m.message_indices || [])) {
+      if (!markersByMsg[idx]) markersByMsg[idx] = [];
+      markersByMsg[idx].push(m);
+    }
+  }
+
+  let html = '<div class="conv-output-list">';
+  messages.forEach((msg, i) => {
+    const msgMarkers = markersByMsg[i] || [];
+    const annotated = msgMarkers.length > 0
+      ? buildAnnotatedHTML(msg.text, msgMarkers)
+      : esc(msg.text);
+
+    html += `
+      <div class="conv-out-msg role-${esc(msg.role)}">
+        <div class="conv-out-role">${esc(msg.role)} · #${i + 1}${msgMarkers.length ? ` · ${msgMarkers.length} Marker` : ''}</div>
+        <div class="conv-out-text">${annotated}</div>
+      </div>`;
+  });
+  html += '</div>';
+
+  // State indices
+  if (data.state_indices) {
+    const si = data.state_indices;
+    html += `
+      <div class="detected-markers-panel" style="margin-top:16px">
+        <h3>Beziehungs-Indizes</h3>
+        <div class="sidebar-kv" style="max-width:400px">
+          <span class="k">Trust</span><span class="v" style="color:${si.trust > 0 ? 'var(--success)' : 'var(--danger)'}">${si.trust.toFixed(2)}</span>
+          <span class="k">Conflict</span><span class="v" style="color:${si.conflict > 0 ? 'var(--danger)' : 'var(--success)'}">${si.conflict.toFixed(2)}</span>
+          <span class="k">Deeskalation</span><span class="v">${si.deesc.toFixed(2)}</span>
+          <span class="k">Beteiligte Marker</span><span class="v">${si.contributing_markers}</span>
+        </div>
+      </div>`;
+  }
+
+  // Detected markers grid
+  if (markers.length > 0) {
+    html += `<div class="detected-markers-panel"><h3>Erkannte Marker (${markers.length})</h3><div class="detected-grid">`;
+    for (const m of markers) {
+      html += renderDetectedCard(m);
+    }
+    html += `</div></div>`;
+  }
+
+  $('#outputBody').innerHTML = html;
+  bindMarkerClicks();
+}
+
+function renderDetectedCard(m) {
+  return `
+    <div class="detected-card" data-layer="${m.layer}" data-marker-id="${esc(m.id)}">
+      <div class="dc-header">
+        <span class="dc-id">${esc(m.id)}</span>
+        <span class="dc-conf ${confClass(m.confidence)}">${(m.confidence * 100).toFixed(0)}%</span>
+      </div>
+      <div class="dc-desc">${esc(m.description || '')}</div>
+      ${m.family ? `<div class="dc-family">${esc(m.family)}</div>` : ''}
+    </div>`;
+}
+
+// ─── Marker Click → Sidebar ───
+function bindMarkerClicks() {
+  $$('.marker-hl').forEach(el => {
+    el.addEventListener('mouseenter', showTooltip);
+    el.addEventListener('mouseleave', hideTooltip);
+    el.addEventListener('click', () => openSidebar(el.dataset.markerId));
+  });
+  $$('.detected-card').forEach(el => {
+    el.addEventListener('click', () => openSidebar(el.dataset.markerId));
+  });
+}
+
+function showTooltip(e) {
+  const el = e.target.closest('.marker-hl');
+  if (!el) return;
+  const tt = $('#tooltip');
+  tt.innerHTML = `
+    <div class="tt-id">${esc(el.dataset.markerId)}</div>
+    <div class="tt-desc">${esc(el.dataset.desc)}</div>
+    <div class="tt-match">"${esc(el.dataset.match)}"</div>`;
+  tt.classList.add('visible');
+  positionTooltip(e);
+}
+
+function positionTooltip(e) {
+  const tt = $('#tooltip');
+  const x = Math.min(e.clientX + 12, window.innerWidth - 380);
+  const y = Math.min(e.clientY + 12, window.innerHeight - 120);
+  tt.style.left = x + 'px';
+  tt.style.top = y + 'px';
+}
+
+document.addEventListener('mousemove', e => {
+  if ($('#tooltip').classList.contains('visible')) positionTooltip(e);
+});
+
+function hideTooltip() {
+  $('#tooltip').classList.remove('visible');
+}
+
+async function openSidebar(markerId) {
+  const sb = $('#markerSidebar');
+  sb.classList.add('open');
+  $('#sbMarkerId').textContent = markerId;
+  $('#sbBody').innerHTML = '<p style="color:var(--text-dim)">Lade...</p>';
+
+  try {
+    const resp = await fetch(`${API}/v1/markers/${encodeURIComponent(markerId)}`);
+    if (!resp.ok) throw new Error(`${resp.status}`);
+    const m = await resp.json();
+    renderSidebarDetail(m);
+  } catch (err) {
+    $('#sbBody').innerHTML = `<p style="color:var(--danger)">Marker nicht gefunden: ${esc(err.message)}</p>`;
+  }
+}
+
+$('#sbClose').addEventListener('click', () => $('#markerSidebar').classList.remove('open'));
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') $('#markerSidebar').classList.remove('open');
+});
+
+function renderSidebarDetail(m) {
+  const qs = computeQualityScore(m);
+  let html = '';
+
+  // Layer badge
+  html += `<div class="sidebar-section">
+    <span class="sidebar-layer-badge ${m.layer}">${m.layer}</span>
+    ${m.family ? `<span style="font-size:0.78rem;color:var(--text-muted);margin-left:8px">${esc(m.family)}</span>` : ''}
+    <div class="sidebar-desc">${esc(m.description || 'Keine Beschreibung')}</div>
+  </div>`;
+
+  // Quality Score
+  html += `<div class="sidebar-section">
+    <h4>Quality Score</h4>
+    ${renderGauge(qs.total, qs.factors)}
+  </div>`;
+
+  // Key-Value info
+  html += `<div class="sidebar-section">
+    <h4>Details</h4>
+    <div class="sidebar-kv">
+      <span class="k">Rating</span><span class="v">${m.rating}</span>
+      <span class="k">Layer</span><span class="v">${m.layer}</span>
+      <span class="k">Sprache</span><span class="v">${m.lang}</span>
+      ${m.multiplier ? `<span class="k">Multiplier</span><span class="v">${m.multiplier}</span>` : ''}
+    </div>
+  </div>`;
+
+  // Composed-of
+  const co = m.composed_of;
+  if (co) {
+    html += `<div class="sidebar-section"><h4>Composed Of</h4><div class="composed-list">`;
+    if (Array.isArray(co)) {
+      for (const ref of co) html += `<div class="composed-ref" data-ref="${esc(ref)}">${esc(ref)}</div>`;
+    } else if (typeof co === 'object') {
+      if (co.require) {
+        for (const ref of co.require) html += `<div class="composed-ref" data-ref="${esc(ref)}">${esc(ref)}</div>`;
+      }
+      if (co.negative_evidence) {
+        html += `<h4 style="margin-top:8px;font-size:0.68rem;color:var(--danger)">Negative Evidence</h4>`;
+        for (const ref of co.negative_evidence) html += `<div class="composed-ref" style="border-color:var(--danger)" data-ref="${esc(ref)}">${esc(ref)}</div>`;
+      }
+    }
+    html += `</div></div>`;
+  }
+
+  // Patterns
+  if (m.patterns && m.patterns.length > 0) {
+    html += `<div class="sidebar-section"><h4>Patterns (${m.patterns.length})</h4>`;
+    for (const p of m.patterns.slice(0, 10)) {
+      html += `<div class="pattern-row">${esc(p.value || p.raw || '')}</div>`;
+    }
+    if (m.patterns.length > 10) html += `<p style="font-size:0.72rem;color:var(--text-dim)">...und ${m.patterns.length - 10} weitere</p>`;
+    html += `</div>`;
+  }
+
+  // Examples
+  const ex = m.examples || {};
+  const allEx = Object.entries(ex);
+  if (allEx.length > 0) {
+    html += `<div class="sidebar-section"><h4>Beispiele</h4><div class="example-list">`;
+    for (const [key, arr] of allEx) {
+      if (!Array.isArray(arr)) continue;
+      const isPositive = key.toLowerCase().includes('positive') || key === 'positive_de';
+      for (const s of arr.slice(0, 5)) {
+        html += `<div class="example-item ${isPositive ? 'positive' : 'negative'}">${esc(s)}</div>`;
+      }
+      if (arr.length > 5) html += `<p style="font-size:0.7rem;color:var(--text-dim)">...+${arr.length - 5} weitere ${key}</p>`;
+    }
+    html += `</div></div>`;
+  }
+
+  // Tags
+  if (m.tags && m.tags.length > 0) {
+    html += `<div class="sidebar-section"><h4>Tags</h4><div class="detail-tags">`;
+    for (const t of m.tags) html += `<span class="detail-tag">${esc(t)}</span>`;
+    html += `</div></div>`;
+  }
+
+  $('#sbBody').innerHTML = html;
+
+  // Bind composed-of clicks
+  $$('.composed-ref').forEach(el => {
+    el.addEventListener('click', () => {
+      $('#sbMarkerId').textContent = el.dataset.ref;
+      openSidebar(el.dataset.ref);
+    });
+  });
+}
+
+// ═══════════════════════════════════════════════════════════
+// Marker Explorer
+// ═══════════════════════════════════════════════════════════
+
+async function loadAllMarkers() {
+  const res = $('#explorerResults');
+  res.innerHTML = '<p style="padding:20px;color:var(--text-dim)">Lade Marker...</p>';
+
+  try {
+    // Load in pages
+    let offset = 0;
+    allMarkers = [];
+    while (true) {
+      const resp = await fetch(`${API}/v1/markers?limit=500&offset=${offset}`);
+      const data = await resp.json();
+      allMarkers.push(...data.markers);
+      if (allMarkers.length >= data.total) break;
+      offset += 500;
+    }
+
+    // Build map
+    markerMap = {};
+    for (const m of allMarkers) markerMap[m.id] = m;
+
+    renderExplorerList();
+    $('#sfMarkers').textContent = allMarkers.length;
+  } catch (err) {
+    res.innerHTML = `<p style="padding:20px;color:var(--danger)">Fehler: ${esc(err.message)}</p>`;
+  }
+}
+
+function renderExplorerList() {
+  const filtered = allMarkers.filter(m => {
+    if (explorerFilter && m.layer !== explorerFilter) return false;
+    if (explorerQuery) {
+      const q = explorerQuery.toLowerCase();
+      return m.id.toLowerCase().includes(q) ||
+             (m.description || '').toLowerCase().includes(q) ||
+             (m.family || '').toLowerCase().includes(q);
+    }
+    return true;
+  });
+
+  // Sort by quality score descending
+  const scored = filtered.map(m => ({ m, qs: computeQualityScore(m) }));
+  scored.sort((a, b) => b.qs.total - a.qs.total);
+
+  const res = $('#explorerResults');
+  res.innerHTML = '';
+
+  for (const { m, qs } of scored) {
+    const item = document.createElement('div');
+    item.className = 'explorer-item';
+    item.dataset.id = m.id;
+    item.innerHTML = `
+      <span class="ei-layer-dot ${m.layer}"></span>
+      <div class="ei-info">
+        <div class="ei-id">${esc(m.id)}</div>
+        <div class="ei-desc">${esc(m.description || '')}</div>
+      </div>
+      <span class="ei-score" style="color:${qs.total >= 70 ? 'var(--success)' : qs.total >= 40 ? 'var(--warning)' : 'var(--danger)'}">${qs.total}</span>`;
+    item.addEventListener('click', () => {
+      $$('.explorer-item').forEach(i => i.classList.remove('selected'));
+      item.classList.add('selected');
+      renderExplorerDetail(m);
+    });
+    res.appendChild(item);
+  }
+
+  $('#explorerCount').textContent = `${filtered.length} / ${allMarkers.length} Marker`;
+}
+
+function renderExplorerDetail(m) {
+  const qs = computeQualityScore(m);
+  const detail = $('#explorerDetail');
+
+  let html = `
+    <div class="detail-header">
+      <div>
+        <span class="detail-id">${esc(m.id)}</span>
+        <span class="sidebar-layer-badge ${m.layer}">${m.layer}</span>
+      </div>
+      <div class="detail-desc">${esc(m.description || 'Keine Beschreibung')}</div>
+      <div class="detail-tags">
+        ${(m.tags || []).map(t => `<span class="detail-tag">${esc(t)}</span>`).join('')}
+        ${m.family ? `<span class="detail-tag" style="border:1px solid var(--border)">${esc(m.family)}</span>` : ''}
+      </div>
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-card">
+        <h4>Quality Score</h4>
+        ${renderGauge(qs.total, qs.factors)}
+      </div>
+
+      <div class="detail-card">
+        <h4>Details</h4>
+        <div class="sidebar-kv">
+          <span class="k">Rating</span><span class="v">${m.rating}</span>
+          <span class="k">Sprache</span><span class="v">${m.lang}</span>
+          ${m.multiplier ? `<span class="k">Multiplier</span><span class="v">${m.multiplier}</span>` : ''}
+          <span class="k">Patterns</span><span class="v">${(m.patterns || []).length}</span>
+        </div>
+      </div>`;
+
+  // Composed-of
+  const co = m.composed_of;
+  if (co) {
+    html += `<div class="detail-card"><h4>Composed Of</h4><div class="composed-list">`;
+    const refs = Array.isArray(co) ? co : (co.require || []);
+    for (const ref of refs) {
+      html += `<div class="composed-ref" data-ref="${esc(ref)}">${esc(ref)}</div>`;
+    }
+    if (co.negative_evidence) {
+      html += `<p style="font-size:0.68rem;color:var(--danger);margin-top:8px">Negative Evidence:</p>`;
+      for (const ref of co.negative_evidence) {
+        html += `<div class="composed-ref" style="border-color:var(--danger)" data-ref="${esc(ref)}">${esc(ref)}</div>`;
+      }
+    }
+    html += `</div></div>`;
+  }
+
+  // Patterns
+  if (m.patterns && m.patterns.length > 0) {
+    html += `<div class="detail-card${!co ? '' : ''}"><h4>Patterns (${m.patterns.length})</h4>`;
+    for (const p of m.patterns.slice(0, 15)) {
+      html += `<div class="pattern-row">${esc(p.value || p.raw || '')}</div>`;
+    }
+    if (m.patterns.length > 15) html += `<p style="font-size:0.72rem;color:var(--text-dim)">...+${m.patterns.length - 15} weitere</p>`;
+    html += `</div>`;
+  }
+
+  // Examples
+  const ex = m.examples || {};
+  const allEx = Object.entries(ex);
+  if (allEx.length > 0) {
+    html += `<div class="detail-card full-width"><h4>Beispiele</h4><div class="example-list">`;
+    for (const [key, arr] of allEx) {
+      if (!Array.isArray(arr)) continue;
+      const isPositive = key.toLowerCase().includes('positive') || key === 'positive_de';
+      html += `<p style="font-size:0.68rem;color:var(--text-dim);margin:6px 0 2px;text-transform:uppercase;letter-spacing:0.05em">${esc(key)} (${arr.length})</p>`;
+      for (const s of arr.slice(0, 8)) {
+        html += `<div class="example-item ${isPositive ? 'positive' : 'negative'}">${esc(s)}</div>`;
+      }
+      if (arr.length > 8) html += `<p style="font-size:0.7rem;color:var(--text-dim)">...+${arr.length - 8} weitere</p>`;
+    }
+    html += `</div></div>`;
+  }
+
+  html += `</div>`;
+  detail.innerHTML = html;
+
+  // Bind composed-of clicks
+  detail.querySelectorAll('.composed-ref').forEach(el => {
+    el.addEventListener('click', () => {
+      const ref = el.dataset.ref;
+      const target = allMarkers.find(m => m.id === ref);
+      if (target) {
+        // Select in list
+        $$('.explorer-item').forEach(i => i.classList.toggle('selected', i.dataset.id === ref));
+        renderExplorerDetail(target);
+        // Scroll list to item
+        const item = $$(`.explorer-item[data-id="${CSS.escape(ref)}"]`)[0];
+        if (item) item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+}
+
+// Explorer search
+$('#explorerSearch').addEventListener('input', e => {
+  explorerQuery = e.target.value.trim();
+  renderExplorerList();
+});
+
+// Explorer filter chips
+$$('.filter-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    $$('.filter-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    explorerFilter = chip.dataset.layer;
+    renderExplorerList();
+  });
+});
+
+// ═══════════════════════════════════════════════════════════
+// Health Check
+// ═══════════════════════════════════════════════════════════
+
+async function checkHealth() {
+  try {
+    const resp = await fetch(`${API}/v1/health`);
+    const data = await resp.json();
+    $('#healthText').textContent = `${data.markers_loaded} Marker`;
+    $('#sfMarkers').textContent = data.markers_loaded;
+    $('#sfVersion').textContent = data.version;
+    $('.health-dot').style.background = 'var(--success)';
+  } catch {
+    $('#healthText').textContent = 'offline';
+    $('.health-dot').style.background = 'var(--danger)';
+  }
+}
+
+checkHealth();
+</script>
+</body>
+</html>

@@ -646,6 +646,13 @@ async def analysis():
     return HTMLResponse(content=html_path.read_text(encoding="utf-8"))
 
 
+@app.get("/app", response_class=HTMLResponse)
+async def app_ui():
+    """Serve the LeanDeep 6.0 Analysis Studio."""
+    html_path = Path(__file__).parent / "static" / "app.html"
+    return HTMLResponse(content=html_path.read_text(encoding="utf-8"))
+
+
 # ---------------------------------------------------------------------------
 # POST /v1/upload — Document upload (extracts text from .docx/.txt/.md)
 # ---------------------------------------------------------------------------
