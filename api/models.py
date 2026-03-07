@@ -131,11 +131,22 @@ class TopologyReport(BaseModel):
     summary: dict[str, Any] = {}
     gates: dict[str, Any] = {}
 
+
+class ReasoningReport(BaseModel):
+    relational_pattern: str
+    narrative: str
+    is_formal_technical: bool
+    confidence_score: float
+    evidence_marker_ids: list[str] = []
+
+
 class ConversationResponse(BaseModel):
     markers: list[ConversationMarker]
     temporal_patterns: list[TemporalPattern] = []
     topology: TopologyReport | None = None
+    reasoning: ReasoningReport | None = None
     meta: AnalyzeMeta
+
 
 
 class VADPoint(BaseModel):
@@ -202,6 +213,7 @@ class DynamicsResponse(BaseModel):
     speaker_baselines: SpeakerBaselines | None = None
     temporal_patterns: list[TemporalPattern] = []
     topology: TopologyReport | None = None
+    reasoning: ReasoningReport | None = None
     persona_session: "PersonaSessionSummary | None" = None
     meta: AnalyzeMeta
 

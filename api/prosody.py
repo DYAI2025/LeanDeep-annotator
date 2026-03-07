@@ -213,6 +213,8 @@ class ProsodyScorer:
             e for e in EMOTIONS
             if self._sample_counts.get(e, 0) >= self._MIN_RELIABLE_N
         ]
+        if "NEUTRAL" not in self._reliable_emotions:
+            self._reliable_emotions.append("NEUTRAL")
 
         # Load conversation baseline (calibrated from gold corpus).
         # Key insight: discriminants (which direction each emotion deviates)
@@ -263,21 +265,22 @@ class ProsodyScorer:
             self._disc_vectors[emotion] = vec
 
     def score(self, text: str) -> EmotionResult | None:
-        """Score a text against all emotion profiles.
-
-        Rule-based scoring using empirically confirmed structural signals
-        from 20K+ labeled texts. Each emotion has characteristic features
-        that were validated as universal constants (Cohen's d > 0.5).
-
-        For each emotion, checks whether the text's prosody features match
-        the emotion's structural signature, using conversation baselines
-        as the reference point for "normal".
-
-        Returns None if text is too short for reliable scoring.
-        """
+        """Score a text against all emotion profiles."""
         features = extract_prosody(text)
         if not features:
             return None
+
+        # ─── Hard-check for technical/formal language to force NEUTRAL ───
+        from .engine import MarkerEngine
+        if MarkerEngine._is_formal_technical_text(text):
+            scores = {e: 0.05 for e in self._reliable_emotions}
+            scores["NEUTRAL"] = 0.7
+            return EmotionResult(
+                scores=scores,
+                dominant="NEUTRAL",
+                dominant_score=0.7,
+                prosody=features,
+            )
 
         raw_scores: dict[str, float] = {}
 
@@ -414,6 +417,14 @@ class ProsodyScorer:
                 score *= 1.5  # Boost combo
             elif not has_quest and not has_excl:
                 score *= 0.2  # Very unlikely without either
+
+        elif emotion == "NEUTRAL":
+            # Gateway: average everything, no extremes
+            # A neutral text is one where no other emotion scores high
+            score = 0.5 
+            # Penalize neutral if arousal markers are present
+            if has_excl or has_neg or has_du or has_ich:
+                score *= 0.5
 
         return max(0.0, score)
 
