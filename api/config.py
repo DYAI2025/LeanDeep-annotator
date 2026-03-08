@@ -36,6 +36,11 @@ class Settings(BaseSettings):
     google_api_key: str | None = None
     reasoning_model: str = "gemini-1.5-flash" # Use flash for speed/cost by default
 
+    # Semantic Profiling (Layer 0)
+    semantic_provider: str | None = None       # gemini|openai|anthropic|ollama
+    semantic_api_key: str | None = None        # Provider API key
+    semantic_model: str | None = None          # Model name override
+
     model_config = {"env_prefix": "LEANDEEP_"}
 
     @property
