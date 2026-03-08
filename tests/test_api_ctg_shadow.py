@@ -5,6 +5,8 @@ from typing import Any
 import pytest
 import httpx
 
+pytestmark = pytest.mark.usefixtures("ensure_api_reachable")
+
 FIXTURES_PATH = Path("tests/fixtures/ctg_fixtures.json")
 
 
