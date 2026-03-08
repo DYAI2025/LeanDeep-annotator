@@ -549,7 +549,7 @@ async def list_markers(
             multiplier=m.multiplier if m.multiplier != 1.0 else None,
             composed_of=m.composed_of,
             scoring=m.scoring,
-            activation=m.activation,
+            activation=m.activation if isinstance(m.activation, dict) else None,
             window=m.window,
         )
         for m in results

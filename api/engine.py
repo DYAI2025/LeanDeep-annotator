@@ -1591,7 +1591,8 @@ class MarkerEngine:
         if not self._loaded:
             self.load()
 
-        results = list(self.markers.values())
+        valid_layers = {"ATO", "SEM", "CLU", "MEMA"}
+        results = [m for m in self.markers.values() if m.layer in valid_layers]
 
         if layer:
             results = [m for m in results if m.layer == layer]
