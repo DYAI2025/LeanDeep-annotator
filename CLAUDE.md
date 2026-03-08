@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-LeanDeep 6.0: deterministic annotation layer for psychological/conversational pattern detection. Four-layer hierarchy: **ATO** (atomic regex signals) → **SEM** (semantic blends) → **CLU** (cluster intuitions) → **MEMA** (meta markers). Pure Python core, no LLM dependency for detection. 887 markers, regex-based detection with VAD emotion tracking, episode detection, persona profiling, and optional neuro-symbolic reasoning via Gemini.
+LeanDeep 6.0: deterministic annotation layer for psychological/conversational pattern detection. Five-layer hierarchy: **Semantic Layer 0** (LLM/embedding pre-filter) → **ATO** (atomic regex signals) → **SEM** (semantic blends) → **CLU** (cluster intuitions) → **MEMA** (meta markers). Pure Python core with optional LLM semantic profiling. 887 markers, regex-based detection with VAD emotion tracking, semantic gating, episode detection, persona profiling, and optional neuro-symbolic reasoning via Gemini.
 
 **Repo:** `DYAI2025/LeanDeep-annotator`
 
@@ -43,6 +43,8 @@ python3 tools/enrich_vad.py          # Add VAD + effect_on_state
 python3 tools/enrich_ld5.py          # Add families, multipliers, ARS, EWMA
 python3 tools/enrich_negatives.py    # Add negative examples
 python3 tools/enrich_examples.py     # Gap report + batch plan for examples
+python3 tools/enrich_semantic_affinity.py --dry-run  # Preview semantic affinity enrichment
+python3 tools/build_prototypes.py    # Build embedding prototypes for fallback
 
 # Evaluation (~90s on full gold corpus)
 python3 tools/eval_corpus.py         # Marker detection eval against gold corpus
@@ -63,16 +65,27 @@ All prefixed with `LEANDEEP_` (via pydantic-settings in `api/config.py`).
 | `LEANDEEP_GOOGLE_API_KEY` | str | None | Gemini API key for reasoning layer |
 | `LEANDEEP_REASONING_MODEL` | str | gemini-1.5-flash | LLM model for neuro-symbolic reasoning |
 | `LEANDEEP_RATE_LIMIT_PER_MINUTE` | int | 60 | Rate limit |
+| `LEANDEEP_SEMANTIC_PROVIDER` | str | None | Semantic provider: gemini\|openai\|anthropic\|ollama |
+| `LEANDEEP_SEMANTIC_API_KEY` | str | None | API key for semantic provider |
+| `LEANDEEP_SEMANTIC_MODEL` | str | None | Model name override for semantic provider |
 
 ## Architecture
 
-### Detection Pipeline (4 Layers)
+### Detection Pipeline (5 Layers)
 
 ```
-Text → ATO (regex match) → SEM (1 ATO + context, activation rules)
-                              → CLU (windowed aggregation over SEMs, family multipliers)
-                                → MEMA (meta-diagnosis via composed_of / detect_class)
+Text → Semantic Profiler (Layer 0, LLM/embedding)
+     → ATO (regex match)
+     → Semantic Gate (filter ATOs vs profile)
+     → VAD Gate (emotion alignment)
+     → SEM (1 ATO + context, activation rules)
+     → CLU (windowed aggregation over SEMs, family multipliers)
+     → MEMA (meta-diagnosis via composed_of / detect_class)
 ```
+
+**Semantic Profiler** (`api/semantic.py`): Produces 8-dimension `SemanticProfile` per text unit (intent, register, emotion, ironie, selbst_fremd, beziehungsdynamik, pre_context, tension). Provider-agnostic: Gemini, OpenAI, Anthropic, Ollama, or embedding fallback. BYOK via `X-LeanDeep-Provider` headers.
+
+**Semantic Gate** (`api/engine.py:_apply_semantic_gate`): Filters ATO detections against SemanticProfile using per-marker `semantic_affinity` rules (intent matching, ironie suppression, tension minimums, register exclusion).
 
 **Engine** (`api/engine.py`): Loads `marker_registry.json` at startup. Each layer cascades — CLU/MEMA only fire when their `composed_of` refs are active. DRA guards (negation, reported speech, intensity modifiers) filter at SEM level.
 
