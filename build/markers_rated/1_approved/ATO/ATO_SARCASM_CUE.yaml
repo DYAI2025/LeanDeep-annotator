@@ -89,3 +89,7 @@ examples:
   - Das ist wirklich toll, danke dir!
   - Logisch, das ist der richtige Weg.
 tags: [humor, sarcasm, grice_quality, atomic, v33]
+semantic_affinity:
+  intents:
+  - vorwurf
+  - feststellung

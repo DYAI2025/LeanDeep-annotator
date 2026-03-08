@@ -4,7 +4,8 @@ namespace: ld34_voice_social_grammar
 id: SEM_REPAIR_FAILURE_AUDIO
 lang: de
 category: SEMANTIC
-description: 'Reparatur scheitert (Audio): Versuch → keine Antwort/Topic-Shift in ≤6s.'
+description: 'Reparatur scheitert (Audio): Versuch → keine Antwort/Topic-Shift in
+  ≤6s.'
 frame:
   signal:
   - Reparaturversuch gefolgt von Schweigen/Shift
@@ -54,4 +55,12 @@ effect_on_state:
   trust: 0.35
   conflict: -0.3
   deesc: 0.4
-semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: reparatur, cultural_frame: Gottman, myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'}
+semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: 
+    reparatur, cultural_frame: Gottman, myth: 'Kommunikation loest alles — reden heilt,
+    schweigen zerstoert'}
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung

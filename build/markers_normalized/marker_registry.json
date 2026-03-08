@@ -101,6 +101,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_ABSOLUTIZER": {
@@ -393,6 +396,15 @@
         "trust": -0.45,
         "conflict": 0.6,
         "deesc": -0.3
+      },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       }
     },
     "ATO_ACHIEVEMENT_DRIVE": {
@@ -637,6 +649,15 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "semantic_affinity": {
+        "intents": [
+          "smalltalk"
+        ],
+        "intents_exclude": [
+          "vorwurf",
+          "drohung"
+        ]
       },
       "metadata": {
         "label": "Mikro-Bestätigung"
@@ -2050,6 +2071,15 @@
         "conflict": -0.3,
         "deesc": 0.4
       },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
+      },
       "metadata": {
         "label": "Entschuldigung"
       }
@@ -2133,6 +2163,15 @@
         "trust": 0.35,
         "conflict": -0.3,
         "deesc": 0.4
+      },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
       }
     },
     "ATO_ASSUMPTION": {
@@ -2626,6 +2665,15 @@
         "trust": -0.45,
         "conflict": 0.6,
         "deesc": -0.3
+      },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       }
     },
     "ATO_BLAME_SHIFT_MARKER": {
@@ -2739,6 +2787,15 @@
         "trust": -0.45,
         "conflict": 0.6,
         "deesc": -0.3
+      },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       }
     },
     "ATO_BOUNDARY_INVERSION": {
@@ -5120,6 +5177,15 @@
         "conflict": 0.4,
         "deesc": -0.2
       },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
+      },
       "metadata": {
         "label": "Kritik-Attacke"
       }
@@ -5625,6 +5691,16 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "intents": [
+          "frage",
+          "rechtfertigung"
+        ],
+        "intents_exclude": [
+          "drohung",
+          "feststellung"
+        ]
       }
     },
     "ATO_DEESCALATION_OFFER": {
@@ -6497,6 +6573,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_DEPRESSION_NEGATIVE_EMOTIONS": {
@@ -6590,6 +6669,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_DEPRESSION_PAST_FOCUS": {
@@ -6683,6 +6765,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_DEPRESSION_SELF_FOCUS": {
@@ -6776,6 +6861,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_DEPRESSION_SUICIDE_RISK": {
@@ -6870,6 +6958,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_DEVALUING_STATEMENT": {
@@ -7602,6 +7693,15 @@
         "trust": -0.45,
         "conflict": 0.6,
         "deesc": -0.3
+      },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       }
     },
     "ATO_DIRECT_BONDING_MESSAGE": {
@@ -7679,6 +7779,9 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_DISCLAIMER_NOT_BURDEN": {
@@ -9807,6 +9910,9 @@
         "conflict": 0.1,
         "deesc": -0.05
       },
+      "semantic_affinity": {
+        "ironie_suppress": true
+      },
       "activation": {
         "rule": "ANY 1"
       },
@@ -10815,6 +10921,15 @@
         "trust": -0.45,
         "conflict": 0.6,
         "deesc": -0.3
+      },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       }
     },
     "ATO_GENERALIZED_YOU_PATTERN": {
@@ -11192,6 +11307,15 @@
         "trust": -0.3,
         "conflict": 0.4,
         "deesc": -0.2
+      },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       },
       "activation": {
         "rule": "ANY 1"
@@ -13172,6 +13296,12 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf",
+          "feststellung"
+        ]
       }
     },
     "ATO_JEALOUSY_ENVY": {
@@ -14593,6 +14723,9 @@
         "conflict": 0.2,
         "deesc": -0.15
       },
+      "semantic_affinity": {
+        "ironie_suppress": true
+      },
       "activation": {
         "rule": "ANY 1"
       },
@@ -14674,6 +14807,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_LOVE_AFFECTION": {
@@ -14816,6 +14952,9 @@
         "conflict": -0.2,
         "deesc": 0.25
       },
+      "semantic_affinity": {
+        "ironie_suppress": true
+      },
       "activation": {
         "rule": "ANY 1"
       },
@@ -14903,6 +15042,9 @@
         "trust": 0.35,
         "conflict": -0.2,
         "deesc": 0.25
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_MINIMIZATION_LANGUAGE": {
@@ -19822,6 +19964,11 @@
         "trust": 0.2,
         "conflict": -0.15,
         "deesc": 0.2
+      },
+      "semantic_affinity": {
+        "register_exclude": [
+          "intim"
+        ]
       }
     },
     "ATO_REGULATION_VERB_POSITIVE": {
@@ -20213,6 +20360,15 @@
         "conflict": -0.3,
         "deesc": 0.4
       },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
+      },
       "metadata": {
         "label": "Reparatur fehlt nach Spike"
       }
@@ -20336,6 +20492,15 @@
         "trust": 0.35,
         "conflict": -0.3,
         "deesc": 0.4
+      },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
       },
       "metadata": {
         "label": "Reparatur-Anfrage"
@@ -22862,6 +23027,15 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "semantic_affinity": {
+        "intents": [
+          "smalltalk"
+        ],
+        "intents_exclude": [
+          "vorwurf",
+          "drohung"
+        ]
       }
     },
     "ATO_SACRED_LEXEME": {
@@ -23160,6 +23334,9 @@
         "conflict": 0.1,
         "deesc": -0.05
       },
+      "semantic_affinity": {
+        "ironie_suppress": true
+      },
       "activation": {
         "rule": "ANY 1"
       },
@@ -23430,6 +23607,12 @@
         "trust": 0.0,
         "conflict": 0.0,
         "deesc": 0.0
+      },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf",
+          "feststellung"
+        ]
       }
     },
     "ATO_SARCASM_CUES": {
@@ -23557,7 +23740,13 @@
         "atomic",
         "v33"
       ],
-      "rating": 1
+      "rating": 1,
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf",
+          "feststellung"
+        ]
+      }
     },
     "ATO_SATISFACTION_STATE": {
       "id": "ATO_SATISFACTION_STATE",
@@ -30365,6 +30554,16 @@
         "trust": -0.3,
         "conflict": 0.4,
         "deesc": -0.2
+      },
+      "semantic_affinity": {
+        "intents": [
+          "drohung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       }
     },
     "ATO_TIME_REFERENCE": {
@@ -32244,6 +32443,9 @@
         "trust": 0.2,
         "conflict": -0.15,
         "deesc": 0.2
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_TRUTH_FEEL": {
@@ -32644,6 +32846,17 @@
         "trust": 0.25,
         "conflict": -0.1,
         "deesc": 0.15
+      },
+      "semantic_affinity": {
+        "intents": [
+          "frage",
+          "rechtfertigung"
+        ],
+        "intents_exclude": [
+          "drohung",
+          "feststellung"
+        ],
+        "ironie_suppress": true
       }
     },
     "ATO_UNCERTAINTY_PHRASE": {
@@ -32789,6 +33002,17 @@
         "trust": 0.25,
         "conflict": -0.1,
         "deesc": 0.15
+      },
+      "semantic_affinity": {
+        "intents": [
+          "frage",
+          "rechtfertigung"
+        ],
+        "intents_exclude": [
+          "drohung",
+          "feststellung"
+        ],
+        "ironie_suppress": true
       },
       "activation": {
         "rule": "ANY 1"
@@ -33440,6 +33664,16 @@
         "trust": -0.2,
         "conflict": 0.4,
         "deesc": -0.3
+      },
+      "semantic_affinity": {
+        "intents": [
+          "drohung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       }
     },
     "ATO_VICTIM_LANGUAGE": {
@@ -35050,6 +35284,15 @@
         "external": "RUHE",
         "latent": "REPARIEREND"
       },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
+      },
       "metadata": {
         "label": "Aktive Reparatur"
       }
@@ -35352,6 +35595,9 @@
         "framing_type": "bindung",
         "cultural_frame": "Bowlby",
         "myth": "Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat"
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "CLU_AUTHORITY_SHIFT": {
@@ -37024,6 +37270,15 @@
         "framing_type": "kontrollnarrative",
         "cultural_frame": "Sozialpsychologie",
         "myth": "Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "feststellung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk"
+        ]
       }
     },
     "CLU_DISSONANCE_ALERT_AUDIO": {
@@ -38159,6 +38414,15 @@
       "temperature_semantics": {
         "external": "VERWIRRUNG",
         "latent": "KONTROLLE"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "feststellung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk"
+        ]
       },
       "metadata": {
         "label": "Gaslighting Sequence"
@@ -39396,6 +39660,9 @@
         "cultural_frame": "",
         "myth": "Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet"
       },
+      "semantic_affinity": {
+        "ironie_suppress": true
+      },
       "metadata": {
         "intuition": {
           "state": "provisional",
@@ -39476,6 +39743,12 @@
         "framing_type": "meta",
         "cultural_frame": "",
         "myth": "Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf",
+          "feststellung"
+        ]
       },
       "metadata": {
         "intuition": {
@@ -40201,6 +40474,9 @@
         "framing_type": "bindung",
         "cultural_frame": "Bowlby",
         "myth": "Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat"
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       },
       "metadata": {
         "intuition": {
@@ -42501,6 +42777,15 @@
         "framing_type": "kontrollnarrative",
         "cultural_frame": "Sozialpsychologie",
         "myth": "Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "feststellung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk"
+        ]
       }
     },
     "CLU_QA_RIDDLE_FORMATS": {
@@ -42789,6 +43074,15 @@
       "temperature_semantics": {
         "external": "DEESCALATION",
         "latent": "EMPATHIE"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
       },
       "metadata": {
         "label": "Repair Flow"
@@ -43448,6 +43742,9 @@
         "cultural_frame": "Bowlby",
         "myth": "Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat"
       },
+      "semantic_affinity": {
+        "ironie_suppress": true
+      },
       "activation": {
         "rule": "ALL WITHIN 2 messages"
       }
@@ -43513,6 +43810,9 @@
         "framing_type": "bindung",
         "cultural_frame": "Bowlby",
         "myth": "Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat"
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "CLU_SELF_CONTRADICTION": {
@@ -45197,6 +45497,15 @@
         "framing_type": "reparatur",
         "cultural_frame": "Gottman",
         "myth": "Kommunikation loest alles — reden heilt, schweigen zerstoert"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
       }
     },
     "CLU_TEMPORAL_IDENTITY_EXPLORATION": {
@@ -45562,6 +45871,17 @@
         "framing_type": "unsicherheit",
         "cultural_frame": "",
         "myth": "Zweifel ist Schwaeche — wer zoegert, verliert"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "frage",
+          "rechtfertigung"
+        ],
+        "intents_exclude": [
+          "drohung",
+          "feststellung"
+        ],
+        "ironie_suppress": true
       }
     },
     "CLU_VALUE_REFRAME": {
@@ -46298,6 +46618,15 @@
         "framing_type": "reparatur",
         "cultural_frame": "Gottman",
         "myth": "Kommunikation loest alles — reden heilt, schweigen zerstoert"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
       }
     },
     "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT": {
@@ -46846,6 +47175,16 @@
         "framing_type": "eskalation",
         "cultural_frame": "Gottman",
         "myth": "Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "drohung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       }
     },
     "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT": {
@@ -46977,6 +47316,16 @@
         "framing_type": "eskalation",
         "cultural_frame": "Gottman",
         "myth": "Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "drohung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       }
     },
     "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT": {
@@ -47495,6 +47844,9 @@
         "framing_type": "bindung",
         "cultural_frame": "Bowlby",
         "myth": "Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat"
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "MEMA_AVOIDANCE_PATTERN_ESCALATION": {
@@ -48861,6 +49213,15 @@
         "framing_type": "kontrollnarrative",
         "cultural_frame": "Sozialpsychologie",
         "myth": "Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "feststellung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk"
+        ]
       }
     },
     "MEMA_DRIFT_SPIRAL": {
@@ -49822,6 +50183,15 @@
         "cultural_frame": "Sozialpsychologie",
         "myth": "Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge"
       },
+      "semantic_affinity": {
+        "intents": [
+          "feststellung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk"
+        ]
+      },
       "metadata": {
         "label": "Gaslighter"
       }
@@ -50293,6 +50663,9 @@
         "framing_type": "bindung",
         "cultural_frame": "",
         "myth": "Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat"
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "MEMA_MANIPULATIVE_RELATIONSHIP_ENGINEERING_MARKER": {
@@ -50410,6 +50783,15 @@
         "framing_type": "kontrollnarrative",
         "cultural_frame": "Sozialpsychologie",
         "myth": "Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "feststellung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk"
+        ]
       }
     },
     "MEMA_MEANING_CRISIS_MARKER": {
@@ -51618,6 +52000,15 @@
         "framing_type": "kontrollnarrative",
         "cultural_frame": "Sozialpsychologie",
         "myth": "Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "feststellung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk"
+        ]
       }
     },
     "MEMA_POWER_SHARED_LEADERSHIP": {
@@ -52637,6 +53028,15 @@
         "trust": -0.45,
         "conflict": 0.6,
         "deesc": -0.3
+      },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       }
     },
     "SEM_ACTIVE_ENJOYMENT": {
@@ -54214,6 +54614,15 @@
         "trust": -0.45,
         "conflict": 0.6,
         "deesc": -0.3
+      },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       }
     },
     "SEM_BOT_OUTREACH": {
@@ -56580,6 +56989,16 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "intents": [
+          "frage",
+          "rechtfertigung"
+        ],
+        "intents_exclude": [
+          "drohung",
+          "feststellung"
+        ]
       }
     },
     "SEM_DEESCALATION": {
@@ -57145,6 +57564,15 @@
         "trust": -0.3,
         "conflict": 0.4,
         "deesc": -0.2
+      },
+      "semantic_affinity": {
+        "intents": [
+          "feststellung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk"
+        ]
       }
     },
     "SEM_DYNAMIC_KNOTS": {
@@ -58835,6 +59263,12 @@
         "trust": 0.2,
         "conflict": -0.15,
         "deesc": 0.2
+      },
+      "semantic_affinity": {
+        "intents": [
+          "vorwurf",
+          "feststellung"
+        ]
       }
     },
     "SEM_FORMAT_POLICING": {
@@ -59227,6 +59661,15 @@
         "trust": -0.5,
         "conflict": 0.6,
         "deesc": -0.35
+      },
+      "semantic_affinity": {
+        "intents": [
+          "feststellung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk"
+        ]
       }
     },
     "SEM_GASLIGHTING_ATTEMPT": {
@@ -59299,6 +59742,15 @@
         "trust": -0.5,
         "conflict": 0.6,
         "deesc": -0.35
+      },
+      "semantic_affinity": {
+        "intents": [
+          "feststellung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk"
+        ]
       },
       "activation": {
         "rule": "ANY 2"
@@ -60945,6 +61397,9 @@
         "trust": 0.35,
         "conflict": -0.2,
         "deesc": 0.25
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "SEM_LOYALTY": {
@@ -61847,6 +62302,9 @@
         "trust": 0.15,
         "conflict": 0.0,
         "deesc": 0.1
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "SEM_NEEDS_TO_WANTS_FLIP": {
@@ -62435,6 +62893,15 @@
         "trust": -0.3,
         "conflict": 0.4,
         "deesc": -0.2
+      },
+      "semantic_affinity": {
+        "intents": [
+          "feststellung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk"
+        ]
       },
       "activation": {
         "rule": "ANY 2"
@@ -63837,6 +64304,15 @@
         "conflict": -0.3,
         "deesc": 0.4
       },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
+      },
       "metadata": {
         "type": "SEM"
       }
@@ -63917,6 +64393,15 @@
         "conflict": -0.3,
         "deesc": 0.4
       },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
+      },
       "metadata": {
         "type": "SEM"
       }
@@ -63987,6 +64472,15 @@
         "trust": 0.35,
         "conflict": -0.3,
         "deesc": 0.4
+      },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
       },
       "activation": {
         "rule": "ANY 1 IN 3 messages"
@@ -64079,6 +64573,15 @@
         "trust": 0.2,
         "conflict": -0.15,
         "deesc": 0.25
+      },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
       }
     },
     "SEM_REPAIR_SEQUENCE": {
@@ -64156,6 +64659,15 @@
         "trust": 0.35,
         "conflict": -0.3,
         "deesc": 0.4
+      },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
       }
     },
     "SEM_REPETITIVE_COMPLAINT": {
@@ -67507,7 +68019,10 @@
         "base": 1.5,
         "weight": 1.2
       },
-      "compositionality": "deterministic"
+      "compositionality": "deterministic",
+      "semantic_affinity": {
+        "ironie_suppress": true
+      }
     },
     "SEM_SIMU_LOVE_SCAM_PSYCHO_DISTRACT": {
       "id": "SEM_SIMU_LOVE_SCAM_PSYCHO_DISTRACT",
@@ -67587,7 +68102,10 @@
         "base": 1.5,
         "weight": 1.2
       },
-      "compositionality": "deterministic"
+      "compositionality": "deterministic",
+      "semantic_affinity": {
+        "ironie_suppress": true
+      }
     },
     "SEM_SIMU_LOVE_SCAM_SEMANTIC": {
       "id": "SEM_SIMU_LOVE_SCAM_SEMANTIC",
@@ -67658,6 +68176,9 @@
         "trust": 0.35,
         "conflict": -0.2,
         "deesc": 0.25
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "SEM_SOCIAL_AFFILIATION": {
@@ -69051,6 +69572,15 @@
         "trust": 0.35,
         "conflict": -0.3,
         "deesc": 0.4
+      },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
       }
     },
     "SEM_TOXIC_PERSONA": {
@@ -69493,6 +70023,17 @@
         "trust": 0.25,
         "conflict": -0.1,
         "deesc": 0.15
+      },
+      "semantic_affinity": {
+        "intents": [
+          "frage",
+          "rechtfertigung"
+        ],
+        "intents_exclude": [
+          "drohung",
+          "feststellung"
+        ],
+        "ironie_suppress": true
       },
       "metadata": {
         "type": "SEM"
@@ -70109,6 +70650,16 @@
         "trust": -0.35,
         "conflict": 0.5,
         "deesc": -0.3
+      },
+      "semantic_affinity": {
+        "intents": [
+          "drohung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk",
+          "reparatur"
+        ]
       }
     },
     "SEM_VICTIM_OFFENDER_REVERSAL": {
@@ -71881,6 +72432,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_LTV": {
@@ -73072,6 +73626,16 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "intents": [
+          "frage",
+          "rechtfertigung"
+        ],
+        "intents_exclude": [
+          "drohung",
+          "feststellung"
+        ]
       }
     },
     "ATO_QUESTIONING": {
@@ -73200,6 +73764,16 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "intents": [
+          "frage",
+          "rechtfertigung"
+        ],
+        "intents_exclude": [
+          "drohung",
+          "feststellung"
+        ]
       }
     },
     "ATO_RECURSIVE_SELF_ASSERT": {
@@ -73866,6 +74440,9 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_SD_BEIGE_LEX": {
@@ -76714,6 +77291,9 @@
         "trust": 0.2,
         "conflict": -0.15,
         "deesc": 0.2
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "ATO_VOCAB_METAPHYSICAL": {
@@ -78266,6 +78846,17 @@
         "framing_type": "unsicherheit",
         "cultural_frame": "",
         "myth": "Zweifel ist Schwaeche — wer zoegert, verliert"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "frage",
+          "rechtfertigung"
+        ],
+        "intents_exclude": [
+          "drohung",
+          "feststellung"
+        ],
+        "ironie_suppress": true
       },
       "metadata": {
         "intuition": {
@@ -81138,6 +81729,15 @@
         "framing_type": "meta",
         "cultural_frame": "Systemisch",
         "myth": "Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "feststellung",
+          "vorwurf"
+        ],
+        "intents_exclude": [
+          "smalltalk"
+        ]
       }
     },
     "MEMA_PATTERN_INTERRUPT": {
@@ -82181,6 +82781,15 @@
         "framing_type": "meta",
         "cultural_frame": "Systemisch",
         "myth": "Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
       }
     },
     "MEMA_REPAIR_RECIPROCITY": {
@@ -82311,6 +82920,15 @@
         "framing_type": "meta",
         "cultural_frame": "Systemisch",
         "myth": "Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
       }
     },
     "MEMA_REPETITION_PATTERN": {
@@ -82702,6 +83320,15 @@
         "framing_type": "meta",
         "cultural_frame": "Systemisch",
         "myth": "Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich"
+      },
+      "semantic_affinity": {
+        "intents": [
+          "reparatur",
+          "bitte"
+        ],
+        "intents_exclude": [
+          "drohung"
+        ]
       }
     },
     "MEMA_SELF_TRANSCENDENCE_SIGNAL": {
@@ -84399,6 +85026,9 @@
         "framing_type": "meta",
         "cultural_frame": "Systemisch",
         "myth": "Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich"
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "MEMA_TRUST_TRAJECTORY": {
@@ -84529,6 +85159,9 @@
         "framing_type": "meta",
         "cultural_frame": "Systemisch",
         "myth": "Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich"
+      },
+      "semantic_affinity": {
+        "ironie_suppress": true
       }
     },
     "MEMA_VALIDATION_DEFICIT": {
@@ -85606,6 +86239,16 @@
         "trust": -0.1,
         "conflict": 0.1,
         "deesc": -0.05
+      },
+      "semantic_affinity": {
+        "intents": [
+          "frage",
+          "rechtfertigung"
+        ],
+        "intents_exclude": [
+          "drohung",
+          "feststellung"
+        ]
       }
     },
     "SEM_METAPHORICAL_DENSITY": {

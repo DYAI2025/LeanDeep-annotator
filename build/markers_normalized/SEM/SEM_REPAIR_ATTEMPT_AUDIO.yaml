@@ -59,5 +59,11 @@ effect_on_state:
   trust: 0.35
   conflict: -0.3
   deesc: 0.4
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung
 metadata:
   type: SEM

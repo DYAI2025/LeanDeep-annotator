@@ -8,7 +8,8 @@ frame:
   pragmatics: bonding
   narrative: affiliation
 pattern:
-- (?i)\b(ich fühl mich verbunden|du bist mir wichtig|wir sind auf einer wellenlänge)\b
+- (?i)\b(ich fühl mich verbunden|du bist mir wichtig|wir sind auf einer 
+  wellenlänge)\b
 activation:
   rule: ANY 1
 examples:
@@ -41,4 +42,8 @@ tags:
 - bonding
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
-semiotic: {peirce: symbol, signifikat: Verbundenheitssignal, framing_type: bindung, cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}
+semiotic: {peirce: symbol, signifikat: Verbundenheitssignal, framing_type: 
+    bindung, cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis,
+    Distanz ist Verrat'}
+semantic_affinity:
+  ironie_suppress: true

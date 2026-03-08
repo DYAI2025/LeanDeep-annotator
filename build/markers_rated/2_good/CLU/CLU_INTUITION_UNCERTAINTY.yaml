@@ -29,7 +29,8 @@ metadata:
   intuition:
     state: provisional
     confirm_window: 5
-    confirm_rule: AT_LEAST 1 of [SEM_UNCERTAINTY_TONING, SEM_TENTATIVE_INFERENCE] IN confirm_window
+    confirm_rule: AT_LEAST 1 of [SEM_UNCERTAINTY_TONING, 
+      SEM_TENTATIVE_INFERENCE] IN confirm_window
     multiplier_on_confirm: 1.5
     decay_window: 7
     penalize_false: 1.0
@@ -55,4 +56,13 @@ examples:
   - "Morgen Zahnarzt um 10"
   - "Hol bitte noch Milch mit"
   - "Der Zug hat 5 Minuten Verspaetung"
-semiotic: {peirce: icon, signifikat: Unsicherheit, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}
+semiotic: {peirce: icon, signifikat: Unsicherheit, framing_type: unsicherheit, 
+    cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}
+semantic_affinity:
+  intents:
+  - frage
+  - rechtfertigung
+  intents_exclude:
+  - drohung
+  - feststellung
+  ironie_suppress: true

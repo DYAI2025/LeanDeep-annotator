@@ -56,7 +56,8 @@ examples:
   - "Wir haben eine Krise überstanden und daraus gelernt."
   - "Unser Muster: erst Chaos, dann Ordnung."
   - "Wir sind an unseren Brüchen gewachsen."
-  - "Die Reparatur nach dem Streit hat uns mehr verbunden als der Streit uns getrennt hat."
+  - "Die Reparatur nach dem Streit hat uns mehr verbunden als der Streit uns getrennt
+    hat."
   - "Wir haben den Zyklus durchlaufen und sind gestärkt daraus hervorgegangen."
   - "Ruptur ist Teil des Prozesses – Repair auch."
   - "Wir haben gelernt, den Bruch als Chance zu sehen."
@@ -102,3 +103,9 @@ semiotic:
   framing_type: meta
   cultural_frame: Systemisch
   myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung

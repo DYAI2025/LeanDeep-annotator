@@ -26,7 +26,8 @@ metadata:
   intuition:
     state: provisional
     confirm_window: 5
-    confirm_rule: AT_LEAST 1 of [SEM_SARCASM_IRRITATION, SEM_MOCKING_TONE] IN confirm_window
+    confirm_rule: AT_LEAST 1 of [SEM_SARCASM_IRRITATION, SEM_MOCKING_TONE] IN 
+      confirm_window
     multiplier_on_confirm: 1.7
     decay_window: 7
   telemetry_keys:
@@ -51,4 +52,10 @@ examples:
   - Danke dir, das war wirklich hilfreich
   - Ich freu mich dass das so gut geklappt hat
   - Das hast du echt gut gemacht, Respekt
-semiotic: {peirce: icon, signifikat: Cluster-Intuition, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}
+semiotic: {peirce: icon, signifikat: Cluster-Intuition, framing_type: meta, 
+    cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen 
+    sich unausweichlich}
+semantic_affinity:
+  intents:
+  - vorwurf
+  - feststellung

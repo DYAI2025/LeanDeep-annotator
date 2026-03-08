@@ -21,7 +21,8 @@ scoring:
 examples:
   positive_de:
   - "Nein nein, ist schon gut. Mach nur. Mir ist das ja egal. (Ist es nicht.)"
-  - "Ich bin nicht sauer. – Du klingst aber sauer. – Ich hab gesagt, ich bin nicht sauer."
+  - "Ich bin nicht sauer. – Du klingst aber sauer. – Ich hab gesagt, ich bin nicht
+    sauer."
   - "Ach, mach ruhig, was du willst. Du machst es ja sowieso immer."
   - "Klar, ich mach das schon. Wie immer. Kein Problem."
   - "Interessant, dass du Zeit für deine Freunde hast, aber nicht für mich."
@@ -102,3 +103,9 @@ semiotic:
   framing_type: meta
   cultural_frame: Systemisch
   myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
+semantic_affinity:
+  intents:
+  - feststellung
+  - vorwurf
+  intents_exclude:
+  - smalltalk

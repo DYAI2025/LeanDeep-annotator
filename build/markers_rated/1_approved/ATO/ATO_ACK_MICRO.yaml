@@ -6,7 +6,8 @@ languages: [de]
 meaning: "Ein-Wort- oder Ein-Satz-Bestätigungen ohne neuen Inhalt"
 patterns:
 - type: regex
-  value: "^(ok|passt|notiert|erledigt|done|verstanden|genau|klares ja|bestätigt)\\.?$"
+  value: "^(ok|passt|notiert|erledigt|done|verstanden|genau|klares ja|bestätigt)\\\
+    .?$"
 threshold: 1
 semiotic:
   mode: symbolic
@@ -84,3 +85,9 @@ examples:
   - "Feiern wir?"
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semantic_affinity:
+  intents:
+  - smalltalk
+  intents_exclude:
+  - vorwurf
+  - drohung

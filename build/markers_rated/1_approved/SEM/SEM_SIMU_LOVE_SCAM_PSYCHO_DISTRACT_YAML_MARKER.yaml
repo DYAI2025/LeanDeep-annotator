@@ -86,3 +86,5 @@ tags:
 - psy_distract
 - trauma_bond
 compositionality: deterministic
+semantic_affinity:
+  ironie_suppress: true

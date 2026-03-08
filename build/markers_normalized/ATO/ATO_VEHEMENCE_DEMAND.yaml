@@ -43,3 +43,10 @@ effect_on_state:
   trust: -0.2
   conflict: 0.4
   deesc: -0.3
+semantic_affinity:
+  intents:
+  - drohung
+  - vorwurf
+  intents_exclude:
+  - smalltalk
+  - reparatur

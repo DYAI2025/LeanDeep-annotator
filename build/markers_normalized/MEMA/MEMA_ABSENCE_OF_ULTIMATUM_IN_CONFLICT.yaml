@@ -116,3 +116,10 @@ semiotic:
   framing_type: eskalation
   cultural_frame: Gottman
   myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'
+semantic_affinity:
+  intents:
+  - drohung
+  - vorwurf
+  intents_exclude:
+  - smalltalk
+  - reparatur

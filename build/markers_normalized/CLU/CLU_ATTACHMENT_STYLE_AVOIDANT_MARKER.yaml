@@ -110,3 +110,5 @@ semiotic:
   framing_type: bindung
   cultural_frame: Bowlby
   myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
+semantic_affinity:
+  ironie_suppress: true

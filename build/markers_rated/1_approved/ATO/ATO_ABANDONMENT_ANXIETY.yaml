@@ -2,7 +2,8 @@ id: ATO_ABANDONMENT_ANXIETY
 schema_version: LD-3.4
 lang: en
 category: ATOMIC
-description: Atomic pattern for fear of abandonment in borderline personality disorder
+description: Atomic pattern for fear of abandonment in borderline personality 
+  disorder
 frame:
   signal:
   - fear of abandonment
@@ -10,7 +11,9 @@ frame:
   pragmatics: lexical indicator
   narrative: surface
 pattern:
-- (?i)\b(don't leave me|abandon|alone|please stay|you'll leave|reject|desert|forsake|cling|desperate|need you|can't be alone|abandonment|deserted|forsaken)\b
+- (?i)\b(don't leave me|abandon|alone|please stay|you'll 
+  leave|reject|desert|forsake|cling|desperate|need you|can't be 
+  alone|abandonment|deserted|forsaken)\b
 examples:
   positive:
   - "Don't leave me, I can't be alone right now."
@@ -63,4 +66,8 @@ tags:
 - v3.4
 vad_estimate: {valence: -0.6, arousal: 0.8, dominance: 0.0}
 effect_on_state: {trust: -0.1, conflict: 0.1, deesc: -0.05}
-semiotic: {peirce: icon, signifikat: Verlassenheitsangst, framing_type: ueberflutung, cultural_frame: Bowlby, myth: Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet}
+semiotic: {peirce: icon, signifikat: Verlassenheitsangst, framing_type: 
+    ueberflutung, cultural_frame: Bowlby, myth: Emotionen sind unkontrollierbar 
+    — Ueberwaeltigung ist Authentizitaet}
+semantic_affinity:
+  ironie_suppress: true

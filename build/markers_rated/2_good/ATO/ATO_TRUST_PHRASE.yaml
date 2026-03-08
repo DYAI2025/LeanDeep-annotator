@@ -7,7 +7,8 @@ frame:
   pragmatics: "Bindung"
   narrative: "surface"
 pattern:
-  tokens: ["verlass dich auf mich", "ich vertrau dir", "du kannst mir glauben", "ich halte Wort", "ehrlich"]
+  tokens: ["verlass dich auf mich", "ich vertrau dir", "du kannst mir glauben", "ich
+      halte Wort", "ehrlich"]
 examples:
   positive:
   - Verlass dich auf mich.
@@ -88,4 +89,8 @@ examples:
   - Ich esse heute Abend alleine.
 vad_estimate: {valence: 0.3, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.2, conflict: -0.15, deesc: 0.2}
-semiotic: {peirce: symbol, signifikat: Vertrauen, framing_type: bindung, cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}
+semiotic: {peirce: symbol, signifikat: Vertrauen, framing_type: bindung, 
+    cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz
+    ist Verrat'}
+semantic_affinity:
+  ironie_suppress: true

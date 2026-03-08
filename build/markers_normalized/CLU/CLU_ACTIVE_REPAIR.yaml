@@ -129,5 +129,11 @@ semiotic:
 temperature_semantics:
   external: RUHE
   latent: REPARIEREND
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung
 metadata:
   label: Aktive Reparatur

@@ -28,7 +28,8 @@ metadata:
   intuition:
     state: provisional
     confirm_window: 5
-    confirm_rule: AT_LEAST 1 of [SEM_SADNESS_EXPRESSIONS, SEM_GUILT_ADMISSION] IN confirm_window
+    confirm_rule: AT_LEAST 1 of [SEM_SADNESS_EXPRESSIONS, SEM_GUILT_ADMISSION] 
+      IN confirm_window
     multiplier_on_confirm: 2.0
     decay_window: 8
     penalize_false: 1.0
@@ -54,4 +55,8 @@ examples:
   - Das Essen war mega lecker, danke dafür
   - Ich bin gerade echt entspannt und happy
   - Alles läuft grad richtig gut bei mir
-semiotic: {peirce: icon, signifikat: Trauer/Verlust, framing_type: ueberflutung, cultural_frame: '', myth: Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet}
+semiotic: {peirce: icon, signifikat: Trauer/Verlust, framing_type: ueberflutung, 
+    cultural_frame: '', myth: Emotionen sind unkontrollierbar — Ueberwaeltigung 
+    ist Authentizitaet}
+semantic_affinity:
+  ironie_suppress: true

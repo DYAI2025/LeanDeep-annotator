@@ -36,4 +36,12 @@ examples:
   - Hast du die E-Mail gelesen?
   - Ich muss noch tanken.
   - Die Besprechung ist im Konferenzraum.
-semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: reparatur, cultural_frame: Gottman, myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'}
+semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: 
+    reparatur, cultural_frame: Gottman, myth: 'Kommunikation loest alles — reden heilt,
+    schweigen zerstoert'}
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung

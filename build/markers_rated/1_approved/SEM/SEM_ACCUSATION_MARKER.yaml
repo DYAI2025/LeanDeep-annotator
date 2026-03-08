@@ -36,9 +36,11 @@ examples:
   - Du hast nie ein Wort der Entschuldigung über die Lippen gebracht!
   - Glaubst du tatsächlich, dass ich dir das einfach so verzeihe?
   - Du redest die ganze Zeit, aber deine Taten zeigen mir, dass es dir egal ist!
-  - Du bist immer so schnell mit dem Fingerzeig, aber nie bereit, selbst Verantwortung zu übernehmen.
+  - Du bist immer so schnell mit dem Fingerzeig, aber nie bereit, selbst 
+    Verantwortung zu übernehmen.
   - Du redest viel, aber am Ende bleibst du immer stumm, wenn es darauf ankommt.
-  - Du hast mich wie immer im Stich gelassen, und jetzt soll ich dir noch glauben?
+  - Du hast mich wie immer im Stich gelassen, und jetzt soll ich dir noch 
+    glauben?
   - Wann hast du das letzte Mal wirklich zu deinem Wort gestanden?
   - Du nutzt mich aus und merkst es nicht mal!
   - Jedes Mal dasselbe Theater mit dir, ich bin es so leid!
@@ -107,4 +109,12 @@ effect_on_state:
   trust: -0.45
   conflict: 0.6
   deesc: -0.3
-semiotic: {peirce: index, signifikat: Schuldzuweisung/Anklage, framing_type: eskalation, cultural_frame: Gottman, myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'}
+semiotic: {peirce: index, signifikat: Schuldzuweisung/Anklage, framing_type: 
+    eskalation, cultural_frame: Gottman, myth: 'Konflikt ist unvermeidbar — wer kaempft,
+    hat zumindest Recht'}
+semantic_affinity:
+  intents:
+  - vorwurf
+  intents_exclude:
+  - smalltalk
+  - reparatur

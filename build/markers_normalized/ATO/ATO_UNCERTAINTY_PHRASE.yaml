@@ -121,5 +121,13 @@ effect_on_state:
   trust: 0.25
   conflict: -0.1
   deesc: 0.15
+semantic_affinity:
+  intents:
+  - frage
+  - rechtfertigung
+  intents_exclude:
+  - drohung
+  - feststellung
+  ironie_suppress: true
 activation:
   rule: "ANY 1"
