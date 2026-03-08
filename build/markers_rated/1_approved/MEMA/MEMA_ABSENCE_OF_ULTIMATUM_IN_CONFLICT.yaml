@@ -322,4 +322,13 @@ examples:
   - "Tschuess, bis bald."
   - "Guten Morgen!"
 tags: [mema, omission, deeskalation, positiv]
-semiotic: {peirce: index, signifikat: Konfliktdynamik, framing_type: eskalation, cultural_frame: Gottman, myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'}
+semiotic: {peirce: index, signifikat: Konfliktdynamik, framing_type: eskalation, 
+    cultural_frame: Gottman, myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest
+    Recht'}
+semantic_affinity:
+  intents:
+  - drohung
+  - vorwurf
+  intents_exclude:
+  - smalltalk
+  - reparatur

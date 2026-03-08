@@ -27,7 +27,8 @@ examples:
   - "Ich schaffe es nicht mehr, dir zu vertrauen – zu oft enttäuscht worden."
   - "Du versprichst Besserung und dann passiert wieder dasselbe."
   - "Ich hab dir geglaubt, als du gesagt hast, es wird anders. Wurde es nicht."
-  - "Vertrauen aufbauen dauert Jahre, du zerstörst es in Sekunden. Und das wiederholt sich."
+  - "Vertrauen aufbauen dauert Jahre, du zerstörst es in Sekunden. Und das wiederholt
+    sich."
   - "Ich geb dir immer wieder eine Chance und du nutzt sie nie."
   - "Der Vertrauensbruch ist kein Einzelfall – es ist ein Muster."
   - "Erst Treue schwören, dann hintergehen. Immer wieder."
@@ -52,7 +53,8 @@ examples:
   - "Der Kreislauf: ich vergebe, du vergisst, es passiert wieder."
   - "Wir sind gefangen in einem Zyklus aus Hoffnung und Enttäuschung."
   - "Du verrätst mich und wunderst dich, dass ich dir nicht mehr glaube."
-  - "Ich hab dir mein Herz anvertraut und du hast es fallen lassen. Nicht zum ersten Mal."
+  - "Ich hab dir mein Herz anvertraut und du hast es fallen lassen. Nicht zum ersten
+    Mal."
   - "Wie ein gebranntes Kind: ich kann nicht mehr vertrauen."
   - "Der Betrug von letztem Jahr, der von diesem Jahr – ein Muster."
   - "Ich wollte so gerne glauben, dass es sich ändert. Hat es nicht."
@@ -102,3 +104,5 @@ semiotic:
   framing_type: meta
   cultural_frame: Systemisch
   myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
+semantic_affinity:
+  ironie_suppress: true

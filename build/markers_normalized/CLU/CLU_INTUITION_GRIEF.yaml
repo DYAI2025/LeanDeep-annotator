@@ -52,6 +52,8 @@ semiotic:
   framing_type: ueberflutung
   cultural_frame: ''
   myth: Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet
+semantic_affinity:
+  ironie_suppress: true
 metadata:
   intuition:
     state: provisional

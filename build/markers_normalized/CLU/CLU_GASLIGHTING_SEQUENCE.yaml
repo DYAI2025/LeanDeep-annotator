@@ -63,5 +63,11 @@ semiotic:
 temperature_semantics:
   external: VERWIRRUNG
   latent: KONTROLLE
+semantic_affinity:
+  intents:
+  - feststellung
+  - vorwurf
+  intents_exclude:
+  - smalltalk
 metadata:
   label: Gaslighting Sequence

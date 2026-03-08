@@ -23,7 +23,8 @@ metadata:
   intuition:
     state: provisional
     confirm_window: 5
-    confirm_rule: AT_LEAST 1 of [SEM_TRUST_SIGNALING, SEM_DISTRUST_ACCUSATION] IN confirm_window
+    confirm_rule: AT_LEAST 1 of [SEM_TRUST_SIGNALING, SEM_DISTRUST_ACCUSATION] 
+      IN confirm_window
     multiplier_on_confirm: 1.6
     decay_window: 7
   telemetry_keys:
@@ -108,4 +109,8 @@ examples:
   - Vergiss nicht die Milch mitzubringen
   - Der Parkplatz war voll, hab woanders geparkt
   - Ich schick dir den Link gleich per Mail
-semiotic: {peirce: symbol, signifikat: Vertrauen, framing_type: bindung, cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}
+semiotic: {peirce: symbol, signifikat: Vertrauen, framing_type: bindung, 
+    cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz
+    ist Verrat'}
+semantic_affinity:
+  ironie_suppress: true

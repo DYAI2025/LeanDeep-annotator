@@ -53,6 +53,14 @@ semiotic:
   framing_type: unsicherheit
   cultural_frame: ''
   myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
+semantic_affinity:
+  intents:
+  - frage
+  - rechtfertigung
+  intents_exclude:
+  - drohung
+  - feststellung
+  ironie_suppress: true
 metadata:
   intuition:
     state: provisional

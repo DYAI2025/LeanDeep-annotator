@@ -6,7 +6,8 @@ languages: [de]
 meaning: "Anfragen nach Reparatur oder Klärung eines Konflikts"
 patterns:
 - type: regex
-  value: "(lass uns das klären|können wir reden|bitte erklär|lass uns reparieren|wie können wir das lösen)"
+  value: "(lass uns das klären|können wir reden|bitte erklär|lass uns reparieren|wie
+    können wir das lösen)"
 threshold: 1
 semiotic:
   mode: symbolic
@@ -100,3 +101,9 @@ examples:
   negative: []
 vad_estimate: {valence: 0.3, arousal: 0.2, dominance: 0.35}
 effect_on_state: {trust: 0.35, conflict: -0.3, deesc: 0.4}
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung

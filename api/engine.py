@@ -103,6 +103,7 @@ class MarkerDef:
     semiotic: dict | None = None            # {peirce, signifikat, cultural_frame, framing_type, ...}
     absence_sets: dict | None = None        # MEMA: sets of markers that must be absent
     gating_conflict: dict | None = None     # MEMA: requirement for active conflict
+    semantic_affinity: dict | None = None    # Semantic gate: intent/ironie/tension/register/emotion filters
 
 
 @dataclass
@@ -364,6 +365,72 @@ class MarkerEngine:
 
         return gated, suppressed, surfaced
 
+    # -----------------------------------------------------------------------
+    # Semantic Gate (Layer 0 integration)
+    # -----------------------------------------------------------------------
+
+    def _apply_semantic_gate(
+        self,
+        detections: list[Detection],
+        profile: "SemanticProfile | None",
+    ) -> list[Detection]:
+        """Filter ATO detections against a SemanticProfile.
+
+        Reduces confidence or suppresses markers whose semantic_affinity
+        conflicts with the profiled text. Markers without affinity pass through.
+        """
+        if profile is None or profile.source == "none":
+            return detections
+
+        gated: list[Detection] = []
+
+        for det in detections:
+            mdef = self.markers.get(det.marker_id)
+            affinity = mdef.semantic_affinity if mdef else None
+
+            if not affinity:
+                gated.append(det)
+                continue
+
+            score = 1.0
+
+            # Intent exclusion
+            if profile.intent in (affinity.get("intents_exclude") or []):
+                score *= 0.2
+            elif affinity.get("intents") and profile.intent not in affinity["intents"]:
+                score *= 0.5
+
+            # Ironie suppression
+            if affinity.get("ironie_suppress") and profile.ironie and profile.ironie_confidence > 0.7:
+                score *= 0.1
+
+            # Tension minimum
+            tension_min = affinity.get("tension_min")
+            if tension_min and profile.tension < tension_min:
+                score *= 0.4
+
+            # Register exclusion
+            if profile.register in (affinity.get("register_exclude") or []):
+                score *= 0.3
+
+            # Emotion mismatch (soft penalty)
+            if affinity.get("emotions") and profile.emotion_primary not in affinity["emotions"]:
+                score *= 0.6
+
+            if score >= 0.3:
+                det = Detection(
+                    marker_id=det.marker_id,
+                    layer=det.layer,
+                    confidence=round(det.confidence * score, 4),
+                    description=det.description,
+                    matches=det.matches,
+                    message_indices=det.message_indices,
+                    vad=det.vad,
+                )
+                gated.append(det)
+
+        return gated
+
     def _parse_marker(self, marker_id: str, data: dict) -> MarkerDef:
         """Parse a marker from registry data, compiling regex patterns."""
         patterns = []
@@ -399,6 +466,7 @@ class MarkerEngine:
             semiotic=data.get("semiotic"),
             absence_sets=data.get("absence_sets"),
             gating_conflict=data.get("gating_conflict"),
+            semantic_affinity=data.get("semantic_affinity"),
         )
 
     def _compile_pattern(self, raw: str, flags: list[str]) -> re.Pattern | None:
@@ -1591,7 +1659,8 @@ class MarkerEngine:
         if not self._loaded:
             self.load()
 
-        results = list(self.markers.values())
+        valid_layers = {"ATO", "SEM", "CLU", "MEMA"}
+        results = [m for m in self.markers.values() if m.layer in valid_layers]
 
         if layer:
             results = [m for m in results if m.layer == layer]

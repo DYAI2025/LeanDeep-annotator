@@ -57,5 +57,11 @@ effect_on_state:
   trust: -0.5
   conflict: 0.6
   deesc: -0.35
+semantic_affinity:
+  intents:
+  - feststellung
+  - vorwurf
+  intents_exclude:
+  - smalltalk
 activation:
   rule: "ANY 2"

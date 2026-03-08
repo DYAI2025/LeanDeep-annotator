@@ -30,6 +30,7 @@ class AnalyzeRequest(BaseModel):
     language: Language = Language.DE
     layers: list[Layer] = Field(default=[Layer.ATO, Layer.SEM], description="Layers to detect")
     threshold: float = Field(default=0.5, ge=0.0, le=1.0, description="Confidence threshold")
+    semantic_mode: str = Field(default="auto", description="Semantic profiling: auto|llm|embedding|off")
 
 
 class Message(BaseModel):
@@ -46,6 +47,7 @@ class ConversationRequest(BaseModel):
     )
     threshold: float = Field(default=0.5, ge=0.0, le=1.0)
     persona_token: str | None = Field(None, description="Persona token for persistent profiling (Pro tier)")
+    semantic_mode: str = Field(default="auto", description="Semantic profiling: auto|llm|embedding|off")
 
 
 class MarkerQuery(BaseModel):
@@ -87,6 +89,22 @@ class AnalyzeMeta(BaseModel):
     markers_detected: int
     layers_scanned: list[str]
     shadow_mode: bool = False
+    analysis_mode: str = "pattern"
+
+
+class SemanticProfileResponse(BaseModel):
+    message_index: int
+    intent: str
+    register: str  # noqa: register shadows BaseModel attr (harmless)
+    emotion_primary: str
+    emotion_secondary: str | None = None
+    ironie: bool = False
+    ironie_confidence: float = 0.0
+    selbst_fremd: str = "unpersoenlich"
+    beziehungsdynamik: str = "neutral"
+    pre_context: str | None = None
+    tension: float = 0.0
+    source: str = "none"
 
 
 class ConversationMarker(BaseModel):

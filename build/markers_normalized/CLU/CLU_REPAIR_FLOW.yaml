@@ -118,5 +118,11 @@ semiotic:
 temperature_semantics:
   external: DEESCALATION
   latent: EMPATHIE
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung
 metadata:
   label: Repair Flow

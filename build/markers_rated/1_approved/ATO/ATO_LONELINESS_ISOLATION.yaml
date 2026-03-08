@@ -91,4 +91,8 @@ metadata:
   purpose: "Basic emotional pattern detection for loneliness and isolation"
 vad_estimate: {valence: -0.55, arousal: 0.1, dominance: 0.1}
 effect_on_state: {trust: -0.25, conflict: 0.2, deesc: -0.15}
-semiotic: {peirce: index, signifikat: Isolation/Rueckzug, framing_type: vermeidung, cultural_frame: '', myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'}
+semiotic: {peirce: index, signifikat: Isolation/Rueckzug, framing_type: 
+    vermeidung, cultural_frame: '', myth: 'Rueckzug schuetzt — wer sich entzieht,
+    vermeidet Schlimmeres'}
+semantic_affinity:
+  ironie_suppress: true

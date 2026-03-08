@@ -1770,11 +1770,12 @@ async function loadAllMarkers() {
     let offset = 0;
     allMarkers = [];
     while (true) {
-      const resp = await fetch(`${API}/v1/markers?limit=500&offset=${offset}`);
+      const pageSize = 50;
+      const resp = await fetch(`${API}/v1/markers?limit=${pageSize}&offset=${offset}`);
       const data = await resp.json();
       allMarkers.push(...data.markers);
       if (allMarkers.length >= data.total) break;
-      offset += 500;
+      offset += pageSize;
     }
 
     // Build map

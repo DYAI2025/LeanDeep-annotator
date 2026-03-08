@@ -2,7 +2,8 @@ id: SEM_REPAIR_GESTURE
 version: "5.1"
 layer: SEM
 lang: de
-description: "Reparaturgeste — Deeskalation oder Entschuldigung als Versuch, die Beziehungsspannung zu reduzieren."
+description: "Reparaturgeste — Deeskalation oder Entschuldigung als Versuch, die Beziehungsspannung
+  zu reduzieren."
 frame:
   signal: ["deescalation", "apology", "softening"]
   concept: "relationship_repair"
@@ -42,4 +43,12 @@ examples:
   - "Ich habe nichts falsch gemacht."
   - "Das musst du jetzt aushalten."
   - "Reg dich nicht so auf."
-semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: reparatur, cultural_frame: Gottman, myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'}
+semiotic: {peirce: index, signifikat: Beziehungsreparatur, framing_type: 
+    reparatur, cultural_frame: Gottman, myth: 'Kommunikation loest alles — reden heilt,
+    schweigen zerstoert'}
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung

@@ -30,7 +30,8 @@ examples:
   - "Es könnte so sein, vermutlich sogar, aber sicher bin ich mir nicht."
   - "Bin mir total unsicher. Einerseits ja, andererseits nein. Keine Ahnung."
   - "Möglicherweise hast du Recht. Aber eventuell auch nicht. Ich schwanke."
-  - "Sehr geehrter Herr Doktor, ich bin mir unsicher ob die Diagnose stimmt. Vielleicht ist es etwas anderes."
+  - "Sehr geehrter Herr Doktor, ich bin mir unsicher ob die Diagnose stimmt. Vielleicht
+    ist es etwas anderes."
   - "Kann sein, dass das funktioniert. Vielleicht aber auch nicht. Unsicher."
   - "Ich neige zu ja, aber bin nicht überzeugt. Könnte auch falsch sein."
   - "Vermutlich ist das der richtige Weg, obwohl ich mir nicht sicher bin."
@@ -65,7 +66,8 @@ examples:
   - "Könnte klappen, könnte scheitern. Wer weiß das schon. Unsicher."
   - "Es gibt Argumente dafür, es gibt Argumente dagegen. Ich bin ratlos."
   - "weiß echt nicht. alles ist irgendwie vielleicht und nichts ist klar"
-  - "Möglicherweise habe ich Recht, möglicherweise nicht. Ich bin mir in nichts sicher gerade."
+  - "Möglicherweise habe ich Recht, möglicherweise nicht. Ich bin mir in nichts sicher
+    gerade."
   negative:
   - "Ich bin mir sicher, das ist die richtige Entscheidung."
   - "Das ist eindeutig so, kein Zweifel."
@@ -92,4 +94,13 @@ examples:
   - "Eventuell brauchen wir noch Milch."
   - "Wahrscheinlich kommt der Bus in zehn Minuten."
   - "Möglicherweise hat das Restaurant heute geschlossen."
-semiotic: {peirce: icon, signifikat: Unsicherheit, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}
+semiotic: {peirce: icon, signifikat: Unsicherheit, framing_type: unsicherheit, 
+    cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}
+semantic_affinity:
+  intents:
+  - frage
+  - rechtfertigung
+  intents_exclude:
+  - drohung
+  - feststellung
+  ironie_suppress: true

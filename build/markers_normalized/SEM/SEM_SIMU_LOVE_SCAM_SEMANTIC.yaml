@@ -55,3 +55,5 @@ effect_on_state:
   trust: 0.35
   conflict: -0.2
   deesc: 0.25
+semantic_affinity:
+  ironie_suppress: true

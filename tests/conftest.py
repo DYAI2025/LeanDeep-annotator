@@ -33,9 +33,13 @@ def api_cfg() -> ApiConfig:
         threshold=_env_float("LEANDEEP_THRESHOLD"),
     )
 
-@pytest.fixture(scope="session", autouse=True)
+@pytest.fixture(scope="session")
 def ensure_api_reachable(api_cfg: ApiConfig):
-    """Skip all E2E tests cleanly if the API is not reachable."""
+    """Skip E2E tests cleanly if the API is not reachable.
+
+    Tests that need a running API should use the ``@pytest.mark.usefixtures("ensure_api_reachable")``
+    marker or request this fixture directly.
+    """
     health_url = api_cfg.base_url.rstrip("/") + "/v1/health"
     try:
         with httpx.Client() as client:

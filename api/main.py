@@ -19,7 +19,7 @@ import time
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import Depends, FastAPI, File, HTTPException, Query, UploadFile
+from fastapi import Depends, FastAPI, File, HTTPException, Query, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
@@ -51,6 +51,7 @@ from .models import (
     PersonaSessionSummary,
     PredictionReservoir,
     PredictionResponse,
+    SemanticProfileResponse,
     SemioticEntry,
     SpeakerBaselines,
     SpeakerDelta,
@@ -62,11 +63,21 @@ from .models import (
 )
 from .interpret import aggregate_framings, build_semiotic_map, dominant_framing, synthesize_narrative
 from .personas import PersonaStore
+from .providers import build_provider_chain
+from .semantic import SemanticProfiler, TextUnit
 
 _start_time = time.time()
 
 
 persona_store = PersonaStore()
+
+_semantic_profiler = SemanticProfiler(
+    providers=build_provider_chain(
+        provider_name=settings.semantic_provider,
+        api_key=settings.semantic_api_key,
+        model_name=settings.semantic_model,
+    )
+)
 
 
 @asynccontextmanager
@@ -107,12 +118,30 @@ async def root():
 
 
 # ---------------------------------------------------------------------------
+# Semantic profiler resolution (BYOK support)
+# ---------------------------------------------------------------------------
+
+def _resolve_profiler(request: Request) -> SemanticProfiler:
+    """Return a BYOK profiler if headers are present, otherwise the default."""
+    byok_provider = request.headers.get("x-leandeep-provider")
+    byok_key = request.headers.get("x-leandeep-provider-key")
+    byok_model = request.headers.get("x-leandeep-provider-model")
+
+    if byok_provider and byok_key:
+        return SemanticProfiler(
+            providers=build_provider_chain(byok_provider, byok_key, byok_model)
+        )
+    return _semantic_profiler
+
+
+# ---------------------------------------------------------------------------
 # POST /v1/analyze — Single text analysis
 # ---------------------------------------------------------------------------
 
 @app.post("/v1/analyze", response_model=AnalyzeResponse)
 async def analyze_text(
     req: AnalyzeRequest,
+    request: Request,
     api_key: str = Depends(verify_api_key),
 ):
     """
@@ -123,7 +152,23 @@ async def analyze_text(
     CLU/MEMA require conversation context (use /v1/analyze/conversation).
     """
     layers = [l.value for l in req.layers]
+
+    # Semantic profiling (Layer 0)
+    analysis_mode = "pattern"
+    semantic_profile = None
+    if req.semantic_mode != "off":
+        profiler = _resolve_profiler(request)
+        units = TextUnit.from_text(req.text)
+        profiles = await profiler.profile(units, language=req.language.value)
+        if profiles and profiles[0].source != "none":
+            analysis_mode = "semantic"
+            semantic_profile = profiles[0]  # single text: one merged profile
+
     result = engine.analyze_text(req.text, layers=layers, threshold=req.threshold)
+
+    # Apply semantic gate if profile available
+    if semantic_profile is not None:
+        result["detections"] = engine._apply_semantic_gate(result["detections"], semantic_profile)
 
     markers = [
         DetectedMarker(
@@ -153,6 +198,7 @@ async def analyze_text(
             markers_detected=len(markers),
             layers_scanned=layers,
             shadow_mode=result.get("shadow_mode", False),
+            analysis_mode=analysis_mode,
         ),
     )
 
@@ -164,6 +210,7 @@ async def analyze_text(
 @app.post("/v1/analyze/conversation", response_model=ConversationResponse)
 async def analyze_conversation(
     req: ConversationRequest,
+    request: Request,
     api_key: str = Depends(verify_api_key),
 ):
     """
@@ -175,6 +222,16 @@ async def analyze_conversation(
     """
     messages = [{"role": m.role, "text": m.text} for m in req.messages]
     layers = [l.value for l in req.layers]
+
+    # Semantic profiling (Layer 0)
+    analysis_mode = "pattern"
+    if req.semantic_mode != "off":
+        profiler = _resolve_profiler(request)
+        units = TextUnit.from_messages(messages)
+        profiles = await profiler.profile(units, language=req.language.value)
+        if profiles and profiles[0].source != "none":
+            analysis_mode = "semantic"
+
     result = await engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
 
     markers = [
@@ -214,6 +271,7 @@ async def analyze_conversation(
             markers_detected=len(markers),
             layers_scanned=layers,
             shadow_mode=result.get("shadow_mode", False),
+            analysis_mode=analysis_mode,
         ),
     )
 
@@ -549,7 +607,7 @@ async def list_markers(
             multiplier=m.multiplier if m.multiplier != 1.0 else None,
             composed_of=m.composed_of,
             scoring=m.scoring,
-            activation=m.activation,
+            activation=m.activation if isinstance(m.activation, dict) else None,
             window=m.window,
         )
         for m in results

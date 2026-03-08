@@ -116,3 +116,5 @@ semiotic:
   framing_type: meta
   cultural_frame: Systemisch
   myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
+semantic_affinity:
+  ironie_suppress: true

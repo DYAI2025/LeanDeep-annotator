@@ -97,4 +97,8 @@ examples:
   - "Ich brauche dich, das fällt mir schwer zu sagen aber es stimmt"
 tags:
 - attachment
-semiotic: {peirce: symbol, signifikat: Bindungsmuster, framing_type: bindung, cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}
+semiotic: {peirce: symbol, signifikat: Bindungsmuster, framing_type: bindung, 
+    cultural_frame: Bowlby, myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz
+    ist Verrat'}
+semantic_affinity:
+  ironie_suppress: true

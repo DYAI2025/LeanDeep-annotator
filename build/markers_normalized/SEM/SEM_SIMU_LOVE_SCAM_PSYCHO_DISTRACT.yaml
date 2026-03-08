@@ -68,3 +68,5 @@ scoring:
   base: 1.5
   weight: 1.2
 compositionality: deterministic
+semantic_affinity:
+  ironie_suppress: true
