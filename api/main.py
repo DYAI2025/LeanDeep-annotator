@@ -155,14 +155,20 @@ async def analyze_text(
 
     # Semantic profiling (Layer 0)
     analysis_mode = "pattern"
+    semantic_profile = None
     if req.semantic_mode != "off":
         profiler = _resolve_profiler(request)
         units = TextUnit.from_text(req.text)
         profiles = await profiler.profile(units, language=req.language.value)
         if profiles and profiles[0].source != "none":
             analysis_mode = "semantic"
+            semantic_profile = profiles[0]  # single text: one merged profile
 
     result = engine.analyze_text(req.text, layers=layers, threshold=req.threshold)
+
+    # Apply semantic gate if profile available
+    if semantic_profile is not None:
+        result["detections"] = engine._apply_semantic_gate(result["detections"], semantic_profile)
 
     markers = [
         DetectedMarker(

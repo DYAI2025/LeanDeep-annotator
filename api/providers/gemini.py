@@ -1,4 +1,4 @@
-"""Gemini semantic provider."""
+"""Gemini semantic provider (uses google-genai SDK)."""
 
 from __future__ import annotations
 
@@ -14,24 +14,21 @@ logger = logging.getLogger("leandeep.semantic.gemini")
 class GeminiSemanticProvider:
     """Google Gemini provider for semantic profiling."""
 
-    def __init__(self, api_key: str | None, model_name: str = "gemini-2.0-flash"):
+    def __init__(self, api_key: str | None, model_name: str = "gemini-1.5-flash-8b"):
         self._enabled = False
-        self._model = None
+        self._client = None
+        self._model_name = model_name
+        self._api_key = api_key
 
         if api_key:
             try:
-                import google.generativeai as genai
-                genai.configure(api_key=api_key)
-                self._model = genai.GenerativeModel(
-                    model_name,
-                    system_instruction=SYSTEM_PROMPT,
-                )
+                from google import genai  # noqa: F401 — verify import works
                 self._enabled = True
             except Exception as e:
                 logger.warning(f"Gemini init failed: {e}")
 
     def is_available(self) -> bool:
-        return self._enabled and self._model is not None
+        return self._enabled and bool(self._api_key)
 
     async def profile(
         self,
@@ -41,14 +38,27 @@ class GeminiSemanticProvider:
         if not self.is_available():
             return []
 
-        prompt = self._build_prompt(units, language)
+        try:
+            from google import genai
+            from google.genai import types
 
-        response = await self._model.generate_content_async(
-            prompt,
-            generation_config={"response_mime_type": "application/json"},
-        )
+            client = genai.Client(api_key=self._api_key)
+            prompt = self._build_prompt(units, language)
 
-        return self._parse_response(response.text, units)
+            response = await client.aio.models.generate_content(
+                model=self._model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    system_instruction=SYSTEM_PROMPT,
+                    response_mime_type="application/json",
+                    temperature=0.1,
+                ),
+            )
+
+            return self._parse_response(response.text, units)
+        except Exception as e:
+            logger.warning(f"Gemini profile failed: {e}")
+            return []
 
     def _build_prompt(self, units: list[TextUnit], language: str) -> str:
         units_text = [(u.index, u.text) for u in units]
