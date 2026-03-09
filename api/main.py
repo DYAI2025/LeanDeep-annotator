@@ -592,6 +592,7 @@ async def list_markers(
         offset=offset,
     )
 
+    valid_layers = {e.value for e in Layer}
     markers = [
         MarkerDetail(
             id=m.id,
@@ -611,6 +612,7 @@ async def list_markers(
             window=m.window,
         )
         for m in results
+        if m.layer in valid_layers
     ]
 
     return MarkerListResponse(total=total, offset=offset, limit=limit, markers=markers)
@@ -630,9 +632,12 @@ async def get_marker(
     if not m:
         raise HTTPException(status_code=404, detail=f"Marker '{marker_id}' not found")
 
+    valid_layers = {e.value for e in Layer}
+    layer_val = m.layer if m.layer in valid_layers else "ATO"
+
     return MarkerDetail(
         id=m.id,
-        layer=Layer(m.layer),
+        layer=Layer(layer_val),
         lang=m.lang,
         description=m.description,
         frame=m.frame,
