@@ -1,5 +1,6 @@
 """Tests for VAD congruence gate and shadow buffer in MarkerEngine."""
 
+import asyncio
 import sys
 
 sys.path.insert(0, ".")
@@ -37,7 +38,7 @@ def test_absolutizer_gated_in_negative_context():
     eng = MarkerEngine()
     eng.load()
     messages = [{"text": "Du hörst mir nie zu.", "role": "A"}]
-    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3, deduplicate=False))
     ato_ids = [d.marker_id for d in result["detections"] if d.layer == "ATO"]
     assert "ATO_ABSOLUTIZER" in ato_ids
 
@@ -48,11 +49,9 @@ def test_neutral_atos_gated_out_in_emotional_context():
 
     eng = MarkerEngine()
     eng.load()
-    # In angry context, neutral markers like TIME_REFERENCE should be suppressed
     messages = [{"text": "Du hörst mir nie zu!", "role": "A"}]
-    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3, deduplicate=False))
     ato_ids = [d.marker_id for d in result["detections"] if d.layer == "ATO"]
-    # The key test: the gate is active and produces some ATOs
     assert len(ato_ids) > 0, "Gate should not suppress everything"
 
 
@@ -68,10 +67,8 @@ def test_love_context_passes_love_markers():
             "role": "A",
         }
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3, deduplicate=False))
     ato_ids = [d.marker_id for d in result["detections"] if d.layer == "ATO"]
-    # Should have some detections (may or may not include love-specific markers
-    # depending on what patterns exist in the registry)
     assert isinstance(ato_ids, list)
 
 
@@ -82,11 +79,10 @@ def test_shadow_buffer_surfaces_in_matching_context():
     eng = MarkerEngine()
     eng.load()
     messages = [
-        {"text": "Ich bin einfach nur müde.", "role": "A"},  # neutral/sad
-        {"text": "Ich bin so traurig und erschöpft.", "role": "A"},  # clearly sad
+        {"text": "Ich bin einfach nur müde.", "role": "A"},
+        {"text": "Ich bin so traurig und erschöpft.", "role": "A"},
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
-    # The gate should process both messages and potentially surface shadow ATOs
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3, deduplicate=False))
     assert "detections" in result
     assert "message_vad" in result
     assert len(result["message_vad"]) == 2
@@ -99,8 +95,7 @@ def test_neutral_message_no_gate():
     eng = MarkerEngine()
     eng.load()
     messages = [{"text": "Ok.", "role": "A"}]
-    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
-    # Should still work normally with minimal detections
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3, deduplicate=False))
     assert "detections" in result
 
 
@@ -117,9 +112,8 @@ def test_gate_reduces_ato_count():
         },
         {"text": "Das stimmt nicht, ich bin immer für dich da.", "role": "B"},
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3, deduplicate=False))
     ato_count = sum(1 for d in result["detections"] if d.layer == "ATO")
-    # Should be reasonably filtered (not zero, not too many)
     assert ato_count > 0, "Gate should not suppress everything"
     assert ato_count < 30, "Gate should reduce noise"
 
@@ -135,7 +129,7 @@ def test_conversation_still_returns_all_fields():
         {"text": "Es tut mir leid.", "role": "B"},
         {"text": "Lass uns reden.", "role": "A"},
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3, deduplicate=False)
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3, deduplicate=False))
     assert "message_vad" in result
     assert "ued_metrics" in result
     assert "state_indices" in result
@@ -165,7 +159,6 @@ def test_apply_vad_gate_neutral_passthrough():
         matches=[],
         vad={"valence": -0.5, "arousal": 0.8, "dominance": 0.3},
     )
-    # Neutral message VAD -> should pass everything
     neutral_vad = {"valence": 0.0, "arousal": 0.05, "dominance": 0.0}
     gated, suppressed, surfaced = eng._apply_vad_gate([det1], neutral_vad)
     assert len(gated) == 1

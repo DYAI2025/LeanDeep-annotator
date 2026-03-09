@@ -34,7 +34,7 @@ def test_full_flow_semantic_off():
 def test_full_flow_semantic_auto_graceful():
     """Auto mode should not crash even without LLM key."""
     r = httpx.post(f"{BASE}/v1/analyze", json={
-        "text": "Ich bin so wuetend auf dich!",
+        "text": "Ich bin so wütend auf dich!",
         "semantic_mode": "auto",
     })
     assert r.status_code == 200
