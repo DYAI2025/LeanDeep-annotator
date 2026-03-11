@@ -27,15 +27,16 @@
 
 ## Critical (blocks correct analysis)
 
-### BUG-019: 15 tests fail — analyze_conversation became async
+### ~~BUG-019: 15 tests fail — analyze_conversation became async~~ — FIXED (P0-1)
+**Fixed:** 2026-03-09
 **Layer:** Test infrastructure
 **Severity:** Critical
-**Impact:** 15/112 tests fail with `TypeError: argument of type 'coroutine' is not iterable`. Tests call `engine.analyze_conversation()` synchronously but it's now `async def`.
-**Affected files:** `tests/test_vad_gate.py` (7), `tests/test_engine_vad.py` (3), `tests/test_state_indices.py` (3), `tests/test_quantum_collapse.py` (1), `tests/test_semantic_e2e.py` (1)
+**Impact:** Previously 15/112 tests failed with `TypeError: argument of type 'coroutine' is not iterable` because tests called `engine.analyze_conversation()` synchronously after it became `async def`. After updating the tests to use `asyncio.run(engine.analyze_conversation(...))`, all 112 tests now pass.
+**Affected files (historical):** `tests/test_vad_gate.py` (7), `tests/test_engine_vad.py` (3), `tests/test_state_indices.py` (3), `tests/test_quantum_collapse.py` (1), `tests/test_semantic_e2e.py` (1)
 
-**Root Cause:** `analyze_conversation` in `api/engine.py:1226` was changed to `async def` (likely during semantic layer integration) but 15 tests still call it synchronously.
+**Root Cause (historical):** `analyze_conversation` in `api/engine.py:1226` was changed to `async def` (likely during semantic layer integration) but 15 tests still called it synchronously.
 
-**Fix:** Wrap calls in `asyncio.run()` or use `pytest-asyncio` with `@pytest.mark.asyncio` decorator.
+**Fix (implemented):** Wrap test calls in `asyncio.run(...)` so they await `engine.analyze_conversation()`. (Alternatively, tests could use `pytest-asyncio` with `@pytest.mark.asyncio`.)
 
 ---
 
