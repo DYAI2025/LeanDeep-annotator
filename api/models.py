@@ -17,6 +17,12 @@ class Layer(str, Enum):
     MEMA = "MEMA"
 
 
+class InterpretationMode(str, Enum):
+    CLINICAL = "Clinical"
+    NARRATIVE = "Narrative"
+    EXPLORATIVE = "Explorative"
+
+
 class Language(str, Enum):
     DE = "de"
     EN = "en"
@@ -48,6 +54,22 @@ class ConversationRequest(BaseModel):
     threshold: float = Field(default=0.5, ge=0.0, le=1.0)
     persona_token: str | None = Field(None, description="Persona token for persistent profiling (Pro tier)")
     semantic_mode: str = Field(default="auto", description="Semantic profiling: auto|llm|embedding|off")
+
+
+class NarrativeRequest(BaseModel):
+    messages: list[Message] = Field(..., min_length=1, max_length=2000)
+    language: Language = Language.DE
+    layers: list[Layer] = Field(default=[Layer.ATO, Layer.SEM, Layer.CLU, Layer.MEMA])
+    threshold: float = Field(default=0.5, ge=0.0, le=1.0)
+    semantic_mode: str = Field(default="auto")
+    interpretation_mode: InterpretationMode = Field(
+        default=InterpretationMode.NARRATIVE,
+        description="Interpretation framing: Clinical | Narrative | Explorative"
+    )
+    include_initial_semantics: bool = Field(
+        default=True,
+        description="Run pre-analysis semantic space definition"
+    )
 
 
 class MarkerQuery(BaseModel):
@@ -366,3 +388,67 @@ class PersonaSessionSummary(BaseModel):
     new_episodes: list[Episode] = []
     state_snapshot: dict[str, float] = {}
     prediction_available: bool = False
+
+
+# --- Narrative Analysis Models ---
+
+class NarrativeActor(BaseModel):
+    role: str
+    apparent_position: str = ""
+    register: str = ""  # noqa: register shadows BaseModel attr (harmless)
+    claim_only: bool = False
+
+
+class NarrativeRelationship(BaseModel):
+    actors: list[str] = []
+    dynamic: str = ""
+    evidence_tier: str = "A"
+    supporting_marker_ids: list[str] = []
+
+
+class NarrativeBeliefSystem(BaseModel):
+    label: str
+    description: str = ""
+    evidence_tier: str = "B"
+    claim_of_speaker: bool = False
+
+
+class HumanReviewFlag(BaseModel):
+    marker_id: str
+    reason: str  # "mis-triggered" | "context-incompatible" | "cultural-ambiguity"
+    context_note: str = ""
+
+
+class InitialSemanticsReport(BaseModel):
+    narrative_domain: str
+    discourse_type: str
+    actors: list[NarrativeActor] = []
+    spatiotemporal_context: str = "unclear"
+    cultural_frame: str = "uncertain"
+    active_belief_systems: list[str] = []
+    tension_axis: str = ""
+    semantic_readiness_score: float = Field(0.0, ge=0.0, le=1.0)
+    pre_markers_expected: list[str] = []
+    uncertainty_notes: list[str] = []
+
+
+class NarrativeReport(BaseModel):
+    mode: InterpretationMode
+    scenario: str
+    actors: list[NarrativeActor] = []
+    timeline: str = "not_inferable"
+    relationships: list[NarrativeRelationship] = []
+    belief_systems: list[NarrativeBeliefSystem] = []
+    marker_evidence_summary: dict[str, str] = {}
+    interpretation: str
+    uncertainty_flags: list[str] = []
+    human_review_flags: list[HumanReviewFlag] = []
+    bias_check_summary: str
+    evidence_tier_used: str = "A+B"
+
+
+class NarrativeResponse(BaseModel):
+    markers: list[ConversationMarker]
+    initial_semantics: InitialSemanticsReport | None = None
+    narrative_report: NarrativeReport | None = None
+    meta: AnalyzeMeta
