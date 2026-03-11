@@ -1,3 +1,4 @@
+import asyncio
 import sys
 sys.path.insert(0, ".")
 
@@ -10,7 +11,7 @@ def test_state_indices_from_conversation():
         {"text": "Das stimmt nicht, ich tue mein Bestes.", "speaker": "B"},
         {"text": "Lass uns in Ruhe darüber reden.", "speaker": "A"},
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3))
     assert "state_indices" in result
     si = result["state_indices"]
     assert "trust" in si and "conflict" in si and "deesc" in si
@@ -28,7 +29,7 @@ def test_state_indices_values_bounded():
         {"text": "Ich hasse das!", "speaker": "B"},
         {"text": "Ich auch!", "speaker": "A"},
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3))
     si = result["state_indices"]
     assert -1.0 <= si["trust"] <= 1.0
     assert -1.0 <= si["conflict"] <= 1.0
@@ -43,7 +44,7 @@ def test_two_message_conversation_no_ued():
         {"text": "Hallo.", "speaker": "A"},
         {"text": "Hallo.", "speaker": "B"},
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3))
     assert result["ued_metrics"] is None
     assert "message_vad" in result
     assert len(result["message_vad"]) == 2

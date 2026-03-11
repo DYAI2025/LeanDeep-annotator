@@ -41,11 +41,19 @@ from .models import (
     Episode,
     FramingHypothesis,
     HealthResponse,
+    HumanReviewFlag,
+    InitialSemanticsReport,
     InterpretFindings,
     InterpretResponse,
     Layer,
     MarkerDetail,
     MarkerListResponse,
+    NarrativeActor,
+    NarrativeBeliefSystem,
+    NarrativeRelationship,
+    NarrativeReport,
+    NarrativeRequest,
+    NarrativeResponse,
     PatternMatch,
     PersonaCreateResponse,
     PersonaSessionSummary,
@@ -60,6 +68,13 @@ from .models import (
     TemporalPattern,
     UEDMetrics,
     VADPoint,
+)
+from .narrative import (
+    InitialSemanticsGenerator,
+    NarrativeReportGenerator,
+    InterpretationMode as NarrativeMode,
+    initial_semantics_generator,
+    narrative_report_generator,
 )
 from .interpret import aggregate_framings, build_semiotic_map, dominant_framing, synthesize_narrative
 from .personas import PersonaStore
@@ -476,6 +491,145 @@ async def analyze_interpret(
             markers_detected=len(detections),
             layers_scanned=layers,
             shadow_mode=result.get("shadow_mode", False),
+        ),
+    )
+
+
+# ---------------------------------------------------------------------------
+# POST /v1/analyze/narrative — Narrative analysis with 3 interpretation modes
+# ---------------------------------------------------------------------------
+
+@app.post("/v1/analyze/narrative", response_model=NarrativeResponse)
+async def analyze_narrative(
+    req: NarrativeRequest,
+    request: Request,
+    api_key: str = Depends(verify_api_key),
+):
+    """
+    Two-stage LLM narrative analysis.
+
+    Stage 1 (pre-analysis): Generates an "Initial Semantics" layer that defines
+    the narrative-semantic space: actors, discourse type, tension axes, belief
+    systems, cultural frame, and expected marker families.
+
+    Stage 2 (post-analysis): After marker detection, produces an objective
+    semantic report with scenario, actors, timeline, relationships, and
+    belief/myth systems — framed according to the requested interpretation mode:
+
+    - **Clinical**: Pattern-analytic language, psychological patterns as analytic
+      lenses only (never diagnoses), formal and evidence-bound.
+    - **Narrative**: Story-framed, accessible language, neutral narrator perspective.
+    - **Explorative**: Multiple readings with confidence labels, explicit assumption
+      flagging, UNCERTAIN markers for cultural inferences.
+
+    All modes strictly separate evidence tiers A (direct) / B (hypothesis) / C (speculative),
+    flag mis-triggered markers for human review, and include a bias audit.
+
+    Requires LEANDEEP_GOOGLE_API_KEY. Without it, returns only marker detections.
+    """
+    import time as _time
+    t0 = _time.perf_counter()
+
+    messages = [{"role": m.role, "text": m.text} for m in req.messages]
+    layers = [l.value for l in req.layers]
+    mode = NarrativeMode(req.interpretation_mode.value)
+
+    # Stage 1: Initial Semantics (pre-analysis)
+    initial_semantics_raw = None
+    if req.include_initial_semantics:
+        initial_semantics_raw = await initial_semantics_generator.generate(
+            messages, language=req.language.value
+        )
+
+    # Analysis mode is currently always pattern-based for conversation analysis.
+    # Semantic profiling/gating is not applied here to avoid unnecessary cost
+    # and misleading metadata.
+    analysis_mode = "pattern"
+
+    # Marker detection
+    result = await engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
+    detections = result["detections"]
+
+    markers = [
+        ConversationMarker(
+            id=d.marker_id,
+            layer=Layer(d.layer),
+            confidence=d.confidence,
+            description=d.description,
+            message_indices=d.message_indices,
+            family=d.family,
+            multiplier=d.multiplier,
+            matches=[
+                PatternMatch(
+                    pattern=m.pattern,
+                    span=(m.start, m.end),
+                    matched_text=m.matched_text,
+                )
+                for m in d.matches
+            ],
+        )
+        for d in detections
+    ]
+
+    # Stage 2: Narrative Report (post-analysis)
+    narrative_raw = await narrative_report_generator.generate(
+        messages=messages,
+        detections=detections,
+        initial_semantics=initial_semantics_raw,
+        mode=mode,
+        language=req.language.value,
+    )
+
+    # Map internal models -> API response models
+    def _map_initial_semantics(obj) -> InitialSemanticsReport | None:
+        if obj is None:
+            return None
+        return InitialSemanticsReport(
+            narrative_domain=obj.narrative_domain,
+            discourse_type=obj.discourse_type,
+            actors=[NarrativeActor(**a.model_dump()) for a in obj.actors],
+            spatiotemporal_context=obj.spatiotemporal_context,
+            cultural_frame=obj.cultural_frame,
+            active_belief_systems=obj.active_belief_systems,
+            tension_axis=obj.tension_axis,
+            semantic_readiness_score=obj.semantic_readiness_score,
+            pre_markers_expected=obj.pre_markers_expected,
+            uncertainty_notes=obj.uncertainty_notes,
+        )
+
+    def _map_narrative_report(obj) -> NarrativeReport | None:
+        if obj is None:
+            return None
+        from .models import InterpretationMode as ModelMode
+        return NarrativeReport(
+            mode=ModelMode(obj.mode.value),
+            scenario=obj.scenario,
+            actors=[NarrativeActor(**a.model_dump()) for a in obj.actors],
+            timeline=obj.timeline,
+            relationships=[NarrativeRelationship(**r.model_dump()) for r in obj.relationships],
+            belief_systems=[NarrativeBeliefSystem(**b.model_dump()) for b in obj.belief_systems],
+            marker_evidence_summary=obj.marker_evidence_summary,
+            interpretation=obj.interpretation,
+            uncertainty_flags=obj.uncertainty_flags,
+            human_review_flags=[HumanReviewFlag(**f.model_dump()) for f in obj.human_review_flags],
+            bias_check_summary=obj.bias_check_summary,
+            evidence_tier_used=obj.evidence_tier_used,
+        )
+
+    elapsed_ms = (_time.perf_counter() - t0) * 1000
+
+    return NarrativeResponse(
+        markers=sorted(markers, key=lambda m: (-m.confidence, m.id)),
+        initial_semantics=_map_initial_semantics(initial_semantics_raw),
+        narrative_report=_map_narrative_report(narrative_raw),
+        meta=AnalyzeMeta(
+            processing_ms=elapsed_ms,
+            text_length=sum(len(m.text) for m in req.messages),
+            markers_detected=len(markers),
+            layers_scanned=layers,
+            shadow_mode=result.get("shadow_mode", False),
+            analysis_mode=analysis_mode,
+            version=settings.version,
         ),
     )
 
