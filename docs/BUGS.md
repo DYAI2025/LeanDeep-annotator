@@ -156,7 +156,7 @@
 ### BUG-021: Gemini free tier quota exhausted
 **Layer:** Semantic (Layer 0)
 **Severity:** Medium
-**Impact:** Semantic profiling via Gemini returns empty (graceful degradation to baseline). The API key `AIzaSyD-...` has `limit: 0` for all models.
+**Impact:** Semantic profiling via Gemini returns empty (graceful degradation to baseline). The API key `AIza...REDACTED` has `limit: 0` for all models.
 **Root Cause:** Google AI Studio free tier quota consumed or billing not enabled.
 **Fix:** Enable billing on Google AI Studio, or use different provider (OpenAI/Anthropic).
 
