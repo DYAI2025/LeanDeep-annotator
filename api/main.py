@@ -541,14 +541,10 @@ async def analyze_narrative(
             messages, language=req.language.value
         )
 
-    # Semantic profiling (Layer 0)
+    # Analysis mode is currently always pattern-based for conversation analysis.
+    # Semantic profiling/gating is not applied here to avoid unnecessary cost
+    # and misleading metadata.
     analysis_mode = "pattern"
-    if req.semantic_mode != "off":
-        profiler = _resolve_profiler(request)
-        units = TextUnit.from_messages(messages)
-        profiles = await profiler.profile(units, language=req.language.value)
-        if profiles and profiles[0].source != "none":
-            analysis_mode = "semantic"
 
     # Marker detection
     result = await engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
