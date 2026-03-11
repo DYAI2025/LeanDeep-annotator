@@ -633,6 +633,7 @@ async def analyze_narrative(
             layers_scanned=layers,
             shadow_mode=result.get("shadow_mode", False),
             analysis_mode=analysis_mode,
+            version=settings.version,
         ),
     )
 
