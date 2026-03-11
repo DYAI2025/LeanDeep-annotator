@@ -40,7 +40,7 @@ Layer 0: Semantic Profiler (LLM/Embedding) → ATO → SEM → CLU → MEMA → 
 | Persona System | Done | CRUD + warm-start + episodes + predictions |
 | Prosody | Stabil | 6 Emotionen, 17 Features, 20K+ Trainingsdaten |
 | Gold-Corpus | 99K msgs | 1543 Chunks, DE-fokussiert |
-| Tests | **97 pass, 15 fail** | 15 failures = async-broken tests (BUG-019) |
+| Tests | **112 pass, 0 fail** | All tests passing; async BUG-019 resolved via asyncio.run(...) |
 | Deployment | Railway | reasonable-transformation-production-b0ce.up.railway.app |
 | OpenAPI Spec | Done | openapi.yaml (13 endpoints, 36 schemas) |
 | MCP Server | Done | 5 tools, FastMCP 3.x |
