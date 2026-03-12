@@ -660,7 +660,7 @@ async def analyze_transcript(
 
     # If format is unknown and Gemini is available, try AI diarization
     if format_detected == "unknown_alternating" and initial_semantics_generator.enabled:
-        messages_raw = await diarize_with_ai(req.text, initial_semantics_generator._model)
+        messages_raw = await diarize_with_ai(req.text, initial_semantics_generator.get_model())
         format_detected = "ai_diarized"
 
     messages = [Message(role=m["role"], text=m["text"]) for m in messages_raw]
