@@ -700,9 +700,25 @@
     const text = document.getElementById('input-narrative').value.trim();
     if (!text) return;
 
-    const messages = parseConversation(text);
-    if (messages.length === 0) return;
+    let messages = parseConversation(text);
 
+    // If local parsing failed (e.g. WhatsApp/timestamped/unstructured), fall back to transcript analysis API
+    if (!messages || messages.length === 0) {
+      try {
+        const transcriptResult = await detectSpeakers(text);
+        if (transcriptResult && Array.isArray(transcriptResult.messages)) {
+          messages = transcriptResult.messages;
+        }
+      } catch (e) {
+        // If transcript analysis fails, we'll surface an error below
+      }
+    }
+
+    if (!messages || messages.length === 0) {
+      $narrativeContent.style.display = '';
+      $narrativeContent.innerHTML = `<div class="dynamics-placeholder" style="color:var(--accent);">Unable to parse conversation. Try running "AI Detect Speakers" first or check the transcript format.</div>`;
+      return;
+    }
     const layers = getSelectedLayers();
     const threshold = $threshold.value;
     const mode = document.getElementById('narrative-mode').value;
