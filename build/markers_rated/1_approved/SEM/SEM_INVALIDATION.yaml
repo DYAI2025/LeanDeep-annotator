@@ -12,7 +12,7 @@ frame:
   pragmatics: undermine partner's emotional reality by reframing their experience as invalid
   narrative: invalidation
 composed_of:
-- ATO_EMOTIONAL_INVALIDATION
+- ATO_EXPERIENCE_NEGATION
 - ATO_FEELING_DOWNPLAY_WORD
 activation:
   rule: ANY 1

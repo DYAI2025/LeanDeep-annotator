@@ -3,8 +3,8 @@
   "version": "5.1",
   "total": 891,
   "layers": {
-    "ATO": 419,
-    "SEM": 240,
+    "ATO": 422,
+    "SEM": 244,
     "CLU": 121,
     "MEMA": 104
   },
@@ -5361,11 +5361,11 @@
         "deesc": 0.0
       }
     },
-    "ACT_DAILY_ROUTINE_REPORT": {
-      "id": "ACT_DAILY_ROUTINE_REPORT",
+    "ATO_DAILY_ROUTINE_REPORT": {
+      "id": "ATO_DAILY_ROUTINE_REPORT",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "ATO",
       "lang": "de",
       "description": "Bericht über aktuelle oder jüngste Alltagsaktivitäten.",
       "frame": {
@@ -5378,7 +5378,20 @@
         "pragmatics": "Teilen von Alltagsinformationen",
         "narrative": "statusbericht"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(war|bin|hab|habe)\\s+(gerade|grad|kurz|eben)\\s+(beim|einkaufen|spazieren|kochen|sport|training|joggen|laufen)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(hab|habe)\\s+(gerade|grad|eben)\\s+(eingekauft|gekocht|aufgeräumt|trainiert|gebracht|gemacht)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(war\\s+(heute|gerade|grad|eben)\\s+(beim|im|an|im\\s+laden))\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "War gerade einkaufen.",
@@ -5403,16 +5416,12 @@
         "routine"
       ],
       "rating": 1,
-      "composed_of": [
-        "ATO_ACTIVITY_VERB",
-        "ATO_ROUTINE_CONTEXT"
-      ],
       "scoring": {
         "base": 1.4,
         "weight": 1.1
       },
       "activation": {
-        "rule": "ANY 2 IN 3 messages"
+        "rule": "ANY 1 IN 3 messages"
       }
     },
     "ATO_DECISION_ANNOUNCEMENT": {
@@ -10699,11 +10708,11 @@
         "deesc": 0.0
       }
     },
-    "ACT_FRIENDSHIP_MAINTENANCE": {
-      "id": "ACT_FRIENDSHIP_MAINTENANCE",
+    "ATO_FRIENDSHIP_MAINTENANCE": {
+      "id": "ATO_FRIENDSHIP_MAINTENANCE",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "ATO",
       "lang": "de",
       "description": "",
       "frame": {
@@ -16722,11 +16731,11 @@
         "deesc": 0.0
       }
     },
-    "ACT_PERSONAL_INTEREST_SHARE": {
-      "id": "ACT_PERSONAL_INTEREST_SHARE",
+    "ATO_PERSONAL_INTEREST_SHARE": {
+      "id": "ATO_PERSONAL_INTEREST_SHARE",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "ATO",
       "lang": "de",
       "description": "Teilen einer persönlichen Freizeitaktivität oder eines Hobbys.",
       "frame": {
@@ -16740,7 +16749,20 @@
         "pragmatics": "Selbstoffenbarung zur Beziehungspflege",
         "narrative": "freizeit"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(ich\\s+)?(spiele?\\w*|lese?|bastle?\\w*|fahre?\\w*|koche?\\w*|zeichne?\\w*|singe?\\w*|nähe?\\w*)\\s+(gern|gerne|lieber|manchmal|oft)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(mein\\s+(hobby|lieblingsbeschäftigung|sport|interesse)\\s+(ist|sind|war))\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\bich\\s+(spiele|lese|bastle|koche|zeichne|male|fahre|singe)\\s+(gern|gerne|oft|manchmal|lieber)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "Ich spiele gern Gitarre.",
@@ -16765,16 +16787,12 @@
         "hobby"
       ],
       "rating": 1,
-      "composed_of": [
-        "ATO_ACTIVITY_VERB",
-        "ATO_HOBBY_OBJECT"
-      ],
       "scoring": {
         "base": 1.4,
         "weight": 1.1
       },
       "activation": {
-        "rule": "ANY 2 IN 3 messages"
+        "rule": "ANY 1 IN 3 messages"
       }
     },
     "ATO_PERSONAL_SECRET": {
@@ -38380,7 +38398,7 @@
       "rating": 1,
       "composed_of": {
         "require": [
-          "SEM_REALITY_DISTORTION_FIELD",
+          "SEM_GASLIGHTING_ATTEMPT",
           "CLU_COVERT_RESPONSIBILITY_INVERSION"
         ]
       },
@@ -42285,11 +42303,6 @@
         "screening"
       ],
       "rating": 1,
-      "composed_of": [
-        "SEM_<FAMILIE/ASPEKT>_A",
-        "SEM_<FAMILIE/ASPEKT>_B",
-        "SEM_<FAMILIE/ASPEKT>_C"
-      ],
       "activation": {
         "rule": "AT_LEAST 2 IN 6 messages"
       },
@@ -43041,7 +43054,7 @@
       "composed_of": {
         "require": [
           "ATO_REPAIR_REQUEST",
-          "CLU_EMOTIONAL_SUPPORT",
+          "CLU_SUPPORT_EXCHANGE",
           "SEM_CLOSURE_PROTOCOL"
         ]
       },
@@ -43726,7 +43739,7 @@
       "rating": 1,
       "composed_of": [
         "ATO_SECRECY",
-        "ATO_DELETE_TRACES"
+        "ATO_PERSONAL_SECRET_MARKER"
       ],
       "scoring": {
         "base": 1.4,
@@ -43746,7 +43759,7 @@
         "ironie_suppress": true
       },
       "activation": {
-        "rule": "ALL WITHIN 2 messages"
+        "rule": "ANY 1 IN 4 messages"
       }
     },
     "CLU_SECRET_BONDING_MARKER": {
@@ -56758,11 +56771,11 @@
         "deesc": 0.0
       }
     },
-    "EMO_CRAVING": {
-      "id": "EMO_CRAVING",
+    "SEM_CRAVING": {
+      "id": "SEM_CRAVING",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "SEM",
       "lang": "de",
       "description": "Ausdruck von Appetit oder Lust auf etwas.",
       "frame": {
@@ -56775,7 +56788,24 @@
         "pragmatics": "Selbstoffenbarung eines Bedürfnisses",
         "narrative": "sehnsucht"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(hab|habe|hätte|hätt)\\s+(lust|bock)\\s+auf\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\bkönnte?\\s+(gerade|jetzt)\\s+\\w+\\s*(gut\\s+)?(gebrauchen|haben|brauchen)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\brauch\\w*\\s+(jetzt|unbedingt|dringend)\\s+\\w+\\b"
+        },
+        {
+          "type": "keyword",
+          "value": "Sehnsucht nach"
+        }
+      ],
       "examples": {
         "positive": [
           "Ich hab so Lust auf Schokolade.",
@@ -56801,15 +56831,14 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_DESIRE_VERB",
-        "ATO_OBJECT_OF_DESIRE"
+        "ATO_SUBSTANCE_CRAVING"
       ],
       "scoring": {
         "base": 1.4,
         "weight": 1.1
       },
       "activation": {
-        "rule": "ANY 2 IN 3 messages"
+        "rule": "ANY 1 IN 3 messages"
       }
     },
     "SEM_CRITICAL_INQUIRY": {
@@ -60508,7 +60537,7 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_EMOTIONAL_INVALIDATION",
+        "ATO_EXPERIENCE_NEGATION",
         "ATO_FEELING_DOWNPLAY_WORD"
       ],
       "activation": {
@@ -60705,11 +60734,11 @@
         "rule": "ANY 2 IN 2 messages"
       }
     },
-    "EMO_LIGHT_ADMISSION": {
-      "id": "EMO_LIGHT_ADMISSION",
+    "SEM_LIGHT_ADMISSION": {
+      "id": "SEM_LIGHT_ADMISSION",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "SEM",
       "lang": "de",
       "description": "Leichtes Eingeständnis eines Versäumnisses oder Fehlers.",
       "frame": {
@@ -60722,7 +60751,24 @@
         "pragmatics": "Beziehungswahrung durch Offenheit",
         "narrative": "sanfte_entschuldigung"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(hab|habe|hatte)\\s+(das|es)?\\s*vergessen\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(mein\\s+(fehler|schuld|mist|versehen)|das\\s+war\\s+mein\\s+fehler)\\b"
+        },
+        {
+          "type": "keyword",
+          "value": "ups"
+        },
+        {
+          "type": "keyword",
+          "value": "huch"
+        }
+      ],
       "examples": {
         "positive": [
           "Ups, ganz vergessen dir zu schreiben.",
@@ -60748,22 +60794,21 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_ADMISSION_CUE",
-        "ATO_FAULT_REFERENCE"
+        "ATO_APOLOGY"
       ],
       "scoring": {
         "base": 1.4,
         "weight": 1.1
       },
       "activation": {
-        "rule": "ANY 2 IN 3 messages"
+        "rule": "ANY 1 IN 3 messages"
       }
     },
-    "EMO_LIGHT_HUMOR_CRITIQUE": {
-      "id": "EMO_LIGHT_HUMOR_CRITIQUE",
+    "SEM_LIGHT_HUMOR_CRITIQUE": {
+      "id": "SEM_LIGHT_HUMOR_CRITIQUE",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "SEM",
       "lang": "de",
       "description": "Humorvolle, sanfte Form der Kritik ohne verletzende Absicht.",
       "frame": {
@@ -60802,15 +60847,15 @@
       ],
       "rating": 1,
       "composed_of": [
-        "ATO_CRITIQUE_ELEMENT",
-        "ATO_HUMOR_SIGNAL"
+        "ATO_HUMOR_LIGHT",
+        "ATO_CRITICISM_ATTACK_MARKER"
       ],
       "scoring": {
         "base": 1.4,
         "weight": 1.1
       },
       "activation": {
-        "rule": "ANY 2 IN 3 messages"
+        "rule": "ANY 1 IN 3 messages"
       }
     },
     "SEM_LIMINAL_FIELD_PRESENCE": {
@@ -63063,11 +63108,11 @@
         "deesc": 0.0
       }
     },
-    "EMO_PLAYFUL_TITLE_ASSIGNMENT": {
-      "id": "EMO_PLAYFUL_TITLE_ASSIGNMENT",
+    "SEM_PLAYFUL_TITLE_ASSIGNMENT": {
+      "id": "SEM_PLAYFUL_TITLE_ASSIGNMENT",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "SEM",
       "lang": "de",
       "description": "Spielerische Vergabe eines Titels oder Spitznamens.",
       "frame": {
@@ -63081,7 +63126,16 @@
         "pragmatics": "Auflockerung und positive Aufladung",
         "narrative": "spielerisch"
       },
-      "patterns": [],
+      "patterns": [
+        {
+          "type": "regex",
+          "value": "(?i)\\b(meister|meisterin|chefkoch|chefin|chef|held|heldin|königin|könig|experte|expertin|guru|profi)\\s+(der|des|im|beim|in|von|des\\s+tages|des\\s+abends)\\b"
+        },
+        {
+          "type": "regex",
+          "value": "(?i)\\b(herr|frau)\\s+(präsident|minister|direktor|meister|chef)\\b"
+        }
+      ],
       "examples": {
         "positive": [
           "Na, Herr Präsident, wie läuft der Tag?",
@@ -63106,16 +63160,12 @@
         "title"
       ],
       "rating": 1,
-      "composed_of": [
-        "ATO_TITLE_WORD",
-        "ATO_PLAYFUL_TONE"
-      ],
       "scoring": {
         "base": 1.4,
         "weight": 1.1
       },
       "activation": {
-        "rule": "ANY 2 IN 3 messages"
+        "rule": "ANY 1 IN 3 messages"
       }
     },
     "SEM_PLEASANT_PULS": {
@@ -81591,7 +81641,7 @@
         "ATO_DEPRESSION_SELF_FOCUS",
         "ATO_DEPRESSION_PAST_FOCUS",
         "ATO_DEPRESSION_SUICIDE_RISK",
-        "CLU_DEPRESSIVE_TRIAD"
+        "CLU_NEGATIVE_COGNITIVE_TRIAD"
       ],
       "semiotic": {
         "peirce": "icon",
