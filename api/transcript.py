@@ -159,7 +159,6 @@ def _collapse_continuations(messages: list[dict]) -> list[dict]:
 
 async def _call_model(model, prompt: str) -> str:
     """Call the Gemini model asynchronously (handles both sync and async generate_content)."""
-    import asyncio
     import inspect
 
     result = model.generate_content(prompt)
