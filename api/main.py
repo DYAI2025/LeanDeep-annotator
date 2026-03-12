@@ -48,6 +48,7 @@ from .models import (
     Layer,
     MarkerDetail,
     MarkerListResponse,
+    Message,
     NarrativeActor,
     NarrativeBeliefSystem,
     NarrativeRelationship,
@@ -66,6 +67,8 @@ from .models import (
     SpeakerSummary,
     StateIndices,
     TemporalPattern,
+    TranscriptRequest,
+    TranscriptResponse,
     UEDMetrics,
     VADPoint,
 )
@@ -76,6 +79,7 @@ from .narrative import (
     initial_semantics_generator,
     narrative_report_generator,
 )
+from .transcript import diarize_with_ai, parse_transcript
 from .interpret import aggregate_framings, build_semiotic_map, dominant_framing, synthesize_narrative
 from .personas import PersonaStore
 from .providers import build_provider_chain
@@ -631,6 +635,41 @@ async def analyze_narrative(
             analysis_mode=analysis_mode,
             version=settings.version,
         ),
+    )
+
+
+# ---------------------------------------------------------------------------
+# POST /v1/analyze/transcript — Transcript format parsing & speaker diarization
+# ---------------------------------------------------------------------------
+
+@app.post("/v1/analyze/transcript", response_model=TranscriptResponse)
+async def analyze_transcript(
+    req: TranscriptRequest,
+    api_key: str = Depends(verify_api_key),
+):
+    """
+    Parse a raw transcript into structured speaker-tagged messages.
+
+    Supports WhatsApp exports, timestamped logs, bracket roles, and standard
+    "Name: text" format. When the format cannot be determined and Gemini is
+    available, falls back to AI-based speaker diarization.
+
+    Returns the list of messages, detected format name, and unique speaker count.
+    """
+    messages_raw, format_detected = parse_transcript(req.text)
+
+    # If format is unknown and Gemini is available, try AI diarization
+    if format_detected == "unknown_alternating" and initial_semantics_generator.enabled:
+        messages_raw = await diarize_with_ai(req.text, initial_semantics_generator.get_model())
+        format_detected = "ai_diarized"
+
+    messages = [Message(role=m["role"], text=m["text"]) for m in messages_raw]
+    speaker_count = len({m.role for m in messages})
+
+    return TranscriptResponse(
+        messages=messages,
+        format_detected=format_detected,
+        speaker_count=speaker_count,
     )
 
 
