@@ -3,8 +3,8 @@
   "version": "5.1",
   "total": 891,
   "layers": {
-    "ATO": 419,
-    "SEM": 240,
+    "ATO": 422,
+    "SEM": 244,
     "CLU": 121,
     "MEMA": 104
   },
@@ -5361,11 +5361,11 @@
         "deesc": 0.0
       }
     },
-    "ACT_DAILY_ROUTINE_REPORT": {
-      "id": "ACT_DAILY_ROUTINE_REPORT",
+    "ATO_DAILY_ROUTINE_REPORT": {
+      "id": "ATO_DAILY_ROUTINE_REPORT",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "ATO",
       "lang": "de",
       "description": "Bericht über aktuelle oder jüngste Alltagsaktivitäten.",
       "frame": {
@@ -10699,11 +10699,11 @@
         "deesc": 0.0
       }
     },
-    "ACT_FRIENDSHIP_MAINTENANCE": {
-      "id": "ACT_FRIENDSHIP_MAINTENANCE",
+    "ATO_FRIENDSHIP_MAINTENANCE": {
+      "id": "ATO_FRIENDSHIP_MAINTENANCE",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "ATO",
       "lang": "de",
       "description": "",
       "frame": {
@@ -16722,11 +16722,11 @@
         "deesc": 0.0
       }
     },
-    "ACT_PERSONAL_INTEREST_SHARE": {
-      "id": "ACT_PERSONAL_INTEREST_SHARE",
+    "ATO_PERSONAL_INTEREST_SHARE": {
+      "id": "ATO_PERSONAL_INTEREST_SHARE",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "ATO",
       "lang": "de",
       "description": "Teilen einer persönlichen Freizeitaktivität oder eines Hobbys.",
       "frame": {
@@ -56758,11 +56758,11 @@
         "deesc": 0.0
       }
     },
-    "EMO_CRAVING": {
-      "id": "EMO_CRAVING",
+    "SEM_CRAVING": {
+      "id": "SEM_CRAVING",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "SEM",
       "lang": "de",
       "description": "Ausdruck von Appetit oder Lust auf etwas.",
       "frame": {
@@ -60705,11 +60705,11 @@
         "rule": "ANY 2 IN 2 messages"
       }
     },
-    "EMO_LIGHT_ADMISSION": {
-      "id": "EMO_LIGHT_ADMISSION",
+    "SEM_LIGHT_ADMISSION": {
+      "id": "SEM_LIGHT_ADMISSION",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "SEM",
       "lang": "de",
       "description": "Leichtes Eingeständnis eines Versäumnisses oder Fehlers.",
       "frame": {
@@ -60759,11 +60759,11 @@
         "rule": "ANY 2 IN 3 messages"
       }
     },
-    "EMO_LIGHT_HUMOR_CRITIQUE": {
-      "id": "EMO_LIGHT_HUMOR_CRITIQUE",
+    "SEM_LIGHT_HUMOR_CRITIQUE": {
+      "id": "SEM_LIGHT_HUMOR_CRITIQUE",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "SEM",
       "lang": "de",
       "description": "Humorvolle, sanfte Form der Kritik ohne verletzende Absicht.",
       "frame": {
@@ -63063,11 +63063,11 @@
         "deesc": 0.0
       }
     },
-    "EMO_PLAYFUL_TITLE_ASSIGNMENT": {
-      "id": "EMO_PLAYFUL_TITLE_ASSIGNMENT",
+    "SEM_PLAYFUL_TITLE_ASSIGNMENT": {
+      "id": "SEM_PLAYFUL_TITLE_ASSIGNMENT",
       "schema": "LeanDeep",
       "version": "5.1",
-      "layer": "UNKNOWN",
+      "layer": "SEM",
       "lang": "de",
       "description": "Spielerische Vergabe eines Titels oder Spitznamens.",
       "frame": {
