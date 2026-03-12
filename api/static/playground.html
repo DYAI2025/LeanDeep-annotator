@@ -151,6 +151,30 @@
   .btn-dynamics { background: var(--surface2); color: var(--text); border: 1px solid var(--accent); }
   .btn-dynamics:hover { background: var(--accent); color: white; }
 
+  /* Narrative analysis results */
+  .narrative-card { background: var(--surface); border-radius: 6px; padding: 14px; margin-bottom: 12px; border-left: 3px solid var(--accent); }
+  .narrative-card h4 { font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+  .narrative-scenario { font-size: 0.9rem; line-height: 1.6; font-style: italic; }
+  .narrative-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  @media (max-width:600px) { .narrative-grid { grid-template-columns: 1fr; } }
+  .actor-card { background: var(--surface2); border-radius: 6px; padding: 10px 12px; }
+  .actor-role { font-size: 0.78rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .actor-position { font-size: 0.82rem; }
+  .actor-register { font-size: 0.75rem; color: var(--text-dim); margin-top: 2px; }
+  .evidence-badge { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600; margin-left: 6px; }
+  .evidence-A { background: rgba(76,175,80,0.2); color: #4caf50; }
+  .evidence-B { background: rgba(255,152,0,0.2); color: #ff9800; }
+  .evidence-C { background: rgba(156,39,176,0.2); color: #ce93d8; }
+  .belief-item { background: var(--surface2); padding: 8px 12px; border-radius: 4px; margin-bottom: 6px; font-size: 0.83rem; border-left: 2px solid #445; }
+  .flag-item { padding: 6px 10px; border-radius: 4px; font-size: 0.8rem; background: rgba(255,152,0,0.1); border-left: 3px solid #ff9800; margin-bottom: 4px; }
+  .human-review-item { background: rgba(239,83,80,0.1); border-left: 3px solid var(--accent); padding: 8px 12px; border-radius: 4px; margin-bottom: 6px; font-size: 0.82rem; }
+  .bias-check { background: var(--surface2); padding: 12px; border-radius: 6px; font-size: 0.82rem; line-height: 1.5; white-space: pre-wrap; }
+  .sem-chip { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.72rem; font-weight: 600; margin: 2px; }
+  .sem-domain { background: rgba(66,165,245,0.15); color: #42a5f5; }
+  .sem-type { background: rgba(156,39,176,0.15); color: #ce93d8; }
+  .sem-tension { background: rgba(239,83,80,0.15); color: var(--accent); }
+  .sem-ready { background: rgba(76,175,80,0.15); color: #4caf50; }
+
   /* Responsive */
   @media (max-width: 900px) {
     .main { grid-template-columns: 1fr; }
@@ -172,6 +196,7 @@
   <div class="tab" data-mode="upload">Upload .docx / .md / .txt</div>
   <div class="tab" data-mode="dynamics">Dynamics</div>
   <div class="tab" data-mode="interpret">Interpret</div>
+  <div class="tab" data-mode="narrative">Narrative (AI)</div>
 </div>
 
 <div class="main">
@@ -185,7 +210,7 @@
 
     <!-- Conversation mode -->
     <div id="mode-conversation" style="display:none;">
-      <textarea id="input-conversation" placeholder="Enter conversation (Name: text format):&#10;&#10;A: Du bist doch immer so empfindlich.&#10;B: Das stimmt nicht, ich sage nur was mich st&ouml;rt.&#10;A: Siehst du, genau das meine ich. Du verdrehst alles.&#10;B: Ich verdrehe gar nichts..."></textarea>
+      <textarea id="input-conversation" placeholder="Enter conversation transcript:&#10;&#10;John: Hallo, wie geht es dir?&#10;Sarah: Gut, danke. Aber ich muss was sagen...&#10;John: Nat&#252;rlich, ich h&#246;re zu.&#10;&#10;Supported: Name: text &#x2022; [Name]: text &#x2022; WhatsApp export format"></textarea>
     </div>
 
     <!-- Upload mode -->
@@ -200,12 +225,29 @@
 
     <!-- Dynamics mode -->
     <div id="mode-dynamics" style="display:none;">
-      <textarea id="input-dynamics" placeholder="Enter conversation for dynamics analysis (Name: text format):&#10;&#10;A: Ich habe dir doch gesagt, dass das so nicht geht.&#10;B: Du h&ouml;rst mir nie zu.&#10;A: Das stimmt doch gar nicht, ich bin immer f&uuml;r dich da.&#10;B: Dann zeig es mal.&#10;A: Jetzt beruhige dich erstmal.&#10;B: Sag mir nicht, ich soll mich beruhigen!"></textarea>
+      <textarea id="input-dynamics" placeholder="Enter conversation transcript:&#10;&#10;John: Hallo, wie geht es dir?&#10;Sarah: Gut, danke. Aber ich muss was sagen...&#10;John: Nat&#252;rlich, ich h&#246;re zu.&#10;&#10;Supported: Name: text &#x2022; [Name]: text &#x2022; WhatsApp export format"></textarea>
     </div>
 
     <!-- Interpret mode -->
     <div id="mode-interpret" style="display:none;">
       <textarea id="input-interpret" placeholder="Enter conversation for semiotic interpretation (Name: text format):&#10;&#10;A: Dein Schweigen ist aggressiv.&#10;B: Ich brauche nur eine Pause.&#10;A: Pause bedeutet Bestrafung fuer mich.&#10;B: Das ist kein Angriff, das ist Selbstschutz."></textarea>
+    </div>
+
+    <!-- Narrative mode -->
+    <div id="mode-narrative" style="display:none;">
+      <textarea id="input-narrative" placeholder="Enter conversation transcript...&#10;&#10;Supported formats:&#10;&#x2022; Name: message   (e.g. John: Hallo, wie geht's?)&#10;&#x2022; [Name]: message&#10;&#x2022; [12.03.26, 14:23] Name: message   (WhatsApp export)&#10;&#x2022; 14:23 Name: message   (timestamped)&#10;&#x2022; Unstructured text &#x2192; AI speaker detection&#10;&#10;Paste your chat export directly here."></textarea>
+      <div style="margin-top:8px; display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <select id="narrative-mode" style="background:var(--surface2);color:var(--text);border:1px solid #445;border-radius:4px;padding:4px 8px;font-size:0.82rem;">
+          <option value="Narrative">Narrative</option>
+          <option value="Clinical">Clinical</option>
+          <option value="Explorative">Explorative</option>
+        </select>
+        <label style="display:flex;align-items:center;gap:4px;font-size:0.82rem;color:var(--text-dim);cursor:pointer;">
+          <input type="checkbox" id="narrative-initial-semantics" checked> Pre-Analysis
+        </label>
+        <button class="btn btn-secondary" id="btn-detect-speakers" style="font-size:0.8rem;padding:6px 14px;">AI Detect Speakers</button>
+        <span id="detect-status" style="font-size:0.78rem;color:var(--text-dim);"></span>
+      </div>
     </div>
 
     <div class="controls">
@@ -310,6 +352,48 @@
         <div id="semiotic-map" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;"></div>
       </div>
     </div>
+
+    <!-- Narrative results -->
+    <div id="narrative-content" style="display:none;">
+      <h2>Narrative Analysis</h2>
+
+      <div class="dynamics-section" id="narrative-initial-sem-section">
+        <h3>Initial Semantics</h3>
+        <div id="narrative-initial-sem"></div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>Scenario</h3>
+        <div id="narrative-scenario" class="narrative-card"><div class="narrative-scenario"></div></div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>Actors</h3>
+        <div class="narrative-grid" id="narrative-actors"></div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>Interpretation</h3>
+        <div id="narrative-interpretation" class="narrative-card"></div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>Relationships &amp; Belief Systems</h3>
+        <div id="narrative-relationships"></div>
+        <div id="narrative-beliefs" style="margin-top:10px;"></div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>Marker Evidence</h3>
+        <div id="narrative-marker-evidence"></div>
+      </div>
+
+      <div class="dynamics-section">
+        <h3>Flags &amp; Bias Check</h3>
+        <div id="narrative-flags"></div>
+        <div id="narrative-bias-check" style="margin-top:10px;"></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -358,12 +442,14 @@
   const $fileName = document.getElementById('file-name');
   const $interpretContent = document.getElementById('interpret-content');
   const $inputInterpret = document.getElementById('input-interpret');
+  const $inputNarrative = document.getElementById('input-narrative');
+  const $narrativeContent = document.getElementById('narrative-content');
 
   // --- Layer colors ---
   const LAYER_PRIORITY = { MEMA: 4, CLU: 3, SEM: 2, ATO: 1 };
 
   // --- Tab switching ---
-  const MODE_IDS = ['text', 'conversation', 'upload', 'dynamics', 'interpret'];
+  const MODE_IDS = ['text', 'conversation', 'upload', 'dynamics', 'interpret', 'narrative'];
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -373,6 +459,12 @@
         const el = document.getElementById('mode-' + m);
         if (el) el.style.display = currentMode === m ? '' : 'none';
       });
+      // Reset results panels when switching tabs
+      $resultsPlaceholder.style.display = '';
+      $resultsContent.style.display = 'none';
+      $dynamicsContent.style.display = 'none';
+      $interpretContent.style.display = 'none';
+      $narrativeContent.style.display = 'none';
     });
   });
 
@@ -575,6 +667,217 @@
       $btnAnalyze.textContent = 'Analyze';
     }
   }
+
+  // --- Narrative API calls ---
+  async function analyzeNarrative(messages, layers, threshold, mode, includeInitialSemantics) {
+    const resp = await fetch('/v1/analyze/narrative', {
+      method: 'POST',
+      headers: getHeaders(),
+      body: JSON.stringify({
+        messages,
+        layers,
+        threshold: parseFloat(threshold),
+        interpretation_mode: mode,
+        include_initial_semantics: includeInitialSemantics,
+      }),
+    });
+    if (!resp.ok) throw new Error(await resp.text());
+    return resp.json();
+  }
+
+  async function detectSpeakers(text) {
+    const resp = await fetch('/v1/analyze/transcript', {
+      method: 'POST',
+      headers: getHeaders(),
+      body: JSON.stringify({ text }),
+    });
+    if (!resp.ok) throw new Error(await resp.text());
+    return resp.json();
+  }
+
+  // --- Run narrative analysis ---
+  async function runNarrativeAnalysis() {
+    const text = document.getElementById('input-narrative').value.trim();
+    if (!text) return;
+
+    const messages = parseConversation(text);
+    if (messages.length === 0) return;
+
+    const layers = getSelectedLayers();
+    const threshold = $threshold.value;
+    const mode = document.getElementById('narrative-mode').value;
+    const includeInitialSemantics = document.getElementById('narrative-initial-semantics').checked;
+
+    $btnAnalyze.disabled = true;
+    $btnAnalyze.innerHTML = '<span class="loading"></span>Generating Narrative...';
+
+    try {
+      const response = await analyzeNarrative(messages, layers, threshold, mode, includeInitialSemantics);
+      lastResponse = response;
+
+      // Hide other panels
+      $resultsPlaceholder.style.display = 'none';
+      $resultsContent.style.display = 'none';
+      $dynamicsContent.style.display = 'none';
+      $interpretContent.style.display = 'none';
+      $narrativeContent.style.display = '';
+
+      renderNarrativeResults(response, messages);
+      updateStats(response.meta);
+    } catch (err) {
+      $narrativeContent.style.display = '';
+      $narrativeContent.innerHTML = `<div class="dynamics-placeholder" style="color:var(--accent);">Error: ${escapeHTML(err.message)}</div>`;
+    } finally {
+      $btnAnalyze.disabled = false;
+      $btnAnalyze.textContent = 'Analyze';
+    }
+  }
+
+  // --- Render narrative results ---
+  function renderNarrativeResults(response, messages) {
+    const is = response.initial_semantics;
+    const nr = response.narrative_report;
+
+    // Initial semantics
+    const $isSec = document.getElementById('narrative-initial-sem-section');
+    const $is = document.getElementById('narrative-initial-sem');
+    if (is) {
+      $isSec.style.display = '';
+      const readyPct = ((is.semantic_readiness_score || 0) * 100).toFixed(0);
+      $is.innerHTML = `
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;">
+          <span class="sem-chip sem-domain">${escapeHTML(is.narrative_domain || '')}</span>
+          <span class="sem-chip sem-type">${escapeHTML(is.discourse_type || '')}</span>
+          ${is.tension_axis ? `<span class="sem-chip sem-tension">&#x26A1; ${escapeHTML(is.tension_axis)}</span>` : ''}
+          <span class="sem-chip sem-ready">Clarity ${readyPct}%</span>
+          ${is.cultural_frame ? `<span class="sem-chip" style="background:rgba(158,158,158,0.15);color:#aaa;">${escapeHTML(is.cultural_frame)}</span>` : ''}
+        </div>
+        ${is.active_belief_systems && is.active_belief_systems.length ? `<div style="font-size:0.78rem;color:var(--text-dim);">Active norms: ${is.active_belief_systems.map(b => escapeHTML(b)).join(', ')}</div>` : ''}
+        ${is.uncertainty_notes && is.uncertainty_notes.length ? `<div class="flag-item" style="margin-top:8px;">${is.uncertainty_notes.map(n => escapeHTML(n)).join('<br>')}</div>` : ''}
+      `;
+    } else {
+      $isSec.style.display = 'none';
+    }
+
+    if (!nr) {
+      // No LLM — show markers only
+      document.getElementById('narrative-scenario').querySelector('.narrative-scenario').textContent = 'AI not configured. Showing marker analysis only.';
+      document.getElementById('narrative-actors').innerHTML = '';
+      document.getElementById('narrative-interpretation').textContent = '';
+      document.getElementById('narrative-relationships').innerHTML = '';
+      document.getElementById('narrative-beliefs').innerHTML = '';
+      document.getElementById('narrative-marker-evidence').innerHTML = renderNarrativeMarkers(response.markers);
+      document.getElementById('narrative-flags').innerHTML = '';
+      document.getElementById('narrative-bias-check').innerHTML = '';
+      return;
+    }
+
+    // Scenario
+    document.getElementById('narrative-scenario').querySelector('.narrative-scenario').textContent = nr.scenario || '';
+
+    // Actors
+    const actors = nr.actors || [];
+    document.getElementById('narrative-actors').innerHTML = actors.map(a => `
+      <div class="actor-card">
+        <div class="actor-role">${escapeHTML(a.role)}${a.claim_only ? ' <span style="color:#ff9800;font-size:0.7rem;">[CLAIM]</span>' : ''}</div>
+        <div class="actor-position">${escapeHTML(a.apparent_position || '')}</div>
+        <div class="actor-register">${escapeHTML(a.register || '')}</div>
+      </div>
+    `).join('');
+
+    // Interpretation
+    document.getElementById('narrative-interpretation').textContent = nr.interpretation || '';
+
+    // Relationships
+    const rels = nr.relationships || [];
+    document.getElementById('narrative-relationships').innerHTML = rels.length ? rels.map(r => `
+      <div class="belief-item">
+        <strong>${(r.actors || []).map(a => escapeHTML(a)).join(' &#x2194; ')}</strong>
+        <span class="evidence-badge evidence-${r.evidence_tier}">${r.evidence_tier}</span>
+        &mdash; ${escapeHTML(r.dynamic || '')}
+        ${r.supporting_marker_ids && r.supporting_marker_ids.length ? `<div style="font-size:0.72rem;color:var(--text-dim);margin-top:3px;">Markers: ${r.supporting_marker_ids.join(', ')}</div>` : ''}
+      </div>
+    `).join('') : '';
+
+    // Beliefs
+    const beliefs = nr.belief_systems || [];
+    document.getElementById('narrative-beliefs').innerHTML = beliefs.length ? `
+      <div style="font-size:0.78rem;color:var(--text-dim);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.04em;">Belief Systems</div>
+      ${beliefs.map(b => `
+        <div class="belief-item" style="border-left-color:${b.evidence_tier==='A'?'#4caf50':b.evidence_tier==='B'?'#ff9800':'#ce93d8'};">
+          <strong>${escapeHTML(b.label)}</strong>
+          <span class="evidence-badge evidence-${b.evidence_tier}">${b.evidence_tier}</span>
+          ${b.claim_of_speaker ? ' <span style="font-size:0.7rem;color:#ff9800;">[SPEAKER CLAIM]</span>' : ''}
+          <div style="font-size:0.8rem;color:var(--text-dim);margin-top:3px;">${escapeHTML(b.description || '')}</div>
+        </div>
+      `).join('')}
+    ` : '';
+
+    // Marker evidence
+    const me = nr.marker_evidence_summary || {};
+    document.getElementById('narrative-marker-evidence').innerHTML = Object.keys(me).length ? Object.entries(me).map(([mid, desc]) => `
+      <div class="belief-item">
+        <code style="font-size:0.78rem;color:var(--accent);">${escapeHTML(mid)}</code>
+        &mdash; ${escapeHTML(desc)}
+      </div>
+    `).join('') : renderNarrativeMarkers(response.markers);
+
+    // Flags
+    const uflags = nr.uncertainty_flags || [];
+    const hrflags = nr.human_review_flags || [];
+    let flagsHTML = uflags.map(f => `<div class="flag-item">${escapeHTML(f)}</div>`).join('');
+    flagsHTML += hrflags.map(f => `
+      <div class="human-review-item">
+        <strong>&#x26A0; Human Review: ${escapeHTML(f.marker_id)}</strong> &mdash; ${escapeHTML(f.reason)}
+        ${f.context_note ? `<div style="font-size:0.78rem;color:var(--text-dim);margin-top:3px;">${escapeHTML(f.context_note)}</div>` : ''}
+      </div>
+    `).join('');
+    document.getElementById('narrative-flags').innerHTML = flagsHTML;
+
+    // Bias check
+    document.getElementById('narrative-bias-check').innerHTML = nr.bias_check_summary ? `
+      <div class="narrative-card" style="border-left-color:#42a5f5;">
+        <h4>Bias Check</h4>
+        <div class="bias-check">${escapeHTML(nr.bias_check_summary)}</div>
+      </div>
+    ` : '';
+  }
+
+  function renderNarrativeMarkers(markers) {
+    return markers.map(m => {
+      const pct = (m.confidence * 100).toFixed(0);
+      return `<div class="marker-item">
+        <span class="mi-conf" style="color:${confColor(m.confidence)}">${pct}%</span>
+        <span class="tt-badge ${m.layer}">${m.layer}</span>
+        <span class="mi-id">${escapeHTML(m.id)}</span>
+      </div>`;
+    }).join('');
+  }
+
+  // --- AI Detect Speakers button ---
+  document.getElementById('btn-detect-speakers').addEventListener('click', async () => {
+    const text = document.getElementById('input-narrative').value.trim();
+    if (!text) return;
+    const $status = document.getElementById('detect-status');
+    const $btn = document.getElementById('btn-detect-speakers');
+    $btn.disabled = true;
+    $status.textContent = 'Detecting...';
+    try {
+      const result = await detectSpeakers(text);
+      if (result.messages && result.messages.length > 0) {
+        // Format as "Name: text" conversation
+        const formatted = result.messages.map(m => `${m.role}: ${m.text}`).join('\n');
+        document.getElementById('input-narrative').value = formatted;
+        $status.textContent = `\u2713 ${result.speaker_count} speaker(s) detected (${result.format_detected})`;
+      } else {
+        $status.textContent = 'Could not detect speakers';
+      }
+    } catch (err) {
+      $status.textContent = 'Error: ' + err.message;
+    } finally {
+      $btn.disabled = false;
+    }
+  });
 
   // --- VAD Trajectory Chart ---
   function renderVADChart(messageVAD) {
@@ -1171,6 +1474,9 @@
     if (currentMode === 'interpret') {
       return runInterpretAnalysis();
     }
+    if (currentMode === 'narrative') {
+      return runNarrativeAnalysis();
+    }
 
     const text = getInputText().trim();
     if (!text) return;
@@ -1238,6 +1544,7 @@
   $inputUpload.addEventListener('input', debounceAnalyze);
   $inputDynamics.addEventListener('input', debounceAnalyze);
   $inputInterpret.addEventListener('input', debounceAnalyze);
+  $inputNarrative.addEventListener('input', debounceAnalyze);
 
   // Keyboard shortcut: Ctrl/Cmd+Enter to analyze
   document.addEventListener('keydown', (e) => {

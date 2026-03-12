@@ -452,3 +452,15 @@ class NarrativeResponse(BaseModel):
     initial_semantics: InitialSemanticsReport | None = None
     narrative_report: NarrativeReport | None = None
     meta: AnalyzeMeta
+
+
+# --- Transcript Models ---
+
+class TranscriptRequest(BaseModel):
+    text: str = Field(..., min_length=1, max_length=100_000)
+
+
+class TranscriptResponse(BaseModel):
+    messages: list[Message]
+    format_detected: str
+    speaker_count: int
