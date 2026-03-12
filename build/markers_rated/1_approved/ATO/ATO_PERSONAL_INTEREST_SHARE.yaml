@@ -7,10 +7,14 @@ frame:
   concept: "Persönliches Interesse"
   pragmatics: "Selbstoffenbarung zur Beziehungspflege"
   narrative: "freizeit"
-composed_of:
-- ATO_ACTIVITY_VERB
-- ATO_HOBBY_OBJECT
-activation_logic: "ANY 2 IN 3 messages"
+patterns:
+- type: regex
+  value: (?i)\b(ich\s+)?(spiele?\w*|lese?|bastle?\w*|fahre?\w*|koche?\w*|zeichne?\w*|singe?\w*|nähe?\w*)\s+(gern|gerne|lieber|manchmal|oft)\b
+- type: regex
+  value: (?i)\b(mein\s+(hobby|lieblingsbeschäftigung|sport|interesse)\s+(ist|sind|war))\b
+- type: regex
+  value: (?i)\bich\s+(spiele|lese|bastle|koche|zeichne|male|fahre|singe)\s+(gern|gerne|oft|manchmal|lieber)\b
+activation_logic: "ANY 1 IN 3 messages"
 scoring: {base: 1.4, weight: 1.1}
 examples:
   positive:

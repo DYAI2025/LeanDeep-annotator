@@ -8,10 +8,18 @@ frame:
   pragmatics: "Selbstoffenbarung eines Bedürfnisses"
   narrative: "sehnsucht"
 composed_of:
-- ATO_DESIRE_VERB
-- ATO_OBJECT_OF_DESIRE
-activation_logic: "ANY 2 IN 3 messages"
+- ATO_SUBSTANCE_CRAVING
+activation_logic: "ANY 1 IN 3 messages"
 scoring: {base: 1.4, weight: 1.1}
+patterns:
+- type: regex
+  value: (?i)\b(hab|habe|hätte|hätt)\s+(lust|bock)\s+auf\b
+- type: regex
+  value: (?i)\bkönnte?\s+(gerade|jetzt)\s+\w+\s*(gut\s+)?(gebrauchen|haben|brauchen)\b
+- type: regex
+  value: (?i)\brauch\w*\s+(jetzt|unbedingt|dringend)\s+\w+\b
+- type: keyword
+  value: "Sehnsucht nach"
 examples:
   positive:
   - "Ich hab so Lust auf Schokolade."

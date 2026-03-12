@@ -7,10 +7,14 @@ frame:
   concept: "Tagesablauf"
   pragmatics: "Teilen von Alltagsinformationen"
   narrative: "statusbericht"
-composed_of:
-- ATO_ACTIVITY_VERB
-- ATO_ROUTINE_CONTEXT
-activation_logic: "ANY 2 IN 3 messages"
+patterns:
+- type: regex
+  value: (?i)\b(war|bin|hab|habe)\s+(gerade|grad|kurz|eben)\s+(beim|einkaufen|spazieren|kochen|sport|training|joggen|laufen)\b
+- type: regex
+  value: (?i)\b(hab|habe)\s+(gerade|grad|eben)\s+(eingekauft|gekocht|aufgeräumt|trainiert|gebracht|gemacht)\b
+- type: regex
+  value: (?i)\b(war\s+(heute|gerade|grad|eben)\s+(beim|im|an|im\s+laden))\b
+activation_logic: "ANY 1 IN 3 messages"
 scoring: {base: 1.4, weight: 1.1}
 examples:
   positive:

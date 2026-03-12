@@ -15,7 +15,7 @@ components:
 - ATO_DEPRESSION_SELF_FOCUS
 - ATO_DEPRESSION_PAST_FOCUS
 - ATO_DEPRESSION_SUICIDE_RISK
-- CLU_DEPRESSIVE_TRIAD
+- CLU_NEGATIVE_COGNITIVE_TRIAD
 pattern:
 - Complex meta-pattern combining emotional valence, cognitive distortions, temporal focus, and crisis indicators
 examples:

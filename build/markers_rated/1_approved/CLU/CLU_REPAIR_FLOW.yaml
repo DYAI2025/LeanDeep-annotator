@@ -18,7 +18,7 @@ score:
 composed_of:
   require:
   - ATO_REPAIR_REQUEST
-  - CLU_EMOTIONAL_SUPPORT
+  - CLU_SUPPORT_EXCHANGE
   - SEM_CLOSURE_PROTOCOL
 emits:
   indices:
