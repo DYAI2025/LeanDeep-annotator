@@ -1,0 +1,95 @@
+id: ATO_SELF_DAMAGING_ADMISSION
+schema: LeanDeep
+version: '5.1'
+layer: ATO
+lang: de
+description: ''
+frame:
+  signal:
+  - token
+  concept: Selbstsabotage / destruktives Verhalten
+  pragmatics: bewusste Selbstschädigung als Kick
+  narrative: Zerstörung als Befreiung
+patterns:
+- type: regex
+  value: "(nicht schlafen|trinke zu viel|sabotiere mich|zerstöre es)"
+examples:
+  positive:
+  - ich schlafe einfach nicht
+  - ich trinke zu viel, obwohl ich weiß...
+  - ich sabotiere mich selbst
+  - ich zerstöre es immer wieder
+  - ich mache das, was mir schadet
+  - Ich schlafe einfach nicht, obwohl ich weiß, dass es mir schadet.
+  - Ich trinke zu viel, obwohl ich die Folgen kenne.
+  - Ich sabotiere mich selbst, immer wieder.
+  - Ich zerstöre es immer wieder, alles Gute.
+  - Ich mache das, was mir schadet.
+  - Ich schlafe absichtlich nicht genug.
+  - Ich trinke zu viel und es wird schlimmer.
+  - Ich sabotiere mich bei jeder Gelegenheit.
+  - Ich zerstöre es jedes Mal, wenn es gut läuft.
+  - Bewusst mache ich das, was mir schadet.
+  - Ich schlafe nicht, obwohl ich todmüde bin.
+  - Ich trinke zu viel, das weiß ich.
+  - Ich sabotiere mich selbst systematisch.
+  - Ich zerstöre es immer, wenn es schön wird.
+  - Ich schadet mir selbst und kann nicht aufhören.
+  - Ich schlafe einfach nicht ein, obwohl ich sollte.
+  - Viel zu viel trinke ich in letzter Zeit.
+  - Wieder sabotiere ich mich.
+  - Ich zerstöre es, als wäre es Absicht.
+  - Ich tue mir selbst weh, immer wieder.
+  - Schlaflos durch die Nacht, obwohl ich es besser weiß.
+  - Ich trinke zu viel Alkohol, wissentlich.
+  - Mich selbst sabotiere ich aus Gewohnheit.
+  - Alles Gute zerstöre ich.
+  - Ich mache bewusst das Falsche.
+  - Ich rauche wieder, obwohl ich aufgehört hatte.
+  - Ich trinke zu viel Kaffee, obwohl mein Herz rast.
+  - Sabotiere mich bei der Arbeit.
+  - Ich zerstöre jede gute Beziehung.
+  - Ich esse zu viel, obwohl mir schlecht wird.
+  - Ich schlafe nicht und funktioniere trotzdem.
+  - Trinke zu viel, esse zu wenig.
+  - Ich sabotiere mich bei Prüfungen.
+  - Jedes Mal zerstöre ich es.
+  - Ich verletze mich selbst mit meinem Verhalten.
+  - Ich schlafe nie genug, obwohl ich es könnte.
+  - Zu viel trinke ich am Wochenende.
+  - Ich sabotiere mich, wenn es ernst wird.
+  - Ich zerstöre es immer kurz vor dem Ziel.
+  - Ich schade mir bewusst und weiß nicht warum.
+  - Schlafe nicht mehr richtig seit Wochen.
+  - Ich trinke zu viel, um alles zu vergessen.
+  - Sabotage gegen mich selbst, täglich.
+  - Ich zerstöre es, weil ich es nicht verdiene.
+  - Ich tue Dinge, die mir schaden.
+  negative:
+  - Ich achte auf meine Gesundheit.
+  - Ich schlafe regelmäßig 8 Stunden.
+  - Ich trinke nur wenig Alkohol.
+  - Ich kümmere mich gut um mich.
+  - Ich tue mir selbst Gutes.
+  - Gesunde Ernährung ist mir wichtig.
+  - Ich treibe regelmäßig Sport.
+  - Ich gehe achtsam mit mir um.
+  - Ich setze mir realistische Ziele.
+  - Ich feiere meine Erfolge.
+  - Ich bin gut zu mir.
+  - Ich pflege gesunde Gewohnheiten.
+  - Ich sorge für Ausgleich.
+  - Ich nehme mir Auszeiten.
+  - Selbstfürsorge steht bei mir oben.
+  - Ich lebe bewusst und gesund.
+  - Ich trinke genug Wasser.
+  - Ich meditiere regelmäßig.
+  - Ich gönne mir etwas Schönes.
+  - Ich achte auf meine Grenzen.
+  - Ich sage Nein, wenn ich muss.
+  - Ich lebe ausgewogen.
+  - Ich kümmere mich um mein Wohlbefinden.
+  - Ich investiere in mich.
+  - Ich bin achtsam mit meinem Körper.
+tags: []
+rating: 1

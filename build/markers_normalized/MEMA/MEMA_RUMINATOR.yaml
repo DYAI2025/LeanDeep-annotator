@@ -43,5 +43,10 @@ semiotic:
   connotation:
   - "archetype"
   - "rumination"
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 metadata:
   label: Ruminator

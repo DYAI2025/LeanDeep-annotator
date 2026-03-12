@@ -2,7 +2,8 @@ id: ATO_DEPRESSION_SELF_FOCUS
 schema_version: LD-3.4
 lang: en
 category: ATOMIC
-description: Atomic pattern for self-focused language in major depressive disorder
+description: Atomic pattern for self-focused language in major depressive 
+  disorder
 frame:
   signal:
   - self-focus
@@ -62,3 +63,8 @@ tags:
 - depression
 vad_estimate: {valence: -0.7, arousal: 0.25, dominance: 0.15}
 effect_on_state: {trust: -0.1, conflict: 0.1, deesc: -0.05}
+semiotic: {peirce: icon, signifikat: Depressive Zeichen, framing_type: 
+    ueberflutung, cultural_frame: Klinische Psychologie, myth: Emotionen sind 
+    unkontrollierbar — Ueberwaeltigung ist Authentizitaet}
+semantic_affinity:
+  ironie_suppress: true

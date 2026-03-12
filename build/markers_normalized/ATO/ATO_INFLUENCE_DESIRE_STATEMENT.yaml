@@ -39,6 +39,12 @@ tags:
 - influence
 - power
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Sehnsucht/Verlangen
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 vad_estimate:
   valence: 0.15
   arousal: 0.4

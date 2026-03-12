@@ -7,7 +7,8 @@ frame:
   pragmatics: "Macht"
   narrative: "surface"
 pattern:
-  tokens: ["Macht", "Kontrolle", "Stärke", "Respekt erzwingen", "durchsetzen"]
+- (?i)\b(setze? mich durch|Durchsetzung|Durchsetzungsvermögen|Alpha|Anführer|Machtposition|hier bestimm|hier regier|Machtkampf|Stärke zeig|Dominanz signalisier|niemand bremst mich)\b
+- (?i)\b(Respekt erzwing|dulde keinen Widerspruch|akzeptiere kein Nein|ich befehle|ich herrsche|ich regiere hier|Unterwerfung|kein Erbarmen|Widerstand ist zwecklos)\b
 examples:
   positive:
   - "ich setze mich durch … Stärke zählt"
@@ -15,6 +16,51 @@ examples:
   - "Kontrolle behalten … sofort"
   - "Respekt erzwingen"
   - "Dominanz zeigen"
+  - Ich setze mich durch, Stärke zählt.
+  - Wer nicht hört, kriegt Druck.
+  - Kontrolle behalten, sofort.
+  - Respekt erzwingen, wenn nötig.
+  - Dominanz zeigen in jeder Situation.
+  - Macht ist alles.
+  - Kontrolle über die Situation.
+  - Stärke beweisen.
+  - Respekt erzwingen durch Härte.
+  - Durchsetzen, egal wie.
+  - Macht ausüben.
+  - Kontrolle ist mir wichtig.
+  - Stärke zeigen, Schwäche verbergen.
+  - Respekt verschaffen.
+  - Dominanz im Gespräch.
+  - Machtspiele beherrschen.
+  - Kontrolle nie abgeben.
+  - Stärke ist Überlebensvorteil.
+  - Respekt erzwingen durch Präsenz.
+  - Sich durchsetzen können.
+  - Machtposition verteidigen.
+  - Kontrolle über andere.
+  - Innere Stärke mobilisieren.
+  - Respekt einfordern.
+  - Dominanz ausstrahlen.
+  - Macht demonstrieren.
+  - Kontrolle über die Finanzen.
+  - Stärke in der Krise.
+  - Respekt erzwingen durch Leistung.
+  - Sich gegen alle durchsetzen.
+  - Macht und Einfluss.
+  - Kontrolle über den Prozess.
+  - Körperliche Stärke trainieren.
+  - Respekt verdienen und erzwingen.
+  - Dominanz im Raum.
+  - Machtgefüge verstehen.
+  - Kontrolle übernehmen.
+  - Mentale Stärke aufbauen.
+  - Respekt durch Taten erzwingen.
+  - Durchsetzungsvermögen.
+  - Macht ergreifen.
+  - Die Kontrolle behalten.
+  - Stärke unter Beweis stellen.
+  - Respekt erzwingen, wenn es sein muss.
+  - Dominanz signalisieren.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -23,5 +69,24 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Lass uns zusammenarbeiten.
+  - Wir finden gemeinsam eine Lösung.
+  - Empathie ist mir wichtig.
+  - Ich höre dir zu.
+  - Gleichberechtigung für alle.
+  - Gewaltfrei kommunizieren.
+  - Miteinander statt gegeneinander.
+  - Ich gebe nach.
+  - Kompromisse sind wichtig.
+  - Sanftmut als Stärke.
+  - Ich bin nachgiebig.
+  - Zusammenarbeit funktioniert besser.
+  - Verhandeln statt kämpfen.
+  - Ich respektiere deine Grenzen.
+  - Dialog statt Konfrontation.
+  - Ich lasse los.
+  - Weichheit ist keine Schwäche.
+  - Ich unterstütze dich.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

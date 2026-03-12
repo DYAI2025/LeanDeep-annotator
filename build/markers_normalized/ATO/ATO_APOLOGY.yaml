@@ -62,6 +62,11 @@ semiotic:
   level: pragmatic
   object: "apology_expression"
   interpretant: "effect_on_state: {trust: +0.15, conflict: -0.2}"
+  peirce: index
+  signifikat: Entschuldigung/Reue
+  framing_type: reparatur
+  cultural_frame: Gottman
+  myth: Kommunikation loest alles — reden heilt, schweigen zerstoert
 vad_estimate:
   valence: 0.3
   arousal: 0.2
@@ -70,5 +75,11 @@ effect_on_state:
   trust: 0.35
   conflict: -0.3
   deesc: 0.4
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung
 metadata:
   label: Entschuldigung

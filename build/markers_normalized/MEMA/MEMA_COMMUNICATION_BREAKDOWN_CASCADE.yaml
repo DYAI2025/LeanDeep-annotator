@@ -22,6 +22,46 @@ examples:
   - Therapeutic relationship showing predictable communication deterioration stages.
   - Marriage dissolution following classic Gottman cascade pattern of communication failure.
   - Long-term friendship ending through systematic communication breakdown over years.
+  - Erst Kritik, dann Verachtung, dann Stonewalling – die klassische Gottman-Kaskade über drei Monate.
+  - 'Die Kommunikation hat sich systematisch verschlechtert: von sachlich zu persönlich zu komplettem Schweigen.'
+  - 'Muster über ein Jahr: offene Diskussion → defensive Reaktionen → emotionaler Rückzug → Funkstille.'
+  - 'Im Team: Erst produktive Konflikte, dann zunehmende Sarkasmus, dann Passivität, dann Kündigung.'
+  - 'Paar-Dynamik: Von gemeinsamer Planung zu getrennten Entscheidungen zu getrenntdem Leben in einem Haus.'
+  - 'Kaskade im Projekt: Missverständnisse → Schuldzuweisungen → Silobildung → Projektstillstand.'
+  - 'Über Monate: Erst wurden Bedenken geteilt, dann ignoriert, dann mit Aggression beantwortet, dann gar nicht mehr.'
+  - 'Freundschaft: Von täglichem Austausch zu wöchentlich zu monatlich zu keinem Kontakt mehr.'
+  - 'Familie: Erst offene Konflikte, dann kalter Krieg, dann jahrelanges Schweigen.'
+  - 'Arbeitsbeziehung: Von Zusammenarbeit zu Konkurrenz zu Sabotage zu getrennte Projekte.'
+  - 'Ehe: Vorwürfe häufen sich, dann kommt Verachtung dazu, dann hört einer auf zu reden.'
+  - 'Team-Dynamik: Feedback wird ignoriert → Frustration wächst → passiv-aggressives Verhalten → Teamauflösung.'
+  - 'Generationenkonflikt: Großeltern schweigen, Eltern schreien, Kinder flüchten – über Jahrzehnte.'
+  - 'Therapeutische Beziehung: Erst kooperativ, dann widerständig, dann abbruchgefährdet.'
+  - "Partnerschaft: Von 'wir reden über alles' zu 'es bringt nichts zu reden' in zwei Jahren."
+  - 'Kollegiale Beziehung: Erst Smalltalk, dann Funkstille, dann aktive Vermeidung, dann Beschwerde bei HR.'
+  - 'Mutter-Tochter: Erst Rat holen, dann Rat ablehnen, dann Konfrontation, dann Kontaktabbruch.'
+  - 'Im Verein: Erst Diskussionen, dann Lagerbildung, dann Blockade, dann Austritt ganzer Gruppen.'
+  - 'Paartherapie: Die Kaskade zeigt sich im Sitzungsverlauf – erst offen, dann verschlossen, dann Abbruch.'
+  - 'Geschäftspartner: Von gemeinsamer Vision zu Machtkampf zu Rechtsstreit zu Trennung.'
+  - 'WG-Dynamik: Erst nette Hinweise, dann Zettel, dann passive Aggression, dann Auszug.'
+  - 'Eltern-Kind: Von Vertrauen zu Kontrolle zu Rebellion zu Entfremdung über die Teenagerjahre.'
+  - 'Chef-Mitarbeiter: Von Mentoring zu Mikromanagement zu Resignation zu Kündigung.'
+  - 'Geschwister: Von gemeinsam spielen zu streiten zu schweigen zu getrennten Familienfeiern.'
+  - 'Nachbarn: Von freundlichem Grüßen zu Beschwerden zu Anwaltsbriefen zu Ignorieren.'
+  - 'Online-Community: Von konstruktivem Austausch zu Trolling zu Flamewars zu Gruppenspaltung.'
+  - 'Fernbeziehung: Tägliche Calls → wöchentliche → unregelmäßige → kein Kontakt mehr.'
+  - 'Projektteam: Brainstorming → Meinungsverschiedenheiten → Blockaden → Deadline verpasst → Schuldzuweisungen.'
+  - 'Kolleg:innen: Von Mittagessen zusammen zu getrennten Tischen zu verschiedenen Kantinen.'
+  - 'Paar nach Baby: Von Teamwork zu Überforderung zu Vorwürfe zu emotionalem Rückzug.'
+  - 'Startup-Gründer: Von gemeinsamer Passion zu Kontrollkämpfen zu gegenseitigem Misstrauen zu Firmenspaltung.'
+  - 'Schüler-Lehrer: Von Engagement zu Desinteresse zu Provokation zu Schulverweis.'
+  - 'Trainer-Sportler: Von Vertrauen zu Druck zu Widerstand zu Vereinswechsel.'
+  - 'Band-Mitglieder: Von gemeinsamer Musik zu kreativen Differenzen zu persönlichen Angriffen zu Auflösung.'
+  - 'Gesundheitswesen: Von Vertrauen in den Arzt zu Zweifeln zu Vorwürfen zu Arztwechsel.'
+  - 'Verhandlung: Von Offenheit zu Taktik zu Misstrauen zu Abbruch.'
+  - 'Freundeskreis: Von Inklusivität zu Cliquen zu Ausgrenzung zu Auflösung.'
+  - 'Mieter-Vermieter: Von korrektem Umgang zu Streit zu Mietminderung zu Räumungsklage.'
+  - 'Interkulturelles Team: Von Neugier zu Missverständnissen zu Stereotypen zu Ausgrenzung.'
+  - 'Langzeitbeziehung: Von Verliebtheit zu Routine zu Entfremdung zu parallelen Leben.'
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -30,6 +70,24 @@ examples:
   - I've noticed we think differently about this.
   - I want to understand what you mean.
   - That sounds like an important topic for you.
+  - Wir hatten einen Streit, aber haben danach offen darüber geredet und eine Lösung gefunden.
+  - Es gab Spannungen im Team, aber durch die Retrospektive konnten wir sie adressieren.
+  - Nach dem Missverständnis haben wir uns ausgesprochen und die Kommunikation verbessert.
+  - Wir haben gestritten, aber danach war die Luft rein und wir konnten weiterarbeiten.
+  - Es gab eine Phase der Stille, aber dann haben wir aktiv das Gespräch gesucht.
+  - Konflikte kommen vor, aber wir lösen sie meistens am selben Tag.
+  - Wir hatten unterschiedliche Meinungen, aber die Diskussion war respektvoll.
+  - Es gab einen harten Wortwechsel, aber beide haben sich danach entschuldigt.
+  - Der Konflikt hat uns sogar stärker gemacht, weil wir gelernt haben, anders zu kommunizieren.
+  - Wir hatten eine schwierige Phase, aber die Mediation hat geholfen.
+  - Nach dem Streit haben wir neue Kommunikationsregeln aufgestellt.
+  - Es gab eine Krise, aber wir haben gemeinsam einen Weg daraus gefunden.
+  - Trotz der Differenzen konnten wir immer sachlich miteinander reden.
+  - Wir haben einen Coach hinzugezogen und die Kommunikation hat sich deutlich verbessert.
+  - Es gab harte Worte, aber auch den Willen, es besser zu machen.
+  - Konflikte sind bei uns normal, aber sie werden nicht persönlich.
+  - Wir haben unterschiedliche Sichtweisen, respektieren aber die des anderen.
+  - Die Diskussion war hitzig, aber am Ende standen wir hinter der gemeinsamen Entscheidung.
 tags:
 - mema
 - v3.3
@@ -41,3 +99,9 @@ composed_of:
 - SEM_STONEWALLING_BEHAVIOR
 - CLU_GOTTMAN_TOXICITY_CLUSTER
 criteria: "Progressive communication breakdown showing predictable stages from functional to complete failure"
+semiotic:
+  peirce: icon
+  signifikat: Zusammenbruch
+  framing_type: ueberflutung
+  cultural_frame: Emotionsregulation
+  myth: Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet

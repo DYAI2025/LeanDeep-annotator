@@ -43,6 +43,12 @@ activation:
 scoring:
   base: 1.5
   weight: 1.2
+semiotic:
+  peirce: symbol
+  signifikat: Liebe/Zuneigung
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 compositionality: deterministic
 vad_estimate:
   valence: 0.5
@@ -52,3 +58,5 @@ effect_on_state:
   trust: 0.15
   conflict: 0.0
   deesc: 0.1
+semantic_affinity:
+  ironie_suppress: true

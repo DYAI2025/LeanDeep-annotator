@@ -59,6 +59,11 @@ semiotic:
   level: pragmatic
   object: "positive_regard"
   interpretant: "effect_on_state: {trust: +0.15, intimacy: +0.1}"
+  peirce: icon
+  signifikat: Positive Grundhaltung
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 vad_estimate:
   valence: 0.3
   arousal: 0.3

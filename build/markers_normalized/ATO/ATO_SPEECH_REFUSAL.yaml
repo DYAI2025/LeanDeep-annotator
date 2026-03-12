@@ -15,24 +15,93 @@ patterns:
   value: "(?i)\\b(not talking|won't speak|giving silence|ignoring you)\\b"
 examples:
   positive:
-  - I'm not talking to you.
-  - I won't speak until you apologize.
-  - I'm giving you the silent treatment.
-  - I'm ignoring you now.
-  - Don't expect me to respond.
+  - Ich rede nicht mehr mit dir darüber.
+  - Ab jetzt sage ich gar nichts mehr.
+  - Ich schweige, bis du dich entschuldigst.
+  - Von mir hörst du kein Wort mehr dazu.
+  - Ich ignoriere das einfach.
+  - Erwarte keine Antwort von mir.
+  - Ich mache jetzt den Mund zu.
+  - Zu dem Thema sage ich nichts.
+  - Ich rede erst wieder, wenn du zuhörst.
+  - Stille ist meine Antwort.
+  - Ich verweigere jedes Gespräch darüber.
+  - Nein, ich spreche jetzt nicht.
+  - Keine Reaktion meinerseits, das hast du dir verdient.
+  - Ich gebe dir die kalte Schulter.
+  - Reden bringt nichts, ich höre auf.
+  - 'Ab sofort: Funkstille.'
+  - Ich mache dicht, sorry.
+  - Kein Kommentar, von mir aus Schweigen.
+  - Ich rede nicht mit Leuten, die nicht zuhören.
+  - Von mir kommt jetzt gar nichts mehr.
+  - Ich mauere, und das weißt du.
+  - Spar dir die Frage, ich antworte nicht.
+  - Ich werde darauf nicht eingehen.
+  - Mein Mund bleibt zu.
+  - Ich ziehe mich komplett zurück aus dem Gespräch.
+  - Du bekommst keine Antwort, solange du so bist.
+  - Ich höre auf zu reden, das war's.
+  - Schweigen ist Gold, sage ich nur.
+  - Ich blockiere das Thema, Ende.
+  - Nicht ein Wort mehr, versprochen.
+  - Ich spreche nicht mit dir, bis sich was ändert.
+  - Kein Ton von mir, das steht fest.
+  - Ich gehe auf Sendepause.
+  - Du kannst reden, ich antworte nicht.
+  - Ich habe nichts mehr zu sagen.
+  - Ich bin raus aus der Diskussion.
+  - Vergiss es, ich sage nichts.
+  - Ich entscheide mich fürs Schweigen.
+  - Nee, da kommt nichts von mir.
+  - Ich lasse das einfach unkommentiert.
+  - Du redest gegen eine Wand.
+  - Null Reaktion, so sieht's aus.
+  - Ich bin stumm geschaltet.
+  - Ich verweigere den Dialog.
+  - Kein Gespräch, kein Austausch, nichts.
+  - Ich mache Schluss mit dem Reden.
+  - Ich sage bewusst nichts dazu.
+  - Mein letztes Wort war eben mein letztes.
+  - Ich streike verbal.
+  - Von mir hörst du nur noch Stille.
   negative:
-  - I see it differently, but I respect your view.
-  - I want to be honest with you, even though it's hard.
-  - You're right, that was my mistake. I'm sorry.
-  - Let's both explain our side.
-  - I feel uncomfortable about this and want to talk about it.
-  - I understand why you see it that way.
-  - Thank you for telling me that. I'll think about it.
+  - Ich möchte gerne darüber reden.
+  - Lass uns das offen besprechen.
+  - Ich bin bereit, meine Sicht zu erklären.
+  - Können wir das in Ruhe klären?
+  - Ich möchte mich dazu äußern.
+  - Lass mich meine Meinung sagen.
+  - Ich bin offen für ein Gespräch.
+  - Ich will das nicht totschweigen.
+  - Reden wir darüber, bitte.
+  - Ich finde, wir sollten kommunizieren.
+  - Ich will mich nicht verschließen.
+  - Lass uns das durchsprechen.
+  - Ich teile gerne meine Gedanken.
+  - Ich bin gesprächsbereit.
+  - Können wir offen miteinander sein?
+  - Ich erzähle dir, was ich denke.
+  - Dialog ist mir wichtig.
+  - Ich sage dir ehrlich, was ich fühle.
+  - Lass mich das ausführen.
+  - Ich will nicht schweigen, sondern sprechen.
+  - Wir sollten das verbal klären.
+  - Ich bin nicht der Typ, der aufhört zu reden.
+  - Lass uns das in Worte fassen.
+  - Ich spreche lieber darüber als zu schweigen.
+  - Ich will das klären, nicht ignorieren.
 tags:
 - atomic
 - v3.3
 - auto-generated
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

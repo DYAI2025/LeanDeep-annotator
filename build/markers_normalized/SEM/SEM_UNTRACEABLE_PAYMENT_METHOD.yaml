@@ -21,14 +21,77 @@ examples:
   - Kryptowährungen wie Bitcoin sind der sicherste und anonymste Weg, mir zu helfen.
   - Bitte sende das Geld nicht auf mein Konto, sondern an meinen Agenten über MoneyGram.
   - Du kannst das Geld auf eine Prepaid-Kreditkarte laden und mir die Daten schicken.
+  - Kaufe bitte Steam-Gutscheine im Wert von 500 Euro und schick mir die Nummern.
+  - Google Play Karten gehen am schnellsten, die kann ich hier sofort einlösen.
+  - Schick mir das Geld bitte über Wise an diese Adresse, aber nicht auf ein Bankkonto.
+  - iTunes-Karten sind die einfachste Lösung, die gibt es an jeder Tankstelle.
+  - Wir machen das über Hawala, das ist hier in meiner Region üblich.
+  - Bitte kein PayPal, das geht hier nicht. Nimm lieber Western Union.
+  - Ich kann kein normales Bankkonto nutzen, schick es bitte per Bargeldtransfer.
+  - Am besten du kaufst mir eine Paysafecard und schickst den Code.
+  - Bitcoin ist am sichersten für uns beide, hier ist meine Wallet-Adresse.
+  - Ethereum geht auch, Hauptsache kein Bankkonto — das wird hier überwacht.
+  - MoneyGram ist die einzige Option, die hier funktioniert.
+  - Kauf einfach Gutscheine und schick mir Fotos von den Codes.
+  - Per Bargeldumschlag wäre auch eine Option, ich gebe dir die Adresse.
+  - Neosurf-Gutscheine kann ich hier sofort einlösen, das ist am einfachsten.
+  - Bitte über TransferGo, aber als Bargeldabholung, nicht als Banküberweisung.
+  - Prepaid Visa Karten sind perfekt, die kann ich überall nutzen.
+  - Du könntest mir auch über Crypto.com was schicken, das ist diskreter.
+  - Mein Bankkonto ist gesperrt, bitte schick das Geld über einen Transfer-Service.
+  - Am besten kaufst du mir Zalando-Gutscheine, die kann ich hier verkaufen.
+  - Ria Money Transfer geht am schnellsten, bar zur Abholung bitte.
+  - Revolut funktioniert bei mir nicht, nimm bitte Western Union.
+  - Cashapp oder Venmo gehen hier leider nicht, nur Gutscheincodes.
+  - Kauf mir bitte eine Mastercard Geschenkkarte und schick die Daten.
+  - Das Geld muss bar sein, per Überweisung geht das nicht wegen der Behörden.
+  - Tether USDT ist am besten, das schwankt nicht so wie Bitcoin.
+  - Schick es bitte über WorldRemit, Bargeldabholung in meiner Stadt.
+  - Eine CashtoCode-Zahlung wäre die sicherste Methode für uns.
+  - Monero ist komplett anonym, das wäre die ideale Lösung.
+  - Bitte lade Geld auf eine virtuelle Karte und schick mir die Nummer.
+  - Über eine App wie Remitly kannst du mir Bargeld schicken, das geht schnell.
+  - Guthabenkarten vom Supermarkt sind am unkompliziertesten.
+  - Kein Banktransfer bitte, das dauert Wochen und wird kontrolliert.
+  - Dash oder Litecoin gehen auch, Hauptsache dezentral.
+  - Schick mir die Apple-Geschenkkarte einfach per Foto, den Rest mache ich.
+  - Über Xoom kannst du mir Bargeld zur Abholung senden.
+  - Ich brauche die Geschenkkartennummer und den PIN, dann ist alles erledigt.
+  - Per Hawala-Broker geht das in 24 Stunden, ganz ohne Bank.
+  - Bitte kauf mir Flexepin-Codes, die kann ich hier direkt einlösen.
+  - Hier gibt es keinen PayPal-Zugang, aber Western Union hat eine Filiale.
+  - Nimm bitte Ria oder MoneyGram, bar zur Abholung.
+  - Eine anonyme Krypto-Wallet ist das Sicherste für dich und mich.
+  - Ich kann nur Gutscheincodes annehmen, alles andere wird blockiert.
+  - Bitte schick es über den informellen Kanal, den ich dir erklärt habe.
+  - Goldkauf und Versand wäre auch eine Möglichkeit, wenn du magst.
+  - Per Telegram kann ich dir eine Bitcoin-Adresse schicken, das ist einfacher.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
   - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
+  - Lass uns gemeinsam eine Lösung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich möchte verstehen, was du meinst.
+  - Das klingt nach einem wichtigen Thema für dich.
+  - Kannst du mir deine IBAN schicken? Dann überweise ich dir das.
+  - Ich zahle dir das per normaler Banküberweisung zurück.
+  - Soll ich dir das Geld per PayPal schicken?
+  - Meine Bankverbindung findest du auf der Rechnung.
+  - Hast du ein Konto bei der Sparkasse? Dann geht's am schnellsten.
+  - Ich überweise dir morgen die 50 Euro zurück.
+  - Das Geld ist schon auf deinem Konto, dauert einen Werktag.
+  - Soll ich per Lastschrift oder Überweisung zahlen?
+  - Ich habe das online per Kreditkarte bezahlt.
+  - Die Rechnung kannst du per SEPA-Überweisung begleichen.
+  - Ich schicke dir das Geld per PayPal Friends, ok?
+  - Die Miete überweise ich wie immer am Ersten.
+  - Hast du die Erstattung von Amazon schon bekommen?
+  - Soll ich das Ticket per Karte bezahlen?
+  - Ich hab dir das Geld gerade überwiesen.
+  - Per Klarna kann man das auch in Raten zahlen.
+  - Ich bezahle das heute Abend online.
+  - Die Kaution überweise ich morgen mit Betreff 'Wohnung XY'.
 tags:
 - fraud
 - anonym
@@ -40,6 +103,12 @@ composed_of:
 - ATO_PLACEHOLDER
 activation:
   rule: ANY 1
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

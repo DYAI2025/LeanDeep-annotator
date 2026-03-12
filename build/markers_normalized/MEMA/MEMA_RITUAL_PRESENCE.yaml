@@ -35,3 +35,9 @@ tags:
 rating: 1
 activation:
   rule: "RITUAL_INVOCATION >= 2 in 10 messages"
+semiotic:
+  peirce: symbol
+  signifikat: Beziehungsritual
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'

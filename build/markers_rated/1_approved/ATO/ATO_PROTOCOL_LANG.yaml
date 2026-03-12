@@ -14,6 +14,11 @@ semiotic:
   object: "process_jargon"
   connotation: ["prozess", "jargon"]
   interpretant: "effect_on_state: {sync: +0.15, task_dominance: +0.2}"
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: Zweifel ist Schwaeche — wer zoegert, verliert
 examples:
   positive_de:
   - "Ich lege ein Ticket an."
@@ -46,6 +51,26 @@ examples:
   - "Retrospektive halten."
   - "Kanban managen."
   - "Change Request prüfen."
+  - Sprint Review morgen um 10.
+  - Das Ticket ist in Bearbeitung.
+  - Die Frist für die Abnahme ist Donnerstag.
+  - Bitte das Protokoll an alle verteilen.
+  - Der Scope muss noch final abgestimmt werden.
+  - Die Freigabe steht noch aus.
+  - Wann ist die Abnahme geplant?
+  - Der Change Request wurde genehmigt.
+  - Ich verschiebe das Backlog-Item nach oben.
+  - Unser SLA sieht 4h Reaktionszeit vor.
+  - Wir sind bei Prozessschritt 3.
+  - Die Retrospektive war sehr produktiv.
+  - Im Sprint Review besprechen wir die Ergebnisse.
+  - Das Ticket muss priorisiert werden.
+  - Die Frist wurde verlängert.
+  - Das Protokoll der letzten Sitzung fehlt noch.
+  - Der Scope wurde erweitert.
+  - Wir brauchen die Freigabe vom Management.
+  - Die Abnahme läuft nach Checkliste.
+  - Bitte den Change Request dokumentieren.
   negative_de:
   - "Ich vermisse dich."
   - "Das macht mir Angst."
@@ -72,10 +97,7 @@ examples:
   - "Lass uns fühlen."
   - "Ich teile Gefühle."
   - "Bleib beim Emotionalen."
-  - "Das fühlt sich an."
-  - "Erzähl von dir."
-  - "Ich liebe das."
-  - "Traurig heute."
-  - "Feiern wir?"
+  positive: []
+  negative: []
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}

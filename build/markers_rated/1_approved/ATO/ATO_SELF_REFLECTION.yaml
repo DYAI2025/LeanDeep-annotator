@@ -16,6 +16,51 @@ examples:
   - "I see what you're getting at."
   - "I recognize my role in this."
   - "I notice I've been doing this."
+  - I realize I need to change.
+  - I understand now, where I went wrong.
+  - I see my part in the conflict.
+  - I recognize that pattern in myself.
+  - I notice how I react to stress.
+  - I realize I was being unfair.
+  - I understand my own behavior better.
+  - I see things more clearly now.
+  - I recognize my triggers.
+  - I notice my own biases.
+  - I realize I could have done better.
+  - I understand why I feel this way.
+  - I see how my actions affected you.
+  - I recognize I was wrong.
+  - I notice my own growth.
+  - I realize it's time to reflect.
+  - I understand my motivations now.
+  - I see my strengths and weaknesses.
+  - I recognize the need for change.
+  - I notice when I'm projecting.
+  - I realize I've been avoiding this.
+  - I understand the impact of my words.
+  - I see the bigger picture now.
+  - I recognize my defense mechanisms.
+  - I notice my emotional reactions.
+  - I realize I need support.
+  - I understand my limitations.
+  - I see how far I've come.
+  - I recognize my blind spots.
+  - I notice my tendencies.
+  - I realize this is about me.
+  - I understand myself better each day.
+  - I see my patterns repeating.
+  - I recognize what I need.
+  - I notice my own resistance.
+  - I realize I'm responsible for my happiness.
+  - I understand the root cause.
+  - I see my contribution to the problem.
+  - I recognize my privilege.
+  - I notice how I self-sabotage.
+  - I realize I've grown a lot.
+  - I understand my fears now.
+  - I see how I can improve.
+  - I recognize my progress.
+  - I notice my inner critic at work.
   negative:
   - Can you pass the salt?
   - The meeting is at 2 PM.
@@ -24,6 +69,25 @@ examples:
   - Did you read the email?
   - I need to get gas.
   - The meeting is in the conference room.
+  - I'll take the train today.
+  - What time does the store close?
+  - I parked on the second floor.
+  - The report is due Friday.
+  - Let's order lunch.
+  - I need to charge my phone.
+  - The printer is broken again.
+  - Where did I put my keys?
+  - We need milk.
+  - The dog needs a walk.
+  - It's supposed to rain later.
+  - I forgot my umbrella.
+  - Traffic was terrible today.
+  - The coffee is ready.
+  - I sent the invoice yesterday.
+  - My subscription expires next month.
+  - The package arrived.
+  - I'll be home by six.
 tags: [atomic, v3.3, auto-generated]
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

@@ -42,6 +42,12 @@ composed_of:
 - ATO_FEELING_VERB
 window:
   messages: 2
+semiotic:
+  peirce: index
+  signifikat: Mauern/Blockade
+  framing_type: vermeidung
+  cultural_frame: Gottman
+  myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'
 compositionality: deterministic
 vad_estimate:
   valence: -0.65
@@ -51,3 +57,5 @@ effect_on_state:
   trust: -0.45
   conflict: 0.5
   deesc: -0.3
+activation:
+  rule: "ANY 2"

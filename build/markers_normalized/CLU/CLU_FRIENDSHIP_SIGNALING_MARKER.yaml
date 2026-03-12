@@ -15,26 +15,98 @@ frame:
 patterns: []
 examples:
   positive:
-  - Weißt du noch, wie wir damals im Regen gefeiert haben?
-  - Du bist und bleibst mein Lieblingsidiot.
-  - Egal was passiert, ich steh hinter dir, klar?
-  - Du kennst mich doch – ich brauch drei Tage zum Antworten 😂
-  - Nur du darfst mich so nennen, Alter.
+  - Weißt du noch wie wir damals im Regen gefeiert haben?
+  - Du bist und bleibst mein Lieblingsidiot
+  - Egal was passiert, ich steh hinter dir klar?
+  - Du kennst mich doch, ich brauch drei Tage zum Antworten haha
+  - Nur du darfst mich so nennen, Alter
+  - Ich bin so froh dass ich dich hab, ernsthaft
+  - Wir zwei gegen den Rest der Welt wie immer
+  - Das ist genau so ein Ding das nur wir lustig finden
+  - Danke dass du immer ehrlich zu mir bist, das schätz ich mega
+  - Bro du bist der einzige dem ich das erzählen würde
+  - Alter, weißt du noch unsere erste WG?? Die war so chaotisch 😂
+  - Du bist wie eine Schwester für mich, ehrlich
+  - Egal was kommt, du und ich, das hält
+  - Haha nur wir verstehen den Insider mit dem Esel
+  - Ich ruf dich immer als erstes an wenn was passiert
+  - Keiner kennt mich so gut wie du
+  - Danke dass du IMMER da bist, nicht nur bei guten Zeiten
+  - Du bist mein Mensch, hab ich dir das schon mal gesagt?
+  - Zusammen alt werden, du und ich, auf der Veranda mit Bier 🍺
+  - Du weißt was ich denke bevor ich es sage
+  - Wir haben so viel zusammen durchgemacht, das schweißt zusammen
+  - Ich vertrau dir blind, das weißt du
+  - Du bist die einzige Person die mich zum Lachen bringt wenn alles scheiße ist
+  - Best Friends seit der 5. Klasse und daran ändert sich nix
+  - Ich bin so froh dass ich dich hab, ernsthaft mal
+  - Erinnerst du dich an den Urlaub in Kroatien? Beste Zeit
+  - Du und ich gegen den Rest der Welt, wie immer
+  - Hab heute was Lustiges gesehen und musste sofort an dich denken
+  - Danke dass du mich erdest wenn ich durchdrehe
+  - Niemand sonst versteht meinen Humor so wie du
+  - Du bist Familie, auch wenn wir nicht verwandt sind
+  - Ich schätz deine Ehrlichkeit, auch wenn es manchmal wehtut
+  - Unser Song lief grad im Radio, musste sofort an dich denken!
+  - Du warst da als sonst niemand da war, das vergesse ich nie
+  - Lass mal wieder zusammen verreisen, wie alte Zeiten
+  - Digga, du kennst mich besser als ich mich selbst
+  - Du und ich, das ist safe für immer
+  - 'Hab dir noch nie gesagt wie wichtig du mir bist, aber: MEGA'
+  - Wir haben zusammen geweint und zusammen gelacht, DAS ist Freundschaft
+  - Du machst mein Leben besser, nur durch dein Dasein
+  - Wenn ich einen Anruf um 3 Uhr nachts machen müsste, wärst du's
+  - Alter Schwede, 15 Jahre Freundschaft und wird nur besser
+  - Du bist mein Safe Space, ehrlich
+  - Zusammen lachen über Sachen die sonst keiner lustig findet 😂
+  - Ich vermiss unsere Abende, lass bald was machen!
+  - Du bist der einzige der mich so nehmen kann wie ich bin
+  - Freunde kommen und gehen, aber wir bleiben
+  - Hab dir was geschickt, nur weil ich an dich gedacht hab
+  - Du und ich, same wavelength seit Tag 1
+  - Unser Ding ist halt speziell, das versteht kein Außenstehender
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Können Sie mir bitte die Unterlagen schicken?
+  - Der Termin wurde auf Mittwoch verschoben
+  - Ich kenne die Person nicht wirklich gut
+  - Das Wetter ist heute schön
+  - Bitte überweisen Sie den Betrag bis Freitag
+  - Sehr geehrte Damen und Herren, hiermit kündige ich...
+  - Der Paketbote war da
+  - Ich brauch noch die Rechnung für die Buchhaltung
+  - Morgen findet das Meeting um 10 statt
+  - Die Baustelle vor dem Haus ist echt nervig
+  - Welche Hausnummer war das nochmal?
+  - Können wir den Termin verschieben?
+  - Der Zug hat Verspätung
+  - Ich kenne ihn nur vom Sehen
+  - Die Nachbarn sind ganz nett, aber wir reden nicht viel
+  - Guten Tag, ich hätte gerne ein Brot
+  - Das Meeting war produktiv
+  - Herr Müller, können Sie das bis Freitag erledigen?
+  - Die Kollegin ist ganz okay aber wir sind nicht eng
+  - Der Handwerker kommt morgen zwischen 8 und 12
+  - Wir kennen uns nur flüchtig
+  - Guten Tag, ich wollte mich nach dem Lieferstatus erkundigen
+  - Ich hab einen Termin beim Steuerberater
+  - Können wir die Besprechung auf 14 Uhr legen?
+  - Der Aufzug funktioniert nicht, nehmen Sie die Treppe
 tags:
 - communication
 rating: 1
 composed_of:
-- SEM_GENERIC_PATTERN
+- SEM_SHARED_EXPERIENCE_REFERENCE
+- SEM_SHARED_HUMOR
+- SEM_WARM_APPRECIATION
+- SEM_SOCIAL_AFFILIATION
 activation:
-  rule: AT_LEAST 2 IN 5 messages
+  rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
 scoring:
   base: 1.5
   weight: 1.2
+semiotic:
+  peirce: index
+  signifikat: Cluster-Muster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

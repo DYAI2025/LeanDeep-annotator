@@ -18,28 +18,92 @@ patterns:
 examples:
   positive:
   - Am liebsten wäre mir, wenn alles so bleibt wie es ist.
-  - Bloß nichts ändern – so passt es.
+  - Bloß nichts ändern, so passt es.
   - Status quo behalten, bitte.
   - Ich will, dass alles so bleibt.
   - Keine Veränderungen jetzt.
-  - Es funktioniert – also nichts anfassen.
-  - Lass es so, wie’s ist.
+  - Es funktioniert, also nichts anfassen.
+  - Lass es so, wie es ist.
   - Warum ändern? Das läuft doch.
   - Ich mag keine Änderungen am Setup.
   - Bitte alles so lassen.
+  - Bloß nichts verändern, das bringt nur Unruhe.
+  - Status quo ist mir am liebsten.
+  - Alles so lassen wie gehabt.
+  - Keine Veränderung nötig, finde ich.
+  - Lass alles so, das ist gut genug.
+  - Bloß nichts ändern, das verwirrt nur alle.
+  - Status quo beibehalten, bitte nicht umbauen.
+  - Ich will, dass alles bleibt, wie es ist.
+  - Keine Änderungen, ich bin zufrieden.
+  - Lass es einfach, wie es läuft.
+  - Bloß nichts anrühren.
+  - Status quo ist die sicherste Option.
+  - Alles so lassen, kein Risiko eingehen.
+  - Keine Veränderung, bitte.
+  - So wie es ist, passt es mir.
+  - Bloß nichts umstellen.
+  - Status quo hat sich bewährt.
+  - Alles so lassen, es funktioniert doch.
+  - Ich bin gegen Veränderungen gerade.
+  - Lass es einfach stehen.
+  - Bloß nichts ändern, das macht nur Arbeit.
+  - Status quo first.
+  - Alles so lassen, nichts riskieren.
+  - Keine Veränderungen, bis wir müssen.
+  - So bleibt wie es ist, okay?
+  - Bloß nicht anfassen, es läuft ja.
+  - Status quo, nichts anderes.
+  - Alles so lassen, ich gewöhne mich ungern um.
+  - Keine Veränderung, kein Stress.
+  - Lass mal alles, wie es ist.
+  - Bloß nichts ändern, ich mag Routine.
+  - Status quo ist mein Favorit.
+  - Alles so lassen, wir haben Wichtigeres.
+  - Keine Veränderung braucht's hier.
+  - So wie es ist, fertig.
+  - Bloß nicht umbauen jetzt.
+  - Status quo, Punkt.
+  - Alles bleibt beim Alten.
+  - Keine Änderungen gewünscht.
+  - Lass es so stehen, bitte.
   negative:
-  - wenige Veränderungen jetzt.
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
+  - Wir sollten das mal komplett überarbeiten.
+  - Zeit für eine Veränderung.
+  - Das muss erneuert werden.
+  - Ich will was Neues ausprobieren.
+  - Wir brauchen frischen Wind.
+  - Lass uns das umgestalten.
+  - Das Alte funktioniert nicht mehr.
+  - Wir müssen uns weiterentwickeln.
+  - Ich bin offen für Neues.
+  - Veränderung ist notwendig.
+  - Wir stagnieren, wenn wir nichts ändern.
+  - Das System braucht ein Update.
+  - Ich will Fortschritt sehen.
+  - Wir müssen innovativer werden.
+  - Stillstand ist Rückschritt.
+  - Ich schlage eine neue Richtung vor.
+  - Das braucht eine Überholung.
+  - Wir sollten experimentieren.
+  - Neues wagen, altes loslassen.
+  - Das Alte hat ausgedient.
+  - Lass uns was Frisches machen.
+  - Ich bin für radikale Änderung.
+  - Wir brauchen eine Transformation.
+  - Das muss sich ändern.
+  - Ich will, dass sich was bewegt.
 tags:
 - stability
 - habit
 - no_change
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

@@ -39,20 +39,10 @@ composed_of:
   require:
   - SEM_MINIMIZATION
   - ATO_MINIMIZING
-  k_of_n:
-    k: 2
-    of: []
 window:
   size_messages: 8
 gates:
   min_msgs: 2
-ingredients:
-  require:
-  - SEM_MINIMIZATION
-  - ATO_MINIMIZING
-  k_of_n:
-    k: 2
-    of: []
 emits:
   indices:
     conflict: -0.1
@@ -65,6 +55,11 @@ semiotic:
   connotation:
   - "herunterspielen"
   - "loop"
+  peirce: index
+  signifikat: Cluster-Muster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 temperature_semantics:
   external: RUHE
   latent: DEVALUATION

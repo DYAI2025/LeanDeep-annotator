@@ -37,15 +37,21 @@ tags:
 rating: 1
 composed_of:
   any_of:
-  - ATO_SUPPORTIVE_LANGUAGE
+  - ATO_SUPPORT_PHRASE
   - ATO_SUPPORT_MESSAGE
   - ATO_ACKNOWLEDGE
 activation:
-  rule: "AT_LEAST 2 IN 2 messages"
+  rule: AT_LEAST 2 IN 2 messages
   window: 2
 scoring:
   base: 0.6
   weight: 1.05
+semiotic:
+  peirce: index
+  signifikat: Validierung/Anerkennung
+  framing_type: empathie
+  cultural_frame: Rogers
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

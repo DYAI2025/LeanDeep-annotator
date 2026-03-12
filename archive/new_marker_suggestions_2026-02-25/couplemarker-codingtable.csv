@@ -1,0 +1,4 @@
+sign_id,locus,evidence,signifier,signified,type,denotation,connotations,codes,myth,ambiguity_kinds,ambiguity_risk,ambiguity_mitigation,markers
+S1,"Paartherapie-Mythen: Kommunikation","Kommunikation löst alles","Kommunikation","Austausch von Worten","symbol","Offener Dialog","Fairness; Verständnis","Care; Rationalität","Kommunikation als Erlösung","pragmatic","medium","Machtdynamiken einbeziehen","rhetoric_assertion"
+S2,"Paartherapie-Mythen: Vertrauen","Vertrauen muss verdient werden","Vertrauen","Emotionale Sicherheit","index","Bruch/Reparatur","Bindung; Leistung","Treue; Abhängigkeit","Vertrauen als Währung","lexical","high","Missbrauchskontexte prüfen","modality_insistence"
+S3,"Paartherapie-Mythen: Grenzen","Grenzen sind gesund","Grenzen","Persönliche Barriere","icon","Schutzmechanismus","Autonomie; Selbstschutz","Individualismus; Therapie-Ideal","Grenzen als Heilung","pragmatic","medium","Kollektive Verantwortung einbeziehen","sentiment_positive"

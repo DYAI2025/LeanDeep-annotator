@@ -55,3 +55,4 @@ examples:
   - Das klingt nach einem wichtigen Thema fuer dich.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Resignation, framing_type: vermeidung, cultural_frame: '', myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'}

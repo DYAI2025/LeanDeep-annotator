@@ -2,7 +2,7 @@ id: ATO_STEGANO_HINT
 schema: LeanDeep
 version: '5.1'
 layer: ATO
-lang: en
+lang: de
 description: ''
 frame:
   signal:
@@ -15,21 +15,90 @@ patterns:
   value: "\\b(versteckte Sprache|kodiert|steganografisch)\\b"
 examples:
   positive:
-  - versteckte Sprache
-  - kodiert
-  - steganografisch…
-  - versteckte Hinweise
-  - kodierte Botschaft
+  - Das ist versteckte Sprache, hörst du es?
+  - Ich habe das kodiert, damit nur du es verstehst.
+  - Steganografisch verpackt, die Botschaft ist drin.
+  - Es gibt versteckte Hinweise in meinem Text.
+  - Die kodierte Botschaft ist zwischen den Zeilen.
+  - Versteckte Sprache, nur für Eingeweihte.
+  - Das ist kodiert, lies genau.
+  - Steganografisch eingebettet in den Satz.
+  - Versteckte Zeichen, die mehr sagen.
+  - Die Botschaft ist kodiert, nicht offensichtlich.
+  - Das ist eine versteckte Nachricht.
+  - Kodiert und verschlüsselt, nur für dich.
+  - Steganografisch markiert, achte auf die Details.
+  - Versteckte Sprache im Klartext.
+  - Das ist ein kodierter Hinweis.
+  - Steganografische Elemente in der Nachricht.
+  - Versteckter Subtext, den man entschlüsseln muss.
+  - Das ist kodiert geschrieben.
+  - Steganografisch verschleiert, aber lesbar.
+  - Versteckte Bedeutung im Text.
+  - Kodierte Nachricht, pass auf.
+  - Steganografisch eingewebt.
+  - Versteckte Sprache als Warnung.
+  - Das ist ein kodiertes Signal.
+  - Steganografisch platzierte Information.
+  - Versteckte Botschaft, die nur wir kennen.
+  - Kodiert wie ein Geheimcode.
+  - Steganografisch getarnt.
+  - Versteckte Hinweise überall.
+  - Das ist kodiert, ich schwöre.
+  - Steganografisch ist das Absicht.
+  - Versteckte Sprache, kein Zufall.
+  - Kodierte Zeichen im Text.
+  - Steganografisch verborgen.
+  - Versteckte Markierung.
+  - Das ist ein kodiertes Muster.
+  - Steganografisch angelegte Spur.
+  - Versteckte Worte zwischen den Zeilen.
+  - Kodiert und nur für uns verständlich.
+  - Steganografisch eingebaut.
+  - Versteckte Sprache, die Bedeutung trägt.
+  - Das ist kodiert, achte auf die Großbuchstaben.
+  - Steganografischer Trick.
+  - Versteckter Code im Alltagstext.
+  - Kodierte Information, nicht für alle.
+  - Steganografisch verpackte Warnung.
+  - Versteckte Sprache, klassisch.
+  - Das ist ein kodiertes Versteckspiel.
+  - Steganografisch verschlüsselt.
+  - Versteckte Botschaft, lies nochmal.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ich sage dir offen, was ich denke.
+  - Kein Geheimnis, alles klar formuliert.
+  - Das ist wörtlich gemeint, keine Codes.
+  - Ich meine das genau so, wie ich es sage.
+  - Klartext, ohne versteckte Bedeutung.
+  - Alles transparent, nichts verborgen.
+  - Ich drücke mich direkt aus.
+  - Kein Subtext, das ist, was es ist.
+  - Ich verstecke nichts in meinen Worten.
+  - Offen und ehrlich, ohne Hintergedanken.
+  - Das ist direkt und unverschlüsselt.
+  - Keine doppelten Böden hier.
+  - Ich rede Klartext.
+  - Alles offen auf dem Tisch.
+  - Kein Geheimcode, einfach Deutsch.
+  - Ich sage es, wie es ist.
+  - Transparent und deutlich.
+  - Keine versteckten Absichten.
+  - Das ist keine Verschlüsselung.
+  - Alles klar und verständlich.
+  - Ich kommuniziere direkt.
+  - Kein Rätsel, keine Codes.
+  - Wörtlich nehmen, bitte.
+  - Offene Kommunikation, das wars.
+  - Kein Versteckspiel nötig.
 tags: []
 rating: 2
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

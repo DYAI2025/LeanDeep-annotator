@@ -14,19 +14,82 @@ scoring:
   weight: 1.2
 examples:
   positive:
-  - Also ich bin da – aber wie du willst.
-  - Ich überlass dir die Entscheidung.
-  - Falls du Lust hast, können wir was machen.
-  - Ich will dir da nichts vorschreiben.
-  - Du entscheidest, ich bin flexibel.
+  - "Also ich bin da – aber wie du willst."
+  - "Ich überlass dir die Entscheidung."
+  - "Falls du Lust hast, können wir was machen."
+  - "Ich will dir da nichts vorschreiben."
+  - "Du entscheidest, ich bin flexibel."
+  - "Liegt an dir, ich bin raus."
+  - "Du musst wissen, ob du das willst."
+  - "Ist dein Ding, nicht meins."
+  - "Ich misch mich da nicht ein."
+  - "Mach du mal, ich halte mich raus."
+  - "Das ist deine Sache, nicht meine."
+  - "Wenn du meinst – ich sag nichts mehr."
+  - "Das musst du mit dir selbst klären."
+  - "Ich überlasse das komplett dir."
+  - "Entscheide du, ich trage das mit."
+  - "Ist ja nicht mein Problem."
+  - "Ich bin da entspannt, du machst das schon."
+  - "Deine Verantwortung, nicht meine."
+  - "Das liegt jetzt bei dir."
+  - "Ich schiebe das an dich weiter."
+  - "Mach wie du denkst, ich halte mich zurück."
+  - "Du wolltest das so, also musst du das auch verantworten."
+  - "Ich kann da wenig machen, das ist dein Part."
+  - "Ganz ehrlich, das ist deine Baustelle."
+  - "Ich wasche meine Hände in Unschuld."
+  - "Schau du mal, wie du das hinkriegst."
+  - "Das musst du selber wissen."
+  - "Ich geb die Verantwortung ab."
+  - "Du hattest die Idee, also musst du liefern."
+  - "Liegt nicht in meinem Einflussbereich."
+  - "Das kannst du dir selbst zuschreiben."
+  - "Ich bin da parteilos, mach du."
+  - "Du bist am Zug, nicht ich."
+  - "Mein Part ist erledigt, jetzt bist du dran."
+  - "Das habe ich delegiert, frag den Zuständigen."
+  - "Ich hab damit nichts zu tun, das ist dein Thema."
+  - "Du weißt ja, was du tust."
+  - "Ich steh da außen vor."
+  - "Dein Call, dein Risiko."
+  - "Sag du, was wir machen – ich folge."
+  - "Das soll jemand anderes entscheiden."
+  - "Mir egal, entscheide du."
+  - "Ist nicht meine Zuständigkeit."
+  - "Ich hab meinen Teil getan."
+  - "Du bist der Boss, sag du's."
+  - "Wenn es schiefgeht, lag es nicht an mir."
+  - "Das ist jetzt dein Bier."
+  - "Ich gebe die Entscheidung zurück an dich."
+  - "Du musst das allein verantworten."
+  - "Ich habe damit nichts mehr zu tun."
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - "Ich finde, wir sollten das gemeinsam besprechen."
+  - "Das ist ein guter Punkt von dir."
+  - "Ich verstehe deine Perspektive."
+  - "Lass uns zusammen eine Lösung finden."
+  - "Mir ist aufgefallen, dass wir unterschiedlich denken."
+  - "Ich möchte verstehen, was du meinst."
+  - "Ich übernehme das gerne für dich."
+  - "Die Verantwortung liegt bei mir."
+  - "Ich kümmere mich darum."
+  - "Das ist mein Job, keine Sorge."
+  - "Wir entscheiden das zusammen."
+  - "Ich stehe zu meiner Entscheidung."
+  - "Lass mich das für uns regeln."
+  - "Ich trage die Konsequenzen."
+  - "Wollen wir das gemeinsam angehen?"
+  - "Ich fühle mich dafür verantwortlich."
+  - "Das nehme ich auf meine Kappe."
+  - "Ich packe das an."
+  - "Kein Problem, ich mache das."
+  - "Ich bin hier zuständig."
+  - "Lass mich das klären."
+  - "Das ist mein Part im Projekt."
+  - "Ich entscheide das und stehe dazu."
+  - "Gemeinsam finden wir eine Lösung."
+  - "Ich übernehme die Führung hier."
 tags:
 - communication
 compositionality: deterministic
@@ -38,3 +101,4 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+semiotic: {peirce: index, signifikat: Verantwortungsuebernahme, framing_type: reparatur, cultural_frame: '', myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'}

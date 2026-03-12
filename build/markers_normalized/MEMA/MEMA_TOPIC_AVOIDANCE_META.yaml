@@ -1,0 +1,116 @@
+id: MEMA_TOPIC_AVOIDANCE_META
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - topic
+  - avoidance
+  concept: Themenvermeidung auf Meta-Ebene – systematisches Ausweichen vor bestimmten Themen
+  pragmatics: Erkennt Muster konsistenter Themenvermeidung über den Gesprächsverlauf
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Jedes Mal wenn ich über Geld reden will, wechselst du das Thema.
+  - Du weichst dem Thema Zukunft systematisch aus.
+  - Wir reden nie über Sex – nie. Das ist ein Tabu bei uns.
+  - Immer wenn ich deine Eltern anspreche, machst du dicht.
+  - Du vermeidest das Thema Kinder konsequent seit Monaten.
+  - Mir fällt auf, dass du das Thema Hochzeit nie ansprichst.
+  - Über deine Vergangenheit redest du einfach nicht – Mauer.
+  - Jedes Mal wenn ich deinen Ex erwähne, wirst du einsilbig.
+  - Das Thema Trennung ist tabu – wir tanzen drum herum.
+  - Du vermeidest jedes Gespräch über deine Gefühle.
+  - Wir reden über alles, außer über das eine Thema.
+  - Du lenkst jedes Mal ab, wenn ich über unsere Probleme reden will.
+  - Das Thema Alkohol ist bei uns verboten – obwohl es ein Problem ist.
+  - Immer wenn Therapie auf den Tisch kommt, machst du einen Scherz.
+  - Du meidest das Thema Tod wie die Pest.
+  - Wir umgehen das eigentliche Problem seit Wochen.
+  - Jedes Mal wenn ich über deine Arbeit rede, blockst du.
+  - Du redest über alles, nur nicht über das, was wirklich wichtig ist.
+  - Das Thema Freundschaften ist ein Minenfeld – also meiden wir es.
+  - 'Mir ist aufgefallen: wir haben das Thema Intimität seit Monaten nicht mehr angesprochen.'
+  - Du wechselst sofort das Thema, wenn ich deine Gesundheit anspreche.
+  - Es gibt unsichtbare Grenzen in unseren Gesprächen – bestimmte Themen sind tabu.
+  - Du verdrängst das Thema – aber es verschwindet nicht.
+  - Immer wenn ich über deine Familie rede, kommt ein 'lass uns über was anderes reden'.
+  - Das Thema Untreue ist ein schwarzes Loch – wir fallen nie rein.
+  - Du meidest emotionale Themen wie ein Profi.
+  - Jedes Mal wenn ich über unsere Zukunft spreche, steht plötzlich was anderes an.
+  - Das eigentliche Thema wird konsequent umschifft.
+  - Mir fällt auf, dass du das Wort 'Trennung' nie aussprichst.
+  - Du weichst aus, sobald es persönlich wird.
+  - Wir haben ein ganzes Themenfeld, das einfach nicht existiert in unseren Gesprächen.
+  - Jedes Mal wenn ich die Therapie erwähne, hast du plötzlich was Dringendes.
+  - Du ignorierst meine Fragen zu deiner Vergangenheit systematisch.
+  - Das Thema wird gemieden, als wäre es giftig.
+  - Mir ist aufgefallen, dass wir nie über Geld reden, obwohl es ein Riesenproblem ist.
+  - Du redest über dein Innenleben wie über ein Staatsgeheimnis – gar nicht.
+  - Wir tanzen um den heißen Brei – seit Monaten.
+  - Du vermeidest das Gespräch, indem du plötzlich müde bist.
+  - Das Thema existiert für dich nicht – obwohl es mich zerreißt.
+  - Immer wenn ich das anspreche, bekomme ich 'nicht jetzt'.
+  - 'Systematische Vermeidung: du gehst dem Thema seit einem Jahr aus dem Weg.'
+  - Du tust so, als gäbe es das Problem nicht.
+  - Das Unaussprechliche zwischen uns wächst.
+  - Du wechselst das Thema so geschickt, dass ich es fast nicht merke.
+  - Es gibt Zonen in unserer Beziehung, die wir nie betreten.
+  - Du meidest emotionale Tiefe – konsequent.
+  - Immer wenn ich dieses Thema anschneide, passiert irgendwas.
+  - Der Elefant im Raum wird von uns beiden ignoriert.
+  - Du hast eine Meisterschaft im Ausweichen entwickelt.
+  - Bestimmte Themen sind bei uns verbotenes Territorium.
+  negative:
+  - Lass uns offen über alles reden – auch über die schwierigen Themen.
+  - Ich möchte über unsere Finanzen sprechen, auch wenn es unangenehm ist.
+  - Wir sollten das Thema nicht vermeiden, sondern klären.
+  - Ich spreche das jetzt an, auch wenn es schwer ist.
+  - Lass uns den Elefanten im Raum endlich benennen.
+  - Ich will über unsere Zukunft reden, jetzt.
+  - Es gibt kein Tabu bei uns – wir reden über alles.
+  - Ich spreche es an, weil es wichtig ist.
+  - Wir müssen darüber reden, auch wenn es weh tut.
+  - Ich weiche diesem Thema nicht mehr aus.
+  - Lass uns ehrlich sein – auch über die unangenehmen Dinge.
+  - Wir reden offen und direkt miteinander.
+  - Ich bringe das Thema jetzt auf den Tisch.
+  - Es gibt nichts, worüber wir nicht reden können.
+  - Ich bin bereit, auch die schwierigen Gespräche zu führen.
+  - Wir haben keine Tabus in unserer Kommunikation.
+  - Lass uns das endlich ansprechen.
+  - Ich habe Angst vor dem Gespräch, aber ich führe es trotzdem.
+  - Offenheit ist mir wichtiger als Komfort.
+  - Wir reden über die schwierigen Themen – das macht uns stärker.
+  - Kein Thema ist tabu bei uns.
+  - Ich weiche nicht aus – ich stelle mich dem.
+  - Wir konfrontieren unsere Probleme direkt.
+  - Ich spreche das an, was gesagt werden muss.
+  - Wir scheuen kein schwieriges Gespräch.
+tags:
+- mema
+- topic
+- avoidance
+- evasion
+rating: 2
+composed_of:
+  required_any:
+  - SEM_CONFLICT_AVOIDANCE
+  - CLU_INDIRECT_CONFLICT_AVOIDANCE
+  supportive:
+  - ATO_TOPIC_SHIFT
+  - ATO_MINIMIZING
+activation:
+  rule: "ANY 3 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+semiotic:
+  peirce: index
+  signifikat: Themenwechsel/Abdriften
+  framing_type: vermeidung
+  cultural_frame: Systemisch
+  myth: Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres

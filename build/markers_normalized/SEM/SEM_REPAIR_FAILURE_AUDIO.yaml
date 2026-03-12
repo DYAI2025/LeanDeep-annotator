@@ -13,8 +13,8 @@ frame:
 patterns:
 - detect_class: sequence
   steps:
-  - "repair_attempt"
-  - "no_answer_or_topic_shift"
+  - repair_attempt
+  - no_answer_or_topic_shift
   max_span_seconds: 6
 examples:
   positive:
@@ -40,9 +40,15 @@ tags:
 - repair
 rating: 1
 composed_of:
-- ATO_LONG_RESPONSE_GAP
+- ATO_PAUSE_LONG
 scoring:
   base: 0.72
+semiotic:
+  peirce: index
+  signifikat: Beziehungsreparatur
+  framing_type: reparatur
+  cultural_frame: Gottman
+  myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.45
@@ -52,5 +58,11 @@ effect_on_state:
   trust: 0.35
   conflict: -0.3
   deesc: 0.4
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung
 metadata:
   type: SEM

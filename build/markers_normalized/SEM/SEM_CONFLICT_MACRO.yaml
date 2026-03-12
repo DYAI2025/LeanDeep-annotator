@@ -44,6 +44,12 @@ activation:
 scoring:
   base: 1.8
   weight: 1.2
+semiotic:
+  peirce: index
+  signifikat: Konfliktdynamik
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'
 compositionality: deterministic
 vad_estimate:
   valence: -0.5

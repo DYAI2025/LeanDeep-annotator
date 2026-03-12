@@ -100,6 +100,10 @@ class MarkerDef:
     compositionality: str | None = None  # deterministic | contextual | emergent
     vad_estimate: dict | None = None        # {valence, arousal, dominance}
     effect_on_state: dict | None = None     # {trust, conflict, deesc}
+    semiotic: dict | None = None            # {peirce, signifikat, cultural_frame, framing_type, ...}
+    absence_sets: dict | None = None        # MEMA: sets of markers that must be absent
+    gating_conflict: dict | None = None     # MEMA: requirement for active conflict
+    semantic_affinity: dict | None = None    # Semantic gate: intent/ironie/tension/register/emotion filters
 
 
 @dataclass
@@ -139,8 +143,26 @@ class MarkerEngine:
         self.engine_config: dict = {}
         self._loaded = False
 
+        # --- Quantum Collapse & EWMA Precision (LD 5.1) ---
+        self.ewma_precision: float = 0.70  # Target precision
+        self.alpha: float = 0.2            # Smoothing factor
+        self.confirmed_count: int = 0
+        self.retracted_count: int = 0
+        self.dynamic_threshold_modifier: float = 1.0  # Multiplier for thresholds
+        self.provisional_buffer: list[dict] = []      # Active hypotheses
+
     def load(self, registry_path: str | None = None):
-        """Load and compile all markers from the registry."""
+        """Load and compile all markers from the registry.
+
+        Idempotent: clears all state before loading so calling load()
+        twice does not accumulate duplicate markers.
+        """
+        self.markers.clear()
+        self.ato_markers.clear()
+        self.sem_markers.clear()
+        self.clu_markers.clear()
+        self.mema_markers.clear()
+
         path = Path(registry_path or settings.registry_path)
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -273,7 +295,7 @@ class MarkerEngine:
 
     def _compute_raw_vad(self, detections: list[Detection]) -> dict:
         """Compute aggregate VAD from a list of detections."""
-        vads = [d.vad for d in detections if d.vad]
+        vads = [d.vad for d in detections if d.vad and not d.marker_id.startswith("BLIND_")]
         if not vads:
             return {"valence": 0.0, "arousal": 0.0, "dominance": 0.0}
         return {
@@ -343,6 +365,72 @@ class MarkerEngine:
 
         return gated, suppressed, surfaced
 
+    # -----------------------------------------------------------------------
+    # Semantic Gate (Layer 0 integration)
+    # -----------------------------------------------------------------------
+
+    def _apply_semantic_gate(
+        self,
+        detections: list[Detection],
+        profile: "SemanticProfile | None",
+    ) -> list[Detection]:
+        """Filter ATO detections against a SemanticProfile.
+
+        Reduces confidence or suppresses markers whose semantic_affinity
+        conflicts with the profiled text. Markers without affinity pass through.
+        """
+        if profile is None or profile.source == "none":
+            return detections
+
+        gated: list[Detection] = []
+
+        for det in detections:
+            mdef = self.markers.get(det.marker_id)
+            affinity = mdef.semantic_affinity if mdef else None
+
+            if not affinity:
+                gated.append(det)
+                continue
+
+            score = 1.0
+
+            # Intent exclusion
+            if profile.intent in (affinity.get("intents_exclude") or []):
+                score *= 0.2
+            elif affinity.get("intents") and profile.intent not in affinity["intents"]:
+                score *= 0.5
+
+            # Ironie suppression
+            if affinity.get("ironie_suppress") and profile.ironie and profile.ironie_confidence > 0.7:
+                score *= 0.1
+
+            # Tension minimum
+            tension_min = affinity.get("tension_min")
+            if tension_min and profile.tension < tension_min:
+                score *= 0.4
+
+            # Register exclusion
+            if profile.register in (affinity.get("register_exclude") or []):
+                score *= 0.3
+
+            # Emotion mismatch (soft penalty)
+            if affinity.get("emotions") and profile.emotion_primary not in affinity["emotions"]:
+                score *= 0.6
+
+            if score >= 0.3:
+                det = Detection(
+                    marker_id=det.marker_id,
+                    layer=det.layer,
+                    confidence=round(det.confidence * score, 4),
+                    description=det.description,
+                    matches=det.matches,
+                    message_indices=det.message_indices,
+                    vad=det.vad,
+                )
+                gated.append(det)
+
+        return gated
+
     def _parse_marker(self, marker_id: str, data: dict) -> MarkerDef:
         """Parse a marker from registry data, compiling regex patterns."""
         patterns = []
@@ -375,6 +463,10 @@ class MarkerEngine:
             compositionality=data.get("compositionality"),
             vad_estimate=data.get("vad_estimate"),
             effect_on_state=data.get("effect_on_state"),
+            semiotic=data.get("semiotic"),
+            absence_sets=data.get("absence_sets"),
+            gating_conflict=data.get("gating_conflict"),
+            semantic_affinity=data.get("semantic_affinity"),
         )
 
     def _compile_pattern(self, raw: str, flags: list[str]) -> re.Pattern | None:
@@ -398,15 +490,66 @@ class MarkerEngine:
     _URL_RE = re.compile(
         r'https?://[^\s<>\"\')]+|www\.[^\s<>\"\')]+', re.IGNORECASE
     )
+    _EMAIL_RE = re.compile(
+        r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', re.IGNORECASE
+    )
+    # Aggressive Phone Regex: +49..., 0170..., with spaces/dashes
+    _PHONE_RE = re.compile(
+        r'(?:phone|Phone|Tel|Tel\.)\s*[:\s]*\+?[\d\s\-\(\)]{7,25}|\+[\d\s\-\(\)]{7,25}',
+        re.IGNORECASE
+    )
+    # WhatsApp / Chat metadata: [Date, Time] Name:, <Anhang: ...>, etc.
+    _META_RE = re.compile(
+        r'\[\d{2}\.\d{2}\.\d{2}, \d{2}:\d{2}(?::\d{2})?\]|<\w+: [^>]+>|\d{2}\.\d{2}\.\d{2}, \d{2}:\d{2} - ', 
+        re.IGNORECASE
+    )
 
     @classmethod
-    def _strip_urls(cls, text: str) -> str:
-        """Replace URLs with whitespace to prevent false pattern matches."""
-        return cls._URL_RE.sub(lambda m: ' ' * len(m.group()), text)
+    def _strip_technical_noise(cls, text: str) -> str:
+        """Replace URLs, emails, phone numbers and chat metadata with whitespace."""
+        text = cls._URL_RE.sub(lambda m: ' ' * len(m.group()), text)
+        text = cls._EMAIL_RE.sub(lambda m: ' ' * len(m.group()), text)
+        text = cls._PHONE_RE.sub(lambda m: ' ' * len(m.group()), text)
+        text = cls._META_RE.sub(lambda m: ' ' * len(m.group()), text)
+        return text
+
+    @classmethod
+    def _is_noise_match(cls, text: str) -> bool:
+        """Determines if a match is likely non-linguistic noise (phone, ID, date)."""
+        t = text.strip()
+        if not t: return True
+        
+        # Purely numeric or numeric with separators (Phone numbers, IDs, Timestamps)
+        # e.g., +49 123 456, 2026-02-25, 12:34:56, 00000733
+        if re.match(r'^[+\d\s\.\-:/(),]+$', t) and any(c.isdigit() for c in t):
+            # If it's mostly digits and separators, it's noise
+            digit_count = sum(c.isdigit() for c in t)
+            if digit_count / len(t) > 0.6 or digit_count > 5:
+                return True
+        
+        # Very short matches without letters
+        if len(t) < 3 and not any(c.isalpha() for c in t):
+            return True
+            
+        return False
 
     # -----------------------------------------------------------------------
     # ATO Detection (Level 1): Pure regex matching
     # -----------------------------------------------------------------------
+
+    @classmethod
+    def _is_formal_technical_text(cls, text: str) -> bool:
+        """Detect if a text is a technical manual or formal documentation."""
+        technical_keywords = {
+            "website", "klicken", "anzeigen", "bereitstellung", "richtlinien", 
+            "beantragen", "überprüfung", "einstellungen", "anfrage", "code",
+            "download", "update", "installation", "server", "adsense", "google"
+        }
+        words = set(re.findall(r"\w+", text.lower()))
+        matches = words.intersection(technical_keywords)
+        
+        # If more than 3 distinct technical keywords are found, it's highly likely NOT a personal chat
+        return len(matches) >= 3
 
     def detect_ato(
         self, text: str, threshold: float = 0.5, *, include_context_only: bool = True
@@ -418,8 +561,8 @@ class MarkerEngine:
                 suppressed from the returned list (but should still be passed
                 to SEM via a separate call with include_context_only=True).
         """
-        # Strip URLs before matching to avoid FPs on link characters
-        text = self._strip_urls(text)
+        # Strip technical noise before matching to avoid FPs
+        text = self._strip_technical_noise(text)
         detections = []
 
         for mdef in self.ato_markers:
@@ -429,8 +572,8 @@ class MarkerEngine:
                     continue
                 for m in pat.compiled.finditer(text):
                     matched = m.group()
-                    # Skip noise: matches shorter than 3 chars or pure whitespace
-                    if len(matched.strip()) < 3:
+                    # Skip noise: purely numeric, phone numbers, or extremely short
+                    if self._is_noise_match(matched):
                         continue
                     matches.append(Match(
                         marker_id=mdef.id,
@@ -441,12 +584,22 @@ class MarkerEngine:
                     ))
 
             if matches:
-                # Confidence: any match = baseline 0.6, more matches boost it.
-                # distinct_patterns_matched / total_patterns adds 0-0.4 range.
+                # Confidence calculation
                 distinct_matched = len({m.pattern for m in matches})
                 total_pats = max(len([p for p in mdef.patterns if p.compiled]), 1)
                 pattern_coverage = distinct_matched / total_pats
                 confidence = min(1.0, 0.6 + pattern_coverage * 0.4)
+
+                # LD 5.1: Context Penalties (e.g. Questions)
+                # If match is in a question, lower confidence for emotions
+                if "?" in text and "emotion" in mdef.tags:
+                    # Very simple check: if sentence ends in ?, it's likely a doubt/query
+                    # Find sentence containing the first match
+                    start_idx = matches[0].start
+                    end_of_sent = text.find(".", start_idx)
+                    q_mark = text.find("?", start_idx)
+                    if q_mark != -1 and (end_of_sent == -1 or q_mark < end_of_sent):
+                        confidence *= 0.6 # Significant penalty for doubt/questioning
 
                 if confidence >= threshold:
                     # Skip context_only markers from standalone output —
@@ -470,7 +623,11 @@ class MarkerEngine:
     # -----------------------------------------------------------------------
 
     def detect_sem(
-        self, text: str, ato_detections: list[Detection], threshold: float = 0.5
+        self,
+        text: str,
+        ato_detections: list[Detection],
+        threshold: float = 0.5,
+        system_state: dict | None = None,
     ) -> list[Detection]:
         """
         Detect semantic markers via composition rules + DRA guards.
@@ -478,7 +635,7 @@ class MarkerEngine:
         LD 5.0 paradigm: SEM = ATO + context.
         A SEM activates when:
           Path A: Composed ATOs are present (≥1 with context, or ≥2 without)
-          Path B: Single ATO references active system context
+          Path B: Single ATO references active system context (Quantum Collapse)
           Path C: Accumulation of same ATO type
           Path D: Spontaneous emergence via detect_class (omission)
 
@@ -488,8 +645,8 @@ class MarkerEngine:
           - High intensifier → confidence +0.15
           - Low intensifier → confidence -0.1
         """
-        # Strip URLs before SEM's own pattern matching
-        text = self._strip_urls(text)
+        # Strip technical noise before SEM's own pattern matching
+        text = self._strip_technical_noise(text)
         active_atos = {d.marker_id for d in ato_detections}
 
         # Pre-compute DRA guard modifiers for this text
@@ -537,12 +694,36 @@ class MarkerEngine:
                 if mode == "ALL":
                     min_hits = len(composed)
 
-                if len(hits) >= min_hits:
-                    # Scale confidence: 1 hit = 0.6 base, full coverage = 1.0
-                    if min_hits >= 2 or mode == "ALL":
-                        confidence = 0.7 + (hit_ratio * 0.3)
+                # --- Quantum Collapse Logic (LD 5.1) ---
+                # Path B: Single ATO references active system context
+                collapse_triggered = False
+                if len(hits) > 0 and len(hits) < min_hits and mode == "ANY":
+                    # If we have at least 1 hit but less than required,
+                    # check if system context allows 'collapse' to SEM
+                    if system_state and mdef.semiotic:
+                        ft = mdef.semiotic.get("framing_type", "").lower()
+                        # Mapping framing types to state indices
+                        if ft == "angriff" and system_state.get("conflict", 0) > 0.3:
+                            collapse_triggered = True
+                        elif ft == "reparatur" and system_state.get("deesc", 0) > 0.3:
+                            collapse_triggered = True
+                        elif ft == "bindung" and system_state.get("trust", 0) > 0.3:
+                            collapse_triggered = True
+                        elif ft == "unsicherheit" and abs(system_state.get("conflict", 0)) < 0.2:
+                            collapse_triggered = True
+
+                if len(hits) >= min_hits or collapse_triggered:
+                    # Scale confidence
+                    if len(hits) >= min_hits:
+                        if min_hits >= 2 or mode == "ALL":
+                            confidence = 0.7 + (hit_ratio * 0.3)
+                        else:
+                            confidence = 0.6 + (hit_ratio * 0.4)
                     else:
-                        confidence = 0.6 + (hit_ratio * 0.4)
+                        # Collapse Confidence: lower base because it's inferred from context
+                        confidence = 0.5 + (hit_ratio * 0.3)
+                        # Mark as collapsed for debugging/traceability
+                        # det.metadata["collapsed"] = True (added later to Detection)
 
                     # Compositionality modulation:
                     # deterministic = ATOs carry their own vector (full confidence)
@@ -630,18 +811,25 @@ class MarkerEngine:
         self,
         sem_detections_per_message: list[list[Detection]],
         threshold: float = 0.5,
+        ato_detections_per_message: list[list[Detection]] | None = None,
     ) -> list[Detection]:
         """
         Detect cluster markers over a conversation window.
 
         CLU requires multiple SEMs across messages. Uses family multipliers
         and the hypothesis lifecycle (provisional → confirmed → decayed).
+        Also accepts ATO detections for CLUs that reference ATOs directly.
         """
-        # Flatten all active SEMs with their message indices
+        # Flatten all active markers (SEMs + optionally ATOs) with message indices
         all_sems: dict[str, list[int]] = {}
         for msg_idx, dets in enumerate(sem_detections_per_message):
             for d in dets:
                 all_sems.setdefault(d.marker_id, []).append(msg_idx)
+
+        if ato_detections_per_message:
+            for msg_idx, dets in enumerate(ato_detections_per_message):
+                for d in dets:
+                    all_sems.setdefault(d.marker_id, []).append(msg_idx)
 
         active_sem_ids = set(all_sems.keys())
         detections = []
@@ -662,16 +850,35 @@ class MarkerEngine:
                             if c == sid or all(p.upper() in sid.upper() for p in c.split("_")[1:]):
                                 msg_indices.update(all_sems.get(sid, []))
             elif isinstance(composed, dict):
-                require = composed.get("require", composed.get("sem_pool", []))
-                if isinstance(require, list):
-                    for c in require:
+                # Structured activation: require + k_of_n + negative_evidence
+                require_refs = composed.get("require", composed.get("sem_pool", []))
+                neg_evidence = composed.get("negative_evidence", {})
+                neg_refs = neg_evidence.get("any_of", []) if isinstance(neg_evidence, dict) else []
+
+                # Collect require hits (ANY match counts — not ALL required)
+                require_hits = []
+                if isinstance(require_refs, list):
+                    for c in require_refs:
                         if not isinstance(c, str):
                             continue
                         if self._resolve_ref(c, active_sem_ids):
-                            hits.append(c)
-                            for sid in active_sem_ids:
-                                if c == sid or all(p.upper() in sid.upper() for p in c.split("_")[1:]):
-                                    msg_indices.update(all_sems.get(sid, []))
+                            require_hits.append(c)
+
+                # Negative evidence: if any match, block this CLU
+                neg_ok = True
+                if isinstance(neg_refs, list):
+                    for c in neg_refs:
+                        if isinstance(c, str) and self._resolve_ref(c, active_sem_ids):
+                            neg_ok = False
+                            break
+
+                if require_hits and neg_ok:
+                    hits = require_hits
+                    # Collect message indices for all matched refs
+                    for h in hits:
+                        for sid in active_sem_ids:
+                            if h == sid or all(p.upper() in sid.upper() for p in h.split("_")[1:]):
+                                msg_indices.update(all_sems.get(sid, []))
 
             if not hits:
                 continue
@@ -702,9 +909,13 @@ class MarkerEngine:
             distinct_hits = len(set(hits_in_window))
 
             # Calculate confidence: 1 hit = low, 2+ = higher
-            composed_total = len(composed) if isinstance(composed, list) else len(
-                composed.get("require", composed.get("sem_pool", []))
-            )
+            if isinstance(composed, list):
+                composed_total = len(composed)
+            elif isinstance(composed, dict):
+                req = composed.get("require", composed.get("sem_pool", []))
+                composed_total = len(req) if isinstance(req, list) else 1
+            else:
+                composed_total = 1
             hit_ratio = distinct_hits / max(composed_total, 1)
 
             if distinct_hits >= 2:
@@ -714,11 +925,23 @@ class MarkerEngine:
             else:
                 continue
 
-            # Apply multiplier from LD5 family
             multiplier = mdef.multiplier
+            # Apply dynamic threshold modifier (LD 5.1 Regulator)
+            effective_threshold = threshold * self.dynamic_threshold_modifier
             confidence = min(1.0, base_conf * min(multiplier, 1.5))  # Cap effective boost
 
-            if confidence >= threshold:
+            if confidence >= effective_threshold:
+                # --- Regulator Tracking (LD 5.1) ---
+                if distinct_hits == 1:
+                    # Single-hit CLU is 'provisional' (High sensitivity, low precision)
+                    self.retracted_count += 1 # Assume retracted unless confirmed later
+                    # (In a real stream, we'd wait, here we just track stats)
+                else:
+                    # Multi-hit CLU is 'confirmed'
+                    self.confirmed_count += 1
+                
+                self._update_ewma_precision()
+
                 detections.append(Detection(
                     marker_id=mdef.id,
                     layer="CLU",
@@ -757,16 +980,22 @@ class MarkerEngine:
         active_atos = {d.marker_id for d in (ato_detections or [])}
         all_active = active_clus | active_sems | active_atos
 
-        # Collect CLU families for detect_class inference
-        clu_families = set()
+        # Collect CLU families and tags for detect_class/gating inference
+        clu_info = set()
         for d in clu_detections:
             if d.family:
-                clu_families.add(d.family.upper())
+                clu_info.add(d.family.upper())
+            # Also extract tags from active CLUs
+            active_m = self.markers.get(d.marker_id)
+            if active_m:
+                for t in active_m.tags:
+                    clu_info.add(t.upper())
 
         detections = []
 
         for mdef in self.mema_markers:
             confidence = 0.0
+            found_evidence = False
 
             # Option A: composed_of check (with fuzzy resolution)
             composed = mdef.composed_of
@@ -784,6 +1013,48 @@ class MarkerEngine:
                 if hits:
                     hit_ratio = len(hits) / max(len(composed), 1)
                     confidence = 0.5 + (hit_ratio * 0.5)
+                    found_evidence = True
+
+            # Option C: absence_sets check (New in LD 5.1)
+            # Fires if NONE of the markers/tags in the absence set triggered
+            absence_sets = mdef.absence_sets or mdef.frame.get("absence_sets")
+            if not found_evidence and absence_sets:
+                is_absent = True
+                for set_name, sdef in absence_sets.items():
+                    # Check IDs
+                    for mid in sdef.get("ids", []):
+                        if mid in all_active:
+                            is_absent = False
+                            break
+                    if not is_absent: break
+                    # Check Tags (Case-insensitive)
+                    set_tags = {t.upper() for t in sdef.get("tags", [])}
+                    if set_tags:
+                        for active_mid in all_active:
+                            active_m = self.markers.get(active_mid)
+                            if active_m and {t.upper() for t in active_m.tags} & set_tags:
+                                is_absent = False
+                                break
+                    if not is_absent: break
+
+                if is_absent:
+                    # Check gating_conflict (if any negative signals active)
+                    gating = mdef.gating_conflict or {}
+                    # Strong conflict detection: families or tags
+                    negative_indicators = {"CONFLICT", "GRIEF", "UNCERTAINTY", "ESCALATION", "ACCUSATION", "BLAME"}
+                    has_conflict = bool(clu_info & negative_indicators)
+                    
+                    if gating and not has_conflict:
+                        # Gated by conflict: if no conflict active, absence isn't meaningful
+                        confidence = 0.0
+                    else:
+                        # If a specific min_bias_hits or min_E_hits is required, check it
+                        min_hits = gating.get("min_bias_hits", gating.get("min_E_hits", 1))
+                        active_count = sum(1 for d in sem_detections if d.confidence > 0.6)
+                        
+                        if active_count >= min_hits:
+                            confidence = 0.65  # Base confidence for confirmed absence
+                            found_evidence = True
 
             # Option B: detect_class inference
             if confidence < threshold and mdef.detect_class:
@@ -791,35 +1062,39 @@ class MarkerEngine:
 
                 # Extract MEMA keywords for matching (exclude structural noise)
                 _STRUCTURAL_KW = {"MARKER", "TEXT", "AUDIO", "PROSODY", "PATTERN",
-                                  "ALERT", "TREND", "PROFILE", "META", "CLUSTER"}
+                                  "ALERT", "TREND", "PROFILE", "META", "CLUSTER", "ABSENCE", "IN"}
                 mema_keywords = set(
                     kw.upper() for kw in mdef.id.replace("MEMA_", "").split("_")
-                    if len(kw) > 3 and kw.upper() not in _STRUCTURAL_KW
+                    if len(kw) >= 3 and kw.upper() not in _STRUCTURAL_KW
                 )
 
                 if not mema_keywords:
-                    # Skip detect_class if no meaningful keywords
-                    continue
+                    # Fallback to description keywords if ID is too generic
+                    desc_words = re.findall(r"\w+", mdef.description.upper())
+                    mema_keywords = {w for w in desc_words if len(w) > 4 and w not in _STRUCTURAL_KW}
 
                 if dc == "absence_meta":
                     # Fire when conflict/negative signals active but expected
                     # positive/repair signals are absent
-                    negative_families = {"CONFLICT", "GRIEF", "UNCERTAINTY"}
-                    if clu_families & negative_families:
-                        positive_families = {"SUPPORT", "COMMITMENT"}
-                        if not (clu_families & positive_families):
-                            confidence = max(confidence, 0.6)
+                    negative_families = {"CONFLICT", "GRIEF", "UNCERTAINTY", "ESCALATION"}
+                    if clu_info & negative_families:
+                        positive_families = {"SUPPORT", "COMMITMENT", "REPAIR"}
+                        if not (clu_info & positive_families):
+                            confidence = max(confidence, 0.65)
                         else:
                             confidence = max(confidence, 0.5)
 
                 elif dc == "trend_analysis":
                     # Check if active CLUs or SEMs match MEMA keywords
                     related = [
-                        c for c in (active_clus | active_sems)
+                        c for c in all_active
                         if any(kw in c.upper() for kw in mema_keywords)
                     ]
-                    if related:
-                        confidence = max(confidence, 0.5 + min(0.3, len(related) * 0.1))
+                    # LD 6.0: Require at least 2 related markers for meta-inference
+                    if len(related) >= 2:
+                        confidence = max(confidence, 0.5 + min(0.4, len(related) * 0.12))
+                    else:
+                        confidence = 0.0
 
                 elif dc == "cycle_detection":
                     # Cycle needs escalation + recurring pattern
@@ -827,23 +1102,25 @@ class MarkerEngine:
                         c for c in all_active
                         if any(kw in c.upper() for kw in mema_keywords)
                     ]
-                    if len(related) >= 2:
-                        confidence = max(confidence, 0.55)
-                    elif related:
+                    if len(related) >= 3: # Stricter for cycles
+                        confidence = max(confidence, 0.6)
+                    elif len(related) >= 2:
                         confidence = max(confidence, 0.45)
+                    else:
+                        confidence = 0.0
 
                 elif dc == "pattern_detection":
-                    # Pattern detection from active markers matching keywords
                     related = [
                         c for c in all_active
                         if any(kw in c.upper() for kw in mema_keywords)
                     ]
-                    if related:
-                        confidence = max(confidence, 0.5 + min(0.2, len(related) * 0.1))
+                    if len(related) >= 2:
+                        confidence = max(confidence, 0.5 + min(0.3, len(related) * 0.1))
+                    else:
+                        confidence = 0.0
 
                 elif dc in ("composite_meta", "profile_composite", "archetype_composite"):
-                    # Composite: keyword overlap with any active CLU/SEM
-                    # CLU matches count more than SEM matches
+                    # Composite: keyword overlap with any active CLU/SEM/ATO
                     related_clus = [
                         c for c in active_clus
                         if any(kw in c.upper() for kw in mema_keywords)
@@ -852,12 +1129,14 @@ class MarkerEngine:
                         s for s in active_sems
                         if any(kw in s.upper() for kw in mema_keywords)
                     ]
-                    # Weighted: CLU match = 1.0, SEM match = 0.5
+                    # LD 6.0: Composite needs a CLU + SEM or multiple SEMs
                     weighted = len(related_clus) * 1.0 + len(related_sems) * 0.5
                     if weighted >= 1.5:
-                        confidence = max(confidence, 0.5 + min(0.3, weighted * 0.1))
-                    elif weighted >= 0.5:
+                        confidence = max(confidence, 0.55 + min(0.35, weighted * 0.15))
+                    elif weighted >= 1.0:
                         confidence = max(confidence, 0.5)
+                    else:
+                        confidence = 0.0
 
                 elif dc in ("E", "coherence_calculator", "echo_detector",
                             "evolution_pressure_analyzer", "node_crystallizer"):
@@ -867,7 +1146,7 @@ class MarkerEngine:
                         if any(kw in c.upper() for kw in mema_keywords)
                     ]
                     if related:
-                        confidence = max(confidence, 0.5)
+                        confidence = max(confidence, 0.55)
 
             if confidence >= threshold:
                 detections.append(Detection(
@@ -891,6 +1170,7 @@ class MarkerEngine:
         text: str,
         layers: list[str] | None = None,
         threshold: float = 0.5,
+        deduplicate: bool = True,
     ) -> dict:
         """
         Analyze a single text against the marker hierarchy.
@@ -921,20 +1201,35 @@ class MarkerEngine:
 
         # Level 2: SEM
         sem_dets = []
-        if "SEM" in layers or "CLU" in layers or "MEMA" in layers:
+        is_formal = self._is_formal_technical_text(text)
+        if not is_formal and ("SEM" in layers or "CLU" in layers or "MEMA" in layers):
             sem_dets = self.detect_sem(text, ato_dets, threshold)
             if "SEM" in layers:
                 all_detections.extend(sem_dets)
+        elif is_formal:
+            # For technical texts, we might still want ATOs but we mark them as neutral
+            for d in all_detections:
+                d.confidence *= 0.5 # De-weight psychological impact
+                d.vad = {"valence": 0.0, "arousal": 0.0, "dominance": 0.0}
+
+        # --- Deduplication (LD 5.1) ---
+        if deduplicate:
+            all_detections = self._deduplicate_detections(all_detections)
 
         elapsed = (time.perf_counter() - start) * 1000
-        return {"detections": all_detections, "timing_ms": round(elapsed, 2)}
+        return {
+            "detections": all_detections,
+            "timing_ms": round(elapsed, 2),
+            "shadow_mode": True
+        }
 
-    def analyze_conversation(
+    async def analyze_conversation(
         self,
         messages: list[dict],
         layers: list[str] | None = None,
         threshold: float = 0.5,
         warm_start: dict[str, dict[str, float]] | None = None,
+        deduplicate: bool = True,
     ) -> dict:
         """
         Analyze a conversation (multiple messages) with temporal tracking.
@@ -956,9 +1251,19 @@ class MarkerEngine:
 
         # Per-message ATO + SEM detection with VAD congruence gate
         shadow_buffer: list[Detection] = []
+        current_state = {"trust": 0.0, "conflict": 0.0, "deesc": 0.0}
+        from .dynamics import compute_state_indices
 
         for msg_idx, msg in enumerate(messages):
             text = msg.get("text", "")
+            
+            # Phase 0: Pre-strip technical noise to check if anything linguistic remains (LD 5.1)
+            clean_text = self._strip_technical_noise(text).strip()
+            if not clean_text or len(clean_text) < 2:
+                # Still add empty lists to maintain indices
+                all_ato_dets.append([])
+                all_sem_dets.append([])
+                continue
 
             # Phase 1: Detect all ATOs (superposition)
             raw_atos = self.detect_ato(text, threshold)
@@ -985,12 +1290,22 @@ class MarkerEngine:
             all_ato_dets.append(effective_atos)
             flat_ato.extend(effective_atos)
 
-            # SEM detection uses gated+surfaced ATOs (meaningful ones only)
-            sem_dets = self.detect_sem(text, effective_atos, threshold)
+            # Phase 5: SEM detection uses gated+surfaced ATOs (meaningful ones only)
+            # AND the current system state (Quantum Collapse)
+            sem_dets = self.detect_sem(
+                text, effective_atos, threshold, system_state=current_state
+            )
             for d in sem_dets:
                 d.message_indices = [msg_idx]
             all_sem_dets.append(sem_dets)
             flat_sem.extend(sem_dets)
+
+            # Phase 6: Update system state for next message
+            # Only use high-confidence markers to update state during loop
+            loop_state = compute_state_indices(effective_atos + sem_dets, self.markers)
+            # Accumulate with slight decay
+            for k in ["trust", "conflict", "deesc"]:
+                current_state[k] = (current_state[k] * 0.7) + (loop_state.get(k, 0) * 0.3)
 
         if "ATO" in layers:
             # Filter context_only markers from user-facing output
@@ -1008,7 +1323,7 @@ class MarkerEngine:
         # Level 3: CLU (over conversation window)
         clu_dets = []
         if "CLU" in layers or "MEMA" in layers:
-            clu_dets = self.detect_clu(all_sem_dets, threshold)
+            clu_dets = self.detect_clu(all_sem_dets, threshold, ato_detections_per_message=all_ato_dets)
             if "CLU" in layers:
                 all_detections.extend(clu_dets)
 
@@ -1053,6 +1368,34 @@ class MarkerEngine:
         # Temporal patterns
         temporal = self._extract_temporal_patterns(flat_ato + flat_sem, len(messages))
 
+        # --- Topology Analysis (LD 6.0 CTG) ---
+        from .topology import compute_topology_report, shadow_log
+        topology = compute_topology_report(messages, all_detections)
+        
+        # --- Shadow Logging (Calibration) ---
+        shadow_log({
+            "n_messages": len(messages),
+            "timing_ms": round((time.perf_counter() - start) * 1000, 2),
+            "topology": {
+                "health_score": topology["health"]["score"],
+                "grade": topology["health"]["grade"],
+                "instability": topology["gates"]["instability"],
+                "summary": topology["summary"],
+                "failing_constraints": [c["id"] for c in topology["constraints"] if c["status"] == "fail"],
+                "warn_constraints": [c["id"] for c in topology["constraints"] if c["status"] == "warn"],
+            },
+            "engine": {"mode": "standard-recall", "marker_threshold": threshold},
+        })
+
+        # --- Neuro-Symbolic Reasoning (LD 6.0) ---
+        from .reasoning import reasoning_engine
+        vad_summary = {"mean_valence": sum(v["valence"] for v in message_vad)/len(message_vad)} if message_vad else {}
+        reasoning = await reasoning_engine.analyze(messages, all_detections, topology, vad_summary)
+
+        # --- Deduplication (LD 5.1) ---
+        if deduplicate:
+            all_detections = self._deduplicate_detections(all_detections)
+
         elapsed = (time.perf_counter() - start) * 1000
         return {
             "detections": all_detections,
@@ -1062,7 +1405,10 @@ class MarkerEngine:
             "ued_metrics": ued_metrics,
             "state_indices": state_indices,
             "speaker_baselines": speaker_baselines,
+            "topology": topology,
+            "reasoning": reasoning.model_dump() if reasoning else None,
             "timing_ms": round(elapsed, 2),
+            "shadow_mode": True
         }
 
     @staticmethod
@@ -1204,6 +1550,96 @@ class MarkerEngine:
 
         return sorted(patterns, key=lambda p: -p["frequency"])
 
+    def _update_ewma_precision(self):
+        """Adjust dynamic threshold modifier based on prediction accuracy (LD 5.1)."""
+        total = self.confirmed_count + self.retracted_count
+        if total == 0:
+            return
+
+        current_precision = self.confirmed_count / total
+        # EWMA Formula: alpha * current + (1 - alpha) * previous
+        self.ewma_precision = (self.alpha * current_precision) + ((1 - self.alpha) * self.ewma_precision)
+
+        # Regulator logic
+        if self.ewma_precision >= 0.70:
+            # Green: high precision, allow more sensitivity
+            self.dynamic_threshold_modifier = 0.85
+        elif self.ewma_precision < 0.50:
+            # Red: too many hallucinations, tighten thresholds
+            self.dynamic_threshold_modifier = 1.25
+        else:
+            # Yellow: stable
+            self.dynamic_threshold_modifier = 1.0
+
+    def _deduplicate_detections(self, detections: list[Detection]) -> list[Detection]:
+        """
+        Remove redundant detections that cover the exact same text span.
+        Prioritizes deeper layers (SEM > ATO) and better ratings.
+        """
+        if not detections:
+            return []
+
+        # 1. Map each match to its span
+        # Format: (start, end) -> [(Detection, Match), ...]
+        span_map: dict[tuple[int, int], list[tuple[Detection, Match]]] = {}
+        detections_without_matches: list[Detection] = []
+
+        for det in detections:
+            if not det.matches:
+                detections_without_matches.append(det)
+                continue
+            
+            for match in det.matches:
+                span = (match.start, match.end)
+                span_map.setdefault(span, []).append((det, match))
+
+        if not span_map:
+            return detections
+
+        # 2. For each span, pick the best candidate
+        layer_prio = {"MEMA": 4, "CLU": 3, "SEM": 2, "ATO": 1, "UNKNOWN": 0}
+        winner_matches_by_det_id: dict[str, list[Match]] = {}
+
+        for span, candidates in span_map.items():
+            def sort_key(c):
+                det, match = c
+                mdef = self.markers.get(det.marker_id)
+                rating = mdef.rating if mdef else 3
+                return (
+                    layer_prio.get(det.layer, 0),
+                    -rating,  # Lower rating (1) is better
+                    det.confidence
+                )
+            
+            candidates.sort(key=sort_key, reverse=True)
+            winner_det, winner_match = candidates[0]
+            
+            # Record this match for the winning detection
+            winner_matches_by_det_id.setdefault(winner_det.marker_id, []).append(winner_match)
+
+        # 3. Rebuild detection list using only winners
+        # Important: A detection might have multiple matches; we keep the detection
+        # if at least one of its matches won its span.
+        final_detections: list[Detection] = list(detections_without_matches)
+        
+        # Track which detections we've already added to avoid duplicates
+        added_ids = set()
+        
+        for det in detections:
+            if det.marker_id in added_ids:
+                continue
+                
+            winning_matches = winner_matches_by_det_id.get(det.marker_id, [])
+            if winning_matches:
+                # Update matches to only include the ones that won their spans
+                det.matches = winning_matches
+                final_detections.append(det)
+                added_ids.add(det.marker_id)
+
+        # Sort for consistent output
+        final_detections.sort(key=lambda d: (layer_prio.get(d.layer, 0), d.confidence), reverse=True)
+        return final_detections
+
     def get_marker(self, marker_id: str) -> MarkerDef | None:
         """Get a single marker definition."""
         if not self._loaded:
@@ -1223,7 +1659,8 @@ class MarkerEngine:
         if not self._loaded:
             self.load()
 
-        results = list(self.markers.values())
+        valid_layers = {"ATO", "SEM", "CLU", "MEMA"}
+        results = [m for m in self.markers.values() if m.layer in valid_layers]
 
         if layer:
             results = [m for m in results if m.layer == layer]

@@ -38,6 +38,12 @@ rating: 1
 composed_of:
 - ATO_BETWEENNESS_TERM
 - ATO_TRUTH_FEEL
+semiotic:
+  peirce: icon
+  signifikat: Praesenz/Anwesenheit
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

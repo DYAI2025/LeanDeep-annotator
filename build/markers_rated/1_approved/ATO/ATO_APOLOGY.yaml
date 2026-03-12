@@ -6,13 +6,19 @@ languages: [de]
 meaning: "Ausdrücke der Reue oder Entschuldigung für ein Verhalten oder eine Aussage"
 patterns:
 - type: regex
-  value: "(tut mir leid|entschuldige|verzeih mir|mein Fehler|sorry|das war dumm von mir)"
+  value: "(tut mir leid|entschuldige|verzeih mir|mein Fehler|sorry|das war dumm von
+    mir)"
 threshold: 1
 semiotic:
   mode: symbolic
   level: pragmatic
   object: "apology_expression"
   interpretant: "effect_on_state: {trust: +0.15, conflict: -0.2}"
+  peirce: index
+  signifikat: Entschuldigung/Reue
+  framing_type: reparatur
+  cultural_frame: Gottman
+  myth: Kommunikation loest alles — reden heilt, schweigen zerstoert
 examples:
   positive_de:
   - "Tut mir leid."
@@ -58,3 +64,9 @@ examples:
   - "Konflikt hoch."
 vad_estimate: {valence: 0.3, arousal: 0.2, dominance: 0.35}
 effect_on_state: {trust: 0.35, conflict: -0.3, deesc: 0.4}
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung

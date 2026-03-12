@@ -64,6 +64,12 @@ tags:
 - atomic
 - v3.4
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Verlassenheitsangst
+  framing_type: ueberflutung
+  cultural_frame: Bowlby
+  myth: Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet
 vad_estimate:
   valence: -0.6
   arousal: 0.8
@@ -72,3 +78,5 @@ effect_on_state:
   trust: -0.1
   conflict: 0.1
   deesc: -0.05
+semantic_affinity:
+  ironie_suppress: true

@@ -15,6 +15,51 @@ examples:
   - "Signal 1 … später Signal 2 im Kontext"
   - "Kombination aus Token X und Y"
   - "Variante mit ähnlicher Semantik"
+  - Der Stamm hält zusammen.
+  - Unsere Ahnen haben das so gemacht.
+  - Das Ritual verbindet uns.
+  - Schutz suchen wir in der Gemeinschaft.
+  - Magie liegt in der Luft.
+  - Zum Stamm gehören ist mir wichtig.
+  - Die Ahnen wachen über uns.
+  - Rituale geben mir Halt.
+  - Schutz durch die Familie.
+  - Magie der Natur.
+  - Der Stamm ist alles.
+  - Ahnen-Verehrung praktizieren.
+  - Ein Ritual der Verbundenheit.
+  - Schutz und Geborgenheit.
+  - Die Magie der Tradition.
+  - Stammeszugehörigkeit ist fundamental.
+  - Die Weisheit der Ahnen.
+  - Rituale im Jahreskreis.
+  - Schutz durch Zugehörigkeit.
+  - Magische Momente erleben.
+  - Der Stamm als Rückhalt.
+  - Ahnen ehren und erinnern.
+  - Rituale für den Übergang.
+  - Schutz bieten und empfangen.
+  - Magie in kleinen Dingen.
+  - Zusammenhalt im Stamm.
+  - Ahnenforschung betreiben.
+  - Tägliche Rituale pflegen.
+  - Schutz vor dem Unbekannten.
+  - Magie und Mystik.
+  - Der Stamm als Identität.
+  - Ahnen-Rituale feiern.
+  - Das Ritual des Erzählens.
+  - Schutz-Amulett tragen.
+  - Die Magie des Feuers.
+  - Im Stamm aufwachsen.
+  - Ahnen und Traditionen.
+  - Ritual am Vollmond.
+  - Schutz durch Glauben.
+  - Magische Kraft der Natur.
+  - Der Stamm gibt Sicherheit.
+  - Ahnen-Weisheit weitergeben.
+  - Rituale der Heilung.
+  - Schutz-Zeichen an der Tür.
+  - Magie der Musik.
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -23,5 +68,24 @@ examples:
   - I've noticed we think differently about this.
   - I want to understand what you mean.
   - That sounds like an important topic for you.
+  - Ich handle rational.
+  - Fakten zählen.
+  - Wissenschaft ist der Weg.
+  - Ich glaube an Beweise.
+  - Logik bestimmt mein Handeln.
+  - Daten analysieren.
+  - Evidenzbasiert arbeiten.
+  - Mystik ist mir fremd.
+  - Ich brauche keine Rituale.
+  - Vernunft über alles.
+  - Ich bin Individualist.
+  - Tradition ist mir egal.
+  - Ich entscheide selbst.
+  - Aberglaube lehne ich ab.
+  - Ich brauche keine Gruppe.
+  - Objektiv bleiben.
+  - Zahlen statt Gefühle.
+  - Ich glaube an Fortschritt.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

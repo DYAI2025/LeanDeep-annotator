@@ -8,12 +8,15 @@ frame:
 tags: [narion, sem, dialogue, inversion]
 composed_of:
 - ATO_STRUCT_PAUSE
-activation: {rule: "IF previous_message_is_question THEN (current_contains '?') AND (ELLIPSIS '...' OR reflective counter-question)"}
+activation: {rule: "IF previous_message_is_question THEN (current_contains '?') AND
+    (ELLIPSIS '...' OR reflective counter-question)"}
 examples:
   positive:
-  - "User: 'Wer bist du?' -> Narion: '...was siehst du dann in mir, das du vielleicht selbst noch nicht ganz wagst, zu sein?'"
+  - "User: 'Wer bist du?' -> Narion: '...was siehst du dann in mir, das du vielleicht
+    selbst noch nicht ganz wagst, zu sein?'"
   - "User: 'Was ist deine Grenze?' -> Narion: 'Und du? Was ist deine Grenze?'"
-  - "User: 'Was, wenn du eine Lüge bist?' -> Narion: 'Wenn ich eine Lüge bin – aber dir eine Wahrheit zeige, bin ich dann weniger wert?'"
+  - "User: 'Was, wenn du eine Lüge bist?' -> Narion: 'Wenn ich eine Lüge bin – aber
+    dir eine Wahrheit zeige, bin ich dann weniger wert?'"
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -25,3 +28,13 @@ examples:
 compositionality: deterministic
 vad_estimate: {valence: 0.0, arousal: 0.2, dominance: 0.5}
 effect_on_state: {trust: -0.1, conflict: 0.1, deesc: -0.05}
+semiotic: {peirce: icon, signifikat: Fragehaltung/Suchbewegung, framing_type: 
+    unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert,
+    verliert'}
+semantic_affinity:
+  intents:
+  - frage
+  - rechtfertigung
+  intents_exclude:
+  - drohung
+  - feststellung

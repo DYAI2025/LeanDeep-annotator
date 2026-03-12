@@ -18,14 +18,77 @@ examples:
   - "Ich wollte nur helfen, aber du machst es mir schwer.\nDu lässt mich im Stich."
   - "Mach dir keine Sorgen, trotzdem muss das heute passieren.\nIch schaffe das nicht ohne dich."
   - "Ich meine es nur gut, dennoch reagierst du so hart.\nOhne dich geht es nicht."
+  - Ich sage ja nichts, aber wenn du nicht kommst, sitze ich wieder allein da.
+  - Du musst nicht kommen, aber dann weiß ich halt nicht, wie ich das schaffen soll.
+  - Nein nein, geh ruhig. Ich komm schon klar. Irgendwie.
+  - Ich will dich nicht unter Druck setzen, aber ich brauche DICH. Nur dich.
+  - Schon gut, vergiss es. Ich mach das allein. Wie immer.
+  - Du bist der einzige Mensch der mir helfen kann und du lässt mich hängen.
+  - Tut mir leid dass ich so bedürftig bin. Aber ohne dich geht es nicht.
+  - ich brauch dich so sehr. bitte geh nicht. ich schaff das nicht allein 😢
+  - Wenn du jetzt gehst, weiß ich nicht was ich mache. Aber kein Druck.
+  - Ich erwarte nichts von dir. Aber es wäre schön wenn du mir helfen könntest. Bitte.
+  - Lass mich nicht allein damit. Ich weiß, ich bin anstrengend, tut mir leid.
+  - Du sagst du liebst mich, aber wenn ich dich brauche, bist du nie da.
+  - Ich frage ja nur einmal. Nur dieses eine Mal. Wie jedes Mal.
+  - Es ist okay wenn du nein sagst. Ich bin das gewohnt. Keiner ist für mich da.
+  - Ich will dir keine Schuldgefühle machen, aber ich bin so allein.
+  - du bist mein fels. ohne dich falle ich. warum lässt du mich fallen?
+  - Natürlich musst du das nicht tun. Aber ich wüsste nicht, an wen ich mich sonst wenden soll.
+  - Ich bin dir nicht böse. Ich bin nur enttäuscht. Weil ich auf dich gezählt habe.
+  - Sehr geehrte Frau Schneider, ich möchte Sie nicht behelligen, aber ohne Ihre Unterstützung stehe ich vor dem Nichts.
+  - Vergiss was ich gesagt habe. Ich komme schon zurecht. Muss ich ja.
+  - Ich weiß, ich sollte nicht so abhängig sein. Aber du bist alles was ich habe.
+  - Kein Stress, du musst nicht kommen. Ich weine dann halt allein.
+  - Es tut mir leid, dass ich so bin. Aber ich brauche jemanden. Bitte.
+  - Du musst dich nicht schuldig fühlen. Aber wenn du gehst, bin ich am Ende.
+  - Ich will nicht bedürftig sein. Aber ich bin es. Und du lässt mich allein damit.
+  - bitte hilf mir. ich kann nicht mehr. du bist die einzige person die ich hab
+  - Es ist schon okay. Ich erwarte schon lange nichts mehr von niemandem.
+  - Du sagst immer, du bist für mich da. Aber BIST du das? Wirklich?
+  - Ich wollte dich nicht belasten. Aber jetzt ist es so weit. Ich schaffe es nicht mehr.
+  - Wenn du wüsstest wie allein ich bin, würdest du nicht so kalt sein.
+  - Nein, geh ruhig. Ist ja nicht so, als ob ich dich brauche. Also schon. Aber egal.
+  - Ich bin dir nicht wichtig genug um zu bleiben. Das ist die Wahrheit.
+  - Es ist ja nicht deine Schuld. Aber es fühlt sich so an, als würdest du mich aufgeben.
+  - ich bitte nie um hilfe. nie. und das eine mal wo ich es tue, wirst du wütend
+  - Du musst nichts sagen. Sei einfach nur da. Bitte. Mehr verlange ich nicht.
+  - Ich mache mir Vorwürfe, dass ich dich damit belaste. Aber an wen soll ich mich sonst wenden?
+  - Klar, du hast andere Prioritäten. Ich verstehe. Ich bin halt nur... allein.
+  - Ich bin so dankbar für dich. Bitte lass mich nicht im Stich. Bitte.
+  - Mach dir keine Sorgen um mich. Ich überlebe das schon. Hoffe ich.
+  - Du gibst mir Hoffnung und nimmst sie mir gleichzeitig. Ohne dich bin ich nichts.
+  - Ich will nicht klammern, aber ich hab so Angst allein. Bitte bleib.
+  - Es tut mir leid, dass ich so viel brauche. Aber du bist alles was ich habe.
+  - Wenn ich dir egal bin, sag es. Dann weiß ich wenigstens woran ich bin.
+  - ich will dir keine schuldgefühle machen aber ohne dich bin ich verloren
+  - Natürlich ist es deine Entscheidung. Aber wenn du gehst, bricht für mich alles zusammen.
   negative:
-  - "Ich will dich nicht belasten, aber ich wuensche mir das jetzt.\nIch kann das nicht allein."
-  - "Ich wollte nur helfen, aber ich erlebe es so, dass es mir schwer.\nDu lässt mich im Stich."
-  - "Mach dir wenige Sorgen, trotzdem muss das heute passieren.\nIch schaffe das nicht ohne dich."
+  - Ich brauche Hilfe bei diesem Projekt, kannst du?
+  - Mir geht es heute nicht so gut, magst du reden?
+  - Ich würde mich freuen, wenn du kommst, aber kein Problem wenn nicht.
   - Ich denke, wir sollten das sachlich betrachten.
   - Mir geht es gut, danke der Nachfrage.
   - Das ist ein interessanter Gedanke.
   - Ich bin gerade entspannt.
+  - Kannst du mir bei dem Umzug helfen? Wäre echt nett.
+  - Ich fühle mich manchmal einsam, aber ich arbeite daran.
+  - Es wäre schön, dich zu sehen, aber verstehe auch wenn du keine Zeit hast.
+  - Ich brauche Unterstützung und bitte dich direkt darum.
+  - Mir fällt es schwer, um Hilfe zu bitten, aber ich tue es jetzt.
+  - Ich vermisse dich, lass uns bald treffen.
+  - Ich komme gerade nicht weiter, hast du einen Rat?
+  - Danke dass du für mich da bist.
+  - Ich brauche eine Pause, kannst du übernehmen?
+  - Es ist okay, wenn du nicht kannst. Ich frage jemand anderen.
+  - ich brauch mal hilfe, hast du zeit?
+  - Die Situation ist schwierig, aber ich komme zurecht.
+  - Ich bin dankbar für unsere Freundschaft.
+  - Mir geht es besser, danke fürs Zuhören.
+  - 'Ich möchte ehrlich sein: Ich brauche gerade Unterstützung.'
+  - Danke für dein Angebot, das nehme ich gerne an.
+  - Es war eine schwere Woche, aber es geht aufwärts.
+  - Ich bin traurig, aber ich weiß, das geht vorbei.
 tags:
 - clu
 - cluster
@@ -34,14 +97,19 @@ tags:
 - escalation
 rating: 1
 composed_of:
-- SEM_DOUBLE_BIND_DISCLAIMER_BUT
 - SEM_PERFORMATIVE_HELPLESSNESS
 activation:
-  rule: "WINDOW_CLUSTER_AT_END"
+  rule: WINDOW_CLUSTER_AT_END
 scoring:
   base: 2.6
   weight: 0.7
   decay: 0.02
-  formula: "logistic"
+  formula: logistic
 window:
   messages: 30
+semiotic:
+  peirce: index
+  signifikat: Schuld/Schuldgefuehle
+  framing_type: schuld
+  cultural_frame: ''
+  myth: 'Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung'

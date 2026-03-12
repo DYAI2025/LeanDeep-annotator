@@ -1,3 +1,4 @@
+import asyncio
 import sys
 sys.path.insert(0, ".")
 
@@ -20,9 +21,7 @@ def test_analyze_vad_can_be_none():
     eng = MarkerEngine()
     eng.load()
     result = eng.analyze_text("Ich bin so wütend auf dich!", threshold=0.3)
-    # At least some detections exist
     assert len(result["detections"]) > 0
-    # VAD can be None for markers that don't have vad_estimate
     for d in result["detections"]:
         if d.vad is not None:
             assert isinstance(d.vad, dict)
@@ -37,7 +36,7 @@ def test_conversation_returns_message_vad():
         {"text": "Das tut mir leid.", "speaker": "B"},
         {"text": "Lass uns darüber reden.", "speaker": "A"},
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3))
     assert "message_vad" in result
     assert len(result["message_vad"]) == 3
     for mv in result["message_vad"]:
@@ -56,7 +55,7 @@ def test_conversation_returns_ued_metrics():
         {"text": "Ich fühle mich so allein.", "speaker": "A"},
         {"text": "Es tut mir leid.", "speaker": "B"},
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3))
     assert "ued_metrics" in result
     if result["ued_metrics"] is not None:
         assert "home_base" in result["ued_metrics"]
@@ -72,7 +71,7 @@ def test_conversation_returns_state_indices():
         {"text": "Du bist schuld an allem!", "speaker": "A"},
         {"text": "Lass uns in Ruhe darüber reden.", "speaker": "B"},
     ]
-    result = eng.analyze_conversation(messages, threshold=0.3)
+    result = asyncio.run(eng.analyze_conversation(messages, threshold=0.3))
     assert "state_indices" in result
     si = result["state_indices"]
     assert "trust" in si

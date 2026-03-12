@@ -29,6 +29,44 @@ examples:
   - Ein Mann hier im Camp macht mir den Hof, aber mein Herz gehört nur dir.
   - Zeig mir mal, was er dir schreibt.
   - Muss ich mir wegen ihr Sorgen machen?
+  - Sag mal, hast du das wirklich gesagt?
+  - Hör zu, das geht so nicht weiter.
+  - Verstehst du nicht, dass du mich damit verletzt?
+  - Sag mal, was fällt dir ein?
+  - Hör zu, ich warne dich.
+  - Verstehst du, was du anrichtest?
+  - Sag mal, denkst du, das ist okay?
+  - Hör zu, das akzeptiere ich nicht.
+  - Verstehst du die Konsequenzen?
+  - Sag mal, bist du ernsthaft?
+  - Hör zu, so reden wir nicht miteinander.
+  - Verstehst du, warum ich wütend bin?
+  - Sag mal, wer hat dir das erlaubt?
+  - Hör zu, du überschreitest eine Grenze.
+  - Verstehst du, dass das unfair ist?
+  - Sag mal, was soll das werden?
+  - Hör zu, ich meine das ernst.
+  - Verstehst du, was auf dem Spiel steht?
+  - Sag mal, glaubst du das wirklich?
+  - Hör zu, ich lass mir das nicht gefallen.
+  - Verstehst du überhaupt, worum es geht?
+  - Sag mal, merkst du nicht, was du tust?
+  - Hör zu, das hat Konsequenzen.
+  - Verstehst du, wie ernst das ist?
+  - Sag mal, ist dir das egal?
+  - Hör zu, ich bin am Limit.
+  - Verstehst du, dass ich das nicht will?
+  - Sag mal, denkst du nur an dich?
+  - Hör mal zu, das reicht jetzt.
+  - Verstehst du, dass du Grenzen überschreitest?
+  - Sag mal, was ist los mit dir?
+  - Hör zu, ich sage das nur einmal.
+  - Verstehst du, dass das nicht geht?
+  - Sag mal, hast du kein Gewissen?
+  - Hör zu, ich bin enttäuscht.
+  - Verstehst du die Tragweite?
+  - Sag mal, war das dein Ernst?
+  - Hör zu, das ändert alles.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -37,9 +75,33 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich finde, wir sollten das besprechen.
+  - Mir ist aufgefallen, dass es Unterschiede gibt.
+  - Können wir darüber reden?
+  - Ich sehe das etwas anders.
+  - Da gibt es verschiedene Meinungen.
+  - Lass uns das in Ruhe klären.
+  - Ich möchte deine Sicht verstehen.
+  - Wir haben unterschiedliche Perspektiven.
+  - Das Thema ist mir wichtig.
+  - Ich schlage vor, darüber zu sprechen.
+  - Wir sollten offen kommunizieren.
+  - Ich nehme das ernst.
+  - Lass uns einen Kompromiss finden.
+  - Ich respektiere deine Meinung.
+  - Wir sehen das unterschiedlich.
+  - Mir liegt etwas auf dem Herzen.
+  - Ich möchte ehrlich mit dir sein.
+  - Da sollten wir drüber reden.
 tags:
 - communication
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

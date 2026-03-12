@@ -48,3 +48,4 @@ metadata:
   - "Ich will keine Details hören, erledig es einfach."
 vad_estimate: {valence: 0.3, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.3, conflict: -0.25, deesc: 0.3}
+semiotic: {peirce: index, signifikat: Unterstuetzung/Beistand, framing_type: bindung, cultural_frame: '', myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'}

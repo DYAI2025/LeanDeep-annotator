@@ -12,3 +12,8 @@ eval/results.jsonl
 .DS_Store
 .claude/*
 !.claude/commands/
+testdata/
+api/api_keys.json
+server.log
+leandeep-enrich.tar.gz
+logs/

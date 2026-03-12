@@ -1,4 +1,4 @@
-id: EMO_PLAYFUL_TITLE_ASSIGNMENT
+id: SEM_PLAYFUL_TITLE_ASSIGNMENT
 lang: de
 category: SEMANTIC
 description: "Spielerische Vergabe eines Titels oder Spitznamens."
@@ -7,10 +7,12 @@ frame:
   concept: "Titelvergabe"
   pragmatics: "Auflockerung und positive Aufladung"
   narrative: "spielerisch"
-composed_of:
-- ATO_TITLE_WORD
-- ATO_PLAYFUL_TONE
-activation_logic: "ANY 2 IN 3 messages"
+patterns:
+- type: regex
+  value: (?i)\b(meister|meisterin|chefkoch|chefin|chef|held|heldin|königin|könig|experte|expertin|guru|profi)\s+(der|des|im|beim|in|von|des\s+tages|des\s+abends)\b
+- type: regex
+  value: (?i)\b(herr|frau)\s+(präsident|minister|direktor|meister|chef)\b
+activation_logic: "ANY 1 IN 3 messages"
 scoring: {base: 1.4, weight: 1.1}
 examples:
   positive:

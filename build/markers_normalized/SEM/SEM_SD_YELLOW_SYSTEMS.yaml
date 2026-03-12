@@ -13,19 +13,82 @@ frame:
 patterns: []
 examples:
   positive:
-  - Systeme vernetzen … Komplexität integrieren
-  - mehrperspektivisch denken
-  - Kontext abhängige Lösung
-  - Patterns über Zeit
-  - Metaebene betrachten
+  - Systeme vernetzen, Komplexität integrieren.
+  - Mehrperspektivisch denken.
+  - Kontextabhängige Lösung.
+  - Patterns über Zeit erkennen.
+  - Metaebene betrachten.
+  - Das System als Ganzes verstehen.
+  - Wechselwirkungen zwischen den Ebenen analysieren.
+  - Emergente Muster identifizieren.
+  - Funktionale Integration verschiedener Sichtweisen.
+  - Systemische Zusammenhänge erkennen.
+  - Kontextabhängig verschiedene Werkzeuge nutzen.
+  - Mehrdimensional denken und handeln.
+  - Die Meta-Perspektive einnehmen.
+  - Komplexität annehmen statt vereinfachen.
+  - Adaptive Strategien für verschiedene Kontexte.
+  - Muster über mehrere Ebenen lesen.
+  - Systemisch denken, situativ handeln.
+  - Integration statt Reduktion.
+  - Die Dynamik des Gesamtsystems verstehen.
+  - Flexibel zwischen Perspektiven wechseln.
+  - Emergenz als Gestaltungsprinzip.
+  - Nichtlineare Zusammenhänge berücksichtigen.
+  - Systemische Intelligenz anwenden.
+  - Verschiedene Wertesysteme integrieren.
+  - Feedbackschleifen erkennen und nutzen.
+  - Kontextuale Flexibilität als Kompetenz.
+  - Die Ebenen miteinander verbinden.
+  - Komplexitätskompetenz entwickeln.
+  - Mehrdeutige Situationen navigieren.
+  - Systemische Muster dekodieren.
+  - Verschiedene Logiken parallel denken.
+  - Dynamische Gleichgewichte verstehen.
+  - Metakognition als Werkzeug.
+  - Interdependenzen zwischen Subsystemen erkennen.
+  - Adaptive Kapazität aufbauen.
+  - Second-Order-Denken anwenden.
+  - Kontextwechsel bewusst gestalten.
+  - Systemische Hebel identifizieren.
+  - Polarity Management statt Entweder-oder.
+  - Vernetztes Denken in komplexen Umgebungen.
+  - Muster auf der Makroebene erkennen.
+  - Die richtige Intervention für den Kontext wählen.
+  - Spirale der Entwicklung verstehen.
+  - Metasystemische Analyse durchführen.
+  - Verschiedene Paradigmen gleichzeitig halten.
+  - Systemisches Mapping der Zusammenhänge.
+  - Emergenzen vorhersehen durch Mustererkennung.
+  - Integral denken, differenziert handeln.
+  - Wechselwirkungen und Rückkopplungen beachten.
+  - Die Architektur des Systems überblicken.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Mach es einfach so wie immer.
+  - Das ist nicht so kompliziert.
+  - Schwarz oder weiß, entscheide dich.
+  - Denk nicht so viel nach.
+  - Halte dich an die Regeln.
+  - Es gibt nur eine richtige Lösung.
+  - Das ist irrelevant.
+  - Bleib beim Thema.
+  - Mach einfach deinen Job.
+  - Das ist nicht meine Zuständigkeit.
+  - Zu kompliziert, vereinfach das.
+  - Ich brauche eine klare Antwort.
+  - Entweder ja oder nein.
+  - Das übersteigt meine Zuständigkeit.
+  - Mach es wie alle anderen.
+  - Das ist zu theoretisch.
+  - Ich will Fakten, keine Theorien.
+  - Das bringt uns nicht weiter.
+  - Konzentrier dich auf eine Sache.
+  - Das ist zu abgehoben.
+  - Einfach machen, nicht philosophieren.
+  - Das versteht doch niemand.
+  - Weniger denken, mehr handeln.
+  - Das ist zu verschachtelt.
+  - Ich will eine einfache Lösung.
 tags: []
 rating: 2
 composed_of:
@@ -33,6 +96,12 @@ composed_of:
 - ATO_SYSTEMS_TALK
 activation:
   rule: "BOTH IN 1 message"
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

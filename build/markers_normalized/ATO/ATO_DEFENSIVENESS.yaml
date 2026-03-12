@@ -62,6 +62,11 @@ semiotic:
   level: pragmatic
   object: "defensive_response"
   interpretant: "effect_on_state: {conflict: +0.1, trust: -0.1}"
+  peirce: index
+  signifikat: Abwehr/Rechtfertigung
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht
 vad_estimate:
   valence: -0.5
   arousal: 0.8

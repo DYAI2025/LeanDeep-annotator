@@ -1,0 +1,104 @@
+id: MEMA_SUPPORT_EROSION
+version: "3.4"
+frame:
+  signal: ["support", "erosion"]
+  concept: "Erosion von Unterstützung im Beziehungssystem"
+  pragmatics: "Erkennt schleichenden Rückgang von gegenseitiger Hilfsbereitschaft"
+  narrative: "meta_pattern"
+tags: [mema, support, erosion, deterioration]
+composed_of:
+  required_any:
+  - SEM_VALIDATION_SEEKING
+  - CLU_INDIRECT_CONFLICT_AVOIDANCE
+  supportive:
+  - SEM_EMOTIONAL_OVERWHELM
+  - ATO_MINIMIZING
+activation:
+  rule: "ANY 2 IN 25 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+  positive_de:
+  - "Früher hast du immer gefragt, ob ich Hilfe brauche. Jetzt nicht mehr."
+  - "Ich merke, dass du dich immer weniger für meine Probleme interessierst."
+  - "Du hast aufgehört, mich zu unterstützen."
+  - "Ich kann mich nicht mehr auf dich verlassen – das war mal anders."
+  - "Wir waren mal füreinander da. Jetzt kämpft jeder für sich."
+  - "Du hast mal gesagt, du bist immer für mich da. Davon spüre ich nichts mehr."
+  - "Ich trage das alles allein, obwohl wir das mal zusammen gemacht haben."
+  - "Die gegenseitige Hilfe ist eingeschlafen."
+  - "Du zuckst nur noch die Schultern, wenn ich sage, dass es mir schlecht geht."
+  - "Früher hast du mich aufgefangen. Jetzt lässt du mich fallen."
+  - "Ich bitte um Hilfe und du sagst 'mach das selber'."
+  - "Unsere Unterstützung füreinander schmilzt dahin."
+  - "Du warst mal mein Fels. Jetzt bist du ein Fremder."
+  - "Ich brauch dich und du bist emotional nicht erreichbar."
+  - "Wir haben uns früher bei allem geholfen. Heute macht jeder sein Ding."
+  - "Du hörst mir nicht mal mehr zu, geschweige denn, dass du hilfst."
+  - "Unsere Teamarbeit ist Geschichte."
+  - "Ich hab das Gefühl, du willst nicht mehr investieren."
+  - "Es fühlt sich an, als würdest du dich schleichend zurückziehen."
+  - "Du unterstützt mich nur noch, wenn du musst."
+  - "Ich merke, wie der Zusammenhalt bröckelt."
+  - "Wir waren mal ein Team. Jetzt sind wir zwei Einzelkämpfer."
+  - "Du überlässt mir alles und beschwerst dich dann über das Ergebnis."
+  - "Meine Bitten um Hilfe prallen an dir ab."
+  - "Früher hast du mir den Rücken freigehalten. Heute ignorierst du mich."
+  - "Du hast kein Interesse mehr an dem, was mich belastet."
+  - "Ich bin erschöpft, weil die Unterstützung von deiner Seite wegbricht."
+  - "Wir haben aufgehört, füreinander zu sorgen."
+  - "Ich merke, dass du innerlich schon aufgegeben hast."
+  - "Du hilfst nur noch widerwillig, wenn überhaupt."
+  - "Die Solidarität zwischen uns ist verschwunden."
+  - "Ich stehe allein da mit den Kindern, dem Haushalt, allem."
+  - "Du warst mal aufmerksam. Jetzt bemerst du nicht mal, wenn ich weine."
+  - "Mein Hilferuf verhalt ungehört – wie so oft in letzter Zeit."
+  - "Wir leisten uns keine emotionale Erste Hilfe mehr."
+  - "Ich vermisse die Zeiten, als du dich um mich gekümmert hast."
+  - "Du hast aufgehört, nach mir zu fragen."
+  - "Ich habe das Gefühl, für dich nur noch eine Belastung zu sein."
+  - "Unsere gegenseitige Fürsorge stirbt leise."
+  - "Du gibst mir das Gefühl, dass meine Probleme dich nerven."
+  - "Wir haben den Punkt erreicht, an dem keiner mehr den anderen stützt."
+  - "Ich brauche dich und du bist nicht da – und das wird zum Muster."
+  - "Die Hilfsbereitschaft ist einer Gleichgültigkeit gewichen."
+  - "Wenn ich krank bin, fragst du nicht mal, wie es mir geht."
+  - "Unsere Fürsorge füreinander: ein leerer Tank."
+  - "Du hilfst nur noch pro forma, ohne echtes Engagement."
+  - "Ich trage die Last für zwei und breche langsam zusammen."
+  - "Du warst mal mein sicherer Hafen. Jetzt bist du auf hoher See."
+  - "Die Erosion in unserer Beziehung zeigt sich in fehlender Unterstützung."
+  - "Wir sind wie Mitbewohner, die sich nichts schuldig fühlen."
+  negative_de:
+  - "Danke, dass du mir gestern geholfen hast – das hat viel bedeutet."
+  - "Ich weiß, ich kann mich auf dich verlassen."
+  - "Du bist immer für mich da, wenn ich dich brauche."
+  - "Wir unterstützen uns gegenseitig und das ist unsere Stärke."
+  - "Danke, dass du das übernommen hast, als ich nicht konnte."
+  - "Ich schätze es so sehr, dass du mich fragst, wie es mir geht."
+  - "Wir sind ein gutes Team – einer fängt den anderen auf."
+  - "Du hilfst mir immer, ohne dass ich fragen muss."
+  - "Ich bin froh, dass wir füreinander da sind."
+  - "Du hast heute so viel Verständnis gezeigt, danke."
+  - "Wir teilen uns die Last und das macht sie leichter."
+  - "Ich weiß, dass du hinter mir stehst."
+  - "Du hast mir den Rücken gestärkt, als ich es brauchte."
+  - "Unser Zusammenhalt ist unser größtes Kapital."
+  - "Du kümmerst dich um mich und ich kümmere mich um dich."
+  - "Ich fühle mich von dir getragen."
+  - "Danke für alles, was du für uns tust."
+  - "Wir sind Partner, auch wenn es schwer wird."
+  - "Deine Unterstützung gibt mir Kraft."
+  - "Ich bin nicht allein – du bist da."
+  - "Wir haben einen guten Rhythmus gefunden in der gegenseitigen Hilfe."
+  - "Danke, dass du mich nicht allein gelassen hast."
+  - "Du gibst mir das Gefühl, dass meine Probleme auch deine sind."
+  - "Wir meistern das zusammen."
+  - "Dein Support ist unerschütterlich, das weiß ich zu schätzen."
+semiotic:
+  peirce: index
+  signifikat: Beziehungsdynamik
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

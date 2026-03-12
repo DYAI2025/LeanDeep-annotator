@@ -1,0 +1,17 @@
+id: SEM_UNRESOLVED_ISSUE
+version: "1.0"
+schema: "LeanDeep"
+frame:
+  signal: ["blockage"]
+  concept: "Unaufgelöste Problemlage"
+  pragmatics: "Feststecken in Konfliktschleifen"
+  narrative: "conflict"
+tags: [conflict, deadlock]
+composed_of:
+- ATO_UNRESOLVED_ISSUE
+- ATO_RESIGNATION_PHRASE
+activation:
+  rule: "ANY 1"
+vad_estimate: {valence: -0.4, arousal: 0.6, dominance: 0.3}
+effect_on_state: {trust: -0.1, conflict: 0.4, deesc: -0.3}
+semiotic: {peirce: icon, signifikat: Stillstands-Metapher, framing_type: isolation, cultural_frame: '', myth: 'Konflikt ist natuerlicherweise unloesbar — Streit ist endlos'}

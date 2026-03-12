@@ -1,0 +1,104 @@
+id: MEMA_ESCALATION_INDEX
+version: "3.4"
+frame:
+  signal: ["escalation", "index"]
+  concept: "Eskalations-Index – zunehmende Intensität über den Gesprächsverlauf"
+  pragmatics: "Erkennt steigende Konfliktintensität über mehrere Nachrichten"
+  narrative: "meta_pattern"
+tags: [mema, escalation, intensity, conflict]
+composed_of:
+  required_any:
+  - CLU_EMOTIONAL_ESCALATION
+  - SEM_BLAME_SIGNAL
+  supportive:
+  - ATO_ACCUSATION
+  - SEM_EMOTIONAL_OVERWHELM
+activation:
+  rule: "ANY 3 IN 15 messages"
+scoring:
+  base: 2.0
+  weight: 1.3
+examples:
+  positive_de:
+  - "Erst war es eine Bitte, dann ein Vorwurf, dann ein Ultimatum."
+  - "Du hast ruhig angefangen und jetzt schreist du."
+  - "Von sachlicher Kritik zu persönlichem Angriff in drei Nachrichten."
+  - "Es eskaliert – jede Nachricht wird schlimmer."
+  - "Erst Enttäuschung, dann Wut, dann Hass."
+  - "Du steigerst dich da in was rein, das merke ich."
+  - "Angefangen mit 'ich bin traurig', jetzt sind wir bei 'ich hasse dich'."
+  - "Die Lautstärke steigt mit jeder Nachricht."
+  - "Von 'können wir reden' zu 'ich gehe' in zehn Minuten."
+  - "Es wird immer heftiger, wir müssen aufhören."
+  - "Erst Sarkasmus, dann offene Aggression."
+  - "Die Spannung steigt exponentiell."
+  - "Jede Antwort ist ein Level höher – bald explodiert es."
+  - "Du gehst von Kritik zu Beleidigung zu Drohung."
+  - "Das Gespräch kippt – von schlecht zu katastrophal."
+  - "Wir rutschen ab in eine Spirale, die ich nicht mehr kontrollieren kann."
+  - "Es wird persönlicher und verletzender mit jeder Minute."
+  - "Von Frust zu Rage in drei Schritten."
+  - "Die Aggression steigert sich – ich spüre, wie es eskaliert."
+  - "Erst meinten wir es sachlich, jetzt fliegen die Fetzen."
+  - "Du drohst jetzt? Vorhin war es noch ein Gespräch."
+  - "Die Intensität nimmt mit jeder Nachricht zu."
+  - "Von 'ich bin enttäuscht' zu 'ich will die Scheidung' in einer Stunde."
+  - "Du wirst immer lauter und aggressiver."
+  - "Angefangen als Diskussion, geendet als Krieg."
+  - "Mir ist aufgefallen: jede Nachricht von dir ist ein Stück feindseliger."
+  - "Das Gespräch ist außer Kontrolle geraten."
+  - "Es gab keinen Weg zurück – nur nach oben, in der Eskalation."
+  - "Von leiser Kritik zu lautem Geschrei."
+  - "Die Eskalation war vorhersehbar und trotzdem nicht aufzuhalten."
+  - "Wir haben uns in etwas reingesteigert, das keiner wollte."
+  - "Erst subtile Spitzen, dann offene Angriffe."
+  - "Jede Antwort gießt Öl ins Feuer."
+  - "Der Ton wird schärfer, die Worte härter."
+  - "Von vernünftig zu irrational in fünf Minuten."
+  - "Wir eskalieren schneller als wir deeskalieren können."
+  - "Erst 'ich bin genervt', dann 'du bist das Schlimmste in meinem Leben'."
+  - "Die Eskalationsstufe steigt mit jeder Runde."
+  - "Wir sind von 1 auf 10 in Rekordzeit."
+  - "Jede Reaktion heizt die nächste auf."
+  - "Das hier läuft aus dem Ruder. Komplett."
+  - "Du wirst immer extremer in deinen Aussagen."
+  - "Erst Enttäuschung, dann Kontrollverlust."
+  - "Das Gespräch gleitet in gefährliche Gewässer."
+  - "Wir beschimpfen uns jetzt gegenseitig – so tief sind wir gesunken."
+  - "Von Tristesse zu Tobsucht."
+  - "Die Wut hat sich aufgebaut und explodiert jetzt."
+  - "Jeder Satz ein Stück giftiger als der vorherige."
+  - "Wir haben den Punkt überschritten, an dem Reden hilft."
+  - "Die Eskalation hat Eigendynamik bekommen."
+  negative_de:
+  - "Wir haben hitzig diskutiert, aber die Lage hat sich beruhigt."
+  - "Es war angespannt, aber wir haben deeskaliert."
+  - "Wir waren kurz davor zu eskalieren, haben aber die Kurve gekriegt."
+  - "Ich war wütend, aber ich hab mich zurückgenommen."
+  - "Die Stimmung war gereizt, aber wir haben es sachlich gehalten."
+  - "Es wurde lauter, aber dann haben wir eine Pause gemacht."
+  - "Wir hatten einen harten Moment, aber wir sind runtergekommen."
+  - "Der Streit war heftig, aber er ist nicht eskaliert."
+  - "Ich war frustriert, aber ich hab mich beherrscht."
+  - "Wir haben beide unsere Grenzen gewahrt."
+  - "Es gab Spannung, aber wir haben sie gemeinsam abgebaut."
+  - "Ich hab gemerkt, dass ich lauter werde, und hab bewusst runtergefahren."
+  - "Wir haben eine Auszeit genommen, bevor es schlimmer wurde."
+  - "Der Ton war schärfer, aber wir haben rechtzeitig gebremst."
+  - "Es war ein schwieriges Gespräch, aber es blieb respektvoll."
+  - "Wir haben gelernt, Eskalation zu erkennen und zu stoppen."
+  - "Es war ein Balanceakt, aber wir haben es geschafft."
+  - "Der Streit hat sich nicht hochgeschaukelt – wir haben deeskaliert."
+  - "Ich hab meine Wut gespürt und mich entschieden, ruhig zu bleiben."
+  - "Wir sind am Rand der Eskalation umgekehrt."
+  - "Trotz der Spannung haben wir konstruktiv gesprochen."
+  - "Wir haben die Notbremse gezogen, bevor es zu spät war."
+  - "Die Diskussion war hitzig, aber nie unfair."
+  - "Wir haben beide aufeinander geachtet."
+  - "Es war emotional, aber niemand hat den anderen angegriffen."
+semiotic:
+  peirce: index
+  signifikat: Eskalation
+  framing_type: ueberflutung
+  cultural_frame: Emotionsregulation
+  myth: Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet

@@ -38,6 +38,12 @@ rating: 1
 composed_of:
 - ATO_NEED_TERM
 - ATO_WANT_TERM
+semiotic:
+  peirce: icon
+  signifikat: Beduerfnisausdruck
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

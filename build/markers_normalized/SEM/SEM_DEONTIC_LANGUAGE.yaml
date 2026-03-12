@@ -31,13 +31,19 @@ tags:
 - norm
 rating: 1
 composed_of:
-- ATO_MORAL_LANGUAGE
+- ATO_MORAL_AUTHORITY
 - ATO_SET_BOUNDARY
 activation:
-  rule: "BOTH IN 1 message"
+  rule: BOTH IN 1 message
 scoring:
   base: 0.6
   weight: 1.0
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

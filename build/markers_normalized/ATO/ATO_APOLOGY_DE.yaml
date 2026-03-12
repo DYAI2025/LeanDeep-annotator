@@ -43,6 +43,12 @@ tags:
 - repair
 - atomic
 rating: 1
+semiotic:
+  peirce: index
+  signifikat: Entschuldigung/Reue
+  framing_type: reparatur
+  cultural_frame: Gottman
+  myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'
 vad_estimate:
   valence: 0.45
   arousal: 0.1
@@ -51,3 +57,9 @@ effect_on_state:
   trust: 0.35
   conflict: -0.3
   deesc: 0.4
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung

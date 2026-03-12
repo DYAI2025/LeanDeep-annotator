@@ -10,7 +10,9 @@ frame:
   concept: Holismus/Ganzheit
   pragmatics: Integration
   narrative: surface
-patterns: []
+patterns:
+- type: regex
+  value: (?i)\b(holistisch|ganzheitlich|Verbundenheit|kosmisch|integrales?|Ganzheitlichkeit|das Ganze|Ganzheits|holistisches? Denken|ganzheitlicher Ansatz)\b
 examples:
   positive:
   - ganzheitlicher Blick … Verbundenheit
@@ -28,6 +30,12 @@ examples:
   - Das klingt nach einem wichtigen Thema fuer dich.
 tags: []
 rating: 2
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

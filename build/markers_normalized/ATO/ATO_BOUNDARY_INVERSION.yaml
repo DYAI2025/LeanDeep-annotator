@@ -1,0 +1,47 @@
+id: ATO_BOUNDARY_INVERSION
+schema: LeanDeep
+version: '5.1'
+layer: ATO
+lang: de
+description: ''
+frame:
+  signal:
+  - manipulation
+  concept: Grenzverdrehung
+  pragmatics: Umkehrung von Schutz zu Aggression
+  narrative: conflict
+patterns:
+- type: regex
+  value: \b(Blocken|Entziehen|Pause|Abbruch|Schweigen)\s+(ist|bedeutet|wirkt\s+wie)\s+(Gewalt|Bestrafung|Folter|aggressiv)\b
+  flags:
+  - "IGNORECASE"
+examples:
+  positive:
+  - Dein Blocken ist Gewalt.
+  - Das Entziehen ist Bestrafung.
+  - Diese Pause bedeutet Folter fuer mich.
+  - Dein Schweigen ist aggressiv.
+  - Dass du dich entziehst, ist eine Bestrafung.
+  negative:
+  - Ich brauche eine Pause.
+  - Ich muss mich kurz zurueckziehen.
+  - Lass uns spaeter weiterreden.
+  - Ich blocke dich nicht, ich schuetze mich.
+tags:
+- manipulation
+- boundaries
+rating: 1
+semiotic:
+  peirce: symbol
+  signifikat: Grenzmanipulation
+  framing_type: angriff
+  cultural_frame: 'Liebe als totale Verfügbarkeit'
+  myth: 'Grenzen sind Strafe — wer sich schuetzt, greift an'
+vad_estimate:
+  valence: -0.6
+  arousal: 0.7
+  dominance: 0.4
+effect_on_state:
+  trust: -0.3
+  conflict: 0.5
+  deesc: -0.2

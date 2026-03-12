@@ -1,0 +1,116 @@
+id: MEMA_SHAME_CYCLE_MARKER
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - shame
+  - cycle
+  concept: 'Scham-Zyklus: Scham führt zu Rückzug führt zu mehr Scham'
+  pragmatics: Erkennt selbstverstärkende Scham-Dynamiken
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Ich schäme mich so sehr, dass ich mich zurückziehe, und dann schäme ich mich für den Rückzug.
+  - Jedes Mal wenn ich einen Fehler mache, verstecke ich mich – und das macht alles schlimmer.
+  - Ich trau mich nicht, dich anzurufen, weil ich mich für mein Verhalten schäme.
+  - Die Scham frisst mich auf. Ich kann dir nicht ins Gesicht schauen.
+  - Ich hab mich so daneben benommen, dass ich mich jetzt nicht mehr melden kann.
+  - Je mehr ich mich schäme, desto mehr ziehe ich mich zurück – und desto einsamer werde ich.
+  - Ich hab gelogen und schäme mich zu sehr, um die Wahrheit zu sagen.
+  - Mein Versagen macht mich so fertig, dass ich mich von allen abschotte.
+  - Ich schäme mich für meine Scham. Ein Teufelskreis.
+  - Ich bin zu beschämt, um Hilfe zu bitten, obwohl ich sie dringend brauche.
+  - Jedes Mal wenn ich darüber rede, überrollt mich die Scham und ich mache dicht.
+  - Ich war so peinlich gestern, dass ich heute nicht ins Büro gehen konnte.
+  - Die Scham hält mich davon ab, mich zu entschuldigen.
+  - Ich fühle mich wertlos und verstecke das, was noch mehr Scham erzeugt.
+  - Ich schäme mich für meine Tränen und weine dann noch mehr.
+  - Mein Körper schämt sich – ich werde rot, dann schäme ich mich fürs Rotwerden.
+  - Ich hab es vermasselt und jetzt kann ich niemandem in die Augen schauen.
+  - Die Scham frisst mich auf, aber darüber reden kann ich auch nicht.
+  - Ich fühle mich so falsch, dass ich mich am liebsten unsichtbar machen würde.
+  - Wegen meiner Scham hab ich dich angelogen, und jetzt schäme ich mich für die Lüge.
+  - Ich trau mich nicht mehr raus. Die Scham ist wie ein Gefängnis.
+  - Mir ist alles so peinlich, dass ich tagelang nicht geantwortet habe.
+  - Die Scham über mein Versagen macht es unmöglich, neu anzufangen.
+  - Ich schäme mich für meine Emotionen und unterdrücke sie – was alles verschlimmert.
+  - Jeder weiß es bestimmt – die Scham macht mich paranoid.
+  - Ich hab Angst, dass alle mich verurteilen, wenn sie wüssten.
+  - Die Scham hält mich davon ab, zur Therapie zu gehen.
+  - Ich vermeide Menschen, weil ich mich für mein Leben schäme.
+  - Jedes Mal wenn die Scham kommt, betäube ich mich – und schäme mich dann dafür.
+  - Ich bin im Schamkreislauf gefangen und finde keinen Ausweg.
+  - Die Scham kommt in Wellen – und jede Welle zieht mich tiefer.
+  - Ich hab das Gefühl, ich bin falsch als Mensch.
+  - Ich schäme mich für meine Vergangenheit und sie holt mich immer wieder ein.
+  - Mein Therapeut sagt, Scham ist mein Hauptthema – und trotzdem kann ich kaum darüber reden.
+  - Ich hab so versagt, dass ich mir selbst nicht verzeihen kann.
+  - Die Scham übernimmt und ich werde zur Salzsäule.
+  - Ich schäme mich für meinen Körper und zeige mich deshalb nicht.
+  - Wenn ich an gestern denke, will ich mich vergraben.
+  - Ich bin zu beschämt, um dir zu sagen, was wirklich los ist.
+  - Die Scham macht mich stumm – und die Stummheit macht mehr Scham.
+  - Ich schäme mich dafür, wie ich mit dir umgegangen bin.
+  - Mir ist peinlich, dass ich so reagiert habe. Ich trau mich nicht, dich anzurufen.
+  - Ich verstecke mein wahres Ich, weil die Scham mich kontrolliert.
+  - Die Scham sitzt so tief, dass ich nicht mal drüber nachdenken kann.
+  - Ich schäme mich, Hilfe zu brauchen.
+  - Jedes Mal wenn ich mich öffne, kommt die Scham und ich mache zu.
+  - Ich fühle mich grundlegend defekt und das schämt mich.
+  - 'Scham-Spirale: Fehler machen, verstecken, erwischt werden, mehr Scham.'
+  - Ich bin zu beschämt, um ehrlich zu sein – und das macht alles noch komplizierter.
+  - Die Scham ist wie ein Filter, durch den ich alles sehe.
+  negative:
+  - Es war mir peinlich, aber ich habe mich entschuldigt und fühle mich jetzt besser.
+  - Ja, ich schäme mich dafür, aber ich weiß, dass jeder Fehler macht.
+  - Das war unangenehm, aber ich stehe dazu.
+  - Ich war beschämt, habe aber trotzdem darüber geredet.
+  - Es war mir peinlich, aber meine Freunde haben verständnisvoll reagiert.
+  - Scham ist ein Gefühl, das ich kenne – aber es bestimmt nicht mein Handeln.
+  - Ja, das war unangenehm, aber ich habe daraus gelernt.
+  - Ich hab mich geschämt, aber dann hab ich mir Hilfe geholt.
+  - Es fällt mir schwer, darüber zu reden, aber ich tue es trotzdem.
+  - Scham ist menschlich, ich versuche, mich nicht davon beherrschen zu lassen.
+  - Klar schäme ich mich manchmal, aber das hält mich nicht auf.
+  - Der Moment war peinlich, aber danach konnte ich lachen.
+  - Ich stehe zu meinen Fehlern, auch wenn es wehtut.
+  - Scham kommt und geht – ich lasse sie nicht mein Leben bestimmen.
+  - Es war mir unangenehm, aber ich weiß, dass es mutig war, offen zu sein.
+  - Ich hab gelernt, Scham als Signal zu sehen, nicht als Urteil.
+  - Klar war das peinlich, aber morgen ist ein neuer Tag.
+  - Scham hat mich dazu gebracht, etwas zu ändern – das war gut.
+  - Ich bin nicht perfekt und das ist okay.
+  - Der Moment war schwer, aber er hat mich stärker gemacht.
+  - Ich habe Scham gespürt, aber trotzdem gehandelt.
+  - Peinlich? Ja. Überwindbar? Auch ja.
+  - Ich schäme mich manchmal, aber ich weiß, dass das normal ist.
+  - Fehler sind menschlich – ich vergebe mir selbst.
+  - Es war unangenehm, aber ich bin stolz, dass ich es ausgesprochen habe.
+tags:
+- mema
+- shame
+- cycle
+- withdrawal
+rating: 2
+composed_of:
+  required_any:
+  - SEM_SHAME_SIGNAL
+  - CLU_INNER_EMPTINESS_MARKER
+  supportive:
+  - SEM_SELF_VICTIMIZATION
+  - ATO_SELF_DEPRECATION
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 2.0
+  weight: 1.3
+semiotic:
+  peirce: icon
+  signifikat: Panik/Krise
+  framing_type: ueberflutung
+  cultural_frame: Emotionsregulation
+  myth: Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet

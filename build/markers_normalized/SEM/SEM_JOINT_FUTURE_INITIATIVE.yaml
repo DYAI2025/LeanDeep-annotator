@@ -39,13 +39,19 @@ tags:
 - bonding
 rating: 1
 composed_of:
-- ATO_WE_PLAN
-- ATO_FUTURE_IDEA
+- ATO_JOINT_PLANNING
+- ATO_PROACTIVE_INTENTION
 scoring:
   base: 1.3
   weight: 1.0
 window:
   messages: 4
+semiotic:
+  peirce: symbol
+  signifikat: Verbundenheitssignal
+  framing_type: bindung
+  cultural_frame: Bowlby
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0
@@ -55,3 +61,5 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+activation:
+  rule: ANY 2 IN 2 messages

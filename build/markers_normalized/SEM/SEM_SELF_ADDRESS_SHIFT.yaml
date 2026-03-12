@@ -38,6 +38,12 @@ rating: 1
 composed_of:
 - ATO_SELF_ADDRESS_VERB
 - ATO_LOVE_MOTIVE
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

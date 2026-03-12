@@ -1,0 +1,104 @@
+id: MEMA_TRIANGULATION_META
+version: "3.4"
+frame:
+  signal: ["triangulation", "meta"]
+  concept: "Meta-Triangulation: Einbeziehen Dritter in Zweierkonflikt"
+  pragmatics: "Erkennt systematische Dreiecksbildung in Beziehungskonflikten"
+  narrative: "meta_pattern"
+tags: [mema, triangulation, third_party, manipulation]
+composed_of:
+  required_any:
+  - SEM_BLAME_SIGNAL
+  - SEM_PROJECTION
+  supportive:
+  - ATO_ACCUSATION
+  - CLU_INDIRECT_CONFLICT_AVOIDANCE
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+  positive_de:
+  - "Meine Mutter findet auch, dass du übertreibst."
+  - "Selbst dein Bruder hat gesagt, dass du Unrecht hast."
+  - "Ich hab meiner Freundin erzählt, was du getan hast, und sie war schockiert."
+  - "Alle meine Freunde sagen, dass du dich falsch verhältst."
+  - "Sogar dein Chef hat bemerkt, dass du dich komisch verhältst."
+  - "Mein Therapeut sagt, dein Verhalten ist toxisch."
+  - "Ich hab das unserem Nachbarn erzählt und der war fassungslos."
+  - "Alle sind auf meiner Seite – überleg dir das mal."
+  - "Deine Schwester hat mir recht gegeben."
+  - "Ich hab deinen besten Freund gefragt, und der sieht das auch so."
+  - "Warum bist du so? Alle anderen finden dein Verhalten komisch."
+  - "Meine Kollegin meint, ich sollte dich verlassen."
+  - "Ich hab das online gepostet und alle geben mir recht."
+  - "Selbst deine Mutter hat zu mir gesagt, dass du schwierig bist."
+  - "Frag doch mal jemand anderes – die werden alle meiner Meinung sein."
+  - "Unser Nachbar hat gemerkt, dass du immer schreist."
+  - "Ich hab mit drei Leuten darüber geredet und alle sehen es wie ich."
+  - "Dein Vater hat mir gesagt, du warst schon als Kind so."
+  - "Die Leute fragen mich, warum ich noch bei dir bin."
+  - "Meine beste Freundin hat gesagt, sie hätte dich längst verlassen."
+  - "Ich hab unsere Chats meiner Schwester gezeigt und sie war entsetzt."
+  - "Jeder sieht es, nur du nicht."
+  - "Ich habe dir den Beweis: alle denken wie ich."
+  - "Deine Ex hat mich gewarnt vor dir."
+  - "Im Internet gibt es tausende, die das gleiche Problem mit Leuten wie dir haben."
+  - "Meine Mutter hat gesagt, ich verdiene Besseres."
+  - "Sogar Fremde auf der Straße würden mir zustimmen."
+  - "Ich brauchte eine Außenperspektive und alle bestätigen mich."
+  - "Dein Kollege hat mir anvertraut, dass er dich auch schwierig findet."
+  - "Unsere gemeinsamen Freunde distanzieren sich wegen deines Verhaltens."
+  - "Ich habe mit dem Pfarrer gesprochen und er sieht es genau wie ich."
+  - "Mein Anwalt sagt, dein Verhalten hat Konsequenzen."
+  - "Die Lehrerin hat mich angesprochen – sie macht sich auch Sorgen."
+  - "Ich hab meinem Chef davon erzählt, weil ich nicht mehr konnte."
+  - "Alle sehen das Problem. Nur du nicht."
+  - "Deine Familie steht auch auf meiner Seite."
+  - "Meine Eltern haben gesagt, sie hätten es mir von Anfang an gesagt."
+  - "Sogar die Kinder merken, dass du dich komisch benimmst."
+  - "Ich hab im Freundeskreis darüber gesprochen und alle sind geschockt."
+  - "Die Nachbarin hat mir zugestimmt – so geht man nicht miteinander um."
+  - "Mein Bruder hat angeboten, mit dir zu reden."
+  - "Ich hab eine Umfrage gemacht: alle finden dich schwierig."
+  - "Unser Berater sagt, du musst dich ändern."
+  - "Selbst dein Arzt hat gemeint, du solltest an dir arbeiten."
+  - "Ich hab meiner Mutter die Nachrichten gezeigt."
+  - "Andere Paare streiten nicht so – das sagen alle."
+  - "Meine Freundinnen wundern sich, dass ich das mitmache."
+  - "Du stehst allein da mit deiner Meinung."
+  - "Die ganze Welt sieht es, nur du nicht."
+  - "Ich hab Bestätigung gesucht und überall bekommen."
+  negative_de:
+  - "Das ist zwischen uns – ich rede mit niemandem darüber."
+  - "Ich möchte unsere Probleme unter uns klären."
+  - "Ich behalte das für mich, weil es privat ist."
+  - "Wir lösen das allein, ohne andere einzubeziehen."
+  - "Ich finde es wichtig, dass das zwischen uns bleibt."
+  - "Ich rede nicht hinter deinem Rücken über unsere Probleme."
+  - "Unsere Beziehung ist Privatsache."
+  - "Ich beziehe keine Dritten ein."
+  - "Das geht nur uns beide etwas an."
+  - "Ich halte mich zurück und bespreche das nur mit dir."
+  - "Unsere Probleme gehören nicht an die Öffentlichkeit."
+  - "Ich respektiere unsere Privatsphäre."
+  - "Ich habe mit meiner Freundin geredet, aber nur um meine Gefühle zu sortieren."
+  - "Ich beziehe andere nur ein, wenn wir beide einverstanden sind."
+  - "Ich suche Rat, ohne dich schlecht zu machen."
+  - "Wenn ich mit jemandem rede, dann in der Therapie – im geschützten Rahmen."
+  - "Ich bespreche unsere Konflikte nicht mit deiner Familie."
+  - "Unsere Streitthemen bleiben zwischen unseren vier Wänden."
+  - "Ich stelle dich nicht vor anderen bloß."
+  - "Wenn ich Hilfe brauche, sage ich es dir zuerst."
+  - "Ich wäsche keine schmutzige Wäsche in der Öffentlichkeit."
+  - "Unsere Probleme lösen wir als Paar, nicht als Gruppe."
+  - "Ich respektiere deine Grenze und rede nicht über dich."
+  - "Ich handle fair: was zwischen uns ist, bleibt zwischen uns."
+  - "Ich brauche keine Bestätigung von außen – ich will mit dir reden."
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

@@ -28,6 +28,12 @@ examples:
   - Das ueberrascht mich, aber es ist okay.
 tags: []
 rating: 2
+semiotic:
+  peirce: index
+  signifikat: Schuld/Schuldgefuehle
+  framing_type: schuld
+  cultural_frame: ''
+  myth: 'Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung'
 vad_estimate:
   valence: -0.5
   arousal: 0.4

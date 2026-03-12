@@ -1,4 +1,4 @@
-id: EMO_LIGHT_HUMOR_CRITIQUE
+id: SEM_LIGHT_HUMOR_CRITIQUE
 lang: de
 category: SEMANTIC
 description: "Humorvolle, sanfte Form der Kritik ohne verletzende Absicht."
@@ -8,9 +8,9 @@ frame:
   pragmatics: "Wahrung der Beziehung durch Humor"
   narrative: "kritik_mit_lächeln"
 composed_of:
-- ATO_CRITIQUE_ELEMENT
-- ATO_HUMOR_SIGNAL
-activation_logic: "ANY 2 IN 3 messages"
+- ATO_HUMOR_LIGHT
+- ATO_CRITICISM_ATTACK_MARKER
+activation_logic: "ANY 1 IN 3 messages"
 scoring: {base: 1.4, weight: 1.1}
 examples:
   positive:

@@ -33,12 +33,18 @@ tags:
 rating: 1
 composed_of:
 - ATO_MINIMIZATION
-- ATO_DELAYING_PHRASES
+- ATO_DELAY_WORD
 activation:
-  rule: "BOTH IN 1 message"
+  rule: BOTH IN 1 message
 scoring:
   base: 0.55
   weight: 1.0
+semiotic:
+  peirce: symbol
+  signifikat: Engagement/Verbindlichkeit
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 compositionality: deterministic
 vad_estimate:
   valence: 0.2

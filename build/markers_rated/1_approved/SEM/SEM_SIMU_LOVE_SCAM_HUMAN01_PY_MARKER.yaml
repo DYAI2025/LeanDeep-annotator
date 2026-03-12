@@ -38,3 +38,5 @@ tags:
 - love_scam
 - emotional_intensity
 compositionality: deterministic
+semantic_affinity:
+  ironie_suppress: true

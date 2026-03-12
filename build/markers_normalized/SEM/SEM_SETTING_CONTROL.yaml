@@ -49,6 +49,12 @@ composed_of:
 activation:
   rule: "BOTH IN 2 messages"
   window: 2
+semiotic:
+  peirce: index
+  signifikat: Kontrolle/Dominanz
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
+  myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'
 compositionality: deterministic
 vad_estimate:
   valence: -0.05

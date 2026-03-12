@@ -1,0 +1,104 @@
+id: MEMA_SIMILARITY_DISSONANCE
+version: "3.4"
+frame:
+  signal: ["similarity", "dissonance"]
+  concept: "Dissonanz durch wahrgenommene Ähnlichkeit – Projektion und Spiegelverweigerung"
+  pragmatics: "Erkennt Konflikte, die aus Ähnlichkeit statt Unterschied entstehen"
+  narrative: "meta_pattern"
+tags: [mema, similarity, dissonance, projection, mirror]
+composed_of:
+  required_any:
+  - SEM_PROJECTION
+  - CLU_MIRROR_DEFENSE
+  supportive:
+  - SEM_BLAME_SIGNAL
+  - ATO_DENIAL
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+  positive_de:
+  - "Du bist genauso stur wie ich – und genau das macht mich wahnsinnig."
+  - "Ich hasse an dir, was ich an mir selbst nicht ausstehen kann."
+  - "Wir sind uns so ähnlich, dass wir uns permanent in die Quere kommen."
+  - "Du tust exakt das Gleiche, was du mir vorwirfst."
+  - "Wir spiegeln uns gegenseitig die schlimmsten Seiten."
+  - "Du bist wie ich, und das ertrage ich nicht."
+  - "Mir fällt auf: wir haben denselben Fehler, und keiner will es zugeben."
+  - "Wir streiten, weil wir uns zu ähnlich sind – nicht weil wir verschieden sind."
+  - "Du erinnerst mich an mich selbst, und das triggert mich."
+  - "Dein Verhalten ist wie ein Spiegel, in den ich nicht schauen will."
+  - "Wir sind beide kontrollsüchtig und keiner gibt nach."
+  - "Du machst genau das, was mich an meiner Mutter gestört hat. Und an mir."
+  - "Wir werfen uns gegenseitig vor, was wir selbst tun."
+  - "Ich erkenne meine Fehler in deinem Verhalten und das macht mich wütend."
+  - "Zwei Alphatiere in einer Beziehung – Dauerkonflikt."
+  - "Du bist genauso verletzlich wie ich und wir verstecken es beide hinter Aggression."
+  - "Wir projizieren aufeinander, was wir an uns selbst ablehnen."
+  - "Unsere Ähnlichkeit ist unser größtes Problem."
+  - "Ich sehe in dir alles, was ich an mir verändern will – und das macht mich fertig."
+  - "Du und ich – gleicher Sturkopf, gleicher Mist."
+  - "Wir sind zu ähnlich, um uns zu verstehen."
+  - "Du sagst mir Dinge, die ich mir selbst nicht eingestehen will."
+  - "Unsere Stärken sind identisch, und genau deshalb prallen wir aufeinander."
+  - "Du zeigst mir Teile von mir, die ich nicht sehen will."
+  - "Mir wird klar: ich bekämpfe in dir, was ich in mir bekämpfe."
+  - "Wir sind beide Perfektionisten und machen uns gegenseitig verrückt."
+  - "Die Dinge, die mich an dir stören, sind exakt meine eigenen Schwächen."
+  - "Du und ich: spiegelverkehrt dasselbe Drama."
+  - "Ich rege mich über deine Ungeduld auf – obwohl ich selbst keine Geduld habe."
+  - "Wir sind uns so ähnlich, dass es wehtut."
+  - "Du bist wie ein Spiegel, den ich am liebsten zerbrechen würde."
+  - "Dein Kontrollbedürfnis triggert meins und umgekehrt."
+  - "Ich erkenne in deiner Reaktion mein eigenes Muster."
+  - "Wir sind gleich verletzlich, gleich stolz, gleich unfähig, es zuzugeben."
+  - "Du zeigst mir, was ich verdränge – und dafür hasse ich dich fast."
+  - "Zwei gleiche Pole stoßen sich ab – das sind wir."
+  - "Ich bekämpfe an dir, was ich an mir selbst verurteile."
+  - "Wir tanzen den gleichen Tanz, nur in verschiedenen Rollen."
+  - "Du und ich: gleiche Wunde, gleiche Verteidigung."
+  - "Ich sehe meinen blinden Fleck in deinem Verhalten."
+  - "Wenn du stur bist, werde ich sturer – weil ich genauso bin."
+  - "Unsere Konflikte sind Projektionen – wir streiten mit uns selbst."
+  - "Du bist mein unangenehmer Spiegel."
+  - "Wir haben denselben Schatten und keiner will ihn sehen."
+  - "Ich werfe dir vor, unzuverlässig zu sein – und bin es selbst."
+  - "Gleiche Angst, gleiche Abwehr, gleicher Kreislauf."
+  - "Wir gehen uns auf die Nerven, weil wir aus dem gleichen Holz geschnitzt sind."
+  - "Dein Verhalten triggert mich, weil es meins widerspiegelt."
+  - "Wir teilen dieselben Dämonen und kämpfen gegeneinander statt dagegen."
+  - "Unsere Ähnlichkeit ist Segen und Fluch zugleich."
+  negative_de:
+  - "Wir sind so verschieden, und genau das macht es schwer."
+  - "Du tickst komplett anders als ich."
+  - "Wir kommen aus verschiedenen Welten."
+  - "Unsere Unterschiede ergänzen sich gut."
+  - "Du hast Stärken, die mir fehlen, und umgekehrt."
+  - "Wir sind verschieden, aber das bereichert uns."
+  - "Du denkst analytisch, ich emotional – das ergänzt sich."
+  - "Wir haben unterschiedliche Hintergründe, das sorgt für Reibung."
+  - "Gegensätze ziehen sich an, sagt man."
+  - "Unsere Verschiedenheit ist eine Herausforderung, aber auch eine Chance."
+  - "Du bist introvertiert, ich extrovertiert – wir müssen Kompromisse finden."
+  - "Wir kommen unterschiedlich mit Stress um."
+  - "Dein Ansatz ist anders als meiner, aber nicht schlechter."
+  - "Wir ergänzen uns trotz unserer Unterschiede."
+  - "Du bist ruhig, ich bin laut – das passt manchmal nicht."
+  - "Unsere verschiedenen Perspektiven bereichern unsere Diskussionen."
+  - "Wir haben verschiedene Bedürfnisse und lernen, damit umzugehen."
+  - "Du brauchst Nähe, ich Freiraum – klassischer Gegensatz."
+  - "Unsere Unterschiede sind kein Problem, sondern eine Ressource."
+  - "Ich bin chaotisch, du bist ordentlich – wir lernen voneinander."
+  - "Wir sind unterschiedlich aufgewachsen, das erklärt vieles."
+  - "Verschiedene Herangehensweisen können auch bereichernd sein."
+  - "Du siehst das anders als ich, und das ist ok."
+  - "Wir sind ein gutes Team, gerade weil wir verschieden sind."
+  - "Unsere Unterschiede machen uns als Paar stärker."
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

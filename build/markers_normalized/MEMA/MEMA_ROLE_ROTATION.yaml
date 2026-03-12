@@ -35,3 +35,9 @@ tags:
 rating: 1
 activation:
   rule: "ROLE_SWITCH >= 2 in 8 messages"
+semiotic:
+  peirce: index
+  signifikat: Rollenwechsel/-dynamik
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

@@ -18,14 +18,77 @@ examples:
   - "A: Mir fehlt Transparenz bei den Terminen.\nB: Ich trage alles in den Kalender ein.\nA: Gute Idee.\nB: Danke für den Hinweis."
   - "A: Das Protokoll war unvollständig.\nB: Ich ergänze die offenen Punkte.\nA: Bitte heute noch.\nB: Kommt bis 18 Uhr."
   - "A: Ich habe mich übergangen gefühlt.\nB: Das war nicht meine Absicht.\nA: Lass uns künftig vorher abstimmen.\nB: Einverstanden."
+  - "A: Du hast das falsch gemacht.\nB: Stimmt, ich korrigiere das.\nA: Wir muessen schneller werden.\nB: Okay, ich schaue mir den Prozess an."
+  - "A: Das Ergebnis ist nicht akzeptabel.\nB: Was genau stoert dich?\nA: Die Zahlen stimmen nicht.\nB: Ich pruefe das sofort."
+  - "A: Du hast mein Vertrauen beschaedigt.\nB: Das verstehe ich.\nA: Wie willst du das wiedergutmachen?\nB: Ich erklaere dir alles."
+  - "A: Der Bericht war verspätet.\nB: Ja, ich hab die Deadline verpasst.\nA: Das darf nicht nochmal passieren.\nB: Ich setze mir Erinnerungen."
+  - "A: Ich bin enttaeuscht von dem Ergebnis.\nB: Ich auch, ich haette mehr tun koennen.\nA: Was machen wir jetzt?\nB: Ich schlage eine Nachbesserung vor."
+  - "A: Du hast das vergessen, schon wieder.\nB: Tut mir leid, ich war abgelenkt.\nA: Ich brauche Zuverlaessigkeit.\nB: Ich notiere es mir ab jetzt."
+  - "A: Das war nicht abgesprochen.\nB: Stimmt, das haette ich vorher klaeren sollen.\nA: Bitte in Zukunft vorher Bescheid geben.\nB: Mach ich, versprochen."
+  - "A: Warum hast du das alleine entschieden?\nB: Das war ein Fehler, ich haette fragen sollen.\nA: Ja, das waere besser gewesen.\nB: Naechstes Mal frage ich."
+  - "A: Das Meeting war schlecht vorbereitet.\nB: Da hast du recht.\nA: Ich erwarte naechstes Mal eine Agenda.\nB: Kommt, ich bereite mich besser vor."
+  - "A: Du hast die Kundin veraergert.\nB: Das war nicht meine Absicht.\nA: Ruf sie bitte an und klaer das.\nB: Mache ich heute noch."
+  - "A: Ich bin wuetend, dass du das nicht gesagt hast.\nB: Ich verstehe deinen Aerger.\nA: Sag mir sowas sofort.\nB: In Ordnung, das mache ich."
+  - "A: Das Budget ist ueberschritten.\nB: Ich habe nicht aufgepasst.\nA: Wir muessen das klaeren.\nB: Ich erstelle eine Aufstellung."
+  - "A: Du bist zu spaet zum dritten Mal.\nB: Entschuldigung, ich habe Zeitmanagement-Probleme.\nA: Finde eine Loesung dafuer.\nB: Ich stelle mir den Wecker frueher."
+  - "A: Das war nicht okay so.\nB: Ja, ich sehe das ein.\nA: Ich moechte, dass sich das aendert.\nB: Ich arbeite dran."
+  - "A: Wir haben ein Problem mit der Kommunikation.\nB: Stimmt, das sehe ich auch so.\nA: Was schlägst du vor?\nB: Taegliche kurze Updates?"
+  - "A: Das Projekt laeuft nicht wie geplant.\nB: Ich weiss, da muss ich mehr tun.\nA: Lass uns umplanen.\nB: Ich mache einen neuen Zeitplan."
+  - "A: Du haettest mich vorwarnen sollen.\nB: Ja, das war mein Fehler.\nA: Bitte kuenftig rechtzeitig informieren.\nB: Selbstverstaendlich."
+  - "A: Ich bin sauer wegen der Mail.\nB: Das kann ich nachvollziehen.\nA: Schreib sowas bitte nicht mehr so.\nB: Okay, ich formuliere vorsichtiger."
+  - "A: Du hast mich vor dem Team blossgestellt.\nB: Das tut mir leid, das war nicht Absicht.\nA: Bitte sowas unter vier Augen.\nB: Hast recht, mach ich."
+  - "A: Die Lieferung ist nicht angekommen.\nB: Ich kuemmere mich drum.\nA: Das ist dringend.\nB: Ich rufe den Lieferanten jetzt an."
+  - "A: Ich fuehle mich nicht ernst genommen.\nB: Das ist mir wichtig, dass du das sagst.\nA: Ich moechte, dass sich was aendert.\nB: Sag mir konkret was."
+  - "A: Du hast die Abgabe verschoben ohne Ruecksprache.\nB: Das haette ich absprechen muessen.\nA: Genau. Bitte abklaeren naechstes Mal.\nB: Versprochen."
+  - "A: Ich bin frustriert ueber den Verlauf.\nB: Das verstehe ich, es laeuft nicht optimal.\nA: Was koennen wir aendern?\nB: Lass uns die Aufgaben neu verteilen."
+  - "A: Du warst heute abwesend im Meeting.\nB: Stimmt, ich war unkonzentriert.\nA: Das faellt auf.\nB: Ich achte naechstes Mal drauf."
+  - "A: Die Qualitaet der Arbeit hat nachgelassen.\nB: Ja, ich hatte eine schwere Woche.\nA: Trotzdem muss der Standard stimmen.\nB: Du hast recht, ich hole das auf."
+  - "A: Du hast mein Feedback ignoriert.\nB: Nicht absichtlich.\nA: Dann beruecksichtige es bitte.\nB: Mache ich ab sofort."
+  - "A: Das Team ist unzufrieden.\nB: Das habe ich gemerkt.\nA: Du musst das ansprechen.\nB: Ich plane ein Gespraech."
+  - "A: Dein Vorschlag hat nicht funktioniert.\nB: Stimmt, das war keine gute Idee.\nA: Wir brauchen Plan B.\nB: Ich bereite Alternativen vor."
+  - "A: Du hast zugesagt und nicht geliefert.\nB: Das tut mir leid.\nA: Zuverlaessigkeit ist mir wichtig.\nB: Ich weiss, ich bessere mich."
+  - "A: Ich bin genervt von der Situation.\nB: Verstaendlich.\nA: Wie loesen wir das?\nB: Schritt fuer Schritt, zusammen."
+  - "A: Das war respektlos.\nB: Das wollte ich nicht.\nA: Ueberleg dir bitte wie du redest.\nB: Okay, ich entschuldige mich."
+  - "A: Wir reden seit Wochen aneinander vorbei.\nB: Ja, das stimmt leider.\nA: Lass uns einen Neuanfang machen.\nB: Gerne, wann?"
+  - "A: Das war unprofessionell.\nB: Ja, das gebe ich zu.\nA: Bitte achte kuenftig darauf.\nB: Absolut."
+  - "A: Ich bin nicht einverstanden mit deiner Entscheidung.\nB: Ich erklaere dir meine Gruende.\nA: Okay, ich hoere zu.\nB: Danke fuer die Offenheit."
+  - "A: Dein Ton war unangemessen.\nB: Stimmt, entschuldigung.\nA: Bitte ruhiger naechstes Mal.\nB: Versprochen."
+  - "A: Das Ergebnis entspricht nicht unseren Erwartungen.\nB: Was fehlt konkret?\nA: Mehr Details im Bericht.\nB: Ich ergaenze das."
+  - "A: Ich habe das Gefuehl, du nimmst das nicht ernst.\nB: Doch, sehr sogar.\nA: Dann zeig mir das bitte.\nB: Ich bringe morgen einen Plan mit."
+  - "A: Wir haben ein Kommunikationsproblem.\nB: Ja, das merke ich auch.\nA: Was schlägst du vor?\nB: Woechentliches Sync-Meeting?"
+  - "A: Das haette nicht passieren duerfen.\nB: Nein, da hast du voellig recht.\nA: Wie verhindern wir das in Zukunft?\nB: Ich fuehre eine Checkliste ein."
+  - "A: Ich brauche mehr Unterstuetzung von dir.\nB: Was kann ich tun?\nA: Mehr Feedback, oefteres Nachfragen.\nB: Mache ich, ab morgen."
+  - "A: Das war schlecht kommuniziert.\nB: Stimmt, sorry.\nA: Bitte klarer naechstes Mal.\nB: Mach ich."
+  - "A: Ich fuehle mich uebergangen bei Entscheidungen.\nB: Das war keine Absicht.\nA: Bezieh mich kuenftig mit ein.\nB: Versprochen."
+  - "A: Deine Mail war missverstaendlich.\nB: Ja, ich schreibe sie um.\nA: Danke.\nB: Ist raus."
+  - "A: Du warst beim Kunden nicht vorbereitet.\nB: Stimmt, das war mein Fehler.\nA: Das darf nicht nochmal passieren.\nB: Nein, ich bereite mich besser vor."
+  - "A: Mir fehlt dein Engagement.\nB: Was meinst du konkret?\nA: Du meldest dich nie proaktiv.\nB: Okay, ich melde mich kuenftig oefter."
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - "A: Du bist so ein Idiot, warum machst du immer alles falsch?\nB: Was hab ich denn gemacht?\nA: Alles! Du bist unfaehig!\nB: Das ist nicht fair."
+  - "A: Mit dir kann man nicht arbeiten, du bist eine Null.\nB: Das ist verletzend.\nA: Weil es wahr ist!\nB: Lass uns sachlich bleiben."
+  - "A: Du bist genauso nutzlos wie dein Vater.\nB: Das ist unter der Guertellinie.\nA: Jemand muss es dir ja sagen!"
+  - "A: Du versagst auf ganzer Linie, wie immer.\nB: Ich habe einen Fehler gemacht.\nA: Du BIST ein Fehler."
+  - "A: Du bist so peinlich, kein Wunder dass niemand dich mag.\nB: Das ist gemein.\nA: Tut mir leid, aber du bist wirklich unfaehig."
+  - "A: Was stimmt nicht mit dir? Du bist ein totaler Versager.\nB: Ich habe mein Bestes gegeben.\nA: Dein Bestes ist erbaermlich."
+  - "A: Du bist faul, egoistisch und unzuverlaessig. Wie soll man mit dir arbeiten?\nB: Das stimmt doch gar nicht.\nA: Doch, jeder denkt so ueber dich."
+  - Das Wetter ist heute schlecht.
+  - Hast du die Mail bekommen?
+  - Der Termin ist verschoben worden.
+  - Ich gehe jetzt einkaufen.
+  - Das Meeting faengt um 10 an.
+  - Morgen ist Feiertag.
+  - Die Besprechung war lang heute.
+  - Kannst du mir das Dokument schicken?
+  - Ich bin heute frueher fertig.
+  - Der Kaffee ist alle.
+  - Ich hab den Bericht gelesen, gut gemacht.
+  - Lass uns Mittwoch telefonieren.
+  - Das Projekt laeuft im Plan.
+  - Ich schicke dir die Unterlagen.
+  - Wir treffen uns um 15 Uhr.
+  - Das Budget wurde genehmigt.
+  - Danke fuer die schnelle Antwort.
+  - Ich bin im Homeoffice heute.
 tags:
 - mema
 - omission
@@ -47,3 +110,9 @@ criteria:
   window_messages: 30
   min_E_hits: 3
   strict_zero: true
+semiotic:
+  peirce: index
+  signifikat: Konfliktdynamik
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'

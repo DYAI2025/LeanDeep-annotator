@@ -13,6 +13,11 @@ semiotic:
   level: pragmatic
   object: "empathy_expression"
   interpretant: "effect_on_state: {trust: +0.2, deesc: +0.15}"
+  peirce: icon
+  signifikat: Einfuehlung/Empathie
+  framing_type: empathie
+  cultural_frame: Rogers
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 examples:
   positive_de:
   - "Ich verstehe, wie dich das trifft."

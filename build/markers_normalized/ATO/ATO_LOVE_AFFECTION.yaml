@@ -99,6 +99,12 @@ tags:
 - tenderness
 - v3.4
 rating: 1
+semiotic:
+  peirce: symbol
+  signifikat: Liebe/Zuneigung
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 vad_estimate:
   valence: 0.7
   arousal: 0.55
@@ -107,6 +113,10 @@ effect_on_state:
   trust: 0.35
   conflict: -0.2
   deesc: 0.25
+semantic_affinity:
+  ironie_suppress: true
+activation:
+  rule: "ANY 1"
 metadata:
   created: "2026-02-12"
   author: "DYAI Emotional Semantics Collection"

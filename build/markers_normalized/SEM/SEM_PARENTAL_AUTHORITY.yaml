@@ -52,6 +52,12 @@ window:
   messages: 30
 detect_class: "E"
 criteria: "Kombination aus Elternrolle und direktiven Sprechakten"
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.2

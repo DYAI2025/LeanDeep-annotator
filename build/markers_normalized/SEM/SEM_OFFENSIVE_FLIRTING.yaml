@@ -38,10 +38,15 @@ tags:
 - boundary
 rating: 1
 composed_of:
-- ATO_FLIRTING_PHRASE
-- ATO_BOUNDARY_CROSS
+- ATO_ROMANTIC_SIGNAL_DIRECT
 activation:
   rule: ANY 2 IN 3 messages
+semiotic:
+  peirce: symbol
+  signifikat: Grenzsetzung
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 compositionality: deterministic
 vad_estimate:
   valence: -0.5

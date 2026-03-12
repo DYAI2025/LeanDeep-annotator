@@ -1,0 +1,116 @@
+id: MEMA_NARRATIVE_COHERENCE
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - narrative
+  - coherence
+  concept: Narrative Kohärenz – Grad der Schlüssigkeit der Beziehungserzählung
+  pragmatics: Erkennt, ob die persönliche Erzählung in sich stimmig ist
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Ich verstehe jetzt, warum ich so reagiere – es hängt mit meiner Kindheit zusammen.
+  - 'Alles ergibt Sinn, wenn ich zurückblicke: die Angst, die Wut, der Rückzug.'
+  - Mir wird klar, dass meine Beziehungsmuster alle miteinander verbunden sind.
+  - Ich sehe den roten Faden in meinem Verhalten jetzt deutlich.
+  - Mein Therapeut hat mir geholfen, die Zusammenhänge zu sehen.
+  - 'Die Geschichte macht Sinn: verletzt in der Kindheit, misstrauisch als Erwachsener.'
+  - Ich verstehe jetzt, warum ich immer wieder denselben Typ wähle.
+  - Es gibt eine Logik in meinem Verhalten, auch wenn sie ungesund ist.
+  - 'Alles hängt zusammen: die Angst vor Nähe, die Eifersucht, der Kontrollzwang.'
+  - Ich hab die Verbindung zwischen meinen Eltern und meinen Beziehungen erkannt.
+  - Meine Geschichte ergibt ein kohärentes Bild.
+  - Wenn ich zurückblicke, sehe ich, wie eins zum anderen geführt hat.
+  - Die Therapie hat mir geholfen, mein Leben als zusammenhängende Geschichte zu sehen.
+  - Meine Reaktionen ergeben Sinn, wenn man den Kontext kennt.
+  - Ich kann erklären, warum ich so bin, wie ich bin.
+  - Alles hat seinen Grund – meine Muster, meine Ängste, meine Mauern.
+  - Ich sehe die Verbindung zwischen dem, was mir passiert ist, und dem, was ich tue.
+  - Mein Leben erzählt eine Geschichte – und jetzt verstehe ich sie.
+  - 'Die Zusammenhänge werden mir klar: Trauma, Vermeidung, Wiederholung.'
+  - Ich kann meine Beziehungsgeschichte kohärent erzählen.
+  - Es gibt eine innere Logik in dem, was von außen chaotisch wirkt.
+  - Mir wurde klar, dass mein Bindungsverhalten aus meiner Kindheit kommt.
+  - Ich hab die Punkte verbunden und es ergibt ein Bild.
+  - Meine Angst vor Verlassenwerden erklärt all meine Beziehungsmuster.
+  - Ich verstehe mich selbst besser, seitdem ich die Zusammenhänge sehe.
+  - Die Geschichte meiner Beziehung ergibt Sinn – auch die schweren Teile.
+  - Mir fällt auf, dass meine Konflikte alle einen gemeinsamen Nenner haben.
+  - Alles ergibt ein kohärentes Bild, wenn man die Hintergrundgeschichte kennt.
+  - Ich sehe jetzt klar, warum ich immer wieder in dieselben Muster falle.
+  - Die Erzählung meines Lebens hat eine innere Stimmigkeit bekommen.
+  - Ich bin eine Geschichte – und alle Kapitel hängen zusammen.
+  - Mein Verhalten in Beziehungen folgt einer Logik, die mir jetzt klar ist.
+  - Die Bausteine meines Lebens passen zusammen wie ein Puzzle.
+  - Ich kann jetzt erklären, warum ich bestimmte Dinge tue.
+  - Die Kohärenz meiner Erzählung gibt mir Halt.
+  - Mein Therapeut sagt, narrative Kohärenz ist ein Zeichen von Heilung.
+  - Ich habe meine Geschichte rekonstruiert und sie ergibt endlich Sinn.
+  - Die Verbindung zwischen meinen Erfahrungen und meinem Verhalten ist offensichtlich.
+  - Ich sehe die Muster und verstehe ihre Herkunft.
+  - Mein Lebensweg ist logisch, wenn man alle Faktoren kennt.
+  - Ich hab endlich einen Rahmen, um mein Verhalten zu verstehen.
+  - Alles hängt zusammen – und das zu sehen, ist befreiend.
+  - Meine Geschichte hat einen Sinn bekommen.
+  - Ich kann die Zusammenhänge zwischen meiner Kindheit und meiner Ehe erklären.
+  - Mir ist ein Licht aufgegangen – alles ergibt plötzlich Sinn.
+  - Die Puzzleteile meines Lebens fügen sich zusammen.
+  - Ich sehe den roten Faden und er gibt mir Orientierung.
+  - Mein Narrativ ist kohärent geworden.
+  - Ich verstehe meine Geschichte – und das verändert, wie ich handle.
+  - Die Therapie hat mir geholfen, eine stimmige Erzählung zu entwickeln.
+  negative:
+  - Ich verstehe nicht, warum ich so reagiere. Es ergibt keinen Sinn.
+  - Mein Leben fühlt sich an wie ein chaotisches Durcheinander.
+  - Ich kann mir mein Verhalten nicht erklären.
+  - Nichts ergibt Sinn in meiner Geschichte.
+  - Ich sehe keine Zusammenhänge, nur Zufälle.
+  - Warum mache ich das? Ich hab keine Ahnung.
+  - Meine Beziehungen folgen keinem Muster, das ich erkennen kann.
+  - Alles ist widersprüchlich – mein Fühlen, mein Denken, mein Handeln.
+  - Ich kann mir selbst nicht erklären, warum ich so ticke.
+  - Mein Leben hat keinen roten Faden.
+  - Es ist alles fragmentiert – nichts hängt zusammen.
+  - Ich hab keine Ahnung, warum ich immer wieder dasselbe tue.
+  - Meine Geschichte ergibt kein kohärentes Bild.
+  - Ich bin ein Widerspruch – und ich verstehe mich selbst nicht.
+  - Es gibt keine Logik in dem, was ich tue.
+  - Warum bin ich so? Keine Ahnung.
+  - Mein Verhalten ist für mich selbst ein Rätsel.
+  - Ich sehe nur Chaos, wo andere Muster sehen.
+  - Alles fühlt sich zufällig an.
+  - Ich kann meine Geschichte nicht erzählen – sie ergibt keinen Sinn.
+  - Meine Erlebnisse sind Fragmente ohne Verbindung.
+  - Ich sehe keinen Zusammenhang zwischen meiner Vergangenheit und meinem Verhalten.
+  - Alles ist so verwirrend – ich durchblicke mich selbst nicht.
+  - Meine Erzählung hat Lücken und Widersprüche.
+  - Ich bin mir selbst ein Rätsel.
+tags:
+- mema
+- narrative
+- coherence
+- consistency
+rating: 2
+composed_of:
+  required_any:
+  - SEM_SYSTEMS_THINKING
+  - CLU_CONSTRUCTIVE_CONFLICT
+  supportive:
+  - SEM_EMPATHIC_RESONANCE
+  - ATO_SELF_DISCLOSURE
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.1
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

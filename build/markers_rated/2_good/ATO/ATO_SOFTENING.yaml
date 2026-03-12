@@ -10,18 +10,82 @@ pattern:
   tokens: ["ein bisschen", "vielleicht", "gefühlt", "irgendwie", "nicht ganz"]
 examples:
   positive:
-  - "kurze Sequenz A … kurze Sequenz B"
-  - "Beispiel mit zwei Signalen in einem Satz"
-  - "Signal 1 … später Signal 2 im Kontext"
-  - "Kombination aus Token X und Y"
-  - "Variante mit ähnlicher Semantik"
+  - Das war vielleicht nicht ganz so gemeint.
+  - Ich bin ein bisschen unsicher, ob das passt.
+  - Gefühlt war das schon okay.
+  - Irgendwie finde ich das schwierig.
+  - Das ist nicht ganz mein Ding.
+  - Vielleicht sollten wir nochmal darüber reden.
+  - Ein bisschen mehr Zeit wäre gut.
+  - Gefühlt wird das zu eng mit dem Termin.
+  - Irgendwie hatte ich mir das anders vorgestellt.
+  - Das war vielleicht etwas zu direkt von mir.
+  - Ich bin ein bisschen enttäuscht, ehrlich gesagt.
+  - Vielleicht habe ich mich unklar ausgedrückt.
+  - Gefühlt passt der Zeitplan nicht ganz.
+  - Irgendwie stresst mich das gerade.
+  - Das ist nicht ganz das, was ich meinte.
+  - Ein bisschen Abstand würde uns guttun.
+  - Vielleicht bin ich da zu empfindlich.
+  - Gefühlt wird das immer komplizierter.
+  - Irgendwie fehlt mir da die Klarheit.
+  - Das war nicht ganz fair, finde ich.
+  - Vielleicht übertreibe ich auch.
+  - Ein bisschen mehr Respekt wäre schön.
+  - Gefühlt war das nicht so geplant.
+  - Irgendwie komme ich da nicht weiter.
+  - Das ist vielleicht auch meine Schuld.
+  - Ein bisschen Geduld bitte.
+  - Nicht ganz mein Tempo gerade.
+  - Vielleicht sehe ich das zu eng.
+  - Gefühlt stimmt da was nicht.
+  - Irgendwie bin ich gerade nicht so belastbar.
+  - Das war ein bisschen viel heute.
+  - Vielleicht machen wir morgen weiter.
+  - Gefühlt sind wir uns nicht ganz einig.
+  - Irgendwie habe ich da ein komisches Gefühl.
+  - Das ist nicht ganz so einfach, wie es klingt.
+  - Ein bisschen nachsichtiger wäre nett.
+  - Vielleicht sollte ich das nochmal überdenken.
+  - Gefühlt brauche ich mehr Infos.
+  - Irgendwie war das ein Missverständnis.
+  - Das war vielleicht ein Fehler von mir.
+  - Ein bisschen Pause würde helfen.
+  - Nicht ganz so streng bitte.
+  - Vielleicht liegt es auch an mir.
+  - Gefühlt fehlt da noch was.
+  - Irgendwie ist das gerade zu viel.
+  - Das war ein bisschen überraschend für mich.
+  - Vielleicht brauchen wir einen Kompromiss.
+  - Gefühlt kommen wir nicht voran.
+  - Irgendwie drehen wir uns im Kreis.
+  - Das ist vielleicht nicht der richtige Moment.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Das war absolut falsch, was du gesagt hast.
+  - Ich bin mir sicher, das passt nicht.
+  - Definitiv müssen wir das ändern.
+  - Ich will das sofort klären.
+  - Das ist komplett daneben.
+  - Ich bin total überzeugt davon.
+  - Da gibt es keine Frage, das machen wir so.
+  - Das stimmt auf jeden Fall nicht.
+  - 'Klar und deutlich: Das geht so nicht.'
+  - Hundertprozentig bin ich dagegen.
+  - Die Lösung ist glasklar.
+  - Ich stehe voll dahinter.
+  - Das muss jetzt passieren, ohne Wenn und Aber.
+  - Ganz sicher war das richtig so.
+  - Es steht fest, dass wir das so machen.
+  - Ohne Zweifel ist das der beste Weg.
+  - Ich bin fest entschlossen.
+  - Das ist eindeutig die Antwort.
+  - Wir brauchen keine weitere Diskussion.
+  - Das funktioniert garantiert.
+  - Ich weiß genau, was ich will.
+  - Selbstverständlich stimmt das.
+  - Es gibt keinen Spielraum hier.
+  - Die Entscheidung ist gefallen.
+  - Das machen wir genau so, Punkt.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

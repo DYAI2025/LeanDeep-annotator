@@ -35,10 +35,15 @@ examples:
 tags: []
 rating: 1
 composed_of:
-- ATO_FICTION_TOKENS
-- ATO_CONTROL_MARKERS
+- ATO_CONTROL_PHRASES
 activation:
-  rule: "AT_LEAST 2 IN 3 messages"
+  rule: AT_LEAST 2 IN 3 messages
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

@@ -62,6 +62,12 @@ examples:
 tags:
 - awareness
 rating: 1
+semiotic:
+  peirce: index
+  signifikat: Aufmerksames Zuhoeren
+  framing_type: empathie
+  cultural_frame: Rogers
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 vad_estimate:
   valence: 0.0
   arousal: 0.3

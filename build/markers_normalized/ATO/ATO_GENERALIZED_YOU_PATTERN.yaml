@@ -60,6 +60,12 @@ scoring:
   formula: "logistic"
 window:
   messages: 30
+semiotic:
+  peirce: symbol
+  signifikat: Polarisierung/Verallgemeinerung
+  framing_type: polarisierung
+  cultural_frame: ''
+  myth: Es gibt nur Schwarz und Weiss — Differenzierung ist Schwaeche
 vad_estimate:
   valence: -0.5
   arousal: 0.8

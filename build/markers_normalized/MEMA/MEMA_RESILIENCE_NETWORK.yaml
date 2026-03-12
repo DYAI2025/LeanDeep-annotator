@@ -1,0 +1,116 @@
+id: MEMA_RESILIENCE_NETWORK
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - resilience
+  - network
+  concept: Resilienz-Netzwerk – Bezugnahme auf soziale Stützsysteme
+  pragmatics: Erkennt aktives Einbeziehen von Unterstützungsressourcen
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Meine Schwester hat mir geraten, mit dir darüber zu reden.
+  - Ich habe meinen Therapeuten gefragt und er meint, wir sollten das klären.
+  - Meine beste Freundin hat mir zugehört und mir geholfen, meine Gedanken zu sortieren.
+  - Ich weiß, dass ich nicht allein bin – ich hab Menschen, die mich auffangen.
+  - "Mein Vater hat mir gesagt: 'Sprich offen darüber.' Und genau das tue ich jetzt."
+  - Ich hab mich an eine Beratungsstelle gewandt, weil mir das allein über den Kopf wächst.
+  - Zum Glück hab ich ein gutes Netzwerk, das mich gerade stützt.
+  - Meine Kollegin hat Ähnliches durchgemacht und mir Tipps gegeben.
+  - Ich weiß, dass ich Hilfe holen kann, wenn es mir zu viel wird.
+  - Meine Freunde geben mir Kraft, das durchzustehen.
+  - Der Coach hat mir gezeigt, wie ich besser mit Stress umgehen kann.
+  - Ich spreche jetzt regelmäßig mit jemandem darüber – das hilft enorm.
+  - Mein Bruder hat angeboten, am Wochenende aufzupassen, damit wir Zeit haben.
+  - Wir haben uns Hilfe geholt – die Paartherapie läuft seit drei Wochen.
+  - Ich bin froh, dass ich Menschen habe, denen ich vertrauen kann.
+  - Mein Arzt hat empfohlen, dass wir uns professionelle Unterstützung holen.
+  - Ich hab in der Selbsthilfegruppe gelernt, meine Grenzen zu setzen.
+  - Meine Nachbarin ist eine riesige Stütze für mich gerade.
+  - Ich spreche jetzt zweimal die Woche mit meiner Therapeutin.
+  - Unser Netzwerk trägt uns durch diese schwere Phase.
+  - Ich hab mir eine Vertrauensperson gesucht, mit der ich reden kann.
+  - Der Pfarrer hat mir geholfen, die Dinge aus einer anderen Perspektive zu sehen.
+  - Meine Eltern bieten uns an, einzuspringen, wenn es zu viel wird.
+  - Ich bin dankbar für die Menschen um mich herum.
+  - Mein bester Freund hat mich daran erinnert, was wirklich zählt.
+  - Wir haben eine Familienberatung gemacht – das war sehr hilfreich.
+  - Ich hol mir Rat bei Leuten, die das schon durchgemacht haben.
+  - Das Gespräch mit meiner Mentorin hat mir die Augen geöffnet.
+  - Ich weiß, dass ich Unterstützung verdiene und sie mir auch hole.
+  - Meine Community gibt mir Halt in schweren Zeiten.
+  - Ich treffe mich regelmäßig mit meiner Laufgruppe – das erdet mich.
+  - Mein Chef hat Verständnis gezeigt und mir freigegeben.
+  - Ich hab ein gutes Support-System und das macht den Unterschied.
+  - Die Krisenhotline hat mir geholfen, klar zu denken.
+  - Meine Tante ist immer für mich da, wenn ich jemanden brauche.
+  - Wir gehen gemeinsam in die Beratung – als Team.
+  - Ich hab gelernt, Hilfe anzunehmen, statt alles allein zu machen.
+  - Mein Trainer hat mir Entspannungstechniken beigebracht.
+  - Ich bin umgeben von Menschen, die mir gut tun.
+  - Unsere Freunde unterstützen uns und das gibt mir Kraft.
+  - Ich hab mir einen Mentor gesucht, der mich begleitet.
+  - Meine Schwiegermutter ist überraschend verständnisvoll.
+  - Das Netzwerk aus Freunden und Familie ist mein Rettungsanker.
+  - Ich weiß, dass ich nicht alles allein schaffen muss.
+  - Der Austausch mit anderen Betroffenen hat mir sehr geholfen.
+  - Ich hab erkannt, dass Stärke auch bedeutet, sich Hilfe zu holen.
+  - Mein soziales Netz ist stabil – das trägt mich.
+  - Wir haben als Familie beschlossen, gemeinsam Hilfe zu suchen.
+  - Mein Partner und ich gehen jetzt zusammen zur Beratung.
+  - Ich bin dankbar, dass ich nicht allein durch das hier muss.
+  negative:
+  - Ich muss das allein durchstehen, Hilfe zu holen wäre schwach.
+  - Niemand versteht mich sowieso, wozu soll ich mit jemandem reden?
+  - Ich hab niemanden, an den ich mich wenden kann.
+  - Meine Familie ist Teil des Problems, nicht der Lösung.
+  - Therapie bringt eh nix.
+  - Ich komm schon klar. Brauch keinen.
+  - Hilfe annehmen ist mir peinlich.
+  - Meine Freunde haben ihre eigenen Probleme.
+  - Wozu Beratung? Die kennen mich doch gar nicht.
+  - Ich bin allein. Punkt.
+  - Ich rede mit niemandem darüber, das ist privat.
+  - Therapie ist was für Schwache.
+  - Ich will keinen belasten mit meinen Problemen.
+  - Es gibt niemanden, dem ich vertraue.
+  - Ich hab keinen, der mir zuhört.
+  - Ich schaff das allein, wie immer.
+  - Hilfe von außen? Nein danke.
+  - Mein Umfeld würde mich nicht verstehen.
+  - Ich rede nicht über Gefühle, schon gar nicht mit Fremden.
+  - Ich muss mich selbst retten, keiner tut das für mich.
+  - Professionelle Hilfe kann ich mir nicht leisten.
+  - Ich isoliere mich lieber, als jemanden einzuweihen.
+  - Mein Netzwerk existiert nicht mehr.
+  - Ich vertraue niemandem genug, um mich zu öffnen.
+  - Hilfe holen wäre ein Zeichen von Versagen.
+tags:
+- mema
+- resilience
+- support
+- positive
+rating: 2
+composed_of:
+  required_any:
+  - SEM_SYSTEMS_THINKING
+  - CLU_CONSTRUCTIVE_CONFLICT
+  supportive:
+  - ATO_PROBLEM_SOLVING
+  - SEM_EMPATHIC_RESONANCE
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

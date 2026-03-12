@@ -1,0 +1,112 @@
+{
+  "context": {
+    "artifact_type": "text",
+    "audience": "Analysten von Kommunikationsdynamiken",
+    "domain_codes": ["Psycholinguistik", "Beziehungsanalyse"],
+    "intended_effect": "Integration von Markern in semiotische Textanalyse",
+    "notes": "YAML-Marker als Artefakt für konzeptionelle Verknüpfung"
+  },
+  "signs": [
+    {
+      "id": "S1",
+      "locus": "SEM_VALIDATION_SEEKING",
+      "evidence": "Am I right? ... validate my feelings",
+      "signifier": "Validierungssuche-Phrasen",
+      "signified": "Unsicherheit/Bestätigungsbedarf",
+      "type": "index",
+      "denotation": "Frage nach Zustimmung",
+      "connotations": ["Abhängigkeit", "Manipulationspotenzial"],
+      "codes": ["Bindung", "Empathie"],
+      "myth": "Validierung als natürliche Beziehungsbedingung",
+      "ambiguity": {
+        "kinds": ["pragmatic"],
+        "risk": "high",
+        "mitigation": "Kontextuelle Cluster-Analyse"
+      },
+      "markers": [
+        {"name": "validation_seeking", "span": "Am I right?", "score": 0.9}
+      ]
+    },
+    {
+      "id": "S2",
+      "locus": "SEM_VICTIM_OFFENDER_REVERSAL",
+      "evidence": "Du bist so kalt ... deine Schuld",
+      "signifier": "Schuldumkehr-Labels",
+      "signified": "Opfer-Täter-Umkehrung",
+      "type": "symbol",
+      "denotation": "Beschuldigung",
+      "connotations": ["Kontrolle", "Emotionaler Druck"],
+      "codes": ["Guilt", "Toxizität"],
+      "myth": "Schuld als Bindungsinstrument",
+      "ambiguity": {
+        "kinds": ["lexical"],
+        "risk": "medium",
+        "mitigation": "VAD-Korrelation"
+      },
+      "markers": [
+        {"name": "blame_shift", "span": "deine Schuld", "score": 0.95}
+      ]
+    },
+    {
+      "id": "S3",
+      "locus": "MEMA_LOVE_BOMBING_MARKER",
+      "evidence": "Intensivste Aufmerksamkeit ... Rückzug",
+      "signifier": "Übermäßige Zuwendung",
+      "signified": "Manipulative Bindung",
+      "type": "icon",
+      "denotation": "Komplimente/Geschenke",
+      "connotations": ["Idealisierung", "Abhängigkeit"],
+      "codes": ["Romantik", "Manipulation"],
+      "myth": "Intensität als wahre Liebe",
+      "ambiguity": {
+        "kinds": ["emotional"],
+        "risk": "high",
+        "mitigation": "Zeitreihen-Analyse"
+      },
+      "markers": [
+        {"name": "love_bombing", "span": "perfekt", "score": 0.85}
+      ]
+    }
+  ],
+  "structure": {
+    "syntagmatic": ["ATO → SEM → CLU → MEMA (Akkumulation zu Meta-Mythen)"],
+    "paradigmatic": ["Toxisch vs. Prosozial (z.B. Validierung → Empathie)"]
+  },
+  "emotions_dynamics": {
+    "method": "valence_arousal",
+    "series": [
+      {"t": 0.0, "valence": 0.2, "arousal": 0.5, "trigger_sign_id": "S1"},
+      {"t": 0.4, "valence": -0.6, "arousal": 0.8, "trigger_sign_id": "S2"},
+      {"t": 0.8, "valence": 0.3, "arousal": 0.7, "trigger_sign_id": "S3"}
+    ]
+  },
+  "findings": {
+    "narrative": "Marker als semiotische Zeichen integrieren: Atomare als Signifikanten, Semantische als Konnotationen, Meta als Mythen – fördert subtile Dynamiken wie Manipulation.",
+    "key_points": ["Konzeptionell: Marker typisieren (Peirce/Saussure)", "Pragmatisch: Pipeline mit Clustering + VAD", "Mehrwert: Enthüllung verdeckter Toxizität"]
+  },
+  "recommendations": [
+    {
+      "goal": "Subtiles aufdecken",
+      "action": "Marker in semiotische Vorlage einbetten (Zeichen + VAD)",
+      "rationale": "Verbindet Mustererkennung mit Bedeutungstiefe",
+      "expected_effect": "Präzisere Analyse",
+      "risk": "Überinterpretation"
+    },
+    {
+      "goal": "Wertschaffung",
+      "action": "Paradigmatische Substitution: Toxische Marker durch prosoziale ersetzen",
+      "rationale": "Prognostiziert gesündere Dynamiken",
+      "expected_effect": "Therapeutischer Nutzen",
+      "risk": "Künstliche Vereinfachung"
+    }
+  ],
+  "claims_mode_balance": {
+    "fact": 5,
+    "inference": 6,
+    "speculation": 2
+  }
+}sign_id,locus,evidence,signifier,signified,type,denotation,connotations,codes,myth,ambiguity_kinds,ambiguity_risk,ambiguity_mitigation,markers
+S8,"SEM_UNDERSTATEMENT_HARM","minor issue … execute anyway","Verharmlosungs-Imperativ","Risiko-Bagatellisierung","symbol","Kleinreden + Aufforderung","Kontrolle; Verantwortungsvermeidung","Machbarkeitsideologie; Risikoleugnung","Gefahr existiert nur groß","pragmatic","high","Sicherheitskontext prüfen","understatement_harm"
+S9,"SEM_UNTRACEABLE_PAYMENT_METHOD","Bitcoin … anonymste Weg","Anonyme Zahlungsappelle","Verschleierung","index","Alternative Zahlungswege","Betrug; Geheimhaltung","Kriminalität; Privatsphäre-Missbrauch","Anonymität als Schutz","pragmatic","very high","Manipulationskombination","untraceable_payment"
+S10,"MEMA_MEANING_CRISIS_MARKER","Nichts ergibt Sinn … wozu das alles","Sinnlosigkeitsbekundung","Existenzielle Leere","icon","Ausdruck von Bedeutungslosigkeit","Depression; Entfremdung","Existenzialismus; Sinnkrise","Moderne Existenz ist sinnlos","emotional","high","Suizidalitäts-Check","meaning_crisis"
+S11,"CLU_ATTACHMENT_STYLE_AVOIDANT_MARKER","brauch Abstand … lass mich in Ruhe","Distanzappelle","Vermeidende Bindung","symbol","Rückzugsforderung","Selbstschutz; Nähe-Angst","Vermeidung; Autonomie","Abstand ist Schutz","pragmatic","medium","Prosozialen Rückzug vergleichen","avoidant_attachment"

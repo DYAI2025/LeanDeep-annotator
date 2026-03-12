@@ -38,6 +38,12 @@ composed_of:
 - ATO_AMBIGUITY_QUOTES
 activation:
   rule: "ANY 2 IN 2 messages"
+semiotic:
+  peirce: icon
+  signifikat: Humor/Leichtigkeit
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 compositionality: deterministic
 vad_estimate:
   valence: 0.5
@@ -47,3 +53,7 @@ effect_on_state:
   trust: 0.2
   conflict: -0.15
   deesc: 0.2
+semantic_affinity:
+  intents:
+  - vorwurf
+  - feststellung

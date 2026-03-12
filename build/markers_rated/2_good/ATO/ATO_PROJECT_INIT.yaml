@@ -14,6 +14,51 @@ examples:
   - "initiiere…"
   - "Projekt-Kick"
   - "Starten wir das Projekt"
+  - Lass uns das Projekt starten!
+  - Wir müssen die Struktur bestimmen.
+  - Ich initiiere den Prozess.
+  - 'Projekt starten: Phase 1 beginnt morgen.'
+  - Wir sollten zuerst die Struktur bestimmen.
+  - Ich initiiere das Setup für den neuen Kunden.
+  - Los geht's, Projekt starten!
+  - Die Struktur bestimmen wir im Kickoff.
+  - Ich initiiere jetzt die erste Runde.
+  - Wir starten das Projekt nächste Woche.
+  - Erst mal die Struktur bestimmen, dann loslegen.
+  - Initiiere bitte den Freigabeprozess.
+  - Das Projekt starten wir mit einem Workshop.
+  - Wir bestimmen die Struktur im Team-Meeting.
+  - Ich initiiere den Onboarding-Prozess.
+  - Zeit, das Projekt endlich zu starten.
+  - Bevor wir loslegen, Struktur bestimmen.
+  - Ich initiiere die Anforderungsanalyse.
+  - 'Projekt starten: Sprint 1 am Montag.'
+  - Lass uns die Projektstruktur bestimmen.
+  - Ich initiiere das Gespräch mit dem Kunden.
+  - Wann können wir das Projekt starten?
+  - Die Teamstruktur bestimmen wir als erstes.
+  - Initiiere bitte die Ausschreibung.
+  - Morgen starten wir das Projekt offiziell.
+  - Wir müssen zuerst die Rollen und Struktur bestimmen.
+  - Ich initiiere den nächsten Meilenstein.
+  - Wer ist bereit, das Projekt zu starten?
+  - Bevor wir die Struktur bestimmen, brauchen wir Input.
+  - Ich initiiere die Abstimmung mit allen Beteiligten.
+  - Lass uns das Redesign-Projekt starten.
+  - Die Architektur und Struktur bestimmen wir zusammen.
+  - Bitte initiiere den Review-Prozess.
+  - Wir starten das Pilotprojekt in Q2.
+  - Ich bestimme jetzt die Struktur für den Report.
+  - Initiiere die Planungsphase.
+  - Wann starten wir das Folgeprojekt?
+  - Die Projektstruktur bestimmen wir im Kickoff.
+  - Ich initiiere die Budgetfreigabe.
+  - Morgen starten wir das Projekt neu.
+  - Lass uns die Struktur bestimmen, bevor wir Teams bilden.
+  - Initiiere bitte die Stakeholder-Analyse.
+  - Das Migrationsprojekt starten wir nach dem Audit.
+  - Die Verantwortlichkeiten und Struktur bestimmen wir vorher.
+  - Ich initiiere den Change-Request-Prozess.
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -22,5 +67,24 @@ examples:
   - I've noticed we think differently about this.
   - I want to understand what you mean.
   - That sounds like an important topic for you.
+  - Wir arbeiten weiter am laufenden Projekt.
+  - Das Thema besprechen wir im nächsten Meeting.
+  - Ich schaue mir den Status an.
+  - Wir machen da weiter, wo wir aufgehört haben.
+  - Ich aktualisiere den Projektplan.
+  - Das Projekt läuft bereits.
+  - Wir sind mitten in der Umsetzung.
+  - Der Sprint endet am Freitag.
+  - Ich habe den Report fertiggestellt.
+  - Nächste Woche gibt es das Review.
+  - Die Deadline ist am 15.
+  - Ich kümmere mich um die offenen Punkte.
+  - Der Kunde hat zugestimmt.
+  - Wir sind im Zeitplan.
+  - Die Aufgabe ist erledigt.
+  - Ich habe das Dokument verschickt.
+  - Das Meeting ist verschoben worden.
+  - Wir warten auf Rückmeldung.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

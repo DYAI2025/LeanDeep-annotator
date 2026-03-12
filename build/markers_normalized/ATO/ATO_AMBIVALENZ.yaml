@@ -39,6 +39,12 @@ tags:
 - ambivalenz
 - zögern
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Ambivalenz/Zwiespalt
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: -0.2
   arousal: 0.5

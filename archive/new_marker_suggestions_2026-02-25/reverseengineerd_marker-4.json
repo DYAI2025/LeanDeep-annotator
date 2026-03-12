@@ -1,0 +1,108 @@
+{
+  "context": {
+    "artifact_type": "chat",
+    "audience": "Ex-Partner in emotionaler Reparatur",
+    "domain_codes": ["Therapeutische Rationalität", "Romantische Intensität"],
+    "intended_effect": "Grenzsetzung vs. Druck zur Authentizität",
+    "notes": "Reverse-Engineering neuer Marker: SEM_INVALIDATION, SEM_DOUBLE_BIND, SEM_PROJECTION"
+  },
+  "signs": [
+    {
+      "id": "S18",
+      "locus": "SEM_INVALIDATION (neu reverse-engineered)",
+      "evidence": "es invalidiert mein Erlebtes ... Umdeutung ... verschiebt meine Gefühle",
+      "signifier": "Ungültigmachungs-Phrasen",
+      "signified": "Entzug von Erfahrungsvalidität",
+      "type": "symbol",
+      "denotation": "Ablehnung der Perspektive",
+      "connotations": ["Isolation", "Gaslighting"],
+      "codes": ["Invalidation", "Toxizität"],
+      "myth": "Eigene Wahrheit ist relativierbar",
+      "ambiguity": {
+        "kinds": ["pragmatic"],
+        "risk": "high",
+        "mitigation": "Vergleich mit empathischer Anerkennung"
+      },
+      "markers": [
+        {"name": "invalidation", "span": "invalidiert mein Erlebtes", "score": 0.92}
+      ]
+    },
+    {
+      "id": "S19",
+      "locus": "SEM_DOUBLE_BIND (neu reverse-engineered)",
+      "evidence": "zeig dich roh ... ohne Schutzraum ... wenn du wirklich willst ... ohne Sicherheitsnetz",
+      "signifier": "Widersprüchliche Forderungen",
+      "signified": "Doppelbindung / Paradoxon",
+      "type": "index",
+      "denotation": "Forderung nach Verletzlichkeit ohne Schutz",
+      "connotations": ["Erpressung", "Unlösbarkeit"],
+      "codes": ["Double-Bind", "Manipulation"],
+      "myth": "Echte Verbindung erfordert Risiko ohne Netz",
+      "ambiguity": {
+        "kinds": ["emotional"],
+        "risk": "very high",
+        "mitigation": "Entlarvung als Paradoxon"
+      },
+      "markers": [
+        {"name": "double_bind", "span": "roh ... ohne Schutzraum", "score": 0.9}
+      ]
+    },
+    {
+      "id": "S20",
+      "locus": "SEM_PROJECTION (neu reverse-engineered)",
+      "evidence": "du lenkst ab / willst Schuld abwälzen ... Strohmann ... Opfer-Täter-Umkehr",
+      "signifier": "Projizierte Vorwürfe",
+      "signified": "Übertragung eigener Motive",
+      "type": "symbol",
+      "denotation": "Vorwurf ohne Evidenz",
+      "connotations": ["Defensivität", "Schuldverschiebung"],
+      "codes": ["Projection", "Defensivität"],
+      "myth": "Der Andere ist immer der Schuldige",
+      "ambiguity": {
+        "kinds": ["lexical"],
+        "risk": "medium",
+        "mitigation": "Rückspiegelung auf Sprecher"
+      },
+      "markers": [
+        {"name": "projection", "span": "du lenkst ab ... Umkehr", "score": 0.88}
+      ]
+    }
+  ],
+  "structure": {
+    "syntagmatic": ["Grenzsetzung → Invalidation → Double-Bind → Projection → Stillstand"],
+    "paradigmatic": ["Druckforderung vs. Empathie (z.B. 'ich verstehe deinen Schmerz')"]
+  },
+  "emotions_dynamics": {
+    "method": "valence_arousal",
+    "series": [
+      {"t": 0.0, "valence": -0.3, "arousal": 0.6, "trigger_sign_id": "S18"},
+      {"t": 0.4, "valence": -0.5, "arousal": 0.75, "trigger_sign_id": "S19"},
+      {"t": 0.8, "valence": -0.6, "arousal": 0.8, "trigger_sign_id": "S20"}
+    ]
+  },
+  "findings": {
+    "narrative": "Neue Marker wie SEM_INVALIDATION, SEM_DOUBLE_BIND und SEM_PROJECTION enthüllen subtile Ungültigmachung, Paradoxa und Übertragungen. Bestehende Marker verstärken Mythen von Relativierung und Schuldverschiebung.",
+    "key_points": ["Neue: Invalidation, Double-Bind, Projection", "Mythos: Wahrheit als subjektiv manipulierbar", "Indexikalität bei emotionalem Druck"]
+  },
+  "recommendations": [
+    {
+      "goal": "Subtile Paradoxa aufdecken",
+      "action": "Neue Marker in Cluster-Rules einbauen (z.B. Invalidation + Double-Bind ≥2 in 5 Nachrichten)",
+      "rationale": "Erkennt ungelöste Schleifen früh",
+      "expected_effect": "Deeskalationsvorschläge",
+      "risk": "Überempfindlichkeit auf Konflikte"
+    },
+    {
+      "goal": "Semiotische Tiefe erweitern",
+      "action": "Marker mit Mythen-Labels koppeln und Heatmaps generieren",
+      "rationale": "Visualisiert unsichtbare Machtdynamiken",
+      "expected_effect": "Bessere Therapie-Insights",
+      "risk": "Komplexitätsanstieg"
+    }
+  ],
+  "claims_mode_balance": {
+    "fact": 5,
+    "inference": 7,
+    "speculation": 3
+  }
+}

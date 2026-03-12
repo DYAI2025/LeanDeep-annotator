@@ -1,0 +1,104 @@
+id: MEMA_RAPPORT_MISMATCH
+version: "3.4"
+frame:
+  signal: ["rapport", "mismatch"]
+  concept: "Asymmetrischer Rapport – einer investiert, der andere blockt"
+  pragmatics: "Erkennt ungleiche Beziehungsarbeit und fehlende Reziprozität"
+  narrative: "meta_pattern"
+tags: [mema, rapport, mismatch, asymmetry]
+composed_of:
+  required_any:
+  - SEM_VALIDATION_SEEKING
+  - CLU_INDIRECT_CONFLICT_AVOIDANCE
+  supportive:
+  - SEM_EMOTIONAL_OVERWHELM
+  - ATO_MINIMIZING
+activation:
+  rule: "ANY 2 IN 20 messages"
+scoring:
+  base: 1.5
+  weight: 1.1
+examples:
+  positive_de:
+  - "Ich erzähle dir alles und du gibst mir Einwortantworten."
+  - "Ich frage ständig, wie es dir geht. Du fragst nie zurück."
+  - "Ich versuche Nähe herzustellen und du weichst immer aus."
+  - "Warum bin immer ich diejenige, die Gespräche anfängt?"
+  - "Ich öffne mich und du sagst nur 'ok' oder 'hmm'."
+  - "Mir fällt auf, dass du auf meine langen Nachrichten mit einem Satz antwortest."
+  - "Ich teile meine Gefühle und du wechselst sofort das Thema."
+  - "Du reagierst auf meine Sorgen mit 'wird schon' – das reicht mir nicht."
+  - "Ich habe das Gefühl, ich rede gegen eine Wand."
+  - "Jedes Mal wenn ich emotional werde, ziehst du dich zurück."
+  - "Ich schreibe dir herzliche Nachrichten und bekomme ein Daumen-hoch-Emoji."
+  - "Ich versuche Kontakt und du bist nur auf deinem Handy."
+  - "Ich sage dir, dass ich dich vermisse, und du sagst 'achso'."
+  - "Wir reden aneinander vorbei – ich will Nähe, du willst Ruhe."
+  - "Ich bringe immer wieder Themen ein und du blockst."
+  - "Ich fühle mich wie eine Nervensäge, wenn ich Aufmerksamkeit will."
+  - "Du gibst mir das Gefühl, dass meine Bedürfnisse übertrieben sind."
+  - "Mir ist aufgefallen, dass unsere Gespräche komplett einseitig sind."
+  - "Ich investiere emotional und bekomme nichts zurück."
+  - "Jedes Mal wenn ich was Persönliches sage, lenkst du ab."
+  - "Du wirkst genervt, wenn ich über uns reden will."
+  - "Ich schicke dir lange Nachrichten. Du antwortest nach Stunden mit 'ja'."
+  - "Mein Bedürfnis nach Austausch wird von dir ignoriert."
+  - "Ich hab das Gefühl, du nimmst unsere Gespräche nicht ernst."
+  - "Ich öffne mich und du schaust auf die Uhr."
+  - "Du unterbrichst mich ständig oder schaust weg, wenn ich rede."
+  - "Ich plane Dates und du sagst immer in letzter Minute ab."
+  - "Meine Initiative wird nicht erwidert – ich fühle mich wie ein Bittsteller."
+  - "Du zeigst kein Interesse an dem, was mich bewegt."
+  - "Ich erzähle von meinem Tag und du guckst aufs Handy."
+  - "Wir sind zusammen, aber ich fühle mich einsamer als allein."
+  - "Ich versuche was Nettes und du sagst nur 'muss das sein?'"
+  - "Ich schlage Unternehmungen vor und du sagst immer 'keine Lust'."
+  - "Du redest über Fußball, aber wenn ich über Gefühle reden will, ist Stille."
+  - "Ich schreibe morgens 'Guten Morgen, Schatz' – du schreibst abends 'k'."
+  - "Mir reicht es nicht mehr, immer die Einzige zu sein, die sich Mühe gibt."
+  - "Du nickst höflich, aber ich merke, dass du nicht zuhörst."
+  - "Ich bring Blumen mit. Du sagst: 'Wohin damit?'"
+  - "Unsere Kommunikation ist wie ein Monolog – meiner."
+  - "Du wechselst das Thema, sobald es emotional wird."
+  - "Ich frage dich was Persönliches und du antwortest ausweichend."
+  - "Ich will über uns reden und du sagst 'Was gibt's zu essen?'"
+  - "Es fühlt sich an, als wärst du nicht wirklich anwesend."
+  - "Ich rede über meine Ängste und du machst einen Witz draus."
+  - "Ich habe dir eine lange Nachricht geschrieben. Du hast sie nicht mal gelesen."
+  - "Jedes Mal investiere ich mehr als du. Das Ungleichgewicht macht mich fertig."
+  - "Ich versuche Brücken zu bauen und du stehst am anderen Ufer und schaust zu."
+  - "Du sagst, du liebst mich, aber dein Verhalten zeigt was anderes."
+  - "Mein Engagement stößt bei dir auf Gleichgültigkeit."
+  - "Ich gebe 100% und du gibst vielleicht 20. Das merke ich."
+  negative_de:
+  - "Wir haben beide heute viel geredet und einander zugehört."
+  - "Du hast mich gefragt, wie mein Tag war, und wirklich zugehört."
+  - "Ich schätze es, dass du dir Zeit nimmst für unsere Gespräche."
+  - "Wir haben einen guten Rhythmus gefunden – mal rede ich mehr, mal du."
+  - "Danke, dass du heute so offen warst. Das bedeutet mir viel."
+  - "Du hast mir gestern so eine schöne Nachricht geschrieben."
+  - "Wir tauschen uns regelmäßig aus und das tut uns gut."
+  - "Du bist ein guter Zuhörer und ich fühle mich gehört."
+  - "Heute hast du mich überrascht mit deiner Aufmerksamkeit."
+  - "Wir hatten ein tolles Gespräch – beide haben viel geteilt."
+  - "Du fragst mich oft, wie es mir geht, und meinst es ehrlich."
+  - "Ich mag unsere Morgenrituale – wir erzählen uns immer von unseren Träumen."
+  - "Du erinnerst dich an Details, die ich erwähnt habe. Das berührt mich."
+  - "Wir haben ein gutes Gleichgewicht in unserer Kommunikation."
+  - "Du reagierst auf meine Nachrichten mit echtem Interesse."
+  - "Wir können stundenlang reden und es fühlt sich nie einseitig an."
+  - "Du hast von dir aus gesagt, dass du mich vermisst."
+  - "Ich habe das Gefühl, wir sind wirklich verbunden."
+  - "Du zeigst Interesse an meinen Hobbys, auch wenn es nicht deins ist."
+  - "Wir ergänzen uns gut im Gespräch."
+  - "Du hast heute den Anfang gemacht und über deine Gefühle geredet."
+  - "Ich bin froh, dass wir offen miteinander sind."
+  - "Du gibst mir das Gefühl, dass dir wichtig ist, was ich sage."
+  - "Unser Austausch fühlt sich ausgewogen und respektvoll an."
+  - "Du hast gemerkt, dass mich was beschäftigt, und hast nachgefragt."
+semiotic:
+  peirce: index
+  signifikat: Beziehungsdynamik
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

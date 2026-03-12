@@ -22,9 +22,80 @@ examples:
   - (Passt die Sprechgeschwindigkeit an den Inhalt an)
   - (Spricht mal stockend, mal flüssig)
   - (Wechselt zwischen schnellem und bedächtigem Sprechen)
-  negative: []
+  - (Redet bei dem Thema plötzlich viel schneller)
+  - (Wird bei den Details merklich langsamer)
+  - (Tempowechsel mitten im Satz)
+  - (Hektisch am Anfang, dann ruhiger werdend)
+  - (Spricht erst zögerlich, dann immer schneller)
+  - (Abrupter Tempowechsel nach der Pause)
+  - (Rasches Sprechen bei der Erklärung, dann Verlangsamung)
+  - (Tempo steigt bei Aufregung deutlich an)
+  - (Wechsel von Stakkato zu fließendem Redefluss)
+  - (Sprechrhythmus wird unregelmäßig bei Emotionen)
+  - (Hastig begonnen, dann abgebremst)
+  - (Tempo schwankt bei unsicherem Thema)
+  - (Redet schneller, um Unbehagen zu überspielen)
+  - (Verlangsamt sich bei der Kernaussage)
+  - (Springt zwischen raschem und gedehntesm Tempo)
+  - (Merklicher Tempowechsel beim Themawechsel)
+  - (Spricht schneller, als das Thema emotional wird)
+  - (Wird langsamer bei persönlichen Themen)
+  - (Tempo variiert stark innerhalb eines Absatzes)
+  - (Beschleunigt bei Verteidigung, bremst bei Reflexion)
+  - (Wechselt das Tempo je nach Gesprächspartner)
+  - (Schnelles Reden unterbricht sich mit Pausen)
+  - (Erst langsam tastend, dann rascher werdend)
+  - (Tempoanstieg bei Begeisterung)
+  - (Verlangsamung bei Traurigkeit)
+  - (Rhythmuswechsel signalisiert Unsicherheit)
+  - (Spricht erst bedächtig, dann überschlägt sich)
+  - (Tempoverlangsamung bei schwierigen Worten)
+  - (Hektisches Sprechen gefolgt von Schweigen)
+  - (Beschleunigung beim Aufzählen)
+  - (Deutliche Verlangsamung am Satzende)
+  - (Tempo passt sich der Stimmung an)
+  - '(Spricht in Wellen: schnell, langsam, schnell)'
+  - (Abruptes Abbremsen mitten im Gedanken)
+  - (Tempowechsel korreliert mit Blickkontaktvermeidung)
+  - (Wird schneller, wenn das Thema unangenehm wird)
+  - (Spricht langsamer, um Nachdruck zu verleihen)
+  - (Ungleichmäßiges Sprechtempo durchgehend)
+  - (Tempo springt bei Aufregung hin und her)
+  - (Wechsel zwischen Hetze und Bedacht)
+  negative:
+  - Spricht durchgängig in gleichmäßigem Tempo.
+  - Redet die ganze Zeit ruhig und konstant.
+  - Kein Tempowechsel erkennbar, monotones Sprechen.
+  - Gleichmäßiger Redefluss ohne Variationen.
+  - Spricht konstant langsam und bedächtig.
+  - Tempo bleibt über die gesamte Aufnahme gleich.
+  - Keine Schwankungen in der Sprechgeschwindigkeit.
+  - Mechanisch gleichmäßiges Sprechtempo.
+  - Redet wie ein Uhrwerk, immer gleich schnell.
+  - Konstantes Tempo von Anfang bis Ende.
+  - Kein emotionaler Einfluss auf das Sprechtempo.
+  - Gleicher Rhythmus bei allen Themen.
+  - Unverändertes Tempo trotz Themenwechsel.
+  - Spricht durchgehend flüssig und gleichmäßig.
+  - Kein Beschleunigen, kein Verlangsamen.
+  - Roboterhaft gleichmäßige Sprechgeschwindigkeit.
+  - Tempo ist konsistent monoton.
+  - Spricht wie vorgelesen, ohne Tempovariation.
+  - Gleichförmig von Anfang bis Ende.
+  - Keine Auffälligkeiten beim Sprechtempo.
+  - Redet immer im gleichen Rhythmus weiter.
+  - Stabil und ohne Schwankungen im Tempo.
+  - Kein Anstieg, kein Abfall der Geschwindigkeit.
+  - Durchgehend neutrales Sprechtempo.
+  - Monotoner Vortragsstil ohne Tempoänderung.
 tags: []
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

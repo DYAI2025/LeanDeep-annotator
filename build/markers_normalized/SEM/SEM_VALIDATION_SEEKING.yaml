@@ -42,6 +42,12 @@ composed_of:
 - ATO_FEELING_VERB
 window:
   messages: 2
+semiotic:
+  peirce: index
+  signifikat: Validierung/Anerkennung
+  framing_type: empathie
+  cultural_frame: Rogers
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 compositionality: deterministic
 vad_estimate:
   valence: 0.0
@@ -51,3 +57,5 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+activation:
+  rule: "ANY 2"

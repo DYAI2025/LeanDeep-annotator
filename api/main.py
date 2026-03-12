@@ -19,9 +19,9 @@ import time
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import Depends, FastAPI, File, HTTPException, Query, UploadFile
+from fastapi import Depends, FastAPI, File, HTTPException, Query, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
 from .auth import load_api_keys, verify_api_key
@@ -39,29 +39,64 @@ from .models import (
     EmotionScore,
     EngineConfig,
     Episode,
+    FramingHypothesis,
     HealthResponse,
+    HumanReviewFlag,
+    InitialSemanticsReport,
+    InterpretFindings,
+    InterpretResponse,
     Layer,
     MarkerDetail,
     MarkerListResponse,
+    Message,
+    NarrativeActor,
+    NarrativeBeliefSystem,
+    NarrativeRelationship,
+    NarrativeReport,
+    NarrativeRequest,
+    NarrativeResponse,
     PatternMatch,
     PersonaCreateResponse,
     PersonaSessionSummary,
     PredictionReservoir,
     PredictionResponse,
+    SemanticProfileResponse,
+    SemioticEntry,
     SpeakerBaselines,
     SpeakerDelta,
     SpeakerSummary,
     StateIndices,
     TemporalPattern,
+    TranscriptRequest,
+    TranscriptResponse,
     UEDMetrics,
     VADPoint,
 )
+from .narrative import (
+    InitialSemanticsGenerator,
+    NarrativeReportGenerator,
+    InterpretationMode as NarrativeMode,
+    initial_semantics_generator,
+    narrative_report_generator,
+)
+from .transcript import diarize_with_ai, parse_transcript
+from .interpret import aggregate_framings, build_semiotic_map, dominant_framing, synthesize_narrative
 from .personas import PersonaStore
+from .providers import build_provider_chain
+from .semantic import SemanticProfiler, TextUnit
 
 _start_time = time.time()
 
 
 persona_store = PersonaStore()
+
+_semantic_profiler = SemanticProfiler(
+    providers=build_provider_chain(
+        provider_name=settings.semantic_provider,
+        api_key=settings.semantic_api_key,
+        model_name=settings.semantic_model,
+    )
+)
 
 
 @asynccontextmanager
@@ -85,7 +120,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=settings.cors_origins_list,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -95,6 +130,29 @@ app.add_middleware(
 app.mount("/static", StaticFiles(directory=Path(__file__).parent / "static"), name="static")
 
 
+@app.get("/", include_in_schema=False)
+async def root():
+    """Redirect root to the Analysis Studio."""
+    return RedirectResponse(url="/app")
+
+
+# ---------------------------------------------------------------------------
+# Semantic profiler resolution (BYOK support)
+# ---------------------------------------------------------------------------
+
+def _resolve_profiler(request: Request) -> SemanticProfiler:
+    """Return a BYOK profiler if headers are present, otherwise the default."""
+    byok_provider = request.headers.get("x-leandeep-provider")
+    byok_key = request.headers.get("x-leandeep-provider-key")
+    byok_model = request.headers.get("x-leandeep-provider-model")
+
+    if byok_provider and byok_key:
+        return SemanticProfiler(
+            providers=build_provider_chain(byok_provider, byok_key, byok_model)
+        )
+    return _semantic_profiler
+
+
 # ---------------------------------------------------------------------------
 # POST /v1/analyze — Single text analysis
 # ---------------------------------------------------------------------------
@@ -102,6 +160,7 @@ app.mount("/static", StaticFiles(directory=Path(__file__).parent / "static"), na
 @app.post("/v1/analyze", response_model=AnalyzeResponse)
 async def analyze_text(
     req: AnalyzeRequest,
+    request: Request,
     api_key: str = Depends(verify_api_key),
 ):
     """
@@ -112,7 +171,23 @@ async def analyze_text(
     CLU/MEMA require conversation context (use /v1/analyze/conversation).
     """
     layers = [l.value for l in req.layers]
+
+    # Semantic profiling (Layer 0)
+    analysis_mode = "pattern"
+    semantic_profile = None
+    if req.semantic_mode != "off":
+        profiler = _resolve_profiler(request)
+        units = TextUnit.from_text(req.text)
+        profiles = await profiler.profile(units, language=req.language.value)
+        if profiles and profiles[0].source != "none":
+            analysis_mode = "semantic"
+            semantic_profile = profiles[0]  # single text: one merged profile
+
     result = engine.analyze_text(req.text, layers=layers, threshold=req.threshold)
+
+    # Apply semantic gate if profile available
+    if semantic_profile is not None:
+        result["detections"] = engine._apply_semantic_gate(result["detections"], semantic_profile)
 
     markers = [
         DetectedMarker(
@@ -141,6 +216,8 @@ async def analyze_text(
             text_length=len(req.text),
             markers_detected=len(markers),
             layers_scanned=layers,
+            shadow_mode=result.get("shadow_mode", False),
+            analysis_mode=analysis_mode,
         ),
     )
 
@@ -152,6 +229,7 @@ async def analyze_text(
 @app.post("/v1/analyze/conversation", response_model=ConversationResponse)
 async def analyze_conversation(
     req: ConversationRequest,
+    request: Request,
     api_key: str = Depends(verify_api_key),
 ):
     """
@@ -163,7 +241,17 @@ async def analyze_conversation(
     """
     messages = [{"role": m.role, "text": m.text} for m in req.messages]
     layers = [l.value for l in req.layers]
-    result = engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
+
+    # Semantic profiling (Layer 0)
+    analysis_mode = "pattern"
+    if req.semantic_mode != "off":
+        profiler = _resolve_profiler(request)
+        units = TextUnit.from_messages(messages)
+        profiles = await profiler.profile(units, language=req.language.value)
+        if profiles and profiles[0].source != "none":
+            analysis_mode = "semantic"
+
+    result = await engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
 
     markers = [
         ConversationMarker(
@@ -194,11 +282,15 @@ async def analyze_conversation(
     return ConversationResponse(
         markers=sorted(markers, key=lambda m: (-m.confidence, m.id)),
         temporal_patterns=temporal,
+        topology=result.get("topology"),
+        reasoning=result.get("reasoning"),
         meta=AnalyzeMeta(
             processing_ms=result["timing_ms"],
             text_length=sum(len(m.text) for m in req.messages),
             markers_detected=len(markers),
             layers_scanned=layers,
+            shadow_mode=result.get("shadow_mode", False),
+            analysis_mode=analysis_mode,
         ),
     )
 
@@ -236,7 +328,7 @@ async def analyze_dynamics(
             raise HTTPException(status_code=404, detail="Persona not found")
         warm_start = persona_store.extract_warm_start(persona)
 
-    result = engine.analyze_conversation(
+    result = await engine.analyze_conversation(
         messages, layers=layers, threshold=req.threshold, warm_start=warm_start
     )
 
@@ -342,13 +434,242 @@ async def analyze_dynamics(
         state_indices=state_indices,
         speaker_baselines=speaker_baselines,
         temporal_patterns=temporal,
+        topology=result.get("topology"),
+        reasoning=result.get("reasoning"),
         persona_session=persona_session_summary,
         meta=AnalyzeMeta(
             processing_ms=result["timing_ms"],
             text_length=sum(len(m.text) for m in req.messages),
             markers_detected=len(markers),
             layers_scanned=layers,
+            shadow_mode=result.get("shadow_mode", False),
         ),
+    )
+
+
+# ---------------------------------------------------------------------------
+# POST /v1/analyze/interpret — Semiotic interpretation
+# ---------------------------------------------------------------------------
+
+@app.post("/v1/analyze/interpret", response_model=InterpretResponse)
+async def analyze_interpret(
+    req: ConversationRequest,
+    api_key: str = Depends(verify_api_key),
+):
+    """
+    Semiotic interpretation of a conversation.
+
+    Runs the full detection engine with a lower threshold (0.3) to catch
+    subtle signals, then overlays Peirce classification (icon/index/symbol),
+    framing hypotheses, cultural frame analysis, and narrative synthesis.
+
+    Returns grouped framings with intensity scores, evidence markers,
+    and a synthesized narrative summary with key points.
+    """
+    messages = [{"role": m.role, "text": m.text} for m in req.messages]
+    layers = [l.value for l in req.layers]
+
+    # Use lower threshold for interpretation to catch subtle signals
+    interpret_threshold = min(req.threshold, 0.3)
+    result = await engine.analyze_conversation(messages, layers=layers, threshold=interpret_threshold)
+
+    detections = result["detections"]
+    sem_map = build_semiotic_map(detections, engine)
+    framings = aggregate_framings(detections, sem_map)
+    dom = dominant_framing(framings)
+
+    # Narrative synthesis
+    findings_raw = synthesize_narrative(
+        framings, sem_map, num_messages=len(messages), reasoning=result.get("reasoning")
+    )
+    findings = InterpretFindings(**findings_raw)
+
+    return InterpretResponse(
+        framings=[FramingHypothesis(**f) for f in framings],
+        semiotic_map={k: SemioticEntry(**v) for k, v in sem_map.items()},
+        dominant_framing=dom,
+        findings=findings,
+        meta=AnalyzeMeta(
+            processing_ms=result["timing_ms"],
+            text_length=sum(len(m.text) for m in req.messages),
+            markers_detected=len(detections),
+            layers_scanned=layers,
+            shadow_mode=result.get("shadow_mode", False),
+        ),
+    )
+
+
+# ---------------------------------------------------------------------------
+# POST /v1/analyze/narrative — Narrative analysis with 3 interpretation modes
+# ---------------------------------------------------------------------------
+
+@app.post("/v1/analyze/narrative", response_model=NarrativeResponse)
+async def analyze_narrative(
+    req: NarrativeRequest,
+    request: Request,
+    api_key: str = Depends(verify_api_key),
+):
+    """
+    Two-stage LLM narrative analysis.
+
+    Stage 1 (pre-analysis): Generates an "Initial Semantics" layer that defines
+    the narrative-semantic space: actors, discourse type, tension axes, belief
+    systems, cultural frame, and expected marker families.
+
+    Stage 2 (post-analysis): After marker detection, produces an objective
+    semantic report with scenario, actors, timeline, relationships, and
+    belief/myth systems — framed according to the requested interpretation mode:
+
+    - **Clinical**: Pattern-analytic language, psychological patterns as analytic
+      lenses only (never diagnoses), formal and evidence-bound.
+    - **Narrative**: Story-framed, accessible language, neutral narrator perspective.
+    - **Explorative**: Multiple readings with confidence labels, explicit assumption
+      flagging, UNCERTAIN markers for cultural inferences.
+
+    All modes strictly separate evidence tiers A (direct) / B (hypothesis) / C (speculative),
+    flag mis-triggered markers for human review, and include a bias audit.
+
+    Requires LEANDEEP_GOOGLE_API_KEY. Without it, returns only marker detections.
+    """
+    import time as _time
+    t0 = _time.perf_counter()
+
+    messages = [{"role": m.role, "text": m.text} for m in req.messages]
+    layers = [l.value for l in req.layers]
+    mode = NarrativeMode(req.interpretation_mode.value)
+
+    # Stage 1: Initial Semantics (pre-analysis)
+    initial_semantics_raw = None
+    if req.include_initial_semantics:
+        initial_semantics_raw = await initial_semantics_generator.generate(
+            messages, language=req.language.value
+        )
+
+    # Analysis mode is currently always pattern-based for conversation analysis.
+    # Semantic profiling/gating is not applied here to avoid unnecessary cost
+    # and misleading metadata.
+    analysis_mode = "pattern"
+
+    # Marker detection
+    result = await engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
+    detections = result["detections"]
+
+    markers = [
+        ConversationMarker(
+            id=d.marker_id,
+            layer=Layer(d.layer),
+            confidence=d.confidence,
+            description=d.description,
+            message_indices=d.message_indices,
+            family=d.family,
+            multiplier=d.multiplier,
+            matches=[
+                PatternMatch(
+                    pattern=m.pattern,
+                    span=(m.start, m.end),
+                    matched_text=m.matched_text,
+                )
+                for m in d.matches
+            ],
+        )
+        for d in detections
+    ]
+
+    # Stage 2: Narrative Report (post-analysis)
+    narrative_raw = await narrative_report_generator.generate(
+        messages=messages,
+        detections=detections,
+        initial_semantics=initial_semantics_raw,
+        mode=mode,
+        language=req.language.value,
+    )
+
+    # Map internal models -> API response models
+    def _map_initial_semantics(obj) -> InitialSemanticsReport | None:
+        if obj is None:
+            return None
+        return InitialSemanticsReport(
+            narrative_domain=obj.narrative_domain,
+            discourse_type=obj.discourse_type,
+            actors=[NarrativeActor(**a.model_dump()) for a in obj.actors],
+            spatiotemporal_context=obj.spatiotemporal_context,
+            cultural_frame=obj.cultural_frame,
+            active_belief_systems=obj.active_belief_systems,
+            tension_axis=obj.tension_axis,
+            semantic_readiness_score=obj.semantic_readiness_score,
+            pre_markers_expected=obj.pre_markers_expected,
+            uncertainty_notes=obj.uncertainty_notes,
+        )
+
+    def _map_narrative_report(obj) -> NarrativeReport | None:
+        if obj is None:
+            return None
+        from .models import InterpretationMode as ModelMode
+        return NarrativeReport(
+            mode=ModelMode(obj.mode.value),
+            scenario=obj.scenario,
+            actors=[NarrativeActor(**a.model_dump()) for a in obj.actors],
+            timeline=obj.timeline,
+            relationships=[NarrativeRelationship(**r.model_dump()) for r in obj.relationships],
+            belief_systems=[NarrativeBeliefSystem(**b.model_dump()) for b in obj.belief_systems],
+            marker_evidence_summary=obj.marker_evidence_summary,
+            interpretation=obj.interpretation,
+            uncertainty_flags=obj.uncertainty_flags,
+            human_review_flags=[HumanReviewFlag(**f.model_dump()) for f in obj.human_review_flags],
+            bias_check_summary=obj.bias_check_summary,
+            evidence_tier_used=obj.evidence_tier_used,
+        )
+
+    elapsed_ms = (_time.perf_counter() - t0) * 1000
+
+    return NarrativeResponse(
+        markers=sorted(markers, key=lambda m: (-m.confidence, m.id)),
+        initial_semantics=_map_initial_semantics(initial_semantics_raw),
+        narrative_report=_map_narrative_report(narrative_raw),
+        meta=AnalyzeMeta(
+            processing_ms=elapsed_ms,
+            text_length=sum(len(m.text) for m in req.messages),
+            markers_detected=len(markers),
+            layers_scanned=layers,
+            shadow_mode=result.get("shadow_mode", False),
+            analysis_mode=analysis_mode,
+            version=settings.version,
+        ),
+    )
+
+
+# ---------------------------------------------------------------------------
+# POST /v1/analyze/transcript — Transcript format parsing & speaker diarization
+# ---------------------------------------------------------------------------
+
+@app.post("/v1/analyze/transcript", response_model=TranscriptResponse)
+async def analyze_transcript(
+    req: TranscriptRequest,
+    api_key: str = Depends(verify_api_key),
+):
+    """
+    Parse a raw transcript into structured speaker-tagged messages.
+
+    Supports WhatsApp exports, timestamped logs, bracket roles, and standard
+    "Name: text" format. When the format cannot be determined and Gemini is
+    available, falls back to AI-based speaker diarization.
+
+    Returns the list of messages, detected format name, and unique speaker count.
+    """
+    messages_raw, format_detected = parse_transcript(req.text)
+
+    # If format is unknown and Gemini is available, try AI diarization
+    if format_detected == "unknown_alternating" and initial_semantics_generator.enabled:
+        messages_raw = await diarize_with_ai(req.text, initial_semantics_generator.get_model())
+        format_detected = "ai_diarized"
+
+    messages = [Message(role=m["role"], text=m["text"]) for m in messages_raw]
+    speaker_count = len({m.role for m in messages})
+
+    return TranscriptResponse(
+        messages=messages,
+        format_detected=format_detected,
+        speaker_count=speaker_count,
     )
 
 
@@ -464,6 +785,7 @@ async def list_markers(
         offset=offset,
     )
 
+    valid_layers = {e.value for e in Layer}
     markers = [
         MarkerDetail(
             id=m.id,
@@ -479,10 +801,11 @@ async def list_markers(
             multiplier=m.multiplier if m.multiplier != 1.0 else None,
             composed_of=m.composed_of,
             scoring=m.scoring,
-            activation=m.activation,
+            activation=m.activation if isinstance(m.activation, dict) else None,
             window=m.window,
         )
         for m in results
+        if m.layer in valid_layers
     ]
 
     return MarkerListResponse(total=total, offset=offset, limit=limit, markers=markers)
@@ -502,9 +825,12 @@ async def get_marker(
     if not m:
         raise HTTPException(status_code=404, detail=f"Marker '{marker_id}' not found")
 
+    valid_layers = {e.value for e in Layer}
+    layer_val = m.layer if m.layer in valid_layers else "ATO"
+
     return MarkerDetail(
         id=m.id,
-        layer=Layer(m.layer),
+        layer=Layer(layer_val),
         lang=m.lang,
         description=m.description,
         frame=m.frame,
@@ -579,6 +905,13 @@ async def playground():
 async def analysis():
     """Serve the intuitive analysis UI for emotion dynamics and marker interpretation."""
     html_path = Path(__file__).parent / "static" / "analysis.html"
+    return HTMLResponse(content=html_path.read_text(encoding="utf-8"))
+
+
+@app.get("/app", response_class=HTMLResponse)
+async def app_ui():
+    """Serve the LeanDeep 6.0 Analysis Studio."""
+    html_path = Path(__file__).parent / "static" / "app.html"
     return HTMLResponse(content=html_path.read_text(encoding="utf-8"))
 
 

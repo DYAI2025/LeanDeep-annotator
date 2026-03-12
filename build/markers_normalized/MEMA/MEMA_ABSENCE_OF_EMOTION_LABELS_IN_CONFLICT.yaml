@@ -23,6 +23,46 @@ examples:
   - "A: Du hast die Werkstatt einfach umdisponiert.\nB: Du warst nicht erreichbar, als wir klären mussten.\nA: Du schwächst unsere Glaubwürdigkeit.\nB: Du hältst keine Absprachen mit Partnern ein."
   - "A: Du hast wieder nur Zahlen in den Raum gestellt.\nB: Du entziehst dich jeder Diskussion.\nA: Du betonst dauernd die KPI ohne Kontext.\nB: Du gibst keine Sicht auf Risiken frei."
   - "A: Du lässt die Warteschlange weiter anwachsen.\nB: Du stoppst jede zusätzliche Schicht.\nA: Du verbietest Übergabe an externe Teams.\nB: Du verweist einfach auf die Policy."
+  - "A: Du informierst nie rechtzeitig.\nB: Du stellst immer falsche Prioritäten.\nA: Du verlangst das Unmögliche.\nB: Du entziehst dem Projekt Ressourcen."
+  - "A: Du hast die Abnahme blockiert.\nB: Du bist der Engpass im Prozess.\nA: Du kommunizierst nicht mit dem Team.\nB: Du handelst immer im Alleingang."
+  - "A: Du hintergehst die Absprachen.\nB: Du stellst dich über die Teamregeln.\nA: Du gibst nur Anweisungen weiter.\nB: Du kümmerst dich nicht um Ergebnisse."
+  - "A: Du versäumst jede Deadline.\nB: Du schiebst alles auf andere.\nA: Du ignorierst unsere Arbeitsbelastung.\nB: Du siehst nur dein eigenes Thema."
+  - "A: Du übernimmst Aufgaben, ohne zu liefern.\nB: Du behinderst unseren Fortschritt.\nA: Du machst alles komplizierter.\nB: Du reißt Themen an und lässt sie liegen."
+  - "A: Du weigerst dich, Probleme zu adressieren.\nB: Du vertröstest uns immer nur.\nA: Du gibst keine klaren Antworten.\nB: Du verschleierst die wahre Lage."
+  - "A: Du hast das Protokoll nicht eingehalten.\nB: Du gefährdest das gesamte Audit.\nA: Du reagierst nicht auf Eskalationen.\nB: Du sitzt Probleme einfach aus."
+  - "A: Du planst ohne Rücksprache.\nB: Du übergehst jede Expertise im Team.\nA: Du machst die gleichen Fehler immer wieder.\nB: Du lernst nicht aus Feedback."
+  - "A: Du hältst Informationen zurück.\nB: Du manipulierst die Agenda.\nA: Du triffst Entscheidungen über unsere Köpfe.\nB: Du respektierst keine Teamstrukturen."
+  - "A: Du stellst uns vor vollendete Tatsachen.\nB: Du wartest nicht auf Abstimmung.\nA: Du denkst nur kurzfristig.\nB: Du ignorierst langfristige Konsequenzen."
+  - "A: Du verteilst Aufgaben willkürlich.\nB: Du achtest nicht auf Kapazitäten.\nA: Du fragst nie nach, wie es läuft.\nB: Du interessierst dich nur für Ergebnisse."
+  - "A: Du bringst ständig neue Anforderungen.\nB: Du änderst die Richtung ohne Vorwarnung.\nA: Du lässt niemanden ausreden.\nB: Du dominierst jede Diskussion."
+  - "A: Du hast den Kunden falsch informiert.\nB: Du gibst Versprechen, die du nicht halten kannst.\nA: Du lässt uns die Suppe auslöffeln.\nB: Du gehst Konfrontationen aus dem Weg."
+  - "A: Du nimmst keine Rücksicht auf Urlaube.\nB: Du planst einfach über uns hinweg.\nA: Du behandelst das Team wie Ressourcen.\nB: Du siehst nicht, wie erschöpft alle sind."
+  - "A: Du hast die Specs wieder geändert.\nB: Du machst das absichtlich.\nA: Du willst nur deinen Stempel aufdrücken.\nB: Du verhinderst, dass andere glänzen."
+  - "A: Du redest nie mit dem Support-Team.\nB: Du schneidest uns aus Entscheidungen heraus.\nA: Du blockierst den Informationsfluss.\nB: Du sitzt auf Wissen wie auf einem Schatz."
+  - "A: Du kürzt die Testphase schon wieder.\nB: Du akzeptierst keine Qualitätsstandards.\nA: Du drückst die Kosten ohne Rücksicht.\nB: Du opferst Qualität für Speed."
+  - "A: Du hast meine Mail nicht beantwortet.\nB: Du ignorierst Nachrichten selektiv.\nA: Du kommunizierst nur, wenn es dir passt.\nB: Du hältst den Laden auf."
+  - "A: Du verdrehst die Fakten im Report.\nB: Du stellst es anders dar, als es war.\nA: Du sicherst dich nur selbst ab.\nB: Du wälzt alles nach unten ab."
+  - "A: Du duldest keine Kritik.\nB: Du reagierst auf jeden Einwand mit Gegenangriff.\nA: Du vergiftest die Atmosphäre.\nB: Du machst produktive Arbeit unmöglich."
+  - "A: Du hast die Präsentation ohne Absprache geändert.\nB: Du unterminierst damit meine Arbeit.\nA: Du respektierst keine Zuständigkeiten.\nB: Du agierst, als gäbe es keine Teamstruktur."
+  - "A: Du mischst dich überall ein.\nB: Du vertraust niemandem die Arbeit an.\nA: Du musst immer alles kontrollieren.\nB: Du erstickst jede Eigeninitiative."
+  - "A: Du lieferst immer zu spät.\nB: Du hältst dich an keine Vereinbarung.\nA: Du erwartest Flexibilität, bist aber selbst unflexibel.\nB: Du misst mit zweierlei Maß."
+  - "A: Du hast das Budget ohne Freigabe überzogen.\nB: Du wirtschaftest auf Kosten anderer Abteilungen.\nA: Du kommunizierst erst, wenn es zu spät ist.\nB: Du hinterlässt immer verbrannte Erde."
+  - "A: Du eskalierst sofort statt zu klären.\nB: Du gehst zum Chef, bevor du mit mir redest.\nA: Du spielst Hierarchie gegen Zusammenarbeit.\nB: Du benutzt Macht statt Argumente."
+  - "A: Du stellst dich über andere Teams.\nB: Du siehst nur deinen eigenen Erfolg.\nA: Du misst nur deine eigenen KPIs.\nB: Du ignorierst die Gesamtwirkung."
+  - "A: Du überspringst regelmäßig die Reviews.\nB: Du lieferst ohne Qualitätskontrolle.\nA: Du nimmst Bugs billigend in Kauf.\nB: Du lehnst Verantwortung für Fehler ab."
+  - "A: Du hast das Team schon wieder umstrukturiert.\nB: Du sorgst für permanente Instabilität.\nA: Du ignorierst die Auswirkungen auf die Motivation.\nB: Du denkst nur in Organigrammen."
+  - "A: Du stoppst jede Innovation.\nB: Du beharrst auf veralteten Methoden.\nA: Du verhinderst Fortschritt aus Prinzip.\nB: Du blockierst jeden Veränderungsvorschlag."
+  - "A: Du gibst dem Kunden recht, ohne uns zu fragen.\nB: Du untergräbst unsere Position.\nA: Du stellst dich auf die andere Seite.\nB: Du loyalisierst dich nach außen statt nach innen."
+  - "A: Du kommst unpünktlich zu jedem Meeting.\nB: Du zeigst damit fehlenden Respekt.\nA: Du verschwendest die Zeit aller.\nB: Du hältst dich für wichtiger als den Rest."
+  - "A: Du hast vertrauliche Infos weitergegeben.\nB: Du brichst ständig Vereinbarungen.\nA: Du agierst nicht vertrauenswürdig.\nB: Du gefährdest damit das ganze Projekt."
+  - "A: Du überarbeitest Entscheidungen nachträglich.\nB: Du änderst die Spielregeln mitten im Spiel.\nA: Du verschiebst die Zielpfosten.\nB: Du machst jedes Ergebnis zur Verhandlungssache."
+  - "A: Du stellst mich öffentlich bloß.\nB: Du kritisierst mich vor dem gesamten Team.\nA: Du zielst auf persönliche Schwächen.\nB: Du nutzt Informationen gegen mich."
+  - "A: Du sabotierst die Zusammenarbeit mit der Nachbarabteilung.\nB: Du vergiftest die Beziehungen.\nA: Du redest schlecht über Kollegen.\nB: Du spaltest das Team in Lager."
+  - "A: Du delegierst alles nach unten.\nB: Du trägst nie eigene Verantwortung.\nA: Du kassierst den Erfolg und verteilst die Schuld.\nB: Du bist ein Fähnchen im Wind."
+  - "A: Du dokumentierst nichts.\nB: Du hältst alles im Kopf.\nA: Du machst dich damit unersetzbar.\nB: Du blockierst jede Übergabe."
+  - "A: Du kündigst Änderungen nie rechtzeitig an.\nB: Du überraschst uns ständig mit neuen Anforderungen.\nA: Du arbeitest gegen das Team.\nB: Du stellst deinen Bereich immer über alles."
+  - "A: Du hast die Beschwerde des Kunden ignoriert.\nB: Du reagierst nur auf Druck von oben.\nA: Du lässt Probleme eskalieren.\nB: Du greifst erst ein, wenn es zu spät ist."
+  - "A: Du blockierst unsere Pull Requests seit Tagen.\nB: Du gibst kein Feedback.\nA: Du hältst den Fortschritt auf.\nB: Du nutzt Code Reviews als Machtinstrument."
   negative:
   - "A: Du hast erneut den Lieferplan übergangen.\nB: Du lässt uns mit den Reklamationen allein.\nA: Du siehst nur deinen Bereich.\nB: Du beachtest wenige Auswirkungen auf Support."
   - "A: Du stellst meine Präsentation zum dritten Mal um.\nB: Du ignorierst die Abstimmung mit dem Vertrieb.\nA: Du wirfst ab und zu neue Slides ein.\nB: Du hörst nicht zu, wenn wir Prioritäten setzen."
@@ -31,6 +71,24 @@ examples:
   - Das ist ein guter Punkt, den du da machst.
   - Ich verstehe deine Perspektive.
   - Lass uns gemeinsam eine Loesung finden.
+  - "A: Das frustriert mich wirklich, wenn das passiert.\nB: Ich bin auch genervt davon.\nA: Ich merke, dass ich wütend werde.\nB: Ich fühle mich übergangen."
+  - "A: Du hast den Lieferplan übergangen.\nB: Ich bin ehrlich gesagt verletzt darüber.\nA: Mich macht das traurig.\nB: Ich fühle mich nicht ernst genommen."
+  - "A: Das macht mich wahnsinnig.\nB: Ich bin enttäuscht von der Situation.\nA: Ich spüre eine tiefe Frustration.\nB: Mich belastet das emotional."
+  - "A: Ich bin gerade echt sauer.\nB: Ich fühle mich hilflos dabei.\nA: Mich ärgert das massiv.\nB: Ich bin verletzt über dein Verhalten."
+  - "A: Du hast das ohne Absprache gemacht.\nB: Ja, und das bereue ich, ich fühle mich schlecht deswegen.\nA: Mich macht das wütend und traurig zugleich.\nB: Ich habe Angst, dass das eskaliert."
+  - "A: Das frustriert mich zutiefst.\nB: Ich bin auch nicht glücklich damit.\nA: Ich fühle mich ohnmächtig.\nB: Mir macht die Situation Angst."
+  - "A: Ich bin enttäuscht, ehrlich gesagt.\nB: Ich fühle mich auch gestresst davon.\nA: Mir tut das weh.\nB: Ich bin verunsichert gerade."
+  - Ich merke, wie mich das emotional berührt, obwohl wir sachlich streiten.
+  - Können wir mal kurz innehalten? Ich merke, dass ich gerade sehr aufgewühlt bin.
+  - Ich gebe zu, das trifft mich mehr als ich zeigen will.
+  - 'B: Ich fühle mich gerade wirklich überfordert mit der Situation.'
+  - 'A: Ich bin verärgert, aber auch traurig darüber, wie das läuft.'
+  - "A: Mich macht das nervös, weil ich Angst habe, dass wir uns entfremden.\nB: Das beunruhigt mich auch."
+  - "A: Ich bin angespannt wegen der Frist.\nB: Ich spüre den Druck auch."
+  - Ehrlich, ich habe Angst vor dem nächsten Meeting, weil das emotional so belastend ist.
+  - "A: Das macht mich fassungslos traurig.\nB: Ich fühle Wut und Hilflosigkeit gleichzeitig."
+  - Ich muss zugeben, dass ich mich gerade verletzt fühle.
+  - Das löst in mir eine tiefe Unsicherheit aus.
 tags:
 - meta
 - absence
@@ -56,3 +114,9 @@ absence_sets:
     - SEM_FEELING_STATEMENT
 emit:
   per_speaker: true
+semiotic:
+  peirce: index
+  signifikat: Konfliktdynamik
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'

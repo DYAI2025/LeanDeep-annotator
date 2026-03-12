@@ -21,7 +21,8 @@ examples:
   positive:
   - Du bist das Problem, ich weiß gar nicht mehr, was ich noch glauben soll!
   - Wegen dir ist alles kaputt, aber ich liebe dich mehr als alles andere.
-  - Wenn du gehst, weiß ich nicht, was ich machen soll – aber du bist nie zufrieden.
+  - Wenn du gehst, weiß ich nicht, was ich machen soll – aber du bist nie 
+    zufrieden.
   - Ich weiß selbst nicht mehr, was los ist, aber du bringst mich dazu.
   - Ich bin auf UN-Mission und du bist mein letzter Halt, vertraue mir!
   - Egal was du tust, es ist immer falsch. Aber ohne dich wäre ich nichts.
@@ -31,8 +32,10 @@ examples:
   - Ich kann nichts dafür, wenn du immer alles so dramatisierst!
   negative:
   - Wegen dir ist alles kaputt, aber ich finde gut dich mehr als alles andere.
-  - wir haben gemeinsam ist alles kaputt, aber ich liebe dich mehr als alles andere.
-  - Wenn du gehst, weiß ich nicht, was ich machen soll – aber du bist selten zufrieden.
+  - wir haben gemeinsam ist alles kaputt, aber ich liebe dich mehr als alles 
+    andere.
+  - Wenn du gehst, weiß ich nicht, was ich machen soll – aber du bist selten 
+    zufrieden.
   - Ich sehe das anders, aber ich respektiere deine Sicht.
   - Ich moechte ehrlich mit dir sein, auch wenn es schwer ist.
   - Du hast recht, das war mein Fehler. Es tut mir leid.
@@ -42,3 +45,12 @@ tags:
 - psychological
 - digital
 - scam
+semiotic: {peirce: symbol, signifikat: Verdeckte Einflussnahme, framing_type: 
+    kontrollnarrative, cultural_frame: Sozialpsychologie, myth: 'Wer die Deutungshoheit
+    hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'}
+semantic_affinity:
+  intents:
+  - feststellung
+  - vorwurf
+  intents_exclude:
+  - smalltalk

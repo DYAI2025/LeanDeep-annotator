@@ -24,16 +24,80 @@ metadata:
     evidence_policy: family-scoped
 examples:
   positive:
-  - <Muster>
-  - <System>
-  - <Kontextwechsel>
-  - <Trade-off>
-  - <Hebel>
+  - "Ich erkenne da ein Muster, das sich über mehrere Ebenen zieht."
+  - "Das System hat verschiedene Wechselwirkungen, die wir berücksichtigen müssen."
+  - "Kontextwechsel: In der einen Situation stimmt A, in der anderen B."
+  - "Der Trade-off zwischen Effizienz und Menschlichkeit ist komplex."
+  - "Wo ist der Hebel, der die größte Wirkung entfaltet?"
+  - "Man muss das Problem aus verschiedenen Perspektiven betrachten."
+  - "Die Komplexität lässt sich nicht auf eine einfache Antwort reduzieren."
+  - "Systemisch gesehen hängt das alles zusammen."
+  - "Ich sehe Patterns, die sich wiederholen, auf verschiedenen Skalen."
+  - "Die Metaebene zeigt ein anderes Bild als die Detailebene."
+  - "das ist ein komplexes system, man kann nicht nur einen faktor anschauen"
+  - "Welcher Kontext gilt hier? Das ändert die Antwort komplett."
+  - "Integration statt Entweder-Oder: Beide Ansätze haben ihren Platz."
+  - "Ich wechsle zwischen Mikro- und Makroperspektive, um das Ganze zu verstehen."
+  - "Die emergenten Eigenschaften des Systems sind interessanter als seine Teile."
+  - "Sehr geehrte Kolleginnen und Kollegen, ich möchte die systemischen Zusammenhänge beleuchten."
+  - "Vernetztes Denken statt lineares Denken - das brauchen wir hier."
+  - "Der Hebelpunkt liegt nicht dort, wo man ihn vermutet."
+  - "Kontextabhängig ist das mal richtig, mal falsch."
+  - "Das Muster wiederholt sich auf verschiedenen Ebenen - Organisation, Team, Individuum."
+  - "man muss die trade-offs verstehen, sonst optimiert man das falsche"
+  - "Jede Lösung erzeugt neue Probleme, die systemisch betrachtet werden müssen."
+  - "Die Wechselwirkungen zwischen den Teilsystemen sind entscheidend."
+  - "Ich suche die Muster hinter den Mustern."
+  - "Komplexität annehmen statt vereinfachen - das ist der Schlüssel."
+  - "In diesem Kontext stimmt das, in einem anderen nicht."
+  - "Der Systemdynamik entkommt man nicht, man kann sie nur verstehen."
+  - "Multiperspektivität ist keine Schwäche, sondern eine Stärke."
+  - "Feedback-Loops bestimmen das Verhalten des Systems."
+  - "ich seh da zusammenhänge die andere nicht sehen. muster über zeit"
+  - "Das ist ein Hebel zweiter Ordnung - die indirekte Wirkung ist größer als die direkte."
+  - "Die Frage ist nicht ob A oder B, sondern wann A und wann B."
+  - "Systemisches Verständnis erfordert, dass man den Rahmen vergrößert."
+  - "Paradigmenwechsel sind nötig, wenn das alte Denkmodell nicht mehr greift."
+  - "Kontextsensitivität: Die gleiche Maßnahme wirkt in verschiedenen Umgebungen unterschiedlich."
+  - "Ich vernetze die verschiedenen Perspektiven zu einem Gesamtbild."
+  - "Die Metaebene zu betrachten ist nicht Flucht, sondern Notwendigkeit."
+  - "Non-lineare Dynamiken machen Vorhersagen schwierig, aber Muster erkennbar."
+  - "es geht um die wechselwirkungen, nicht um einzelne events"
+  - "Der kontextabhängige Ansatz ist dem universellen überlegen."
+  - "Hierarchien, Netzwerke, Ökosysteme - alles Systemmodelle mit verschiedenen Stärken."
+  - "Wo setzen wir den Hebel an, um die größte Veränderung zu bewirken?"
+  - "Jede Ebene hat ihre eigene Logik, die mit den anderen Ebenen interagiert."
+  - "Integration heißt nicht Kompromiss, sondern eine höhere Synthese."
+  - "Die Muster über die Zeit zu erkennen erfordert Geduld und Perspektivenwechsel."
+  - "Systemdenken bedeutet, die unsichtbaren Verbindungen sichtbar zu machen."
+  - "Trade-offs sind keine Probleme, sondern Realitäten, die man managen muss."
+  - "ich frag mich immer: was ist der kontext? und dann ändert sich alles"
+  - "Adaptivität statt Rigidität - das System braucht Flexibilität."
+  - "Die Lösung liegt in der Verbindung der Perspektiven, nicht in einer einzelnen."
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - "Die Lösung ist einfach: A machen, fertig."
+  - "So ist das halt, da gibt es nichts zu diskutieren."
+  - "Das ist schwarz oder weiß, dazwischen gibt es nichts."
+  - "Regeln sind Regeln, die gelten immer."
+  - "Ich mache mir da nicht so viele Gedanken."
+  - "Die Antwort ist offensichtlich."
+  - "Entweder richtig oder falsch, so einfach ist das."
+  - "Darüber muss man nicht nachdenken, das ist klar."
+  - "Eine Perspektive reicht mir."
+  - "Ich vertraue meinem ersten Eindruck."
+  - "das is doch klar, warum machst du es so kompliziert"
+  - "Funktioniert oder funktioniert nicht, mehr gibt es nicht."
+  - "Die Chefin sagt A, also machen wir A."
+  - "Ich brauche keine Metaebene, ich brauche Ergebnisse."
+  - "Einfach machen, nicht so viel philosophieren."
+  - "Das ist ein isoliertes Problem, hat nichts mit dem Rest zu tun."
+  - "Die Antwort liegt auf der Hand."
+  - "Zu viel Nachdenken bringt nichts."
+  - "Muster? Das ist Zufall."
+  - "Eine klare Entscheidung ist besser als endloses Abwägen."
+  - "Ich sehe das Problem und die Lösung, was gibt es da zu diskutieren?"
+  - "Kontext hin oder her, richtig ist richtig."
+  - "Nicht alles muss kompliziert sein."
+  - "Ich bin pragmatisch: Was funktioniert, bleibt."
+  - "halt dich nicht mit details auf, mach einfach"
+semiotic: {peirce: symbol, signifikat: Persoenlichkeitsmuster, framing_type: meta, cultural_frame: '', myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

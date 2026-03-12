@@ -1,0 +1,74 @@
+id: SEM_BOUNDARY_INVERSION
+schema: LeanDeep
+version: '5.1'
+layer: SEM
+lang: de
+description: ''
+frame:
+  signal:
+  - blocken ist gewalt
+  - dein nein ist bestrafung
+  - mich zu ignorieren ist missbrauch
+  - grenzen setzen ist manipulation
+  - kontaktabbruch ist gewalt
+  - dein schweigen ist eine form von gewalt
+  concept: reframing boundaries as aggression
+  pragmatics: delegitimize partner's protective boundaries by labeling them as violent or abusive
+  narrative: boundary_weaponization
+patterns:
+- type: regex
+  value: 
+    (?i)\b(block\w*|ignorier\w*|schweig\w*|nein|grenz\w+\s+setz\w*|abgrenz\w*|kontaktabbruch|funkstille)\b.{0,25}\b(gewalt|bestraf\w*|missbrauch|manipulat\w*|aggress\w*|grausam|gemein|respektlos|verletz\w*)
+- type: regex
+  value: (?i)\b(dein\w?\s+(nein|schweigen|rueckzug|grenze?))\s+.{0,15}(bestraf\w*|verletz\w*|gewalt|missbrauch)
+- type: regex
+  value: (?i)(das\s+ist\s+bestrafung|das\s+ist\s+(emotionale?\s+)?(gewalt|missbrauch))
+examples:
+  positive:
+  - Blocken ist Gewalt, das weisst du.
+  - Dein Nein ist Bestrafung, nichts anderes.
+  - Mich zu ignorieren ist emotionaler Missbrauch.
+  - Wenn du Grenzen setzt, ist das manipulativ.
+  - Dein Schweigen ist eine Form von Gewalt gegen mich.
+  - Kontaktabbruch ist die schlimmste Form von Bestrafung.
+  - Dass du mich blockierst, ist aggressiv und respektlos.
+  - Du bestrafst mich mit deinem Schweigen.
+  - Grenze setzen? Das ist Kontrollsucht, nichts anderes.
+  - Du nennst es Grenze, ich nenne es emotionale Gewalt.
+  negative:
+  - Ich brauche gerade Abstand, bitte respektiere das.
+  - Blocken war fuer mich der einzige Ausweg.
+  - Ich setze hier eine Grenze, weil mir das wichtig ist.
+  - Schweigen kann manchmal verletzen, das stimmt.
+  - Ich moechte nicht ignoriert werden.
+  - Lass uns eine Pause machen und spaeter weiterreden.
+tags:
+- boundary_inversion
+- manipulation
+- darvo
+- gaslighting
+- toxicity
+rating: 1
+composed_of:
+- ATO_BOUNDARY_SET
+- ATO_BLAME_SHIFT
+activation:
+  rule: ANY 1
+scoring:
+  base: 2.0
+  weight: 1.4
+semiotic:
+  peirce: symbol
+  signifikat: Grenzverdrehung/Schutz als Aggression
+  framing_type: kontrollnarrative
+  cultural_frame: DARVO
+  myth: "Grenzen sind Strafe — wer sich schuetzt, greift an"
+compositionality: contextual
+vad_estimate:
+  valence: -0.6
+  arousal: 0.8
+  dominance: 0.75
+effect_on_state:
+  trust: -0.5
+  conflict: 0.7
+  deesc: -0.4

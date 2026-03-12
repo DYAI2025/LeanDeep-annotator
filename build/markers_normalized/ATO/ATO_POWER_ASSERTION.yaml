@@ -32,6 +32,12 @@ examples:
   - Das klingt nach einem wichtigen Thema fuer dich.
 tags: []
 rating: 2
+semiotic:
+  peirce: index
+  signifikat: Machtausuebung
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
+  myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

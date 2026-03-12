@@ -1,0 +1,104 @@
+id: MEMA_SYNCHRONY_PATTERN
+version: "3.4"
+frame:
+  signal: ["synchrony", "pattern"]
+  concept: "Synchronie-Muster – Grad der emotionalen und kommunikativen Abstimmung"
+  pragmatics: "Erkennt, ob Gesprächspartner im Gleichklang oder asynchron kommunizieren"
+  narrative: "meta_pattern"
+tags: [mema, synchrony, attunement, connection]
+composed_of:
+  required_any:
+  - SEM_EMPATHIC_RESONANCE
+  - CLU_EMOTIONAL_DEEPENING
+  supportive:
+  - ATO_MIRRORING
+  - SEM_REPAIR_SIGNAL
+activation:
+  rule: "ANY 2 IN 15 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+  positive_de:
+  - "Wir denken gerade genau dasselbe – das merke ich."
+  - "Du hast gesagt, was ich gerade gedacht habe."
+  - "Wir sind emotional auf derselben Wellenlänge."
+  - "Unsere Stimmung ist synchron – wir fühlen dasselbe."
+  - "Wir haben gleichzeitig angefangen zu lachen."
+  - "Du verstehst mich, ohne dass ich es aussprechen muss."
+  - "Wir sind im Gleichklang – emotional und kommunikativ."
+  - "Mir fällt auf: wir verwenden gerade die gleichen Worte."
+  - "Unsere Energie ist aufeinander abgestimmt."
+  - "Wir schwingen im selben Rhythmus."
+  - "Du spürst, was ich brauche, bevor ich es sage."
+  - "Wir reagieren gleichzeitig auf dieselben Dinge."
+  - "Unsere Kommunikation ist synchron – Frage und Antwort passen perfekt."
+  - "Wir haben denselben Humor im selben Moment."
+  - "Es gibt eine unsichtbare Verbindung, die uns abstimmt."
+  - "Wir atmen im gleichen Takt."
+  - "Du spiegelst meine Emotionen und ich deine."
+  - "Wir sind emotional aufeinander eingestellt."
+  - "Unsere Gespräche fließen – ohne Stocken, ohne Missverständnis."
+  - "Wir ergänzen uns in Echtzeit."
+  - "Mir fällt auf, dass wir uns gleichzeitig die Hand reichen."
+  - "Unsere Resonanz ist spürbar."
+  - "Wir sind im Einklang – körperlich und emotional."
+  - "Du weißt, was ich denke, bevor ich es sage."
+  - "Unsere Stimmungen sind gekoppelt – wenn du glücklich bist, bin ich es auch."
+  - "Wir haben einen natürlichen Rhythmus in unseren Gesprächen."
+  - "Es gibt eine Harmonie zwischen uns, die selten ist."
+  - "Wir verstehen uns blind."
+  - "Unsere Kommunikation ist wie ein Tanz – abgestimmt und fließend."
+  - "Wir spüren einander, ohne Worte zu brauchen."
+  - "Mir fällt auf: wir haben die gleiche Körpersprache."
+  - "Unsere emotionale Frequenz stimmt überein."
+  - "Wir sind im Flow miteinander."
+  - "Du und ich – synchron, wie ein eingespieltes Duo."
+  - "Unsere Gedanken laufen parallel."
+  - "Wir sind emotional aufeinander abgestimmt."
+  - "Die Synchronie zwischen uns ist magisch."
+  - "Wir reagieren auf dieselben Trigger, zur selben Zeit."
+  - "Unsere Gespräche haben einen natürlichen Fluss."
+  - "Wir sind auf derselben Frequenz."
+  - "Mir fällt auf, dass wir gleichzeitig dasselbe sagen wollen."
+  - "Unsere Verbindung ist intuitiv."
+  - "Wir haben einen Gleichklang, der mich berührt."
+  - "Deine Stimmung beeinflusst meine und umgekehrt – in Echtzeit."
+  - "Wir sind wie zwei Uhren, die synchron ticken."
+  - "Die Abstimmung zwischen uns ist beeindruckend."
+  - "Wir hören einander wirklich – und das merkt man."
+  - "Unsere Interaktion ist harmonisch und fließend."
+  - "Wir sind emotional verbunden auf eine tiefe, intuitive Art."
+  - "Unsere Synchronie gibt mir ein Gefühl von Zuhause."
+  negative_de:
+  - "Wir reden aneinander vorbei."
+  - "Unsere Stimmungen passen nicht zusammen – ich bin fröhlich, du genervt."
+  - "Wir sind auf verschiedenen Planeten emotional."
+  - "Du reagierst ganz anders als ich erwartet habe."
+  - "Wir sind nicht im Gleichklang."
+  - "Unsere Kommunikation stockt ständig."
+  - "Du verstehst mich einfach nicht."
+  - "Wir sind emotional asynchron."
+  - "Mir fehlt die Verbindung zu dir."
+  - "Unsere Gespräche fühlen sich holprig an."
+  - "Wir sind nicht auf derselben Wellenlänge."
+  - "Du lachst, wenn ich weine. Wir sind total aus dem Takt."
+  - "Es gibt keine Resonanz zwischen uns."
+  - "Wir reden nebeneinander her, nicht miteinander."
+  - "Unsere Stimmungen kollidieren ständig."
+  - "Du reagierst in einem anderen Tempo als ich."
+  - "Die Abstimmung fehlt komplett."
+  - "Wir tanzen, aber zu verschiedener Musik."
+  - "Unsere Kommunikation ist wie zwei Monologe."
+  - "Du weißt nicht, was ich fühle, und ich nicht, was du fühlst."
+  - "Es gibt keine intuitive Verbindung zwischen uns."
+  - "Wir sind emotional entkoppelt."
+  - "Unsere Gespräche sind voller Missverständnisse."
+  - "Wir sind nicht in Resonanz."
+  - "Es fehlt die emotionale Abstimmung."
+semiotic:
+  peirce: icon
+  signifikat: Nähe/Intimität
+  framing_type: meta
+  cultural_frame: Beziehungsdynamik
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

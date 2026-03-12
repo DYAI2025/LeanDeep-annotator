@@ -48,3 +48,12 @@ effect_on_state:
   trust: -0.3
   conflict: 0.4
   deesc: -0.2
+semiotic: {peirce: symbol, signifikat: Doppelbindung, framing_type: 
+    kontrollnarrative, cultural_frame: Bateson, myth: 'Wer die Deutungshoheit hat,
+    hat die Macht — Kontrolle tarnt sich als Fuersorge'}
+semantic_affinity:
+  intents:
+  - feststellung
+  - vorwurf
+  intents_exclude:
+  - smalltalk

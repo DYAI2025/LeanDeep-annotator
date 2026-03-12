@@ -12,19 +12,82 @@ pattern:
   flags: ["IGNORECASE"]
 examples:
   positive:
-  - "Neues Thema: Urlaub."
-  - "Anderes Thema – Budget."
-  - "Lass uns über nächste Woche sprechen."
-  - "Was anderes: die Präsentation."
-  - "Kurzer Themenwechsel: Meeting-Termine."
-  - "Ich würde gern ein anderes Thema reinbringen."
+  - 'Neues Thema: Urlaub.'
+  - Anderes Thema, Budget.
+  - Lass uns ueber naechste Woche sprechen.
+  - 'Was anderes: die Praesentation.'
+  - 'Kurzer Themenwechsel: Meeting-Termine.'
+  - Ich wuerde gern ein anderes Thema reinbringen.
+  - 'Neues Thema: Weihnachtsfeier.'
+  - Lass uns ueber die Renovierung reden.
+  - 'Anderes Thema: Kindergarten-Anmeldung.'
+  - 'Was anderes: meine Mutter kommt zu Besuch.'
+  - 'Kurzer Themenwechsel: Steuererklarung.'
+  - 'Neues Thema: Haustier anschaffen?'
+  - Lass uns mal ueber Urlaub sprechen.
+  - 'Anderes Thema bitte: die Kuechensanierung.'
+  - Was anderes, ich muss dir was sagen.
+  - 'Neues Thema: wie geht es dir eigentlich?'
+  - Lass uns ueber unsere Plaene fuer naechstes Jahr reden.
+  - 'Anderes Thema: der Elternabend.'
+  - 'Kurzer Themenwechsel: Geburtstag planen.'
+  - 'Neues Thema: Fitnessstudio-Mitgliedschaft.'
+  - Lass uns ueber die Finanzen sprechen.
+  - 'Was anderes jetzt: die neue Wohnung.'
+  - 'Anderes Thema: Arzttermin morgen.'
+  - 'Neues Thema am Rande: Versicherung wechseln.'
+  - Lass uns mal was anderes besprechen.
+  - 'Themenwechsel: wie laueft es auf der Arbeit?'
+  - 'Was anderes: hast du an den Vertrag gedacht?'
+  - 'Neues Thema: die Hochzeit von Lisa.'
+  - Lass uns ueber was Schoenes reden.
+  - 'Anderes Thema: Auto-Inspektion.'
+  - 'Kurzer Themenwechsel: Internet-Anbieter wechseln.'
+  - 'Neues Thema: Sommerurlaub buchen.'
+  - 'Was anderes ganz kurz: Waschmaschine ist kaputt.'
+  - Lass uns ueber den Umzug sprechen.
+  - 'Anderes Thema: Schultuete basteln.'
+  - 'Neues Thema: Oma besuchen am Wochenende.'
+  - Lass uns ueber die Gartenarbeit reden.
+  - 'Was anderes: ich moechte einen Kurs belegen.'
+  - 'Kurzer Themenwechsel: Dachboden aufraeumen.'
+  - 'Neues Thema: gemeinsame Hobbys.'
+  - Lass uns ueber was Positives sprechen.
+  - 'Anderes Thema: die Party am Samstag.'
+  - 'Neues Thema bitte: Putzplan.'
+  - 'Was anderes: hast du den Brief abgeschickt?'
+  - Lass uns ueber die Ferien reden.
+  - 'Themenwechsel: die Nachbarn haben sich beschwert.'
+  - 'Neues Thema: Balkonpflanzen.'
+  - 'Anderes Thema: Renovierung im Bad.'
+  - Lass uns mal ueber Geld sprechen.
+  - 'Was anderes, ganz wichtig: Zahnarzt-Termin.'
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Ja, da stimme ich dir zu.
+  - Das sehe ich genauso.
+  - Du hast Recht, bleiben wir dabei.
+  - Gut, weiter im Thema.
+  - Okay, zurueck zu dem, was wir besprochen haben.
+  - Genau, und dazu wollte ich noch sagen...
+  - Das passt gut, erzaehl weiter.
+  - Darauf aufbauend moechte ich erwaehnen...
+  - In dem Zusammenhang finde ich...
+  - Genau, da haben wir einen Punkt.
+  - Das Thema ist mir auch wichtig.
+  - Erzaehl weiter, das interessiert mich.
+  - Dazu habe ich auch eine Meinung.
+  - Das gehoert definitiv zum Thema.
+  - Bleiben wir da dran.
+  - Guter Punkt, lass uns das vertiefen.
+  - Das fuehrt uns naemlich zum Kern.
+  - Ich moechte das aufgreifen, was du sagst.
+  - In Bezug darauf habe ich eine Frage.
+  - Genau, lass uns das weiterdenken.
+  - Das ist wichtig, rede weiter.
+  - Darauf moechte ich eingehen.
+  - Wir sollten dabeibleiben.
+  - Das passt nahtlos dazu.
+  - Genau das meinte ich auch.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

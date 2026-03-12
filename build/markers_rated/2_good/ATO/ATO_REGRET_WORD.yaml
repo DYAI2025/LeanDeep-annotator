@@ -15,6 +15,51 @@ examples:
   - "fühle mich schuldig … schwer auszuhalten"
   - "allein damit … traurig"
   - "hätte früher reden sollen … bereue es"
+  - Ich hätte das anders machen sollen.
+  - Es wäre besser gewesen, zu bleiben.
+  - Früher war alles einfacher.
+  - Ich vermisse die alten Zeiten.
+  - Ich bedauere meine Entscheidung.
+  - Hätte ich doch bloß zugehört.
+  - Es wäre schöner gewesen, wenn wir zusammen geblieben wären.
+  - Früher habe ich mich besser gefühlt.
+  - Ich vermisse unsere gemeinsamen Abende.
+  - Das bedauere ich zutiefst.
+  - Hätte ich mal lieber nichts gesagt.
+  - Es wäre klüger gewesen, zu warten.
+  - Früher war das kein Problem.
+  - Ich vermisse meinen alten Job.
+  - Ich bedauere, dass ich nicht ehrlicher war.
+  - Hätte ich das nur früher gewusst.
+  - Es wäre nicht nötig gewesen.
+  - Früher konnte ich besser schlafen.
+  - Ich vermisse meine Heimat.
+  - Das bedauere ich sehr.
+  - Hätte ich mich nur mehr angestrengt.
+  - Es wäre so schön gewesen.
+  - Früher war ich fröhlicher.
+  - Ich vermisse die Gespräche mit ihr.
+  - Bedauere es, das gesagt zu haben.
+  - Ich hätte nie damit anfangen sollen.
+  - Wäre ich bloß geblieben.
+  - Früher habe ich das besser gekonnt.
+  - Ich vermisse den Zusammenhalt.
+  - Das bedauere ich bis heute.
+  - Hätte ich die Chance nur genutzt.
+  - Es wäre nicht so weit gekommen.
+  - Früher waren wir ein gutes Team.
+  - Ich vermisse dich jeden Tag.
+  - Ich bedauere meinen Fehler.
+  - Hätte ich nur mehr Geduld gehabt.
+  - Wäre das Leben nur einfacher.
+  - Früher habe ich vieles als selbstverständlich genommen.
+  - Ich vermisse die Leichtigkeit.
+  - Das bedauere ich im Nachhinein.
+  - Hätte ich das Angebot nur angenommen.
+  - Es wäre anders gelaufen, wenn ich mutiger gewesen wäre.
+  - Früher hatte ich mehr Energie.
+  - Ich vermisse unser altes Haus.
+  - Bedauere, dass ich nicht da war.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -23,5 +68,24 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich bin zufrieden mit meiner Entscheidung.
+  - Das war genau richtig so.
+  - Ich würde es wieder so machen.
+  - Daraus habe ich gelernt.
+  - Alles hat seinen Grund.
+  - Ich blicke nach vorne.
+  - Was passiert ist, ist passiert.
+  - Ich stehe zu meiner Wahl.
+  - Das war eine gute Erfahrung.
+  - Ich bin froh, dass ich das gemacht habe.
+  - Rückblickend war das die richtige Entscheidung.
+  - Ich bereue nichts.
+  - Das hat mich stärker gemacht.
+  - Ich bin dankbar für die Erfahrung.
+  - Das würde ich genauso wieder tun.
+  - Es ist gut, wie es gekommen ist.
+  - Daraus habe ich viel mitgenommen.
+  - Ich akzeptiere das so.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Reue/Bedauern, framing_type: schuld, cultural_frame: '', myth: 'Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung'}

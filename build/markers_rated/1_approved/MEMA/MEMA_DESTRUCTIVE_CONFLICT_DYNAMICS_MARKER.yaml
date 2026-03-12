@@ -37,6 +37,31 @@ examples:
   - "Die Interaktionen sind durch eine subtile, aber konstante Abwertung und das Ignorieren von Bedürfnissen gekennzeichnet, was sich über alle Lebensbereiche erstreckt."
   - "Es besteht ein tief verwurzeltes Muster von ungelösten Konflikten, die immer wieder aufbrechen und die Beziehung chronisch belasten."
   - "Die Kommunikation ist seit langem von einer Mischung aus Sarkasmus, Zynismus und emotionaler Distanz geprägt, die eine echte Verbindung unmöglich macht."
+  - 'Beziehung geprägt von: Kontrolle → Schweigen → Explosion → Versöhnung → Kontrolle – über Monate.'
+  - Wechsel zwischen emotionaler Erpressung und Stonewalling in jeder einzelnen Auseinandersetzung.
+  - 'Team-Dynamik: Öffentliche Bloßstellung durch Vorgesetzten, gefolgt von Rückzug aller Teammitglieder.'
+  - 'Paardynamik: Er kritisiert, sie verteidigt sich, er steigert Verachtung, sie macht dicht – jede Woche.'
+  - 'Familiensystem: Dominante Mutter manipuliert durch Schuldgefühle, Vater zieht sich zurück, Kinder erstarren.'
+  - 'Arbeitskonflikt: Passive Aggression in E-Mails, gefolgt von offener Feindseligkeit in Meetings.'
+  - 'Über Wochen: Subtile Abwertung durch Sarkasmus, dann offene Verachtung, dann komplette Mauer.'
+  - 'Kontrollmuster im Chat: Erst Vorwürfe, dann Forderungen, dann Drohungen, dann Ghosting als Strafe.'
+  - 'Langfristiger Machtkampf: Jede Entscheidung wird zum Schlachtfeld, keine Seite gibt nach.'
+  - 'Freundschaft: Immer wieder derselbe Zyklus aus Bevormundung und passivem Widerstand.'
+  - 'Im Coaching: Klient beschreibt jahrelange Dynamik aus Kontrolle und Unterwerfung in der Partnerschaft.'
+  - 'Geschwisterdynamik: Ständige Rivalität mit Abwertung, Manipulation und Bündnisbildung gegen den Dritten.'
+  - 'Paar: Jeder Versuch eines Gespräches endet in Anklage und Gegenanklage, seit Monaten.'
+  - 'Team: Systematische Ausgrenzung eines Mitglieds durch Ignorieren, dann Feindseligkeit, dann Mobbing.'
+  - 'Eltern-Kind: Kontrollierende Erziehung, rebellierendes Kind, Bestrafung, Rebellion – Endlosschleife.'
+  - 'Chat-Verlauf zeigt: Über Wochen aufbauende Manipulation durch Love-Bombing und Abwertung.'
+  - 'Partnerschaft: Von subtilen Spitzen zu offenen Angriffen zu emotionalem Rückzug – Muster über Monate.'
+  - 'Arbeitsteam: Schuldzuweisungskette – A beschuldigt B, B beschuldigt C, C beschuldigt A.'
+  - 'In der Paartherapie: Destruktive Muster zeigen sich in jeder Sitzung identisch.'
+  - 'Systemische Analyse: Dreiecksbeziehung mit wechselnden Rollen – Opfer, Täter, Retter.'
+  - 'Supervision zeigt: Therapeut-Patient-Dynamik repliziert die destruktiven Beziehungsmuster des Patienten.'
+  - 'Chat-Analyse: Gleichzeitig Love-Bombing und Kontrolle, dann plötzliche Kälte und Schuldzuweisung.'
+  - 'Über Jahre: Chronische Entwertung bei gleichzeitiger emotionaler Abhängigkeit.'
+  - 'Team-Dynamik: Führungskraft nutzt Informationsvorsprung systematisch zur Kontrolle und Bestrafung.'
+  - 'Paar: Jede Versöhnung ist nur Vorspiel für die nächste Eskalation.'
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -45,3 +70,22 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Wir streiten manchmal heftig, aber finden immer einen Kompromiss.
+  - Es gibt Spannungen, aber wir arbeiten daran, besser zu kommunizieren.
+  - Der Konflikt war einmalig und wir haben danach eine Lösung gefunden.
+  - Wir hatten einen harten Streit, aber es gibt keine Machtdynamik.
+  - Die Diskussion war emotional, aber respektvoll und lösungsorientiert.
+  - Es gibt Meinungsverschiedenheiten, aber keine destruktiven Muster.
+  - Wir haben unterschiedliche Sichtweisen, gehen aber wertschätzend damit um.
+  - Der Konflikt hat uns gezeigt, wo wir uns verbessern können.
+  - Es gab einen heftigen Wortwechsel, aber keine wiederkehrende Dynamik.
+  - Wir streiten ab und zu, aber keiner manipuliert den anderen.
+  - Die Auseinandersetzung war fair und hat zu einem guten Ergebnis geführt.
+  - Es gab Kritik, aber konstruktiv und ohne persönliche Angriffe.
+  - Wir haben einen Mediator hinzugezogen und die Dynamik verbessert.
+  - Der Streit war laut, aber kurz, und danach war die Sache geklärt.
+  - Es gibt gelegentlich Spannungen, aber sie werden zeitnah aufgelöst.
+  - Einmaliger Konflikt, der konstruktiv gelöst wurde.
+  - Wir haben unterschiedliche Führungsstile, aber keine Machtspiele.
+  - Das Team hat Konflikte, aber eine gesunde Streitkultur.
+semiotic: {peirce: index, signifikat: Konfliktdynamik, framing_type: eskalation, cultural_frame: Gottman, myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'}

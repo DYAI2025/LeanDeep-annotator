@@ -42,6 +42,12 @@ composed_of:
 - ATO_MISC
 window:
   messages: 3
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0
@@ -51,3 +57,5 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+activation:
+  rule: "ANY 1"

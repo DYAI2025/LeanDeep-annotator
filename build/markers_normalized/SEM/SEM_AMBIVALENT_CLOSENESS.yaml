@@ -36,6 +36,12 @@ composed_of:
 - ATO_AMBIVALENZ
 activation:
   rule: "AT_LEAST 2 AMBIVALENZ IN 3 messages"
+semiotic:
+  peirce: symbol
+  signifikat: Naehe/Intimitaet
+  framing_type: bindung
+  cultural_frame: Bowlby
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 compositionality: deterministic
 vad_estimate:
   valence: -0.2

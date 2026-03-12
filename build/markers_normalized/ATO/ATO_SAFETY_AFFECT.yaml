@@ -31,6 +31,46 @@ examples:
   - ich spüre, wie das Feld uns trägt
   - es fühlt sich sicherer an als gestern
   - ich lasse mich von deiner Stimme tragen
+  - Ich fühle mich gerade sicher bei dir.
+  - Es wird ruhiger in mir.
+  - Ich fühle mich gehalten.
+  - Ich fühle mich getragen.
+  - Bei dir fühlt sich alles sicher an.
+  - Es wird so ruhiger, wenn du da bist.
+  - Gehalten sein, das ist das Gefühl.
+  - Ich fühle mich getragen von der Gemeinschaft.
+  - Hier fühlt sich alles sicher und geborgen an.
+  - Es wird ruhiger um mich herum.
+  - Gehalten werden ist, was ich brauche.
+  - Getragen von deiner Liebe.
+  - Sicher fühle ich mich in deinen Armen.
+  - Es wird ruhiger, die Angst lässt nach.
+  - Ich fühle mich von dir gehalten und beschützt.
+  - Getragen durch die schwere Zeit.
+  - Bei euch fühle ich mich sicher.
+  - Es wird ruhiger in meinem Kopf.
+  - Gehalten sein, das brauche ich jetzt.
+  - Ich fühle mich getragen und aufgehoben.
+  - Endlich fühlt sich etwas sicher an.
+  - Es wird ruhiger, ich entspanne mich.
+  - Hier bin ich gehalten.
+  - Getragen von Freundschaft und Vertrauen.
+  - In diesem Raum fühle ich mich sicher.
+  - Es wird so ruhiger, wenn ich meditiere.
+  - Gehalten in schwierigen Momenten.
+  - Getragen von der Hoffnung.
+  - Sicher und geborgen fühle ich mich.
+  - Es wird ruhiger, die Nacht ist friedlich.
+  - Ich fühle mich gehalten vom Team.
+  - Getragen durch die Musik.
+  - Hier ist ein sicherer Ort.
+  - Es wird ruhiger in meiner Seele.
+  - Gehalten in deiner Nähe.
+  - Ich fühle mich getragen und verstanden.
+  - Dieses Gefühl von Sicherheit ist unbezahlbar.
+  - Es wird ruhiger, ich atme tief.
+  - Gehalten von Menschen, die mich lieben.
+  - Getragen durch die Gemeinschaft.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -39,10 +79,34 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich fühle mich unsicher und ängstlich.
+  - Es wird immer lauter in meinem Kopf.
+  - Ich fühle mich fallen gelassen.
+  - Niemand fängt mich auf.
+  - Ich bin total angespannt.
+  - Die Unruhe lässt nicht nach.
+  - Ich fühle mich verloren.
+  - Alles fühlt sich bedrohlich an.
+  - Ich bin voller Angst.
+  - Die Nervosität macht mich fertig.
+  - Ich fühle mich ausgeliefert.
+  - Es wird immer schlimmer.
+  - Ich habe keine Kontrolle mehr.
+  - Alles ist chaotisch.
+  - Ich bin auf mich allein gestellt.
+  - Die Anspannung steigt.
+  - Ich fühle mich bedroht.
+  - Nichts ist sicher gerade.
 tags:
 - sicherheit
 - ruhe
 rating: 1
+semiotic:
+  peirce: symbol
+  signifikat: Sicherheitssignal
+  framing_type: bindung
+  cultural_frame: Bowlby
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

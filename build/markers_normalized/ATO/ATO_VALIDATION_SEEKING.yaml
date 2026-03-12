@@ -15,24 +15,92 @@ patterns:
   value: "(?i)\\b(am I right|don't you think|agree with me|validate)\\b"
 examples:
   positive:
-  - Am I right about this?
-  - Don't you think I have a point?
-  - Do you agree with me here?
-  - Can you validate my feelings?
-  - Tell me I'm not crazy.
+  - Habe ich Recht damit?
+  - Findest du nicht auch?
+  - Stimmst du mir zu?
+  - Kannst du meine Gefuehle bestaetigen?
+  - Sag mir, dass ich nicht verrueckt bin.
+  - Siehst du das auch so?
+  - Bin ich im Recht?
+  - Findest du das auch unfair?
+  - Sag mir, dass ich nicht uebertreibe.
+  - Denkst du auch, dass das falsch war?
+  - Kannst du mir bestaetigen, dass das okay war?
+  - Bin ich verrueckt, oder ist das wirklich so?
+  - Findest du nicht, dass ich einen Punkt habe?
+  - Sag mir, dass meine Reaktion normal ist.
+  - Siehst du das genauso wie ich?
+  - Habe ich Unrecht?
+  - Findest du meine Sorgen berechtigt?
+  - Kannst du mich validieren?
+  - Bin ich die Einzige, die das so sieht?
+  - Stimmst du mir zu, dass das nicht okay ist?
+  - Sag mir, dass ich nicht spinne.
+  - Findest du auch, dass das zu viel war?
+  - Habe ich nicht Recht?
+  - Denkst du, meine Reaktion war angemessen?
+  - Kannst du verstehen, warum ich so fuehle?
+  - Bin ich zu empfindlich, oder ist das berechtigt?
+  - Findest du nicht auch, dass sich das aendert muss?
+  - Sag mir ehrlich, habe ich Recht?
+  - Siehst du den Punkt, den ich mache?
+  - Denkst du, ich uebertreibe?
+  - Findest du meine Perspektive nachvollziehbar?
+  - Kannst du bestaetigen, dass das nicht normal ist?
+  - Bin ich die Einzige, die sich darueber aufregt?
+  - Sag mir, ob ich falsch liege.
+  - Findest du das auch komisch?
+  - Habe ich richtig reagiert?
+  - Denkst du auch, dass das respektlos war?
+  - Kannst du nachvollziehen, warum ich sauer bin?
+  - Bin ich ueberempfindlich, oder habe ich Recht?
+  - Findest du nicht, dass das auffaellig ist?
+  - Sag mir, dass meine Bedenken berechtigt sind.
+  - Siehst du das Problem auch?
+  - Denkst du, ich habe einen Punkt?
+  - Findest du meine Sichtweise vertretbar?
+  - Kannst du mir sagen, ob das okay ist?
+  - Bin ich zu kritisch, oder ist das berechtigt?
+  - Stimmst du mir zu, dass wir handeln muessen?
+  - Sag mir, dass ich nicht alleine damit bin.
+  - Habe ich dein Verstaendnis?
   negative:
-  - Can you pass the salt?
-  - The meeting is at 2 PM.
-  - I went shopping yesterday.
-  - The weather should be better tomorrow.
-  - Did you read the email?
-  - I need to get gas.
-  - The meeting is in the conference room.
+  - Ich bin mir sicher, unabhaengig davon, was andere denken.
+  - Meine Meinung steht fest.
+  - Ich brauche keine Bestaetigung.
+  - Ich weiss, was ich fuehle.
+  - Das ist meine Ueberzeugung.
+  - Ich stehe dazu, egal was andere sagen.
+  - Mein Standpunkt ist klar.
+  - Ich brauche niemandes Zustimmung.
+  - Das habe ich fuer mich entschieden.
+  - Meine Sichtweise aendert sich nicht.
+  - Ich bin von meiner Position ueberzeugt.
+  - Ich brauche keine externe Validierung.
+  - Das steht fuer mich fest.
+  - Ich vertraue meinem Urteil.
+  - Meine Entscheidung braucht keine Bestaetigung.
+  - Ich weiss, dass ich richtig liege.
+  - Unabhaengig von Meinungen anderer.
+  - Das habe ich mit mir selbst ausgemacht.
+  - Ich brauche kein Okay von aussen.
+  - Mein Gefuehl reicht mir.
+  - Ich stehe eigenstaendig zu meiner Sicht.
+  - Das habe ich selbst bewertet.
+  - Ich bin selbstsicher in dieser Sache.
+  - Meine Haltung ist unabhaengig.
+  - Ich vertraue mir selbst darin.
 tags:
 - atomic
 - v3.3
 - auto-generated
 rating: 1
+semiotic:
+  peirce: index
+  signifikat: Validierung/Anerkennung
+  framing_type: empathie
+  cultural_frame: Rogers
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 vad_estimate:
   valence: 0.0
   arousal: 0.3

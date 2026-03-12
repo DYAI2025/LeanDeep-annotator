@@ -19,14 +19,76 @@ examples:
   - erobernde Energie
   - ungezügelte Kraftdemonstration
   - DANTE_KLANGkörpergrößen
+  - ICH bestimme hier was läuft, nicht du!
+  - Wer mir in die Quere kommt, bekommt Probleme.
+  - Ich nehm mir was ich will, frag nicht um Erlaubnis.
+  - Du machst das jetzt so wie ICH das sage.
+  - Schwäche zeigen? Niemals. Das nutzen die aus.
+  - Entweder du bist für mich oder gegen mich.
+  - Ich lass mich von niemandem kontrollieren!
+  - Respekt? Den muss man sich verdienen, ich fordere ihn ein.
+  - Ich hab hier das Sagen und fertig.
+  - Mein Revier, meine Regeln.
+  - Die sollen es nur wagen, mich herauszufordern.
+  - Wenn die nicht spuren, zeig ich denen wer der Chef ist.
+  - Kompromisse sind was für Schwache.
+  - Ich kämpfe für das was mir gehört, mit allen Mitteln.
+  - Machst du was ich sage oder muss ich deutlicher werden?
+  - Die Welt gehört den Starken, nicht den Netten.
+  - Ich bieg mir die Situation so hin wie ich sie brauche.
+  - Wer nicht kämpft hat schon verloren.
+  - Ich bin der Alpha hier, check das endlich.
+  - Keiner sagt mir was ich tun soll.
+  - Loyalität oder raus, es gibt nichts dazwischen.
+  - Ich hab das durchgesetzt, gegen alle Widerstände.
+  - Widerspruch dulde ich nicht.
+  - Du willst Ärger? Kann ich haben.
+  - Ich bin nicht hier um beliebt zu sein, ich bin hier um zu herrschen.
+  - Stärke ist die einzige Sprache die zählt.
+  - Ich hab die Kontrolle und die geb ich nicht ab.
+  - Wenn du nicht stark bist, wirst du gefressen.
+  - Das ist MEIN Terrain, kapiert?
+  - Ich setze mich durch, koste es was es wolle.
+  - Hast du ein Problem mit mir? Dann sag's mir ins Gesicht!
+  - Ich bin nicht nett, ich bin ehrlich. Und das tut weh.
+  - Angst? Kenn ich nicht. Ich MACHE Angst.
+  - Die halten alle die Fresse wenn ich den Raum betrete.
+  - Entweder ich gewinne oder keiner.
+  - Ich brech die Regeln wenn sie mir nicht passen.
+  - Hier wird nicht diskutiert, hier wird gemacht.
+  - Krieg ist besser als faule Kompromisse.
+  - Meine Macht, mein Wille, mein Weg.
+  - Ich hab noch nie jemanden gebraucht und das bleibt so.
+  - Du bist entweder Teil der Lösung oder Teil des Problems.
+  - Wer weich wird, geht unter.
+  - Dominanz ist kein Makel, es ist Überlebensinstinkt.
+  - Ich zerstör lieber alles als mich zu unterwerfen.
   negative:
-  - I think we should discuss this calmly.
-  - That's a good point you're making.
-  - I understand your perspective.
-  - Let's find a solution together.
-  - I've noticed we think differently about this.
-  - I want to understand what you mean.
-  - That sounds like an important topic for you.
+  - Lass uns gemeinsam eine Lösung finden die allen passt.
+  - Ich möchte deine Perspektive verstehen.
+  - Kompromisse sind wichtig für gute Beziehungen.
+  - Ich bin bereit nachzugeben, weil mir unsere Freundschaft wichtig ist.
+  - Gewalt löst keine Probleme.
+  - Lass uns in Ruhe darüber reden.
+  - Ich respektiere deine Meinung, auch wenn ich anders denke.
+  - Zusammenarbeit bringt mehr als Konfrontation.
+  - Ich bin heute einfach froh dass es dir gut geht.
+  - Wollen wir zusammen spazieren gehen?
+  - Die Sonne scheint, lass uns rausgehen.
+  - Ich hab Brötchen geholt heute Morgen.
+  - Mein Yoga-Kurs war heute richtig entspannend.
+  - Hast du Lust auf einen Film heute Abend?
+  - Der Garten braucht Wasser.
+  - Ich freu mich auf den Urlaub.
+  - Sollen wir zusammen kochen?
+  - Die Kinder schlafen schon.
+  - Ich hab dir ein Buch mitgebracht.
+  - Danke für den schönen Tag.
+  - Mir ist Harmonie wichtiger als Recht haben.
+  - Ich höre dir zu, erzähl weiter.
+  - Wir schaffen das zusammen.
+  - Ich vertraue dir.
+  - Dein Wohlbefinden ist mir wichtig.
 tags: []
 rating: 1
 composed_of:
@@ -39,3 +101,9 @@ activation:
 scoring:
   weight: 1.2
   decay: 0.9
+semiotic:
+  peirce: symbol
+  signifikat: Beziehungsspirale
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

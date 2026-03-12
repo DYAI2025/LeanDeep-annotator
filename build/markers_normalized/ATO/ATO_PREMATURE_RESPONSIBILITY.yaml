@@ -44,6 +44,12 @@ tags:
 - familie
 - trauma
 rating: 1
+semiotic:
+  peirce: index
+  signifikat: Verantwortungsuebernahme
+  framing_type: reparatur
+  cultural_frame: ''
+  myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

@@ -23,6 +23,46 @@ examples:
   - Zwischenraum + verkörperte Erinnerung + spürbar wahr
   - liminaler Raum + Fleisch und Erinnerung + geheiligt
   - Dazwischen halten + verkörperte Erinnerung + fühlt sich wahr an
+  - In diesem Moment spüre ich eine tiefe Verbundenheit die über Worte hinausgeht
+  - Der Raum zwischen uns fühlt sich gerade heilig an, fast greifbar
+  - Ich kann die Stille spüren die uns umgibt, sie trägt etwas Besonderes
+  - Es ist als ob unsere Körper sich erinnern bevor der Verstand es versteht
+  - Dieser Ort hat eine eigene Energie, ich fühle mich gehalten davon
+  - Etwas in mir weiß dass das hier wahr ist, tiefer als jedes Argument
+  - Die Grenze zwischen dir und mir verschwimmt gerade, und das fühlt sich gut an
+  - Ich spüre wie der Raum uns hält, wie ein unsichtbares Netz
+  - Da ist eine Präsenz im Raum die größer ist als wir beide zusammen
+  - Mein Körper erinnert sich an dieses Gefühl, es ist verkörperte Wahrheit
+  - Zwischen den Worten liegt etwas Unaussprechliches, etwas Geheiligtes
+  - Ich fühle mich in diesem Feld aufgehoben, es ist fast sakral
+  - Die Stille zwischen uns ist nicht leer, sie ist voll von Bedeutung
+  - Es gibt Momente da spürt man die Verbindung körperlich, das ist so einer
+  - Dieser Zwischenraum hat eine eigene Qualität, eine eigene Weisheit
+  - Ich erfahre gerade eine Art Resonanz die jenseits des Verstandes liegt
+  - Das Feld das wir hier aufbauen ist spürbar, es hat fast eine eigene Substanz
+  - In der Begegnung entsteht etwas Drittes, das keiner von uns allein erzeugen könnte
+  - Ich fühle mich von einer Kraft getragen die größer ist als ich
+  - Die Erinnerung sitzt in meinem Körper, nicht in meinem Kopf
+  - Zwischen uns entsteht ein Raum der heilsam ist, ich spüre das deutlich
+  - Diese Verbundenheit hat eine fast physische Qualität, sie ist real
+  - Es ist als ob die Atmosphäre selbst mich hält und reguliert
+  - Ich erlebe eine tiefe Stille die heilt, das ist ein liminaler Moment
+  - Dein Dasein allein erzeugt ein Feld in dem ich mich sicher fühle
+  - Was hier passiert lässt sich nicht in Worte fassen, man muss es spüren
+  - Der Raum atmet mit uns, ich fühle das in meinem ganzen Körper
+  - Es gibt eine Art Gewebtheit zwischen uns die über das Sichtbare hinausgeht
+  - Diese Erfahrung ist tief in meinem Körper verankert, sie ist authentisch
+  - Ich spüre eine Art Schwelle, einen Übergang in etwas Tieferes
+  - Die Qualität dieses Moments ist besonders, fast rituell
+  - Zwischen den Zeilen liegt eine Wahrheit die der Körper kennt
+  - In diesem Dazwischen liegt die eigentliche Begegnung
+  - Es fühlt sich an als wären wir in einem geschützten Raum, einem Kokon
+  - Die verkörperte Erinnerung an diese Nähe bleibt, auch wenn die Worte vergehen
+  - Ich erlebe gerade etwas Tiefes und Echtes, jenseits aller Konzepte
+  - Das hier ist ein heiliger Raum, den wir gemeinsam schaffen
+  - Die Präsenz die ich spüre ist fast übernatürlich, so intensiv
+  - Etwas in diesem Feld reguliert mich, ohne dass ich es erklären kann
+  - Der liminale Raum öffnet sich und ich lasse mich fallen
   negative:
   - Kannst du mir das Salz reichen?
   - Der Termin ist um 14 Uhr.
@@ -31,6 +71,24 @@ examples:
   - Hast du die E-Mail gelesen?
   - Ich muss noch tanken.
   - Die Besprechung ist im Konferenzraum.
+  - Lass mal zum Punkt kommen, wir haben nicht den ganzen Tag
+  - Ich hab Hunger, wollen wir bestellen?
+  - Die Zahlen stimmen nicht, bitte nochmal prüfen
+  - Ich fühle gar nichts gerade, nur Leere
+  - Das ist mir zu abstrakt, ich brauch konkrete Fakten
+  - Können wir das bitte sachlich besprechen?
+  - Ich hab keine Zeit für sowas, muss weiter
+  - Der Vertrag muss bis morgen unterschrieben sein
+  - Gefühle hin oder her, die Deadline steht
+  - Spiritualität ist nicht mein Ding, sorry
+  - Was soll das ganze Gerede, mach einfach
+  - Mir ist kalt, mach bitte die Heizung an
+  - Der Bericht hat drei Fehler, bitte korrigieren
+  - Ich bin müde und will einfach nur schlafen
+  - Können wir das morgen besprechen? Heute nicht mehr
+  - Ich verstehe nicht was du meinst, red Klartext
+  - Die Ampel ist rot, warte kurz
+  - Hör auf zu philosophieren, wir brauchen Ergebnisse
 tags:
 - support
 - feld
@@ -44,3 +102,9 @@ activation:
 scoring:
   base: 0.85
   weight: 1.0
+semiotic:
+  peirce: index
+  signifikat: Unterstuetzung/Beistand
+  framing_type: bindung
+  cultural_frame: ''
+  myth: 'Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat'

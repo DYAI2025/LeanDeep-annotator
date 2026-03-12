@@ -67,6 +67,12 @@ activation:
 scoring:
   base: 1.5
   weight: 1.2
+semiotic:
+  peirce: icon
+  signifikat: Fragehaltung/Suchbewegung
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0
@@ -76,3 +82,10 @@ effect_on_state:
   trust: -0.1
   conflict: 0.1
   deesc: -0.05
+semantic_affinity:
+  intents:
+  - frage
+  - rechtfertigung
+  intents_exclude:
+  - drohung
+  - feststellung

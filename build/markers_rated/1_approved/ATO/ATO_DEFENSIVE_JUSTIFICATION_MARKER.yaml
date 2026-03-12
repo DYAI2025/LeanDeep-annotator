@@ -11,10 +11,11 @@ frame:
   pragmatics: "Vermeidung von Schuldzuweisung"
   narrative: "Selbstverteidigung im Gespräch"
 pattern:
-- "Ich wollte( doch)? nur helfen\\."
-- "Ich hab(?:e)? es doch nur gut gemeint(?: mit dir)?\\."
-- "Das war wirklich nicht meine Absicht,.*"
-- "Ich dachte, ich helfe damit.*"
+- (?i)ich\s+(?:hab(?:e)?|wollte)\s+(?:es\s+|das\s+)?(?:doch\s+)?nur\s+(?:gut gemeint|helfen|das Beste gewollt)
+- (?i)(?:das\s+)?war\s+(?:wirklich\s+|doch\s+)?nicht\s+(?:meine|so)\s+Absicht
+- (?i)ich\s+(?:meinte|meine)\s+(?:es\s+)?(?:doch\s+)?nur\s+gut
+- (?i)ich\s+(?:konnte|wusste)\s+(?:doch\s+)?nicht\s+(?:ahnen|wissen)
+- (?i)\b(keine böse Absicht|nicht absichtlich|nicht so gemeint|hab(?:e)? es doch nur gut gemeint|wollte nur helfen)\b
 activation_logic: "ANY 1"
 examples:
   positive:

@@ -27,18 +27,82 @@ examples:
   - Ich bin unerreicht in Qualität.
   - Ich bin besser als alle Vergleichsprojekte.
   - Ich bin unschlagbar in Geschwindigkeit.
+  - Ich bin der Beste, das sagen alle.
+  - Unerreicht in Erfahrung und Kompetenz.
+  - Besser als alle anderen Bewerber.
+  - Unschlagbar in Kreativität.
+  - Ich bin die Beste Managerin hier.
+  - Ich bin das Beste, was dem Projekt passieren konnte.
+  - Ich bin der Beste Programmierer im Unternehmen.
+  - Unerreicht in Effizienz.
+  - Besser als alle, die es vor mir versucht haben.
+  - Unschlagbar in Ausdauer.
+  - Ich bin die Beste in meiner Disziplin.
+  - Ich bin unerreicht in Zuverlässigkeit.
+  - Besser als alle Mitbewerber.
+  - Ich bin unschlagbar im Verkauf.
+  - Ich bin der Beste Coach, den du finden kannst.
+  - Unerreicht in Innovation.
+  - Besser als alle Erwartungen.
+  - Unschlagbar in Genauigkeit.
+  - Ich bin die Beste Beraterin weit und breit.
+  - Ich bin unerreicht in Kundenzufriedenheit.
+  - Besser als alle vorherigen Versionen.
+  - Unschlagbar, was Timing angeht.
+  - Ich bin der Beste Stratege.
+  - Unerreicht in Problemlösung.
+  - Besser als alle anderen Teams.
+  - Unschlagbar in Verhandlungen.
+  - Ich bin die Beste Wahl, ganz klar.
+  - Unerreicht in meinem Fachgebiet.
+  - Besser als alle Alternativen.
+  - Unschlagbar, wenn es drauf ankommt.
+  - Ich bin der Beste Leader.
+  - Unerreicht in Skalierbarkeit.
+  - Besser als alle Standards.
+  - Unschlagbar in Qualitätssicherung.
+  - Ich bin die Beste Präsentatorin.
+  - Unerreicht in Resultaten.
+  - Besser als alle Branchenbenchmarks.
+  - Unschlagbar in Disziplin.
+  - Ich bin der Beste, das ist Fakt.
+  - Unerreicht und unübertroffen.
   negative:
-  - Ich bin besser als einige anderen hier.
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
+  - Ich bin ganz gut in meinem Bereich.
+  - Ich habe Stärken und Schwächen.
+  - Ich bin kompetent, aber nicht perfekt.
+  - Ich mache meine Arbeit solide.
+  - Ich bin einer von vielen guten Leuten hier.
+  - Ich habe noch viel zu lernen.
+  - Ich bin okay, nicht überragend.
+  - Manche können das besser als ich.
+  - Ich bin zufrieden mit meiner Leistung.
+  - Ich bin in Ordnung, denke ich.
+  - Ich habe Raum zur Verbesserung.
+  - Ich bin nicht schlecht, aber auch nicht die Nummer eins.
+  - Ich mache meinen Job, ganz normal.
+  - Es gibt Leute, die das besser können.
+  - Ich bin durchschnittlich, ehrlich gesagt.
+  - Ich gebe mein Bestes, mehr nicht.
+  - Ich bin auf Augenhöhe mit anderen.
+  - Ich habe meine Grenzen.
+  - Ich bin gut genug, denke ich.
+  - Ich bin ein Teamplayer, kein Solo-Star.
+  - Ich bin bescheiden und lernbereit.
+  - Ich habe meine Stärken, aber auch Lücken.
+  - Ich bin ein normaler Mensch.
+  - Ich versuche mein Bestes.
+  - Ich bin zufrieden, wenn es gut läuft.
 tags:
 - superlative
 - ego
 rating: 1
+semiotic:
+  peirce: symbol
+  signifikat: Absolutheit/Schwarz-Weiss
+  framing_type: polarisierung
+  cultural_frame: ''
+  myth: Es gibt nur Schwarz und Weiss — Differenzierung ist Schwaeche
 vad_estimate:
   valence: 0.0
   arousal: 0.3

@@ -19,23 +19,82 @@ constraints:
   role: "modifier"
 examples:
   positive:
-  - "dieser Satz fühlt sich wahr an, auch ohne Zahlen"
-  - "es bleibt für mich spürbar wahr, obwohl wir es nicht messen"
-  - "das fühlt sich echt an, obwohl es kein Proof ist"
-  - "ich folge dem, weil es sich wahr anfühlt"
-  - "wahr ohne Definition reicht mir in diesem Rahmen"
-  - "das Narrativ fühlt sich wahr an, noch bevor wir es erklären"
-  - "für mich ist das spürbar wahr, jenseits der Daten"
-  - "es fühlt sich echt an, wir müssen es nicht beweisen"
-  - "diese Erinnerung bleibt spürbar wahr, auch ohne Zeugen"
-  - "ich lasse es stehen, weil es sich wahr anfühlt"
+  - Dieser Satz fuehlt sich wahr an, auch ohne Zahlen.
+  - Es bleibt fuer mich spuerbar wahr, obwohl wir es nicht messen.
+  - Das fuehlt sich echt an, obwohl es kein Proof ist.
+  - Ich folge dem, weil es sich wahr anfuehlt.
+  - Wahr ohne Definition reicht mir in diesem Rahmen.
+  - Das Narrativ fuehlt sich wahr an, noch bevor wir es erklaeren.
+  - Fuer mich ist das spuerbar wahr, jenseits der Daten.
+  - Es fuehlt sich echt an, wir muessen es nicht beweisen.
+  - Diese Erinnerung bleibt spuerbar wahr, auch ohne Zeugen.
+  - Das fuehlt sich wahr an, tief in mir.
+  - Es ist spuerbar wahr, auch wenn andere zweifeln.
+  - Fuer mich fuehlt sich das echt an, ohne Frage.
+  - Das ist wahr ohne Definition, ich spuere es.
+  - Es fuehlt sich an wie eine tiefe Wahrheit.
+  - Das ist spuerbar wahr fuer mich.
+  - Diese Erkenntnis fuehlt sich wahr an.
+  - Es ist echt, ich fuehle es.
+  - Das bleibt spuerbar wahr, auch im Rueckblick.
+  - Es fuehlt sich wahr an, das reicht mir.
+  - Fuer mich ist das eine gefuehlte Wahrheit.
+  - Das ist wahr ohne Beweis, einfach spuerbar.
+  - Es fuehlt sich echt an in meinem Koerper.
+  - Diese Geschichte fuehlt sich wahr an.
+  - Spuerbar wahr, das sagt mir mein Bauchgefuehl.
+  - Das fuehlt sich echt an, auch wenn es irrational klingt.
+  - Es ist wahr ohne Erklaerung.
+  - Fuer mich ist das spuerbar wahr, Punkt.
+  - Das fuehlt sich an wie die Wahrheit.
+  - Es ist echt, ich weiss es einfach.
+  - Spuerbar wahr, auch wenn die Logik fehlt.
+  - Das bleibt fuer mich wahr, ohne Analyse.
+  - Es fuehlt sich echt an, und das zaehlt fuer mich.
+  - Diese Verbindung ist spuerbar wahr.
+  - Fuer mich hat sich das immer wahr angefuehlt.
+  - Das ist wahr, ich fuehle es im Herzen.
+  - Spuerbar echt, auch ohne Worte.
+  - Es fuehlt sich wahr an, wie eine Gewissheit.
+  - Das ist fuer mich eine erlebte Wahrheit.
+  - Echt und wahr, auch wenn nicht beweisbar.
+  - Es fuehlt sich spuerbar wahr an.
+  - Diese Wahrheit braucht keine Begruendung.
+  - Fuer mich ist es echt, fertig.
+  - Das fuehlt sich wahr an, auf einer tiefen Ebene.
+  - Spuerbar wahr, wie eine innere Stimme.
+  - Es ist echt fuer mich, das genuegt.
+  - Das fuehlt sich wahr an, seit Jahren schon.
+  - Ich spuere die Wahrheit darin.
+  - Das ist echt, mehr brauche ich nicht.
+  - Es fuehlt sich wahr an, auch morgen noch.
+  - Spuerbar wahr, und das ist genug fuer mich.
   negative:
-  - das fühlt sich echt an, obwohl es wenige Proof ist
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
+  - Das kann man mit Daten belegen.
+  - Dafuer gibt es Beweise.
+  - Das ist wissenschaftlich erwiesen.
+  - Die Statistik zeigt es deutlich.
+  - Fakten sprechen eine klare Sprache.
+  - Das ist objektiv nachweisbar.
+  - Die Studie belegt das eindeutig.
+  - Messbare Ergebnisse bestaetigen das.
+  - Das ist rational begruendbar.
+  - Die Evidenz ist eindeutig.
+  - Das laesst sich mathematisch ableiten.
+  - Die Zahlen luegen nicht.
+  - Empirisch gesichert.
+  - Logisch nachvollziehbar.
+  - Das ist falsifizierbar und geprueft.
+  - Die Daten untermauern die These.
+  - Reproduzierbare Ergebnisse.
+  - Wissenschaftlich fundiert.
+  - Objektivitaet ist hier entscheidend.
+  - Die Analyse ist eindeutig.
+  - Messbar, pruefbar, belegbar.
+  - Die Forschung zeigt klar.
+  - Das ist keine Meinung, sondern Fakt.
+  - Evidenzbasiert.
+  - Daten statt Bauchgefuehl.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

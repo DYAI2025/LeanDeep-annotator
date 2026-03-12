@@ -7,6 +7,10 @@ frame:
   concept: "Reassurance Seeking"
   pragmatics: "Unsicherheitsregulation"
   narrative: "attachment_insecurity"
+composed_of:
+- SEM_REASSURANCE_DRIVE
+- SEM_AMBIVALENCE
+- SEM_STABILITY_PRESERVATION
 pattern:
 - '(?i)\b(alles gut mit uns|magst du mich( noch)?|bist du( noch)? da)\b'
 - '(?i)\b(liebst du mich noch|sind wir okay)\b'
@@ -46,3 +50,4 @@ examples:
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
 tags: [cluster, reassurance, early_stage, attachment]
+semiotic: {peirce: index, signifikat: Beruhigung/Rueckversicherung, framing_type: empathie, cultural_frame: '', myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme}

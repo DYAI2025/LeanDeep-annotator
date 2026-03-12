@@ -1,0 +1,1320 @@
+openapi: 3.1.0
+info:
+  title: LeanDeep API
+  description: |
+    Semantic marker detection for human communication analysis.
+
+    LeanDeep detects manipulation patterns, attachment styles, conflict dynamics,
+    and 890+ behavioral markers across a 5-layer hierarchy:
+
+    **Layer 0** (Semantic) → **ATO** (atomic regex) → **SEM** (semantic blends) → **CLU** (cluster intuitions) → **MEMA** (meta markers)
+
+    ## Authentication
+
+    All API endpoints require an API key via the `X-API-Key` header.
+    Contact us for key provisioning.
+
+    ## Semantic Profiling
+
+    Each analysis request accepts a `semantic_mode` parameter:
+    - `auto` — Use LLM if configured, otherwise fall back to embedding or baseline
+    - `llm` — Force LLM profiling (requires configured provider)
+    - `embedding` — Use embedding-based profiling only
+    - `off` — Baseline regex+VAD detection (no semantic layer)
+
+    Enterprise customers can bring their own LLM key (BYOK) via request headers:
+    - `X-LeanDeep-Provider`: `gemini` | `openai` | `anthropic` | `ollama`
+    - `X-LeanDeep-Provider-Key`: Your API key
+    - `X-LeanDeep-Provider-Model`: Model name override
+
+    ## Rate Limiting
+
+    Default: 60 requests/minute per API key. Returns `429` when exceeded.
+
+    ## Tiers
+
+    | Tier | Semantic Mode | Features |
+    |------|--------------|----------|
+    | Free/Demo | off, embedding | Single text + conversation analysis |
+    | Base | embedding, off | + marker explorer, file upload |
+    | Pro | all incl. LLM | + personas, episodes, shift predictions |
+    | Enterprise | all + BYOK | + custom provider, SLA |
+
+  version: 6.0.0
+  contact:
+    name: LeanDeep Support
+    url: https://leandeep.de
+  license:
+    name: Proprietary
+    url: https://leandeep.de/terms
+
+servers:
+  - url: https://leandeep.de/api
+    description: Production
+  - url: http://localhost:8420
+    description: Local development
+
+tags:
+  - name: Analysis
+    description: Text and conversation analysis endpoints
+  - name: Personas
+    description: Persistent persona profiles with EWMA warm-start (Pro tier)
+  - name: Markers
+    description: Marker registry browsing and search
+  - name: System
+    description: Health checks and engine configuration
+
+security:
+  - ApiKeyAuth: []
+
+paths:
+  /v1/analyze:
+    post:
+      operationId: analyzeText
+      summary: Analyze single text
+      description: |
+        Detect markers in a single text against the LeanDeep marker hierarchy.
+        For single-text analysis, only ATO and SEM layers are meaningful.
+        CLU/MEMA require conversation context.
+      tags: [Analysis]
+      parameters:
+        - $ref: '#/components/parameters/ByokProvider'
+        - $ref: '#/components/parameters/ByokKey'
+        - $ref: '#/components/parameters/ByokModel'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnalyzeRequest'
+            examples:
+              german_text:
+                summary: German text with conflict markers
+                value:
+                  text: "Ich weiss gar nicht mehr was ich sagen soll, du hoerst mir ja eh nie zu."
+                  semantic_mode: "auto"
+              english_text:
+                summary: English text
+                value:
+                  text: "I don't know what to say anymore, you never listen to me."
+                  language: "en"
+                  semantic_mode: "off"
+      responses:
+        '200':
+          description: Analysis results with detected markers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalyzeResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /v1/analyze/conversation:
+    post:
+      operationId: analyzeConversation
+      summary: Analyze multi-message conversation
+      description: |
+        Analyze a conversation with temporal tracking across all 4 marker layers.
+        Supports CLU (cluster patterns over messages) and MEMA (meta-level diagnosis).
+        Returns temporal patterns, topology health, and optional neuro-symbolic reasoning.
+      tags: [Analysis]
+      parameters:
+        - $ref: '#/components/parameters/ByokProvider'
+        - $ref: '#/components/parameters/ByokKey'
+        - $ref: '#/components/parameters/ByokModel'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConversationRequest'
+            examples:
+              couple_conflict:
+                summary: Couple conflict conversation
+                value:
+                  messages:
+                    - role: "A"
+                      text: "Du hoerst mir ja eh nie zu."
+                    - role: "B"
+                      text: "Doch, ich hoere dir zu! Du sagst das immer."
+                    - role: "A"
+                      text: "Siehst du, genau das meine ich."
+                  semantic_mode: "auto"
+      responses:
+        '200':
+          description: Conversation analysis with temporal patterns
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConversationResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /v1/analyze/dynamics:
+    post:
+      operationId: analyzeDynamics
+      summary: Full emotion dynamics analysis
+      description: |
+        Complete emotion dynamics analysis with VAD trajectories, UED metrics,
+        state indices, prosody features, speaker baselines, and optional
+        persona warm-start for persistent profiling across sessions.
+      tags: [Analysis]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConversationRequest'
+      responses:
+        '200':
+          description: Dynamics analysis with VAD, UED, and state indices
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DynamicsResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /v1/analyze/interpret:
+    post:
+      operationId: analyzeInterpret
+      summary: Semiotic interpretation
+      description: |
+        Semiotic interpretation of detected markers using Peirce classification,
+        framing hypotheses, cultural frame analysis, and narrative synthesis.
+      tags: [Analysis]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConversationRequest'
+      responses:
+        '200':
+          description: Semiotic interpretation with framings and narrative
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterpretResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /v1/upload:
+    post:
+      operationId: uploadDocument
+      summary: Upload document for analysis
+      description: |
+        Extract text from uploaded documents (.txt, .md, .docx).
+        Returns extracted text for subsequent analysis.
+      tags: [Analysis]
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file]
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: "Document file (.txt, .md, .docx)"
+      responses:
+        '200':
+          description: Extracted text from document
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  filename:
+                    type: string
+                  text:
+                    type: string
+                  length:
+                    type: integer
+        '422':
+          $ref: '#/components/responses/ValidationError'
+
+  /v1/personas:
+    post:
+      operationId: createPersona
+      summary: Create persona profile
+      description: |
+        Create a blank persona profile for persistent tracking across sessions.
+        Returns a unique token for subsequent requests. Pro tier only.
+      tags: [Personas]
+      responses:
+        '200':
+          description: Persona created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PersonaCreateResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /v1/personas/{token}:
+    get:
+      operationId: getPersona
+      summary: Get persona profile
+      description: Retrieve a persona profile by its token.
+      tags: [Personas]
+      parameters:
+        - name: token
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Persona profile
+          content:
+            application/json:
+              schema:
+                type: object
+                description: Full persona profile with EWMA state, episodes, and prediction reservoir
+        '404':
+          description: Persona not found
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+    delete:
+      operationId: deletePersona
+      summary: Delete persona
+      description: Permanently delete a persona profile and all associated data.
+      tags: [Personas]
+      parameters:
+        - name: token
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Persona deleted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: deleted
+                  token:
+                    type: string
+        '404':
+          description: Persona not found
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /v1/personas/{token}/predict:
+    get:
+      operationId: predictPersona
+      summary: Get shift predictions
+      description: |
+        Get behavioral shift predictions based on accumulated persona data.
+        Requires at least 3 sessions for meaningful predictions.
+      tags: [Personas]
+      parameters:
+        - name: token
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Shift predictions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PredictionResponse'
+        '404':
+          description: Persona not found
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /v1/markers:
+    get:
+      operationId: listMarkers
+      summary: List and search markers
+      description: |
+        Browse and search the full marker registry with filtering by layer, family, tag,
+        and full-text search. Paginated responses.
+      tags: [Markers]
+      parameters:
+        - name: layer
+          in: query
+          schema:
+            $ref: '#/components/schemas/Layer'
+        - name: family
+          in: query
+          schema:
+            type: string
+          description: Filter by LD5 family
+        - name: tag
+          in: query
+          schema:
+            type: string
+          description: Filter by tag
+        - name: search
+          in: query
+          schema:
+            type: string
+          description: Full-text search in marker ID and description
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 500
+            default: 50
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+      responses:
+        '200':
+          description: Paginated marker list
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MarkerListResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /v1/markers/{marker_id}:
+    get:
+      operationId: getMarker
+      summary: Get marker details
+      description: |
+        Get full details for a single marker including patterns, examples,
+        frame metadata, scoring configuration, and composition rules.
+      tags: [Markers]
+      parameters:
+        - name: marker_id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: ATO_ACCUSATION
+      responses:
+        '200':
+          description: Marker details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MarkerDetail'
+        '404':
+          description: Marker not found
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /v1/engine/config:
+    get:
+      operationId: getEngineConfig
+      summary: Get engine configuration
+      description: |
+        Returns current engine configuration including marker counts per layer,
+        family definitions, EWMA parameters, ARS settings, and bias protection config.
+      tags: [System]
+      responses:
+        '200':
+          description: Engine configuration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EngineConfig'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /v1/health:
+    get:
+      operationId: healthCheck
+      summary: Health check
+      description: Returns service health status, version, and loaded marker count.
+      tags: [System]
+      security: []
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+              example:
+                status: ok
+                version: "6.0.0"
+                markers_loaded: 891
+                uptime_seconds: 3600.5
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: LeanDeep API key. Contact support for provisioning.
+
+  parameters:
+    ByokProvider:
+      name: X-LeanDeep-Provider
+      in: header
+      required: false
+      schema:
+        type: string
+        enum: [gemini, openai, anthropic, ollama]
+      description: "BYOK: Override semantic provider for this request"
+    ByokKey:
+      name: X-LeanDeep-Provider-Key
+      in: header
+      required: false
+      schema:
+        type: string
+      description: "BYOK: API key for the specified provider"
+    ByokModel:
+      name: X-LeanDeep-Provider-Model
+      in: header
+      required: false
+      schema:
+        type: string
+      description: "BYOK: Model name override (e.g. gpt-4o-mini, gemini-2.0-flash)"
+
+  responses:
+    Unauthorized:
+      description: Missing or invalid API key
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              detail:
+                type: string
+                example: "Missing API key. Set X-API-Key header."
+    ValidationError:
+      description: Request validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              detail:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    loc:
+                      type: array
+                      items:
+                        type: string
+                    msg:
+                      type: string
+                    type:
+                      type: string
+    RateLimited:
+      description: Rate limit exceeded
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              detail:
+                type: string
+                example: "Rate limit exceeded: 60/min"
+
+  schemas:
+    Layer:
+      type: string
+      enum: [ATO, SEM, CLU, MEMA]
+      description: |
+        Marker hierarchy layer:
+        - **ATO**: Atomic regex signals (surface patterns)
+        - **SEM**: Semantic blends (1 ATO + context rules)
+        - **CLU**: Cluster intuitions (windowed aggregation over SEMs)
+        - **MEMA**: Meta markers (meta-diagnosis via composed_of)
+
+    Language:
+      type: string
+      enum: [de, en, bilingual]
+      default: de
+
+    SemanticMode:
+      type: string
+      enum: [auto, llm, embedding, "off"]
+      default: auto
+      description: |
+        Controls semantic profiling behavior:
+        - **auto**: Use best available provider (LLM > embedding > off)
+        - **llm**: Force LLM-based profiling
+        - **embedding**: Use embedding prototypes only
+        - **off**: Baseline regex+VAD detection
+
+    AnalyzeRequest:
+      type: object
+      required: [text]
+      properties:
+        text:
+          type: string
+          minLength: 1
+          maxLength: 100000
+          description: Text to analyze
+        language:
+          $ref: '#/components/schemas/Language'
+        layers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Layer'
+          default: [ATO, SEM]
+        threshold:
+          type: number
+          minimum: 0.0
+          maximum: 1.0
+          default: 0.5
+          description: Minimum confidence threshold for detected markers
+        semantic_mode:
+          $ref: '#/components/schemas/SemanticMode'
+
+    ConversationRequest:
+      type: object
+      required: [messages]
+      properties:
+        messages:
+          type: array
+          minItems: 1
+          maxItems: 2000
+          items:
+            $ref: '#/components/schemas/Message'
+        language:
+          $ref: '#/components/schemas/Language'
+        layers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Layer'
+          default: [ATO, SEM, CLU, MEMA]
+        threshold:
+          type: number
+          minimum: 0.0
+          maximum: 1.0
+          default: 0.5
+        persona_token:
+          type: string
+          format: uuid
+          nullable: true
+          description: Persona token for persistent profiling (Pro tier)
+        semantic_mode:
+          $ref: '#/components/schemas/SemanticMode'
+
+    Message:
+      type: object
+      required: [role, text]
+      properties:
+        role:
+          type: string
+          description: "Speaker role (A/B, therapist/client, etc.)"
+        text:
+          type: string
+          minLength: 1
+          maxLength: 100000
+
+    PatternMatch:
+      type: object
+      properties:
+        pattern:
+          type: string
+          description: Regex pattern that matched
+        span:
+          type: array
+          items:
+            type: integer
+          minItems: 2
+          maxItems: 2
+          description: "[start, end] character offsets in the text"
+        matched_text:
+          type: string
+
+    DetectedMarker:
+      type: object
+      properties:
+        id:
+          type: string
+          example: ATO_ACCUSATION
+        layer:
+          $ref: '#/components/schemas/Layer'
+        confidence:
+          type: number
+          minimum: 0.0
+          maximum: 1.0
+        description:
+          type: string
+        matches:
+          type: array
+          items:
+            $ref: '#/components/schemas/PatternMatch'
+        family:
+          type: string
+          nullable: true
+        multiplier:
+          type: number
+          nullable: true
+
+    AnalyzeMeta:
+      type: object
+      properties:
+        processing_ms:
+          type: number
+          description: Processing time in milliseconds
+        version:
+          type: string
+        text_length:
+          type: integer
+        markers_detected:
+          type: integer
+        layers_scanned:
+          type: array
+          items:
+            type: string
+        shadow_mode:
+          type: boolean
+          default: false
+        analysis_mode:
+          type: string
+          enum: [pattern, semantic]
+          description: |
+            - **pattern**: Baseline regex+VAD detection
+            - **semantic**: LLM/embedding semantic profiling was applied
+
+    AnalyzeResponse:
+      type: object
+      properties:
+        markers:
+          type: array
+          items:
+            $ref: '#/components/schemas/DetectedMarker'
+        meta:
+          $ref: '#/components/schemas/AnalyzeMeta'
+
+    ConversationMarker:
+      type: object
+      properties:
+        id:
+          type: string
+        layer:
+          $ref: '#/components/schemas/Layer'
+        confidence:
+          type: number
+        description:
+          type: string
+        message_indices:
+          type: array
+          items:
+            type: integer
+          description: Which messages this marker was detected in
+        family:
+          type: string
+          nullable: true
+        multiplier:
+          type: number
+          nullable: true
+        matches:
+          type: array
+          items:
+            $ref: '#/components/schemas/PatternMatch'
+        frame:
+          type: object
+          nullable: true
+          description: Marker frame metadata (valence, arousal, dominance, etc.)
+
+    TemporalPattern:
+      type: object
+      properties:
+        pattern_type:
+          type: string
+        marker_id:
+          type: string
+        first_seen:
+          type: integer
+          description: First message index
+        last_seen:
+          type: integer
+          description: Last message index
+        frequency:
+          type: integer
+        trend:
+          type: string
+          enum: [stable, increasing, decreasing]
+
+    TopologyHealth:
+      type: object
+      properties:
+        score:
+          type: number
+          minimum: 0.0
+          maximum: 1.0
+        grade:
+          type: string
+          description: "A/B/C/D/F grade"
+
+    TopologyConstraint:
+      type: object
+      properties:
+        id:
+          type: string
+        severity:
+          type: string
+          enum: [low, medium, high, critical]
+        status:
+          type: string
+        score:
+          type: number
+        message_indices:
+          type: array
+          items:
+            type: integer
+        evidence:
+          type: object
+        notes:
+          type: string
+
+    TopologyReport:
+      type: object
+      properties:
+        version:
+          type: string
+        mode:
+          type: string
+          default: shadow
+        health:
+          $ref: '#/components/schemas/TopologyHealth'
+        constraints:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopologyConstraint'
+        summary:
+          type: object
+        gates:
+          type: object
+
+    ReasoningReport:
+      type: object
+      description: Neuro-symbolic reasoning output (requires Gemini API key)
+      properties:
+        relational_pattern:
+          type: string
+        narrative:
+          type: string
+        is_formal_technical:
+          type: boolean
+        confidence_score:
+          type: number
+        evidence_marker_ids:
+          type: array
+          items:
+            type: string
+
+    ConversationResponse:
+      type: object
+      properties:
+        markers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ConversationMarker'
+        temporal_patterns:
+          type: array
+          items:
+            $ref: '#/components/schemas/TemporalPattern'
+        topology:
+          $ref: '#/components/schemas/TopologyReport'
+          nullable: true
+        reasoning:
+          $ref: '#/components/schemas/ReasoningReport'
+          nullable: true
+        meta:
+          $ref: '#/components/schemas/AnalyzeMeta'
+
+    VADPoint:
+      type: object
+      description: Valence-Arousal-Dominance emotional coordinates
+      properties:
+        valence:
+          type: number
+          description: "Positive/negative affect (-1.0 to 1.0)"
+        arousal:
+          type: number
+          description: "Activation level (0.0 to 1.0)"
+        dominance:
+          type: number
+          description: "Sense of control (0.0 to 1.0)"
+
+    UEDMetrics:
+      type: object
+      description: Unified Emotional Dynamics metrics
+      properties:
+        home_base:
+          $ref: '#/components/schemas/VADPoint'
+        variability:
+          type: object
+          properties:
+            valence:
+              type: number
+            arousal:
+              type: number
+        instability:
+          type: object
+          properties:
+            valence:
+              type: number
+            arousal:
+              type: number
+        rise_rate:
+          type: number
+        recovery_rate:
+          type: number
+        density:
+          type: number
+
+    StateIndices:
+      type: object
+      properties:
+        trust:
+          type: number
+        conflict:
+          type: number
+        deesc:
+          type: number
+        contributing_markers:
+          type: integer
+
+    EmotionScore:
+      type: object
+      properties:
+        scores:
+          type: object
+          additionalProperties:
+            type: number
+          description: "{ANGER: 0.12, JOY: 0.45, ...}"
+        dominant:
+          type: string
+        dominant_score:
+          type: number
+        prosody:
+          type: object
+          nullable: true
+          additionalProperties:
+            type: number
+          description: 17 structural text features
+
+    SpeakerDelta:
+      type: object
+      properties:
+        speaker:
+          type: string
+        delta_v:
+          type: number
+        delta_a:
+          type: number
+        baseline_v:
+          type: number
+        baseline_a:
+          type: number
+        shift:
+          type: string
+          nullable: true
+          enum: [repair, escalation, volatility]
+
+    SpeakerBaselines:
+      type: object
+      properties:
+        speakers:
+          type: object
+          additionalProperties:
+            type: object
+            properties:
+              message_count:
+                type: integer
+              baseline_final:
+                $ref: '#/components/schemas/VADPoint'
+              valence_mean:
+                type: number
+              valence_range:
+                type: number
+        per_message_delta:
+          type: array
+          items:
+            $ref: '#/components/schemas/SpeakerDelta'
+            nullable: true
+
+    DynamicsResponse:
+      type: object
+      properties:
+        markers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ConversationMarker'
+        message_vad:
+          type: array
+          items:
+            $ref: '#/components/schemas/VADPoint'
+        message_emotions:
+          type: array
+          items:
+            $ref: '#/components/schemas/EmotionScore'
+            nullable: true
+        ued_metrics:
+          $ref: '#/components/schemas/UEDMetrics'
+          nullable: true
+        state_indices:
+          $ref: '#/components/schemas/StateIndices'
+        speaker_baselines:
+          $ref: '#/components/schemas/SpeakerBaselines'
+          nullable: true
+        temporal_patterns:
+          type: array
+          items:
+            $ref: '#/components/schemas/TemporalPattern'
+        topology:
+          $ref: '#/components/schemas/TopologyReport'
+          nullable: true
+        reasoning:
+          $ref: '#/components/schemas/ReasoningReport'
+          nullable: true
+        persona_session:
+          $ref: '#/components/schemas/PersonaSessionSummary'
+          nullable: true
+        meta:
+          $ref: '#/components/schemas/AnalyzeMeta'
+
+    SemioticEntry:
+      type: object
+      properties:
+        peirce:
+          type: string
+          enum: [icon, index, symbol]
+        signifikat:
+          type: string
+        cultural_frame:
+          type: string
+        framing_type:
+          type: string
+        myth:
+          type: string
+
+    FramingHypothesis:
+      type: object
+      properties:
+        framing_type:
+          type: string
+        label:
+          type: string
+        intensity:
+          type: number
+          minimum: 0.0
+          maximum: 1.0
+        evidence_markers:
+          type: array
+          items:
+            type: string
+        message_indices:
+          type: array
+          items:
+            type: integer
+        detection_count:
+          type: integer
+        myth:
+          type: string
+
+    InterpretResponse:
+      type: object
+      properties:
+        framings:
+          type: array
+          items:
+            $ref: '#/components/schemas/FramingHypothesis'
+        semiotic_map:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/SemioticEntry'
+        dominant_framing:
+          type: string
+          nullable: true
+        findings:
+          type: object
+          nullable: true
+          properties:
+            narrative:
+              type: string
+            key_points:
+              type: array
+              items:
+                type: string
+            relational_pattern:
+              type: string
+              nullable: true
+            bias_check:
+              type: string
+              nullable: true
+        meta:
+          $ref: '#/components/schemas/AnalyzeMeta'
+
+    SemanticProfileResponse:
+      type: object
+      description: Semantic profile for a single text unit
+      properties:
+        message_index:
+          type: integer
+        intent:
+          type: string
+          enum: [vorwurf, bitte, rechtfertigung, frage, feststellung, drohung, reparatur, smalltalk, neutral, unknown]
+        register:
+          type: string
+          enum: [intim, informell, formal, technisch, therapeutisch]
+        emotion_primary:
+          type: string
+          enum: [wut, trauer, angst, freude, verachtung, ueberraschung, ekel, neutral]
+        emotion_secondary:
+          type: string
+          nullable: true
+        ironie:
+          type: boolean
+        ironie_confidence:
+          type: number
+          minimum: 0.0
+          maximum: 1.0
+        selbst_fremd:
+          type: string
+          enum: [selbst, fremd, unpersoenlich]
+        beziehungsdynamik:
+          type: string
+          enum: [naehe_suche, distanzierung, kontrolle, unterwerfung, kooperation, neutral]
+        pre_context:
+          type: string
+          nullable: true
+          description: Causal hypothesis (1 sentence) for what happened before
+        tension:
+          type: number
+          minimum: 0.0
+          maximum: 1.0
+          description: Tension intensity (independent of cause)
+        source:
+          type: string
+          enum: [llm, embedding, none]
+
+    MarkerDetail:
+      type: object
+      properties:
+        id:
+          type: string
+          example: ATO_ACCUSATION
+        layer:
+          $ref: '#/components/schemas/Layer'
+        lang:
+          type: string
+        description:
+          type: string
+        frame:
+          type: object
+          description: VAD coordinates, effect_on_state, etc.
+        patterns:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                enum: [regex, keyword]
+              pattern:
+                type: string
+              flags:
+                type: string
+        examples:
+          type: object
+          description: "positive/negative example sentences"
+          properties:
+            positive:
+              type: array
+              items:
+                type: string
+            negative:
+              type: array
+              items:
+                type: string
+        tags:
+          type: array
+          items:
+            type: string
+        rating:
+          type: integer
+          minimum: 1
+          maximum: 4
+          description: "1=approved, 2=good, 3=needs work, 4=unusable"
+        family:
+          type: string
+          nullable: true
+        multiplier:
+          type: number
+          nullable: true
+        composed_of:
+          nullable: true
+          description: Composition rules for CLU/MEMA markers
+        scoring:
+          type: object
+          nullable: true
+        activation:
+          type: object
+          nullable: true
+        window:
+          type: object
+          nullable: true
+
+    MarkerListResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        offset:
+          type: integer
+        limit:
+          type: integer
+        markers:
+          type: array
+          items:
+            $ref: '#/components/schemas/MarkerDetail'
+
+    EngineConfig:
+      type: object
+      properties:
+        version:
+          type: string
+        total_markers:
+          type: integer
+        layers:
+          type: object
+          additionalProperties:
+            type: integer
+          description: "Marker count per layer: {ATO: 427, SEM: 247, CLU: 121, MEMA: 104}"
+        families:
+          type: object
+        ewma:
+          type: object
+        ars:
+          type: object
+        bias_protection:
+          type: object
+
+    HealthResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: ok
+        version:
+          type: string
+          example: "6.0.0"
+        markers_loaded:
+          type: integer
+          example: 891
+        uptime_seconds:
+          type: number
+
+    PersonaCreateResponse:
+      type: object
+      properties:
+        token:
+          type: string
+          format: uuid
+        created_at:
+          type: string
+          format: date-time
+
+    Episode:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [escalation_cluster, repair_trend, withdrawal_phase, rupture, stabilization]
+        session:
+          type: integer
+        duration_messages:
+          type: integer
+        markers_involved:
+          type: array
+          items:
+            type: string
+        vad_delta:
+          type: object
+          additionalProperties:
+            type: number
+        state_at_entry:
+          type: object
+          additionalProperties:
+            type: number
+        state_at_exit:
+          type: object
+          additionalProperties:
+            type: number
+
+    PredictionResponse:
+      type: object
+      properties:
+        token:
+          type: string
+        session_count:
+          type: integer
+        predictions:
+          type: object
+          nullable: true
+          properties:
+            shift_counts:
+              type: object
+              additionalProperties:
+                type: integer
+            shift_prior:
+              type: object
+              additionalProperties:
+                type: number
+            top_transition_pairs:
+              type: array
+              items:
+                type: array
+        confidence:
+          type: string
+          enum: [insufficient_data, low, medium, high]
+
+    PersonaSessionSummary:
+      type: object
+      properties:
+        session_number:
+          type: integer
+        warm_start_applied:
+          type: boolean
+        new_episodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Episode'
+        state_snapshot:
+          type: object
+          additionalProperties:
+            type: number
+        prediction_available:
+          type: boolean

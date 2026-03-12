@@ -7,7 +7,7 @@ frame:
   pragmatics: "Integration"
   narrative: "surface"
 pattern:
-  tokens: ["holistisch", "ganzheitlich", "Verbundenheit", "Kosmos", "Ganzes"]
+- (?i)\b(holistisch|ganzheitlich|Verbundenheit|kosmisch|integrales?|Ganzheitlichkeit|das Ganze|Ganzheits|holistisches? Denken|ganzheitlicher Ansatz)\b
 examples:
   positive:
   - "ganzheitlicher Blick … Verbundenheit"
@@ -25,3 +25,4 @@ examples:
   - Das klingt nach einem wichtigen Thema fuer dich.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

@@ -49,6 +49,12 @@ activation:
 scoring:
   base: 0.65
   weight: 1.75
+semiotic:
+  peirce: index
+  signifikat: Beziehungsreparatur
+  framing_type: reparatur
+  cultural_frame: Gottman
+  myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'
 vad_estimate:
   valence: 0.4
   arousal: 0.2
@@ -57,3 +63,9 @@ effect_on_state:
   trust: 0.2
   conflict: -0.15
   deesc: 0.25
+semantic_affinity:
+  intents:
+  - reparatur
+  - bitte
+  intents_exclude:
+  - drohung

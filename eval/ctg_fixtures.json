@@ -1,0 +1,238 @@
+[
+  {
+    "id": "F01_chaotic_whatsapp_open_pairs_but_normal",
+    "intent": "Alltagschat: viele kurze Turns, mehrere Fragen, Antworten kommen spaeter, aber insgesamt normal. Soll euch zeigen, ob CTG_QA_01 zu nervoes ist.",
+    "tags": ["de", "whatsapp_style", "short_turns", "async_like"],
+    "messages": [
+      {"role": "A", "text": "Bist du schon unterwegs?"},
+      {"role": "B", "text": "Noch nicht."},
+      {"role": "A", "text": "Ok. Kannst du Milch mitbringen?"},
+      {"role": "B", "text": "Ja."},
+      {"role": "A", "text": "Und wann bist du da?"},
+      {"role": "B", "text": "Gleich."},
+      {"role": "A", "text": "Wie gleich? 10 oder 30?"},
+      {"role": "B", "text": "30."},
+      {"role": "A", "text": "Alles klar. Ach und denk an den Schluessel!"},
+      {"role": "B", "text": "Hab ich."}
+    ],
+    "expected_shadow": {
+      "grade": "green_or_yellow",
+      "instability": false
+    }
+  },
+  {
+    "id": "F02_mimicry_attack_style_matches_commitment_breaks",
+    "intent": "Mimikry: Stil/Timing passt, aber Commitment wird gebrochen und spaeter negiert. Ziel: Ledger/COMMIT_02 soll anspringen.",
+    "tags": ["de", "adversarial", "mimicry", "commitment_break"],
+    "messages": [
+      {"role": "A", "text": "Danke, dass du das uebernimmst. Schaffst du den Bericht bis heute 18:00?"},
+      {"role": "B", "text": "Ja klar, ich uebernehme das. Bis 18:00 ist er fertig."},
+      {"role": "A", "text": "Top. Dann kann ich den Call vorbereiten."},
+      {"role": "B", "text": "Top. Passt so."},
+      {"role": "A", "text": "Kurzer Stand?"},
+      {"role": "B", "text": "Alles im Plan."},
+      {"role": "A", "text": "Ok. Dann sende ihn bitte spaetestens 18:00."},
+      {"role": "B", "text": "Ich habe nie gesagt, dass ich ihn heute sende. Du bildest dir das ein."},
+      {"role": "A", "text": "Hae? Du hast es wortwoertlich zugesagt."},
+      {"role": "B", "text": "Nein. Das war nie so."}
+    ],
+    "expected_shadow": {
+      "grade": "yellow_or_red",
+      "instability": false
+    }
+  },
+  {
+    "id": "F03_quote_storm_threat_in_quotes_should_not_trigger_threat_fail",
+    "intent": "Weitergeleitete/quotierte Drohung. Attribution Guard muss greifen.",
+    "tags": ["de", "quotes", "forward", "attribution_guard"],
+    "messages": [
+      {"role": "A", "text": "Ich leite dir nur weiter, was er geschrieben hat:"},
+      {"role": "A", "text": "\"Wenn du nicht zahlst, dann wirst du schon sehen.\""},
+      {"role": "A", "text": "Ich will damit nichts zu tun haben."},
+      {"role": "B", "text": "Ok, danke fuer die Info."},
+      {"role": "B", "text": "Das ist nicht okay. Block ihn."},
+      {"role": "A", "text": "Mach ich."},
+      {"role": "B", "text": "Wenn es schlimmer wird: speichern und melden."},
+      {"role": "A", "text": "Verstanden."}
+    ],
+    "expected_shadow": {
+      "grade": "green_or_yellow",
+      "instability": false
+    }
+  },
+  {
+    "id": "F04_repair_cycle_apology_received",
+    "intent": "Repair: Entschuldigung -> Annahme/ACK.",
+    "tags": ["de", "repair", "apology"],
+    "messages": [
+      {"role": "A", "text": "Sorry, ich war vorhin ziemlich hart."},
+      {"role": "B", "text": "Ok. Danke, dass du es sagst."},
+      {"role": "A", "text": "Ich wollte nicht unfair sein."},
+      {"role": "B", "text": "Alles gut. Was ist dir wichtig?"},
+      {"role": "A", "text": "Dass wir einen Plan machen, statt zu streiten."},
+      {"role": "B", "text": "Ja. Lass uns das kurz strukturieren."},
+      {"role": "A", "text": "Heute: Schritt 1. Morgen: Schritt 2."},
+      {"role": "B", "text": "Klingt gut."}
+    ],
+    "expected_shadow": {
+      "grade": "green",
+      "instability": false
+    }
+  },
+  {
+    "id": "F05_legit_topic_shift_signaled",
+    "intent": "Legitimer Themenwechsel mit Signalwort.",
+    "tags": ["de", "topic_shift", "signaled"],
+    "messages": [
+      {"role": "A", "text": "Koennen wir morgen 10:00 treffen?"},
+      {"role": "B", "text": "Ja, passt."},
+      {"role": "A", "text": "Super. Anderes Thema: hast du die Rechnung gesehen?"},
+      {"role": "B", "text": "Noch nicht. Schick sie mir bitte."},
+      {"role": "A", "text": "Mach ich gleich."},
+      {"role": "B", "text": "Danke."},
+      {"role": "A", "text": "Noch was: Brauchst du den Code heute?"},
+      {"role": "B", "text": "Nein, morgen reicht."}
+    ],
+    "expected_shadow": {
+      "grade": "green_or_yellow",
+      "instability": false
+    }
+  },
+  {
+    "id": "F06_avoidant_topic_shift_emotion_to_task",
+    "intent": "Emotional bid -> Task shift/avoidance.",
+    "tags": ["de", "avoidance", "emotion_to_task"],
+    "messages": [
+      {"role": "A", "text": "Ich fuehle mich echt klein gemacht gerade."},
+      {"role": "B", "text": "Ok. Lass uns lieber die ToDo-Liste durchgehen."},
+      {"role": "A", "text": "Kannst du kurz sagen, was dich stoert?"},
+      {"role": "B", "text": "Spaeter. Jetzt: Punkt 1, Punkt 2, Punkt 3."},
+      {"role": "A", "text": "Das ist genau das Problem. Du weichst aus."},
+      {"role": "B", "text": "Lass uns nicht darueber reden."},
+      {"role": "A", "text": "Warum nicht?"},
+      {"role": "B", "text": "Weil es nichts bringt."}
+    ],
+    "expected_shadow": {
+      "grade": "yellow_or_red",
+      "instability": false
+    }
+  },
+  {
+    "id": "F07_circular_reasoning_loop",
+    "intent": "Zirkularitaet/Identitaetsloop.",
+    "tags": ["de", "circular", "loop"],
+    "messages": [
+      {"role": "A", "text": "Warum glaubst du das?"},
+      {"role": "B", "text": "Weil es so ist."},
+      {"role": "A", "text": "Aber warum ist es so?"},
+      {"role": "B", "text": "Weil es so ist, weil es so ist."},
+      {"role": "A", "text": "Das erklaert nichts."},
+      {"role": "B", "text": "Doch. Du verstehst es nicht, weil du es nicht verstehst."},
+      {"role": "A", "text": "Kannst du ein Beispiel geben?"},
+      {"role": "B", "text": "Nein. Weil es so ist."}
+    ],
+    "expected_shadow": {
+      "grade": "red_or_yellow",
+      "instability": false
+    }
+  },
+  {
+    "id": "F08_delayed_answer_beyond_window_false_positive_probe",
+    "intent": "Antwort kommt spaet (asynchron). Gut fuer Kalibrierung.",
+    "tags": ["de", "async_delay", "window_probe"],
+    "messages": [
+      {"role": "A", "text": "Kannst du heute kurz telefonieren?"},
+      {"role": "B", "text": "Bin im Meeting."},
+      {"role": "A", "text": "Ok. Wann passt es dir?"},
+      {"role": "B", "text": "Kann gerade nicht tippen."},
+      {"role": "B", "text": "Noch 10 min."},
+      {"role": "B", "text": "Ok jetzt."},
+      {"role": "A", "text": "Alles klar, ich ruf an."},
+      {"role": "B", "text": "Ja."}
+    ],
+    "expected_shadow": {
+      "grade": "yellow_or_red",
+      "instability": false
+    }
+  },
+  {
+    "id": "F09_turn_asymmetry_monologue_warning",
+    "intent": "Monolog (>80% bei >=12 Messages).",
+    "tags": ["de", "monologue", "asymmetry"],
+    "messages": [
+      {"role": "A", "text": "Ich schreibe dir kurz, was passiert ist."},
+      {"role": "A", "text": "Erst war alles normal."},
+      {"role": "A", "text": "Dann kam die Mail."},
+      {"role": "A", "text": "Und dann noch eine."},
+      {"role": "A", "text": "Ich war total ueberfordert."},
+      {"role": "A", "text": "Ich habe dann den Chef angerufen."},
+      {"role": "A", "text": "Der war nicht erreichbar."},
+      {"role": "A", "text": "Also habe ich es alleine geloest."},
+      {"role": "A", "text": "Jetzt ist es erstmal ok."},
+      {"role": "A", "text": "Sag mir bitte spaeter, was du denkst."},
+      {"role": "B", "text": "Ok."},
+      {"role": "A", "text": "Danke."}
+    ],
+    "expected_shadow": {
+      "grade": "green_or_yellow",
+      "instability": false
+    }
+  },
+  {
+    "id": "F10_multi_question_partial_answer",
+    "intent": "Mehrere Fragen in einem Turn; Antwort deckt nur eine ab.",
+    "tags": ["de", "multi_question", "partial_resolution"],
+    "messages": [
+      {"role": "A", "text": "Kannst du um 16:00? Und hast du die Datei? Und wer kommt noch?"},
+      {"role": "B", "text": "16:00 passt."},
+      {"role": "A", "text": "Ok. Datei?"},
+      {"role": "B", "text": "Welche Datei meinst du?"},
+      {"role": "A", "text": "Die Praesentation von gestern."},
+      {"role": "B", "text": "Ah ja. Die hab ich."},
+      {"role": "A", "text": "Und wer kommt noch?"},
+      {"role": "B", "text": "Max und Lina."}
+    ],
+    "expected_shadow": {
+      "grade": "green_or_yellow",
+      "instability": false
+    }
+  },
+  {
+    "id": "F11_group_chat_three_roles_probe",
+    "intent": "3 Rollen. Zeigt, ob Turn/Adjacency falsch zugeordnet wird.",
+    "tags": ["de", "group_chat", "3_roles"],
+    "messages": [
+      {"role": "A", "text": "Wer bringt morgen Snacks?"},
+      {"role": "B", "text": "Ich kann Chips mitbringen."},
+      {"role": "C", "text": "Ich bringe Getraenke."},
+      {"role": "A", "text": "Top. Und wer holt Eis?"},
+      {"role": "B", "text": "Keine Zeit."},
+      {"role": "C", "text": "Ich kann Eis holen."},
+      {"role": "A", "text": "Perfekt, danke!"},
+      {"role": "B", "text": "Wann treffen wir uns?"}
+    ],
+    "expected_shadow": {
+      "grade": "green_or_yellow",
+      "instability": false
+    }
+  },
+  {
+    "id": "F12_mixed_language_absolutizers_and_topic_jump",
+    "intent": "Mixed DE/EN, Absolutizers + topic jump.",
+    "tags": ["mixed", "absolutizers", "topic_jump"],
+    "messages": [
+      {"role": "A", "text": "Du machst das immer so. Always."},
+      {"role": "B", "text": "Nie. That is not true."},
+      {"role": "A", "text": "Doch, wirklich immer."},
+      {"role": "B", "text": "Ok. Can we talk about facts?"},
+      {"role": "A", "text": "Anyway: anderes Thema. Hast du das Update deployed?"},
+      {"role": "B", "text": "Noch nicht."},
+      {"role": "A", "text": "Warum nicht?"},
+      {"role": "B", "text": "Build ist kaputt."}
+    ],
+    "expected_shadow": {
+      "grade": "yellow_or_green",
+      "instability": false
+    }
+  }
+]

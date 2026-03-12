@@ -37,17 +37,22 @@ tags:
 - guilt_pressure
 rating: 1
 composed_of:
-- ATO_HELPLESSNESS_DEPENDENCY
 - ATO_GUILT_APPEAL_SUPPORT
 activation:
-  rule: "ANY 2 IN 30 messages"
+  rule: ANY 2 IN 30 messages
 scoring:
   base: 3.1
   weight: 0.9
   decay: 0.01
-  formula: "logistic"
+  formula: logistic
 window:
   messages: 30
+semiotic:
+  peirce: index
+  signifikat: Schuld/Schuldgefuehle
+  framing_type: schuld
+  cultural_frame: ''
+  myth: 'Schuld bindet — wer schuldig ist, schuldet Wiedergutmachung'
 compositionality: deterministic
 vad_estimate:
   valence: -0.75

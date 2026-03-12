@@ -40,6 +40,12 @@ composed_of:
   window:
     utterances: 10
   min_hits: 2
+semiotic:
+  peirce: index
+  signifikat: Bestaetigungssignal
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 compositionality: deterministic
 vad_estimate:
   valence: 0.5

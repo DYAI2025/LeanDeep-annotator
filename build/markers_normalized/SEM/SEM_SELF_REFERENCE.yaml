@@ -34,9 +34,15 @@ tags:
 - semantic
 rating: 1
 composed_of:
-- ATO_SELF_REF
+- ATO_SELF_REFLECTION
 activation:
-  rule: "AT_LEAST 3 SELF_REF IN 5 messages"
+  rule: AT_LEAST 3 SELF_REF IN 5 messages
+semiotic:
+  peirce: symbol
+  signifikat: Persoenlichkeitsmuster
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

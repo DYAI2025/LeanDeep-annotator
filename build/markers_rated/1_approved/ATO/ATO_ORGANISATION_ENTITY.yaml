@@ -25,6 +25,40 @@ examples:
   - "Die Firma SAP ist ein führender Softwareanbieter."
   - "Die Deutsche Telekom ist ein großer Telekommunikationsanbieter."
   - "Die Organisation WWF engagiert sich für den Naturschutz."
+  - Ich arbeite seit drei Jahren bei Bosch.
+  - Die Caritas hat uns damals sehr geholfen.
+  - Bei der Deutschen Bahn gibt es immer Verspätungen.
+  - Meine Schwester macht ein Praktikum bei der Telekom.
+  - Der ADAC hat uns abgeschleppt.
+  - Die AOK hat die Kosten übernommen.
+  - Er ist Mitglied beim TÜV Süd.
+  - Die Diakonie bietet Beratung an.
+  - Mein Mann arbeitet bei Volkswagen.
+  - Die Sparkasse hat die Zinsen erhöht.
+  - Der Fußballverein FC Bayern hat gewonnen.
+  - Ich habe mich bei der Agentur für Arbeit gemeldet.
+  - Die Stiftung Warentest hat den Test veröffentlicht.
+  - Die Allianz hat die Versicherung genehmigt.
+  - Wir haben bei IKEA neue Möbel bestellt.
+  - Die Polizeigewerkschaft hat protestiert.
+  - Das Jugendamt wurde eingeschaltet.
+  - Mein Sohn studiert an der TU München.
+  - Die Gewerkschaft ver.di hat zum Streik aufgerufen.
+  - Ich habe ein Angebot von Lufthansa bekommen.
+  - Die DHL hat das Paket verloren.
+  - Die Barmer übernimmt die Kur.
+  - Wir waren beim Familiengericht.
+  - Das Arbeitsamt hat mir eine Stelle vermittelt.
+  - Die Kirche hat eine Spendensammlung organisiert.
+  - Der Elternbeirat hat sich beschwert.
+  - Die Hausverwaltung reagiert nicht.
+  - Mein Chef hat mit der IHK gesprochen.
+  - Das Sozialamt hat den Antrag abgelehnt.
+  - Die Commerzbank hat die Überziehung gestrichen.
+  - Ich warte auf einen Termin bei der Rentenversicherung.
+  - Die Tafel verteilt Lebensmittel an Bedürftige.
+  - Mein Verein hat das Sportfest organisiert.
+  - Die Techniker Krankenkasse hat den Brief geschickt.
   negative:
   - Ich finde, wir sollten das in Ruhe besprechen.
   - Das ist ein guter Punkt, den du da machst.
@@ -33,5 +67,23 @@ examples:
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
   - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ich war heute arbeiten.
+  - Die Besprechung war um 14 Uhr.
+  - Er hat einen neuen Job angefangen.
+  - Meine Chefin ist nett.
+  - Ich habe morgen frei.
+  - Das Büro ist im dritten Stock.
+  - Ich muss Überstunden machen.
+  - Die Kollegen sind freundlich.
+  - Wir gehen morgen Abend essen.
+  - Das Wetter war heute schön.
+  - Ich habe den Rasen gemäht.
+  - Die Kinder spielen draußen.
+  - Ich koche heute Abend.
+  - Wir fahren am Wochenende weg.
+  - Morgen habe ich einen Termin.
+  - Die Arbeit macht mir Spaß.
+  - Ich brauche eine neue Brille.
+  - Heute war ein langer Tag.
 tags: [entity, org, atomic, v33]
 x_legacy_ids: ["A_ORG_MARKER", "A_ORG"]

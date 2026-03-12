@@ -57,20 +57,74 @@ examples:
   - Oha, das ist neu für mich.
   - Wer hätte das gedacht? Ich jedenfalls nicht.
   - Das ist ja mal eine faustdicke Überraschung.
+  - Wow, das hätte ich nicht erwartet!
+  - Oh! Das überrascht mich wirklich.
+  - Was? Im Ernst jetzt?
+  - Echt jetzt? Das ist ja irre!
+  - Ich bin total überrascht von dem Ergebnis.
+  - Krass, wie ist das passiert?
+  - Huch, das kam aus dem Nichts!
+  - Das ist eine unglaubliche Überraschung!
+  - Ich bin sprachlos, ehrlich.
+  - Tatsächlich? Ich kann es nicht fassen.
+  - Wow, das ist mal was Neues!
+  - Oh! Damit hatte ich null gerechnet.
+  - Was? Das gibt es doch nicht!
+  - Echt jetzt? Das ist krass!
+  - Ich bin total überrascht und begeistert.
+  - Krass, das habe ich nicht kommen sehen.
+  - Huch, was für eine Wendung!
+  - Das ist eine tolle Überraschung!
+  - Ich bin baff und begeistert.
+  - Oha, das ändert alles!
+  - Wow, das ist der Hammer!
+  - Oh! Was für eine Neuigkeit!
+  - Was? Echt wahr?
+  - Im Ernst? Das ist sensationell!
+  - Ich bin total überrascht, danke!
+  - Krass, das hätte ich nie vermutet.
+  - Huch, das trifft mich unvorbereitet!
+  - Das ist eine riesige positive Überraschung!
+  - Ich bin sprachlos vor Freude.
+  - Tatsächlich? Das ist ja wunderbar!
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Ja, das war zu erwarten.
+  - Wie vorhergesagt, nichts Neues.
+  - Das überrascht mich nicht im Geringsten.
+  - Ganz normal, alles wie erwartet.
+  - Das habe ich kommen sehen.
+  - Keine Überraschung für mich.
+  - Logisch, das musste so kommen.
+  - Erwartbar, nichts Besonderes.
+  - Das war klar, oder?
+  - Ich habe damit gerechnet.
+  - Vorhersehbar, wie immer.
+  - Null Überraschung.
+  - Das wusste ich schon.
+  - Erwartungsgemäß, alles im Rahmen.
+  - Nichts Neues unter der Sonne.
+  - Das war absehbar.
+  - Wie vermutet, genau so.
+  - Keine große Sache.
+  - Das passt ins Bild.
+  - Ich bin nicht überrascht.
+  - Vorhersagbar und langweilig.
+  - Das war nur eine Frage der Zeit.
+  - Erwartbar wie das Amen in der Kirche.
+  - Null Erstaunen meinerseits.
+  - Das war sonnenklar.
 tags:
 - emotion
 - surprise
 - neutral
 - astonishment
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Ueberraschung
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.0
   arousal: 0.3

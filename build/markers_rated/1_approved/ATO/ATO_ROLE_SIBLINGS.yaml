@@ -38,6 +38,51 @@ examples:
   - "Geschwister streiten sich nun mal."
   - "Mit meinem Bruder verstehe ich mich gut."
   - "Die Schwestern müssen sich das Zimmer teilen."
+  - Mein Bruder nervt manchmal, aber ich hab ihn lieb.
+  - Meine Schwester ist meine beste Freundin.
+  - Wir Geschwister halten zusammen.
+  - Mein Bruder hat mir geholfen.
+  - Meine Schwester hat Geburtstag.
+  - Brüder und Schwestern streiten sich halt.
+  - Geschwister sind für immer.
+  - Mein großer Bruder beschützt mich.
+  - Meine kleine Schwester vermisse ich.
+  - Zwischen Geschwistern gibt es besondere Bande.
+  - Mein Bruder zieht aus.
+  - Meine Schwester bekommt ein Baby.
+  - Die Geschwister sind alle eingeladen.
+  - Mein Bruder und ich telefonieren jeden Sonntag.
+  - Meine Schwester studiert in München.
+  - Brüder verstehen sich ohne Worte.
+  - Schwestern teilen alles.
+  - Meine Geschwister sind mein Halt.
+  - Mein Bruder hat geheiratet.
+  - Meine Schwester ist mein Vorbild.
+  - Wir sind drei Geschwister.
+  - Mein Bruder macht mich wahnsinnig.
+  - Meine Schwester hat mir geraten.
+  - Geschwisterliebe ist bedingungslos.
+  - Mein Bruder arbeitet im Ausland.
+  - Meine Schwester kommt zu Besuch.
+  - Brüder streiten und versöhnen sich.
+  - Schwestern kennen einander am besten.
+  - Meine Geschwister fehlen mir.
+  - Mein Bruder hat den gleichen Humor.
+  - Meine Schwester hat mich getröstet.
+  - Wir Geschwister sind sehr unterschiedlich.
+  - Mein Bruder ist mein bester Freund.
+  - Meine Schwester lebt in Berlin.
+  - Die Geschwister planen ein Treffen.
+  - Mein kleiner Bruder wird erwachsen.
+  - Meine große Schwester hat immer einen Rat.
+  - Geschwister teilen Erinnerungen.
+  - Mein Bruder hat mich unterstützt.
+  - Meine Schwester und ich sind unzertrennlich.
+  - Brüder halten zusammen, wenn es drauf ankommt.
+  - Schwestern haben eine besondere Verbindung.
+  - Mein Bruder hat angerufen.
+  - Meine Schwester ist schwanger.
+  - Geschwister sind das erste Team.
   negative:
   - Die Schwester ist manchmal bevorzugt.
   - Ich finde, wir sollten das in Ruhe besprechen.
@@ -46,9 +91,28 @@ examples:
   - Lass uns gemeinsam eine Loesung finden.
   - Mir ist aufgefallen, dass wir unterschiedlich denken.
   - Ich moechte verstehen, was du meinst.
+  - Ich habe heute gut geschlafen.
+  - Das Wetter ist herrlich.
+  - Ich gehe jetzt einkaufen.
+  - Wir sehen uns morgen.
+  - Der Film war toll.
+  - Ich mache mir einen Tee.
+  - Das Meeting war kurz.
+  - Wir fahren in den Urlaub.
+  - Ich habe Hunger.
+  - Das Buch ist spannend.
+  - Ich treffe mich mit Freunden.
+  - Das Essen war gut.
+  - Wir gehen ins Restaurant.
+  - Ich brauche neue Kopfhörer.
+  - Der Arzttermin ist morgen.
+  - Ich habe den Bus verpasst.
+  - Wir feiern am Samstag.
+  - Ich lerne gerade Spanisch.
 tags: [atomic, family, role, siblings]
 detect_class:
 criteria:
 updated_at: "2025-08-19T10:30:00Z"
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: index, signifikat: Rollenwechsel/-dynamik, framing_type: meta, cultural_frame: Systemisch, myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich}

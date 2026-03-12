@@ -15,13 +15,10 @@ gates:
 score:
   method: weighted_k_of_n
   threshold: 0.6
-ingredients:
+composed_of:
   require:
-  - SEM_REALITY_DISTORTION_FIELD
+  - SEM_GASLIGHTING_ATTEMPT
   - CLU_COVERT_RESPONSIBILITY_INVERSION
-  k_of_n:
-    k: 2
-    of: []
 emits:
   indices:
     trust: -0.2
@@ -57,9 +54,15 @@ semiotic:
   connotation:
   - manipulation
   - sequence
-composed_of:
-  require:
-  - CLU_COVERT_RESPONSIBILITY_INVERSION
-  k_of_n:
-    k: 2
-    of: []
+  peirce: symbol
+  signifikat: Realitaetsverzerrung
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
+  myth: Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als 
+    Fuersorge
+semantic_affinity:
+  intents:
+  - feststellung
+  - vorwurf
+  intents_exclude:
+  - smalltalk

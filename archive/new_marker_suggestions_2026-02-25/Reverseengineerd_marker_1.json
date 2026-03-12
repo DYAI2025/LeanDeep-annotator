@@ -1,0 +1,133 @@
+{
+  "context": {
+    "artifact_type": "text",
+    "audience": "Kommunikations- & Beziehungsanalysten",
+    "domain_codes": ["Psycholinguistik", "Toxische Dynamiken", "Beziehungsreparatur"],
+    "intended_effect": "Subtile Mustererkennung durch erweiterte Marker-Semiotik",
+    "notes": "Erweiterung um SEM_UNRESOLVED_ISSUE, SEM_TRIANGULATION_PATTERN, CLU_NEEDINESS_GUILT_BIND, CLU_GOTTMAN_TOXICITY_CLUSTER"
+  },
+  "signs": [
+    {
+      "id": "S4",
+      "locus": "SEM_UNRESOLVED_ISSUE",
+      "evidence": "wir drehen uns im Kreis … kommen nicht weiter … Sackgasse",
+      "signifier": "Stillstands-Metaphern",
+      "signified": "Blockade / Ausweglosigkeit",
+      "type": "icon",
+      "denotation": "Bewegung ohne Fortschritt",
+      "connotations": ["Frustration", "Resignation"],
+      "codes": ["Konfliktvermeidung", "Stillstand"],
+      "myth": "Konflikt ist natürlicherweise unlösbar",
+      "ambiguity": {
+        "kinds": ["pragmatic"],
+        "risk": "medium",
+        "mitigation": "Kontext mit vorherigen Eskalationsmarkern prüfen"
+      },
+      "markers": [
+        {"name": "unresolved_issue", "span": "drehen uns im Kreis", "score": 0.88}
+      ]
+    },
+    {
+      "id": "S5",
+      "locus": "SEM_TRIANGULATION_PATTERN",
+      "evidence": "Even Mike agrees … Ask Sarah … Everyone can see",
+      "signifier": "Drittpersonen-Appeal",
+      "signified": "Triangulation / sozialer Druck",
+      "type": "index",
+      "denotation": "Einbeziehung Dritter",
+      "connotations": ["Machtdemonstration", "Isolation"],
+      "codes": ["Kontrolle", "Scham"],
+      "myth": "Die Mehrheit hat immer Recht",
+      "ambiguity": {
+        "kinds": ["pragmatic"],
+        "risk": "high",
+        "mitigation": "Prüfen, ob reale oder erfundene Drittmeinungen"
+      },
+      "markers": [
+        {"name": "triangulation", "span": "Everyone can see", "score": 0.92}
+      ]
+    },
+    {
+      "id": "S6",
+      "locus": "CLU_NEEDINESS_GUILT_BIND",
+      "evidence": "Ich will dich nicht belasten, aber … ohne dich schaffe ich das nicht … du bist kalt",
+      "signifier": "Moralisierende Bedürftigkeit",
+      "signified": "Schuld-Bindung",
+      "type": "symbol",
+      "denotation": "Hilfsappell + Vorwurf",
+      "connotations": ["Emotionale Erpressung", "Abhängigkeit"],
+      "codes": ["Guilt", "Neediness"],
+      "myth": "Liebe = moralische Verpflichtung",
+      "ambiguity": {
+        "kinds": ["emotional"],
+        "risk": "high",
+        "mitigation": "Vergleich mit gesunder Bedürftigkeit"
+      },
+      "markers": [
+        {"name": "neediness_guilt_bind", "span": "ohne dich … kalt", "score": 0.9}
+      ]
+    },
+    {
+      "id": "S7",
+      "locus": "CLU_GOTTMAN_TOXICITY_CLUSTER",
+      "evidence": "Verachtung + Steinmauern + Defensivität + Vorwürfe",
+      "signifier": "Toxizitäts-Akkumulation",
+      "signified": "Destruktive Beziehungsdynamik",
+      "type": "index",
+      "denotation": "Mehrere destruktive Marker",
+      "connotations": ["Verletzung", "Trennungsrisiko"],
+      "codes": ["Toxizität", "Gottman-Destruktoren"],
+      "myth": "Konflikt als Normalzustand",
+      "ambiguity": {
+        "kinds": ["syntagmatic"],
+        "risk": "medium",
+        "mitigation": "Quantifizierung der Cluster-Dichte"
+      },
+      "markers": [
+        {"name": "gottman_toxicity", "span": "erbärmlich … hör dir nicht zu", "score": 0.95}
+      ]
+    }
+  ],
+  "structure": {
+    "syntagmatic": ["Validierung → Triangulation → Schuldumkehr → Stillstand → Toxizitäts-Cluster"],
+    "paradigmatic": ["Eskalation vs. Deeskalation (Pause, Empathie, Mediator)"]
+  },
+  "emotions_dynamics": {
+    "method": "valence_arousal",
+    "series": [
+      {"t": 0.0, "valence": 0.1, "arousal": 0.5, "trigger_sign_id": "S4"},
+      {"t": 0.3, "valence": -0.4, "arousal": 0.7, "trigger_sign_id": "S5"},
+      {"t": 0.6, "valence": -0.65, "arousal": 0.85, "trigger_sign_id": "S6"},
+      {"t": 0.9, "valence": -0.75, "arousal": 0.9, "trigger_sign_id": "S7"}
+    ]
+  },
+  "findings": {
+    "narrative": "Erweiterte Marker enthüllen subtile Eskalationsketten: Stillstand → Triangulation → Schuld-Bindung → toxische Akkumulation. Mythen naturalisieren Kontrolle und Resignation.",
+    "key_points": [
+      "Marker als hierarchisches Zeichen-System (ATO → SEM → CLU)",
+      "Indexikalität dominiert bei toxischen Mustern",
+      "Mythos-Level: Konflikt als unvermeidbar / Schuld als Bindung"
+    ]
+  },
+  "recommendations": [
+    {
+      "goal": "Früherkennung toxischer Schleifen",
+      "action": "Marker-Cluster als Warnsignal definieren (z. B. ≥3 toxische SEM/CLU in 10 Nachrichten)",
+      "rationale": "Ermöglicht Intervention vor Eskalation",
+      "expected_effect": "Reduzierung negativer Valenz/Arousal",
+      "risk": "Falsch-Positive bei harmlosen Konflikten"
+    },
+    {
+      "goal": "Subtile Dynamiken sichtbar machen",
+      "action": "Semiotische Heatmap: Marker + VAD-Kurve + Mythen-Labels",
+      "rationale": "Visualisiert unsichtbare Macht- und Schuldverschiebungen",
+      "expected_effect": "Therapeutische Klarheit",
+      "risk": "Überforderung durch Komplexität"
+    }
+  ],
+  "claims_mode_balance": {
+    "fact": 6,
+    "inference": 7,
+    "speculation": 2
+  }
+}

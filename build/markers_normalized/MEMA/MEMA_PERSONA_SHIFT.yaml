@@ -1,0 +1,117 @@
+id: MEMA_PERSONA_SHIFT
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - persona
+  - shift
+  concept: Persona-Shift – Wechsel der kommunikativen Identität
+  pragmatics: Erkennt Rollenverschiebungen und Identitätswechsel im Gesprächsverlauf
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Gerade warst du noch liebevoll, jetzt bist du eiskalt.
+  - 'Du wechselst deine Persona: eben noch die fürsorgliche Mutter, jetzt die strenge Richterin.'
+  - Ich erkenne dich nicht wieder – wo ist die Person, die mich heute Morgen umarmt hat?
+  - Du bist ein komplett anderer Mensch, wenn du wütend bist.
+  - Von beruflicher Kollegin zu emotionaler Partnerin in einem Satz.
+  - Du redest mit mir wie ein Chef, nicht wie ein Partner.
+  - Eben warst du noch die verletzliche Seite, jetzt bist du im Angriffsmodus.
+  - Dein Ton wechselt – von weich zu messerscharf.
+  - Ich hab das Gefühl, mit verschiedenen Versionen von dir zu reden.
+  - Du hast gerade den Schalter umgelegt – von warmherzig zu distanziert.
+  - In einer Minute bist du verständnisvoll, in der nächsten eiskalt.
+  - Deine Persona ändert sich je nachdem, wer im Raum ist.
+  - Du wirkst plötzlich wie eine ganz andere Person.
+  - Von verletzlich zu aggressiv in Sekundenbruchteilen.
+  - Du nimmst eine Rolle ein, die nicht zu dir passt.
+  - Gerade eben warst du noch entschuldigend, jetzt machst du Vorwürfe.
+  - Wenn deine Eltern dabei sind, bist du ein anderer Mensch.
+  - Du wechselst zwischen Kind und Erwachsenem hin und her.
+  - Dein Kommunikationsstil ändert sich dramatisch je nach Situation.
+  - Ich rede mit dir und plötzlich klingt dein Vater aus dir heraus.
+  - Du switchst von Opfer zu Täter und zurück.
+  - Eben noch unterwürfig, jetzt dominant.
+  - Deine Stimme hat sich verändert – du bist in einem anderen Modus.
+  - Du legst eine Maske auf, wenn es schwierig wird.
+  - Von Empathie zu Kälte – wie ein Lichtschalter.
+  - Du wirst eine andere Person, sobald Alkohol im Spiel ist.
+  - Morgens bist du liebevoll, abends ein Fremder.
+  - Du hast gerade deine professionelle Persona angelegt – mitten im Streit.
+  - Ich hab das Gefühl, mit drei verschiedenen Personen zusammen zu sein.
+  - 'Dein Gesichtsausdruck ändert sich und ich weiß: jetzt kommt die andere Seite.'
+  - Du spielst Rollen, statt du selbst zu sein.
+  - Von 'ich liebe dich' zu 'ich hasse dich' in einer Nachricht.
+  - Deine Persona ist kontextabhängig – privat weich, öffentlich hart.
+  - Du redest mit mir wie mit einem Angestellten, nicht wie mit deiner Frau.
+  - Der Shift ist spürbar – du bist nicht mehr die gleiche Person wie eben.
+  - Du wechselst in den Überlebensmodus und wirst jemand anderes.
+  - Gerade warst du noch reumütig. Jetzt bist du selbstgerecht.
+  - Ich sehe, wie du in die Rolle deiner Mutter schlüpfst.
+  - Dein Verhalten kippt – von kooperativ zu feindselig.
+  - Du bist gerade in deinem Beschützer-Modus – das merkt man.
+  - Von lässig zu kontrollierend in einem Atemzug.
+  - Du hast eine Arbeits-Persona und eine Privat-Persona – und die passen nicht zusammen.
+  - Plötzlich bist du nicht mehr mein Partner, sondern mein Gegner.
+  - Der Wechsel ist so schnell, dass ich nicht mitkomme.
+  - Du legst verschiedene Masken je nach Publikum auf.
+  - In der Gruppe bist du witzig und locker. Zu Hause verschlossen und gereizt.
+  - Du wirst ein anderer Mensch, wenn du unter Druck gerätst.
+  - Dein inneres Kind übernimmt gerade das Steuer.
+  - Ich erkenne drei verschiedene Versionen von dir – und keine ist echt.
+  - Der Persona-Shift ist wie ein Vorhang, der fällt.
+  negative:
+  - Ich bin in verschiedenen Situationen unterschiedlich, das ist normal.
+  - Klar passe ich meinen Ton an – beruflich rede ich anders als privat.
+  - Ich bin mal gut drauf, mal nicht – das heißt nicht, dass ich eine andere Person bin.
+  - Meine Stimmung wechselt, aber ich bin immer noch ich.
+  - Ich zeige verschiedene Seiten von mir, je nach Kontext.
+  - Es ist gesund, verschiedene Facetten zu haben.
+  - Ich bin authentisch, auch wenn ich mich an Situationen anpasse.
+  - Mein Verhalten passt sich an, aber mein Kern bleibt gleich.
+  - In verschiedenen Rollen zu sein heißt nicht, unecht zu sein.
+  - Ich bin komplex und zeige verschiedene Seiten – das ist menschlich.
+  - Mal bin ich ernst, mal albern – das macht mich nicht zu zwei Personen.
+  - Ich passe meinen Kommunikationsstil an, das ist Kompetenz.
+  - Verschiedene Situationen erfordern verschiedene Reaktionen.
+  - Ich bin vielseitig, nicht widersprüchlich.
+  - Meine Gefühle ändern sich, aber meine Werte bleiben.
+  - Ich bin in verschiedenen Kontexten verschieden – und trotzdem ich.
+  - Es ist okay, mal streng und mal sanft zu sein.
+  - Mein Ton ändert sich, aber meine Absicht ist immer dieselbe.
+  - Ich zeige verschiedene Seiten, weil ich vertraue.
+  - Meine Vielfalt ist Stärke, kein Widerspruch.
+  - Ich bin nicht immer gleich drauf, das ist normal.
+  - Verschiedene Emotionen zu zeigen heißt nicht, unberechenbar zu sein.
+  - Ich bin facettenreich und stehe dazu.
+  - Meine Persona ist flexibel, nicht fragmentiert.
+  - Ich passe mich an, ohne mich zu verlieren.
+tags:
+- mema
+- persona
+- shift
+- identity
+- role
+rating: 2
+composed_of:
+  required_any:
+  - SEM_PROJECTION
+  - CLU_MIRROR_DEFENSE
+  supportive:
+  - ATO_TOPIC_SHIFT
+  - SEM_BLAME_SIGNAL
+activation:
+  rule: "ANY 2 IN 15 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

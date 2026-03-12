@@ -34,6 +34,12 @@ tags:
 - affect
 - loneliness
 rating: 2
+semiotic:
+  peirce: icon
+  signifikat: Atomares Signal
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: -0.6
   arousal: 0.3
@@ -42,3 +48,5 @@ effect_on_state:
   trust: -0.1
   conflict: 0.1
   deesc: -0.05
+semantic_affinity:
+  ironie_suppress: true

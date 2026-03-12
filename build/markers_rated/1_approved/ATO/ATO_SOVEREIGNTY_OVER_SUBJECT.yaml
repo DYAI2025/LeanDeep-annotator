@@ -12,19 +12,82 @@ pattern:
   flags: ["IGNORECASE"]
 examples:
   positive:
-  - "Bleiben wir beim Thema."
-  - "Wir sprechen jetzt über die Agenda."
-  - "Zur Sache: die Entscheidung."
-  - "Ich setze das Thema: Ressourcen."
-  - "Das Thema ist heute Planung."
-  - "Wir fokussieren jetzt darauf."
+  - Bleiben wir beim Thema, bitte.
+  - Wir sprechen jetzt über die nächsten Schritte.
+  - 'Zur Sache: Was ist der aktuelle Stand?'
+  - 'Ich setze das Thema für heute: Budgetplanung.'
+  - Das Thema ist die Quartalsreview.
+  - Bleiben wir beim Thema und schweifen nicht ab.
+  - Wir sprechen jetzt über den Projektplan.
+  - Zur Sache bitte, wir haben wenig Zeit.
+  - 'Ich setze das Thema: Kundenfeedback.'
+  - Das Thema ist Personalplanung, nicht Urlaub.
+  - Bleiben wir beim Thema Umsatz.
+  - Wir sprechen jetzt über die Deadline.
+  - Zur Sache, der Pitch ist morgen.
+  - 'Ich setze das Thema: Qualitätskontrolle.'
+  - Das Thema ist heute ausschließlich Marketing.
+  - Bleiben wir beim Thema, das ist wichtig.
+  - Wir sprechen jetzt über die Reklamation.
+  - 'Zur Sache: Welche Ressourcen brauchen wir?'
+  - 'Ich setze das Thema: Prozessoptimierung.'
+  - Das Thema ist die Migration, nichts anderes.
+  - Bleiben wir beim Thema und parken den Rest.
+  - Wir sprechen jetzt über den Incident von gestern.
+  - Zur Sache, ich möchte Ergebnisse sehen.
+  - Das Thema ist Compliance, das hat Vorrang.
+  - Bleiben wir beim Thema, ja?
+  - Wir sprechen jetzt über den Meilenstein.
+  - 'Zur Sache: Die Lieferung verzögert sich.'
+  - Ich setze das Thema, und zwar Sicherheit.
+  - 'Das Thema ist klar: Onboarding neuer Mitarbeiter.'
+  - Bleiben wir beim Thema, sonst wird es zu lang.
+  - Wir sprechen jetzt über die offenen Tickets.
+  - Zur Sache, die Stakeholder warten.
+  - 'Ich setze das Thema: Retro zum Sprint.'
+  - Das Thema ist Performance-Review.
+  - Bleiben wir beim Thema Vertrieb.
+  - Wir sprechen jetzt über das Feedback der Nutzer.
+  - Zur Sache, wir müssen heute entscheiden.
+  - 'Ich setze das Thema: Kostensenkung.'
+  - Das Thema ist und bleibt die Strategie.
+  - Bleiben wir beim Thema, ich komme drauf zurück.
+  - Wir sprechen jetzt über die Partnerschaft.
+  - 'Zur Sache: Was fehlt noch?'
+  - 'Ich setze das Thema: Datenschutz.'
+  - Das Thema ist die Integration.
+  - Bleiben wir beim Thema Risk Assessment.
+  - Wir sprechen jetzt über die Roadmap.
+  - Zur Sache, die Frist läuft ab.
+  - 'Ich setze das Thema: Teamstruktur.'
+  - Das Thema ist das Release.
+  - Bleiben wir beim Thema, wir klären den Rest danach.
   negative:
-  - Ich finde, wir sollten das in Ruhe besprechen.
-  - Das ist ein guter Punkt, den du da machst.
-  - Ich verstehe deine Perspektive.
-  - Lass uns gemeinsam eine Loesung finden.
-  - Mir ist aufgefallen, dass wir unterschiedlich denken.
-  - Ich moechte verstehen, was du meinst.
-  - Das klingt nach einem wichtigen Thema fuer dich.
+  - Was denkst du, worüber wir reden sollten?
+  - Lass uns offen schauen, was ansteht.
+  - Ich habe kein bestimmtes Thema, du?
+  - Wir können gerne über alles reden.
+  - Kein festes Thema heute, einfach frei.
+  - Was beschäftigt dich gerade?
+  - Ich bin offen für jedes Thema.
+  - Erzähl einfach, was dir auf dem Herzen liegt.
+  - Wir müssen nicht strukturiert vorgehen.
+  - Lass uns schauen, wohin das Gespräch führt.
+  - Ich habe keine Agenda heute.
+  - Worüber möchtest du sprechen?
+  - Mir ist alles recht, was du ansprechen willst.
+  - Kein Zeitdruck, wir nehmen uns die Themen, wie sie kommen.
+  - Lass einfach fließen, ich höre zu.
+  - Was steht bei dir an?
+  - Wir können spontan entscheiden.
+  - Ich folge deiner Richtung.
+  - Bring rein, was du brauchst.
+  - Alles ist erlaubt heute.
+  - Keine Vorgaben meinerseits.
+  - Du bestimmst das Thema.
+  - Ich bin ganz bei dir.
+  - Lass uns einfach quatschen.
+  - Was kommt, kommt.
 vad_estimate: {valence: -0.05, arousal: 0.4, dominance: 0.7}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: index, signifikat: Kontrolle/Dominanz, framing_type: kontrollnarrative, cultural_frame: Sozialpsychologie, myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'}

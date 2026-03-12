@@ -22,6 +22,51 @@ examples:
   - Wie viele Manager, um eine Glühbirne zu wechseln?
   - 'Frage: Warum? Antwort: Weil Legacy.'
   - Wie viele Tester für einen Bug? Mindestens einen.
+  - Wie viele Berater braucht man, um eine Lampe zu wechseln?
+  - 'Frage: Was ist schlimmer als ein Bug? Antwort: Zwei Bugs.'
+  - Wie viele Praktikanten braucht man, um den Drucker zu reparieren?
+  - 'Frage: Warum funktioniert das? Antwort: Niemand weiß es.'
+  - Wie viele Produktmanager braucht man, um ein Feature zu priorisieren?
+  - 'Frage: Was macht der Server? Antwort: Er brennt.'
+  - Wie viele Designer braucht man, um einen Button zu platzieren?
+  - 'Frage: Wann ist das Release? Antwort: Bald.'
+  - Wie viele Scrum Master braucht man, um ein Standup zu leiten?
+  - 'Frage: Ist das ein Feature? Antwort: Das ist ein Bug.'
+  - Wie viele Admins braucht man, um ein Passwort zurückzusetzen?
+  - 'Frage: Was ist agil? Antwort: Das Meeting nach dem Meeting.'
+  - Wie viele Architekten braucht man, um Hello World zu schreiben?
+  - 'Frage: Läuft das auf meinem Rechner? Antwort: Ja, nur auf deinem.'
+  - Wie viele DevOps braucht man, um einen Container zu starten?
+  - 'Frage: Wer hat die Doku geschrieben? Antwort: Niemand.'
+  - Wie viele Data Scientists braucht man, um eine Korrelation zu finden?
+  - 'Frage: Brauchen wir Tests? Antwort: Theoretisch ja.'
+  - Wie viele Frontend-Devs braucht man, um einen Div zu zentrieren?
+  - 'Frage: Ist das responsiv? Antwort: Auf meinem Monitor schon.'
+  - Wie viele Backend-Devs braucht man, um ein 404 zu erklären?
+  - 'Frage: Geht das schneller? Antwort: Ja, mit mehr Budget.'
+  - Wie viele Projektleiter braucht man, um einen Zeitplan zu erstellen?
+  - 'Frage: Was kostet das? Antwort: Mehr als geplant.'
+  - Wie viele QA-Leute braucht man, um einen Bug zu reproduzieren?
+  - 'Frage: Wer ist zuständig? Antwort: Das klären wir im Meeting.'
+  - Wie viele CTOs braucht man, um eine Technologie zu wählen?
+  - 'Frage: Ist das skalierbar? Antwort: Definiere skalierbar.'
+  - Wie viele UX-Forscher braucht man, um einen Nutzer zu befragen?
+  - 'Frage: Wann kommt das Update? Antwort: Nach der Retrospektive.'
+  - Wie viele Sysadmins braucht man, um ein Kabel zu finden?
+  - 'Frage: Hast du das getestet? Antwort: Ich hab es compiled.'
+  - Wie viele Stakeholder braucht man, um eine Entscheidung zu treffen?
+  - 'Frage: Funktioniert der Hotfix? Antwort: Lokal ja.'
+  - Wie viele Recruiter braucht man, um einen Dev zu finden?
+  - 'Frage: Ist die API stabil? Antwort: Meistens.'
+  - Wie viele Cloud Engineers braucht man, um Kosten zu senken?
+  - 'Frage: Wer hat das deployed? Antwort: Jenkins, glaube ich.'
+  - Wie viele Azubis braucht man, um den WLAN-Code zu finden?
+  - 'Frage: Was ist das MVP? Antwort: Alles. Gleichzeitig.'
+  - Wie viele Freelancer braucht man, um ein Logo zu designen?
+  - 'Frage: Passt das in den Sprint? Antwort: Sicher nicht.'
+  - Wie viele Tech Leads braucht man, um einen Stack zu wählen?
+  - 'Frage: Geht das in die Cloud? Antwort: Erst mal lokal.'
+  - Wie viele Interns braucht man, um das Wiki zu pflegen?
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -30,6 +75,24 @@ examples:
   - I've noticed we think differently about this.
   - I want to understand what you mean.
   - That sounds like an important topic for you.
+  - Hast du den Witz gehört?
+  - Das war wirklich lustig.
+  - Ich musste so lachen.
+  - Das ist Humor auf einem anderen Level.
+  - Comedy at its finest.
+  - Das sollte man aufschreiben.
+  - Ich kann nicht mehr vor Lachen.
+  - Der war gut!
+  - Witzig, echt witzig.
+  - Haha, das ist klasse.
+  - Guter Humor ist wichtig im Team.
+  - Wir sollten öfter lachen.
+  - Das lockert die Stimmung auf.
+  - Lachen ist die beste Medizin.
+  - Humor verbindet.
+  - Das bringt mich zum Schmunzeln.
+  - Wir brauchen mehr Spaß bei der Arbeit.
+  - Ein Witz am Tag hält den Stress fern.
 tags:
 - humor
 - format
@@ -37,6 +100,12 @@ tags:
 - atomic
 - v33
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Humor/Leichtigkeit
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 vad_estimate:
   valence: 0.5
   arousal: 0.4

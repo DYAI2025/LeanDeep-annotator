@@ -32,6 +32,36 @@ examples:
   - Schatzi.
   - Vermisst.
   - Stolz ❤️
+  - Komm her du, ich will dich drücken 🤗
+  - Du bist das Schönste was mir passiert ist
+  - Ich könnte stundenlang mit dir reden und lachen
+  - Hey Süße, wie war dein Tag? 😊
+  - Lass uns heute Abend einfach nur zusammen sein, ohne Handy
+  - Du riechst so gut, ich will dich gar nicht loslassen
+  - Erinnerst du dich an unser erstes Date? Ich denke oft dran 💕
+  - Ich kann nicht aufhören an dich zu denken, den ganzen Tag schon
+  - Bärchen, schlaf gut, träum was Schönes von mir 😘
+  - Komm wir machen es uns auf der Couch gemütlich, nur wir zwei
+  - Ich liebe es wie du lachst, das macht mich so happy
+  - Du fehlst mir jetzt schon obwohl du erst seit 2 Stunden weg bist
+  - Mausi, ich hab dir dein Lieblingsessen gekocht 🥰
+  - Lass uns tanzen, hier in der Küche, einfach so
+  - Ich will dich die ganze Zeit anfassen, ist das normal? 😅
+  - Du siehst heute so gut aus, wow
+  - Können wir heute Abend kuscheln und nen Film gucken?
+  - Haha du Spinner, komm her 😄❤️
+  - Ich bin so dankbar dass es dich gibt in meinem Leben
+  - Guten Morgen Sonnenschein ☀️ hab an dich gedacht
+  - Lass uns am Wochenende was Schönes zusammen unternehmen
+  - Du bist mein Lieblingsmensch, weißt du das?
+  - Ich hab dir Blumen mitgebracht, einfach so 💐
+  - Kitzeln? Challenge accepted! Komm her! 😜
+  - Ich halte deine Hand und will sie nie wieder loslassen
+  - Du machst mich zum glücklichsten Menschen der Welt
+  - Lass uns den ganzen Sonntag im Bett bleiben, nur Kuscheln
+  - Schnucki, ich vermiss dich, komm bald nach Hause 🥺
+  - Dein Lächeln ist ansteckend, ich grinse jetzt auch 😊
+  - Ich will alt mit dir werden, ganz ehrlich
   negative:
   - Ok.
   - Bestätigt.
@@ -53,37 +83,29 @@ examples:
   - Abnahme machen.
   - Notiz nehmen.
   - Status updaten.
+  - Ich hab die Unterlagen auf den Tisch gelegt
+  - Die Besprechung wurde auf morgen verschoben
+  - Bitte die Reisekostenabrechnung bis Freitag einreichen
+  - Ich hab den Fehler gefunden, war ein Typo in Zeile 42
+  - Der Server ist wieder online, Entwarnung
 tags: []
 rating: 1
 composed_of:
   require:
   - ATO_AFFECTION_SHOW
   - ATO_HUMOR_LIGHT
-  k_of_n:
-    k: 2
-    of:
-    - ATO_ROMANTIC_SIGNAL_DIRECT
-    - ATO_LL_PHYSICAL_TOUCH
-    - ATO_LL_QUALITY_TIME
+  - ATO_ROMANTIC_SIGNAL_DIRECT
+  - ATO_LL_PHYSICAL_TOUCH
+  - ATO_LL_QUALITY_TIME
+  negative_evidence:
+    any_of:
+    - ATO_BOUNDARY_STRICT
+    - ATO_AFFECT_FLAT
 window:
   size_messages: 15
 gates:
   min_msgs: 3
   require_bilateral: true
-ingredients:
-  require:
-  - ATO_AFFECTION_SHOW
-  - ATO_HUMOR_LIGHT
-  k_of_n:
-    k: 2
-    of:
-    - ATO_ROMANTIC_SIGNAL_DIRECT
-    - ATO_LL_PHYSICAL_TOUCH
-    - ATO_LL_QUALITY_TIME
-negative_evidence:
-  any_of:
-  - ATO_BOUNDARY_STRICT
-  - ATO_AFFECT_FLAT
 emits:
   indices:
     intimacy: +0.3
@@ -99,6 +121,11 @@ semiotic:
   - "intimität"
   - "spiel"
   interpretant: "effect_on_state: {intimacy: +0.3, sync: +0.1}"
+  peirce: symbol
+  signifikat: Naehe/Intimitaet
+  framing_type: bindung
+  cultural_frame: Bowlby
+  myth: Liebe verpflichtet — Naehe ist Beweis, Distanz ist Verrat
 temperature_semantics:
   external: WARM
   latent: SPIELERISCH

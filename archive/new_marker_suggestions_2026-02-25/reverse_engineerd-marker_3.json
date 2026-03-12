@@ -1,0 +1,169 @@
+{
+  "context": {
+    "artifact_type": "chat",
+    "audience": "Ex-Partner in Konfliktreparatur",
+    "domain_codes": ["Therapeutische Selbsthilfe", "Romantische Eskalation"],
+    "intended_effect": "Klärung vs. Druckausübung",
+    "notes": "Reverse-Engineering weiterer Marker aus Thread"
+  },
+  "signs": [
+    {
+      "id": "S12",
+      "locus": "SEM_VICTIM_OFFENDER_REVERSAL",
+      "evidence": "du bist so kalt ... deine Schuld ... Entzug von Empathie",
+      "signifier": "Kälte-Label + Schuldzuschreibung",
+      "signified": "Opfer-Täter-Umkehr",
+      "type": "symbol",
+      "denotation": "Vorwurf emotionaler Kälte",
+      "connotations": ["Manipulation", "Druck"],
+      "codes": ["Schuld", "Toxizität"],
+      "myth": "Opferhaltung als moralische Überlegenheit",
+      "ambiguity": {
+        "kinds": ["pragmatic"],
+        "risk": "high",
+        "mitigation": "Kontext mit Bedürftigkeit prüfen"
+      },
+      "markers": [
+        {"name": "victim_offender_reversal", "span": "du bist kalt ... deine Schuld", "score": 0.95}
+      ]
+    },
+    {
+      "id": "S13",
+      "locus": "SEM_UNRESOLVED_ISSUE",
+      "evidence": "wir drehen uns im Kreis (implizit in Schleifen) ... keine Lösung",
+      "signifier": "Stillstands-Indikatoren",
+      "signified": "Unaufgelöste Problemlage",
+      "type": "icon",
+      "denotation": "Wiederholung ohne Fortschritt",
+      "connotations": ["Frustration", "Abbruchneigung"],
+      "codes": ["Konflikt", "Sackgasse"],
+      "myth": "Streit ist endlos",
+      "ambiguity": {
+        "kinds": ["pragmatic"],
+        "risk": "medium",
+        "mitigation": "Vergleich mit realer Eskalation"
+      },
+      "markers": [
+        {"name": "unresolved_issue", "span": "kommen nicht weiter", "score": 0.85}
+      ]
+    },
+    {
+      "id": "S14",
+      "locus": "CLU_NEEDINESS_GUILT_BIND (reverse-engineered)",
+      "evidence": "ohne dich schaffe ich das nicht ... du bist kalt ... ich brauche das jetzt",
+      "signifier": "Bedürftigkeit + Schuldvorwurf",
+      "signified": "Moralisierende Bindung",
+      "type": "symbol",
+      "denotation": "Hilfsappell mit Vorwurf",
+      "connotations": ["Erpressung", "Abhängigkeit"],
+      "codes": ["Guilt", "Neediness"],
+      "myth": "Bedürftigkeit verpflichtet",
+      "ambiguity": {
+        "kinds": ["emotional"],
+        "risk": "high",
+        "mitigation": "Differenzierung echte vs. manipulative Bedürftigkeit"
+      },
+      "markers": [
+        {"name": "neediness_guilt_bind", "span": "ohne dich ... kalt", "score": 0.92}
+      ]
+    },
+    {
+      "id": "S15",
+      "locus": "CLU_ATTACHMENT_STYLE_AVOIDANT_MARKER (reverse-engineered)",
+      "evidence": "Pausenknopf ... brauche Schutzraum ... vorübergehend blockiert",
+      "signifier": "Distanzforderungen",
+      "signified": "Vermeidende Bindung",
+      "type": "index",
+      "denotation": "Rückzug als Schutz",
+      "connotations": ["Angst vor Nähe", "Selbstregulierung"],
+      "codes": ["Vermeidung", "Grenzen"],
+      "myth": "Isolation schützt vor Schmerz",
+      "ambiguity": {
+        "kinds": ["pragmatic"],
+        "risk": "medium",
+        "mitigation": "Kontext mit Eskalationsauslösern"
+      },
+      "markers": [
+        {"name": "avoidant_attachment", "span": "brauche Schutzraum", "score": 0.88}
+      ]
+    },
+    {
+      "id": "S16",
+      "locus": "SEM_BOUNDARY_INVERSION (neu reverse-engineered)",
+      "evidence": "Blocken/Entziehen ist Gewalt ... das ist Bestrafung",
+      "signifier": "Grenzverdrehung-Phrasen",
+      "signified": "Umkehrung von Schutz zu Aggression",
+      "type": "symbol",
+      "denotation": "Pausen als Gewalt labeln",
+      "connotations": ["Kontrolle", "Inversion"],
+      "codes": ["Boundary-Manipulation", "Toxizität"],
+      "myth": "Grenzen sind Strafe",
+      "ambiguity": {
+        "kinds": ["lexical"],
+        "risk": "high",
+        "mitigation": "Vergleich mit gesunden Grenzen"
+      },
+      "markers": [
+        {"name": "boundary_inversion", "span": "Blocken ist Gewalt", "score": 0.9}
+      ]
+    },
+    {
+      "id": "S17",
+      "locus": "SEM_VEHEMENCE_DEMAND (neu reverse-engineered)",
+      "evidence": "zeig das mit Vehemenz ... eigenständig, klar, zweifelsfrei ... ohne Schutzraum",
+      "signifier": "Intensitätsforderung",
+      "signified": "Emotionale Erpressung durch Risikoforderung",
+      "type": "index",
+      "denotation": "Forderung nach unbedingter Handlung",
+      "connotations": ["Druck", "Authentizitätsmythos"],
+      "codes": ["Vehemenz", "Manipulation"],
+      "myth": "Wahre Liebe zeigt sich nur roh",
+      "ambiguity": {
+        "kinds": ["emotional"],
+        "risk": "high",
+        "mitigation": "Kontext mit Bedürftigkeit"
+      },
+      "markers": [
+        {"name": "vehemence_demand", "span": "mit Vehemenz ... ohne Schutzraum", "score": 0.93}
+      ]
+    }
+  ],
+  "structure": {
+    "syntagmatic": ["Validierungssuche → Schuldumkehr → Grenzverdrehung → Vehemenzforderung → Stillstand"],
+    "paradigmatic": ["Toxische Forderung vs. Empathische Anerkennung (z.B. 'ich respektiere deine Grenze')"]
+  },
+  "emotions_dynamics": {
+    "method": "valence_arousal",
+    "series": [
+      {"t": 0.0, "valence": 0.05, "arousal": 0.6, "trigger_sign_id": "S12"},
+      {"t": 0.3, "valence": -0.5, "arousal": 0.8, "trigger_sign_id": "S15"},
+      {"t": 0.6, "valence": -0.7, "arousal": 0.85, "trigger_sign_id": "S16"},
+      {"t": 0.9, "valence": -0.6, "arousal": 0.75, "trigger_sign_id": "S17"}
+    ]
+  },
+  "findings": {
+    "narrative": "Reverse-Engineering ergibt neue Marker wie SEM_BOUNDARY_INVERSION und SEM_VEHEMENCE_DEMAND, die subtile Umkehrungen und Druckmechanismen enthüllen. Bestehende Marker verstärken Mythen von Schuld und Isolation.",
+    "key_points": ["Bestehende: Schuldumkehr, Stillstand, Bedürftigkeit, Vermeidung", "Neu: Grenzverdrehung, Vehemenzforderung", "Mythos: Grenzen als Aggression, Intensität als Echtheit"]
+  },
+  "recommendations": [
+    {
+      "goal": "Subtile Manipulation aufdecken",
+      "action": "Neue Marker in YAML-Pipeline einbauen (Regex + Cluster-Rules)",
+      "rationale": "Erweitert Erkennung ungedeckter Dynamiken",
+      "expected_effect": "Bessere Eskalationsprognose",
+      "risk": "Falsch-Positive bei emotionaler Sprache"
+    },
+    {
+      "goal": "Semiotik vertiefen",
+      "action": "Marker als Zeichenketten modellieren (Denotation → Mythos)",
+      "rationale": "Fördert tiefe Lesarten",
+      "expected_effect": "Mehrwert in Therapie/Analyse",
+      "risk": "Komplexitätszunahme"
+    }
+  ],
+  "claims_mode_balance": {
+    "fact": 5,
+    "inference": 7,
+    "speculation": 3
+  }
+}

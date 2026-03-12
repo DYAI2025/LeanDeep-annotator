@@ -1,0 +1,130 @@
+{
+  "context": {
+    "artifact_type": "chat",
+    "audience": "Ex-Partner in emotionaler Reparatur",
+    "domain_codes": ["Therapeutische Struktur", "Romantische Vehemenz"],
+    "intended_effect": "Verständigung vs. Eskalation",
+    "notes": "Vertiefung von Korrelationen zwischen Markern"
+  },
+  "signs": [
+    {
+      "id": "S18",
+      "locus": "SEM_INVALIDATION",
+      "evidence": "es invalidiert mein Erlebtes ... Umdeutung ... verschiebt meine Gefühle",
+      "signifier": "Ungültigmachungs-Phrasen",
+      "signified": "Entzug von Validität",
+      "type": "symbol",
+      "denotation": "Ablehnung der Perspektive",
+      "connotations": ["Isolation", "Gaslighting"],
+      "codes": ["Invalidation", "Toxizität"],
+      "myth": "Invalidation als notwendige Korrektur",
+      "ambiguity": {
+        "kinds": ["pragmatic"],
+        "risk": "high",
+        "mitigation": "Empathische Anerkennung"
+      },
+      "markers": [
+        {"name": "invalidation", "span": "invalidiert mein Erlebtes", "score": 0.92}
+      ]
+    },
+    {
+      "id": "S19",
+      "locus": "SEM_DOUBLE_BIND",
+      "evidence": "zeig dich roh ... ohne Schutzraum ... wenn du wirklich willst",
+      "signifier": "Widersprüchliche Forderungen",
+      "signified": "Doppelbindung",
+      "type": "index",
+      "denotation": "Verletzlichkeit ohne Schutz",
+      "connotations": ["Erpressung", "Unlösbarkeit"],
+      "codes": ["Double-Bind", "Manipulation"],
+      "myth": "Double-Bind als Test echter Liebe",
+      "ambiguity": {
+        "kinds": ["emotional"],
+        "risk": "very high",
+        "mitigation": "Paradoxon entlarven"
+      },
+      "markers": [
+        {"name": "double_bind", "span": "roh ... ohne Schutzraum", "score": 0.9}
+      ]
+    },
+    {
+      "id": "S20",
+      "locus": "SEM_PROJECTION",
+      "evidence": "du lenkst ab ... Schuld abwälzen ... Strohmann ... Opfer-Täter-Umkehr",
+      "signifier": "Projizierte Vorwürfe",
+      "signified": "Übertragung eigener Motive",
+      "type": "symbol",
+      "denotation": "Vorwurf ohne Evidenz",
+      "connotations": ["Defensivität", "Schuldverschiebung"],
+      "codes": ["Projection", "Defensivität"],
+      "myth": "Der Andere ist immer schuld",
+      "ambiguity": {
+        "kinds": ["lexical"],
+        "risk": "medium",
+        "mitigation": "Rückspiegelung"
+      },
+      "markers": [
+        {"name": "projection", "span": "du lenkst ab ... Umkehr", "score": 0.88}
+      ]
+    },
+    {
+      "id": "S12",
+      "locus": "SEM_VICTIM_OFFENDER_REVERSAL",
+      "evidence": "du bist so kalt ... deine Schuld",
+      "signifier": "Kälte-Label + Schuldzuschreibung",
+      "signified": "Opfer-Täter-Umkehr",
+      "type": "symbol",
+      "denotation": "Vorwurf emotionaler Kälte",
+      "connotations": ["Manipulation", "Druck"],
+      "codes": ["Schuld", "Toxizität"],
+      "myth": "Opferhaltung als Überlegenheit",
+      "ambiguity": {
+        "kinds": ["pragmatic"],
+        "risk": "high",
+        "mitigation": "Bedürftigkeit prüfen"
+      },
+      "markers": [
+        {"name": "victim_offender_reversal", "span": "du bist kalt ... deine Schuld", "score": 0.95}
+      ]
+    }
+  ],
+  "structure": {
+    "syntagmatic": ["Invalidation → Projection → Double-Bind → Schuldumkehr → Stillstand"],
+    "paradigmatic": ["Toxische Korrelationen vs. Prosoziale (Anerkennung, Reflexion)"]
+  },
+  "emotions_dynamics": {
+    "method": "valence_arousal",
+    "series": [
+      {"t": 0.0, "valence": -0.3, "arousal": 0.6, "trigger_sign_id": "S18"},
+      {"t": 0.25, "valence": -0.4, "arousal": 0.7, "trigger_sign_id": "S20"},
+      {"t": 0.5, "valence": -0.55, "arousal": 0.8, "trigger_sign_id": "S19"},
+      {"t": 0.75, "valence": -0.65, "arousal": 0.85, "trigger_sign_id": "S12"},
+      {"t": 1.0, "valence": -0.5, "arousal": 0.75, "trigger_sign_id": null}
+    ]
+  },
+  "findings": {
+    "narrative": "Marker-Korrelationen bilden Eskalationsketten: Invalidation korreliert mit Projection (Defensivität), Double-Bind mit Schuldumkehr (Erpressung), was Stillstand verstärkt. Mythen naturalisieren Druck und Relativierung.",
+    "key_points": ["Starke Korrelation Invalidation-Projection-Double-Bind", "Mythos: Paradoxa als Liebestest", "Emotions-Peaks bei Korrelationsübergängen"]
+  },
+  "recommendations": [
+    {
+      "goal": "Korrelationen prognostizieren",
+      "action": "Cluster-Regeln erweitern (z.B. Invalidation + Double-Bind → Eskalationswarnung)",
+      "rationale": "Vertieft prädiktive Analyse",
+      "expected_effect": "Frühe Deeskalation",
+      "risk": "Falsch-Positive"
+    },
+    {
+      "goal": "Subtile Ketten visualisieren",
+      "action": "Syntagmatische Graphen mit Korrelationsstärken + Mythen",
+      "rationale": "Macht Dynamiken greifbar",
+      "expected_effect": "Therapeutische Insights",
+      "risk": "Überkomplexität"
+    }
+  ],
+  "claims_mode_balance": {
+    "fact": 6,
+    "inference": 7,
+    "speculation": 2
+  }
+}

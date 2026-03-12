@@ -36,6 +36,12 @@ tags:
 - reasoning
 - uncertainty
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Unsicherheit
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 vad_estimate:
   valence: 0.2
   arousal: 0.3

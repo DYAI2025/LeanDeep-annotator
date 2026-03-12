@@ -11,19 +11,83 @@ frame:
 pattern: ["(?i)\\b(perfect|amazing|incredible|soul mate|destiny|unlike anyone)\\b"]
 examples:
   positive:
-  - "You're absolutely perfect for me."
-  - "This is amazing how well we connect."
-  - "You're incredible, unlike anyone I've met."
-  - "We're soul mates, I can feel it."
-  - "This feels like destiny brought us together."
+  - Du bist absolut perfekt für mich.
+  - Das ist unglaublich, wie gut wir zusammenpassen.
+  - Du bist einzigartig, anders als alle anderen.
+  - Wir sind Seelenverwandte, das spüre ich.
+  - Das fühlt sich an wie Schicksal.
+  - Du bist perfekt, genau so wie du bist.
+  - Unglaublich, wie schnell wir uns verstehen.
+  - Du bist die tollste Person, die ich kenne.
+  - Das ist Schicksal, dass wir uns getroffen haben.
+  - Du bist perfekt in jeder Hinsicht.
+  - Ich finde dich absolut unglaublich.
+  - Seelenverwandte, ganz klar.
+  - Du bist so perfekt, das ist fast unwirklich.
+  - Unglaublich, was für ein Mensch du bist.
+  - Du bist anders als alle, die ich getroffen habe.
+  - Das ist Schicksal, ich bin mir sicher.
+  - Du bist perfekt für diese Rolle.
+  - Unglaublich talentiert und einzigartig.
+  - Seelenverwandte findet man selten, aber dich hab ich gefunden.
+  - Du bist so perfekt, ich kann es kaum glauben.
+  - Das ist einfach unglaublich mit dir.
+  - Du bist die perfekte Ergänzung.
+  - Schicksal hat uns zusammengeführt.
+  - Du bist absolut einzigartig und perfekt.
+  - Unglaublich, wie gut du das machst.
+  - Seelenverwandte, ohne Zweifel.
+  - Du bist perfekt, mehr gibt es nicht zu sagen.
+  - Das ist unglaublich schön mit dir.
+  - Du bist anders als jeder andere Mensch.
+  - Schicksal, Fügung, Bestimmung.
+  - Du bist so perfekt, dass es wehtut.
+  - Unglaublich, wie du mich verstehst.
+  - Seelenverwandte erkennen sich, und ich erkenne dich.
+  - Du bist die perfekte Person.
+  - Das ist unglaublich, was wir haben.
+  - Du bist einzigartig auf dieser Welt.
+  - Schicksal wollte, dass wir uns finden.
+  - Perfekt beschreibt dich noch nicht mal ansatzweise.
+  - Unglaublich, einfach unglaublich.
+  - Du bist mein Seelenverwandter.
+  - So perfekt, dass ich Angst habe, es zu verlieren.
+  - Unglaublich, wie natürlich das ist.
+  - Seelenverwandte in jeder Hinsicht.
+  - Du bist perfekt und ich bin dankbar.
+  - Das ist eine unglaubliche Verbindung.
+  - Du bist anders, besser, einzigartig.
+  - Schicksal, pur und einfach.
+  - Du bist perfekt, ich wiederhole mich gern.
+  - Unglaublich, was du aus mir machst.
+  - Seelenverwandte, das steht fest.
   negative:
-  - You're mostly perfect for me.
-  - This is decent how well we connect.
-  - I see it differently, but I respect your view.
-  - I want to be honest with you, even though it's hard.
-  - You're right, that was my mistake. I'm sorry.
-  - Let's both explain our side.
-  - I feel uncomfortable about this and want to talk about it.
+  - Du bist ein netter Mensch, wir passen ganz gut zusammen.
+  - Das läuft okay zwischen uns.
+  - Ich mag dich, du hast viele gute Seiten.
+  - Wir verstehen uns gut, aber nicht immer.
+  - Du hast Stärken und Schwächen, wie jeder.
+  - Es gibt Dinge, die mir an dir gefallen.
+  - Wir harmonieren in manchen Bereichen.
+  - Du bist sympathisch, das schätze ich.
+  - Wir haben eine gute Basis.
+  - Ich finde dich toll, aber nicht makellos.
+  - Du bist ein guter Partner, meistens.
+  - Wir passen in vielen Dingen zusammen.
+  - Ich schätze deine Qualitäten.
+  - Du bist mir wichtig, mit Ecken und Kanten.
+  - Wir haben eine solide Verbindung.
+  - Ich finde dich attraktiv, ganz ehrlich.
+  - Du hast viele gute Eigenschaften.
+  - Wir ergänzen uns in einigen Bereichen.
+  - Ich bin froh, dich zu kennen.
+  - Du bist ein wertvoller Mensch.
+  - Wir haben Potenzial als Paar.
+  - Ich schätze dich für das, was du bist.
+  - Du bist ein guter Mensch.
+  - Wir haben Gemeinsamkeiten.
+  - Ich bin gerne mit dir zusammen.
 tags: [atomic, v3.3, love-bombing, idealization]
 vad_estimate: {valence: 0.7, arousal: 0.55, dominance: 0.4}
 effect_on_state: {trust: 0.35, conflict: -0.2, deesc: 0.25}
+semiotic: {peirce: symbol, signifikat: Absolutheit/Schwarz-Weiss, framing_type: polarisierung, cultural_frame: '', myth: Es gibt nur Schwarz und Weiss — Differenzierung ist Schwaeche}

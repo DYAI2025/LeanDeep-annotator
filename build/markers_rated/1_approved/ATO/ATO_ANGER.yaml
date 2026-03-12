@@ -13,6 +13,11 @@ semiotic:
   level: semantic
   object: "anger_expression"
   interpretant: "effect_on_state: {conflict: +0.2, deesc: -0.2}"
+  peirce: icon
+  signifikat: Aerger/Wut
+  framing_type: eskalation
+  cultural_frame: Emotionsregulation
+  myth: Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht
 examples:
   positive_de:
   - "Ich bin sauer."

@@ -38,6 +38,12 @@ rating: 1
 composed_of:
 - ATO_DECISION_CHOOSE
 - ATO_DECISION_STAY
+semiotic:
+  peirce: symbol
+  signifikat: Entscheidungssignal
+  framing_type: meta
+  cultural_frame: ''
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich
 compositionality: deterministic
 vad_estimate:
   valence: 0.2

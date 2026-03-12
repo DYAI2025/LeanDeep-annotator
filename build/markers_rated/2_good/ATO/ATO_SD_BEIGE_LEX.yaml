@@ -15,6 +15,51 @@ examples:
   - "Signal 1 … später Signal 2 im Kontext"
   - "Kombination aus Token X und Y"
   - "Variante mit ähnlicher Semantik"
+  - Sicherheit geht vor, immer.
+  - Überleben ist das Wichtigste.
+  - Ich brauche Nahrung und ein Dach über dem Kopf.
+  - Die Gefahr ist überall.
+  - Ich brauche Ruhe, einfach nur Ruhe.
+  - Sicherheit für meine Familie.
+  - Ums Überleben kämpfen wir jeden Tag.
+  - Nahrung und Wasser müssen reichen.
+  - Gefahr droht von allen Seiten.
+  - Ruhe ist das, was ich am meisten vermisse.
+  - Mir geht es um pure Sicherheit.
+  - Überleben in schwierigen Zeiten.
+  - Nahrung zu finden ist die Priorität.
+  - Die Gefahr lauert überall.
+  - Endlich etwas Ruhe gefunden.
+  - Sicherheit ist ein Grundbedürfnis.
+  - Überleben steht an erster Stelle.
+  - Genug Nahrung für alle.
+  - Die Gefahr ist real.
+  - In Ruhe gelassen werden, das ist alles.
+  - Sicherheit für die Kinder.
+  - Wir überleben das zusammen.
+  - Nahrung beschaffen für morgen.
+  - Gefahr erkannt, Gefahr gebannt.
+  - Ruhe und Frieden, mehr brauche ich nicht.
+  - Sicherheit am Arbeitsplatz.
+  - Überleben in der Wildnis.
+  - Nahrung ist knapp.
+  - Die Gefahr unterschätzen wir.
+  - Ruhe vor dem Sturm.
+  - Sicherheit im Straßenverkehr.
+  - Überleben ohne Hilfe.
+  - Nahrung sicherstellen.
+  - Keine Gefahr in Sicht.
+  - Innere Ruhe finden.
+  - Sicherheit durch Gemeinschaft.
+  - Wir überleben Krisen.
+  - Nahrung und Schutz.
+  - Die Gefahr ist gebannt.
+  - Ruhe kehrt ein.
+  - Sicherheit geben.
+  - Überleben heißt Anpassen.
+  - Nahrungsvorräte anlegen.
+  - Gefahr für Leib und Leben.
+  - Ruhe bewahren.
   negative:
   - I think we should discuss this calmly.
   - That's a good point you're making.
@@ -23,5 +68,24 @@ examples:
   - I've noticed we think differently about this.
   - I want to understand what you mean.
   - That sounds like an important topic for you.
+  - Ich optimiere meinen Workflow.
+  - Das System braucht mehr Integration.
+  - Wir brauchen eine holistische Perspektive.
+  - Konsens im Team ist wichtig.
+  - Die KPIs sehen gut aus.
+  - Wir leben in einer komplexen Welt.
+  - Ordnung muss sein.
+  - Respekt ist die Grundlage.
+  - Lass uns das analysieren.
+  - Wir brauchen eine Strategie.
+  - Innovation treibt uns an.
+  - Empathie zeigen.
+  - Leistung zählt.
+  - Die Tradition bewahren.
+  - Kontextwechsel beachten.
+  - Gemeinschaft pflegen.
+  - Ergebnisse liefern.
+  - Ahnen ehren.
 vad_estimate: {valence: 0.0, arousal: 0.3, dominance: 0.5}
 effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
+semiotic: {peirce: icon, signifikat: Atomares Signal, framing_type: unsicherheit, cultural_frame: '', myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'}

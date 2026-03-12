@@ -40,13 +40,17 @@ examples:
 tags:
 - communication
 rating: 1
-composed_of:
-- ATO_UNKNOWN
 activation:
   rule: ANY 2 IN 3 messages
 scoring:
   base: 1.5
   weight: 1.2
+semiotic:
+  peirce: index
+  signifikat: Mauern/Blockade
+  framing_type: vermeidung
+  cultural_frame: Gottman
+  myth: 'Rueckzug schuetzt — wer sich entzieht, vermeidet Schlimmeres'
 compositionality: deterministic
 vad_estimate:
   valence: -0.5

@@ -39,14 +39,20 @@ composed_of:
   any_of:
   - ATO_JOY
   - ATO_POSITIVE_RESONANCE
-  - ATO_SUPPORTIVE_LANGUAGE
+  - ATO_SUPPORT_PHRASE
   - ATO_GRATITUDE
 activation:
-  rule: "AT_LEAST 14 IN 10 messages"
+  rule: AT_LEAST 14 IN 10 messages
   window: 10
 scoring:
   base: 0.6
   weight: 1.0
+semiotic:
+  peirce: icon
+  signifikat: Freude/Glueck
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

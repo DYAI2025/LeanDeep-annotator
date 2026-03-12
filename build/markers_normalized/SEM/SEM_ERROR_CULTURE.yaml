@@ -35,9 +35,15 @@ tags:
 rating: 1
 composed_of:
 - ATO_UNCERTAINTY_PHRASE
-- ATO_MICRO_DISMISSAL
+- ATO_MINIMIZATION
 activation:
   rule: ANY 2 IN 3 messages
+semiotic:
+  peirce: icon
+  signifikat: Lernbereitschaft/Wachstum
+  framing_type: reparatur
+  cultural_frame: ''
+  myth: 'Kommunikation loest alles — reden heilt, schweigen zerstoert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

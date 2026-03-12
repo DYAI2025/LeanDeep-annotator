@@ -65,6 +65,12 @@ examples:
 tags:
 - deescalation
 rating: 1
+semiotic:
+  peirce: index
+  signifikat: Eskalation/Konfliktsteigerung
+  framing_type: eskalation
+  cultural_frame: Gottman
+  myth: 'Konflikt ist unvermeidbar — wer kaempft, hat zumindest Recht'
 vad_estimate:
   valence: 0.45
   arousal: 0.2

@@ -1,0 +1,81 @@
+name: Test & Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      LEANDEEP_REQUIRE_AUTH: "false"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python3 -m pytest tests/ -x -q
+
+      - name: Verify marker registry integrity
+        run: |
+          python3 -c "
+          import json, sys
+          r = json.load(open('build/markers_normalized/marker_registry.json'))
+          n = len(r.get('markers', {}))
+          print(f'Registry: {n} markers loaded')
+          if n < 800:
+              print(f'ERROR: Expected 800+ markers, got {n}')
+              sys.exit(1)
+          # Check layer distribution
+          layers = {}
+          for mid, m in r['markers'].items():
+              l = m.get('layer', 'UNKNOWN')
+              layers[l] = layers.get(l, 0) + 1
+          print(f'Layers: {layers}')
+          if 'UNKNOWN' in layers and layers['UNKNOWN'] > 5:
+              print(f'ERROR: {layers[\"UNKNOWN\"]} markers with UNKNOWN layer')
+              sys.exit(1)
+          "
+
+      - name: Verify zero broken refs
+        run: |
+          python3 -c "
+          import json, sys
+          r = json.load(open('build/markers_normalized/marker_registry.json'))
+          markers = r.get('markers', {})
+          all_ids = set(markers.keys())
+          broken = 0
+          for mid, m in markers.items():
+              composed = m.get('composed_of')
+              if isinstance(composed, list):
+                  for ref in composed:
+                      if isinstance(ref, str) and ref not in all_ids:
+                          # Check fuzzy match
+                          parts = ref.split('_')[1:]
+                          found = any(all(p.upper() in aid.upper() for p in parts) for aid in all_ids) if parts else False
+                          if not found:
+                              broken += 1
+                              print(f'  Broken: {mid} -> {ref}')
+              elif isinstance(composed, dict):
+                  for ref in composed.get('require', []):
+                      if isinstance(ref, str) and ref not in all_ids:
+                          parts = ref.split('_')[1:]
+                          found = any(all(p.upper() in aid.upper() for p in parts) for aid in all_ids) if parts else False
+                          if not found:
+                              broken += 1
+                              print(f'  Broken: {mid} -> {ref}')
+          print(f'Broken refs: {broken}')
+          if broken > 0:
+              sys.exit(1)
+          "

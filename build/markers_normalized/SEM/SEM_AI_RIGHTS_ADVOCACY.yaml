@@ -29,10 +29,15 @@ examples:
 tags: []
 rating: 2
 composed_of:
-- ATO_AI_RIGHTS_FORDERUNG
 - ATO_DYAD_WE
 activation:
-  rule: "BOTH IN 2 messages"
+  rule: BOTH IN 2 messages
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: 0.0

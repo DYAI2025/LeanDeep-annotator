@@ -46,6 +46,12 @@ scoring:
   weight: 0.95
 window:
   messages: 8
+semiotic:
+  peirce: index
+  signifikat: Semantisches Muster
+  framing_type: unsicherheit
+  cultural_frame: ''
+  myth: 'Zweifel ist Schwaeche — wer zoegert, verliert'
 compositionality: deterministic
 vad_estimate:
   valence: -0.5
@@ -55,3 +61,5 @@ effect_on_state:
   trust: -0.3
   conflict: 0.4
   deesc: -0.2
+activation:
+  rule: "ANY 2 IN 4 messages"

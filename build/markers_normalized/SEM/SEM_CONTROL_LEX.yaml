@@ -39,14 +39,20 @@ rating: 1
 composed_of:
   any_of:
   - ATO_CONTROL_PHRASES
-  - ATO_POWER_LANGUAGE
+  - ATO_POWER_ASSERTION
   - ATO_SOVEREIGNTY_OVER_SUBJECT
 activation:
-  rule: "AT_LEAST 2 IN 4 messages"
+  rule: AT_LEAST 2 IN 4 messages
   window: 4
 scoring:
   base: 0.65
   weight: 1.12
+semiotic:
+  peirce: index
+  signifikat: Kontrolle/Dominanz
+  framing_type: kontrollnarrative
+  cultural_frame: Sozialpsychologie
+  myth: 'Wer die Deutungshoheit hat, hat die Macht — Kontrolle tarnt sich als Fuersorge'
 compositionality: deterministic
 vad_estimate:
   valence: -0.05

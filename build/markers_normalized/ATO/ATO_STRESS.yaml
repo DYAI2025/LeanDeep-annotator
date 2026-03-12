@@ -28,19 +28,83 @@ examples:
   - Das ist eine riesige Belastung für mich.
   - Ich bin am Limit.
   - Zu viel auf einmal.
+  - Ich bin so gestresst, ich kann nicht mehr.
+  - Alles ist gerade stressig.
+  - Ich fühle mich total überfordert mit allem.
+  - Der Druck ist unter Druck kaum auszuhalten.
+  - Ich schaff das einfach nicht mehr.
+  - Der Stress macht mich krank.
+  - Zu viel Arbeit, zu wenig Zeit.
+  - Ich bin überfordert und erschöpft.
+  - Der ganze Tag war stressig.
+  - Unter Druck funktioniere ich nicht gut.
+  - Ich bin gestresst wegen der Deadline.
+  - Das wird mir zu viel gerade.
+  - Stressig ohne Ende diese Woche.
+  - Ich bin überfordert mit den Anforderungen.
+  - Der Druck von allen Seiten ist unter Druck enorm.
+  - Ich schaff das nicht mehr, ehrlich.
+  - Zu viel Stress, zu wenig Schlaf.
+  - Ich fühle mich unter Druck gesetzt.
+  - Alles auf einmal, das ist zu viel.
+  - Der Stress lässt nicht nach.
+  - Ich bin gestresst und genervt.
+  - Überfordert ist noch untertrieben.
+  - Der Druck wird jeden Tag größer.
+  - Ich schaff das nicht in der Zeit.
+  - Stressig ist gar kein Ausdruck.
+  - Zu viel auf dem Teller gerade.
+  - Ich bin gestresst vom Pendeln allein.
+  - Überfordert mit der Situation.
+  - Unter Druck arbeiten macht mich fertig.
+  - Ich schaff das nicht alleine.
+  - Alles ist zu viel, ich brauche Pause.
+  - Gestresst und am Ende.
+  - Der Zeitdruck ist stressig.
+  - Ich bin so überfordert, ich könnte heulen.
+  - Unter Druck stehe ich ständig.
+  - Das ist mir alles zu viel.
+  - Stressig, stressig, stressig.
+  - Ich bin überfordert und frustriert.
+  - Zu viel Verantwortung auf einmal.
+  - Ich schaff das nicht mehr, ich brauche Hilfe.
   negative:
-  - Ich denke, wir sollten das sachlich betrachten.
   - Mir geht es gut, danke der Nachfrage.
-  - Das ist ein interessanter Gedanke.
   - Ich bin gerade entspannt.
   - Alles in Ordnung bei mir.
-  - Ich fuehle mich heute ruhig und gelassen.
-  - Das ueberrascht mich, aber es ist okay.
+  - Ich fühle mich heute ruhig und gelassen.
+  - Alles im Griff, kein Problem.
+  - Ich habe gerade viel Ruhe.
+  - Alles läuft, ich bin tiefenentspannt.
+  - Kein Druck, alles easy.
+  - Ich genieße die freie Zeit.
+  - Stressfrei heute, endlich mal.
+  - Ich bin ausgeglichen und zufrieden.
+  - Alles im grünen Bereich.
+  - Mir geht es blendend.
+  - Ich fühle mich wohl und sicher.
+  - Keine Sorgen gerade.
+  - Ich bin relaxed.
+  - Alles harmonisch bei mir.
+  - Kein Zeitdruck, alles fein.
+  - Ich bin gelassen und froh.
+  - Nichts belastet mich gerade.
+  - Ich genieße den Moment.
+  - Alles ruhig hier.
+  - Mir geht es richtig gut.
+  - Ich habe alles im Griff.
+  - Entspannt und zufrieden, danke.
 tags:
 - affect
 - stress
 - overwhelm
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Emotionale Ueberwaeltigung
+  framing_type: ueberflutung
+  cultural_frame: Emotionsregulation
+  myth: Emotionen sind unkontrollierbar — Ueberwaeltigung ist Authentizitaet
 vad_estimate:
   valence: -0.6
   arousal: 0.3

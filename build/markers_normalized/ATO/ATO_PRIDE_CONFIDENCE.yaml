@@ -98,6 +98,12 @@ tags:
 - self-assurance
 - v3.4
 rating: 1
+semiotic:
+  peirce: icon
+  signifikat: Positive Grundhaltung
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 vad_estimate:
   valence: 0.0
   arousal: 0.3
@@ -106,6 +112,8 @@ effect_on_state:
   trust: 0.0
   conflict: 0.0
   deesc: 0.0
+activation:
+  rule: "ANY 1"
 metadata:
   created: "2026-02-12"
   author: "DYAI Emotional Semantics Collection"

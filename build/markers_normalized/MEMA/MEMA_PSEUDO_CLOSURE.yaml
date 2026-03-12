@@ -1,0 +1,116 @@
+id: MEMA_PSEUDO_CLOSURE
+schema: LeanDeep
+version: '5.1'
+layer: MEMA
+lang: de
+description: ''
+frame:
+  signal:
+  - closure
+  - pseudo
+  concept: Scheinbare Klärung ohne echte Auflösung
+  pragmatics: Erkennt oberflächliche Beendigungen, die das eigentliche Problem nicht lösen
+  narrative: meta_pattern
+patterns: []
+examples:
+  positive:
+  - Ok, lassen wir das. Ist ja auch egal.
+  - Gut, dann ist das Thema durch. – Aber eigentlich ist es das nicht.
+  - Ich will nicht mehr streiten. Passt schon.
+  - Schwamm drüber, oder? Wir kommen eh nicht weiter.
+  - Lass gut sein. Bringt ja nix.
+  - Okay, ich hab verstanden. Können wir jetzt was anderes machen?
+  - Ist ja jetzt geklärt, oder? – Ich hab das Gefühl, du denkst das nicht wirklich.
+  - Vergessen wir das einfach. War dumm von mir.
+  - Also sind wir uns einig? – Naja, irgendwie schon.
+  - Geschenkt. Reden wir nicht mehr drüber.
+  - Ich akzeptiere das jetzt einfach, auch wenn es sich falsch anfühlt.
+  - Dann lassen wir es halt so. Wird schon.
+  - 'Ok, Thema beendet. – Drei Tage später: dasselbe Thema wieder.'
+  - Ja gut, dann war es halt ein Missverständnis. Fertig.
+  - Wir müssen da jetzt nicht weiter drauf rumreiten.
+  - Passt schon, ich mach mir keine Gedanken mehr drüber.
+  - Einigen wir uns darauf, dass wir uns nicht einig sind.
+  - Ich lass das jetzt fallen, ok? Mir fehlt die Energie.
+  - Ist abgehakt. – Wirklich? – Ja. – Du klingst nicht so.
+  - Dann sag ich halt ja, damit Ruhe ist.
+  - Ok, ich bin nicht mehr sauer. – Du klangst aber gerade noch anders.
+  - Vergiss es einfach. Ist nicht so wichtig.
+  - Gut, dann haben wir das besprochen. Weiter im Text.
+  - Ich will mich nicht mehr damit belasten. Punkt.
+  - Naja, wir werden uns da wohl nie einig. Egal.
+  - Lass uns einfach so tun, als wäre nichts gewesen.
+  - Ich hab kapiert, was du meinst. Thema erledigt.
+  - Wir drehen uns im Kreis – lass einfach gut sein.
+  - Okay okay, du hast recht. Können wir jetzt bitte weiter?
+  - Das bringt uns nicht weiter. Machen wir was anderes.
+  - Ich hab keinen Bock mehr auf das Thema. Fertig.
+  - Ist doch eh egal was ich sage. Passt.
+  - Gut, dann sehen wir das halt anders. Ende.
+  - Mir reicht das jetzt. Ich will meinen Frieden.
+  - Dann sind wir uns ja einig. – Nein, aber du hörst mir nicht zu.
+  - Haken dran. Ich will nach vorne schauen.
+  - Lass uns das begraben und weitermachen.
+  - Ja schon gut, ich komm drüber hinweg.
+  - Vergeben und vergessen, ja? – Wenn du meinst.
+  - Ok, ich akzeptiere deine Entschuldigung. – Aber du wirkst immer noch verletzt.
+  - Ich leg das Thema jetzt ad acta.
+  - Schwamm drüber. Neues Kapitel.
+  - Dann ist ja alles gesagt. – Eigentlich nicht, aber ok.
+  - Ich verzeihe dir. – Warum klingt das so gezwungen?
+  - Gut, Problem gelöst. – Gelöst oder verdrängt?
+  - Dann machen wir einfach weiter wie vorher.
+  - Reicht jetzt. Wir haben genug diskutiert.
+  - Na dann. Ist ja jetzt alles gut. – Ist es das?
+  - Ok, ich vergesse das jetzt. – Wirklich? Das schaffst du?
+  - Abgehakt, abgeheftet, abgelegt.
+  negative:
+  - Ich bin froh, dass wir das endlich richtig besprochen haben. Ich fühle mich erleichtert.
+  - Danke, dass du zugehört hast. Ich glaube, wir haben das jetzt wirklich verstanden.
+  - Das war ein schweres Gespräch, aber ich bin dankbar, dass wir es hatten.
+  - Ich merke, dass sich etwas verändert hat zwischen uns. Das fühlt sich gut an.
+  - Wir haben es geschafft, einen Kompromiss zu finden, hinter dem wir beide stehen.
+  - Ich fühle mich nach unserem Gespräch viel leichter. Danke.
+  - Das Thema ist jetzt wirklich gelöst – ich hab keine offenen Fragen mehr.
+  - Wir haben beide unsere Seite erklärt und ich verstehe dich jetzt besser.
+  - Ich bin erleichtert, dass wir das klären konnten. Das belastet mich nicht mehr.
+  - Wir haben einen konkreten Plan, wie wir das in Zukunft besser machen.
+  - Es tut gut, dass wir ehrlich miteinander waren.
+  - Ich hatte Angst vor dem Gespräch, aber jetzt fühlt es sich wirklich abgeschlossen an.
+  - Wir haben eine Lösung gefunden, die für uns beide funktioniert.
+  - Ich bin froh, dass du meinen Standpunkt jetzt verstehst.
+  - Das war wichtig. Ich fühle mich gehört und gesehen.
+  - Wir sind uns einig geworden und haben auch einen Weg gefunden.
+  - Es war schmerzhaft, aber wir sind gestärkt daraus hervorgegangen.
+  - Ich kann das Thema jetzt wirklich loslassen, weil ich mich verstanden fühle.
+  - Das Gespräch hat uns näher gebracht.
+  - Zum ersten Mal habe ich das Gefühl, dass das Thema wirklich erledigt ist.
+  - Danke für deine Ehrlichkeit. Das hat geholfen.
+  - Ich spüre, dass sich wirklich was verändert hat.
+  - Wir haben nicht nur geredet, sondern auch konkrete Schritte vereinbart.
+  - Ich fühle Frieden mit der Situation.
+  - Das war das produktivste Gespräch seit langem.
+tags:
+- mema
+- closure
+- avoidance
+- conflict
+rating: 2
+composed_of:
+  required_any:
+  - CLU_AGREE_TO_DISAGREE
+  - SEM_CONFLICT_AVOIDANCE
+  supportive:
+  - SEM_EMOTIONAL_OVERWHELM
+  - ATO_TOPIC_SHIFT
+activation:
+  rule: "ANY 2 IN 15 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+semiotic:
+  peirce: symbol
+  signifikat: Meta-Diagnose
+  framing_type: meta
+  cultural_frame: Systemisch
+  myth: Beziehung ist ein Organismus — Muster wiederholen sich unausweichlich

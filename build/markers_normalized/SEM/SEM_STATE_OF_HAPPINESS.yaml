@@ -40,6 +40,12 @@ composed_of:
 - ATO_CONDITION_CUE
 activation:
   rule: "BOTH IN 1 message"
+semiotic:
+  peirce: icon
+  signifikat: Freude/Glueck
+  framing_type: empathie
+  cultural_frame: ''
+  myth: Verstehen heisst zustimmen — Empathie fordert Parteinahme
 compositionality: deterministic
 vad_estimate:
   valence: 0.0
