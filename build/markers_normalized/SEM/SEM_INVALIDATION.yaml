@@ -53,7 +53,7 @@ tags:
 - toxicity
 rating: 1
 composed_of:
-- ATO_EMOTIONAL_INVALIDATION
+- ATO_EXPERIENCE_NEGATION
 - ATO_FEELING_DOWNPLAY_WORD
 activation:
   rule: ANY 1

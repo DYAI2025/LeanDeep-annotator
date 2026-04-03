@@ -1,0 +1,45 @@
+id: SEM_PLAYFUL_TITLE_ASSIGNMENT
+schema: LeanDeep
+version: '5.1'
+layer: SEM
+lang: de
+description: Spielerische Vergabe eines Titels oder Spitznamens.
+frame:
+  signal:
+  - Meister
+  - Königin
+  - Chefkoch
+  - Held des Tages
+  concept: Titelvergabe
+  pragmatics: Auflockerung und positive Aufladung
+  narrative: spielerisch
+patterns:
+- type: regex
+  value: (?i)\b(meister|meisterin|chefkoch|chefin|chef|held|heldin|königin|könig|experte|expertin|guru|profi)\s+(der|des|im|beim|in|von|des\s+tages|des\s+abends)\b
+- type: regex
+  value: (?i)\b(herr|frau)\s+(präsident|minister|direktor|meister|chef)\b
+examples:
+  positive:
+  - Na, Herr Präsident, wie läuft der Tag?
+  - Glückwunsch, du bist jetzt der Held des Abwaschs.
+  - Chefkoch, was gibt’s heute Leckeres?
+  - Königin der Ausreden, mal wieder.
+  - Unser Meister im Prokrastinieren.
+  negative:
+  - Ich finde, wir sollten das in Ruhe besprechen.
+  - Das ist ein guter Punkt, den du da machst.
+  - Ich verstehe deine Perspektive.
+  - Lass uns gemeinsam eine Loesung finden.
+  - Mir ist aufgefallen, dass wir unterschiedlich denken.
+  - Ich moechte verstehen, was du meinst.
+  - Das klingt nach einem wichtigen Thema fuer dich.
+tags:
+- semantic
+- playful
+- title
+rating: 1
+scoring:
+  base: 1.4
+  weight: 1.1
+activation:
+  rule: "ANY 1 IN 3 messages"
