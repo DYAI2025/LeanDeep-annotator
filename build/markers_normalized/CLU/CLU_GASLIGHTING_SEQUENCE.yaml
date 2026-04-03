@@ -37,7 +37,7 @@ tags: []
 rating: 1
 composed_of:
   require:
-  - SEM_REALITY_DISTORTION_FIELD
+  - SEM_GASLIGHTING_ATTEMPT
   - CLU_COVERT_RESPONSIBILITY_INVERSION
 window:
   size_messages: 6
