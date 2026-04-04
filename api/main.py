@@ -905,9 +905,12 @@ async def playground():
 async def resonanzraum():
     """Serve the Resonanzraum analysis interface."""
     html_path = Path(__file__).parent / "static" / "resonanzraum.html"
-    if html_path.exists():
+    try:
         return HTMLResponse(content=html_path.read_text(encoding="utf-8"))
-    return HTMLResponse(content="<h1>resonanzraum.html not found</h1>", status_code=404)
+    except FileNotFoundError:
+        return HTMLResponse(content="<h1>resonanzraum.html not found</h1>", status_code=404)
+    except Exception as exc:
+        return HTMLResponse(content=f"<h1>Error loading UI: {exc}</h1>", status_code=500)
 
 
 # ---------------------------------------------------------------------------

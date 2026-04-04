@@ -38,6 +38,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **[Perf]** Resize event handler fired on every pixel without debounce — added 100ms debounce
 - **[Bug]** Waveform canvas initialised before fonts/layout rendered (possible zero-rect) — deferred init to `requestAnimationFrame`
 - **[UX]** `language` was hardcoded to `'de'` — now inferred from `navigator.language` with `'de'` fallback
+- **[Bug]** Marker span text sliced from `s.start` instead of `safeStart` after overlap guard — rendered duplicate text for overlapping markers
+- **[Bug]** Concurrent analysis requests created race condition (markers from request A mixed with narratives from request B) — added `AbortController` with abort-on-resubmit
+- **[Perf]** `requestAnimationFrame` handle not tracked — added `wRafId` + `cancelAnimationFrame` on `beforeunload`
+- **[Security]** FastAPI `/resonanzraum` route lacked `try/except` — added `FileNotFoundError` + generic `Exception` handlers
+- **[UX]** No minimum input length check — added 5-character guard with status message
+- **[A11y]** Canvas missing `aria-label` and `role="img"` — added for screen reader support
+- **[Bug]** `narrativeTypeInfo` used fragile prefix matching — now uses exact match first, then full substring fallback
 
 ---
 

@@ -659,7 +659,7 @@ body::before {
     <div class="header-title">Resonanzraum</div>
     <div class="header-subtitle">LeanDeep Semantic Analysis</div>
   </div>
-  <canvas id="waveform-canvas"></canvas>
+  <canvas id="waveform-canvas" aria-label="Emotionale Waveform-Visualisierung" role="img"></canvas>
   <div class="header-status">
     <div class="status-dot" id="status-dot"></div>
     <span id="status-text">bereit</span>
@@ -768,7 +768,12 @@ const state = {
   activeMarker:    null,
   tenor:           0,
   analysing:       false,
+  // Concurrent request guard: abort in-flight request on new submission
+  abortController: null,
 };
+
+// rAF handle for cancellation on page teardown
+let wRafId = null;
 
 /* ══════════════════════════════════════════════════════
    WAVEFORM HEADER
@@ -814,7 +819,7 @@ function drawWaveform() {
     wCtx.stroke();
     wPhase += state.analysing ? 0.055 : 0.013;
   }
-  requestAnimationFrame(drawWaveform);
+  wRafId = requestAnimationFrame(drawWaveform);
 }
 
 // Fix #7: debounced resize to avoid thrashing on every pixel
@@ -828,7 +833,12 @@ window.addEventListener('resize', debouncedResize);
 // Fix #8: init after first paint so fonts/layout are ready
 requestAnimationFrame(() => {
   resizeWaveform();
-  drawWaveform();
+  wRafId = requestAnimationFrame(drawWaveform);
+});
+
+// Cleanup on page teardown
+window.addEventListener('beforeunload', () => {
+  if (wRafId) cancelAnimationFrame(wRafId);
 });
 
 /* ══════════════════════════════════════════════════════
@@ -1019,7 +1029,8 @@ function renderAnnotatedDialogue(messages, markers) {
         const span = document.createElement('span');
         span.className = `m-span ${s.marker.layer}`;
         span.dataset.markerId = s.marker.id;
-        span.textContent = text.slice(s.start, s.end);
+        // Use safeStart (not s.start): portion before safeStart already rendered as text node
+        span.textContent = text.slice(safeStart, s.end);
 
         span.addEventListener('mouseenter', e => showTooltip(s.marker, e.clientX, e.clientY));
         span.addEventListener('mousemove',  e => {
@@ -1059,9 +1070,12 @@ const NARRATIVE_TYPE_MAP = {
 };
 
 function narrativeTypeInfo(raw) {
-  const key = (raw || 'primary').toLowerCase().trim();
+  const key = (raw || '').toLowerCase().trim();
+  // Exact match first
+  if (NARRATIVE_TYPE_MAP[key]) return NARRATIVE_TYPE_MAP[key];
+  // Substring match fallback (each full key checked, not just prefix)
   for (const [k, v] of Object.entries(NARRATIVE_TYPE_MAP)) {
-    if (key.includes(k.split(' ')[0])) return v;
+    if (key.includes(k)) return v;
   }
   return { label: 'Lesart', cls: '' };
 }
@@ -1321,10 +1335,17 @@ function buildNarrativesFromResponse(data) {
 ══════════════════════════════════════════════════════ */
 async function runAnalysis() {
   const raw = document.getElementById('dialogue-input').value.trim();
-  if (!raw) return;
+  if (!raw || raw.length < 5) {
+    setStatus('Bitte mindestens 5 Zeichen eingeben.', false);
+    return;
+  }
 
   const messages = parseDialogueInput(raw);
   if (!messages.length) return;
+
+  // Abort any in-flight request to prevent race conditions
+  if (state.abortController) state.abortController.abort();
+  state.abortController = new AbortController();
 
   state.messages = messages;
   setLoading(true);
@@ -1334,6 +1355,7 @@ async function runAnalysis() {
     const resp = await fetch('/v1/analyze/conversation', {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
+      signal:  state.abortController.signal,
       body:    JSON.stringify({
         messages,
         layers:    ['ato', 'sem', 'clu', 'mema'],
@@ -1364,6 +1386,8 @@ async function runAnalysis() {
     setLoading(false);
 
   } catch (err) {
+    // Silently ignore aborted requests (user started a new one)
+    if (err.name === 'AbortError') return;
     setStatus('Fehler: ' + err.message, false);
     setLoading(false);
     // Show error as overlay — do NOT destroy DOM structure (resetView() needs input-area + annotated-output)
