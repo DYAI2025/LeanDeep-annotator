@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n-key="page_title">LeanDeep LD5 - Communication Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 450px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .tab-active {
+            border-bottom: 2px solid #0f766e;
+            color: #0f766e;
+            font-weight: bold;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-teal-200 selection:text-teal-900">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center font-bold text-xl text-teal-800 tracking-tight">
+                    <span class="mr-2 text-2xl">&#x269B;</span> LeanDeep LD5
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-stone-600">
+                    <a href="#vision" class="hover:text-teal-700 transition" data-i18n-key="nav_vision">Vision</a>
+                    <a href="#technologie" class="hover:text-teal-700 transition" data-i18n-key="nav_engine">Engine</a>
+                    <a href="#anwendungen" class="hover:text-teal-700 transition" data-i18n-key="nav_usecases">Anwendungen</a>
+                    <a href="#vorteile" class="hover:text-teal-700 transition" data-i18n-key="nav_benefits">Vorteile</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="toggleLanguage()" class="px-3 py-2 rounded-md text-sm font-medium bg-stone-100 hover:bg-stone-200 transition" id="langToggle">
+                        EN
+                    </button>
+                    <a href="#kontakt" class="bg-teal-700 hover:bg-teal-800 text-white px-4 py-2 rounded-md text-sm font-medium transition shadow-sm" data-i18n-key="nav_cta">Live-Demo anfragen</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="vision" class="bg-stone-100 py-20 border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-teal-700 font-semibold tracking-wide uppercase mb-3" data-i18n-key="hero_tagline">Jenseits der Worte</p>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-stone-900 mb-6 leading-tight">
+                <span data-i18n-key="hero_title_pt1">Die Tiefenstruktur der</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500" data-i18n-key="hero_title_pt2">Kommunikation</span>
+                <span data-i18n-key="hero_title_pt3">entschlüsseln</span>
+            </h1>
+            <p class="mt-4 max-w-3xl mx-auto text-xl text-stone-600 mb-10 leading-relaxed" data-i18n-key="hero_description">
+                In einer Welt, die in Daten ertrinkt, bleibt die wichtigste Information oft unsichtbar: Die psychologische und semiotische Dynamik zwischen Menschen. LeanDeep LD5 ist Ihre High-End-Intelligence-Engine für das "Wie" hinter dem "Was".
+            </p>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto text-left border border-stone-100">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <div class="text-5xl text-amber-500 md:w-1/4 text-center">
+                        &#x1F52C;
+                    </div>
+                    <div class="md:w-3/4">
+                        <p class="text-stone-700 text-lg leading-relaxed" data-i18n-key="hero_detail">
+                            Durch die Kombination von linguistischer Präzision, prosodischer Analyse (Stimmführung) und tiefenpsychologischen Algorithmen wandelt LD5 flüchtige Gespräche in messbare, objektive Daten um. Es ist nicht einfach nur ein Transkriptions-Tool – es ist ein Analyse-Instrument für menschliche Interaktion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="technologie" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-stone-900 mb-4" data-i18n-key="arch_title">Das Vier-Ebenen-Modell</h2>
+                <p class="text-lg text-stone-600 max-w-2xl mx-auto" data-i18n-key="arch_description">
+                    Diese Sektion visualisiert die fraktale Architektur von LD5. Sie zeigt, wie aus feinsten mikroskopischen Signalen schrittweise komplexe, psychologische Metamuster berechnet werden.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-stone-50 p-6 rounded-lg border border-stone-200 hover:shadow-md transition group">
+                    <div class="text-4xl mb-4 text-teal-600 group-hover:scale-110 transition-transform">&#x26B2;</div>
+                    <h3 class="text-xl font-bold text-stone-800 mb-2" data-i18n-key="layer_ato_title">ATO</h3>
+                    <p class="text-sm text-teal-700 font-semibold mb-3" data-i18n-key="layer_ato_subtitle">Atomic Markers</p>
+                    <p class="text-stone-600 text-sm" data-i18n-key="layer_ato_desc">
+                        Die kleinsten Bausteine. LD5 misst Pausen, Filler-Wörter ("ähm"), Wortwahl-Präferenzen und feine Tonhöhen-Schwankungen in Millisekunden.
+                    </p>
+                </div>
+
+                <div class="bg-stone-50 p-6 rounded-lg border border-stone-200 hover:shadow-md transition group">
+                    <div class="text-4xl mb-4 text-teal-600 group-hover:scale-110 transition-transform">&#x1F50D;</div>
+                    <h3 class="text-xl font-bold text-stone-800 mb-2" data-i18n-key="layer_sem_title">SEM</h3>
+                    <p class="text-sm text-teal-700 font-semibold mb-3" data-i18n-key="layer_sem_subtitle">Semantic Markers</p>
+                    <p class="text-stone-600 text-sm" data-i18n-key="layer_sem_desc">
+                        Bedeutungseinheiten und Intentionen. Erkennt das System Ironie? Ein aufrichtiges Lob? Eine versteckte Anschuldigung oder den Wunsch nach Nähe?
+                    </p>
+                </div>
+
+                <div class="bg-stone-50 p-6 rounded-lg border border-stone-200 hover:shadow-md transition group">
+                    <div class="text-4xl mb-4 text-teal-600 group-hover:scale-110 transition-transform">&#x1F9E9;</div>
+                    <h3 class="text-xl font-bold text-stone-800 mb-2" data-i18n-key="layer_clu_title">CLU</h3>
+                    <p class="text-sm text-teal-700 font-semibold mb-3" data-i18n-key="layer_clu_subtitle">Cluster Markers</p>
+                    <p class="text-stone-600 text-sm" data-i18n-key="layer_clu_desc">
+                        Kombinationen, die emotionale Zustände definieren. Ein "Widerstands-Cluster" entsteht z.B., wenn defensive Sprache auf abfallende Intonation trifft.
+                    </p>
+                </div>
+
+                <div class="bg-stone-50 p-6 rounded-lg border border-stone-200 hover:shadow-md transition group border-b-4 border-b-amber-500">
+                    <div class="text-4xl mb-4 text-amber-500 group-hover:scale-110 transition-transform">&#x1F310;</div>
+                    <h3 class="text-xl font-bold text-stone-800 mb-2" data-i18n-key="layer_mema_title">MEMA</h3>
+                    <p class="text-sm text-amber-600 font-semibold mb-3" data-i18n-key="layer_mema_subtitle">Meta-Patterns</p>
+                    <p class="text-stone-600 text-sm" data-i18n-key="layer_mema_desc">
+                        Die Langzeit-DNA der Kommunikation. Hier werden komplexe Beziehungsdynamiken (nach Gottman) oder Entwicklungsstufen (Spiral Dynamics) objektiv sichtbar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="anwendungen" class="py-20 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-stone-900 mb-4" data-i18n-key="usecases_title">Interaktive Anwendungsfälle</h2>
+                <p class="text-lg text-stone-600 max-w-3xl mx-auto" data-i18n-key="usecases_description">
+                    Erleben Sie in dieser Sektion, wie LD5 in verschiedenen Domänen verborgene Dynamiken aufdeckt. Wählen Sie einen Anwendungsfall, um das Szenario, den LD5-Insight und die daraus resultierenden, datenbasierten Visualisierungen zu erkunden.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex flex-wrap border-b border-stone-200" id="tabs">
+                    <button class="flex-1 py-4 px-6 text-sm font-medium text-stone-500 hover:text-teal-700 focus:outline-none tab-active transition" onclick="switchTab('therapy', this)" data-i18n-key="tab_therapy">Psychotherapie</button>
+                    <button class="flex-1 py-4 px-6 text-sm font-medium text-stone-500 hover:text-teal-700 focus:outline-none transition" onclick="switchTab('hr', this)" data-i18n-key="tab_hr">HR & Leadership</button>
+                    <button class="flex-1 py-4 px-6 text-sm font-medium text-stone-500 hover:text-teal-700 focus:outline-none transition" onclick="switchTab('research', this)" data-i18n-key="tab_research">Forschung</button>
+                    <button class="flex-1 py-4 px-6 text-sm font-medium text-stone-500 hover:text-teal-700 focus:outline-none transition" onclick="switchTab('sales', this)" data-i18n-key="tab_sales">B2B Sales</button>
+                </div>
+
+                <div class="p-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div id="contentPanel" class="fade-in">
+                            <h3 id="panelTitle" class="text-2xl font-bold text-teal-800 mb-2">Präzision in der Empathie</h3>
+                            <p id="panelSubtitle" class="text-stone-500 mb-6 font-medium">Objektiver Co-Pilot für Therapeuten</p>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-sm font-bold text-stone-900 uppercase tracking-wider mb-2 flex items-center"><span class="text-amber-500 mr-2">&#x25B6;</span> <span data-i18n-key="scenario_label">Das Szenario</span></h4>
+                                <p id="panelScenario" class="text-stone-600 bg-stone-50 p-4 rounded-md border-l-4 border-stone-300">
+                                    Ein Paar in der 5. Sitzung. Verbal behaupten beide Fortschritte ("Wir streiten weniger, alles ist ruhiger").
+                                </p>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4 class="text-sm font-bold text-stone-900 uppercase tracking-wider mb-2 flex items-center"><span class="text-amber-500 mr-2">&#x25B6;</span> <span data-i18n-key="insight_label">Der LD5-Insight</span></h4>
+                                <p id="panelInsight" class="text-stone-600 bg-teal-50 p-4 rounded-md border-l-4 border-teal-500">
+                                    Die Analyse zeigt eine dramatische Zunahme des Metamusters <code class="bg-teal-100 text-teal-800 px-1 rounded text-xs font-mono">MEMA_WITHDRAWAL_PURSUIT_DYNAMIC</code> (Rückzug-Verfolgung). Während die Worte friedlich sind, sinkt die <code class="bg-teal-100 text-teal-800 px-1 rounded text-xs font-mono">ATO_POSITIVE_RESONANCE</code> stetig ab.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 class="text-sm font-bold text-stone-900 uppercase tracking-wider mb-2 flex items-center"><span class="text-amber-500 mr-2">&#x25B6;</span> <span data-i18n-key="benefit_label">Der Nutzen</span></h4>
+                                <p id="panelBenefit" class="text-stone-600">
+                                    Der Therapeut kann gezielt die non-verbale Distanzierung ansprechen, bevor es zum erneuten Rückfall kommt. LD5 ermöglicht messbare Erfolgsquoten durch den objektiven Vergleich von Sitzung 1 und 10.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-stone-50 p-4 rounded-xl border border-stone-200">
+                            <p id="chartDescription" class="text-center text-xs text-stone-500 uppercase tracking-wide mb-4 font-semibold">Entwicklung über 10 Therapiesitzungen</p>
+                            <div class="chart-container">
+                                <canvas id="insightChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vorteile" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-stone-900 mb-4" data-i18n-key="benefits_title">Warum LD5?</h2>
+                <p class="text-lg text-stone-600 max-w-2xl mx-auto" data-i18n-key="benefits_description">
+                    Die Integration von Kommunikations-Intelligenz bietet fundamentale Vorteile gegenüber klassischen NLP- oder Transkriptionslösungen.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="flex">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-100 text-teal-700 text-2xl">
+                            &#x2696;
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-stone-900" data-i18n-key="benefit1_title">Objektivität statt Bias</h3>
+                        <p class="mt-2 text-stone-600 leading-relaxed" data-i18n-key="benefit1_desc">
+                            Menschen bewerten Kommunikation unbewusst basierend auf Sympathie und eigenen Mustern. LD5 bewertet strikt neutral, basierend auf über 1.500+ wissenschaftlich validierten semiotischen Markern.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-amber-100 text-amber-600 text-2xl">
+                            &#x23F1;
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-stone-900" data-i18n-key="benefit2_title">Echtzeit-Fähigkeit</h3>
+                        <p class="mt-2 text-stone-600 leading-relaxed" data-i18n-key="benefit2_desc">
+                            Integrieren Sie LD5 nahtlos via API in Ihre bestehenden Systeme (Zoom, Microsoft Teams oder proprietäre Apps) für unmittelbare Live-Feedback-Loops während laufender Gespräche.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-stone-200 text-stone-700 text-2xl">
+                            &#x1F4CA;
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-stone-900" data-i18n-key="benefit3_title">Grenzenlose Skalierbarkeit</h3>
+                        <p class="mt-2 text-stone-600 leading-relaxed" data-i18n-key="benefit3_desc">
+                            Analysieren Sie tausende Stunden von Gesprächen, Interviews oder Sales-Calls gleichzeitig. LD5 bietet bei jedem Datensatz dieselbe diagnostische Sorgfalt wie ein erfahrener psychologischer Experte.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-emerald-100 text-emerald-700 text-2xl">
+                            &#x1F9E0;
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-stone-900" data-i18n-key="benefit4_title">Deep-Tech Integration</h3>
+                        <p class="mt-2 text-stone-600 leading-relaxed" data-i18n-key="benefit4_desc">
+                            Technologisch zukunftssicher: Basierend auf modernsten Large Language Models (wie Gemini 2.5 Flash), jedoch entscheidend veredelt und spezialisiert durch unser proprietäres tiefenpsychologisches Regelwerk.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontakt" class="bg-stone-900 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6" data-i18n-key="footer_title">Machen Sie Kommunikation sichtbar</h2>
+            <p class="text-lg text-stone-400 mb-10 leading-relaxed" data-i18n-key="footer_description">
+                LeanDeep LD5 ist das Mikroskop für die menschliche Interaktion. Ob es darum geht, Leben in der Therapie zu verbessern, die besten Talente im HR zu finden oder die Wissenschaft voranzutreiben – wir helfen Ihnen, die Wahrheit zwischen den Zeilen zu lesen.
+            </p>
+            <div class="bg-stone-800 p-8 rounded-xl border border-stone-700">
+                <h3 class="text-xl font-semibold text-white mb-4" data-i18n-key="footer_cta_title">Wollen Sie die unsichtbaren Signale Ihrer Daten sehen?</h3>
+                <button class="bg-teal-600 hover:bg-teal-500 text-white font-bold py-3 px-8 rounded shadow-lg transition transform hover:-translate-y-1" data-i18n-key="footer_cta_button">
+                    Kontaktieren Sie unser Sales-Team für eine Live-Demo
+                </button>
+            </div>
+            <p class="mt-12 text-sm text-stone-500">
+                &copy; 2026 LeanDeep. <span data-i18n-key="footer_rights">All rights reserved.</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="chart-config.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
