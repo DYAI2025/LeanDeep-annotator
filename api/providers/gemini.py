@@ -22,7 +22,7 @@ class GeminiSemanticProvider:
 
         if api_key:
             try:
-                from google import genai  # noqa: F401 — verify import works
+                import google.generativeai as genai  # noqa: F401 — verify import works
                 self._enabled = True
             except Exception as e:
                 logger.warning(f"Gemini init failed: {e}")
@@ -39,17 +39,16 @@ class GeminiSemanticProvider:
             return []
 
         try:
-            from google import genai
-            from google.genai import types
+            import google.generativeai as genai
 
             client = genai.Client(api_key=self._api_key)
             prompt = self._build_prompt(units, language)
 
-            response = await client.aio.models.generate_content(
+            response = client.models.generate_content(
                 model=self._model_name,
                 contents=prompt,
-                config=types.GenerateContentConfig(
-                    system_instruction=SYSTEM_PROMPT,
+                system_instruction=SYSTEM_PROMPT,
+                config=genai.types.GenerateContentConfig(
                     response_mime_type="application/json",
                     temperature=0.1,
                 ),
