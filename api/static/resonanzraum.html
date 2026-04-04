@@ -1356,18 +1356,52 @@ function resetView() {
    DIALOGUE INPUT PARSER
 ══════════════════════════════════════════════════════ */
 function parseDialogueInput(raw) {
-  const rolePattern = /^([A-Za-z0-9äöüÄÖÜß\s]{1,20}):\s*(.+)$/;
-  const lines       = raw.trim().split('\n').filter(l => l.trim());
+  const lines = raw.trim().split('\n').filter(l => l.trim());
 
-  // Format 1: "A: text" on every line
-  if (lines.length >= 2 && lines.every(l => rolePattern.test(l.trim()))) {
+  // ── Format 0: WhatsApp export ────────────────────────────
+  // Patterns:
+  //   "46:53] Ben Poersch: Ja ging."         (time] Name: text)
+  //   "[08.02.21, 14:22] Name: text"         (full timestamp)
+  //   "22:11] Name: text"                    (short time)
+  // Strip timestamps, headers, media placeholders
+  const waPattern = /^(?:\[?[\d.:,\s]+\]\s*)?([A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß .\-]{1,30}):\s*(.+)$/;
+  const waSkip    = /^(?:\[\[|\[\u200e|‎)/;      // section headers like [[08.02.21, 14]
+  const waMedia   = /Audio weggelassen|Bild weggelassen|Video weggelassen|<Medien ausgeschlossen>/i;
+
+  const waLines = lines.filter(l => !waSkip.test(l.trim()) && !waMedia.test(l.trim()));
+  const waMatched = waLines.filter(l => waPattern.test(l.trim()));
+
+  if (waLines.length >= 2 && waMatched.length / waLines.length >= 0.6) {
+    // WhatsApp format detected — parse with wa pattern
+    const messages = [];
+    for (const line of waLines) {
+      const m = line.trim().match(waPattern);
+      if (m) {
+        const role = m[1].trim();
+        const text = m[2].trim();
+        if (text && !waMedia.test(text)) {
+          // Merge consecutive messages from same speaker
+          if (messages.length > 0 && messages[messages.length - 1].role === role) {
+            messages[messages.length - 1].text += ' ' + text;
+          } else {
+            messages.push({ role, text });
+          }
+        }
+      }
+    }
+    if (messages.length >= 2) return messages;
+  }
+
+  // ── Format 1: Simple "A: text" on every line ─────────────
+  const simpleRole = /^([A-Za-z0-9äöüÄÖÜß]{1,15}):\s*(.+)$/;
+  if (lines.length >= 2 && lines.every(l => simpleRole.test(l.trim()))) {
     return lines.map(l => {
-      const [, role, text] = l.match(rolePattern);
+      const [, role, text] = l.match(simpleRole);
       return { role: role.trim(), text: text.trim() };
     });
   }
 
-  // Format 2: blank-line-separated paragraphs
+  // ── Format 2: Blank-line-separated paragraphs ────────────
   const paragraphs = raw.trim().split(/\n{2,}/);
   if (paragraphs.length > 1) {
     return paragraphs.map((p, i) => ({
@@ -1376,7 +1410,7 @@ function parseDialogueInput(raw) {
     }));
   }
 
-  // Format 3: single message
+  // ── Format 3: Single message ─────────────────────────────
   return [{ role: 'A', text: raw.trim() }];
 }
 
@@ -1498,7 +1532,14 @@ async function runAnalysis() {
 
     if (!resp.ok) {
       const err = await resp.json().catch(() => ({}));
-      throw new Error(err.detail || `HTTP ${resp.status}`);
+      // Pydantic 422 returns detail as array [{msg, loc, type}] — flatten to readable string
+      let msg = `HTTP ${resp.status}`;
+      if (typeof err.detail === 'string') {
+        msg = err.detail;
+      } else if (Array.isArray(err.detail)) {
+        msg = err.detail.map(d => d.msg || JSON.stringify(d)).join('; ');
+      }
+      throw new Error(msg);
     }
 
     const data = await resp.json();
