@@ -887,6 +887,36 @@ async def health():
 
 
 # ---------------------------------------------------------------------------
+# GET /v1/llm-status — LLM availability check for Resonanzraum
+# ---------------------------------------------------------------------------
+
+@app.get("/v1/llm-status")
+async def llm_status():
+    """Check if an LLM provider is configured and available for semantic analysis."""
+    from api.config import settings
+    has_google  = bool(settings.google_api_key)
+    has_semantic = bool(settings.semantic_provider and settings.semantic_api_key)
+    available = has_google or has_semantic
+
+    provider = None
+    if has_google:
+        provider = f"gemini ({settings.reasoning_model})"
+    elif has_semantic:
+        provider = f"{settings.semantic_provider} ({settings.semantic_model or 'default'})"
+
+    return {
+        "llm_available": available,
+        "provider": provider,
+        "google_api_key_set": has_google,
+        "semantic_provider_set": has_semantic,
+        "message": None if available else (
+            "Kein LLM konfiguriert. Ohne Semantic Frame ist keine Analyse m\u00f6glich. "
+            "Bitte LEANDEEP_GOOGLE_API_KEY oder LEANDEEP_SEMANTIC_PROVIDER + LEANDEEP_SEMANTIC_API_KEY setzen."
+        ),
+    }
+
+
+# ---------------------------------------------------------------------------
 # GET /playground — Visual Playground UI
 # ---------------------------------------------------------------------------
 

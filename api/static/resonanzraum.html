@@ -649,9 +649,91 @@ body::before {
   font-style: italic;
   line-height: 1.6;
 }
+
+/* ── LLM GATE OVERLAY ─────────────────────────────────── */
+#llm-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(13, 13, 20, 0.97);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px;
+  text-align: center;
+}
+
+#llm-gate .gate-icon {
+  font-size: 2.5rem;
+  opacity: 0.45;
+  line-height: 1;
+}
+
+#llm-gate .gate-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--coral);
+  letter-spacing: 0.05em;
+}
+
+#llm-gate .gate-message {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--pearl-mid);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+#llm-gate .gate-hint {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--pearl-dim);
+  max-width: 520px;
+  line-height: 1.65;
+  background: rgba(255, 122, 122, 0.07);
+  border: 1px solid rgba(255, 122, 122, 0.18);
+  border-radius: var(--radius-lg);
+  padding: 14px 18px;
+  text-align: left;
+  white-space: pre-line;
+}
+
+#llm-gate .gate-provider {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: #4ADE80;
+  margin-top: 4px;
+}
 </style>
 </head>
 <body>
+
+<!-- LLM GATE — blocks entire UI until LLM confirmed -->
+<div id="llm-gate" style="display:none">
+  <div class="gate-icon">⚠</div>
+  <div class="gate-title">Kein Semantic Frame verfügbar</div>
+  <div class="gate-message">
+    Ohne LLM kann kein Semantisches Frame erzeugt werden.
+    Ohne Frame ist jede Marker-Erkennung nur Rauschen.
+    Der Resonanzraum benötigt den Frame als Seed für Resonanz und Narrative.
+  </div>
+  <div class="gate-hint">
+Lösung: LLM-Provider konfigurieren:
+
+  export LEANDEEP_GOOGLE_API_KEY=dein_key
+
+oder:
+
+  export LEANDEEP_SEMANTIC_PROVIDER=gemini
+  export LEANDEEP_SEMANTIC_API_KEY=dein_key
+
+Danach Server neu starten.
+  </div>
+  <div class="gate-provider" id="gate-provider"></div>
+</div>
 
 <!-- ── HEADER ──────────────────────────────────────────── -->
 <header id="header">
@@ -840,6 +922,48 @@ requestAnimationFrame(() => {
 window.addEventListener('beforeunload', () => {
   if (wRafId) cancelAnimationFrame(wRafId);
 });
+
+/* ══════════════════════════════════════════════════════
+   LLM GATE — Preflight check on page load.
+   No LLM = no Semantic Frame = no analysis allowed.
+══════════════════════════════════════════════════════ */
+let llmAvailable = false;
+
+async function checkLLM() {
+  const gate = document.getElementById('llm-gate');
+  const btn  = document.getElementById('analyse-btn');
+
+  try {
+    const r = await fetch('/v1/llm-status');
+    const data = await r.json();
+
+    if (data.llm_available) {
+      // LLM ready — unlock UI
+      llmAvailable = true;
+      gate.style.display = 'none';
+      btn.disabled = false;
+      setStatus(`LLM: ${data.provider}`, false);
+      document.getElementById('status-dot').classList.add('active');
+      setTimeout(() => document.getElementById('status-dot').classList.remove('active'), 2000);
+    } else {
+      // No LLM — block UI completely
+      llmAvailable = false;
+      gate.style.display = 'flex';
+      btn.disabled = true;
+      setStatus('kein LLM', false);
+    }
+  } catch (err) {
+    // Network error or endpoint missing — block with warning
+    llmAvailable = false;
+    gate.style.display = 'flex';
+    gate.querySelector('.gate-message').textContent =
+      'Server nicht erreichbar oder /v1/llm-status Endpoint fehlt.';
+    btn.disabled = true;
+    setStatus('server error', false);
+  }
+}
+
+checkLLM();
 
 /* ══════════════════════════════════════════════════════
    STATUS + LOADING
@@ -1334,6 +1458,13 @@ function buildNarrativesFromResponse(data) {
    MAIN ANALYSIS RUNNER
 ══════════════════════════════════════════════════════ */
 async function runAnalysis() {
+  // Hard gate: no analysis without LLM
+  if (!llmAvailable) {
+    setStatus('Analyse blockiert — kein LLM konfiguriert.', false);
+    document.getElementById('llm-gate').style.display = 'flex';
+    return;
+  }
+
   const raw = document.getElementById('dialogue-input').value.trim();
   if (!raw || raw.length < 5) {
     setStatus('Bitte mindestens 5 Zeichen eingeben.', false);
