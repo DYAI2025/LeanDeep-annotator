@@ -1,750 +1,299 @@
-# LeanDeep Annotator
+# LeanDeep 6.0 – Semantic Meaning Disclosure Engine
 
-**Deterministic semantic annotation engine for psychological and conversational pattern detection.**
+> **AI-guided post-analysis interpretation tool** for revealing hidden patterns and meaning narratives in dialogues through semantic framing + marker resonance + multi-perspective interpretation.
 
-LeanDeep 6.0 detects manipulation patterns, attachment styles, conflict dynamics, and emotional states in text. 891 regex-based markers organized in a five-layer hierarchy, with an optional LLM-powered semantic pre-filter for context-aware precision. Pure Python core, ~1ms per analysis without LLM, provider-agnostic semantic profiling (Gemini, OpenAI, Anthropic, Ollama).
-
-```
-Layer 0: Semantic Profiler (LLM/Embedding) → ATO → SEM → CLU → MEMA
-```
-
----
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Architecture: The Five-Layer Hierarchy](#architecture-the-five-layer-hierarchy)
-- [Semantic Pre-Filter (Layer 0)](#semantic-pre-filter-layer-0)
-- [VAD Model: Valence, Arousal, Dominance](#vad-model-valence-arousal-dominance)
-- [Annotation Examples](#annotation-examples)
-- [Emotion Dynamics](#emotion-dynamics)
-- [API Reference](#api-reference)
-- [MCP Server (AI Agents)](#mcp-server-ai-agents)
-- [Full Conversation Analysis Walkthrough](#full-conversation-analysis-walkthrough)
-- [Marker YAML Schema](#marker-yaml-schema)
-- [Directory Layout](#directory-layout)
-- [Development & Pipeline](#development--pipeline)
-- [Acknowledgements & Attribution](#acknowledgements--attribution)
-- [License](#license)
+**Status**: Specification Complete ✅ | Ready to Code 🚀  
+**Current Phase**: SDLC Phase 3 (Code) starting WEEK 1 (2026-04-07)  
+**Duration**: 8 weeks to MVP  
+**Ship Target**: End Q2 2026
 
 ---
 
-## Installation
+## 🎯 What We're Building
 
-**Requirements:** Python 3.12+
+A system that helps professionals (therapists, psychologists, coaches, researchers) understand **what lies behind the spoken words** in dialogues by:
 
+1. **KI-Generated Semantic Frame**: What is the dialogue's tone, themes, intent, emotional tenor?
+2. **Marker Detection + Weighting**: Find psychological/conversational patterns, weighted by semantic relevance
+3. **Multi-Perspective Narratives**: Show 3-4 alternative interpretations (not just one reading)
+4. **Interactive Visualization**: Color-coded text, tooltips, clickable narrative-marker linking
+5. **Autonomous Enrichment**: System learns new markers from dialogue analysis (with human approval gate)
+
+**Key Innovation**: Narrative diversity scales with context uncertainty.
+> When context is incomplete (high `offline_context_risk`), show MORE readings to avoid premature convergence on a wrong interpretation.
+
+---
+
+## 📋 Core Documents (READ IN THIS ORDER)
+
+### 1. **Specification Phase** (What We're Building)
+- 📄 **[CLAUDE.md](./CLAUDE.md)** – Global project context + architecture overview
+- 📄 **[ROADMAP.md](./ROADMAP.md)** – Phase-wise roadmap (Phase 1 MVP → Phase 4 deployment)
+- 📄 **[STARTUP_CHECKLIST.md](./STARTUP_CHECKLIST.md)** – Week-by-week plan to ship MVP
+
+### 2. **Requirements** (Detailed Specs)
+- **5 Goals**: [1-spec/goals/](./1-spec/goals/)
+  - GOAL-semantic-meaning-disclosure ← MVP focus
+  - GOAL-professional-diagnostic-support ← MVP focus
+  - GOAL-autonomous-marker-evolution ← Phase 1 polish
+  - GOAL-multi-channel-deployment ← MVP core
+  
+- **4 User Stories**: [1-spec/user-stories/](./1-spec/user-stories/)
+  - Post-analysis interpretation
+  - Professional bias checking
+  - Marker enrichment
+  - API integration
+
+- **6 Core Requirements**: [1-spec/requirements/](./1-spec/requirements/)
+  - REQ-F-semantic-framing (KI generates frame)
+  - REQ-F-marker-resonance-weighting (context-aware marker prioritization)
+  - REQ-F-multi-narrative-analysis (3-4 alternative readings)
+  - REQ-USA-interactive-visualization (UI/UX)
+  - REQ-PERF-conversation-latency (< 500ms p95)
+  - REQ-F-candidate-detection (auto-learn new markers)
+
+### 3. **Design** (How We Build It)
+- 📄 **[2-design/architecture.md](./2-design/architecture.md)** – Complete pipeline (5-layer + 3 new layers)
+- 📄 **[2-design/data-model.md](./2-design/data-model.md)** – SemanticFrame, Marker, VAD schemas
+- 📄 **[2-design/api-design.md](./2-design/api-design.md)** – 15 endpoints, contracts, versioning
+
+### 4. **Code Planning** (Implementation)
+- 📄 **[3-code/CLAUDE.code.md](./3-code/CLAUDE.code.md)** – Code phase instructions
+- 📄 **[3-code/tasks.md](./3-code/tasks.md)** – Phased task breakdown (P0→P1→P2)
+  - **P0 Blockers** (Week 1-2): semantic-framing, resonance-weighting, narratives
+  - **P1 Core** (Week 3-5): UI, API, native interface
+  - **P2 Polish** (Week 5-7): optimization, accessibility, enrichment
+
+### 5. **Decisions**
+- 🎯 **[decisions/DEC-semantic-guided-multi-perspective-architecture.md](./decisions/DEC-semantic-guided-multi-perspective-architecture.md)** – Why this approach
+- 🎯 **[decisions/DEC-context-uncertainty-proportional-variance.md](./decisions/DEC-context-uncertainty-proportional-variance.md)** – Why narrative count scales with uncertainty
+- 🎯 **[decisions/DEC-no-compose-of-rules.md](./decisions/DEC-no-compose-of-rules.md)** – Inductive (not rule-based) marker evolution
+
+---
+
+## 🏗️ Architecture (High-Level)
+
+```
+TEXT INPUT (Dialogue)
+    ↓
+[Semantic Framing] ← KI generates tone, themes, intent, 
+                     context_validity, offline_context_risk
+    ↓
+[5-Layer Detection] ← ATO → SEM → CLU → MEMA
+    ↓
+[Marker Weighting] ← Score resonance against frame
+    ↓
+[Multi-Narrative] ← Generate 3-4 alternative readings
+                    (count scales with offline_context_risk)
+    ↓
+[Visualization] ← Color-coded text, tooltips, narrative linking
+    ↓
+MULTI-PERSPECTIVE ANALYSIS
+```
+
+### Latency Budget (p95 targets)
+- **Single text** (< 500 chars): < 100ms
+- **Conversation** (5-10 msgs, 2000 chars): < 500ms
+- **Full interpretation** (10+ msgs, 5000 chars): < 1s
+
+**Breakdown**: Framing (250ms) + Detection (50ms) + Weighting (50ms) + Narratives (150ms) = ~380-450ms (with parallelization)
+
+---
+
+## 🚀 Quick Start (For Code Phase)
+
+### Prerequisites
 ```bash
-git clone https://github.com/DYAI2025/LeanDeep-annotator.git
-cd LeanDeep-annotator
+cd /Users/benjaminpoersch/Projects/LeanDeep6
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-**Dependencies** (`requirements.txt`):
-
-| Package | Purpose |
-|---------|---------|
-| `fastapi` + `uvicorn` | REST API server |
-| `pydantic` + `pydantic-settings` | Request/response validation and config |
-| `ruamel.yaml` | YAML marker file parsing (preserves formatting) |
-| `fastmcp` | MCP server for AI agent integration |
-| `python-docx` | Document upload support (.docx extraction) |
-| `openai` | OpenAI semantic provider (optional) |
-| `anthropic` | Anthropic semantic provider (optional) |
-| `google-genai` | Gemini semantic provider (optional) |
-| `sentence-transformers` | Embedding fallback provider (optional) |
-| `pytest` + `httpx` | Test suite |
-
-**Docker:**
-
+### Environment
 ```bash
-docker build -t leandeep .
-docker run -p 8420:8420 leandeep
+# .env file
+LEANDEEP_GOOGLE_API_KEY=your_gemini_key
+LEANDEEP_LLM_PROVIDER=gemini
+LEANDEEP_LLM_TIMEOUT=250
 ```
 
----
-
-## Quick Start
-
+### Run Development Server
 ```bash
-pip install -r requirements.txt
 python3 -m uvicorn api.main:app --port 8420 --reload
+# → http://localhost:8420/playground (UI)
+# → http://localhost:8420/docs (OpenAPI)
 ```
 
-- Playground UI: `http://localhost:8420/playground`
-- Analysis UI: `http://localhost:8420/analysis`
-- OpenAPI docs: `http://localhost:8420/docs`
-- Full OpenAPI 3.1 spec: [`openapi.yaml`](./openapi.yaml)
-
-**Single text analysis:**
-
+### Run Tests
 ```bash
-curl -X POST http://localhost:8420/v1/analyze \
-  -H "Content-Type: application/json" \
-  -d '{"text": "Du versuchst mich zu kontrollieren!", "semantic_mode": "auto"}'
-```
+# All tests
+python3 -m pytest tests/ -x -q
 
-**Conversation analysis:**
+# Specific test file
+python3 -m pytest tests/test_semantic_framing.py -x -q
 
-```bash
-curl -X POST http://localhost:8420/v1/analyze/conversation \
-  -H "Content-Type: application/json" \
-  -d '{
-    "messages": [
-      {"role": "A", "text": "Du versuchst mich zu kontrollieren!"},
-      {"role": "B", "text": "Das stimmt nicht. Ich mache mir nur Sorgen."},
-      {"role": "A", "text": "Nein! Du manipulierst mich die ganze Zeit!"}
-    ],
-    "semantic_mode": "auto"
-  }'
-```
-
-**BYOK (Bring Your Own Key) — per-request provider override:**
-
-```bash
-curl -X POST http://localhost:8420/v1/analyze \
-  -H "Content-Type: application/json" \
-  -H "X-LeanDeep-Provider: openai" \
-  -H "X-LeanDeep-Provider-Key: sk-..." \
-  -H "X-LeanDeep-Provider-Model: gpt-4o-mini" \
-  -d '{"text": "Das ist doch lächerlich.", "semantic_mode": "llm"}'
+# Run assumption validation (Week 1)
+python3 -m pytest tests/test_assumption_validation.py -x -q
 ```
 
 ---
 
-## Architecture: The Five-Layer Hierarchy
+## 📊 Critical Success Gates (8-Week Timeline)
 
-LeanDeep processes text through a deterministic cascade with an optional semantic pre-filter. Each layer builds on the one below it, moving from raw signal to abstract pattern diagnosis.
-
-```
-Input Text
-    │
-    ▼
-┌─────────────────────────────────────────────────────┐
-│  Layer 0: SEMANTIC PROFILER  (optional)             │
-│  LLM or embedding-based semantic context.           │
-│  Profiles: intent, register, emotion, irony,        │
-│  tension, selbst/fremd, beziehungsdynamik.          │
-│  Feeds the Semantic Gate that filters ATOs.          │
-│  Degradation: LLM → Embedding → Off (baseline)     │
-└────────────────────┬────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────┐
-│  Layer 1: ATO  (Atomic)                             │
-│  Pure regex matching. Uninterpreted raw signals.    │
-│  → Semantic Gate: markers with semantic_affinity     │
-│    are scored against the profile. Mismatches        │
-│    suppressed (×0.1–×0.5 confidence penalty).        │
-└────────────────────┬────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────┐
-│  Layer 2: SEM  (Semantic)                           │
-│  SEM = ATO + Context.                               │
-│  DRA Guards: negation, reported speech, intensity.   │
-│  VAD Congruence Gate: emotional field alignment.     │
-└────────────────────┬────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────┐
-│  Layer 3: CLU  (Cluster / Intuition)                │
-│  Windowed aggregation over SEMs.                    │
-│  Family multipliers: CONFLICT 2.0×, SUPPORT 1.75×. │
-└────────────────────┬────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────┐
-│  Layer 4: MEMA  (Meta-Marker / Diagnosis)           │
-│  Organism-level: absence, trend, cycle, archetype.  │
-└────────────────────┬────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────┐
-│  Layer 5: REASONING (Neuro-Symbolic)                │
-│  LLM synthesis of the marker report into clinical   │
-│  narrative, grounded in deterministic evidence.      │
-└─────────────────────────────────────────────────────┘
-```
-
-### Key Insight: "1 ATO + Context = SEM"
-
-A **single ATO** can activate a SEM if the system context already contains a matching CLU or MEMA hypothesis. The active system state acts as a "virtual second ATO." When a CONFLICT cluster is active, a neutral word like "okay" can collapse into `SEM_PASSIVE_AGGRESSION`. The meaning emerges **from context**, not from the token alone.
+| Week | Gate | Criteria | Go/No-Go |
+|------|------|----------|----------|
+| **Week 1-2** | **Semantic Framing** | F1 >= 0.75 on all 7 dimensions | ✅ GATE 1 |
+| **Week 2** | **Latency + Weighting** | p95 < 500ms, false positives ↓ 20% | ✅ GATE 2 |
+| **Week 5** | **UI + API** | Upload/download flow works, API stable | ✅ GATE 3 |
+| **Week 7** | **Production Ready** | WCAG AA >= 95%, all metrics green | ✅ GATE 4 |
+| **Week 8** | **Ship** | Professional feedback >= 4/5 stars | 🚀 SHIP |
 
 ---
 
-## Semantic Pre-Filter (Layer 0)
+## 🔑 Key Decisions (Embedded in Architecture)
 
-The semantic pre-filter adds LLM-powered context awareness to the deterministic engine. It profiles each text unit across 8 dimensions before pattern matching begins:
+### 1. **Kontextunsicherheit ↔ Interpretationsvarianz**
+Narrative count = `3 + floor(offline_context_risk × 2)`
 
-| Dimension | Values | Purpose |
-|-----------|--------|---------|
-| `intent` | frage, vorwurf, bitte, entschuldigung, ... | Communicative purpose |
-| `register` | informell, formell, therapeutisch, literarisch | Speech register |
-| `emotion_primary` | wut, trauer, angst, freude, ekel, neutral | Dominant emotion |
-| `emotion_secondary` | (same as primary, nullable) | Secondary emotion |
-| `ironie` | true/false + confidence | Irony detection |
-| `selbst_fremd` | selbst, fremd, unpersoenlich | Self vs. other reference |
-| `beziehungsdynamik` | symmetrisch, komplementaer, neutral | Relational dynamic |
-| `tension` | 0.0–1.0 | Communicative tension level |
+When context is uncertain, show more readings. When context is clear, 3 narratives suffice.
 
-### Semantic Gate
+### 2. **Weak Marker Clustering** (Not Discarding)
+Don't throw away markers with confidence 0.2-0.5. Cluster them semantically → create "Low-Confidence Cluster Perspective" narrative.
 
-Markers with a `semantic_affinity` field are scored against the profile. Multiplicative penalties suppress false positives:
+### 3. **No Hard Compose-of Rules** (Initially)
+Markers evolve inductively (learn from data) not deductively (hard rules). Let researchers define clusters based on observation.
 
-| Condition | Penalty |
-|-----------|---------|
-| Intent in `exclude_intents` | ×0.2 |
-| Intent not in `valid_intents` | ×0.5 |
-| Irony detected (confidence > 0.7) and marker in suppression list | ×0.1 |
-| Tension below `min_tension` | ×0.4 |
-| Register in `exclude_registers` | ×0.3 |
-| Emotion mismatch | ×0.6 |
-
-If cumulative score drops below 0.3, the marker is suppressed entirely.
-
-### Provider Chain & Degradation
-
-```
-semantic_mode: "auto" (default)
-  ├─ LLM available?  → Full semantic profiling (Gemini/OpenAI/Anthropic/Ollama)
-  ├─ Embeddings available? → Prototype-based fallback (sentence-transformers)
-  └─ Neither → Baseline mode (regex only, no semantic gate)
-
-semantic_mode: "llm"   → Force LLM, fail gracefully to baseline
-semantic_mode: "embedding" → Force embedding fallback
-semantic_mode: "off"   → Pure regex, no semantic processing
-```
-
-### Configuration
-
-```bash
-LEANDEEP_SEMANTIC_PROVIDER=gemini     # gemini | openai | anthropic | ollama
-LEANDEEP_SEMANTIC_API_KEY=...         # API key for the chosen provider
-LEANDEEP_SEMANTIC_MODEL=gemini-2.0-flash  # Model override (optional)
-```
-
-Or per-request via BYOK headers: `X-LeanDeep-Provider`, `X-LeanDeep-Provider-Key`, `X-LeanDeep-Provider-Model`.
+### 4. **Three Semantic Providers** (Fallback Strategy)
+1. Gemini 3.1 Flash Lite (preferred: fast + cheap)
+2. OpenRouter fallback (auto-select if Gemini slow)
+3. Local Ollama (optional for privacy)
 
 ---
 
-## Conceptual Model: Resonance, Superposition, Crystallization
+## 📞 Team Roles (8-Week MVP)
 
-The mechanics of LeanDeep are best understood through a figurative (not physical) model in three acts.
-
-**Act I — Figurative Superposition**
-
-When ATOs fire, they do not yet carry a fixed meaning. Each is semantically *polyvalent*: a single token like "vielleicht" (maybe) simultaneously occupies multiple potential semantic spaces — politeness, uncertainty, avoidance. This latent multivalence is a **figurative superposition**: the recognition that a raw signal holds multiple meanings in potential until context forces a resolution.
-
-**Act II — The Resonance Field**
-
-From the ensemble of all raw ATOs, the engine computes an aggregate **VAD field** — the emotional center of gravity of the current message. This field then acts as a **resonance chamber** tested back against each individual ATO. The ATOs collectively create the resonance field, and the resonance field then selects which ATOs survive. The ensemble defines the context, and the context judges the ensemble.
-
-```
-congruence >= 0.55  →  resonant:  ATO amplified at full confidence
-0.35 <= c < 0.55   →  attenuated: ATO passes with confidence × 0.6
-congruence < 0.35  →  dissonant: ATO enters shadow buffer, silenced for now
-```
-
-**Act III — Semantic Crystallization**
-
-Resonant ATOs activate SEMs through composition rules. The SEM is not found in any single ATO — it *precipitates* from the resonant remainder the way crystals form in a supersaturated solution when conditions align.
-
-```
-Polyvalent ATOs → [resonance field bootstrapped from the ensemble]
-                      ↓ gradient filter
-              resonant ATOs survive  ·  dissonant ATOs → shadow
-                      ↓ composition rules
-              SEM crystallizes from the resonant remainder
-                      ↓ windowed aggregation
-              CLU confirms behavioral pattern
-                      ↓ organism-level inference
-              MEMA diagnoses: absence, trend, cycle, archetype
-```
+| Role | FTE | Responsibilities |
+|------|-----|------------------|
+| **Backend Lead** | 1.0 | Semantic framing, resonance weighting, API endpoints, caching |
+| **Backend Support** | 1.0 | Narrative generation, candidate detection, testing |
+| **Frontend Lead** | 1.0 | UI visualization, native upload, accessibility |
+| **Research** | 0.3 | Gold-standard annotation (Week 1-2), validation |
+| **DevOps** | 0.2 | Gemini API, Fly.io, monitoring, deployment |
 
 ---
 
-## VAD Model: Valence, Arousal, Dominance
+## 🔬 Critical Assumption to Validate (WEEK 1)
 
-Every marker carries a `vad_estimate` — a three-dimensional emotional fingerprint:
+**ASM-ki-semantic-framing-sufficient**:
 
-| Dimension | Range | Meaning |
-|-----------|-------|---------|
-| **Valence** | -1.0 to +1.0 | Negative <-> Positive affect |
-| **Arousal** | 0.0 to +1.0 | Calm <-> Activated/Energized |
-| **Dominance** | 0.0 to +1.0 | Submissive <-> Dominant/In-control |
+> Can Gemini 3.1 Flash Lite generate semantic frames with >= 75% accuracy (F1) and < 250ms latency?
 
-### Effect on State
+**Validation Plan** (4 days, Week 1):
+1. Select 100 diverse dialogues
+2. Have 2 psychology experts annotate (gold standard)
+3. Run same 100 through Gemini
+4. Measure F1 per dimension
+5. **Decision Gate**: >= 6/7 dimensions @ 0.75+ F1 → PROCEED; else → FALLBACK
 
-Markers carry `effect_on_state` — how their presence shifts the relationship state:
-
-```yaml
-effect_on_state:
-  trust:    # -1.0 to +1.0 (destroys <-> builds trust)
-  conflict: # 0.0 to +1.0 (de-escalates <-> escalates conflict)
-  deesc:    # -1.0 to +1.0 (blocks <-> promotes de-escalation)
-```
-
-These accumulate across all detections to compute per-conversation **state indices**.
+If falls: No embedding-based escape hatch. System returns error (not fake frame).
 
 ---
 
-## Annotation Examples
+## 📈 Expected Outcomes (MVP, Week 8)
 
-### Layer 1 — ATO: Atomic Signals
+✅ **Shipped**:
+- Native UI (upload dialogue → see markers + narratives + interpretations)
+- REST API (15 endpoints)
+- Semantic framing (7-dimension SemanticFrame)
+- Marker resonance weighting (3-category system: STRONG/WEAK/DISCARDED)
+- Multi-narrative interpretation (dynamic count based on uncertainty)
+- Interactive visualization (tooltips, narrative linking)
+- Full documentation + API SDKs
 
-ATO markers are pure regex detectors. They fire when a pattern matches, regardless of context.
+✅ **Validated**:
+- Semantic framing F1 >= 0.75 (gold standard)
+- Latency p95 < 500ms (conversation analysis)
+- False positive reduction >= 20% (vs baseline)
+- WCAG AA compliance >= 95%
+- Professional user confidence >= 4/5 stars
 
-#### Example: `ATO_ACCUSATION_OF_CONTROL`
-
-```yaml
-id: ATO_ACCUSATION_OF_CONTROL
-lang: de
-frame:
-  signal: ["Kontroll-/Manipulationsvorwurf"]
-  concept: "Macht-/Kontrollzuschreibung"
-patterns:
-  - '(?i)\bkontrollier\w*\b'
-  - '(?i)\bmanipulier\w*\b'
-  - '(?i)\bbevormund\w*\b'
-vad_estimate: {valence: -0.75, arousal: 0.95, dominance: 1.0}
-effect_on_state: {trust: -0.45, conflict: 0.6, deesc: -0.3}
-```
-
-### Layer 2 — SEM: Semantic Markers
-
-SEM = ATO + Context. Carries `compositionality` type, `activation` rules, and scoring weight.
-
-```yaml
-id: SEM_ACCUSATION_MARKER
-composed_of: [ATO_DIRECT_ACCUSATION, ATO_SUPERLATIVE_PHRASE]
-activation:
-  rule: "ANY 1"       # Only ONE ATO needed + context
-compositionality: deterministic
-scoring: {base: 1.5, weight: 1.2}
-```
-
-**DRA Guards:** negation (-0.3), reported speech (-0.2), intensity modifiers.
-
-### Layer 3 — CLU: Cluster Intuitions
-
-Windowed aggregation over SEMs. Family multipliers amplify signal:
-
-| Family | Multiplier |
-|--------|------------|
-| CONFLICT / GRIEF | 2.0x |
-| SUPPORT | 1.75x |
-| COMMITMENT / UNCERTAINTY | 1.50x |
-
-### Layer 4 — MEMA: Meta-Markers
-
-Organism-level pattern diagnosis:
-
-| `detect_class` | What it detects |
-|----------------|-----------------|
-| `absence_meta` | Expected signals are absent (omission as signal) |
-| `trend_analysis` | Increasing/decreasing pattern over conversation |
-| `cycle_detection` | Recurring pattern (escalate -> calm -> escalate) |
-| `pattern_detection` | Emerging behavioral signature |
-| `composite_meta` | Archetype from combined CLU evidence |
+🚀 **Ready for Phase 2**:
+- Live real-time streaming analysis
+- Autonomous marker discovery
+- Multi-channel deployment (embedded components, SDKs)
 
 ---
 
-## Emotion Dynamics
+## 🎓 Learning Resources
 
-### UED Metrics (Utterance Emotion Dynamics)
+### For Understanding LeanDeep 6.0 Concepts
 
-For conversations with >=3 messages, LeanDeep computes per-conversation emotion dynamics:
+1. **Semantic Framing**: [2-design/architecture.md](./2-design/architecture.md) → "Semantic Framing Layer"
+2. **Marker Resonance**: [1-spec/requirements/REQ-F-marker-resonance-weighting.md](./1-spec/requirements/REQ-F-marker-resonance-weighting.md)
+3. **Multi-Perspective**: [1-spec/requirements/REQ-F-multi-narrative-analysis.md](./1-spec/requirements/REQ-F-multi-narrative-analysis.md)
+4. **Context Uncertainty**: [decisions/DEC-context-uncertainty-proportional-variance.md](./decisions/DEC-context-uncertainty-proportional-variance.md)
 
-| Metric | Interpretation |
-|--------|----------------|
-| **home_base** | Emotional center of gravity (mean V, A, D) |
-| **variability** | Emotional range (std of valence, arousal) |
-| **instability** | Emotional volatility (mean absolute deltas) |
-| **rise_rate** | Escalation tendency |
-| **recovery_rate** | De-escalation ability |
-| **density** | Proportion of emotionally charged messages |
+### For Implementation
 
-### Per-Speaker Baselines
-
-Each speaker's emotional shifts tracked relative to their own EWMA baseline (alpha = 0.3):
-
-| Shift | Condition |
-|-------|-----------|
-| `repair` | delta_valence > 0.18 from negative baseline |
-| `escalation` | delta_valence < -0.25 from neutral/positive baseline |
-| `volatility` | \|delta_valence\| > 0.3 |
-
-### Prosody-Based Emotion Scoring
-
-Every message scored against Ekman's six basic emotions using 17 structural text features. Fully rule-based, no ML inference at runtime. Features include sentence length, exclamation density, pronoun ratios (ich/du/wir), negation density, hedging, intensifiers, fragment ratio, and more.
-
-### Relationship State Indices
-
-Cumulative `effect_on_state` from all detected markers, clamped to [-1, +1]:
-
-```json
-{
-  "state_indices": {
-    "trust": -0.72,
-    "conflict": 0.85,
-    "deesc": -0.41,
-    "contributing_markers": 23
-  }
-}
-```
+1. **Start Here**: [3-code/CLAUDE.code.md](./3-code/CLAUDE.code.md) (workflow + standards)
+2. **Task Breakdown**: [3-code/tasks.md](./3-code/tasks.md) (phased implementation)
+3. **API Contracts**: [2-design/api-design.md](./2-design/api-design.md)
+4. **Data Models**: [2-design/data-model.md](./2-design/data-model.md)
 
 ---
 
-## API Reference
+## ❓ FAQ
 
-Full OpenAPI 3.1 specification: [`openapi.yaml`](./openapi.yaml)
+### Q: Why 3-4 narratives instead of just 1?
+**A**: Bias resistance. One reading locks professionals into a single frame. Multiple readings prevent premature convergence when context is incomplete.
 
-| Method | Path | Description |
-|--------|------|-------------|
-| `POST` | `/v1/analyze` | Single text analysis (~1ms without LLM) |
-| `POST` | `/v1/analyze/conversation` | Multi-message, all layers, VAD, UED, state |
-| `POST` | `/v1/analyze/dynamics` | Full dynamics + optional persona warm-start |
-| `POST` | `/v1/analyze/interpret` | Semiotic interpretation of detected markers |
-| `POST` | `/v1/upload` | Upload .txt/.md/.docx for text extraction |
-| `POST` | `/v1/personas` | Create persona profile (Pro tier) |
-| `GET` | `/v1/personas/{token}` | Get persona (EWMA, episodes, predictions) |
-| `DELETE` | `/v1/personas/{token}` | Delete persona |
-| `GET` | `/v1/personas/{token}/predict` | Shift predictions |
-| `GET` | `/v1/markers` | Filter/search 891-marker registry |
-| `GET` | `/v1/markers/{id}` | Marker detail with patterns/examples |
-| `GET` | `/v1/engine/config` | Engine configuration |
-| `GET` | `/v1/health` | Health check |
-| `GET` | `/playground` | Interactive marker playground UI |
-| `GET` | `/analysis` | Emotion dynamics analysis UI |
+### Q: What if Gemini is slow?
+**A**: Fallback to OpenRouter (try next LLM provider). No embedding fallback (would produce systematically wrong frames).
 
-### Query Parameters — `/v1/markers`
+### Q: What's the difference between marker confidence and resonance?
+**A**: **Confidence** = how sure are we the regex matched? **Resonance** = how well does this marker fit the dialogue's semantic frame? Both matter.
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `layer` | string | Filter by layer: `ATO`, `SEM`, `CLU`, `MEMA` |
-| `family` | string | Filter by family (e.g. `conflict`, `attachment`) |
-| `tag` | string | Filter by tag |
-| `search` | string | Full-text search in ID and description |
-| `limit` | int | Max results (1-500, default 50) |
-| `offset` | int | Pagination offset (default 0) |
+### Q: When do I use "Weak Cluster Perspective"?
+**A**: When multiple weak markers (0.2-0.5 confidence) cluster semantically. Shows a reading that wouldn't emerge from any single strong marker.
 
-### Semantic Mode Parameter
-
-All analysis endpoints accept `semantic_mode`:
-
-| Value | Behavior |
-|-------|----------|
-| `auto` (default) | Use LLM if available, fall back to embedding, then baseline |
-| `llm` | Force LLM profiling |
-| `embedding` | Force embedding-based profiling |
-| `off` | Pure regex, no semantic processing |
-
-### Authentication
-
-```bash
-# Enable auth
-LEANDEEP_REQUIRE_AUTH=true python3 -m uvicorn api.main:app --port 8420
-
-# Pass key via header
-curl -H "X-API-Key: <your-key>" http://localhost:8420/v1/health
-```
-
-API keys managed in `api/api_keys.json` with sliding-window rate limiting.
-
-### Environment Variables
-
-All prefixed with `LEANDEEP_` (via pydantic-settings):
-
-| Variable | Default | Purpose |
-|----------|---------|---------|
-| `LEANDEEP_REQUIRE_AUTH` | `false` | Enable API key auth |
-| `LEANDEEP_CORS_ORIGINS` | `localhost:8420,localhost:3000` | CORS origins |
-| `LEANDEEP_GOOGLE_API_KEY` | — | Gemini API key (reasoning layer) |
-| `LEANDEEP_REASONING_MODEL` | `gemini-1.5-flash` | LLM model for reasoning |
-| `LEANDEEP_SEMANTIC_PROVIDER` | — | Semantic provider: gemini/openai/anthropic/ollama |
-| `LEANDEEP_SEMANTIC_API_KEY` | — | API key for semantic provider |
-| `LEANDEEP_SEMANTIC_MODEL` | — | Model override for semantic provider |
-| `LEANDEEP_RATE_LIMIT_PER_MINUTE` | `60` | Rate limit |
+### Q: Is this replacing professional judgment?
+**A**: No. It's a tool to enhance professional judgment: provide evidence-based feedback, surface alternative readings, reduce confirmatory bias.
 
 ---
 
-## MCP Server (AI Agents)
+## 📅 Next Steps
 
-LeanDeep ships an MCP (Model Context Protocol) server that wraps the detection engine directly — no HTTP round-trip. Compatible with Claude Desktop, Cursor, and any MCP client.
+1. **This Week (Prep)**: 
+   - ✅ Specification approved
+   - ✅ Architecture reviewed
+   - ✅ Tasks broken down
+   - ✅ Team assigned
+   
+2. **Monday (WEEK 1)**:
+   - Start TASK-semantic-framing-implementation
+   - Start gold-standard annotation
+   - Begin TASK-marker-resonance-weighting
 
-```bash
-fastmcp run mcp_server.py
-```
-
-**Client configuration:**
-
-```json
-{
-  "mcpServers": {
-    "leandeep": {
-      "command": "fastmcp",
-      "args": ["run", "/path/to/mcp_server.py"]
-    }
-  }
-}
-```
-
-**Available MCP tools:**
-
-| Tool | Description |
-|------|-------------|
-| `analyze_text` | Analyze a single text (ATO+SEM layers) |
-| `analyze_conversation` | Analyze multi-message conversation, all 4 layers; optional `include_dynamics` for VAD/UED |
-| `search_markers` | Filter/search the 891-marker registry |
-| `get_marker` | Full marker detail (patterns, examples, VAD, composed_of) |
-| `engine_stats` | Marker counts per layer + version |
+3. **Friday (WEEK 1)**:
+   - **GATE 1**: Assumption validation results (semantic framing F1 >= 0.75?)
+   - Decision: Proceed or fallback?
 
 ---
 
-## Full Conversation Analysis Walkthrough
+## 🤝 Contributors
 
-Consider this conversation:
-
-```
-[A] "Du versuchst mich zu kontrollieren!"
-[B] "Das stimmt nicht. Ich mache mir nur Sorgen."
-[A] "Nein! Du manipulierst mich die ganze Zeit. Nie horst du zu!"
-[B] "Das tut mir leid. Ich verstehe, dass ich dich verletzt habe."
-[A] "Immer dieses Ausweichen. Hast du Angst, mir die Wahrheit zu sagen?"
-```
-
-### Step 1: Semantic Profiling (Layer 0)
-
-With `semantic_mode: "auto"` and a configured LLM:
-
-```json
-[A1] {"intent": "vorwurf", "emotion_primary": "wut", "ironie": false, "tension": 0.85}
-[B1] {"intent": "verteidigung", "emotion_primary": "neutral", "tension": 0.3}
-[A2] {"intent": "vorwurf", "emotion_primary": "wut", "ironie": false, "tension": 0.95}
-```
-
-The semantic gate now suppresses markers whose `semantic_affinity` conflicts with the profile — e.g., a JOY-affinity marker won't fire in a `wut` context.
-
-### Step 2: Per-Message ATO Detection
-
-**Message [A1]:** `"Du versuchst mich zu kontrollieren!"`
-```
-ATO_ACCUSATION_OF_CONTROL  →  confidence: 1.0
-ATO_DIRECT_ACCUSATION      →  confidence: 0.8
-```
-
-### Step 3: VAD Congruence Gate
-
-Message VAD from ATO ensemble: `{valence: -0.75, arousal: 0.95, dominance: 1.0}`
-All ATOs congruent -> pass with full confidence.
-
-### Step 4: SEM Activation
-
-```
-[A1] SEM_ACCUSATION_MARKER    →  confidence: 0.8
-[B4] SEM_EMPATHY_EXPRESSION   →  confidence: 0.75
-```
-
-### Step 5: CLU Aggregation
-
-```
-CLU_HEATED_CONFLICT  →  confidence: 0.72
-  Family: CONFLICT (multiplier: 2.0x)
-```
-
-### Step 6: MEMA Diagnosis
-
-```
-MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR  →  confidence: 0.6
-  detect_class: absence_meta
-```
-
-### Step 7: State Indices
-
-```json
-{"trust": -0.90, "conflict": 0.80, "deesc": -0.60, "contributing_markers": 12}
-```
+- **Benjamin Poersch** — Vision, requirements, project lead
+- **Claude Opus** (via claudecode) — Architecture, specification, task planning
 
 ---
 
-## Marker YAML Schema
+## 📄 License
 
-All markers live in `build/markers_rated/` and follow this schema:
-
-```yaml
-id: ATO_EXAMPLE              # Unique ID with layer prefix
-schema_version: LD-3.4
-lang: de
-
-frame:
-  signal: [...]              # Surface signals
-  concept: ""                # Semantic concept
-  pragmatics: ""             # Functional role
-  narrative: ""              # Narrative context
-
-patterns:                    # ATO: regex patterns
-  - '(?i)\bregex\b'
-
-composed_of:                 # SEM/CLU/MEMA: composition
-  - ATO_REFERENCE_1
-
-activation:
-  rule: "ANY 1"              # ANY N | AT_LEAST N | ALL | BOTH
-
-compositionality: deterministic  # deterministic(1.0x) | contextual(0.7x) | emergent(0.5x)
-
-semantic_affinity:           # Optional: semantic gate rules
-  valid_intents: [vorwurf, beschwerde]
-  exclude_intents: [lob]
-  emotions: [wut, ekel]
-  exclude_registers: [therapeutisch]
-  min_tension: 0.3
-  ironie_suppress: true
-
-vad_estimate: {valence: 0.0, arousal: 0.0, dominance: 0.0}
-effect_on_state: {trust: 0.0, conflict: 0.0, deesc: 0.0}
-
-tags: [tag1, tag2]
-rating: 1                    # 1=production, 2=good, 3=needs_work, 4=unusable
-
-examples:
-  positive: [...]
-  negative: [...]
-```
+TBD (internal project)
 
 ---
 
-## Directory Layout
+**Let's build something that helps professionals see what they're missing.**
 
-```
-api/                         # FastAPI application
-  main.py                    # 14 endpoints + semantic profiler integration
-  engine.py                  # 4-layer detection engine + VAD gate + semantic gate
-  semantic.py                # Semantic profiling layer (Layer 0)
-  reasoning.py               # Neuro-symbolic reasoning via LLM (Layer 5)
-  interpret.py               # Semiotic interpretation
-  topology.py                # Conversation topology + constraint checks
-  dynamics.py                # UED metrics + relationship state indices
-  prosody.py                 # Prosody emotion scoring (6 emotions, 17 features)
-  personas.py                # Persona profiles (Pro tier, YAML persistence)
-  models.py                  # Pydantic request/response models
-  config.py                  # Settings (env prefix: LEANDEEP_)
-  auth.py                    # API key auth + rate limiting
-  providers/                 # Semantic profiling providers
-    base.py                  # Shared prompt template
-    gemini.py                # Google Gemini (google-genai SDK)
-    openai.py                # OpenAI (AsyncOpenAI)
-    anthropic.py             # Anthropic (AsyncAnthropic)
-    ollama.py                # Ollama (local, httpx)
-    embedding.py             # Sentence-transformer fallback
-  static/
-    playground.html          # Interactive marker playground UI
-    analysis.html            # Emotion dynamics analysis UI
-
-build/
-  markers_rated/             # SOURCE OF TRUTH (edit here)
-    1_approved/              # Rating 1: production quality
-    2_good/                  # Rating 2: usable
-    3_needs_work/            # Rating 3+4: WIP
-  markers_normalized/        # GENERATED (never edit)
-    marker_registry.json     # 891 markers loaded by engine at startup
-  marker_prototypes.npz      # Embedding prototypes for fallback provider
-
-tools/
-  normalize_schema.py        # Rebuild registry from markers_rated/
-  enrich_vad.py              # Add VAD + effect_on_state
-  enrich_ld5.py              # Add families, multipliers, ARS, EWMA
-  enrich_negatives.py        # Add negative examples
-  enrich_examples.py         # Gap report + batch enrichment
-  enrich_semantic_affinity.py # Add semantic_affinity rules
-  build_prototypes.py        # Build embedding prototypes from examples
-  eval_corpus.py             # Marker detection eval (~90s)
-  eval_dynamics.py           # Emotion dynamics eval
-
-eval/
-  gold_corpus.jsonl          # 99K messages, 1543 conversation chunks
-  stats.json                 # Latest eval results per layer
-
-tests/                       # 81+ pytest tests
-docs/
-  plans/                     # Design & implementation plans
-  ROADMAP.md                 # Production roadmap
-  BUGS.md                    # Known bugs by severity
-openapi.yaml                 # OpenAPI 3.1 specification
-mcp_server.py                # MCP server for AI agents
-personas/                    # Persona YAML profiles (gitignored)
-```
-
----
-
-## Development & Pipeline
-
-### Running Tests
-
-```bash
-python3 -m pytest tests/ -x -q          # All tests
-python3 -m pytest tests/test_file.py -x  # Single file
-```
-
-### Editing Markers
-
-**Always edit `build/markers_rated/`, never `build/markers_normalized/`.**
-
-```bash
-vim build/markers_rated/1_approved/ATO/ATO_EXAMPLE.yaml
-python3 tools/normalize_schema.py    # Rebuild registry
-python3 -m pytest tests/ -x -q      # Verify
-```
-
-### Full Enrichment Pipeline
-
-```bash
-python3 tools/normalize_schema.py          # Rebuild registry
-python3 tools/enrich_vad.py                # VAD + effect_on_state
-python3 tools/enrich_ld5.py                # Families, multipliers, ARS, EWMA
-python3 tools/enrich_negatives.py          # Negative examples
-python3 tools/enrich_semantic_affinity.py  # Semantic gate rules
-python3 tools/build_prototypes.py          # Embedding prototypes
-```
-
-### Evaluation
-
-```bash
-python3 tools/eval_corpus.py         # Full corpus eval (~90s)
-python3 tools/eval_dynamics.py       # Emotion dynamics eval
-```
-
----
-
-## Acknowledgements & Attribution
-
-### Theoretical Foundations
-
-- **VAD Model:** Mehrabian, A. & Russell, J.A. (1974). *An approach to environmental psychology.* MIT Press. Russell, J.A. (1980). A circumplex model of affect. *Journal of Personality and Social Psychology*, 39(6), 1161-1178.
-- **Ekman Emotions:** Ekman, P. (1992). An argument for basic emotions. *Cognition & Emotion*, 6(3-4), 169-200.
-
-### Prosody Calibration Datasets
-
-The `prosody_profiles.json` was derived from the following open datasets (Apache License 2.0):
-
-- **dair-ai/emotion** — Saravia, E. et al. (2018). *CARER: Contextualized Affect Representations for Emotion Recognition.* EMNLP.
-- **google-research-datasets/go_emotions** — Demszky, D. et al. (2020). *GoEmotions: A Dataset of Fine-Grained Emotions.* ACL.
-
-No dataset content is included in this repository; only derived statistical profiles are retained.
-
----
-
-## License
-
-This project is licensed under the **Apache License 2.0**. See [LICENSE](./LICENSE) for the full text.
-
-```
-Copyright 2026 DYAI2025
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-```
+🚀 **WEEK 1 STARTS 2026-04-07. GO TIME.**
