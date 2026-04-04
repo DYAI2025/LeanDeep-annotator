@@ -898,6 +898,19 @@ async def playground():
 
 
 # ---------------------------------------------------------------------------
+# GET /resonanzraum — Resonanzraum Semantic Analysis Interface
+# ---------------------------------------------------------------------------
+
+@app.get("/resonanzraum", response_class=HTMLResponse)
+async def resonanzraum():
+    """Serve the Resonanzraum analysis interface."""
+    html_path = Path(__file__).parent / "static" / "resonanzraum.html"
+    if html_path.exists():
+        return HTMLResponse(content=html_path.read_text(encoding="utf-8"))
+    return HTMLResponse(content="<h1>resonanzraum.html not found</h1>", status_code=404)
+
+
+# ---------------------------------------------------------------------------
 # GET /analysis — Analysis UI (intuitive emotion dynamics)
 # ---------------------------------------------------------------------------
 
