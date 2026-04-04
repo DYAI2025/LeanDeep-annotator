@@ -448,7 +448,7 @@ body::before {
 /* ── TOOLTIP ─────────────────────────────────────────── */
 #tooltip {
   position: fixed;
-  z-index: 500;
+  z-index: 1001;
   background: var(--bg-card);
   border: 1px solid var(--border-lit);
   border-radius: var(--radius-lg);
@@ -747,6 +747,17 @@ body::before {
  * See: 3-code/tasks.md for implementation plan
  ══════════════════════════════════════════════════════ */
 
+/* ── XSS ESCAPE HELPER ──────────────────────────────── */
+function escHtml(s) {
+  if (s == null) return '';
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 /* ── STATE ─────────────────────────────────────────── */
 const state = {
   frame:           null,
@@ -774,39 +785,51 @@ function resizeWaveform() {
 }
 
 function drawWaveform() {
-  const W = wCanvas.offsetWidth;
-  const H = wCanvas.offsetHeight;
-  wCtx.clearRect(0, 0, W, H);
+  // Fix #6: pause animation on hidden tab (saves CPU/battery)
+  if (!document.hidden) {
+    const W = wCanvas.offsetWidth;
+    const H = wCanvas.offsetHeight;
+    wCtx.clearRect(0, 0, W, H);
 
-  const tenor    = state.tenor;
-  const amplitude = 7 + Math.abs(tenor) * 5;
-  const baseY    = H / 2;
-  const freq     = 0.022 + Math.abs(tenor) * 0.008;
+    const tenor     = state.tenor;
+    const amplitude = 7 + Math.abs(tenor) * 5;
+    const baseY     = H / 2;
+    const freq      = 0.022 + Math.abs(tenor) * 0.008;
 
-  const t = (tenor + 1) / 2;
-  const r = Math.round(126 + (232 - 126) * t);
-  const g = Math.round(207 + (180 - 207) * t);
-  const b = Math.round(237 + ( 75 - 237) * t);
+    const t = (tenor + 1) / 2;
+    const r = Math.round(126 + (232 - 126) * t);
+    const g = Math.round(207 + (180 - 207) * t);
+    const b = Math.round(237 + ( 75 - 237) * t);
 
-  wCtx.beginPath();
-  wCtx.strokeStyle = `rgba(${r},${g},${b},0.65)`;
-  wCtx.lineWidth   = 1.4;
+    wCtx.beginPath();
+    wCtx.strokeStyle = `rgba(${r},${g},${b},0.65)`;
+    wCtx.lineWidth   = 1.4;
 
-  for (let x = 0; x < W; x++) {
-    const y = baseY
-      + Math.sin(x * freq + wPhase)          * amplitude
-      + Math.sin(x * freq * 1.73 + wPhase * 0.8) * (amplitude * 0.35);
-    x === 0 ? wCtx.moveTo(x, y) : wCtx.lineTo(x, y);
+    for (let x = 0; x < W; x++) {
+      const y = baseY
+        + Math.sin(x * freq + wPhase)           * amplitude
+        + Math.sin(x * freq * 1.73 + wPhase * 0.8) * (amplitude * 0.35);
+      x === 0 ? wCtx.moveTo(x, y) : wCtx.lineTo(x, y);
+    }
+    wCtx.stroke();
+    wPhase += state.analysing ? 0.055 : 0.013;
   }
-  wCtx.stroke();
-
-  wPhase += state.analysing ? 0.055 : 0.013;
   requestAnimationFrame(drawWaveform);
 }
 
-window.addEventListener('resize', resizeWaveform);
-resizeWaveform();
-drawWaveform();
+// Fix #7: debounced resize to avoid thrashing on every pixel
+let resizeTimer = null;
+function debouncedResize() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(resizeWaveform, 100);
+}
+window.addEventListener('resize', debouncedResize);
+
+// Fix #8: init after first paint so fonts/layout are ready
+requestAnimationFrame(() => {
+  resizeWaveform();
+  drawWaveform();
+});
 
 /* ══════════════════════════════════════════════════════
    STATUS + LOADING
@@ -868,11 +891,11 @@ function renderEqualizer(frame) {
     row.className = 'eq-row';
     row.innerHTML = `
       <div class="eq-label">
-        <span class="eq-dimension">${dim.label}</span>
-        <span class="eq-value">${dim.fmt(val)}</span>
+        <span class="eq-dimension">${escHtml(dim.label)}</span>
+        <span class="eq-value">${escHtml(dim.fmt(val))}</span>
       </div>
       <div class="eq-track">
-        <div class="eq-bar ${dim.bar}" style="width:0%" data-target="${pct}"></div>
+        <div class="eq-bar ${escHtml(dim.bar)}" style="width:0%" data-target="${pct}"></div>
       </div>`;
     container.appendChild(row);
   });
@@ -986,8 +1009,12 @@ function renderAnnotatedDialogue(messages, markers) {
     } else {
       let cursor = 0;
       spans.forEach(s => {
-        if (s.start > cursor)
-          textEl.appendChild(document.createTextNode(text.slice(cursor, s.start)));
+        // Guard: skip spans that start before cursor (overlapping markers)
+        if (s.end <= cursor) return;
+        const safeStart = Math.max(s.start, cursor);
+
+        if (safeStart > cursor)
+          textEl.appendChild(document.createTextNode(text.slice(cursor, safeStart)));
 
         const span = document.createElement('span');
         span.className = `m-span ${s.marker.layer}`;
@@ -1065,15 +1092,15 @@ function renderNarratives(narratives, markers) {
 
     card.innerHTML = `
       <div class="nc-header">
-        <span class="nc-type ${ti.cls}">${ti.label}</span>
+        <span class="nc-type ${escHtml(ti.cls)}">${escHtml(ti.label)}</span>
         <span class="nc-confidence">${(conf * 100).toFixed(0)}%</span>
       </div>
-      <div class="nc-text">${n.narrative || n.text || ''}</div>
+      <div class="nc-text">${escHtml(n.narrative || n.text || '')}</div>
       ${refs.length ? `<div class="nc-markers">
         ${refs.map(id => {
           const m = markers.find(mk => mk.id === id);
           const layer = m ? m.layer : 'ato';
-          return `<span class="nc-marker-ref ${layer}" data-marker-id="${id}">${id}</span>`;
+          return `<span class="nc-marker-ref ${escHtml(layer)}" data-marker-id="${escHtml(id)}">${escHtml(id)}</span>`;
         }).join('')}
       </div>` : ''}
       ${n.uncertainty_flag ? '<div class="nc-warning">⚠ Hohe Kontextunsicherheit</div>' : ''}
@@ -1311,7 +1338,8 @@ async function runAnalysis() {
         messages,
         layers:    ['ato', 'sem', 'clu', 'mema'],
         threshold: 0.35,
-        language:  'de',
+        // Fix #9: use browser locale as hint; API can override per-message
+        language:  (navigator.language || 'de').startsWith('en') ? 'en' : 'de',
       }),
     });
 
@@ -1338,11 +1366,23 @@ async function runAnalysis() {
   } catch (err) {
     setStatus('Fehler: ' + err.message, false);
     setLoading(false);
-    document.getElementById('dialogue-body').innerHTML = `
-      <div style="padding:20px;font-family:var(--font-mono);font-size:0.78rem;color:var(--coral)">
-        ⚠ ${err.message}<br><br>
-        <button onclick="resetView()" class="reset-btn">↺ Zurücksetzen</button>
-      </div>`;
+    // Show error as overlay — do NOT destroy DOM structure (resetView() needs input-area + annotated-output)
+    let overlay = document.getElementById('error-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'error-overlay';
+      overlay.style.cssText = [
+        'position:absolute', 'inset:0', 'z-index:50',
+        'background:rgba(13,13,20,0.88)', 'display:flex',
+        'flex-direction:column', 'align-items:center', 'justify-content:center',
+        'gap:12px', 'padding:24px', 'text-align:center',
+      ].join(';');
+      document.getElementById('dialogue-body').appendChild(overlay);
+    }
+    overlay.innerHTML = `
+      <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--coral)">⚠ ${escHtml(err.message)}</div>
+      <button onclick="document.getElementById('error-overlay').remove();resetView()" class="reset-btn">↺ Zurücksetzen</button>`;
+    overlay.style.display = 'flex';
   }
 }
 
