@@ -14,6 +14,7 @@ Endpoints:
 
 from __future__ import annotations
 
+import asyncio
 import io
 import time
 from contextlib import asynccontextmanager
@@ -58,6 +59,7 @@ from .models import (
     PatternMatch,
     PersonaCreateResponse,
     PersonaSessionSummary,
+    WeakCluster,
     PredictionReservoir,
     PredictionResponse,
     SemanticProfileResponse,
@@ -72,6 +74,8 @@ from .models import (
     UEDMetrics,
     VADPoint,
 )
+from .framing import frame_generator
+from .resonance import apply_resonance_weighting, cluster_weak_markers
 from .narrative import (
     InitialSemanticsGenerator,
     NarrativeReportGenerator,
@@ -238,11 +242,15 @@ async def analyze_conversation(
     Supports all 4 layers including CLU (cluster patterns over messages)
     and MEMA (meta-level organism diagnosis). Returns temporal patterns
     showing how markers evolve across the conversation.
+
+    When an LLM provider is configured, generates a SemanticFrame for
+    the dialogue (tone, themes, dynamics, intent, context uncertainty).
+    Frame generation runs in parallel with marker detection.
     """
     messages = [{"role": m.role, "text": m.text} for m in req.messages]
     layers = [l.value for l in req.layers]
 
-    # Semantic profiling (Layer 0)
+    # Semantic profiling (Layer 0) — per-message profiles
     analysis_mode = "pattern"
     if req.semantic_mode != "off":
         profiler = _resolve_profiler(request)
@@ -251,36 +259,101 @@ async def analyze_conversation(
         if profiles and profiles[0].source != "none":
             analysis_mode = "semantic"
 
-    result = await engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
+    # Run frame generation + marker detection in parallel (per architecture)
+    frame_task = asyncio.create_task(
+        frame_generator.generate(messages, language=req.language.value)
+    )
+    conv_task = asyncio.create_task(
+        engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
+    )
 
-    markers = [
-        ConversationMarker(
-            id=d.marker_id,
-            layer=Layer(d.layer),
-            confidence=d.confidence,
-            description=d.description,
-            message_indices=d.message_indices,
-            family=d.family,
-            multiplier=d.multiplier,
-            matches=[
-                PatternMatch(
-                    pattern=m.pattern,
-                    span=(m.start, m.end),
-                    matched_text=m.matched_text,
-                )
-                for m in d.matches
-            ],
+    frame, result = await asyncio.gather(frame_task, conv_task)
+
+    if frame is not None:
+        analysis_mode = "semantic"
+
+    detections = result["detections"]
+    weak_cluster_models: list[WeakCluster] = []
+
+    # Apply resonance weighting when frame is available
+    if frame is not None:
+        strong, weak, _discarded = apply_resonance_weighting(
+            detections, frame, engine.markers,
         )
-        for d in result["detections"]
-    ]
+
+        # Cluster weak markers for alternative perspectives
+        clusters = await cluster_weak_markers(weak)
+        weak_cluster_models = [
+            WeakCluster(
+                marker_ids=c.marker_ids,
+                cluster_label=c.cluster_label,
+                coherence=c.coherence,
+                avg_confidence=c.avg_confidence,
+                marker_count=c.marker_count,
+            )
+            for c in clusters
+        ]
+
+        # Build response markers from weighted results (strong + weak, not discarded)
+        all_weighted = strong + weak
+        markers = [
+            ConversationMarker(
+                id=wm.marker_id,
+                layer=Layer(wm.layer),
+                confidence=wm.confidence,
+                description=wm.description,
+                message_indices=wm.message_indices,
+                family=wm.family,
+                multiplier=wm.multiplier,
+                matches=[
+                    PatternMatch(
+                        pattern=m.pattern,
+                        span=(m.start, m.end),
+                        matched_text=m.matched_text,
+                    )
+                    for m in wm.matches
+                ],
+                resonance_score=wm.resonance_score,
+                adjusted_confidence=wm.adjusted_confidence,
+                tier=wm.tier,
+            )
+            for wm in all_weighted
+        ]
+    else:
+        # No frame — return markers without resonance data
+        markers = [
+            ConversationMarker(
+                id=d.marker_id,
+                layer=Layer(d.layer),
+                confidence=d.confidence,
+                description=d.description,
+                message_indices=d.message_indices,
+                family=d.family,
+                multiplier=d.multiplier,
+                matches=[
+                    PatternMatch(
+                        pattern=m.pattern,
+                        span=(m.start, m.end),
+                        matched_text=m.matched_text,
+                    )
+                    for m in d.matches
+                ],
+            )
+            for d in detections
+        ]
 
     temporal = [
         TemporalPattern(**tp)
         for tp in result.get("temporal_patterns", [])
     ]
 
+    # Sort by adjusted_confidence (if available) or confidence
+    markers.sort(key=lambda m: (-(m.adjusted_confidence or m.confidence), m.id))
+
     return ConversationResponse(
-        markers=sorted(markers, key=lambda m: (-m.confidence, m.id)),
+        frame=frame,
+        markers=markers,
+        weak_clusters=weak_cluster_models,
         temporal_patterns=temporal,
         topology=result.get("topology"),
         reasoning=result.get("reasoning"),

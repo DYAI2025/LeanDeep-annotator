@@ -1,3 +1,7 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 ## Language Policy
 
 **All AI outputs must be in English**, regardless of the language used in user prompts. This applies to code, comments, documentation, configuration files, commit messages, and response text.
@@ -25,9 +29,11 @@ Pure Python core with optional LLM semantic profiling, VAD emotion tracking, sem
 
 ## Current State
 
-**Phase**: Design (in progress)
+**Phase**: Code (in progress)
 
-- **Design**: Architecture complete (Approved); Data model drafted; API design drafted (2026-04-05). 3 decisions recorded. Completeness assessment (2026-04-05): 0 Critical, 0 Important, 2 Minor
+- **Implementation progress**: 2/11 tasks done (P0: 2/3). TASK-marker-resonance-weighting-system complete
+- **Design**: Architecture complete (Approved); Data model drafted; API design drafted. 3 decisions recorded. Completeness assessment (2026-04-05): 0 Critical, 0 Important, 2 Minor
+- **Components**: 3 identified — backend (Python/FastAPI), frontend (React/JS), marker-pipeline (Python CLI). Per-component directories created in `3-code/`
 - **Specification**: Complete. 4 goals (3 Approved); 4 user stories (all Approved); 13 requirements (all Approved); gap analysis clean
 - **Markers**: 887 in production; continuous enrichment cycle (VAD, examples, semantic affinity)
 - **Architecture**: 5-layer pipeline stable; semantic gating + VAD congruence in place
@@ -50,7 +56,7 @@ Each phase directory contains a `CLAUDE.<phase>.md` file. When working in a phas
 |-------|-----------|-------|
 | **Specification** | `1-spec/` | Define what to build and why; capture gaps and requirements |
 | **Design** | `2-design/` | Define how to build it; architecture, data model, API refinements |
-| **Code** | `3-code/` | Build it; implementation planning, marker enrichment, feature delivery |
+| **Code** | `3-code/` | Build it; implementation planning, marker enrichment, feature delivery. Subdirs: `backend/`, `frontend/`, `marker-pipeline/` |
 | **Deploy** | `4-deploy/` | Ship and operate it; infrastructure, runbooks, deployments |
 
 ### Cross-Skill Artifact Procedures
@@ -100,6 +106,8 @@ All artifact IDs use the pattern `PREFIX-kebab-name`. Example: `REQ-F-semantic-a
 
 ## Quick Start (Development)
 
+**Python 3.11+** required (Dockerfile uses 3.12).
+
 ```bash
 pip install -r requirements.txt
 python3 -m uvicorn api.main:app --port 8420 --reload
@@ -114,8 +122,14 @@ fastmcp run mcp_server.py
 
 ```bash
 # Tests
-python3 -m pytest tests/ -x -q
-python3 -m pytest tests/test_engine_vad.py -x -q
+python3 -m pytest tests/ -x -q                        # All tests
+python3 -m pytest tests/test_engine_vad.py -x -q      # Single file
+python3 -m pytest tests/test_engine_vad.py::test_name  # Single test
+
+# Linting & formatting
+ruff check api/ tools/ tests/
+black --check api/ tools/ tests/
+mypy api/
 
 # Marker pipeline: edit markers_rated/ → normalize → test → eval
 python3 tools/normalize_schema.py
@@ -228,16 +242,15 @@ All prefixed with `LEANDEEP_` (via pydantic-settings in `api/config.py`).
 
 ---
 
-## Decisions Relevant to This Project
+## Decisions
 
-| File | Title | Status |
-|------|-------|--------|
-| (TBD) | Marker rating lifecycle and approval workflow | Draft |
-| (TBD) | Semantic affinity enrichment scope and coverage targets | Draft |
-| (TBD) | Example enrichment priority (breadth vs depth) | Draft |
-| (TBD) | Negative example strategy and dataset | Draft |
-| (TBD) | VAD calibration and threshold tuning | Draft |
-| (TBD) | Semantic Layer 0 provider selection (Gemini vs Ollama) | Draft |
+Recorded decisions live in `decisions/`. See `decisions/_template.md` for format.
+
+| File | Title |
+|------|-------|
+| `DEC-semantic-guided-multi-perspective-architecture.md` | Multi-perspective narrative architecture |
+| `DEC-context-uncertainty-proportional-variance.md` | Narrative count scales with context uncertainty |
+| `DEC-v1-backward-compatibility.md` | v1 API backward compatibility policy |
 
 ---
 
