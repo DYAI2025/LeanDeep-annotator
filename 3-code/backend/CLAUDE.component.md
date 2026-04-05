@@ -1,6 +1,6 @@
 # Backend
 
-**Responsibility**: Core detection pipeline (5-layer ATO→SEM→CLU→MEMA), semantic framing, resonance weighting, multi-narrative generation, REST API, personas, and enrichment endpoints.
+**Responsibility**: Core detection pipeline (4-layer ATO→SEM→CLU→MEMA), semantic framing, resonance weighting, multi-narrative generation, REST API, personas, and enrichment endpoints.
 
 **Technology**: Python 3.11+, FastAPI, Pydantic, google-generativeai (Gemini), ruamel.yaml, Redis (optional caching)
 
