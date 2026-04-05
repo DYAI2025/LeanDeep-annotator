@@ -35,10 +35,8 @@ Extend LeanDeep to **real-time live analysis** of spoken or streamed conversatio
 
 ## Related Artifacts
 
-- User Stories: [US-live-stream-analysis](../user-stories/US-live-stream-analysis.md)
-- User Stories: [US-real-time-prediction](../user-stories/US-real-time-prediction.md)
-- Requirements: [REQ-PERF-live-latency](../requirements/REQ-PERF-live-latency.md)
-- Requirements: [REQ-REL-stream-resilience](../requirements/REQ-REL-stream-resilience.md)
+- User Stories: _(Phase 2+ — user stories not yet created)_
+- Requirements: _(Phase 2+ — requirements not yet created)_
 
 ## Dependencies & Constraints
 

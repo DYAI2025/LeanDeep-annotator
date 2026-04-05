@@ -1,7 +1,7 @@
 # GOAL-semantic-meaning-disclosure
 
 **Priority**: Must-have  
-**Status**: Draft  
+**Status**: Approved  
 **Source Stakeholder**: STK-product-owner, STK-researcher
 
 ## Objective
@@ -29,8 +29,6 @@ Build an AI-guided **post-analysis interpretation tool** that reveals hidden sem
 ## Related Artifacts
 
 - User Stories: [US-post-analysis-interpretation](../user-stories/US-post-analysis-interpretation.md)
-- User Stories: [US-semantic-framing](../user-stories/US-semantic-framing.md)
-- User Stories: [US-multi-perspective](../user-stories/US-multi-perspective.md)
 - Requirements: [REQ-F-semantic-framing](../requirements/REQ-F-semantic-framing.md)
 - Requirements: [REQ-F-marker-resonance-weighting](../requirements/REQ-F-marker-resonance-weighting.md)
 - Requirements: [REQ-F-multi-narrative-analysis](../requirements/REQ-F-multi-narrative-analysis.md)

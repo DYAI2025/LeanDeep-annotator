@@ -44,7 +44,7 @@ We can introduce optional compose-of rules in Phase 2+. But only as optimization
 
 - Goal: [GOAL-autonomous-marker-evolution](../goals/GOAL-autonomous-marker-evolution.md)
 - User Story: [US-autonomous-marker-enrichment](../user-stories/US-autonomous-marker-enrichment.md)
-- Decision: [DEC-marker-creation-free-form](../../decisions/DEC-marker-creation-free-form.md)
+- Decision: [DEC-semantic-guided-multi-perspective-architecture](../../decisions/DEC-semantic-guided-multi-perspective-architecture.md)
 
 ## Notes
 

@@ -44,8 +44,10 @@ If KI semantic framing is insufficient:
 
 ## Timeline
 
-- **Phase 1**: Run verification in parallel with MVP development (2-3 weeks)
-- **Gate**: Before deploying production (must resolve assumption)
+- **Phase 1**: Run verification in parallel with P0 implementation (Week 1-2 of Code phase)
+- **Decision Gate (Week 2)**: If F1 < 0.75 on 3+ dimensions, STOP and evaluate alternatives
+- **Production Gate**: Must be Verified before production deployment
+- **Risk Accepted for Design Phase**: Proceeding to Design with assumption Unverified; verification runs in parallel with Code phase per tasks.md critical gates
 
 ## Related Artifacts
 

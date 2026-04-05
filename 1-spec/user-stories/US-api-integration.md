@@ -61,10 +61,11 @@ As a **developer or third-party integrator**, I want to **call LeanDeep via a si
 
 ## Related Artifacts
 
-- Goal: [GOAL-multi-channel-deployment](../goals/GOAL-multi-channel-deployment.md)
+- Goal: [GOAL-semantic-meaning-disclosure](../goals/GOAL-semantic-meaning-disclosure.md)
+- Requirements: [REQ-PERF-conversation-latency](../requirements/REQ-PERF-conversation-latency.md)
 - Requirements: [REQ-F-rest-api](../requirements/REQ-F-rest-api.md)
-- Requirements: [REQ-PERF-api-latency](../requirements/REQ-PERF-api-latency.md)
 - Requirements: [REQ-SCA-rate-limiting](../requirements/REQ-SCA-rate-limiting.md)
+- Requirements: [REQ-SEC-data-handling](../requirements/REQ-SEC-data-handling.md)
 
 ## Notes
 

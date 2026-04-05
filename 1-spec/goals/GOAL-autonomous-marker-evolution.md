@@ -1,7 +1,7 @@
 # GOAL-autonomous-marker-evolution
 
 **Priority**: Must-have (Phase 1 core)  
-**Status**: Draft  
+**Status**: Approved  
 **Source Stakeholder**: STK-researcher, STK-maintainer
 
 ## Objective
@@ -37,12 +37,10 @@ Enable the LeanDeep system to **autonomously extend and refine its marker vocabu
 ## Related Artifacts
 
 - User Stories: [US-autonomous-marker-enrichment](../user-stories/US-autonomous-marker-enrichment.md)
-- User Stories: [US-semantic-learning](../user-stories/US-semantic-learning.md)
 - Requirements: [REQ-F-candidate-detection](../requirements/REQ-F-candidate-detection.md)
 - Requirements: [REQ-F-example-auto-enrichment](../requirements/REQ-F-example-auto-enrichment.md)
 - Requirements: [REQ-MNT-marker-evolution-tracking](../requirements/REQ-MNT-marker-evolution-tracking.md)
-- Decisions: [DEC-no-compose-of-rules](../../decisions/DEC-no-compose-of-rules.md)
-- Decisions: [DEC-human-gate-new-markers](../../decisions/DEC-human-gate-new-markers.md)
+- Constraints: [CON-no-compose-of-rules](../constraints/CON-no-compose-of-rules.md)
 
 ## Notes
 

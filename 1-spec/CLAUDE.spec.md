@@ -106,9 +106,8 @@ When an artifact is no longer relevant:
 |------|----------|--------|---------|
 | [GOAL-semantic-meaning-disclosure](goals/GOAL-semantic-meaning-disclosure.md) | Must-have | Approved | AI-guided post-analysis tool for semantic meaning revelation via marker resonance + context metrics |
 | [GOAL-professional-diagnostic-support](goals/GOAL-professional-diagnostic-support.md) | Must-have | Approved | Support professionals with bias-resistant pattern detection + multi-perspective interpretation |
-| [GOAL-real-time-live-analysis](goals/GOAL-real-time-live-analysis.md) | Should-have | Draft | Real-time stream analysis for fraud, negotiation, interrogation support (Phase 2+) |
 | [GOAL-autonomous-marker-evolution](goals/GOAL-autonomous-marker-evolution.md) | Must-have | Approved | Self-learning marker system with weak marker clustering + autonomous enrichment |
-| [GOAL-multi-channel-deployment](goals/GOAL-multi-channel-deployment.md) | Must-have | Approved | Multi-channel deployment (Native UI, REST API, Embedded) for integration |
+| [GOAL-real-time-live-analysis](goals/GOAL-real-time-live-analysis.md) | Should-have | Draft | Real-time stream analysis for fraud, negotiation, interrogation support (Phase 2+) |
 
 ---
 
@@ -127,12 +126,19 @@ When an artifact is no longer relevant:
 
 | File | Type | Priority | Status | Summary |
 |------|------|----------|--------|---------|
-| [REQ-F-semantic-framing](requirements/REQ-F-semantic-framing.md) | Functional | Must-have | Draft | KI generates semantic frame for dialogue context (tone, themes, dynamics) |
-| [REQ-F-marker-resonance-weighting](requirements/REQ-F-marker-resonance-weighting.md) | Functional | Must-have | Draft | Marker confidence weighted by semantic frame resonance (reduce false positives) |
-| [REQ-F-multi-narrative-analysis](requirements/REQ-F-multi-narrative-analysis.md) | Functional | Must-have | Draft | Generate >= 3 alternative narrative interpretations per dialogue |
-| [REQ-USA-interactive-visualization](requirements/REQ-USA-interactive-visualization.md) | Usability | Must-have | Draft | Color-coded text highlights + contextual tooltips + narrative linking |
-| [REQ-PERF-conversation-latency](requirements/REQ-PERF-conversation-latency.md) | Performance | Must-have | Draft | Conversation analysis p95 < 500ms; full interpretation p95 < 1s |
-| [REQ-F-candidate-detection](requirements/REQ-F-candidate-detection.md) | Functional | Must-have | Draft | Auto-detect new marker candidates from dialogue patterns |
+| [REQ-F-semantic-framing](requirements/REQ-F-semantic-framing.md) | Functional | Must-have | Approved | KI generates semantic frame for dialogue context (tone, themes, dynamics) |
+| [REQ-F-marker-resonance-weighting](requirements/REQ-F-marker-resonance-weighting.md) | Functional | Must-have | Approved | Marker confidence weighted by semantic frame resonance (reduce false positives) |
+| [REQ-F-multi-narrative-analysis](requirements/REQ-F-multi-narrative-analysis.md) | Functional | Must-have | Approved | Generate >= 3 alternative narrative interpretations per dialogue |
+| [REQ-USA-interactive-visualization](requirements/REQ-USA-interactive-visualization.md) | Usability | Must-have | Approved | Color-coded text highlights + contextual tooltips + narrative linking |
+| [REQ-PERF-conversation-latency](requirements/REQ-PERF-conversation-latency.md) | Performance | Must-have | Approved | Conversation analysis p95 < 500ms; full interpretation p95 < 1s |
+| [REQ-F-candidate-detection](requirements/REQ-F-candidate-detection.md) | Functional | Must-have | Approved | Auto-detect new marker candidates from dialogue patterns |
+| [REQ-COMP-professional-interpretability](requirements/REQ-COMP-professional-interpretability.md) | Compliance | Must-have | Draft | All outputs must be explainable, professionally interpretable, and evidence-grounded |
+| [REQ-F-example-auto-enrichment](requirements/REQ-F-example-auto-enrichment.md) | Functional | Must-have | Draft | Auto-propose new examples for existing markers from analysed dialogues |
+| [REQ-MNT-marker-evolution-tracking](requirements/REQ-MNT-marker-evolution-tracking.md) | Maintainability | Should-have | Draft | Audit trail for all marker library changes with revert and reporting |
+| [REQ-F-rest-api](requirements/REQ-F-rest-api.md) | Functional | Must-have | Draft | Stable, documented REST API v1 with auth, provider selection, and contracts |
+| [REQ-SCA-rate-limiting](requirements/REQ-SCA-rate-limiting.md) | Scalability | Should-have | Draft | Per-key rate limiting with transparent quota feedback headers |
+| [REQ-SEC-data-handling](requirements/REQ-SEC-data-handling.md) | Security | Must-have | Draft | Protect dialogue data, enforce auth, sanitize input, no persistent storage without consent |
+| [REQ-REL-provider-fallback](requirements/REQ-REL-provider-fallback.md) | Reliability | Must-have | Draft | Graceful degradation with provider fallback chain and partial results |
 
 ---
 

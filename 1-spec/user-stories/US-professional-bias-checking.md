@@ -48,7 +48,8 @@ As a **therapist or psychologist**, I want to **run a dialogue through LeanDeep 
 ## Related Artifacts
 
 - Goal: [GOAL-professional-diagnostic-support](../goals/GOAL-professional-diagnostic-support.md)
-- Requirements: [REQ-USA-professional-ui](../requirements/REQ-USA-professional-ui.md)
+- Requirements: [REQ-USA-interactive-visualization](../requirements/REQ-USA-interactive-visualization.md)
+- Requirements: [REQ-F-multi-narrative-analysis](../requirements/REQ-F-multi-narrative-analysis.md)
 - Requirements: [REQ-COMP-professional-interpretability](../requirements/REQ-COMP-professional-interpretability.md)
 
 ## Notes

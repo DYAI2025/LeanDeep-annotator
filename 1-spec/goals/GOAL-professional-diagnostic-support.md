@@ -1,7 +1,7 @@
 # GOAL-professional-diagnostic-support
 
 **Priority**: Must-have  
-**Status**: Draft  
+**Status**: Approved  
 **Source Stakeholder**: STK-product-owner, STK-researcher
 
 ## Objective
@@ -36,8 +36,7 @@ Enable therapeutic professionals (Therapeuten, Psychologen, Coaches) to use Lean
 ## Related Artifacts
 
 - User Stories: [US-professional-bias-checking](../user-stories/US-professional-bias-checking.md)
-- User Stories: [US-pattern-discovery](../user-stories/US-pattern-discovery.md)
-- Requirements: [REQ-USA-professional-ui](../requirements/REQ-USA-professional-ui.md)
+- Requirements: [REQ-USA-interactive-visualization](../requirements/REQ-USA-interactive-visualization.md)
 - Requirements: [REQ-COMP-professional-interpretability](../requirements/REQ-COMP-professional-interpretability.md)
 
 ## Notes

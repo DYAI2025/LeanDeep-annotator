@@ -70,7 +70,7 @@ As a **researcher** or **maintainer**, I want the **system to automatically prop
 - Requirements: [REQ-F-candidate-detection](../requirements/REQ-F-candidate-detection.md)
 - Requirements: [REQ-F-example-auto-enrichment](../requirements/REQ-F-example-auto-enrichment.md)
 - Requirements: [REQ-MNT-marker-evolution-tracking](../requirements/REQ-MNT-marker-evolution-tracking.md)
-- Decisions: [DEC-no-compose-of-rules](../../decisions/DEC-no-compose-of-rules.md)
+- Constraints: [CON-no-compose-of-rules](../constraints/CON-no-compose-of-rules.md)
 
 ## Notes
 

@@ -27,6 +27,7 @@ Pure Python core with optional LLM semantic profiling, VAD emotion tracking, sem
 
 **Phase**: Specification (in progress) → Design (ready to review)
 
+- **Specification**: 5 stakeholders; 4 goals (3 Approved, 1 Draft); 4 user stories (Draft); 11 requirements (6 Approved, 5 Draft); 1 assumption (Unverified); 1 constraint (Active). Gap analysis (2026-04-05): resolving findings — C1 done, C2/C3 done, I1/I2 done
 - **Markers**: 887 in production; continuous enrichment cycle (VAD, examples, semantic affinity)
 - **Architecture**: 5-layer pipeline stable; semantic gating + VAD congruence in place
 - **API**: 15 endpoints (v1); Base tier production-ready, Pro tier stable
