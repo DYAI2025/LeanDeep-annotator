@@ -14,6 +14,7 @@ Endpoints:
 
 from __future__ import annotations
 
+import asyncio
 import io
 import time
 from contextlib import asynccontextmanager
@@ -72,6 +73,7 @@ from .models import (
     UEDMetrics,
     VADPoint,
 )
+from .framing import frame_generator
 from .narrative import (
     InitialSemanticsGenerator,
     NarrativeReportGenerator,
@@ -238,11 +240,15 @@ async def analyze_conversation(
     Supports all 4 layers including CLU (cluster patterns over messages)
     and MEMA (meta-level organism diagnosis). Returns temporal patterns
     showing how markers evolve across the conversation.
+
+    When an LLM provider is configured, generates a SemanticFrame for
+    the dialogue (tone, themes, dynamics, intent, context uncertainty).
+    Frame generation runs in parallel with marker detection.
     """
     messages = [{"role": m.role, "text": m.text} for m in req.messages]
     layers = [l.value for l in req.layers]
 
-    # Semantic profiling (Layer 0)
+    # Semantic profiling (Layer 0) — per-message profiles
     analysis_mode = "pattern"
     if req.semantic_mode != "off":
         profiler = _resolve_profiler(request)
@@ -251,7 +257,18 @@ async def analyze_conversation(
         if profiles and profiles[0].source != "none":
             analysis_mode = "semantic"
 
-    result = await engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
+    # Run frame generation + marker detection in parallel (per architecture)
+    frame_task = asyncio.create_task(
+        frame_generator.generate(messages, language=req.language.value)
+    )
+    conv_task = asyncio.create_task(
+        engine.analyze_conversation(messages, layers=layers, threshold=req.threshold)
+    )
+
+    frame, result = await asyncio.gather(frame_task, conv_task)
+
+    if frame is not None:
+        analysis_mode = "semantic"
 
     markers = [
         ConversationMarker(
@@ -280,6 +297,7 @@ async def analyze_conversation(
     ]
 
     return ConversationResponse(
+        frame=frame,
         markers=sorted(markers, key=lambda m: (-m.confidence, m.id)),
         temporal_patterns=temporal,
         topology=result.get("topology"),

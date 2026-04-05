@@ -1,6 +1,6 @@
 # Code Phase Tasks: LeanDeep 6.0 MVP
 
-**Phase Status**: Ready to Start  
+**Phase Status**: In Progress  
 **Total Duration**: ~8-10 weeks  
 **Target Completion**: End of Q2 2026
 
@@ -13,7 +13,8 @@
 ### TASK-semantic-framing-implementation
 
 **Priority**: P0 (Blocker)  
-**Status**: Todo  
+**Status**: Done  
+**Updated**: 2026-04-06  
 **Estimated Time**: M (3 days)  
 **Owner**: Backend
 

@@ -128,20 +128,37 @@ Include: `Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>` when appropri
 
 ---
 
+## Components
+
+### Backend
+
+- **Directory**: [`backend/`](backend/)
+- **Technology**: Python 3.11+, FastAPI, Pydantic
+- **Responsibility**: Core detection pipeline, semantic framing, resonance weighting, narrative generation, REST API, personas, enrichment endpoints
+- **Source**: `api/`
+
+### Frontend
+
+- **Directory**: [`frontend/`](frontend/)
+- **Technology**: React (or vanilla JS — TBD)
+- **Responsibility**: Interactive visualization — text highlighting, tooltips, narrative-marker linking, marker library, dialogue upload
+
+### Marker Pipeline
+
+- **Directory**: [`marker-pipeline/`](marker-pipeline/)
+- **Technology**: Python 3.11+ CLI scripts
+- **Responsibility**: Offline enrichment — schema normalization, VAD/example/semantic affinity enrichment, candidate detection, changelog tracking
+- **Source**: `tools/`, `build/`
+
+---
+
 ## Component-Level Instructions
 
-Component-specific guidance lives in `CLAUDE.component.md` files at the component root:
-
-- `CLAUDE.markers.md`: Marker schema, rating workflow, enrichment pipeline
-- `CLAUDE.engine.md`: Detection pipeline, semantic gating, VAD gate, activation rules
-- `CLAUDE.api.md`: Endpoint design, request validation, response formatting
-- `CLAUDE.personas.md`: Persona storage, EWMA calculation, prediction logic
-
-Each component file lists:
+Each component has a `CLAUDE.component.md` file listing:
 - Relevant decisions (trigger conditions)
 - Key architectural constraints
-- Testing strategy specific to that component
-- Known issues and TODOs
+- Requirements addressed
+- Interfaces with other components
 
 ---
 
