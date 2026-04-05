@@ -279,14 +279,16 @@ Dialogue text with:
 └──────────────────────────────────────────────────────┘
 
 ┌──────────────────────────────────────────────────────┐
-│ FALLBACK: If Gemini slow (> 250ms):                 │
+│ FALLBACK: Provider failure (REQ-REL-provider-fallback)│
 ├──────────────────────────────────────────────────────┤
-│ 1. Timeout Gemini call after 250ms                  │
-│ 2. Try OpenRouter fallback (next LLM provider)      │
-│ 3. If OpenRouter also slow: ERROR (no embedding FB) │
+│ 1. Timeout primary provider (2s, configurable)      │
+│ 2. Try next configured provider in chain             │
+│ 3. Embedding-based semantic profile (local, no API)  │
+│ 4. Markers only — no frame, no weighting, no narr.   │
 │                                                      │
-│ Rationale: Embedding-based frame = systematically   │
-│ wrong; better to fail explicitly than mislead user  │
+│ Total fallback resolution: < 5s                      │
+│ Response includes: degraded=true, fallback_reason    │
+│ Never returns hard failure for provider issues       │
 └──────────────────────────────────────────────────────┘
 ```
 
