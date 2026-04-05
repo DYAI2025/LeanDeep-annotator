@@ -99,23 +99,6 @@ class DetectedMarker(BaseModel):
     multiplier: float | None = None
 
 
-class SemanticFrame(BaseModel):
-    """Dialogue-level semantic frame (7 dimensions). See REQ-F-semantic-framing."""
-
-    tone: str = Field(..., description="2-3 adjectives describing overall conversational tone")
-    themes: list[str] = Field(..., description="Primary topic clusters")
-    relational_dynamics: str = Field(..., description="Relationship pattern descriptor")
-    intent: str = Field(..., description="Primary conversational goal/intent")
-    emotional_tenor: float = Field(..., ge=-1.0, le=1.0, description="Overall emotional valence")
-    context_validity: float = Field(..., ge=0.0, le=1.0, description="Ratio of internally resolvable references")
-    offline_context_risk: float = Field(..., ge=0.0, le=1.0, description="Ratio of tensions likely from invisible context")
-
-
-class AnalyzeResponse(BaseModel):
-    markers: list[DetectedMarker]
-    meta: AnalyzeMeta
-
-
 class AnalyzeMeta(BaseModel):
     processing_ms: float
     version: str = "5.1-LD5"
@@ -124,6 +107,11 @@ class AnalyzeMeta(BaseModel):
     layers_scanned: list[str]
     shadow_mode: bool = False
     analysis_mode: str = "pattern"
+
+
+class AnalyzeResponse(BaseModel):
+    markers: list[DetectedMarker]
+    meta: AnalyzeMeta
 
 
 class SemanticProfileResponse(BaseModel):
