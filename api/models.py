@@ -99,11 +99,6 @@ class DetectedMarker(BaseModel):
     multiplier: float | None = None
 
 
-class AnalyzeResponse(BaseModel):
-    markers: list[DetectedMarker]
-    meta: AnalyzeMeta
-
-
 class AnalyzeMeta(BaseModel):
     processing_ms: float
     version: str = "5.1-LD5"
@@ -112,6 +107,11 @@ class AnalyzeMeta(BaseModel):
     layers_scanned: list[str]
     shadow_mode: bool = False
     analysis_mode: str = "pattern"
+
+
+class AnalyzeResponse(BaseModel):
+    markers: list[DetectedMarker]
+    meta: AnalyzeMeta
 
 
 class SemanticProfileResponse(BaseModel):
