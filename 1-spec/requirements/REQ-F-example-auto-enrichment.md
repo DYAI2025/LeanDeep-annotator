@@ -2,7 +2,7 @@
 
 **Class**: Functional  
 **Priority**: Must-have  
-**Status**: Draft
+**Status**: Approved
 
 ## Requirement
 

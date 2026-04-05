@@ -1,9 +1,9 @@
 # DEC-semantic-guided-multi-perspective-architecture
 
-**Status**: Proposed  
+**Status**: Approved  
 **Decision Type**: Architecture  
-**Made By**: ai-proposed/human-approval-pending  
-**Date**: 2026-04-04
+**Made By**: human-decided  
+**Date**: 2026-04-05
 
 ## Decision
 

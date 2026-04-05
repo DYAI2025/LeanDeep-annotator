@@ -2,7 +2,7 @@
 
 **Role**: STK-researcher, STK-api-consumer  
 **Priority**: Must-have  
-**Status**: Draft
+**Status**: Approved
 
 ## User Story
 

@@ -2,7 +2,7 @@
 
 **Class**: Scalability  
 **Priority**: Should-have  
-**Status**: Draft
+**Status**: Approved
 
 ## Requirement
 

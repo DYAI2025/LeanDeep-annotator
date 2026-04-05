@@ -2,7 +2,7 @@
 
 **Class**: Reliability  
 **Priority**: Must-have  
-**Status**: Draft
+**Status**: Approved
 
 ## Requirement
 

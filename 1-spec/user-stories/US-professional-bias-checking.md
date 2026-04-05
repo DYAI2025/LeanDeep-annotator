@@ -2,7 +2,7 @@
 
 **Role**: STK-researcher (Psychologist, Therapist, Coach)  
 **Priority**: Must-have  
-**Status**: Draft
+**Status**: Approved
 
 ## User Story
 

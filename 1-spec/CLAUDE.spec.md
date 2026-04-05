@@ -115,10 +115,10 @@ When an artifact is no longer relevant:
 
 | File | Role | Priority | Status | Summary |
 |------|------|----------|--------|---------|
-| [US-post-analysis-interpretation](user-stories/US-post-analysis-interpretation.md) | Researcher, API Consumer | Must-have | Draft | Upload dialogue → semantic frame + markers + multi-perspective interpretation |
-| [US-professional-bias-checking](user-stories/US-professional-bias-checking.md) | Therapist, Psychologist | Must-have | Draft | Run session through LeanDeep to counteract personal interpretive bias |
-| [US-autonomous-marker-enrichment](user-stories/US-autonomous-marker-enrichment.md) | Researcher, Maintainer | Must-have | Draft | System auto-proposes new examples + detects new marker candidates |
-| [US-api-integration](user-stories/US-api-integration.md) | Developer, API Consumer | Must-have | Draft | Call REST API to embed semantic analysis in third-party platform |
+| [US-post-analysis-interpretation](user-stories/US-post-analysis-interpretation.md) | Researcher, API Consumer | Must-have | Approved | Upload dialogue → semantic frame + markers + multi-perspective interpretation |
+| [US-professional-bias-checking](user-stories/US-professional-bias-checking.md) | Therapist, Psychologist | Must-have | Approved | Run session through LeanDeep to counteract personal interpretive bias |
+| [US-autonomous-marker-enrichment](user-stories/US-autonomous-marker-enrichment.md) | Researcher, Maintainer | Must-have | Approved | System auto-proposes new examples + detects new marker candidates |
+| [US-api-integration](user-stories/US-api-integration.md) | Developer, API Consumer | Must-have | Approved | Call REST API to embed semantic analysis in third-party platform |
 
 ---
 
@@ -132,13 +132,13 @@ When an artifact is no longer relevant:
 | [REQ-USA-interactive-visualization](requirements/REQ-USA-interactive-visualization.md) | Usability | Must-have | Approved | Color-coded text highlights + contextual tooltips + narrative linking |
 | [REQ-PERF-conversation-latency](requirements/REQ-PERF-conversation-latency.md) | Performance | Must-have | Approved | Conversation analysis p95 < 500ms; full interpretation p95 < 1s |
 | [REQ-F-candidate-detection](requirements/REQ-F-candidate-detection.md) | Functional | Must-have | Approved | Auto-detect new marker candidates from dialogue patterns |
-| [REQ-COMP-professional-interpretability](requirements/REQ-COMP-professional-interpretability.md) | Compliance | Must-have | Draft | All outputs must be explainable, professionally interpretable, and evidence-grounded |
-| [REQ-F-example-auto-enrichment](requirements/REQ-F-example-auto-enrichment.md) | Functional | Must-have | Draft | Auto-propose new examples for existing markers from analysed dialogues |
-| [REQ-MNT-marker-evolution-tracking](requirements/REQ-MNT-marker-evolution-tracking.md) | Maintainability | Should-have | Draft | Audit trail for all marker library changes with revert and reporting |
-| [REQ-F-rest-api](requirements/REQ-F-rest-api.md) | Functional | Must-have | Draft | Stable, documented REST API v1 with auth, provider selection, and contracts |
-| [REQ-SCA-rate-limiting](requirements/REQ-SCA-rate-limiting.md) | Scalability | Should-have | Draft | Per-key rate limiting with transparent quota feedback headers |
-| [REQ-SEC-data-handling](requirements/REQ-SEC-data-handling.md) | Security | Must-have | Draft | Protect dialogue data, enforce auth, sanitize input, no persistent storage without consent |
-| [REQ-REL-provider-fallback](requirements/REQ-REL-provider-fallback.md) | Reliability | Must-have | Draft | Graceful degradation with provider fallback chain and partial results |
+| [REQ-COMP-professional-interpretability](requirements/REQ-COMP-professional-interpretability.md) | Compliance | Must-have | Approved | All outputs must be explainable, professionally interpretable, and evidence-grounded |
+| [REQ-F-example-auto-enrichment](requirements/REQ-F-example-auto-enrichment.md) | Functional | Must-have | Approved | Auto-propose new examples for existing markers from analysed dialogues |
+| [REQ-MNT-marker-evolution-tracking](requirements/REQ-MNT-marker-evolution-tracking.md) | Maintainability | Should-have | Approved | Audit trail for all marker library changes with revert and reporting |
+| [REQ-F-rest-api](requirements/REQ-F-rest-api.md) | Functional | Must-have | Approved | Stable, documented REST API v1 with auth, provider selection, and contracts |
+| [REQ-SCA-rate-limiting](requirements/REQ-SCA-rate-limiting.md) | Scalability | Should-have | Approved | Per-key rate limiting with transparent quota feedback headers |
+| [REQ-SEC-data-handling](requirements/REQ-SEC-data-handling.md) | Security | Must-have | Approved | Protect dialogue data, enforce auth, sanitize input, no persistent storage without consent |
+| [REQ-REL-provider-fallback](requirements/REQ-REL-provider-fallback.md) | Reliability | Must-have | Approved | Graceful degradation with provider fallback chain and partial results |
 
 ---
 
