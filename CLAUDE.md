@@ -27,7 +27,7 @@ Pure Python core with optional LLM semantic profiling, VAD emotion tracking, sem
 
 **Phase**: Design (in progress)
 
-- **Design**: Architecture complete (Approved); Data model drafted; API design drafted (2026-04-05). 2 decisions recorded
+- **Design**: Architecture complete (Approved); Data model drafted; API design drafted (2026-04-05). 3 decisions recorded. Completeness assessment (2026-04-05): 0 Critical, 0 Important, 2 Minor
 - **Specification**: Complete. 4 goals (3 Approved); 4 user stories (all Approved); 13 requirements (all Approved); gap analysis clean
 - **Markers**: 887 in production; continuous enrichment cycle (VAD, examples, semantic affinity)
 - **Architecture**: 5-layer pipeline stable; semantic gating + VAD congruence in place
