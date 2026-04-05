@@ -151,6 +151,10 @@ class ConversationMarker(BaseModel):
     multiplier: float | None = None
     matches: list[PatternMatch] = []
     frame: dict[str, Any] | None = None
+    # v6.0 resonance weighting fields (additive, per DEC-v1-backward-compatibility)
+    resonance_score: float | None = None
+    adjusted_confidence: float | None = None
+    tier: str | None = None  # "STRONG" | "WEAK" | "DISCARDED"
 
 
 class TemporalPattern(BaseModel):
@@ -192,9 +196,19 @@ class ReasoningReport(BaseModel):
     evidence_marker_ids: list[str] = []
 
 
+class WeakCluster(BaseModel):
+    """A cluster of weak markers suggesting an alternative interpretation."""
+    marker_ids: list[str]
+    cluster_label: str
+    coherence: float = Field(ge=0.0, le=1.0)
+    avg_confidence: float = Field(ge=0.0, le=1.0)
+    marker_count: int
+
+
 class ConversationResponse(BaseModel):
     frame: SemanticFrame | None = None
     markers: list[ConversationMarker]
+    weak_clusters: list[WeakCluster] = []
     temporal_patterns: list[TemporalPattern] = []
     topology: TopologyReport | None = None
     reasoning: ReasoningReport | None = None

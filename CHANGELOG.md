@@ -8,6 +8,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **Semantic Framing Layer** (`api/framing.py`) — generates 7-dimension SemanticFrame per dialogue using Gemini async API; in-memory cache (24h TTL); parallel execution with ATO detection
+- **Frame Resonance Weighting** (`api/resonance.py`) — scores markers against SemanticFrame for contextual relevance; categorizes into STRONG/WEAK/DISCARDED tiers; weak marker clustering via LLM for alternative perspectives
+- `POST /v1/analyze/conversation` response now includes `frame` (SemanticFrame), `resonance_score`, `adjusted_confidence`, `tier` per marker, and `weak_clusters` array
 - **Resonanzraum GUI** (`/resonanzraum`) — acoustic-aesthetic analysis interface
   - 3-column layout: Frame-Spektrum (270px) | Annotierter Verlauf (flex) | Narrative Obertöne (310px)
   - Animated waveform header (color shifts amber ↔ cyan per `emotional_tenor`)

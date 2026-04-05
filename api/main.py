@@ -59,6 +59,7 @@ from .models import (
     PatternMatch,
     PersonaCreateResponse,
     PersonaSessionSummary,
+    WeakCluster,
     PredictionReservoir,
     PredictionResponse,
     SemanticProfileResponse,
@@ -74,6 +75,7 @@ from .models import (
     VADPoint,
 )
 from .framing import frame_generator
+from .resonance import apply_resonance_weighting, cluster_weak_markers
 from .narrative import (
     InitialSemanticsGenerator,
     NarrativeReportGenerator,
@@ -270,35 +272,88 @@ async def analyze_conversation(
     if frame is not None:
         analysis_mode = "semantic"
 
-    markers = [
-        ConversationMarker(
-            id=d.marker_id,
-            layer=Layer(d.layer),
-            confidence=d.confidence,
-            description=d.description,
-            message_indices=d.message_indices,
-            family=d.family,
-            multiplier=d.multiplier,
-            matches=[
-                PatternMatch(
-                    pattern=m.pattern,
-                    span=(m.start, m.end),
-                    matched_text=m.matched_text,
-                )
-                for m in d.matches
-            ],
+    detections = result["detections"]
+    weak_cluster_models: list[WeakCluster] = []
+
+    # Apply resonance weighting when frame is available
+    if frame is not None:
+        strong, weak, _discarded = apply_resonance_weighting(
+            detections, frame, engine.markers,
         )
-        for d in result["detections"]
-    ]
+
+        # Cluster weak markers for alternative perspectives
+        clusters = await cluster_weak_markers(weak)
+        weak_cluster_models = [
+            WeakCluster(
+                marker_ids=c.marker_ids,
+                cluster_label=c.cluster_label,
+                coherence=c.coherence,
+                avg_confidence=c.avg_confidence,
+                marker_count=c.marker_count,
+            )
+            for c in clusters
+        ]
+
+        # Build response markers from weighted results (strong + weak, not discarded)
+        all_weighted = strong + weak
+        markers = [
+            ConversationMarker(
+                id=wm.marker_id,
+                layer=Layer(wm.layer),
+                confidence=wm.confidence,
+                description=wm.description,
+                message_indices=wm.message_indices,
+                family=wm.family,
+                multiplier=wm.multiplier,
+                matches=[
+                    PatternMatch(
+                        pattern=m.pattern,
+                        span=(m.start, m.end),
+                        matched_text=m.matched_text,
+                    )
+                    for m in wm.matches
+                ],
+                resonance_score=wm.resonance_score,
+                adjusted_confidence=wm.adjusted_confidence,
+                tier=wm.tier,
+            )
+            for wm in all_weighted
+        ]
+    else:
+        # No frame — return markers without resonance data
+        markers = [
+            ConversationMarker(
+                id=d.marker_id,
+                layer=Layer(d.layer),
+                confidence=d.confidence,
+                description=d.description,
+                message_indices=d.message_indices,
+                family=d.family,
+                multiplier=d.multiplier,
+                matches=[
+                    PatternMatch(
+                        pattern=m.pattern,
+                        span=(m.start, m.end),
+                        matched_text=m.matched_text,
+                    )
+                    for m in d.matches
+                ],
+            )
+            for d in detections
+        ]
 
     temporal = [
         TemporalPattern(**tp)
         for tp in result.get("temporal_patterns", [])
     ]
 
+    # Sort by adjusted_confidence (if available) or confidence
+    markers.sort(key=lambda m: (-(m.adjusted_confidence or m.confidence), m.id))
+
     return ConversationResponse(
         frame=frame,
-        markers=sorted(markers, key=lambda m: (-m.confidence, m.id)),
+        markers=markers,
+        weak_clusters=weak_cluster_models,
         temporal_patterns=temporal,
         topology=result.get("topology"),
         reasoning=result.get("reasoning"),
