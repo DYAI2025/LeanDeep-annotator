@@ -1,18 +1,104 @@
-# CLAUDE.md
+## Language Policy
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+**All AI outputs must be in English**, regardless of the language used in user prompts. This applies to code, comments, documentation, configuration files, commit messages, and response text.
+
+---
 
 ## Project Overview
 
-LeanDeep 6.0: deterministic annotation layer for psychological/conversational pattern detection. Five-layer hierarchy: **Semantic Layer 0** (LLM/embedding pre-filter) → **ATO** (atomic regex signals) → **SEM** (semantic blends) → **CLU** (cluster intuitions) → **MEMA** (meta markers). Pure Python core with optional LLM semantic profiling. 887 markers, regex-based detection with VAD emotion tracking, semantic gating, episode detection, persona profiling, and optional neuro-symbolic reasoning via Gemini.
+**LeanDeep 6.0**: Deterministic annotation layer for psychological/conversational pattern detection with 5-layer hierarchy:
+1. **Semantic Layer 0** (LLM/embedding pre-filter)
+2. **ATO** (atomic regex signals, 887+ markers)
+3. **SEM** (semantic blends)
+4. **CLU** (cluster intuitions)
+5. **MEMA** (meta-diagnosis)
 
-**Repo:** `DYAI2025/LeanDeep-annotator`
+Pure Python core with optional LLM semantic profiling, VAD emotion tracking, semantic gating, episode detection, persona profiling, and neuro-symbolic reasoning via Gemini.
 
 **Two tiers:**
 - **Base** (stateless): Single text + conversation analysis, VAD trajectories, UED metrics, prosody
 - **Pro** (persistent): Persona profiles with EWMA warm-start, episode tracking, shift predictions
 
-## Quick Start
+**Repo:** `DYAI2025/LeanDeep-annotator`
+
+---
+
+## Current State
+
+**Phase**: Design (in progress)
+
+- **Design**: Architecture complete (Approved); Data model drafted; API design drafted (2026-04-05). 3 decisions recorded. Completeness assessment (2026-04-05): 0 Critical, 0 Important, 2 Minor
+- **Specification**: Complete. 4 goals (3 Approved); 4 user stories (all Approved); 13 requirements (all Approved); gap analysis clean
+- **Markers**: 887 in production; continuous enrichment cycle (VAD, examples, semantic affinity)
+- **Architecture**: 5-layer pipeline stable; semantic gating + VAD congruence in place
+- **API**: 15 endpoints (v1); Base tier production-ready, Pro tier stable
+- **Testing**: Unit tests + E2E (CTG shadow mode); eval corpus operational
+- **Infrastructure**: Fly.io deployment; Gemini reasoning optional
+- **Known gaps**: Example coverage incomplete, semantic affinity sparse, negative example enrichment WIP
+
+---
+
+## Phase-Specific Instructions
+
+Each phase directory contains a `CLAUDE.<phase>.md` file. When working in a phase:
+
+1. Read the phase-specific instructions — they extend (not override) this file
+2. Consult the decisions index in that phase file before starting work
+3. Work within the appropriate phase structure
+
+| Phase | Directory | Focus |
+|-------|-----------|-------|
+| **Specification** | `1-spec/` | Define what to build and why; capture gaps and requirements |
+| **Design** | `2-design/` | Define how to build it; architecture, data model, API refinements |
+| **Code** | `3-code/` | Build it; implementation planning, marker enrichment, feature delivery |
+| **Deploy** | `4-deploy/` | Ship and operate it; infrastructure, runbooks, deployments |
+
+### Cross-Skill Artifact Procedures
+
+Any modification to phase artifacts — whether performed inside a skill, during a free-prompt conversation, or as a side effect of any other task — must follow the authoritative procedures for that phase:
+
+- **Specification artifacts** (`1-spec/`): follow the procedures in [`.claude/skills/SDLC-elicit/SKILL.md`](.claude/skills/SDLC-elicit/SKILL.md)
+- **Design artifacts** (`2-design/`): follow the procedures in [`.claude/skills/SDLC-design/SKILL.md`](.claude/skills/SDLC-design/SKILL.md)
+- **Code phase task artifacts** (`3-code/tasks.md`): follow the procedures in [`.claude/skills/SDLC-implementation-plan/SKILL.md`](.claude/skills/SDLC-implementation-plan/SKILL.md)
+
+### Phase Gates
+
+| Transition | Preconditions |
+|------------|---------------|
+| Spec → Design | At least one goal Approved; at least one requirement Approved; gap analysis fresh |
+| Design → Code | All design documents drafted (`architecture.md`, `data-model.md`, `api-design.md`); completeness assessment fresh; components identified |
+
+---
+
+## Artifacts
+
+All project knowledge is captured as structured markdown files. This gives agents full context and creates traceability from business goals to deployed code.
+
+| Prefix | Artifact | Location |
+|--------|----------|----------|
+| `GOAL` | Goals | `1-spec/goals/` |
+| `US` | User Stories | `1-spec/user-stories/` |
+| `REQ-CLASS` | Requirements | `1-spec/requirements/` |
+| `ASM` | Assumptions | `1-spec/assumptions/` |
+| `CON` | Constraints | `1-spec/constraints/` |
+| `STK` | Stakeholders | `1-spec/stakeholders.md` (rows) |
+| `TASK` | Tasks | `3-code/tasks.md` (rows) |
+| `DEC` | Decisions | `decisions/` |
+
+### Naming Convention
+
+All artifact IDs use the pattern `PREFIX-kebab-name`. Example: `REQ-F-semantic-affinity-enrichment`, `DEC-marker-rating-lifecycle`.
+
+### Artifact Status Lifecycle
+
+- **Draft → Approved**: Only human can approve
+- **Approved → Implemented**: Agent marks when all linked tasks reach Done
+- **Any → Deprecated**: Only human can deprecate
+- **Unverified → Verified | Invalidated**: For assumptions
+
+---
+
+## Quick Start (Development)
 
 ```bash
 pip install -r requirements.txt
@@ -24,50 +110,28 @@ python3 -m uvicorn api.main:app --port 8420 --reload
 fastmcp run mcp_server.py
 ```
 
-## Commands
+### Core Commands
 
 ```bash
-# Run tests
+# Tests
 python3 -m pytest tests/ -x -q
-
-# Run a single test file or function
 python3 -m pytest tests/test_engine_vad.py -x -q
-python3 -m pytest tests/test_api_dynamics.py::test_function_name -x -q
 
-# CTG Shadow Mode E2E tests (requires running server on :8420)
-python3 -m pytest tests/test_api_ctg_shadow.py -q
+# Marker pipeline: edit markers_rated/ → normalize → test → eval
+python3 tools/normalize_schema.py
+python3 tools/enrich_vad.py
+python3 tools/enrich_ld5.py
+python3 tools/enrich_negatives.py
+python3 tools/enrich_examples.py
+python3 tools/enrich_semantic_affinity.py --dry-run
+python3 tools/build_prototypes.py
 
-# Pipeline: edit markers_rated/ -> normalize -> test
-python3 tools/normalize_schema.py    # Rebuild registry from markers_rated/
-python3 tools/enrich_vad.py          # Add VAD + effect_on_state
-python3 tools/enrich_ld5.py          # Add families, multipliers, ARS, EWMA
-python3 tools/enrich_negatives.py    # Add negative examples
-python3 tools/enrich_examples.py     # Gap report + batch plan for examples
-python3 tools/enrich_semantic_affinity.py --dry-run  # Preview semantic affinity enrichment
-python3 tools/build_prototypes.py    # Build embedding prototypes for fallback
-
-# Evaluation (~90s on full gold corpus)
-python3 tools/eval_corpus.py         # Marker detection eval against gold corpus
-python3 tools/eval_dynamics.py       # Emotion dynamics eval (VAD/UED/state trends)
-
-# Registry stats
-python3 -c "import json; r=json.load(open('build/markers_normalized/marker_registry.json')); print(len(r['markers']))"
+# Evaluation
+python3 tools/eval_corpus.py         # Marker detection eval
+python3 tools/eval_dynamics.py       # Emotion dynamics eval
 ```
 
-## Environment Variables
-
-All prefixed with `LEANDEEP_` (via pydantic-settings in `api/config.py`).
-
-| Variable | Type | Default | Purpose |
-|----------|------|---------|---------|
-| `LEANDEEP_REQUIRE_AUTH` | bool | false | Enable API key auth |
-| `LEANDEEP_CORS_ORIGINS` | str | localhost:8420,localhost:3000 | Comma-separated CORS origins |
-| `LEANDEEP_GOOGLE_API_KEY` | str | None | Gemini API key for reasoning layer |
-| `LEANDEEP_REASONING_MODEL` | str | gemini-1.5-flash | LLM model for neuro-symbolic reasoning |
-| `LEANDEEP_RATE_LIMIT_PER_MINUTE` | int | 60 | Rate limit |
-| `LEANDEEP_SEMANTIC_PROVIDER` | str | None | Semantic provider: gemini\|openai\|anthropic\|ollama |
-| `LEANDEEP_SEMANTIC_API_KEY` | str | None | API key for semantic provider |
-| `LEANDEEP_SEMANTIC_MODEL` | str | None | Model name override for semantic provider |
+---
 
 ## Architecture
 
@@ -83,88 +147,119 @@ Text → Semantic Profiler (Layer 0, LLM/embedding)
      → MEMA (meta-diagnosis via composed_of / detect_class)
 ```
 
-**Semantic Profiler** (`api/semantic.py`): Produces 8-dimension `SemanticProfile` per text unit (intent, register, emotion, ironie, selbst_fremd, beziehungsdynamik, pre_context, tension). Provider-agnostic: Gemini, OpenAI, Anthropic, Ollama, or embedding fallback. BYOK via `X-LeanDeep-Provider` headers.
-
-**Semantic Gate** (`api/engine.py:_apply_semantic_gate`): Filters ATO detections against SemanticProfile using per-marker `semantic_affinity` rules (intent matching, ironie suppression, tension minimums, register exclusion).
-
-**Engine** (`api/engine.py`): Loads `marker_registry.json` at startup. Each layer cascades — CLU/MEMA only fire when their `composed_of` refs are active. DRA guards (negation, reported speech, intensity modifiers) filter at SEM level.
-
-**VAD Congruence Gate**: ATOs filtered by emotional field alignment (valence-arousal-dominance). See `docs/THEORY_QUANTUM_COLLAPSE.md`.
-
-### Post-Processing Layers
-
-- **Interpret** (`api/interpret.py`): Semiotic interpretation — Peirce classification, framing hypotheses, cultural frame analysis, narrative synthesis from detected markers
-- **Reasoning** (`api/reasoning.py`): Neuro-symbolic reasoning via Gemini LLM — interprets structured marker data into psychological diagnoses grounded in evidence. Requires `LEANDEEP_GOOGLE_API_KEY`
-- **Topology** (`api/topology.py`): Conversation topology + constraint checks (adjacency, commitments, drift, repair). Shadow mode — calculates metrics without influencing engine thresholds
-- **Dynamics** (`api/dynamics.py`): UED metrics + state indices computation
-- **Prosody** (`api/prosody.py`): 6 emotions from 17 structural text features
-- **Personas** (`api/personas.py`): EWMA warm-start profiles, episode tracking, YAML persistence
+**Key modules:**
+- **Semantic Profiler** (`api/semantic.py`): 8-dimension profile (intent, register, emotion, ironie, selbst_fremd, beziehungsdynamik, pre_context, tension). Provider-agnostic; Gemini, OpenAI, Anthropic, Ollama, or embedding fallback.
+- **Semantic Gate** (`api/engine.py`): Filters ATOs using per-marker `semantic_affinity` rules
+- **Engine** (`api/engine.py`): Loads `marker_registry.json` at startup; cascading layer activation
+- **VAD Congruence Gate**: Emotional field alignment filtering
+- **Interpret** (`api/interpret.py`): Semiotic interpretation (Peirce, framing, narrative synthesis)
+- **Reasoning** (`api/reasoning.py`): Neuro-symbolic reasoning via Gemini
+- **Topology** (`api/topology.py`): Conversation topology + constraint checks
+- **Dynamics** (`api/dynamics.py`): UED metrics + state indices
+- **Prosody** (`api/prosody.py`): 6 emotions from 17 structural features
+- **Personas** (`api/personas.py`): EWMA profiles, episode tracking, YAML persistence
 
 ### Marker Data Flow
 
 ```
-build/markers_rated/     ← SOURCE OF TRUTH (edit here)
-  1_approved/            ← Rating 1: production quality
-  2_good/                ← Rating 2: usable, needs refinement
-  3_needs_work/          ← Rating 3: WIP
-  4_not_usable/          ← Rating 4: unusable
+build/markers_rated/          ← SOURCE OF TRUTH
+  1_approved/                 ← Rating 1: production
+  2_good/                     ← Rating 2: usable
+  3_needs_work/               ← Rating 3: WIP
+  4_not_usable/               ← Rating 4: unusable
         ↓ normalize_schema.py
-build/markers_normalized/marker_registry.json  ← GENERATED (never edit)
+build/markers_normalized/
+  marker_registry.json        ← GENERATED (never edit)
         ↓ engine.load()
-api/engine.py            ← Runtime detection
+api/engine.py                 ← Runtime detection
 ```
 
 ### API Endpoints
 
-| Method | Path | Description |
-|--------|------|-------------|
-| POST | `/v1/analyze` | Single text analysis (~1ms) |
-| POST | `/v1/analyze/conversation` | Multi-message, all 4 layers, VAD, UED, state |
-| POST | `/v1/analyze/dynamics` | Full emotion dynamics + optional persona warm-start |
-| POST | `/v1/analyze/interpret` | Semiotic interpretation of detected markers |
-| POST | `/v1/upload` | File upload for analysis |
-| POST | `/v1/personas` | Create persona profile (Pro tier) |
-| GET | `/v1/personas/{token}` | Get persona profile |
-| DELETE | `/v1/personas/{token}` | Delete persona |
-| GET | `/v1/personas/{token}/predict` | Shift predictions |
-| GET | `/v1/markers` | Filter/search markers by layer/family/tag |
-| GET | `/v1/markers/{id}` | Marker detail with frame/patterns/examples |
-| GET | `/v1/engine/config` | Engine configuration |
-| GET | `/v1/health` | Health check |
-| GET | `/playground` | Analysis UI |
-| GET | `/analysis` | Analysis dashboard |
+| Method | Path | Tier | Description |
+|--------|------|------|-------------|
+| POST | `/v1/analyze` | Both | Single text analysis (~1ms) |
+| POST | `/v1/analyze/conversation` | Both | Multi-message, all 4 layers, VAD, UED, state |
+| POST | `/v1/analyze/dynamics` | Both | Full emotion dynamics + optional persona warm-start |
+| POST | `/v1/analyze/interpret` | Both | Semiotic interpretation |
+| POST | `/v1/upload` | Both | File upload for analysis |
+| POST | `/v1/personas` | Pro | Create persona profile |
+| GET | `/v1/personas/{token}` | Pro | Get persona profile |
+| DELETE | `/v1/personas/{token}` | Pro | Delete persona |
+| GET | `/v1/personas/{token}/predict` | Pro | Shift predictions |
+| GET | `/v1/markers` | Both | Filter/search markers |
+| GET | `/v1/markers/{id}` | Both | Marker detail |
+| GET | `/v1/engine/config` | Both | Engine configuration |
+| GET | `/v1/health` | Both | Health check |
+| GET | `/playground` | Both | Analysis UI |
+| GET | `/analysis` | Both | Analysis dashboard |
+
+---
 
 ## Architecture Rules
 
 - **NEVER edit** `build/markers_normalized/` — always edit `build/markers_rated/` and run normalizer
 - SEM = 1 ATO + context (not >=2 ATOs). Default activation: `ANY 1`
-- Engine supports `min_components` activation format: `{mode, min_components, window}`
+- Engine supports `min_components` activation: `{mode, min_components, window}`
 - Pattern type "emoji" skipped (only "regex"/"keyword" compiled)
-- 3-char minimum match filter in engine removes noise
-- `context_only` tag: marker hidden from output but available for SEM composition
+- 3-char minimum match filter removes noise
+- `context_only` tag: hidden from output but available for SEM composition
 - Compositionality modulation: deterministic=1.0x, contextual=0.70x, emergent=0.50x
-- ruamel.yaml for all YAML operations (preserve formatting, allow_duplicate_keys)
-- PersonaStore initialized at module level in main.py (not in lifespan — TestClient compatibility)
+- ruamel.yaml for all YAML operations
+- PersonaStore initialized at module level (not lifespan — TestClient compatibility)
 - German is primary language; English patterns need `\b` word boundaries
 
-## Commit Style
+---
 
-Imperative, referencing what changed: `add persona warm-start system`, `fix ATO_HESITATION false positives`.
-Include `Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>` in commits.
+## Environment Variables
 
-## Skills (`.claude/commands/`)
+All prefixed with `LEANDEEP_` (via pydantic-settings in `api/config.py`).
 
-- `/implement-plan` — Execute structured plan with normalize → test → commit cycle
-- `/fix-marker-fp` — Fix false-positive markers with regex improvements
-- `/marker-pipeline` — Run full enrichment pipeline (normalize → enrich → eval → report)
-- `/project-audit` — Audit system state, update ROADMAP.md + BUGS.md with current metrics
-- `/marker-health` — Multi-dimensional marker quality assessment
-- `/create-markers` — Batch marker creation with schema validation and duplicate checking
-- `/bug-brainstorm` — Systematic Socratic bug analysis
-- `/ship-docs` — Update CLAUDE.md, ROADMAP.md, BUGS.md with fresh eval metrics, commit + push
-- `/enrich-examples` — Batch example enrichment for markers
-- `/eval-text` — Evaluate text against markers
-- `/dev-brief` — Development briefing
-- `/quick-status` — Quick project status overview
-- `/fly-deploy` — Deploy to Fly.io
-- `/test-ui` — Test UI components
+| Variable | Type | Default | Purpose |
+|----------|------|---------|---------|
+| `LEANDEEP_REQUIRE_AUTH` | bool | false | Enable API key auth |
+| `LEANDEEP_CORS_ORIGINS` | str | localhost:8420,localhost:3000 | CORS origins |
+| `LEANDEEP_GOOGLE_API_KEY` | str | None | Gemini API key |
+| `LEANDEEP_REASONING_MODEL` | str | gemini-1.5-flash | Reasoning model |
+| `LEANDEEP_RATE_LIMIT_PER_MINUTE` | int | 60 | Rate limit |
+| `LEANDEEP_SEMANTIC_PROVIDER` | str | None | Provider: gemini\|openai\|anthropic\|ollama |
+| `LEANDEEP_SEMANTIC_API_KEY` | str | None | Semantic API key |
+| `LEANDEEP_SEMANTIC_MODEL` | str | None | Model name override |
+
+---
+
+## Decisions Relevant to This Project
+
+| File | Title | Status |
+|------|-------|--------|
+| (TBD) | Marker rating lifecycle and approval workflow | Draft |
+| (TBD) | Semantic affinity enrichment scope and coverage targets | Draft |
+| (TBD) | Example enrichment priority (breadth vs depth) | Draft |
+| (TBD) | Negative example strategy and dataset | Draft |
+| (TBD) | VAD calibration and threshold tuning | Draft |
+| (TBD) | Semantic Layer 0 provider selection (Gemini vs Ollama) | Draft |
+
+---
+
+## Graduated Safeguards
+
+AI agents operate autonomously within development tasks. For project-level decisions:
+
+| Tier | When | Agent Behavior |
+|------|------|----------------|
+| **Always ask** | Conflict resolution, design gaps, deprecation, phase gates | Stop, present options, wait for approval |
+| **Ask first time, then follow precedent** | Naming, error handling, test structure | Ask once, record decision, apply consistently |
+| **Decide and record** | Routine implementation within patterns | Decide autonomously, record in artifact |
+
+---
+
+## After Making Changes
+
+Evaluate whether to:
+
+1. **Update this file** if project-wide patterns or architecture change significantly
+2. **Update phase-specific files** (`CLAUDE.<phase>.md`) if phase-specific patterns are established
+3. **Create new instruction files** if a workflow becomes complex enough to need dedicated guidance
+4. **Update decision records** if significant technical or project choices emerge
+
+Proactively suggest these updates when relevant.

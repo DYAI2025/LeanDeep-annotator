@@ -41,7 +41,11 @@ class Settings(BaseSettings):
     semantic_api_key: str | None = None        # Provider API key
     semantic_model: str | None = None          # Model name override
 
-    model_config = {"env_prefix": "LEANDEEP_"}
+    model_config = {
+        "env_prefix": "LEANDEEP_",
+        "env_file": str(Path(__file__).resolve().parent.parent / ".env"),
+        "env_file_encoding": "utf-8",
+    }
 
     @property
     def cors_origins_list(self) -> list[str]:

@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LeanDeep – Resonanzraum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ──────────────────────────────────────────── */
+:root {
+  --bg:          #0D0D14;
+  --bg-panel:    #13131E;
+  --bg-card:     #1A1A28;
+  --bg-input:    #0F0F1A;
+  --amber:       #E8B44B;
+  --amber-dim:   rgba(232, 180, 75, 0.18);
+  --amber-glow:  rgba(232, 180, 75, 0.06);
+  --cyan:        #7ECFED;
+  --cyan-dim:    rgba(126, 207, 237, 0.15);
+  --pearl:       #F0EEE8;
+  --pearl-mid:   rgba(240, 238, 232, 0.6);
+  --pearl-dim:   rgba(240, 238, 232, 0.25);
+  --coral:       #FF7A7A;
+  --lavender:    #B4A0FF;
+  --border:      rgba(240, 238, 232, 0.08);
+  --border-lit:  rgba(232, 180, 75, 0.3);
+
+  --ato:    #E8B44B;
+  --sem:    #7ECFED;
+  --clu:    #FF7A7A;
+  --mema:   #B4A0FF;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-mono:    'DM Mono', 'Courier New', monospace;
+  --radius:       6px;
+  --radius-lg:    12px;
+}
+
+/* ── RESET ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--pearl);
+  font-family: var(--font-display);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── GRAIN OVERLAY ──────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* ── PAGE LOAD STAGGER ─────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#header       { animation: fadeUp 0.4s ease both; }
+#panel-left   { animation: fadeUp 0.5s 0.1s ease both; }
+#panel-center { animation: fadeUp 0.5s 0.2s ease both; }
+#panel-right  { animation: fadeUp 0.5s 0.3s ease both; }
+
+/* ── HEADER ─────────────────────────────────────────── */
+#header {
+  height: 60px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  gap: 20px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.header-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex-shrink: 0;
+}
+
+.header-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  line-height: 1;
+}
+
+.header-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--pearl-dim);
+  letter-spacing: 0.08em;
+}
+
+#waveform-canvas {
+  flex: 1;
+  height: 36px;
+  opacity: 0.55;
+  display: block;
+}
+
+.header-status {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--pearl-dim);
+  text-align: right;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--pearl-dim);
+  transition: background 0.3s, box-shadow 0.3s;
+  flex-shrink: 0;
+}
+.status-dot.active {
+  background: #4ADE80;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
+}
+
+/* ── MAIN 3-COLUMN GRID ─────────────────────────────── */
+#main {
+  display: grid;
+  grid-template-columns: 270px 1fr 310px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ── SHARED PANEL ────────────────────────────────────── */
+.panel {
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+.panel:last-child { border-right: none; }
+
+.panel-header {
+  padding: 14px 18px 12px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-header-left {}
+
+.panel-label {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pearl-dim);
+  margin-bottom: 2px;
+}
+
+.panel-title {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--pearl);
+  letter-spacing: 0.02em;
+}
+
+.panel-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  min-height: 0;
+  position: relative;
+}
+
+/* Center panel darker */
+#panel-center {
+  background: var(--bg);
+}
+
+/* ── EQUALIZER ──────────────────────────────────────── */
+.eq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.eq-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.eq-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.eq-dimension {
+  font-family: var(--font-mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pearl-dim);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.eq-value {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--amber);
+  white-space: nowrap;
+  flex-shrink: 0;
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.eq-track {
+  height: 4px;
+  background: rgba(240, 238, 232, 0.05);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.eq-bar {
+  height: 100%;
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--amber);
+  box-shadow: 0 0 6px rgba(232, 180, 75, 0.35);
+}
+
+.eq-bar.dim  { background: var(--cyan);  box-shadow: 0 0 6px rgba(126, 207, 237, 0.28); }
+.eq-bar.risk { background: var(--coral); box-shadow: 0 0 6px rgba(255, 122, 122, 0.28); }
+
+/* ── CONTEXT METERS ─────────────────────────────────── */
+.meter-group {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.meter-title {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  color: var(--pearl-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.meter-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 9px;
+}
+
+.meter-name {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  color: var(--pearl-dim);
+  width: 82px;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meter-track {
+  flex: 1;
+  height: 3px;
+  background: rgba(240, 238, 232, 0.05);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0%;
+}
+
+.meter-val {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--pearl-dim);
+  width: 28px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ── DIALOGUE PANEL ─────────────────────────────────── */
+.dialogue-input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.dialogue-textarea {
+  width: 100%;
+  min-height: 140px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--pearl-mid);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 12px 14px;
+  resize: vertical;
+  line-height: 1.65;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.dialogue-textarea:focus {
+  border-color: var(--border-lit);
+}
+.dialogue-textarea::placeholder {
+  color: var(--pearl-dim);
+  font-style: italic;
+}
+
+.analyse-btn {
+  align-self: flex-end;
+  background: var(--amber-dim);
+  border: 1px solid var(--amber);
+  color: var(--amber);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 22px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.analyse-btn:hover:not(:disabled) {
+  background: rgba(232, 180, 75, 0.26);
+  box-shadow: 0 0 18px rgba(232, 180, 75, 0.18);
+}
+.analyse-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Reset button */
+.reset-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--pearl-dim);
+  font-family: var(--font-mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.reset-btn:hover {
+  border-color: var(--pearl-dim);
+  color: var(--pearl-mid);
+}
+
+/* Annotated text output */
+.annotated-text {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 2.1;
+  color: var(--pearl);
+  letter-spacing: 0.01em;
+}
+
+.m-span {
+  border-radius: 3px;
+  padding: 1px 3px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  position: relative;
+}
+.m-span:hover { filter: brightness(1.2); }
+.m-span.dimmed { opacity: 0.25; }
+
+@keyframes markerPulse {
+  0%, 100% { box-shadow: none; }
+  50%       { box-shadow: 0 0 10px currentColor; }
+}
+.m-span.highlighted { animation: markerPulse 1.6s ease-in-out infinite; }
+
+.m-span.ato  { background: rgba(232, 180, 75, 0.2);  color: var(--ato);  border-bottom: 1px solid rgba(232,180,75,0.5); }
+.m-span.sem  { background: rgba(126, 207, 237, 0.18); color: var(--sem); border-bottom: 1px solid rgba(126,207,237,0.5); }
+.m-span.clu  { background: rgba(255, 122, 122, 0.18); color: var(--clu); border-bottom: 1px solid rgba(255,122,122,0.5); }
+.m-span.mema { background: rgba(180, 160, 255, 0.18); color: var(--mema);border-bottom: 1px solid rgba(180,160,255,0.5); }
+
+.msg-block {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+.msg-block:last-child { border-bottom: none; }
+
+.msg-role {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--pearl-dim);
+  margin-bottom: 5px;
+}
+
+/* ── TOOLTIP ─────────────────────────────────────────── */
+#tooltip {
+  position: fixed;
+  z-index: 1001;
+  background: var(--bg-card);
+  border: 1px solid var(--border-lit);
+  border-radius: var(--radius-lg);
+  padding: 13px 16px;
+  max-width: 250px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+#tooltip.visible { opacity: 1; }
+
+.tt-id {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 3px;
+}
+
+.tt-layer {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  color: var(--pearl-dim);
+  margin-bottom: 8px;
+}
+
+.tt-desc {
+  font-family: var(--font-display);
+  font-size: 0.84rem;
+  color: var(--pearl-mid);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.tt-conf {
+  margin-top: 9px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tt-conf-track { flex: 1; height: 2px; background: var(--border); border-radius: 1px; overflow: hidden; }
+.tt-conf-bar   { height: 100%; border-radius: 1px; background: var(--amber); }
+.tt-conf-val   { font-family: var(--font-mono); font-size: 0.58rem; color: var(--amber); }
+
+/* ── NARRATIVE CARDS ─────────────────────────────────── */
+.narrative-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.narrative-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 13px 15px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, opacity 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.narrative-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  border-radius: 3px 0 0 3px;
+  background: var(--amber);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.narrative-card:hover {
+  border-color: rgba(232, 180, 75, 0.22);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.35);
+}
+.narrative-card.active {
+  border-color: var(--border-lit);
+  box-shadow: 0 0 22px rgba(232, 180, 75, 0.1);
+}
+.narrative-card.active::before { opacity: 1; }
+.narrative-card.dimmed  { opacity: 0.3; }
+.narrative-card.relevant {
+  border-color: rgba(126, 207, 237, 0.35);
+}
+.narrative-card.relevant::before {
+  background: var(--cyan);
+  opacity: 1;
+}
+
+.nc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 7px;
+  gap: 8px;
+}
+
+.nc-type {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  flex-shrink: 0;
+}
+.nc-type.alt       { color: var(--cyan); }
+.nc-type.novel     { color: var(--coral); }
+.nc-type.uncertain { color: var(--lavender); }
+.nc-type.cluster   { color: var(--pearl-dim); }
+
+.nc-confidence {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--pearl-dim);
+}
+
+.nc-text {
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--pearl-mid);
+  font-style: italic;
+}
+
+.nc-markers {
+  margin-top: 9px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.nc-marker-ref {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  padding: 2px 7px;
+  border-radius: 10px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: filter 0.15s;
+}
+.nc-marker-ref:hover { filter: brightness(1.2); }
+.nc-marker-ref.ato  { background: rgba(232,180,75,0.14);  color: var(--ato); }
+.nc-marker-ref.sem  { background: rgba(126,207,237,0.14); color: var(--sem); }
+.nc-marker-ref.clu  { background: rgba(255,122,122,0.14); color: var(--clu); }
+.nc-marker-ref.mema { background: rgba(180,160,255,0.14); color: var(--mema); }
+
+.nc-conf-track {
+  margin-top: 9px;
+  height: 2px;
+  background: var(--border);
+  border-radius: 1px;
+  overflow: hidden;
+}
+.nc-conf-fill {
+  height: 100%;
+  border-radius: 1px;
+  background: var(--amber);
+  width: 0%;
+  transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nc-warning {
+  margin-top: 7px;
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  color: var(--lavender);
+  opacity: 0.85;
+}
+
+/* ── LOADING SCAN LINE ────────────────────────────────── */
+@keyframes scanLine {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(200%); }
+}
+.panel-body.loading::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(232, 180, 75, 0.06) 40%,
+    rgba(232, 180, 75, 0.08) 50%,
+    rgba(232, 180, 75, 0.06) 60%,
+    transparent 100%);
+  animation: scanLine 1.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ── EMPTY STATE ─────────────────────────────────────── */
+.empty-hint {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  color: var(--pearl-dim);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ── LLM GATE OVERLAY ─────────────────────────────────── */
+#llm-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(13, 13, 20, 0.97);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px;
+  text-align: center;
+}
+
+#llm-gate .gate-icon {
+  font-size: 2.5rem;
+  opacity: 0.45;
+  line-height: 1;
+}
+
+#llm-gate .gate-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--coral);
+  letter-spacing: 0.05em;
+}
+
+#llm-gate .gate-message {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--pearl-mid);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+#llm-gate .gate-hint {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--pearl-dim);
+  max-width: 520px;
+  line-height: 1.65;
+  background: rgba(255, 122, 122, 0.07);
+  border: 1px solid rgba(255, 122, 122, 0.18);
+  border-radius: var(--radius-lg);
+  padding: 14px 18px;
+  text-align: left;
+  white-space: pre-line;
+}
+
+#llm-gate .gate-provider {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: #4ADE80;
+  margin-top: 4px;
+}
+</style>
+</head>
+<body>
+
+<!-- LLM GATE — blocks entire UI until LLM confirmed -->
+<div id="llm-gate" style="display:none">
+  <div class="gate-icon">⚠</div>
+  <div class="gate-title">Kein Semantic Frame verfügbar</div>
+  <div class="gate-message">
+    Ohne LLM kann kein Semantisches Frame erzeugt werden.
+    Ohne Frame ist jede Marker-Erkennung nur Rauschen.
+    Der Resonanzraum benötigt den Frame als Seed für Resonanz und Narrative.
+  </div>
+  <div class="gate-hint">
+Lösung: LLM-Provider konfigurieren:
+
+  export LEANDEEP_GOOGLE_API_KEY=dein_key
+
+oder:
+
+  export LEANDEEP_SEMANTIC_PROVIDER=gemini
+  export LEANDEEP_SEMANTIC_API_KEY=dein_key
+
+Danach Server neu starten.
+  </div>
+  <div class="gate-provider" id="gate-provider"></div>
+</div>
+
+<!-- ── HEADER ──────────────────────────────────────────── -->
+<header id="header">
+  <div class="header-wordmark">
+    <div class="header-title">Resonanzraum</div>
+    <div class="header-subtitle">LeanDeep Semantic Analysis</div>
+  </div>
+  <canvas id="waveform-canvas" aria-label="Emotionale Waveform-Visualisierung" role="img"></canvas>
+  <div class="header-status">
+    <div class="status-dot" id="status-dot"></div>
+    <span id="status-text">bereit</span>
+  </div>
+</header>
+
+<!-- ── 3-COLUMN MAIN ───────────────────────────────────── -->
+<main id="main">
+
+  <!-- LEFT: Frame Equalizer -->
+  <div class="panel" id="panel-left">
+    <div class="panel-header">
+      <div class="panel-header-left">
+        <div class="panel-label">Semantischer Rahmen</div>
+        <div class="panel-title">Frame-Spektrum</div>
+      </div>
+    </div>
+    <div class="panel-body" id="frame-body">
+      <p class="empty-hint">Analyse ausstehend…</p>
+    </div>
+  </div>
+
+  <!-- CENTER: Annotated Dialogue -->
+  <div class="panel" id="panel-center">
+    <div class="panel-header">
+      <div class="panel-header-left">
+        <div class="panel-label">Dialogtext</div>
+        <div class="panel-title">Annotierter Verlauf</div>
+      </div>
+      <button class="reset-btn" id="reset-btn" style="display:none" onclick="resetView()">↺ Neu</button>
+    </div>
+    <div class="panel-body" id="dialogue-body">
+      <div class="dialogue-input-area" id="input-area">
+        <textarea class="dialogue-textarea" id="dialogue-input"
+          placeholder="Dialog einfügen…&#10;&#10;A: Ich glaube vielleicht, dass ich einen Fehler gemacht habe.&#10;B: Was meinst du damit?&#10;A: Ich weiß nicht. Es ist schwer zu sagen."
+          rows="7"></textarea>
+        <button class="analyse-btn" id="analyse-btn" onclick="runAnalysis()">▶ Analysieren</button>
+      </div>
+      <div id="annotated-output" style="display:none"></div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Narrative Overtones -->
+  <div class="panel" id="panel-right">
+    <div class="panel-header">
+      <div class="panel-header-left">
+        <div class="panel-label">Interpretation</div>
+        <div class="panel-title">Narrative Obertöne</div>
+      </div>
+    </div>
+    <div class="panel-body" id="narrative-body">
+      <p class="empty-hint">Keine Analyse aktiv.</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- Tooltip (global overlay) -->
+<div id="tooltip">
+  <div class="tt-id"  id="tt-id"></div>
+  <div class="tt-layer" id="tt-layer"></div>
+  <div class="tt-desc"  id="tt-desc"></div>
+  <div class="tt-conf">
+    <div class="tt-conf-track"><div class="tt-conf-bar" id="tt-conf-bar"></div></div>
+    <span class="tt-conf-val" id="tt-conf-val"></span>
+  </div>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════
+ * Resonanzraum GUI — LeanDeep Analysis Interface
+ *
+ * Current state (LeanDeep 5.x compatible):
+ *   - Uses /v1/analyze/conversation
+ *   - Builds SemanticFrame from markers + reasoning (approximate)
+ *   - Builds narratives from reasoning bridge helpers
+ *
+ * TODO: LeanDeep 6.0 upgrades (Week 3+):
+ *   1. buildFrameFromMarkers() → call /v1/analyze/frame (api/semantic.py)
+ *   2. buildNarrativesFromResponse() → call /v1/analyze/narrative
+ *   3. Use real context_validity + offline_context_risk from SemanticFrame
+ *   4. Narrative count: 3 + floor(ocr * 2)  (dynamic)
+ *   5. Resonance weighting: use adjusted_confidence from API
+ *
+ * See: 3-code/tasks.md for implementation plan
+ ══════════════════════════════════════════════════════ */
+
+/* ── XSS ESCAPE HELPER ──────────────────────────────── */
+function escHtml(s) {
+  if (s == null) return '';
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+/* ── STATE ─────────────────────────────────────────── */
+const state = {
+  frame:           null,
+  markers:         [],
+  narratives:      [],
+  messages:        [],
+  activeNarrative: null,
+  activeMarker:    null,
+  tenor:           0,
+  analysing:       false,
+  // Concurrent request guard: abort in-flight request on new submission
+  abortController: null,
+};
+
+// rAF handle for cancellation on page teardown
+let wRafId = null;
+
+/* ══════════════════════════════════════════════════════
+   WAVEFORM HEADER
+══════════════════════════════════════════════════════ */
+const wCanvas = document.getElementById('waveform-canvas');
+const wCtx    = wCanvas.getContext('2d');
+let wPhase = 0;
+
+function resizeWaveform() {
+  const rect = wCanvas.getBoundingClientRect();
+  wCanvas.width  = rect.width  * devicePixelRatio;
+  wCanvas.height = rect.height * devicePixelRatio;
+  wCtx.scale(devicePixelRatio, devicePixelRatio);
+}
+
+function drawWaveform() {
+  // Fix #6: pause animation on hidden tab (saves CPU/battery)
+  if (!document.hidden) {
+    const W = wCanvas.offsetWidth;
+    const H = wCanvas.offsetHeight;
+    wCtx.clearRect(0, 0, W, H);
+
+    const tenor     = state.tenor;
+    const amplitude = 7 + Math.abs(tenor) * 5;
+    const baseY     = H / 2;
+    const freq      = 0.022 + Math.abs(tenor) * 0.008;
+
+    const t = (tenor + 1) / 2;
+    const r = Math.round(126 + (232 - 126) * t);
+    const g = Math.round(207 + (180 - 207) * t);
+    const b = Math.round(237 + ( 75 - 237) * t);
+
+    wCtx.beginPath();
+    wCtx.strokeStyle = `rgba(${r},${g},${b},0.65)`;
+    wCtx.lineWidth   = 1.4;
+
+    for (let x = 0; x < W; x++) {
+      const y = baseY
+        + Math.sin(x * freq + wPhase)           * amplitude
+        + Math.sin(x * freq * 1.73 + wPhase * 0.8) * (amplitude * 0.35);
+      x === 0 ? wCtx.moveTo(x, y) : wCtx.lineTo(x, y);
+    }
+    wCtx.stroke();
+    wPhase += state.analysing ? 0.055 : 0.013;
+  }
+  wRafId = requestAnimationFrame(drawWaveform);
+}
+
+// Fix #7: debounced resize to avoid thrashing on every pixel
+let resizeTimer = null;
+function debouncedResize() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(resizeWaveform, 100);
+}
+window.addEventListener('resize', debouncedResize);
+
+// Fix #8: init after first paint so fonts/layout are ready
+requestAnimationFrame(() => {
+  resizeWaveform();
+  wRafId = requestAnimationFrame(drawWaveform);
+});
+
+// Cleanup on page teardown
+window.addEventListener('beforeunload', () => {
+  if (wRafId) cancelAnimationFrame(wRafId);
+});
+
+/* ══════════════════════════════════════════════════════
+   LLM GATE — Preflight check on page load.
+   No LLM = no Semantic Frame = no analysis allowed.
+══════════════════════════════════════════════════════ */
+let llmAvailable = false;
+
+async function checkLLM() {
+  const gate = document.getElementById('llm-gate');
+  const btn  = document.getElementById('analyse-btn');
+
+  try {
+    const r = await fetch('/v1/llm-status');
+    const data = await r.json();
+
+    if (data.llm_available) {
+      // LLM ready — unlock UI
+      llmAvailable = true;
+      gate.style.display = 'none';
+      btn.disabled = false;
+      setStatus(`LLM: ${data.provider}`, false);
+      document.getElementById('status-dot').classList.add('active');
+      setTimeout(() => document.getElementById('status-dot').classList.remove('active'), 2000);
+    } else {
+      // No LLM — block UI completely
+      llmAvailable = false;
+      gate.style.display = 'flex';
+      btn.disabled = true;
+      setStatus('kein LLM', false);
+    }
+  } catch (err) {
+    // Network error or endpoint missing — block with warning
+    llmAvailable = false;
+    gate.style.display = 'flex';
+    gate.querySelector('.gate-message').textContent =
+      'Server nicht erreichbar oder /v1/llm-status Endpoint fehlt.';
+    btn.disabled = true;
+    setStatus('server error', false);
+  }
+}
+
+checkLLM();
+
+/* ══════════════════════════════════════════════════════
+   STATUS + LOADING
+══════════════════════════════════════════════════════ */
+function setStatus(text, active = false) {
+  document.getElementById('status-text').textContent = text;
+  document.getElementById('status-dot').classList.toggle('active', active);
+  state.analysing = active;
+}
+
+function setLoading(loading) {
+  document.getElementById('analyse-btn').disabled = loading;
+  ['frame-body', 'narrative-body'].forEach(id =>
+    document.getElementById(id).classList.toggle('loading', loading)
+  );
+}
+
+/* ══════════════════════════════════════════════════════
+   EQUALIZER — SemanticFrame
+══════════════════════════════════════════════════════ */
+const EQ_DIMS = [
+  { key: 'tone',                label: 'Ton',         bar: '',     fmt: v => v || '—' },
+  { key: 'intent',              label: 'Absicht',     bar: '',     fmt: v => v || '—' },
+  { key: 'relational_dynamics', label: 'Dynamik',     bar: '',     fmt: v => v || '—' },
+  { key: 'emotional_tenor',     label: 'Tenör',       bar: 'dim',
+    fmt: v => typeof v === 'number' ? (v >= 0 ? '+' : '') + v.toFixed(2) : '—' },
+  { key: 'themes',              label: 'Themen',      bar: 'dim',
+    fmt: v => Array.isArray(v) ? v.slice(0, 2).join(' · ') : (v || '—') },
+  { key: 'context_validity',    label: 'Kontext',     bar: 'dim',
+    fmt: v => typeof v === 'number' ? (v * 100).toFixed(0) + '%' : '—' },
+  { key: 'offline_context_risk',label: 'Ext. Risiko', bar: 'risk',
+    fmt: v => typeof v === 'number' ? (v * 100).toFixed(0) + '%' : '—' },
+];
+
+function renderEqualizer(frame) {
+  const body = document.getElementById('frame-body');
+  body.innerHTML = '';
+
+  if (!frame) {
+    body.innerHTML = '<p class="empty-hint">Analyse ausstehend…</p>';
+    return;
+  }
+
+  const container = document.createElement('div');
+  container.className = 'eq-container';
+
+  EQ_DIMS.forEach(dim => {
+    const val = frame[dim.key];
+    let pct = 0;
+    if (typeof val === 'number') {
+      pct = Math.min(100, Math.max(0,
+        dim.key === 'emotional_tenor' ? ((val + 1) / 2 * 100) : val * 100
+      ));
+    } else if (val) {
+      pct = 58;
+    }
+
+    const row = document.createElement('div');
+    row.className = 'eq-row';
+    row.innerHTML = `
+      <div class="eq-label">
+        <span class="eq-dimension">${escHtml(dim.label)}</span>
+        <span class="eq-value">${escHtml(dim.fmt(val))}</span>
+      </div>
+      <div class="eq-track">
+        <div class="eq-bar ${escHtml(dim.bar)}" style="width:0%" data-target="${pct}"></div>
+      </div>`;
+    container.appendChild(row);
+  });
+
+  // Context meters
+  const cv  = frame.context_validity    ?? 0;
+  const ocr = frame.offline_context_risk ?? 0;
+
+  const meters = document.createElement('div');
+  meters.className = 'meter-group';
+  meters.innerHTML = `<div class="meter-title">Kontext-Metriken</div>`;
+
+  [
+    { name: 'Kontext-Validität', val: cv,  color: 'var(--cyan)' },
+    { name: 'Ext. Risiko',       val: ocr, color: 'var(--coral)' },
+  ].forEach(m => {
+    const item = document.createElement('div');
+    item.className = 'meter-item';
+    item.innerHTML = `
+      <span class="meter-name">${m.name}</span>
+      <div class="meter-track">
+        <div class="meter-fill" style="width:${m.val*100}%;background:${m.color}"></div>
+      </div>
+      <span class="meter-val">${(m.val * 100).toFixed(0)}%</span>`;
+    meters.appendChild(item);
+  });
+
+  container.appendChild(meters);
+  body.appendChild(container);
+
+  // Staggered bar animation
+  requestAnimationFrame(() => {
+    body.querySelectorAll('.eq-bar').forEach((bar, i) => {
+      setTimeout(() => { bar.style.width = bar.dataset.target + '%'; }, i * 75);
+    });
+  });
+}
+
+/* ══════════════════════════════════════════════════════
+   TOOLTIP
+══════════════════════════════════════════════════════ */
+const tooltipEl = document.getElementById('tooltip');
+let   tooltipTimer = null;
+const LAYER_COLORS = { ato: '#E8B44B', sem: '#7ECFED', clu: '#FF7A7A', mema: '#B4A0FF' };
+
+function showTooltip(marker, x, y) {
+  clearTimeout(tooltipTimer);
+  tooltipTimer = setTimeout(() => {
+    document.getElementById('tt-id').textContent    = marker.id;
+    document.getElementById('tt-layer').textContent = `${marker.layer.toUpperCase()} · Konfidenz`;
+    document.getElementById('tt-desc').textContent  = marker.description || 'Kein Beschreibung verfügbar.';
+
+    const pct = (marker.confidence * 100).toFixed(0) + '%';
+    const col = LAYER_COLORS[marker.layer] || '#E8B44B';
+    document.getElementById('tt-conf-bar').style.cssText = `width:${pct};background:${col}`;
+    document.getElementById('tt-conf-val').textContent   = pct;
+    tooltipEl.style.borderColor = col + '55';
+
+    const tw = 250, th = 115, pad = 14;
+    let left = x + pad, top = y - th / 2;
+    if (left + tw > window.innerWidth - 8)  left = x - tw - pad;
+    if (top < 8)                             top  = 8;
+    if (top + th > window.innerHeight - 8)  top  = window.innerHeight - th - 8;
+
+    tooltipEl.style.left = left + 'px';
+    tooltipEl.style.top  = top  + 'px';
+    tooltipEl.classList.add('visible');
+  }, 100);
+}
+
+function hideTooltip() {
+  clearTimeout(tooltipTimer);
+  tooltipEl.classList.remove('visible');
+}
+
+/* ══════════════════════════════════════════════════════
+   ANNOTATED DIALOGUE RENDERER
+══════════════════════════════════════════════════════ */
+function renderAnnotatedDialogue(messages, markers) {
+  const output = document.getElementById('annotated-output');
+  output.innerHTML = '';
+
+  // Build span map per message index
+  const spanMap = {};
+  markers.forEach(m => {
+    (m.message_indices || []).forEach(mi => {
+      if (!spanMap[mi]) spanMap[mi] = [];
+      (m.matches || []).forEach(match => {
+        spanMap[mi].push({ start: match.span[0], end: match.span[1], marker: m });
+      });
+    });
+  });
+
+  messages.forEach((msg, idx) => {
+    const block = document.createElement('div');
+    block.className = 'msg-block';
+
+    const roleEl = document.createElement('div');
+    roleEl.className = 'msg-role';
+    roleEl.textContent = msg.role || `Sprecher ${idx + 1}`;
+    block.appendChild(roleEl);
+
+    const textEl = document.createElement('div');
+    textEl.className = 'annotated-text';
+
+    const spans = (spanMap[idx] || []).sort((a, b) => a.start - b.start);
+    const text  = msg.text || '';
+
+    if (!spans.length) {
+      textEl.textContent = text;
+    } else {
+      let cursor = 0;
+      spans.forEach(s => {
+        // Guard: skip spans that start before cursor (overlapping markers)
+        if (s.end <= cursor) return;
+        const safeStart = Math.max(s.start, cursor);
+
+        if (safeStart > cursor)
+          textEl.appendChild(document.createTextNode(text.slice(cursor, safeStart)));
+
+        const span = document.createElement('span');
+        span.className = `m-span ${s.marker.layer}`;
+        span.dataset.markerId = s.marker.id;
+        // Use safeStart (not s.start): portion before safeStart already rendered as text node
+        span.textContent = text.slice(safeStart, s.end);
+
+        span.addEventListener('mouseenter', e => showTooltip(s.marker, e.clientX, e.clientY));
+        span.addEventListener('mousemove',  e => {
+          if (tooltipEl.classList.contains('visible')) {
+            tooltipEl.style.left = (e.clientX + 14) + 'px';
+            tooltipEl.style.top  = (e.clientY - 57) + 'px';
+          }
+        });
+        span.addEventListener('mouseleave', hideTooltip);
+        span.addEventListener('click', () => onMarkerClick(s.marker.id));
+
+        textEl.appendChild(span);
+        cursor = s.end;
+      });
+      if (cursor < text.length)
+        textEl.appendChild(document.createTextNode(text.slice(cursor)));
+    }
+
+    block.appendChild(textEl);
+    output.appendChild(block);
+  });
+
+  document.getElementById('input-area').style.display  = 'none';
+  document.getElementById('annotated-output').style.display = 'block';
+  document.getElementById('reset-btn').style.display   = 'block';
+}
+
+/* ══════════════════════════════════════════════════════
+   NARRATIVE RENDERER
+══════════════════════════════════════════════════════ */
+const NARRATIVE_TYPE_MAP = {
+  'primary reading':           { label: 'Grundton',   cls: '' },
+  'alternative reading':       { label: 'Oberton I',  cls: 'alt' },
+  'novel pattern':             { label: 'Oberton II', cls: 'novel' },
+  'high-uncertainty variant':  { label: 'Ungewiss',   cls: 'uncertain' },
+  'weak cluster perspective':  { label: 'Cluster',    cls: 'cluster' },
+};
+
+function narrativeTypeInfo(raw) {
+  const key = (raw || '').toLowerCase().trim();
+  // Exact match first
+  if (NARRATIVE_TYPE_MAP[key]) return NARRATIVE_TYPE_MAP[key];
+  // Substring match fallback (each full key checked, not just prefix)
+  for (const [k, v] of Object.entries(NARRATIVE_TYPE_MAP)) {
+    if (key.includes(k)) return v;
+  }
+  return { label: 'Lesart', cls: '' };
+}
+
+function renderNarratives(narratives, markers) {
+  const body = document.getElementById('narrative-body');
+  body.innerHTML = '';
+
+  if (!narratives || !narratives.length) {
+    body.innerHTML = '<p class="empty-hint">Keine Interpretationen verfügbar.</p>';
+    return;
+  }
+
+  const stack = document.createElement('div');
+  stack.className = 'narrative-stack';
+
+  narratives.forEach((n, i) => {
+    const ti   = narrativeTypeInfo(n.type);
+    const refs = (n.supporting_markers || []).map(m => typeof m === 'string' ? m : m.id);
+    const conf = n.confidence || 0;
+
+    const card = document.createElement('div');
+    card.className = 'narrative-card';
+    card.dataset.narrativeIdx = i;
+    card.dataset.markerRefs   = refs.join(',');
+    card.style.opacity = '0';
+    card.style.transform = 'translateX(10px)';
+
+    card.innerHTML = `
+      <div class="nc-header">
+        <span class="nc-type ${escHtml(ti.cls)}">${escHtml(ti.label)}</span>
+        <span class="nc-confidence">${(conf * 100).toFixed(0)}%</span>
+      </div>
+      <div class="nc-text">${escHtml(n.narrative || n.text || '')}</div>
+      ${refs.length ? `<div class="nc-markers">
+        ${refs.map(id => {
+          const m = markers.find(mk => mk.id === id);
+          const layer = m ? m.layer : 'ato';
+          return `<span class="nc-marker-ref ${escHtml(layer)}" data-marker-id="${escHtml(id)}">${escHtml(id)}</span>`;
+        }).join('')}
+      </div>` : ''}
+      ${n.uncertainty_flag ? '<div class="nc-warning">⚠ Hohe Kontextunsicherheit</div>' : ''}
+      <div class="nc-conf-track">
+        <div class="nc-conf-fill" data-target="${(conf * 100).toFixed(1)}"></div>
+      </div>`;
+
+    card.addEventListener('click', () => onNarrativeClick(i, refs, n));
+    card.querySelectorAll('.nc-marker-ref').forEach(chip =>
+      chip.addEventListener('click', e => { e.stopPropagation(); onMarkerClick(chip.dataset.markerId); })
+    );
+
+    stack.appendChild(card);
+  });
+
+  body.appendChild(stack);
+
+  // Stagger cards + fill bars
+  requestAnimationFrame(() => {
+    body.querySelectorAll('.narrative-card').forEach((card, i) => {
+      setTimeout(() => {
+        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        card.style.opacity    = '1';
+        card.style.transform  = 'translateX(0)';
+      }, 80 + i * 90);
+    });
+    body.querySelectorAll('.nc-conf-fill').forEach((fill, i) => {
+      setTimeout(() => { fill.style.width = fill.dataset.target + '%'; }, 220 + i * 100);
+    });
+  });
+}
+
+/* ══════════════════════════════════════════════════════
+   INTERACTIONS — Marker ↔ Narrative Linking
+══════════════════════════════════════════════════════ */
+function onMarkerClick(markerId) {
+  state.activeMarker = markerId;
+  hideTooltip();
+
+  document.querySelectorAll('.m-span').forEach(el => {
+    el.classList.toggle('dimmed',      el.dataset.markerId !== markerId);
+    el.classList.toggle('highlighted', el.dataset.markerId === markerId);
+  });
+
+  document.querySelectorAll('.narrative-card').forEach(card => {
+    const refs = (card.dataset.markerRefs || '').split(',');
+    card.classList.toggle('relevant', refs.includes(markerId));
+    card.classList.toggle('dimmed',   !refs.includes(markerId));
+  });
+}
+
+function onNarrativeClick(idx, refs, narrative) {
+  state.activeNarrative = idx;
+
+  document.querySelectorAll('.narrative-card').forEach((card, i) => {
+    card.classList.toggle('active',  i === idx);
+    card.classList.toggle('dimmed',  i !== idx);
+    card.classList.remove('relevant');
+  });
+
+  if (refs.length) {
+    document.querySelectorAll('.m-span').forEach(el => {
+      const isRef = refs.includes(el.dataset.markerId);
+      el.classList.toggle('dimmed',      !isRef);
+      el.classList.toggle('highlighted',  isRef);
+    });
+  }
+
+  // Equalizer morph on narrative switch
+  if (state.frame) {
+    const morphed = { ...state.frame };
+    const typeCls = document.querySelectorAll('.narrative-card')[idx]
+      ?.querySelector('.nc-type')?.className || '';
+    if (typeCls.includes('uncertain')) {
+      morphed.offline_context_risk = Math.min(1, (state.frame.offline_context_risk || 0.4) + 0.2);
+    } else if (typeCls.includes('alt')) {
+      morphed.emotional_tenor = -(state.frame.emotional_tenor || 0);
+    }
+    renderEqualizer(morphed);
+  }
+}
+
+function resetHighlights() {
+  state.activeMarker    = null;
+  state.activeNarrative = null;
+  document.querySelectorAll('.m-span').forEach(el =>
+    el.classList.remove('dimmed', 'highlighted')
+  );
+  document.querySelectorAll('.narrative-card').forEach(c =>
+    c.classList.remove('active', 'dimmed', 'relevant')
+  );
+}
+
+function resetView() {
+  state.markers     = [];
+  state.narratives  = [];
+  state.frame       = null;
+  state.tenor       = 0;
+  state.messages    = [];
+  resetHighlights();
+
+  document.getElementById('annotated-output').style.display = 'none';
+  document.getElementById('annotated-output').innerHTML     = '';
+  document.getElementById('input-area').style.display       = 'flex';
+  document.getElementById('reset-btn').style.display        = 'none';
+  document.getElementById('narrative-body').innerHTML       =
+    '<p class="empty-hint">Keine Analyse aktiv.</p>';
+
+  renderEqualizer(null);
+  setStatus('bereit', false);
+  setLoading(false);
+}
+
+/* ══════════════════════════════════════════════════════
+   DIALOGUE INPUT PARSER
+══════════════════════════════════════════════════════ */
+function parseDialogueInput(raw) {
+  const lines = raw.trim().split('\n').filter(l => l.trim());
+
+  // ── Format 0: WhatsApp export ────────────────────────────
+  // Patterns:
+  //   "46:53] Ben Poersch: Ja ging."         (time] Name: text)
+  //   "[08.02.21, 14:22] Name: text"         (full timestamp)
+  //   "22:11] Name: text"                    (short time)
+  // Strip timestamps, headers, media placeholders
+  const waPattern = /^(?:\[?[\d.:,\s]+\]\s*)?([A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß .\-]{1,30}):\s*(.+)$/;
+  const waSkip    = /^(?:\[\[|\[\u200e|‎)/;      // section headers like [[08.02.21, 14]
+  const waMedia   = /Audio weggelassen|Bild weggelassen|Video weggelassen|<Medien ausgeschlossen>/i;
+
+  const waLines = lines.filter(l => !waSkip.test(l.trim()) && !waMedia.test(l.trim()));
+  const waMatched = waLines.filter(l => waPattern.test(l.trim()));
+
+  if (waLines.length >= 2 && waMatched.length / waLines.length >= 0.6) {
+    // WhatsApp format detected — parse with wa pattern
+    const messages = [];
+    for (const line of waLines) {
+      const m = line.trim().match(waPattern);
+      if (m) {
+        const role = m[1].trim();
+        const text = m[2].trim();
+        if (text && !waMedia.test(text)) {
+          // Merge consecutive messages from same speaker
+          if (messages.length > 0 && messages[messages.length - 1].role === role) {
+            messages[messages.length - 1].text += ' ' + text;
+          } else {
+            messages.push({ role, text });
+          }
+        }
+      }
+    }
+    if (messages.length >= 2) return messages;
+  }
+
+  // ── Format 1: Simple "A: text" on every line ─────────────
+  const simpleRole = /^([A-Za-z0-9äöüÄÖÜß]{1,15}):\s*(.+)$/;
+  if (lines.length >= 2 && lines.every(l => simpleRole.test(l.trim()))) {
+    return lines.map(l => {
+      const [, role, text] = l.match(simpleRole);
+      return { role: role.trim(), text: text.trim() };
+    });
+  }
+
+  // ── Format 2: Blank-line-separated paragraphs ────────────
+  const paragraphs = raw.trim().split(/\n{2,}/);
+  if (paragraphs.length > 1) {
+    return paragraphs.map((p, i) => ({
+      role: String.fromCharCode(65 + (i % 26)),
+      text: p.replace(/\n/g, ' ').trim(),
+    }));
+  }
+
+  // ── Format 3: Single message ─────────────────────────────
+  return [{ role: 'A', text: raw.trim() }];
+}
+
+/* ══════════════════════════════════════════════════════
+   BRIDGE HELPERS
+   Approximate SemanticFrame + Narratives from existing API response.
+   TODO: LeanDeep 6.0 — replace both functions with direct API calls.
+══════════════════════════════════════════════════════ */
+function buildFrameFromMarkers(markers, reasoning) {
+  // TODO: LeanDeep 6.0 — Replace with real SemanticFrame from /v1/analyze/frame
+  if (!markers.length && !reasoning) return null;
+
+  const negFamilies = ['distress', 'conflict', 'hesitation', 'avoidance', 'negation'];
+  const negCount    = markers.filter(m =>
+    negFamilies.some(f => (m.family || '').toLowerCase().includes(f))
+  ).length;
+  const tenor = markers.length
+    ? Math.max(-0.75, Math.min(0.75, -(negCount / markers.length) * 1.3))
+    : 0;
+
+  return {
+    tone:                 reasoning?.relational_pattern || 'nicht bestimmt',
+    themes:               [...new Set(markers.map(m => m.family).filter(Boolean))].slice(0, 3),
+    relational_dynamics:  reasoning?.relational_pattern || '—',
+    intent:               '—',
+    emotional_tenor:      tenor,
+    context_validity:     0.70,   // placeholder
+    offline_context_risk: 0.40,   // placeholder
+  };
+}
+
+function buildNarrativesFromResponse(data) {
+  // TODO: LeanDeep 6.0 — Replace with /v1/analyze/narrative response
+  const narratives = [];
+  const markers    = data.markers || [];
+
+  if (data.reasoning?.narrative) {
+    narratives.push({
+      type:               'Primary Reading',
+      narrative:          data.reasoning.narrative,
+      confidence:         data.reasoning.confidence_score || 0.72,
+      supporting_markers: data.reasoning.evidence_marker_ids || [],
+    });
+  }
+
+  const strong = markers.filter(m => m.confidence >= 0.65).slice(0, 4);
+  if (strong.length >= 2) {
+    narratives.push({
+      type:               'Alternative Reading',
+      narrative:          `Die identifizierten Signale (${strong.slice(0,2).map(m=>m.id).join(', ')}) könnten alternativ auf eine bewusste rhetorische Strategie hinweisen — weniger Zeichen von Unsicherheit als von gezielter Verhandlungsführung.`,
+      confidence:         strong.reduce((a, m) => a + m.confidence, 0) / strong.length * 0.78,
+      supporting_markers: strong.map(m => m.id),
+    });
+  }
+
+  const notable = (data.temporal_patterns || []).find(t => t.trend !== 'stable');
+  if (notable) {
+    narratives.push({
+      type:               'Novel Pattern',
+      narrative:          `Muster „${notable.marker_id}" zeigt eine ${notable.trend === 'increasing' ? 'zunehmende' : 'abnehmende'} Tendenz — ein emergentes Signal das auf eine dynamische Entwicklung im Gesprächsverlauf hindeutet.`,
+      confidence:         0.55,
+      supporting_markers: [notable.marker_id],
+    });
+  }
+
+  if (!narratives.length && markers.length) {
+    narratives.push({
+      type:               'Primary Reading',
+      narrative:          `${markers.length} Marker erkannt. Dominantes Muster: ${markers[0].id} (${(markers[0].confidence*100).toFixed(0)}% Konfidenz).`,
+      confidence:         markers[0].confidence,
+      supporting_markers: [markers[0].id],
+    });
+  }
+
+  return narratives;
+}
+
+/* ══════════════════════════════════════════════════════
+   MAIN ANALYSIS RUNNER
+══════════════════════════════════════════════════════ */
+async function runAnalysis() {
+  // Hard gate: no analysis without LLM
+  if (!llmAvailable) {
+    setStatus('Analyse blockiert — kein LLM konfiguriert.', false);
+    document.getElementById('llm-gate').style.display = 'flex';
+    return;
+  }
+
+  const raw = document.getElementById('dialogue-input').value.trim();
+  if (!raw || raw.length < 5) {
+    setStatus('Bitte mindestens 5 Zeichen eingeben.', false);
+    return;
+  }
+
+  const messages = parseDialogueInput(raw);
+  if (!messages.length) return;
+
+  // Abort any in-flight request to prevent race conditions
+  if (state.abortController) state.abortController.abort();
+  state.abortController = new AbortController();
+
+  state.messages = messages;
+  setLoading(true);
+  setStatus('analysiere…', true);
+
+  try {
+    const resp = await fetch('/v1/analyze/conversation', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      signal:  state.abortController.signal,
+      body:    JSON.stringify({
+        messages,
+        layers:    ['ato', 'sem', 'clu', 'mema'],
+        threshold: 0.35,
+        // Fix #9: use browser locale as hint; API can override per-message
+        language:  (navigator.language || 'de').startsWith('en') ? 'en' : 'de',
+      }),
+    });
+
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      // Pydantic 422 returns detail as array [{msg, loc, type}] — flatten to readable string
+      let msg = `HTTP ${resp.status}`;
+      if (typeof err.detail === 'string') {
+        msg = err.detail;
+      } else if (Array.isArray(err.detail)) {
+        msg = err.detail.map(d => d.msg || JSON.stringify(d)).join('; ');
+      }
+      throw new Error(msg);
+    }
+
+    const data = await resp.json();
+    state.markers    = data.markers    || [];
+    state.narratives = buildNarrativesFromResponse(data);
+    state.frame      = buildFrameFromMarkers(state.markers, data.reasoning);
+    state.tenor      = state.frame?.emotional_tenor ?? 0;
+
+    renderEqualizer(state.frame);
+    renderAnnotatedDialogue(messages, state.markers);
+    renderNarratives(state.narratives, state.markers);
+
+    const mCount = state.markers.length;
+    const nCount = state.narratives.length;
+    setStatus(`${mCount} Marker · ${nCount} Narrative`, false);
+    setLoading(false);
+
+  } catch (err) {
+    // Silently ignore aborted requests (user started a new one)
+    if (err.name === 'AbortError') return;
+    setStatus('Fehler: ' + err.message, false);
+    setLoading(false);
+    // Show error as overlay — do NOT destroy DOM structure (resetView() needs input-area + annotated-output)
+    let overlay = document.getElementById('error-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'error-overlay';
+      overlay.style.cssText = [
+        'position:absolute', 'inset:0', 'z-index:50',
+        'background:rgba(13,13,20,0.88)', 'display:flex',
+        'flex-direction:column', 'align-items:center', 'justify-content:center',
+        'gap:12px', 'padding:24px', 'text-align:center',
+      ].join(';');
+      document.getElementById('dialogue-body').appendChild(overlay);
+    }
+    overlay.innerHTML = `
+      <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--coral)">⚠ ${escHtml(err.message)}</div>
+      <button onclick="document.getElementById('error-overlay').remove();resetView()" class="reset-btn">↺ Zurücksetzen</button>`;
+    overlay.style.display = 'flex';
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   GLOBAL INTERACTIONS
+══════════════════════════════════════════════════════ */
+// Cmd/Ctrl+Enter to analyse
+document.getElementById('dialogue-input').addEventListener('keydown', e => {
+  if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') runAnalysis();
+});
+
+// Click outside annotations → reset highlights
+document.addEventListener('click', e => {
+  if (!e.target.closest('.m-span, .narrative-card, .nc-marker-ref')) {
+    resetHighlights();
+    if (state.frame) renderEqualizer(state.frame);
+  }
+});
+</script>
+</body>
+</html>
