@@ -247,33 +247,109 @@ async def generate_narratives(
 ### TASK-interactive-visualization-ui
 
 **Priority**: P1  
-**Status**: Todo  
+**Status**: Cancelled  
+**Updated**: 2026-04-06  
 **Estimated Time**: L (4 days)  
+**Owner**: Frontend  
+**Notes**: Decomposed into TASK-frontend-scaffold, TASK-frontend-text-highlighting, TASK-frontend-narrative-ui, TASK-frontend-marker-sidebar. Tech stack decided: React + TypeScript + Vite (DEC-frontend-react-vite).
+
+---
+
+### TASK-frontend-scaffold
+
+**Priority**: P1  
+**Status**: Done  
+**Updated**: 2026-04-06  
+**Estimated Time**: S (1 day)  
 **Owner**: Frontend
 
 #### Acceptance Criteria
 
-- [ ] Text highlighting working (marker spans colored by type/confidence)
-- [ ] Tooltips on hover (100ms delay, tooltip content: marker ID, meaning, confidence)
-- [ ] Narrative ↔ marker linking (click narrative highlights supporting markers; click marker shows narratives)
-- [ ] Marker library sidebar (searchable, filterable, detail view)
-- [ ] Responsive design (mobile, tablet, desktop)
-- [ ] Accessibility: WCAG AA (keyboard nav, screen reader support)
-- [ ] Performance: page load < 2s, animations 60fps
-- [ ] Tests pass: `tests/test_ui_visualization.py` (visual regression, E2E)
+- [ ] Vite + React + TypeScript project created in `3-code/frontend/`
+- [ ] Dev server starts with `npm run dev` and proxies `/v1/*` to FastAPI (port 8420)
+- [ ] Production build works with `npm run build`
+- [ ] Basic App shell renders (header, main content area, sidebar placeholder)
+- [ ] API client utility for calling backend endpoints (typed responses)
+- [ ] CSS reset + base styles (design tokens: colors, spacing, typography)
 
 #### Dependencies
 
-- TASK-semantic-framing-implementation
-- TASK-marker-resonance-weighting-system
-- TASK-multi-narrative-generation
+- None (infrastructure task)
 
-#### Tech Stack Decision Needed
+**Notes**: Split from TASK-interactive-visualization-ui. Establishes React project structure per DEC-frontend-react-vite.
 
-Choose frontend framework:
-- Option A: React (component ecosystem, performance)
-- Option B: Vanilla JS (lightweight, minimal dependencies)
-- Recommendation: React for state management (narratives ↔ markers)
+---
+
+### TASK-frontend-text-highlighting
+
+**Priority**: P1  
+**Status**: Todo  
+**Updated**: 2026-04-06  
+**Estimated Time**: M (2 days)  
+**Owner**: Frontend
+
+#### Acceptance Criteria
+
+- [ ] Text highlighting working (marker spans colored by type: ATO=blue, SEM=green, CLU=red, MEMA=purple)
+- [ ] Color intensity reflects marker confidence
+- [ ] Tooltips on hover (100ms delay, content: marker ID, meaning_in_context, confidence, tier)
+- [ ] Semantic frame displayed above text (7 dimensions as visual bar/card)
+- [ ] Keyboard navigation for highlighted spans (Tab to next marker)
+
+#### Dependencies
+
+- TASK-frontend-scaffold
+
+**Notes**: Split from TASK-interactive-visualization-ui. Covers REQ-USA-interactive-visualization text highlighting + tooltips.
+
+---
+
+### TASK-frontend-narrative-ui
+
+**Priority**: P1  
+**Status**: Todo  
+**Updated**: 2026-04-06  
+**Estimated Time**: M (2 days)  
+**Owner**: Frontend
+
+#### Acceptance Criteria
+
+- [ ] Narrative tabs/cards (one per narrative, labeled by type)
+- [ ] Click narrative highlights supporting markers in text
+- [ ] Click marker shows which narratives reference it
+- [ ] Narrative count label shows dynamic count + uncertainty indicator
+- [ ] Uncertainty warning displayed for high offline_context_risk narratives
+- [ ] Weak cluster perspectives displayed with distinct styling
+
+#### Dependencies
+
+- TASK-frontend-text-highlighting
+
+**Notes**: Split from TASK-interactive-visualization-ui. Covers REQ-USA-interactive-visualization narrative-marker linking.
+
+---
+
+### TASK-frontend-marker-sidebar
+
+**Priority**: P1  
+**Status**: Todo  
+**Updated**: 2026-04-06  
+**Estimated Time**: S (1 day)  
+**Owner**: Frontend
+
+#### Acceptance Criteria
+
+- [ ] Marker library sidebar (collapsible, resizable)
+- [ ] Search by marker ID or description
+- [ ] Filter by layer (ATO/SEM/CLU/MEMA), tier (STRONG/WEAK), family
+- [ ] Marker detail view (click to expand: patterns, examples, VAD, tags)
+- [ ] Responsive: collapses to drawer on mobile
+
+#### Dependencies
+
+- TASK-frontend-scaffold
+
+**Notes**: Split from TASK-interactive-visualization-ui. Covers REQ-USA-interactive-visualization marker library.
 
 ---
 
@@ -301,7 +377,8 @@ Choose frontend framework:
 
 #### Dependencies
 
-- TASK-interactive-visualization-ui
+- TASK-frontend-narrative-ui
+- TASK-frontend-marker-sidebar
 - TASK-rest-api-endpoints (needs working API)
 
 ---
