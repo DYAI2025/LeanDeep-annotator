@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { AnalysisPage } from './components/AnalysisPage'
+import { MarkerSidebar } from './components/MarkerSidebar'
 import './App.css'
 
 function App() {
@@ -23,16 +25,18 @@ function App() {
       <div className="app-body">
         <main className="app-main">
           <section className="analysis-area">
-            <p className="placeholder-text">
-              Upload or paste a dialogue to begin analysis.
-            </p>
+            <AnalysisPage />
           </section>
         </main>
 
         {sidebarOpen && (
           <aside className="app-sidebar" aria-label="Marker Library">
             <h2 className="sidebar-title">Marker Library</h2>
-            <p className="placeholder-text">Search and filter markers here.</p>
+            <MarkerSidebar
+              markers={[]}
+              activeMarkerId={null}
+              onSelectMarker={() => {}}
+            />
           </aside>
         )}
       </div>

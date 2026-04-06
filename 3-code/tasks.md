@@ -356,7 +356,8 @@ async def generate_narratives(
 ### TASK-native-ui-dialogue-upload
 
 **Priority**: P1  
-**Status**: Todo  
+**Status**: Done  
+**Updated**: 2026-04-06  
 **Estimated Time**: M (3 days)  
 **Owner**: Frontend
 

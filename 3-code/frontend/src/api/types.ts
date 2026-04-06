@@ -54,11 +54,21 @@ export interface Narrative {
   score: number
 }
 
+/** UI-adapted weak cluster (used by NarrativePanel) */
 export interface WeakMarkerCluster {
   markers: DetectedMarker[]
   coherence: number
   cluster_meaning: string
   confidence: number
+}
+
+/** API response weak cluster (matches backend WeakCluster model) */
+export interface ApiWeakCluster {
+  marker_ids: string[]
+  cluster_label: string
+  coherence: number
+  avg_confidence: number
+  marker_count: number
 }
 
 export interface VADPoint {
@@ -80,7 +90,7 @@ export interface ConversationResponse {
   frame: SemanticFrame | null
   markers: DetectedMarker[]
   narratives: Narrative[]
-  weak_clusters: WeakMarkerCluster[]
+  weak_clusters: ApiWeakCluster[]
   semantic_profile: Record<string, unknown>[]
   vad_trajectory: VADPoint[]
   degraded: boolean
