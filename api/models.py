@@ -7,6 +7,7 @@ from typing import Any
 
 from pydantic import BaseModel, Field
 
+from .semantic_frame import SemanticFrame
 
 # --- Enums ---
 
@@ -193,23 +194,15 @@ class WeakCluster(BaseModel):
     marker_count: int
 
 
-class SupportingMarkerRef(BaseModel):
-    """Marker reference within a narrative interpretation."""
-    id: str
-    adjusted_confidence: float | None = None
-    span: tuple[int, int] | None = None
-    meaning_in_context: str = ""
-
-
-class MultiNarrative(BaseModel):
-    """One alternative narrative interpretation of a dialogue."""
-    narrative_id: int
-    type: str  # "Primary" | "Contrarian" | "Novel" | "High-Uncertainty" | "Weak Cluster"
-    text: str
-    confidence: float = Field(ge=0.0, le=1.0)
-    supporting_markers: list[SupportingMarkerRef] = []
-    uncertainty_warning: str | None = None
-    score: float = Field(ge=0.0, le=1.0, default=0.0)
+class SemanticFrame(BaseModel):
+    """Dialogue-level semantic context for resonance weighting and narratives."""
+    tone: str = ""
+    themes: list[str] = []
+    relational_dynamics: str = ""
+    intent: str = ""
+    emotional_tenor: float = Field(default=0.0, ge=-1.0, le=1.0)
+    context_validity: float = Field(default=0.5, ge=0.0, le=1.0)
+    offline_context_risk: float = Field(default=0.5, ge=0.0, le=1.0)
 
 
 class ConversationResponse(BaseModel):
@@ -277,6 +270,14 @@ class SpeakerSummary(BaseModel):
 class SpeakerBaselines(BaseModel):
     speakers: dict[str, SpeakerSummary]
     per_message_delta: list[SpeakerDelta | None]
+
+
+class PersonaSessionSummary(BaseModel):
+    session_number: int
+    warm_start_applied: bool
+    new_episodes: list[Episode] = []
+    state_snapshot: dict[str, float] = {}
+    prediction_available: bool = False
 
 
 class DynamicsResponse(BaseModel):
@@ -415,14 +416,6 @@ class PredictionResponse(BaseModel):
     session_count: int
     predictions: PredictionReservoir | None = None
     confidence: str = "insufficient_data"  # "low" | "medium" | "high" | "insufficient_data"
-
-
-class PersonaSessionSummary(BaseModel):
-    session_number: int
-    warm_start_applied: bool
-    new_episodes: list[Episode] = []
-    state_snapshot: dict[str, float] = {}
-    prediction_available: bool = False
 
 
 # --- Narrative Analysis Models ---

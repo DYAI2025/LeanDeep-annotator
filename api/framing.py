@@ -20,7 +20,7 @@ import logging
 import time
 
 from .config import settings
-from .models import SemanticFrame
+from .semantic_frame import SemanticFrame
 
 logger = logging.getLogger("leandeep.framing")
 
