@@ -191,7 +191,7 @@ class TestNarrativeScoring:
         for n in scored:
             assert 0.0 <= n.score <= 1.0
 
-    def test_primary_scored_highest_at_equal_confidence(self):
+    def test_novel_scored_highest_at_equal_confidence(self):
         """At equal confidence, Primary has lower novelty so lower score than Novel."""
         narratives = [
             MultiNarrative(narrative_id=1, type="Primary", text="t", confidence=0.7),
