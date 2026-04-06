@@ -316,8 +316,13 @@ class TestGenerateMultiNarratives:
                 hesitant_frame,
             )
         types = [n.type for n in result]
-        # Should include cluster perspective (if it fits in target count)
-        assert len(result) <= compute_narrative_count(hesitant_frame.offline_context_risk)
+        target_count = compute_narrative_count(hesitant_frame.offline_context_risk)
+        # Should include cluster perspective when there is room for it
+        assert len(result) <= target_count
+        if target_count >= 3:
+            assert "Weak Cluster" in types
+        else:
+            assert "Weak Cluster" not in types
 
     @pytest.mark.asyncio
     async def test_all_narratives_grounded(
