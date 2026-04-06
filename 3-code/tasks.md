@@ -307,7 +307,7 @@ async def generate_narratives(
 ### TASK-frontend-narrative-ui
 
 **Priority**: P1  
-**Status**: Todo  
+**Status**: Done  
 **Updated**: 2026-04-06  
 **Estimated Time**: M (2 days)  
 **Owner**: Frontend
@@ -332,18 +332,18 @@ async def generate_narratives(
 ### TASK-frontend-marker-sidebar
 
 **Priority**: P1  
-**Status**: Todo  
+**Status**: Done  
 **Updated**: 2026-04-06  
 **Estimated Time**: S (1 day)  
 **Owner**: Frontend
 
 #### Acceptance Criteria
 
-- [ ] Marker library sidebar (collapsible, resizable)
-- [ ] Search by marker ID or description
-- [ ] Filter by layer (ATO/SEM/CLU/MEMA), tier (STRONG/WEAK), family
-- [ ] Marker detail view (click to expand: patterns, examples, VAD, tags)
-- [ ] Responsive: collapses to drawer on mobile
+- [x] Marker library sidebar (collapsible, resizable)
+- [x] Search by marker ID or description
+- [x] Filter by layer (ATO/SEM/CLU/MEMA), tier (STRONG/WEAK), family
+- [x] Marker detail view (click to expand: patterns, examples, VAD, tags)
+- [x] Responsive: collapses to drawer on mobile
 
 #### Dependencies
 
