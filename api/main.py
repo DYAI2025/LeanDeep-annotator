@@ -48,6 +48,7 @@ from .models import (
     InterpretResponse,
     Layer,
     MarkerDetail,
+    MultiNarrative,
     MarkerListResponse,
     Message,
     NarrativeActor,
@@ -75,6 +76,7 @@ from .models import (
     VADPoint,
 )
 from .framing import frame_generator
+from .narratives import generate_multi_narratives
 from .resonance import apply_resonance_weighting, cluster_weak_markers
 from .narrative import (
     InitialSemanticsGenerator,
@@ -274,15 +276,21 @@ async def analyze_conversation(
 
     detections = result["detections"]
     weak_cluster_models: list[WeakCluster] = []
+    _strong_markers = None
+    _weak_markers = []
+    _resonance_clusters = []
 
     # Apply resonance weighting when frame is available
     if frame is not None:
         strong, weak, _discarded = apply_resonance_weighting(
             detections, frame, engine.markers,
         )
+        _strong_markers = strong
+        _weak_markers = weak
 
         # Cluster weak markers for alternative perspectives
         clusters = await cluster_weak_markers(weak)
+        _resonance_clusters = clusters
         weak_cluster_models = [
             WeakCluster(
                 marker_ids=c.marker_ids,
@@ -350,9 +358,17 @@ async def analyze_conversation(
     # Sort by adjusted_confidence (if available) or confidence
     markers.sort(key=lambda m: (-(m.adjusted_confidence or m.confidence), m.id))
 
+    # Generate multi-narrative interpretations when frame + weighted markers available
+    narrative_models: list[MultiNarrative] = []
+    if frame is not None and _strong_markers is not None:
+        narrative_models = await generate_multi_narratives(
+            _strong_markers, _weak_markers, _resonance_clusters, frame,
+        )
+
     return ConversationResponse(
         frame=frame,
         markers=markers,
+        narratives=narrative_models,
         weak_clusters=weak_cluster_models,
         temporal_patterns=temporal,
         topology=result.get("topology"),

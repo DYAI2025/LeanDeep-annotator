@@ -193,9 +193,29 @@ class WeakCluster(BaseModel):
     marker_count: int
 
 
+class SupportingMarkerRef(BaseModel):
+    """Marker reference within a narrative interpretation."""
+    id: str
+    adjusted_confidence: float | None = None
+    span: tuple[int, int] | None = None
+    meaning_in_context: str = ""
+
+
+class MultiNarrative(BaseModel):
+    """One alternative narrative interpretation of a dialogue."""
+    narrative_id: int
+    type: str  # "Primary" | "Contrarian" | "Novel" | "High-Uncertainty" | "Weak Cluster"
+    text: str
+    confidence: float = Field(ge=0.0, le=1.0)
+    supporting_markers: list[SupportingMarkerRef] = []
+    uncertainty_warning: str | None = None
+    score: float = Field(ge=0.0, le=1.0, default=0.0)
+
+
 class ConversationResponse(BaseModel):
     frame: SemanticFrame | None = None
     markers: list[ConversationMarker]
+    narratives: list[MultiNarrative] = []
     weak_clusters: list[WeakCluster] = []
     temporal_patterns: list[TemporalPattern] = []
     topology: TopologyReport | None = None

@@ -165,7 +165,8 @@ This is a **prerequisite**. If markers don't have tags, weighting won't work.
 ### TASK-multi-narrative-generation
 
 **Priority**: P0 (Blocker)  
-**Status**: Todo  
+**Status**: Done  
+**Updated**: 2026-04-06  
 **Estimated Time**: M (3 days)  
 **Owner**: Backend
 
