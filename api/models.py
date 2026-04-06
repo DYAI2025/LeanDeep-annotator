@@ -502,4 +502,7 @@ for _model in (
     SpeakerBaselines,
     DynamicsResponse,
 ):
-    _model.model_rebuild(_types_namespace=globals())
+    try:
+        _model.model_rebuild(_types_namespace=globals())
+    except TypeError:
+        _model.model_rebuild()
