@@ -7,6 +7,7 @@ from typing import Any
 
 from pydantic import BaseModel, Field
 
+from .semantic_frame import SemanticFrame
 
 # --- Enums ---
 
