@@ -421,11 +421,14 @@ async def generate_narratives(
 ### TASK-weak-marker-candidate-detection
 
 **Priority**: P2  
-**Status**: Todo  
+**Status**: Cancelled  
+**Updated**: 2026-04-07  
 **Estimated Time**: L (4 days)  
 **Owner**: Backend
 
-#### Acceptance Criteria
+**Notes**: Decomposed into TASK-candidate-detection-pipeline, TASK-enrichment-api-endpoints, TASK-candidate-persistence-audit, TASK-candidate-review-ui. Spans backend pipeline + API + persistence + frontend UI — too large for a single task.
+
+#### Original Acceptance Criteria (covered by subtasks)
 
 - [ ] Candidate detection pipeline implemented
   - [ ] Identify pattern clusters not matching existing markers
@@ -443,6 +446,120 @@ async def generate_narratives(
 - TASK-semantic-framing-implementation
 - TASK-marker-resonance-weighting-system
 - TASK-native-ui-dialogue-upload
+
+---
+
+### TASK-candidate-detection-pipeline
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: M (2 days)  
+**Owner**: Backend
+
+#### Acceptance Criteria
+
+- [ ] `api/candidates.py` module with candidate detection logic
+- [ ] Identify text clusters not matching existing markers (using weak/discarded marker gaps)
+- [ ] LLM-driven clustering (cluster_label + coherence score)
+- [ ] Rank by frequency, coherence, novelty
+- [ ] Quality: false discovery rate < 30% (measured on eval corpus)
+- [ ] Tests: `tests/test_candidate_detection.py`
+
+#### Dependencies
+
+- TASK-semantic-framing-implementation
+- TASK-marker-resonance-weighting-system
+
+**Notes**: Split from TASK-weak-marker-candidate-detection. Core detection algorithm only — no API/UI/persistence. Output entities (`MarkerCandidate`, `ExampleCandidate`, `ExamplePassage`) defined in [2-design/data-model.md](../2-design/data-model.md) Enrichment Domain — match those shapes exactly so the API and persistence layers can consume without translation.
+
+---
+
+### TASK-candidate-persistence-audit
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (1 day)  
+**Owner**: Backend
+
+#### Acceptance Criteria
+
+- [ ] Approved candidates written to `build/markers_rated/` in correct schema
+- [ ] Audit log at `build/enrichment/changelog.jsonl` tracks all enrichments (create/update/revert)
+- [ ] Revert capability (rollback last change)
+- [ ] Coverage report generation (per REQ-MNT-marker-evolution-tracking)
+- [ ] Tests: `tests/test_candidate_persistence.py`
+
+#### Dependencies
+
+- TASK-candidate-detection-pipeline
+
+**Notes**: Split from TASK-weak-marker-candidate-detection. Handles file I/O and audit trail. Must exist before enrichment-api-endpoints so approve/reject actions have a persistence layer to call. Satisfies REQ-MNT-marker-evolution-tracking.
+
+---
+
+### TASK-enrichment-api-endpoints
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (1 day)  
+**Owner**: Backend
+
+#### Acceptance Criteria
+
+- [ ] POST `/v1/enrichment/candidates/{id}/action` endpoint (approve/reject/merge) — per api-design.md
+- [ ] GET `/v1/enrichment/candidates` endpoint (filter by status, paginated) — per api-design.md
+- [ ] GET `/v1/enrichment/examples` endpoint
+- [ ] POST `/v1/enrichment/examples/{id}/action` endpoint
+- [ ] GET `/v1/markers/{id}/history` endpoint
+- [ ] Auth required on all write endpoints (per REQ-SEC-data-handling)
+- [ ] Tests: `tests/test_api_enrichment.py`
+
+#### Dependencies
+
+- TASK-candidate-detection-pipeline
+- TASK-candidate-persistence-audit
+
+**Notes**: Split from TASK-weak-marker-candidate-detection. Wires the detection pipeline and persistence layer into REST endpoints.
+
+---
+
+### TASK-candidate-review-ui
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: M (2 days)  
+**Owner**: Frontend
+
+#### Acceptance Criteria
+
+- [ ] `/enrichment` route in frontend (new page, tabbed: Candidates | Examples)
+
+**Candidate review flow** (satisfies REQ-F-candidate-detection UI):
+- [ ] List of pending candidates with filter by status (proposed/approved/rejected/merged)
+- [ ] Candidate detail view (example_passages, cluster_meaning, coherence, frequency, related_markers)
+- [ ] Approve / Reject / Merge actions with notes field
+- [ ] For Merge: select merge_target marker ID
+- [ ] Call POST `/v1/enrichment/candidates/{id}/action`
+
+**Example review flow** (satisfies REQ-F-example-auto-enrichment UI):
+- [ ] List of pending example candidates with filter by marker_id and status
+- [ ] Example detail view (passage text, context, confidence, semantic_explanation)
+- [ ] Approve / Reject / Refine actions (Refine allows text correction)
+- [ ] Call POST `/v1/enrichment/examples/{id}/action`
+
+**Tests:**
+- [ ] Component tests for candidate review flow (approve/reject/merge)
+- [ ] Component tests for example review flow (approve/reject/refine)
+
+#### Dependencies
+
+- TASK-enrichment-api-endpoints
+
+**Notes**: Split from TASK-weak-marker-candidate-detection. Covers both REQ-F-candidate-detection (candidate management) and REQ-F-example-auto-enrichment (example management) — two distinct researcher workflows in one UI.
 
 ---
 
@@ -474,6 +591,7 @@ async def generate_narratives(
 
 **Priority**: P2  
 **Status**: Todo  
+**Updated**: 2026-04-07  
 **Estimated Time**: S (1-2 days)  
 **Owner**: Frontend
 
@@ -488,7 +606,10 @@ async def generate_narratives(
 
 #### Dependencies
 
-- TASK-interactive-visualization-ui
+- TASK-frontend-scaffold
+- TASK-frontend-text-highlighting
+- TASK-frontend-narrative-ui
+- TASK-frontend-marker-sidebar
 - TASK-native-ui-dialogue-upload
 
 ---
@@ -548,19 +669,27 @@ async def generate_narratives(
 
 ## Summary Table
 
-| Task | Phase | Est. Time | Dependencies | Owner |
-|------|-------|-----------|--------------|-------|
-| semantic-framing | P0 | M | None | Backend |
-| marker-resonance-weighting | P0 | M | semantic-framing | Backend |
-| multi-narrative-generation | P0 | M | semantic-framing, weighting | Backend |
-| interactive-visualization-ui | P1 | L | P0 tasks | Frontend |
-| native-ui-dialogue-upload | P1 | M | visualization, api | Frontend |
-| rest-api-endpoints | P1 | M | P0 tasks | Backend |
-| candidate-detection | P2 | L | P0+P1 | Backend |
-| performance-optimization | P2 | M | all | Backend+Frontend |
-| accessibility-audit | P2 | S | visualization | Frontend |
-| assumption-verification-gold-standard | Parallel | M | P0 | Research |
-| documentation-api-sdks | P2 | M | api-endpoints | Tech Writer |
+| Task | Phase | Est. Time | Dependencies | Owner | Status |
+|------|-------|-----------|--------------|-------|--------|
+| semantic-framing | P0 | M | None | Backend | Done |
+| marker-resonance-weighting | P0 | M | semantic-framing | Backend | Done |
+| multi-narrative-generation | P0 | M | semantic-framing, weighting | Backend | Done |
+| interactive-visualization-ui | P1 | L | P0 tasks | Frontend | Cancelled — decomposed |
+| frontend-scaffold | P1 | S | None | Frontend | Done |
+| frontend-text-highlighting | P1 | M | scaffold | Frontend | Done |
+| frontend-narrative-ui | P1 | M | text-highlighting | Frontend | Done |
+| frontend-marker-sidebar | P1 | S | scaffold | Frontend | Done |
+| native-ui-dialogue-upload | P1 | M | narrative-ui, marker-sidebar, rest-api | Frontend | Done |
+| rest-api-endpoints | P1 | M | P0 tasks | Backend | Done |
+| weak-marker-candidate-detection | P2 | L | P0+P1 | Backend | Cancelled — decomposed |
+| candidate-detection-pipeline | P2 | M | P0 | Backend | Todo |
+| candidate-persistence-audit | P2 | S | detection-pipeline | Backend | Todo |
+| enrichment-api-endpoints | P2 | S | detection-pipeline, persistence-audit | Backend | Todo |
+| candidate-review-ui | P2 | M | enrichment-api | Frontend | Todo |
+| performance-optimization | P2 | M | all | Backend+Frontend | Todo |
+| accessibility-audit | P2 | S | frontend subtasks + native-ui | Frontend | Todo |
+| assumption-verification-gold-standard | Parallel | M | P0 | Research | Todo |
+| documentation-api-sdks | P2 | M | api-endpoints | Tech Writer | Todo |
 
 ---
 
