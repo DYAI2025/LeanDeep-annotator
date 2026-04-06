@@ -491,3 +491,15 @@ class TranscriptResponse(BaseModel):
     messages: list[Message]
     format_detected: str
     speaker_count: int
+
+
+# Ensure forward references are resolved in this module namespace.
+# This avoids FastAPI/Pydantic schema generation failures under some
+# Python/Pydantic version combinations during app import.
+for _model in (
+    UEDMetrics,
+    SpeakerSummary,
+    SpeakerBaselines,
+    DynamicsResponse,
+):
+    _model.model_rebuild(_types_namespace=globals())
