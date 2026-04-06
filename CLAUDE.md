@@ -31,7 +31,7 @@ Pure Python core with optional LLM semantic profiling, VAD emotion tracking, sem
 
 **Phase**: Code (in progress)
 
-- **Implementation progress**: 7/14 tasks done (P0: 3/3, P1: 4/6). Marker sidebar with search/filter/detail view built; vitest test infrastructure added. 4 decisions recorded
+- **Implementation progress**: 8/14 tasks done (P0: 3/3, P1: 5/6). REST API v6.0 response models complete (MultiNarrative, SupportingMarkerRef added; degraded/provider_used/fallback_reason fields; version 6.0). 4 decisions recorded
 - **Design**: Architecture complete (Approved); Data model drafted; API design drafted. 3 decisions recorded. Completeness assessment (2026-04-05): 0 Critical, 0 Important, 2 Minor
 - **Components**: 3 identified — backend (Python/FastAPI), frontend (React/JS), marker-pipeline (Python CLI). Per-component directories created in `3-code/`
 - **Specification**: Complete. 4 goals (3 Approved); 4 user stories (all Approved); 13 requirements (all Approved); gap analysis clean
