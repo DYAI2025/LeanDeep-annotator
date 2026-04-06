@@ -283,7 +283,7 @@ async def generate_narratives(
 ### TASK-frontend-text-highlighting
 
 **Priority**: P1  
-**Status**: Todo  
+**Status**: Done  
 **Updated**: 2026-04-06  
 **Estimated Time**: M (2 days)  
 **Owner**: Frontend

@@ -1,0 +1,63 @@
+.frame-card {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.frame-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.frame-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-md);
+}
+
+.frame-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.frame-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.frame-value {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.frame-bar-container {
+  position: relative;
+  height: 20px;
+  background: var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.frame-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width var(--transition-normal);
+}
+
+.frame-bar-label {
+  position: absolute;
+  top: 50%;
+  left: var(--space-sm);
+  transform: translateY(-50%);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-text);
+}
