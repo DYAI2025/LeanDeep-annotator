@@ -12,6 +12,29 @@ from ..semantic import SemanticProfile, TextUnit
 logger = logging.getLogger("leandeep.semantic.embedding")
 
 
+class _DeterministicHashEncoder:
+    """Offline-safe fallback encoder with SentenceTransformer-like API."""
+
+    def __init__(self, dim: int):
+        self._dim = max(1, int(dim))
+
+    def encode(self, texts: list[str], normalize_embeddings: bool = True) -> np.ndarray:
+        embeddings: list[np.ndarray] = []
+        for text in texts:
+            vec = np.zeros(self._dim, dtype=np.float32)
+            for token in text.lower().split():
+                idx = hash(token) % self._dim
+                vec[idx] += 1.0
+            if normalize_embeddings:
+                norm = float(np.linalg.norm(vec))
+                if norm > 0:
+                    vec = vec / norm
+            embeddings.append(vec)
+        if not embeddings:
+            return np.zeros((0, self._dim), dtype=np.float32)
+        return np.vstack(embeddings)
+
+
 class EmbeddingProvider:
     """Fallback provider using sentence embeddings + marker prototypes."""
 
@@ -32,8 +55,15 @@ class EmbeddingProvider:
                 data = np.load(path, allow_pickle=True)
                 self._proto_ids = data["ids"]
                 self._proto_vecs = data["vectors"]
-                from sentence_transformers import SentenceTransformer
-                self._model = SentenceTransformer(model_name)
+                embedding_dim = int(self._proto_vecs.shape[1]) if self._proto_vecs.ndim == 2 else 384
+                try:
+                    from sentence_transformers import SentenceTransformer
+                    self._model = SentenceTransformer(model_name)
+                except Exception as e:
+                    logger.warning(
+                        f"SentenceTransformer unavailable ({e}); using deterministic hash fallback encoder."
+                    )
+                    self._model = _DeterministicHashEncoder(dim=embedding_dim)
             except Exception as e:
                 logger.warning(f"Embedding provider init failed: {e}")
 

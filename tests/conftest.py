@@ -8,12 +8,15 @@ Provides:
 - Pytest markers for test categorization
 """
 
-import pytest
 import json
+import os
 from pathlib import Path
+from dataclasses import dataclass
 from typing import Dict, List, Any
 from unittest.mock import AsyncMock, MagicMock
 from fastapi.testclient import TestClient
+import httpx
+import pytest
 
 
 # ============================================================
@@ -282,6 +285,41 @@ def mock_gemini_frame_response():
 # ============================================================
 # API TEST CLIENT
 # ============================================================
+
+@dataclass(frozen=True)
+class ApiCfg:
+    base_url: str
+    endpoint: str
+    api_key: str | None
+    threshold: float | None
+
+
+@pytest.fixture(scope="session")
+def api_cfg() -> ApiCfg:
+    """Configuration for API-shadow tests against an optional external API."""
+    threshold_raw = os.getenv("LEANDEEP_TEST_THRESHOLD")
+    threshold = float(threshold_raw) if threshold_raw not in (None, "") else None
+    return ApiCfg(
+        base_url=os.getenv("LEANDEEP_TEST_BASE_URL", "http://127.0.0.1:8420"),
+        endpoint=os.getenv("LEANDEEP_TEST_ENDPOINT", "/v1/analyze/conversation"),
+        api_key=os.getenv("LEANDEEP_TEST_API_KEY"),
+        threshold=threshold,
+    )
+
+
+@pytest.fixture(scope="session")
+def ensure_api_reachable(api_cfg: ApiCfg):
+    """
+    Skip external API-shadow tests when no server is reachable.
+    Unit tests use in-process TestClient and remain unaffected.
+    """
+    url = api_cfg.base_url.rstrip("/") + "/healthz"
+    try:
+        response = httpx.get(url, timeout=2.0)
+    except Exception as exc:
+        pytest.skip(f"External API not reachable for shadow fixtures: {exc}")
+    if response.status_code >= 500:
+        pytest.skip(f"External API unhealthy for shadow fixtures: HTTP {response.status_code}")
 
 @pytest.fixture
 def test_client():
