@@ -271,6 +271,14 @@ class SpeakerBaselines(BaseModel):
     per_message_delta: list[SpeakerDelta | None]
 
 
+class PersonaSessionSummary(BaseModel):
+    session_number: int
+    warm_start_applied: bool
+    new_episodes: list[Episode] = []
+    state_snapshot: dict[str, float] = {}
+    prediction_available: bool = False
+
+
 class DynamicsResponse(BaseModel):
     markers: list[ConversationMarker]
     message_vad: list[VADPoint]
@@ -407,14 +415,6 @@ class PredictionResponse(BaseModel):
     session_count: int
     predictions: PredictionReservoir | None = None
     confidence: str = "insufficient_data"  # "low" | "medium" | "high" | "insufficient_data"
-
-
-class PersonaSessionSummary(BaseModel):
-    session_number: int
-    warm_start_applied: bool
-    new_episodes: list[Episode] = []
-    state_snapshot: dict[str, float] = {}
-    prediction_available: bool = False
 
 
 # --- Narrative Analysis Models ---
