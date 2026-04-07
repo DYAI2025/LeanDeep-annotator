@@ -319,6 +319,22 @@ class TestWeakMarkerClustering:
         assert clusters == []
 
     @pytest.mark.asyncio
+    async def test_no_clustering_without_reasoning_model(self):
+        """Without reasoning_model configured, returns empty list."""
+        weak = [
+            WeightedMarker(
+                marker_id=f"ATO_{i}", layer="ATO", confidence=0.4,
+                resonance_score=0.6, adjusted_confidence=0.24, tier="WEAK",
+            )
+            for i in range(2)
+        ]
+        with patch("api.resonance.settings") as mock_settings:
+            mock_settings.google_api_key = "test-key"
+            mock_settings.reasoning_model = None
+            clusters = await cluster_weak_markers(weak)
+        assert clusters == []
+
+    @pytest.mark.asyncio
     async def test_coherent_cluster_returned(self):
         """When LLM finds coherent cluster (>= 0.7), a cluster is returned."""
         from api.resonance import _call_clustering_llm
@@ -346,6 +362,7 @@ class TestWeakMarkerClustering:
         with patch("api.resonance._call_clustering_llm", new=AsyncMock(return_value=llm_response)), \
              patch("api.resonance.settings") as mock_settings:
             mock_settings.google_api_key = "test-key"
+            mock_settings.reasoning_model = "gemini-test"
             clusters = await cluster_weak_markers(weak)
 
         assert len(clusters) == 1
@@ -379,9 +396,39 @@ class TestWeakMarkerClustering:
         with patch("api.resonance._call_clustering_llm", new=AsyncMock(return_value=llm_response)), \
              patch("api.resonance.settings") as mock_settings:
             mock_settings.google_api_key = "test-key"
+            mock_settings.reasoning_model = "gemini-test"
             clusters = await cluster_weak_markers(weak)
 
         assert clusters == []
+
+    @pytest.mark.asyncio
+    async def test_cluster_falls_back_to_confidence_when_adjusted_confidence_none(self):
+        """If adjusted_confidence is None, fallback to confidence for prompt/avg."""
+        weak = [
+            WeightedMarker(
+                marker_id="ATO_A", layer="ATO", confidence=0.4,
+                resonance_score=0.6, adjusted_confidence=None, tier="WEAK",
+                description="marker a",
+            ),
+            WeightedMarker(
+                marker_id="ATO_B", layer="ATO", confidence=0.2,
+                resonance_score=0.6, adjusted_confidence=0.3, tier="WEAK",
+                description="marker b",
+            ),
+        ]
+        llm_response = json.dumps({
+            "coherent": True,
+            "coherence_score": 0.8,
+            "cluster_label": "Fallback confidence cluster",
+        })
+        with patch("api.resonance._call_clustering_llm", new=AsyncMock(return_value=llm_response)), \
+             patch("api.resonance.settings") as mock_settings:
+            mock_settings.google_api_key = "test-key"
+            mock_settings.reasoning_model = "gemini-test"
+            clusters = await cluster_weak_markers(weak)
+
+        assert len(clusters) == 1
+        assert clusters[0].avg_confidence == 0.35
 
 
 # ============================================================
