@@ -5,6 +5,8 @@ from __future__ import annotations
 from enum import Enum
 from typing import Any
 
+from datetime import UTC, datetime
+
 from pydantic import BaseModel, Field
 
 from .semantic_frame import SemanticFrame
@@ -512,3 +514,56 @@ class TranscriptResponse(BaseModel):
     messages: list[Message]
     format_detected: str
     speaker_count: int
+
+
+# --- Enrichment Domain Models (REQ-F-candidate-detection, REQ-F-example-auto-enrichment, REQ-MNT-marker-evolution-tracking) ---
+
+class ExamplePassage(BaseModel):
+    """A passage excerpt used as candidate evidence.
+
+    Per REQ-SEC-data-handling: raw dialogue is NOT stored; only the excerpt
+    and a hash reference to the source are retained.
+    """
+    text: str = Field(..., min_length=1, description="Exact passage text")
+    context: str = Field("", description="Surrounding context (up to ~2 sentences)")
+    source_dialogue_hash: str = Field("", description="SHA-256 hash of source dialogue for traceability")
+    confidence: float = Field(0.0, ge=0.0, le=1.0, description="Detection confidence")
+
+
+class MarkerCandidate(BaseModel):
+    """A proposed new marker surfaced from unexplained dialogue patterns."""
+    candidate_id: str = Field(..., description="UUID")
+    example_passages: list[ExamplePassage] = Field(..., min_length=1)
+    cluster_meaning: str = Field("", description="LLM-generated semantic summary")
+    frequency: int = Field(0, ge=0, description="Occurrences across analysed corpus")
+    related_markers: list[str] = Field(default_factory=list, description="Closest existing marker IDs")
+    coherence: float = Field(0.0, ge=0.0, le=1.0)
+    novelty: float = Field(0.0, ge=0.0, le=1.0, description="How different from existing markers (0=identical, 1=fully novel)")
+    rank_score: float = Field(0.0, ge=0.0, description="frequency × coherence × novelty")
+    status: str = Field("proposed", description="proposed | approved | rejected | merged")
+    created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
+    reviewed_by: str | None = None
+    notes: str = ""
+
+
+class ExampleCandidate(BaseModel):
+    """A proposed new example for an existing marker."""
+    example_id: str = Field(..., description="UUID")
+    marker_id: str = Field(..., description="Target marker ID")
+    passage: ExamplePassage
+    semantic_explanation: str = Field("", description="Why this is a good example")
+    status: str = Field("proposed", description="proposed | approved | rejected | refined")
+    created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
+    reviewed_by: str | None = None
+
+
+class MarkerChangeRecord(BaseModel):
+    """Audit trail entry for a marker evolution (create/update/revert)."""
+    change_id: str = Field(..., description="UUID")
+    change_type: str = Field(..., description="new_marker | new_example | schema_update | revert")
+    marker_id: str
+    actor: str = Field(..., description="system:<source> or human:<user_id>")
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(UTC))
+    source: str = Field("", description="auto_enrichment | manual | migration")
+    previous_state: dict[str, Any] | None = None
+    new_state: dict[str, Any] | None = None

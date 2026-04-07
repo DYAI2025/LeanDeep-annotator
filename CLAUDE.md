@@ -31,7 +31,7 @@ Pure Python core with optional LLM semantic profiling, VAD emotion tracking, sem
 
 **Phase**: Code (in progress)
 
-- **Implementation progress**: 9/17 tasks done (P0: 3/3, P1: 6/6 complete, P2: 0/5 pending). TASK-weak-marker-candidate-detection decomposed into 4 subtasks (detection-pipeline, enrichment-api-endpoints, candidate-persistence-audit, candidate-review-ui). 4 decisions recorded
+- **Implementation progress**: 10/17 tasks done (P0: 3/3, P1: 6/6, P2: 1/5). Candidate detection pipeline complete: `api/candidates.py` with LLM clustering + deterministic heuristic fallback, novelty scoring, rank_score ordering. Enrichment models (`MarkerCandidate`, `ExampleCandidate`, `ExamplePassage`, `MarkerChangeRecord`) added to `api/models.py`. 24 unit tests. 4 decisions recorded
 - **Design**: Architecture complete (Approved); Data model drafted; API design drafted. 3 decisions recorded. Completeness assessment (2026-04-05): 0 Critical, 0 Important, 2 Minor
 - **Components**: 3 identified — backend (Python/FastAPI), frontend (React/JS), marker-pipeline (Python CLI). Per-component directories created in `3-code/`
 - **Specification**: Complete. 4 goals (3 Approved); 4 user stories (all Approved); 13 requirements (all Approved); gap analysis clean

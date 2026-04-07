@@ -452,19 +452,19 @@ async def generate_narratives(
 ### TASK-candidate-detection-pipeline
 
 **Priority**: P2  
-**Status**: Todo  
+**Status**: Done  
 **Updated**: 2026-04-07  
 **Estimated Time**: M (2 days)  
 **Owner**: Backend
 
 #### Acceptance Criteria
 
-- [ ] `api/candidates.py` module with candidate detection logic
-- [ ] Identify text clusters not matching existing markers (using weak/discarded marker gaps)
-- [ ] LLM-driven clustering (cluster_label + coherence score)
-- [ ] Rank by frequency, coherence, novelty
-- [ ] Quality: false discovery rate < 30% (measured on eval corpus)
-- [ ] Tests: `tests/test_candidate_detection.py`
+- [x] `api/candidates.py` module with candidate detection logic
+- [x] Identify text clusters not matching existing markers (using weak/discarded marker gaps)
+- [x] LLM-driven clustering (cluster_label + coherence score)
+- [x] Rank by frequency, coherence, novelty
+- [ ] Quality: false discovery rate < 30% (measured on eval corpus) — **deferred**: requires eval corpus run with researcher review, not achievable in pipeline-only task
+- [x] Tests: `tests/test_candidate_detection.py` (24 tests, all passing)
 
 #### Dependencies
 
@@ -682,7 +682,7 @@ async def generate_narratives(
 | native-ui-dialogue-upload | P1 | M | narrative-ui, marker-sidebar, rest-api | Frontend | Done |
 | rest-api-endpoints | P1 | M | P0 tasks | Backend | Done |
 | weak-marker-candidate-detection | P2 | L | P0+P1 | Backend | Cancelled — decomposed |
-| candidate-detection-pipeline | P2 | M | P0 | Backend | Todo |
+| candidate-detection-pipeline | P2 | M | P0 | Backend | Done |
 | candidate-persistence-audit | P2 | S | detection-pipeline | Backend | Todo |
 | enrichment-api-endpoints | P2 | S | detection-pipeline, persistence-audit | Backend | Todo |
 | candidate-review-ui | P2 | M | enrichment-api | Frontend | Todo |
