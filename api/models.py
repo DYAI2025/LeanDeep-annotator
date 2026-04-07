@@ -218,6 +218,12 @@ class MultiNarrative(BaseModel):
 # Do NOT redefine it here — the import from semantic_frame is the canonical definition.
 
 
+class VADPoint(BaseModel):
+    valence: float
+    arousal: float
+    dominance: float
+
+
 class ConversationResponse(BaseModel):
     frame: SemanticFrame | None = None
     markers: list[ConversationMarker]
@@ -233,13 +239,6 @@ class ConversationResponse(BaseModel):
     fallback_reason: str | None = None
     duration_ms: float | None = None
     meta: AnalyzeMeta
-
-
-
-class VADPoint(BaseModel):
-    valence: float
-    arousal: float
-    dominance: float
 
 
 class UEDVariability(BaseModel):
