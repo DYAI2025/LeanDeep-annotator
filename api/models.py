@@ -214,6 +214,12 @@ class MultiNarrative(BaseModel):
     score: float = 0.0
 
 
+class VADPoint(BaseModel):
+    valence: float
+    arousal: float
+    dominance: float
+
+
 # Note: SemanticFrame is defined in api/semantic_frame.py and imported at top of this file.
 # Do NOT redefine it here — the import from semantic_frame is the canonical definition.
 
@@ -233,13 +239,6 @@ class ConversationResponse(BaseModel):
     fallback_reason: str | None = None
     duration_ms: float | None = None
     meta: AnalyzeMeta
-
-
-
-class VADPoint(BaseModel):
-    valence: float
-    arousal: float
-    dominance: float
 
 
 class UEDVariability(BaseModel):
