@@ -5,6 +5,8 @@ from __future__ import annotations
 from enum import Enum
 from typing import Any
 
+from datetime import UTC, datetime
+
 from pydantic import BaseModel, Field
 
 from .semantic_frame import SemanticFrame

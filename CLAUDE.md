@@ -31,7 +31,7 @@ Pure Python core with optional LLM semantic profiling, VAD emotion tracking, sem
 
 **Phase**: Code (in progress)
 
-- **Implementation progress**: 9/14 tasks done (P0: 3/3, P1: 6/6 complete). Full analysis UI: dialogue upload/paste, API integration, semantic frame + highlighted text + narrative panel + marker sidebar + export (JSON/HTML). 4 decisions recorded
+- **Implementation progress**: 10/23 tasks done (P0: 3/3, P1: 6/6, P2: 1/5, Deploy: 0/6). Candidate detection pipeline complete: `api/candidates.py` with LLM clustering + deterministic heuristic fallback, novelty scoring, rank_score ordering. Enrichment models added. 26 unit tests. Railway deployment plan adopted (DEC-railway-deployment): single-service multi-stage Dockerfile, 6 deploy-prep tasks queued in Phase 3e. 5 decisions recorded
 - **Design**: Architecture complete (Approved); Data model drafted; API design drafted. 3 decisions recorded. Completeness assessment (2026-04-05): 0 Critical, 0 Important, 2 Minor
 - **Components**: 3 identified — backend (Python/FastAPI), frontend (React/JS), marker-pipeline (Python CLI). Per-component directories created in `3-code/`
 - **Specification**: Complete. 4 goals (3 Approved); 4 user stories (all Approved); 13 requirements (all Approved); gap analysis clean
@@ -39,7 +39,7 @@ Pure Python core with optional LLM semantic profiling, VAD emotion tracking, sem
 - **Architecture**: 5-layer pipeline stable; semantic gating + VAD congruence in place
 - **API**: 15 endpoints (v1); Base tier production-ready, Pro tier stable
 - **Testing**: Unit tests + E2E (CTG shadow mode); eval corpus operational
-- **Infrastructure**: Fly.io deployment; Gemini reasoning optional
+- **Infrastructure**: Railway deployment (single-service, backend + frontend static build in one Dockerfile) per DEC-railway-deployment; Gemini reasoning optional
 - **Known gaps**: Example coverage incomplete, semantic affinity sparse, negative example enrichment WIP
 
 ---
@@ -251,6 +251,7 @@ Recorded decisions live in `decisions/`. See `decisions/_template.md` for format
 | `DEC-semantic-guided-multi-perspective-architecture.md` | Multi-perspective narrative architecture |
 | `DEC-context-uncertainty-proportional-variance.md` | Narrative count scales with context uncertainty |
 | `DEC-v1-backward-compatibility.md` | v1 API backward compatibility policy |
+| `DEC-railway-deployment.md` | Railway as deployment platform, single-service strategy |
 
 ---
 
