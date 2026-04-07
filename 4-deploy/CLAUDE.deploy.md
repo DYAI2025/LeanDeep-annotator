@@ -5,7 +5,7 @@ Phase-specific instructions for the **Deploy** phase. Extends [../CLAUDE.md](../
 This phase ships and operates the system. Infrastructure as code, deployment procedures, runbooks, monitoring.
 
 For LeanDeep, deployment includes:
-- Fly.io infrastructure (app, Redis, environment variables)
+- **Railway infrastructure** (single service, multi-stage Dockerfile, environment variables) per DEC-railway-deployment
 - API versioning and backward compatibility
 - Monitoring and alerts (error rates, latency, marker coverage)
 - Rollback procedures
@@ -16,7 +16,8 @@ For LeanDeep, deployment includes:
 | Artifact | Location | Purpose |
 |----------|----------|---------|
 | Runbooks | [`runbooks/`](runbooks/) | Step-by-step incident response, maintenance, operational procedures |
-| Deployment Scripts | `../fly.toml`, `../Dockerfile` | Infrastructure as code, container configuration |
+| Deployment Scripts | `../railway.toml`, `../Dockerfile` | Infrastructure as code, container configuration |
+| Legacy (deprecated) | `../fly.toml` | Kept for historical reference only (see DEC-railway-deployment) |
 | Deployment Log | (In this directory, as needed) | Record of deployments, changes, rollbacks |
 
 ---
@@ -33,34 +34,41 @@ For LeanDeep, deployment includes:
 - [ ] Rollback plan documented
 - [ ] Monitoring and alerts configured
 
-### Deployment to Fly.io
+### Deployment to Railway
 
 ```bash
-# 1. Build and test locally
+# 1. Build and test locally (replicates Railway's Docker build)
 docker build -t leandeep:latest .
+docker run --rm -p 8420:8420 leandeep:latest
+curl http://localhost:8420/v1/health
+
 python3 -m pytest tests/ -x -q
 
 # 2. Run eval suite
 python3 tools/eval_corpus.py
 python3 tools/eval_dynamics.py
 
-# 3. Deploy
-flyctl deploy
+# 3. Deploy (after linking project once with `railway link`)
+railway up
 
 # 4. Verify deployment
-curl https://<app-name>.fly.dev/v1/health
-# Check logs: flyctl logs
+curl https://<service>.up.railway.app/v1/health
+railway logs
 ```
 
 ### Environment Variables
 
-Set on Fly.io via `flyctl secrets`:
+Set on Railway via CLI or dashboard. All `LEANDEEP_*` vars listed in root `CLAUDE.md` plus:
 
 ```bash
-flyctl secrets set LEANDEEP_GOOGLE_API_KEY=xxx
-flyctl secrets set LEANDEEP_SEMANTIC_PROVIDER=gemini
-flyctl secrets set LEANDEEP_CORS_ORIGINS=production-domain.com
+railway variables set LEANDEEP_GOOGLE_API_KEY=xxx
+railway variables set LEANDEEP_SEMANTIC_PROVIDER=gemini
+railway variables set LEANDEEP_CORS_ORIGINS=production-domain.com
+railway variables set LEANDEEP_REQUIRE_AUTH=true
+railway variables set LEANDEEP_SEMANTIC_MODEL=gemini-1.5-flash
 ```
+
+Frontend note: Vite env vars (prefixed `VITE_*`) are baked in at build time, so changing them requires a redeploy. Current frontend uses no runtime env vars.
 
 See [../CLAUDE.md](../CLAUDE.md) for all environment variables.
 
@@ -84,7 +92,7 @@ Runbooks are procedural documents for common operational tasks.
 
 1. **Verify the problem**
    - Check: [indicator or metric]
-   - Command: `flyctl logs | grep error`
+   - Command: `railway logs | grep error`
    - Expected: [what should be true if problem exists]
 
 2. **Isolate the cause**
@@ -93,7 +101,7 @@ Runbooks are procedural documents for common operational tasks.
 
 3. **Mitigate**
    - Action: [immediate fix or workaround]
-   - Command: `flyctl deploy`
+   - Command: `railway up`
    - Verify: [how to confirm fix worked]
 
 4. **Document and communicate**
@@ -108,7 +116,7 @@ Runbooks are procedural documents for common operational tasks.
 
 If mitigation made things worse:
 
-1. Revert to previous version: `flyctl releases --image [previous-image]`
+1. Revert to previous version: `railway rollback` (or use dashboard → Deployments → Redeploy a prior build)
 2. Verify: curl health check
 3. Assess damage
 ```
@@ -140,10 +148,10 @@ If mitigation made things worse:
 
 ### Monitoring Implementation
 
-- **Logs**: Structured JSON via FastAPI middleware
-- **Metrics**: Prometheus-compatible endpoint (if applicable)
-- **Alerts**: Fly.io monitoring + Datadog/NewRelic integration (if configured)
-- **Health check**: `GET /v1/health` should return `{"status": "ok"}` with marker count
+- **Logs**: Structured JSON via FastAPI middleware; view via `railway logs` or dashboard
+- **Metrics**: Prometheus-compatible endpoint (if applicable); Railway shows CPU/memory/network per service
+- **Alerts**: Railway webhook integrations (Slack/Discord/email) + optional Datadog/NewRelic
+- **Health check**: `GET /v1/health` — Railway hits this per `railway.toml`, auto-restarts on failure (3 retries)
 
 ---
 
@@ -184,26 +192,36 @@ If mitigation made things worse:
 
 ## Infrastructure as Code
 
-### Fly.io Configuration (`../fly.toml`)
+### Railway Configuration (`../railway.toml`)
 
-See existing `fly.toml` for:
-- App name, region, scale settings
-- Build configuration (Dockerfile)
-- Environment variables (secrets vs config)
-- Health check configuration
-- Volume mounts (if any)
+See existing `railway.toml` for:
+- Build: `DOCKERFILE` builder, path `Dockerfile`
+- Deploy: healthcheck `/v1/health` (timeout 10s), restart `ON_FAILURE` (max 3)
+- Resources and scale settings configured via Railway dashboard
+- Environment variables set via `railway variables set ...` (not in the TOML)
 
-### Docker Configuration (`../Dockerfile`)
+### Docker Configuration (`../Dockerfile`) — multi-stage per DEC-railway-deployment
 
-- Python 3.11+ base image
-- Dependency installation from `requirements.txt`
-- Source code copy
-- Entrypoint: `uvicorn api.main:app --host 0.0.0.0 --port 8080`
+Stage 1 — **Frontend build**:
+- `node:20-alpine` base
+- `npm ci` in `3-code/frontend/` + `npm run build` → produces `3-code/frontend/dist/`
 
-Ensure:
+Stage 2 — **Python runtime**:
+- `python:3.12-slim` base
+- Install `requirements.txt`
+- Copy `api/`, `build/markers_normalized/`, `mcp_server.py`
+- Copy frontend build output from stage 1 to `/app/frontend_dist/`
+- `ENV PORT=8420`, `EXPOSE ${PORT}`
+- Entrypoint: `uvicorn api.main:app --host 0.0.0.0 --port ${PORT}`
+
+Requirements:
 - Non-root user for security
-- Health check in `HEALTHCHECK` instruction
-- Optimized layer caching
+- Optimized layer caching (dependency layers before source copy)
+- Frontend served as static files from FastAPI at `/` (not `/playground`)
+
+### Legacy (`../fly.toml`) — deprecated
+
+Kept as historical reference only. Do **not** use for deployment. See DEC-railway-deployment for rationale.
 
 ---
 

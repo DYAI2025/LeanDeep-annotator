@@ -614,6 +614,167 @@ async def generate_narratives(
 
 ---
 
+## PHASE 3e: DEPLOY PREP — RAILWAY
+
+**Goal**: Produce a deployable single-service Railway image (backend + frontend) per DEC-railway-deployment. Tasks are pre-deploy infra — once they're done, production deploy happens from Phase 4.
+
+### TASK-deploy-dockerfile-multistage
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (half day)  
+**Owner**: Backend + DevOps
+
+#### Acceptance Criteria
+
+- [ ] Multi-stage `Dockerfile` at repo root:
+  - [ ] Stage 1: `node:20-alpine`, runs `npm ci && npm run build` in `3-code/frontend/`
+  - [ ] Stage 2: `python:3.12-slim`, installs `requirements.txt`, copies `api/`, `build/markers_normalized/`, `mcp_server.py`, and frontend `dist/` from stage 1
+- [ ] Layer caching optimized (deps before source)
+- [ ] Non-root user for runtime stage
+- [ ] `HEALTHCHECK` instruction pointing at `/v1/health`
+- [ ] Image builds cleanly: `docker build -t leandeep:test .` exits 0
+- [ ] Container runs: `docker run -p 8420:8420 leandeep:test` and `curl localhost:8420/v1/health` returns 200
+
+#### Dependencies
+
+- None (but blocks all downstream deploy tasks)
+
+**Notes**: Per DEC-railway-deployment. Existing Dockerfile is single-stage and doesn't build the frontend — this task replaces it.
+
+---
+
+### TASK-deploy-static-serving
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (half day)  
+**Owner**: Backend
+
+#### Acceptance Criteria
+
+- [ ] `api/main.py` serves frontend `dist/` as static files at `/` (NOT at `/playground`)
+- [ ] SPA fallback: unknown routes (`/enrichment`, `/analysis`, etc.) return `index.html` so client-side routing works
+- [ ] Existing API routes `/v1/*` and existing `/playground` route still work (no regression)
+- [ ] Static files only served when `frontend_dist/` exists (dev mode: graceful skip)
+- [ ] Test: `tests/test_api_static_serving.py` — GET `/` returns HTML with `<title>LeanDeep</title>`, GET `/nonexistent-route` returns same HTML (SPA fallback)
+- [ ] Test: GET `/v1/health` still returns JSON (API routes take precedence)
+
+#### Dependencies
+
+- TASK-deploy-dockerfile-multistage (needs the dist/ location convention)
+
+**Notes**: Use `StaticFiles(directory="frontend_dist", html=True)` or a custom catch-all route. FastAPI already has static file handlers for the `/playground` UI — extend the pattern.
+
+---
+
+### TASK-deploy-railway-config
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (quarter day)  
+**Owner**: DevOps
+
+#### Acceptance Criteria
+
+- [ ] `railway.toml` finalized with:
+  - [ ] `[build]` section: Dockerfile builder, correct path
+  - [ ] `[deploy]` section: healthcheckPath `/v1/health`, healthcheckTimeout, restart policy
+  - [ ] Numbered replica count = 1 (hobby tier)
+- [ ] `fly.toml` retained with deprecation comment at the top pointing to DEC-railway-deployment
+- [ ] README or deploy doc snippet explaining `railway link` + `railway up` workflow
+
+#### Dependencies
+
+- TASK-deploy-dockerfile-multistage
+
+**Notes**: Existing `railway.toml` stub already has the right skeleton. Just needs verification and any missing fields.
+
+---
+
+### TASK-deploy-env-vars-setup
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (quarter day)  
+**Owner**: DevOps
+
+#### Acceptance Criteria
+
+- [ ] `.env.example` at repo root listing ALL required `LEANDEEP_*` env vars with placeholder values and inline comments explaining each
+- [ ] Secrets documented (API keys, provider credentials) with markers like `### SECRET ###`
+- [ ] `4-deploy/CLAUDE.deploy.md` Environment Variables section updated with full list (already partially done; verify)
+- [ ] Setup runbook: `4-deploy/runbooks/RB-initial-railway-setup.md` with step-by-step `railway variables set ...` commands
+- [ ] **`.env` is in `.gitignore`** (verify; add if missing)
+- [ ] **No secrets in git history** — verified by running a real secrets scanner. Use ONE of:
+  - `git secrets --scan` (after `brew install git-secrets`), OR
+  - `trufflehog git file://. --only-verified` (after `brew install trufflehog`), OR
+  - As a fallback: `git grep -E -i "(api[_-]?key|secret|token|password|bearer)\s*[:=]\s*['\"]?[A-Za-z0-9_+/=-]{20,}"` and manually triage hits
+  - Note: `git grep` does NOT search `.env` files when they are gitignored, which is the intended state — secrets must never be committed in the first place. The scanner is a safety net, not the primary control.
+- [ ] Document the chosen scanner + command in `4-deploy/runbooks/RB-initial-railway-setup.md` so future audits use the same tool
+
+#### Dependencies
+
+- TASK-deploy-railway-config
+
+**Notes**: Does NOT actually set the vars on Railway — that's a manual operational step. This task just produces the list + instructions.
+
+---
+
+### TASK-deploy-smoke-tests
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (half day)  
+**Owner**: Backend
+
+#### Acceptance Criteria
+
+- [ ] `scripts/smoke_test.sh` that takes `BASE_URL` as env var and runs:
+  - [ ] GET `/v1/health` → 200, JSON contains `status: "ok"`
+  - [ ] GET `/v1/engine/config` → 200, `total_markers > 0`
+  - [ ] POST `/v1/analyze/conversation` with tiny sample → 200, response has `markers` key
+  - [ ] GET `/` → 200, HTML with frontend markup
+- [ ] Script exits non-zero on any failure
+- [ ] Can be run locally against Docker container OR against deployed Railway URL
+
+#### Dependencies
+
+- TASK-deploy-dockerfile-multistage
+- TASK-deploy-static-serving
+
+**Notes**: Lightweight shell script, not a pytest suite. Used as a post-deploy gate.
+
+---
+
+### TASK-deploy-runbook-initial
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (quarter day)  
+**Owner**: DevOps
+
+#### Acceptance Criteria
+
+- [ ] `4-deploy/runbooks/RB-standard-deploy.md` — steps from `git push` to verified deploy (railway up, smoke test, health check)
+- [ ] `4-deploy/runbooks/RB-rollback.md` — how to roll back via Railway dashboard + CLI, verification steps, communication template
+- [ ] Both follow the runbook template in `4-deploy/CLAUDE.deploy.md`
+
+#### Dependencies
+
+- TASK-deploy-railway-config
+- TASK-deploy-smoke-tests
+
+**Notes**: Last piece of deploy prep. After this, the project is ready for an actual production deploy (separate Phase 4 activity).
+
+---
+
 ## PHASE 3d: PRODUCTION READINESS – WEEK 7-8
 
 ### TASK-assumption-verification-gold-standard
@@ -688,6 +849,12 @@ async def generate_narratives(
 | candidate-review-ui | P2 | M | enrichment-api | Frontend | Todo |
 | performance-optimization | P2 | M | all | Backend+Frontend | Todo |
 | accessibility-audit | P2 | S | frontend subtasks + native-ui | Frontend | Todo |
+| deploy-dockerfile-multistage | P2/Deploy | S | None | Backend+DevOps | Todo |
+| deploy-static-serving | P2/Deploy | S | dockerfile-multistage | Backend | Todo |
+| deploy-railway-config | P2/Deploy | S | dockerfile-multistage | DevOps | Todo |
+| deploy-env-vars-setup | P2/Deploy | S | railway-config | DevOps | Todo |
+| deploy-smoke-tests | P2/Deploy | S | static-serving | Backend | Todo |
+| deploy-runbook-initial | P2/Deploy | S | smoke-tests, railway-config | DevOps | Todo |
 | assumption-verification-gold-standard | Parallel | M | P0 | Research | Todo |
 | documentation-api-sdks | P2 | M | api-endpoints | Tech Writer | Todo |
 
