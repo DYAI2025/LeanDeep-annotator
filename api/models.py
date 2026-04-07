@@ -135,10 +135,10 @@ class ConversationMarker(BaseModel):
     layer: Layer
     confidence: float
     description: str = ""
-    message_indices: list[int] = []
+    message_indices: list[int] = Field(default_factory=list)
     family: str | None = None
     multiplier: float | None = None
-    matches: list[PatternMatch] = []
+    matches: list[PatternMatch] = Field(default_factory=list)
     frame: dict[str, Any] | None = None
     # v6.0 resonance weighting fields (additive, per DEC-v1-backward-compatibility)
     resonance_score: float | None = None
@@ -164,17 +164,17 @@ class TopologyConstraint(BaseModel):
     severity: str
     status: str
     score: float
-    message_indices: list[int] = []
-    evidence: dict[str, Any] = {}
+    message_indices: list[int] = Field(default_factory=list)
+    evidence: dict[str, Any] = Field(default_factory=dict)
     notes: str = ""
 
 class TopologyReport(BaseModel):
     version: str
     mode: str = "shadow"
     health: TopologyHealth
-    constraints: list[TopologyConstraint] = []
-    summary: dict[str, Any] = {}
-    gates: dict[str, Any] = {}
+    constraints: list[TopologyConstraint] = Field(default_factory=list)
+    summary: dict[str, Any] = Field(default_factory=dict)
+    gates: dict[str, Any] = Field(default_factory=dict)
 
 
 class ReasoningReport(BaseModel):
@@ -182,7 +182,7 @@ class ReasoningReport(BaseModel):
     narrative: str
     is_formal_technical: bool
     confidence_score: float
-    evidence_marker_ids: list[str] = []
+    evidence_marker_ids: list[str] = Field(default_factory=list)
 
 
 class WeakCluster(BaseModel):
@@ -197,7 +197,7 @@ class WeakCluster(BaseModel):
 class SemanticFrame(BaseModel):
     """Dialogue-level semantic context for resonance weighting and narratives."""
     tone: str = ""
-    themes: list[str] = []
+    themes: list[str] = Field(default_factory=list)
     relational_dynamics: str = ""
     intent: str = ""
     emotional_tenor: float = Field(default=0.0, ge=-1.0, le=1.0)
@@ -208,8 +208,8 @@ class SemanticFrame(BaseModel):
 class ConversationResponse(BaseModel):
     frame: SemanticFrame | None = None
     markers: list[ConversationMarker]
-    weak_clusters: list[WeakCluster] = []
-    temporal_patterns: list[TemporalPattern] = []
+    weak_clusters: list[WeakCluster] = Field(default_factory=list)
+    temporal_patterns: list[TemporalPattern] = Field(default_factory=list)
     topology: TopologyReport | None = None
     reasoning: ReasoningReport | None = None
     meta: AnalyzeMeta
