@@ -146,7 +146,7 @@ class WeightedMarker:
     layer: str
     confidence: float           # original confidence
     resonance_score: float      # frame alignment (0.0-1.0)
-    adjusted_confidence: float  # confidence * resonance_score
+    adjusted_confidence: float | None  # confidence * resonance_score
     tier: str                   # "STRONG" | "WEAK" | "DISCARDED"
     description: str = ""
     family: str | None = None
@@ -246,6 +246,9 @@ async def cluster_weak_markers(
         return []
 
     if not settings.google_api_key:
+        return []
+    if not settings.reasoning_model:
+        logger.warning("reasoning_model not configured. Skipping weak marker clustering.")
         return []
 
     if not settings.reasoning_model:
