@@ -139,7 +139,6 @@ def extract_passage_hits(
     return hits
 
 
-
 def _resolve_match_message_index(wm: WeightedMarker, match: Any, match_i: int) -> int | None:
     """Resolve the owning message index for a single match.
 
