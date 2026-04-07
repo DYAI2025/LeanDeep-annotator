@@ -251,9 +251,11 @@ async def cluster_weak_markers(
         logger.warning("reasoning_model not configured. Skipping weak marker clustering.")
         return []
 
+    if not settings.reasoning_model:
+        return []
+
     marker_descriptions = "\n".join(
-        f"- {wm.marker_id}: {wm.description} "
-        f"(confidence: {(wm.adjusted_confidence if wm.adjusted_confidence is not None else wm.confidence):.2f})"
+        f"- {wm.marker_id}: {wm.description} (confidence: {(wm.adjusted_confidence if wm.adjusted_confidence is not None else wm.confidence):.2f})"
         for wm in weak_markers
     )
 
@@ -302,7 +304,8 @@ Return ONLY the JSON object."""
 async def _call_clustering_llm(prompt: str) -> str:
     """Call the LLM for clustering and return raw JSON response."""
     if not settings.reasoning_model:
-        raise ValueError("reasoning_model is not configured")
+        raise ValueError("settings.reasoning_model must be configured for weak-marker clustering")
+
     import google.generativeai as genai
     genai.configure(api_key=settings.google_api_key)
     model = genai.GenerativeModel(settings.reasoning_model)

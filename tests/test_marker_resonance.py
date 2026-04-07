@@ -330,7 +330,7 @@ class TestWeakMarkerClustering:
         ]
         with patch("api.resonance.settings") as mock_settings:
             mock_settings.google_api_key = "test-key"
-            mock_settings.reasoning_model = ""
+            mock_settings.reasoning_model = None
             clusters = await cluster_weak_markers(weak)
         assert clusters == []
 
@@ -362,6 +362,7 @@ class TestWeakMarkerClustering:
         with patch("api.resonance._call_clustering_llm", new=AsyncMock(return_value=llm_response)), \
              patch("api.resonance.settings") as mock_settings:
             mock_settings.google_api_key = "test-key"
+            mock_settings.reasoning_model = "gemini-test"
             clusters = await cluster_weak_markers(weak)
 
         assert len(clusters) == 1
@@ -395,41 +396,39 @@ class TestWeakMarkerClustering:
         with patch("api.resonance._call_clustering_llm", new=AsyncMock(return_value=llm_response)), \
              patch("api.resonance.settings") as mock_settings:
             mock_settings.google_api_key = "test-key"
+            mock_settings.reasoning_model = "gemini-test"
             clusters = await cluster_weak_markers(weak)
 
         assert clusters == []
 
     @pytest.mark.asyncio
-    async def test_cluster_uses_confidence_fallback_when_adjusted_confidence_missing(self):
-        """Formatting/averaging should work when adjusted_confidence is None."""
+    async def test_cluster_falls_back_to_confidence_when_adjusted_confidence_none(self):
+        """If adjusted_confidence is None, fallback to confidence for prompt/avg."""
         weak = [
             WeightedMarker(
                 marker_id="ATO_A", layer="ATO", confidence=0.4,
-                resonance_score=0.5, adjusted_confidence=None, tier="WEAK",
+                resonance_score=0.6, adjusted_confidence=None, tier="WEAK",
                 description="marker a",
             ),
             WeightedMarker(
-                marker_id="ATO_B", layer="ATO", confidence=0.3,
-                resonance_score=0.5, adjusted_confidence=0.15, tier="WEAK",
+                marker_id="ATO_B", layer="ATO", confidence=0.2,
+                resonance_score=0.6, adjusted_confidence=0.3, tier="WEAK",
                 description="marker b",
             ),
         ]
-
         llm_response = json.dumps({
             "coherent": True,
             "coherence_score": 0.8,
-            "cluster_label": "Fallback confidence test",
-            "reasoning": "Should not fail when one adjusted_confidence is null",
+            "cluster_label": "Fallback confidence cluster",
         })
-
         with patch("api.resonance._call_clustering_llm", new=AsyncMock(return_value=llm_response)), \
              patch("api.resonance.settings") as mock_settings:
             mock_settings.google_api_key = "test-key"
-            mock_settings.reasoning_model = "test-model"
+            mock_settings.reasoning_model = "gemini-test"
             clusters = await cluster_weak_markers(weak)
 
         assert len(clusters) == 1
-        assert clusters[0].avg_confidence == pytest.approx((0.4 + 0.15) / 2, rel=1e-3)
+        assert clusters[0].avg_confidence == 0.35
 
 
 # ============================================================
