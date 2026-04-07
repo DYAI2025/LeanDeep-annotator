@@ -90,8 +90,10 @@ def extract_passage_hits(
         dialogue_text: fallback text for hashing (used only for source_dialogue_hash
                        and when `messages` is None)
         messages: per-message list of dicts with "text" key. When provided,
-                  `match.start`/`match.end` are resolved against the owning
-                  message's text (via `wm.message_indices[0]`). This is the
+                  `match.start`/`match.end` are resolved against each match's
+                  owning message text. Attribution is resolved per match via
+                  `match.message_index`, aligned `wm.message_indices`, or a
+                  single shared `wm.message_indices[0]` fallback. This is the
                   correct coordinate space — `Match.start`/`Match.end` are
                   PER-MESSAGE offsets, not whole-dialogue offsets.
                   If None, we fall back to slicing `dialogue_text` directly,
@@ -105,16 +107,16 @@ def extract_passage_hits(
         if wm.tier == "STRONG":
             continue
 
-        msg_idx = wm.message_indices[0] if wm.message_indices else None
+        for match_i, match in enumerate(wm.matches):
+            msg_idx = _resolve_match_message_index(wm, match, match_i)
 
-        # Resolve the text that `match.start`/`match.end` index into
-        if messages is not None and msg_idx is not None and 0 <= msg_idx < len(messages):
-            owning_text = messages[msg_idx].get("text", "")
-        else:
-            # Fallback: single-message case, or caller didn't pass messages
-            owning_text = dialogue_text
+            # Resolve the text that `match.start`/`match.end` index into
+            if messages is not None and msg_idx is not None and 0 <= msg_idx < len(messages):
+                owning_text = messages[msg_idx].get("text", "")
+            else:
+                # Fallback: single-message case, or caller didn't pass messages
+                owning_text = dialogue_text
 
-        for match in wm.matches:
             text = getattr(match, "matched_text", None) or ""
             if not text:
                 continue
@@ -136,6 +138,26 @@ def extract_passage_hits(
 
     return hits
 
+
+def _resolve_match_message_index(wm: WeightedMarker, match: Any, match_i: int) -> int | None:
+    """Resolve the owning message index for a single match.
+
+    Supports three representations:
+    1) `match.message_index` (if attached by upstream merge/dedup)
+    2) one-to-one `wm.message_indices` aligned with `wm.matches`
+    3) single-entry `wm.message_indices` applying to all matches
+    """
+    match_msg_idx = getattr(match, "message_index", None)
+    if isinstance(match_msg_idx, int):
+        return match_msg_idx
+
+    if len(wm.message_indices) == len(wm.matches):
+        return wm.message_indices[match_i]
+
+    if len(wm.message_indices) == 1:
+        return wm.message_indices[0]
+
+    return None
 
 def _extract_context(text: str, start: int, end: int, window: int = 80) -> str:
     """Return up to `window` chars of surrounding context."""
