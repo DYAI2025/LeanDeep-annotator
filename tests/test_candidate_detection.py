@@ -143,6 +143,35 @@ def test_extract_resolves_context_via_per_message_coordinates():
            "don't really know" not in hits_without[0].context
 
 
+
+def test_extract_resolves_context_per_match_when_marker_spans_messages():
+    """A merged marker can carry matches from different messages."""
+    messages = [
+        {"role": "A", "text": "I cannot keep doing this anymore."},
+        {"role": "B", "text": "Maybe we should pause and think."},
+    ]
+    full = "\n".join(m["text"] for m in messages)
+
+    weak = make_weighted(
+        "ATO_MERGED",
+        tier="WEAK",
+        matches=[
+            make_match("cannot", start=2, end=8),
+            make_match("Maybe", start=0, end=5),
+        ],
+        message_indices=[0, 1],
+    )
+
+    hits = extract_passage_hits([weak], full, messages=messages)
+    assert len(hits) == 2
+
+    assert "cannot keep" in hits[0].context
+    assert hits[0].message_index == 0
+
+    assert "Maybe we should" in hits[1].context
+    assert hits[1].message_index == 1
+
+
 def test_extract_handles_invalid_message_index_gracefully():
     """If message_indices points beyond the messages list, fall back safely."""
     messages = [{"role": "A", "text": "only one message"}]
