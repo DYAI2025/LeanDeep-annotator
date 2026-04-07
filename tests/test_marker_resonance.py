@@ -22,7 +22,7 @@ from api.resonance import (
     WEAK_THRESHOLD,
     WeakMarkerCluster,
     WeightedMarker,
-    _extract_semantic_tags,
+    extract_semantic_tags,
     _tokenize_frame_dimension,
     apply_resonance_weighting,
     cluster_weak_markers,
@@ -242,21 +242,21 @@ class TestSemanticTagExtraction:
     def test_prefers_resonance_tags(self):
         """resonance_tags should be used when available."""
         md = MockMarkerDef(resonance_tags=["doubt", "fear"])
-        tags = _extract_semantic_tags(md)
+        tags = extract_semantic_tags(md)
         assert "doubt" in tags
         assert "fear" in tags
 
     def test_falls_back_to_frame_signal(self):
         """When no resonance_tags, use frame.signal."""
         md = MockMarkerDef(frame={"signal": ["uncertainty"], "concept": "Hedging"})
-        tags = _extract_semantic_tags(md)
+        tags = extract_semantic_tags(md)
         assert "uncertainty" in tags
         assert "hedging" in tags
 
     def test_falls_back_to_description(self):
         """When no resonance_tags or frame, use description."""
         md = MockMarkerDef(description="blame shifting language")
-        tags = _extract_semantic_tags(md)
+        tags = extract_semantic_tags(md)
         assert "blame" in tags
         assert "shifting" in tags
         assert "language" in tags

@@ -102,7 +102,7 @@ class DetectedMarker(BaseModel):
 
 class AnalyzeMeta(BaseModel):
     processing_ms: float
-    version: str = "5.1-LD5"
+    version: str = "6.0"
     text_length: int
     markers_detected: int
     layers_scanned: list[str]
@@ -144,6 +144,7 @@ class ConversationMarker(BaseModel):
     resonance_score: float | None = None
     adjusted_confidence: float | None = None
     tier: str | None = None  # "STRONG" | "WEAK" | "DISCARDED"
+    meaning_in_context: str | None = None
 
 
 class TemporalPattern(BaseModel):
@@ -194,32 +195,50 @@ class WeakCluster(BaseModel):
     marker_count: int
 
 
-class SemanticFrame(BaseModel):
-    """Dialogue-level semantic context for resonance weighting and narratives."""
-    tone: str = ""
-    themes: list[str] = Field(default_factory=list)
-    relational_dynamics: str = ""
-    intent: str = ""
-    emotional_tenor: float = Field(default=0.0, ge=-1.0, le=1.0)
-    context_validity: float = Field(default=0.5, ge=0.0, le=1.0)
-    offline_context_risk: float = Field(default=0.5, ge=0.0, le=1.0)
+class SupportingMarkerRef(BaseModel):
+    """Reference to a marker supporting a narrative interpretation."""
+    id: str
+    adjusted_confidence: float | None = None
+    span: tuple[int, int] | None = None
+    meaning_in_context: str = ""
 
 
-class ConversationResponse(BaseModel):
-    frame: SemanticFrame | None = None
-    markers: list[ConversationMarker]
-    weak_clusters: list[WeakCluster] = Field(default_factory=list)
-    temporal_patterns: list[TemporalPattern] = Field(default_factory=list)
-    topology: TopologyReport | None = None
-    reasoning: ReasoningReport | None = None
-    meta: AnalyzeMeta
-
+class MultiNarrative(BaseModel):
+    """A single narrative interpretation (one of 3-4 perspectives)."""
+    narrative_id: int
+    type: str  # "Primary" | "Contrarian" | "Novel" | "High-Uncertainty" | "Weak Cluster"
+    text: str
+    confidence: float = Field(ge=0.0, le=1.0)
+    supporting_markers: list[SupportingMarkerRef] = []
+    uncertainty_warning: str | None = None
+    score: float = 0.0
 
 
 class VADPoint(BaseModel):
     valence: float
     arousal: float
     dominance: float
+
+
+# Note: SemanticFrame is defined in api/semantic_frame.py and imported at top of this file.
+# Do NOT redefine it here — the import from semantic_frame is the canonical definition.
+
+
+class ConversationResponse(BaseModel):
+    frame: SemanticFrame | None = None
+    markers: list[ConversationMarker]
+    narratives: list[MultiNarrative] = []
+    weak_clusters: list[WeakCluster] = []
+    semantic_profile: list[SemanticProfileResponse] = []
+    vad_trajectory: list[VADPoint] = []
+    temporal_patterns: list[TemporalPattern] = []
+    topology: TopologyReport | None = None
+    reasoning: ReasoningReport | None = None
+    degraded: bool = False
+    provider_used: str | None = None
+    fallback_reason: str | None = None
+    duration_ms: float | None = None
+    meta: AnalyzeMeta
 
 
 class UEDVariability(BaseModel):
@@ -344,6 +363,7 @@ class MarkerDetail(BaseModel):
     scoring: dict[str, Any] | None = None
     activation: dict[str, Any] | None = None
     window: dict[str, Any] | None = None
+    resonance_tags: list[str] = []
 
 
 class MarkerListResponse(BaseModel):
@@ -365,7 +385,7 @@ class EngineConfig(BaseModel):
 
 class HealthResponse(BaseModel):
     status: str = "ok"
-    version: str = "5.1-LD5"
+    version: str = "6.0"
     markers_loaded: int
     uptime_seconds: float
 

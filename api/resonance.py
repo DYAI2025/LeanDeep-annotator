@@ -35,7 +35,7 @@ CLUSTER_COHERENCE_THRESHOLD = 0.7
 # Resonance scoring
 # ---------------------------------------------------------------------------
 
-def _extract_semantic_tags(marker_def: Any) -> list[str]:
+def extract_semantic_tags(marker_def: Any) -> list[str]:
     """Extract semantic tags from a marker definition.
 
     Uses `resonance_tags` if available, otherwise derives tags from
@@ -191,7 +191,7 @@ def apply_resonance_weighting(
 
     for det in detections:
         marker_def = marker_defs.get(det.marker_id)
-        tags = _extract_semantic_tags(marker_def) if marker_def else []
+        tags = extract_semantic_tags(marker_def) if marker_def else []
         resonance = score_resonance(tags, frame)
         adjusted = det.confidence * resonance
 
