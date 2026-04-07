@@ -224,6 +224,12 @@ class VADPoint(BaseModel):
 # Do NOT redefine it here — the import from semantic_frame is the canonical definition.
 
 
+class VADPoint(BaseModel):
+    valence: float
+    arousal: float
+    dominance: float
+
+
 class ConversationResponse(BaseModel):
     frame: SemanticFrame | None = None
     markers: list[ConversationMarker]
