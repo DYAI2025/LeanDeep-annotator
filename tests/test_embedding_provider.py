@@ -37,3 +37,17 @@ def test_embedding_provider_unavailable_without_prototypes():
     from api.providers.embedding import EmbeddingProvider
     provider = EmbeddingProvider(prototypes_path="/nonexistent/path.npz")
     assert provider.is_available() is False
+
+
+def test_deterministic_hash_encoder_uses_stable_token_hashing():
+    from api.providers.embedding import _DeterministicHashEncoder
+
+    encoder = _DeterministicHashEncoder(dim=17)
+
+    assert encoder._bucket_for_token("alpha") == 9
+    assert encoder._bucket_for_token("beta") == 14
+    assert encoder._bucket_for_token("gamma") == 16
+
+    emb_a = encoder.encode(["alpha beta gamma"], normalize_embeddings=False)
+    emb_b = encoder.encode(["alpha beta gamma"], normalize_embeddings=False)
+    np.testing.assert_array_equal(emb_a, emb_b)
