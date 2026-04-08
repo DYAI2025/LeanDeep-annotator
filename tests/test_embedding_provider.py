@@ -37,3 +37,16 @@ def test_embedding_provider_unavailable_without_prototypes():
     from api.providers.embedding import EmbeddingProvider
     provider = EmbeddingProvider(prototypes_path="/nonexistent/path.npz")
     assert provider.is_available() is False
+
+
+def test_deterministic_hash_encoder_is_stable():
+    from api.providers.embedding import _DeterministicHashEncoder
+
+    encoder = _DeterministicHashEncoder(dim=32)
+    texts = ["repeatable token mapping", "repeatable token mapping"]
+
+    encoded_first = encoder.encode(texts, normalize_embeddings=True)
+    encoded_second = encoder.encode(texts, normalize_embeddings=True)
+
+    np.testing.assert_allclose(encoded_first, encoded_second)
+    np.testing.assert_allclose(encoded_first[0], encoded_first[1])
