@@ -1,0 +1,83 @@
+{
+  "id": "GS-AMOD-011",
+  "source": "amod",
+  "language": "en",
+  "theme": "beziehung",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I'm a young adult woman, and I have trouble finding my true identity being at home. This all started when I had a boyfriend about 10 months ago. My boyfriend and I were dating for a couple months and decided to get in to sexual acts. At the time, I was pretty religious, but I let this happen. I don't know why. I felt kind of guilty but mostly because I know my parents wouldn't like it. My parents are very religious—they're Christians. We did things every time he'd come over to my house. We didn't have anything to do at our house, so we would get tempted to do things when we'd watch movies by ourselves.\n   One day, my parents found out I did this stuff with him because my dad read my messages. As soon as my dad found this out, he told my mom. They were both aggravated. They told me he was just a boy that wanted to get inside my pants. They said he wanted me for sex and he's not a Christian. I took their advice and broke up with him. Once we broke up for about a month, I decided to get back together with him a little after school started. My parents found out eventually, and I decided to not listen this time. I would constantly talk to my boyfriend about what they say about him: how's he's not the right one for me, and God totally forbids him. I would kind of try to break up with him, and then eventually I would just never listen to my parents. They're always yelling at me about how I shouldn't date this boy. I felt too old to listen to them. Now I'm kind of just stuck. Is the real me religious? Have I been brainwashed by him? I don't talk to my parents anymore about him, and my parents think I'm deceiving because of it. They threatened me that if I'm still with him, I can't do track and they won't support me. They've also called me slut, and now they called me basically a devil worshipper. They say my boyfriend is taking me away from my parents. I'm actually very happy with him. They also say I'm living a separate life at home than I am at school. They say they want what's best for me and love me because they adopted me.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "What a tough situation you must be in, feeling torn between your parents and someone who is very special to you. I would say the first thing you want to do is (if you haven't already), have a calm reciprocal conversation with your parents, telling them how you feel and letting them know what you need from them. If communication attempts are unsucessful then you will need to make a decision with how you would like to move forward. You, unfortunately, will not be able to change your parent's feelings or opinions but you can agree to disagree on certain matters by keeping them separate from the relationship you have with your parents. It always helps to try and see things from another angle. You might want to, for example, try and understand your parent's perspectives and let them know you understand that they are upset. Validating other's feelings can be very helpful with communicating effectively. Are you living with your parents and do they support you? If so, are you willing to give that up should you decide to not follow their rules? Know that there is nothing wrong with being happy with someone or loving somebody so deeply. Your feelings and actions certainly do not make you brainwashed or a devil worshipper. Not everyone will always approve of the choices we make and sometimes we need to be okay with that. Best of luck to you.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 3407,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "6b577d7d2d6a7963"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "conflicted",
+      "themes": [
+        "boyfriend"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "seeking_guidance",
+      "emotional_tenor": -0.3,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-beziehung-konflikt",
+        "ATO-bindung"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.3,
+        "arousal": 0.5,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.0,
+        "arousal": 0.3,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "beziehung",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

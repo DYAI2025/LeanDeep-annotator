@@ -1,0 +1,84 @@
+{
+  "id": "GS-AMOD-008",
+  "source": "amod",
+  "language": "en",
+  "theme": "angst",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I feel that I need to end my present relationship. He lives three hours away and likes the reassurance of having someone to talk to multiple times per day and seeing me once or twice a month.  I want someone who is more present and more of a life companion.\nLately, he has had a very busy work schedule and I have only seen him a few times in the last 6 weeks. I told him that I can't continue in this way because I constantly feel frustrated and angry and that he is not making the relationship enough of a priority. I also feel it is keeping me from possibly finding the relationship I want.\nWe have been together 7 years. The problem is that I panic and experience anxiety and depression thinking of him with someone else and then thinking I will never meet someone I like. We have gone through this cycle already 4-5 times and I feel it is unhealthy to stay in it, but my aversion to the anxiety and depression I experience upon separation always leads me to reconcile.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Sounds like your panic is less about loosing the relationship you are in (which by the way doesn't sound like it's meeting YOUR need for connection) and more about being alone. Being with him is serving you, even if the relationship is less than ideal, from being alone. Being alone can be scary. You'd have to face yourself. You'd have to learn to love and care for and cherish yourself. All important skills and tasks in maturing and growing up, but scary none the less. What if...What if you gave yourself permission to be in a relationship with YOU?",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1526,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "4b57cd13739591fd"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "anxious",
+      "themes": [
+        "anxiety",
+        "panic"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "help_seeking",
+      "emotional_tenor": -0.5,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-angst-signal",
+        "ATO-unsicherheit"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.5,
+        "arousal": 0.7,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.2,
+        "arousal": 0.5,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "angst",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

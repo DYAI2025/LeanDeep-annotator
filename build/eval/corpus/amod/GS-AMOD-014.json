@@ -1,0 +1,84 @@
+{
+  "id": "GS-AMOD-014",
+  "source": "amod",
+  "language": "en",
+  "theme": "familie",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "My boyfriend and I have been together for five years now. Throughout the entire first day that we met, he and I had the opportunity to interact quite a lot and instantly sparked a deep connection with one another. That same night, he and a friend stayed over at my house (without my mom's acknowledgment) and we kissed. The next two days were a repetition of the first day. On the third night, my mother finally caught us, and I was kicked out of my house. I left with him of course, and we went from meeting each other to being like a married couple. It was very hard for us. His stepdad also kicked him out of his home, and we were staying at cheap hotels and friend's houses with the little money we had. I quit my job and dropped out of school because it was hard to do anything without a stable home. There were times when we had nowhere else to go but sleep in the car outside a Walmart parking lot. Our honeymoon stage, as they call it, probably only lasted one month. After that, it was a downward spiral. We were constantly arguing about money, food, and our families. We kept having the famous \"you're doing it wrong—do it this way\" argument. After six months, we moved across the country only to live the same thing, and that's when the violence started. One afternoon, after a serious argument, he got into his truck and threatened to leave me. I was frightened that he would actually go through with his word, given that we had just moved to a place where we knew no one. He told me to let him leave or he would hit me. He had once promised he would never touch me, so I challenged him to do it. He slapped me, and ever since that time, when we have serious fights, he loses control and hurts me. I haven't had the courage to leave him, and there's really nothing stopping me now. I don't live with him, I don't depend on him, and we don't have children. We both haven't been able to let go of that deep connection that we still have and that has been damaged so badly. He always apologizes, and at the beginning, he was more willing to change. Now he just wants me to understand why he does it and how I don't ever make the effort to try to be okay. I've read enough about domestic violence to know that it's not my fault that he loses control, so that's not even an issue for me. I know he has to change that on his own. I just want to know if there's people who have gone through this and had the tables turned? Is there hope for a better future together?",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Hi Winters, I learned a long time ago that I can't ever predict who will change and who won't. I meet couples who seem to have all the ingredients but can't make it work, and others who have severe issues and they decide to make better decisions and things change. But in reading your story, the image of a slot machine came to mind. You're gambling your life away on the chance that this guy will change. Only you can decide how many years to give it. I see him giving you clear signs that he doesn't even believe in himself or want to change though. What are you waiting for?Although you say you know his behaviours aren't your fault, something tells me that you're hoping your love for him will turn the key that unlocks something and makes him want to change. It doesn't work that way. Just like the slot machine, you have no power to change him or make this work. You can only decide when you've paid too much. I bet there's someone out there who loves and misses you. He's not your only support.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 3472,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "99ac77b601f03fdf"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "strained",
+      "themes": [
+        "mother",
+        "child"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "seeking_guidance",
+      "emotional_tenor": -0.3,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-familie-konflikt",
+        "ATO-bindung"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.3,
+        "arousal": 0.4,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.0,
+        "arousal": 0.2,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "familie",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

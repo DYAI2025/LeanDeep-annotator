@@ -1,0 +1,83 @@
+{
+  "id": "GS-AMOD-018",
+  "source": "amod",
+  "language": "en",
+  "theme": "trauma",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I am a heterosexual male in my late 20s. I find myself wearing pantyhose, heels, skirts and other women's clothing in private. I am torn on how to feel about it. I enjoy it very much. I have had a pantyhose/stocking fascination and other kinky fetish interests since I was young. I have no history of sexual abuse growing up. I am currently single.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Let yourself enjoy crossdressing!What sounds in your way are whatever beliefs you gre up hearing, see and absorb currently.Concentrate on your own satisfaction and that you are doing this in a non-harming way.Maybe if you branch out your interest by finding other people who enjoy crossdressing as much as you do.With any interest or activity, social interaction supports it.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 723,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "f1856a9cfff0d862"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "distressed",
+      "themes": [
+        "abuse"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "disclosure",
+      "emotional_tenor": -0.8,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-trauma-signal",
+        "ATO-vermeidung"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.8,
+        "arousal": 0.6,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.5,
+        "arousal": 0.4,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "trauma",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "GS-AMOD-029",
+  "source": "amod",
+  "language": "en",
+  "theme": "sucht",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "My husband has had issues with alcohol addiction in the past (he'd never admit to this). A while back (3 years ago), I asked him to stop drinking so much, and he agreed. I caught him one night drinking behind my back. I confronted him and he lied, but I told him I knew he was lying because I counted the beers in the fridge and four of them were missing. He admitted and apologized and promised he wouldn't do it again. Lately, my husband has been drinking on and off, but I noticed it was every single night. I didn't like this. For our New Year’s resolution, we decided we were going to limit our alcohol consumption. He was on board—no more drinking every night.\r\nThe other night, I counted the beers in the fridge just to see if some were missing. It took a couple of days, but tonight, I discovered a few were missing along with a shot of vodka. He was passed out on the couch when I decided to wake him up and confront him (poor timing, but I couldn't wait). I asked him if he'd come to bed with me (when he drinks, he snores and I cannot sleep—it's a dead giveaway he's been drinking). He slurred a bit and said no. I asked if he had been drinking, but he snapped and said no. I went into our room to sleep, leaving him on the couch. \r\nI'm not sure if I'm overreacting or not. I just feel like I'm so honest with him about everything, and I expect the same honesty. He is a good husband in every other regard.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Hi Los Angeles,So your husband is giving you mixed messages. He says he's willing to cut back on the drinking, but he drinks and hides it. His behaviour is passive aggressive and immature, which puts you into this position of having to act like a disapproving parent. It sounds more like you're talking about an out-of-control teenager than your partner. Your husband's lying is sending a message. \"I get to make my own decisions and you can't stop me\" might be it. Underneath that, maybe it's \"I want to stop but I'm ashamed that I can't and I don't want you to see my failures\". Ultimately, as an adult, he gets to decide what he puts in his mouth and if you try to manage that by monitoring how many beers he has, you are pretty certain to get some fallout... pushback...backlash...  How does his drinking affect you? That's where your voice has power, rather than in counting his beers or setting him up to lie (when he's passed out, asking if he's been drinking seems confusing). You've mentioned snoring, which I guess is a legitimate complaint. If he's passing out, that's a legitimate complaint. When he drinks does he drive, act aggressively, or 'check out of' the relationship (avoid you)? All of these things are legitimate concerns, and I'd stick to talking about those rather than counting beers. My guess is he has few other ways to cope with stress, so he checks out with alcohol, and it also helps him avoid your relationship. But the problem is it makes it worse; the more he avoids you, then more you chase him with your questions.There's a conversation that would be helpful here.  It sounds like \"I've tried to support you in your drinking less, and it's not working. What are your goals for alcohol and how can I support you in that more effectively?\" I'd like to see you in a place where you're not micromanaging his drinking, but focusing on the things that affect you. What concrete supportive methods can you use with his agreement? Can we get the alcohol out of the house? Is he willing to seek treatment? Lay your expectations out really clearly. \"I won't count your beers, but I can't tolerate lying\". You have to decide what's more important; is it really the number of beers, or is it something else. What do you need to happen in order to want to remain in the marriage? What does he need? Does he let you know what isn't okay with him? He might have trouble saying these things. The drinking is only a part of the complex dynamic in your marriage. A qualified therapist can assist in pulling this apart, understanding it, and changing the way you relate to each other. ",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 4018,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "79fb842d522dd0d3"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "struggling",
+      "themes": [
+        "alcohol",
+        "addiction",
+        "drinking"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "disclosure",
+      "emotional_tenor": -0.4,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-sucht-signal",
+        "ATO-vermeidung"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.4,
+        "arousal": 0.5,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.1,
+        "arousal": 0.3,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "sucht",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

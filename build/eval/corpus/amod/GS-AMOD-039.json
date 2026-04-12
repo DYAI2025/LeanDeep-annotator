@@ -1,0 +1,83 @@
+{
+  "id": "GS-AMOD-039",
+  "source": "amod",
+  "language": "en",
+  "theme": "uebertragung",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I am an international student, and it is my first semester in graduate school in the United States. I faced a cultural shock, and I was so depressed when I arrived here. My counselor in the university was my savior. He helped me a great deal. Now I am going back to my country for a vacation. I was thinking to get him something special with my country's name on it, and I remembered that he likes wine. My country is known for that. Is it appropriate to give him wine as a gift after Christmas?",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "This is a great question. In general it is not appropriate for counselors to accept gifts from their clients. There are some exceptions to this general rule - including a recognition that there may be a valid cultural aspect to this type of gift giving.It might be best to simply offer your counselor a holiday card as an expression of your feelings. You could also talk to your counselor about the gift and ask if him it if would be appropriate.In the end, I know he would most appreciate just knowing how much the counseling meant to you.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1035,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "5e9cd83f6b2ee883"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "ambivalent",
+      "themes": [
+        "counselor"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "seeking_guidance",
+      "emotional_tenor": -0.3,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-uebertragung",
+        "ATO-therapeut-beziehung"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.3,
+        "arousal": 0.5,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.0,
+        "arousal": 0.3,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "uebertragung",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

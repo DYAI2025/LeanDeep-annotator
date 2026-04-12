@@ -1,0 +1,84 @@
+{
+  "id": "GS-AMOD-025",
+  "source": "amod",
+  "language": "en",
+  "theme": "trauer",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "My girlfriend's grandma passed away 5 months ago. They were very close. She took care of her till she died. Things kinda returned to normal few weeks later. Last month it feels like we hit a brick wall. Intimacy fell off. I asked what's up. She says she can't connect with anyone and that it's not me. She used to be very open and expressive. Now she gives short answers and has no interest in sex or any touching.  When we did have sex in the last month, something felt really off. Now I'm very insecure about us and have thoughts of her cheating. She says otherwise, but I don't know. It just feels like something is really off.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Grief has a huge impact on us and everyone's reaction is different. The one common reaction however is to shut down and distance ourselves. Her relationship with her grandmother was close, given she took care of her up until she passed. It sounds like she is working through a difficult loss and her ability to connect with you, or anyone else, is likely low right now. Trust what she is telling you and try to be there for her as she works through it. If she finds it too difficult to connect again, a good grief counselor can help her get back on track.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1185,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "8d8d0e42ebc329fa"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "sorrowful",
+      "themes": [
+        "died",
+        "passed away"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "disclosure",
+      "emotional_tenor": -0.7,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-trauer-signal",
+        "ATO-verlust"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.7,
+        "arousal": 0.2,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.4,
+        "arousal": 0.1,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "trauer",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

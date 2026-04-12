@@ -1,0 +1,84 @@
+{
+  "id": "GS-AMOD-031",
+  "source": "amod",
+  "language": "en",
+  "theme": "sucht",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "This is my recovery, and I don't feel that it is okay for them to ask this. They told me it is policy due to the fact that I may run into a peer there. I am a peer counselor in the small community that I grew up in. I am in recovery myself. I was asked to come work for this organization after I was two years sober (I was in treatment in this organization). I work with mental health peers and run life skill groups. I don't work with substance peers.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "You definitely want to make sure not to inadvertently create an inappropriate dual relationship with a client. In fact, it is not uncommon for state regulatory boards to determine that a clinician and client being in the same 12 step group is professional misconduct. You might want to consider attending a 12 step meeting that is located in a different community than the one you work in.  Another option would be to look for one-on-one or small group recovery support.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 922,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "fca3aea470b0bf40"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "struggling",
+      "themes": [
+        "sober",
+        "substance"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "disclosure",
+      "emotional_tenor": -0.4,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-sucht-signal",
+        "ATO-vermeidung"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.4,
+        "arousal": 0.5,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.1,
+        "arousal": 0.3,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "sucht",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

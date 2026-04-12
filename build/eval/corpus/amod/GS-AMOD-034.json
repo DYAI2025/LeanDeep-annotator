@@ -1,0 +1,84 @@
+{
+  "id": "GS-AMOD-034",
+  "source": "amod",
+  "language": "en",
+  "theme": "identitaet",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I feel like I was born in the wrong body I feel like I should be a girl not a boy\n Ever since I was young, I have wanted to be a girl. I felt like what I was wasn’t me. I want to know what I can do about it. My family is against transgender people and don't want anything to do with them. I want to be “me.” I feel as if I'll be happy then. I don't look in mirrors, and I don't like my reflection. Recently, I have been taking things to help even though they were not prescribed. I know I should have this handled by a professional.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Hi. Do you have any opportunity to work with a therapist?  It sounds like it might be really great to explore these feelings. If you aren't able to, there are many awesome gender work books available that you could use to explore your thoughts and feelings. Also - google \"ask a gender therapist\" - so many amazing video blogs to answer many questions!  Good luck!",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 896,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "8bc0cd4d119c73a5"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "searching",
+      "themes": [
+        "gender",
+        "transgender"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "help_seeking",
+      "emotional_tenor": -0.2,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-identitaet-suche",
+        "ATO-unsicherheit"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.2,
+        "arousal": 0.4,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.1,
+        "arousal": 0.2,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "identitaet",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "GS-AMOD-022",
+  "source": "amod",
+  "language": "en",
+  "theme": "wut",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I been having anger problems a lot lately. It only takes one word wrongly said to set me off. I use to not be like this until I got with my soon-to-be husband. I think his mood and rage/anger problems have rubbed off on me a lot. I don't get nearly as bad as he does, but I yell almost constantly and I can't seem to just stop. I have two young babies that have to hear this, and I don't want my girls growing up with a mommy like I have been lately. I just don't know how to get back to my old self.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "With me knowing that a healthy relationship usually includes respect, trust, appreciation, companionship, spiritual solidarity, domestic support, feeling of being cherished, and  sensuous affection, I am wondering if you are lacking in several if not all of these needs in your present relationship.  Before he becomes your husband, you should examine these areas and see if they are high in rating.  Otherwise, yes this relationship will affect your girls and you negatively.  I would suggest relationship counseling, specifically pre-marital.  Not be surprised if through the process you realize that this relationship is not the best choice for you and your children.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1170,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "94298b70202e9012"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "hostile",
+      "themes": [
+        "anger",
+        "rage"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "help_seeking",
+      "emotional_tenor": -0.5,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-wut-signal",
+        "ATO-aggression"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.5,
+        "arousal": 0.8,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.2,
+        "arousal": 0.6,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "wut",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "GS-AMOD-017",
+  "source": "amod",
+  "language": "en",
+  "theme": "trauma",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "There are issues from my past that have me very heavily burdened in my heart. I've been torn for so many years and I need help so I can move on with my life.\n   I experienced trauma when I was 8 years old and I did come out about it until I was 40.\n   Now I know this is what's holding me back on my happiness. I've met a very loving and caring man but because I'm holding on to these things from my past I’m pushing him away.\n   How can I get my life back?",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "You already are doing that! You are reaching out (virtually still counts!). You are accepting your past, you are not denying what happened to you, you are talking about the past. You are already doing a great job of starting this journey. You get your life back by doing things differently.I would think about how you would like to process your past. Do you want to talk to someone? Do you want to write about it? Do you want to pray about it? Do you want to read and research books about trauma? Take some time and think about what you want to do. Think about what would work for you and dive in. I am a Licensed Professional Counselor, so I am biased - but I really believe that counseling works. Having an objective, professional voice that can guide you on this process is so valuable. But please choose what makes you feel comfortable - not what everyone else says. I think you are very brave for reaching out and wanting to work on this. That takes a tremendous amount of courage and strength.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1456,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "1f28fd1a3dac5003"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "distressed",
+      "themes": [
+        "trauma"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "seeking_guidance",
+      "emotional_tenor": -0.8,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-trauma-signal",
+        "ATO-vermeidung"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.8,
+        "arousal": 0.6,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.5,
+        "arousal": 0.4,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "trauma",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

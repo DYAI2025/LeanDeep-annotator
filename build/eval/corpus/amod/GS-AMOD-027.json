@@ -1,0 +1,84 @@
+{
+  "id": "GS-AMOD-027",
+  "source": "amod",
+  "language": "en",
+  "theme": "trauer",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I noticed lately that I've been thinking a lot about death. I don't want to die, and I'm not suicidal. I just think about what would happen if I died or if someone I loved died. I imagine how sad everyone I know would be. I know it isn't worth it, and I definitely want to live and have a future. I just think about it. When I'm driving, I sometimes imagine what would happen if I just let go of the wheel and kept going.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "I'll respond to your speculation that if you let go of the steering wheel while driving, you'll end up quite seriously hurt, at the very least.   It is fine to play in your mind with \"what ifs\".   People who write horror movie scripts most likely have some terrible sounding stories and suppositions.If you trust yourself to actually not follow through with an idea that may kill you, and you recognize the difference between thinking dangerous things and doing dangerous things, then go to the next step of understanding more about your thoughts on death.Since you wonder about being missed if you die, it is possible your thoughts about death are from feeling that you are metaphysically dead to people in your life whom you wish would show more interest in you.Play around with your idea as to why you'd consider how people will feel about you if you're not in their lives.This may offer some insight as to your expectations of current relationships with others.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1386,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "800625dcf5e9c7fa"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "sorrowful",
+      "themes": [
+        "died",
+        "death"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "help_seeking",
+      "emotional_tenor": -0.7,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-trauer-signal",
+        "ATO-verlust"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.7,
+        "arousal": 0.2,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.4,
+        "arousal": 0.1,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "trauer",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

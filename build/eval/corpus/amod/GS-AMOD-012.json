@@ -1,0 +1,85 @@
+{
+  "id": "GS-AMOD-012",
+  "source": "amod",
+  "language": "en",
+  "theme": "beziehung",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I am constantly having problems with the same two people who will always be in my life. I had a daughter with my ex-boyfriend. I am now married, and my husband’s ex-girlfriend is involved with my ex-boyfriend.  They also have a daughter together. My issue is that there is always drama. I am pregnant, and I told my ex-boyfriend that I don't want any drama or arguments. I want to get along as much as possible, and he agreed. However, we just had an incident where my ex-boyfriend started discussing drop-off details about my stepdaughter. I told him that he needed to ask my husband because I can't make decisions about my stepdaughter regarding the matter. That led to an argument. I told him all my concern is when I pick up my daughter. My stepdaughter’s pick-up details are between my husband and his ex-girlfriend. I especially told him I didn't want to be involved. Somehow, he turned it around and then wanted to change the schedule we agreed on. He threatened me and got ugly because I wouldn’t discuss my stepdaughter’s matters with him.\r\n\r\nThe point is there is so much drama. I try my best to get along with everyone. I don't understand where I went wrong (besides replying back to his question). I feel like I'm going crazy because this is a constant battle where everyone’s frustrations are taken out on each other, and it's the children that are hurting. I had a party planned for my daughter’s birthday, and my ex-boyfriend told me to cancel those plans because he wouldn’t let me have her. In my eyes, it’s the child that is hurting. I was throwing a party for her birthday, and because of the problem with stupid pick-up details about my stepdaughter, which I have no control over, he took it out on our daughter.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Hi. I appreciate your mature instincts and strong efforts to draw clear boundaries in this very complex situation. I agree that it sounds like the adult drama is unnecessary and potentially will affect the children. Children need adults around them to act maturely, cooperatively and peacefully even when they don't like each other; it helps them feel secure and lets them focus on learning and growing. Your ex-boyfriend seems more focused on his own needs. In fact, he demonstrates behaviours that are aggressive, controlling and manipulative, bordering on 'parental alienation'. I agree this is a problem.I also appreciate how protective you are of yourself at this vulnerable time with the pregnancy. It's not unusual for pregnancy to trigger a need to conserve energy and reduce stress. Honour this instinct you have. I will suggest a few things to you. First, to gather support around you, professionally if you need it, from family and friends, and certainly from your husband. If you two are on the same page regarding the children issues and your ex, that will help. He can help run interference when it comes to his daughter. It will help you feel supported.Know that your ex's behaviours aren't happening because you did anything wrong; it's the way he operates (and maybe this is why you're not with him?). You can't change him, but you can stop blaming yourself for his immaturity and aggression. You're correct that he will always be there, and you can both accept this fact and also find ways to manage the situation.Keep on defining clear boundaries! You might sound like a broken record (\"You'll have to talk to my husband about that\"), but that's okay. It's okay to ignore his efforts to pull you into an argument or power struggle. It's okay to not respond to texts or other communications that aren't vitally important. It's okay to not let him into your house if it makes you uncomfortable. It's okay to not engage with him more than is necessary.Regarding his manipulative behaviours that reflect a tendency to keep your daughter from you, I recommend you document these behaviours and incidents carefully and fully. Let him know what your expectations are, simply and clearly and in writing (\"our agreement states X, and you are not following our agreement\"). Your daughter doesn't have to be aware; I think you already understand that she needs to be protected from the adult conflict.A professional therapist can help you with all of this. I hope this helps get you started towards greater peace, at least within yourself. :)",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 4282,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "f63434f565ad04b1"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "conflicted",
+      "themes": [
+        "boyfriend",
+        "girlfriend",
+        "husband"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "help_seeking",
+      "emotional_tenor": -0.3,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-beziehung-konflikt",
+        "ATO-bindung"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.3,
+        "arousal": 0.5,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.0,
+        "arousal": 0.3,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "beziehung",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

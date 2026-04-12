@@ -1,0 +1,84 @@
+{
+  "id": "GS-AMOD-007",
+  "source": "amod",
+  "language": "en",
+  "theme": "angst",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I have experienced cycles of depression for the past four years, and it hits me harder every time it comes back. This past time, it was extremely debilitating, so I went on Wellbutrin. I could feel the effects of the medicine after the first week. A month and a half later, I decided that my depression was being caused by my own unwillingness to move forward and address my behaviors and thoughts that were keeping me in a place of despair. I became worried that the medicine was making me complacent and prohibiting me from working out what I needed to in my life to bring back true fulfillment. I stopped taking it a month ago and feel okay; a lot of the anxiety it was paired with has gone away. However, I still don't feel my sense of self has been completely regained, and I have days where I feel a zombie-like haze of having no interests or the ability to fully concentrate on anything. Is it better to continue letting time and good habits work out the remaining depression or should I go back on the medicine?",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Deciding whether or not psychiatric medicine is a good option can be complicated, as you have noticed, and only a person who is licensed to prescribe can give you medical advice regarding medications. While there is sometimes relief from symptoms from medication, as you have pointed out, there are often negative side effects as well. While I can't give you advice on whether or not to continue medication, I would urge you to take an inventory of the positive and negative effects that you have noticed and educate yourself as much as possible about the short and long-term costs and benefits of psychiatric medication. If you can find a doctor, psychiatrist, or ARNP who is competent in mental health, it may also benefit you to consult with them.One thing that I am wondering about is, what is your support system like, in regards to your fight against depression? Are you seeing a therapist or attending any therapeutic or supportive group? While there are many things that one can do on their own to work through challenges such as depression, psychotherapy has been shown time and again in research to be highly effective and sometimes having a relationship with a caring, competent professional who understands depression and ways of helping can make a huge difference.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 2296,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "33e9637e68bb279f"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "anxious",
+      "themes": [
+        "anxiety",
+        "worried"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "seeking_guidance",
+      "emotional_tenor": -0.5,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-angst-signal",
+        "ATO-unsicherheit"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.5,
+        "arousal": 0.7,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.2,
+        "arousal": 0.5,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "angst",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "GS-AMOD-005",
+  "source": "amod",
+  "language": "en",
+  "theme": "angst",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "My fiancée suffers from severe anxiety and depression. She has had it most of her life. Her anxiety in public places is the worst. It gets to points where she can't breathe or move. Sometimes, she won't even go to the restroom, so she will hold in her pee until her stomach hurts or she pees herself. She curls up in corners at the mall and has panic attacks. She won't eat or drink in public. If she isn't having a panic attack or crying, she's clinging to me and avoiding everything and everyone. Her depression flares up out of nowhere and causes her to become very suicidal and self-harming. She get really sick from anxiety and scared to the point that I can't even get her to eat, drink, leave the bed, or go outside. She always tells me how she grew up around so much fighting and fear that it makes her scared of loud sounds, yelling, conflict, and even talking to strangers in public. She will refuse to go to a store unless I am with her to talk to the cashier for her. She is so scared that I can't even get her to drive. She doesn't want to get her license because she's scared of trying to drive.\n   Some people have recommended medication, but I believe it's just going to cover up her illness and not solve it. I don't want my fiancée pumped with drugs. I believe a psychiatric service dog would be the best bet for her. When we first met my poodle, it would calm her down a lot. She took the dog out every time we went out, and she seemed much calmer and happier. She slowly would eat, and the dog seemed to make her feel a lot better. I am worried and want to help her without medication.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "It sounds like you have been a positive support for your fiancee. There is no doubt that this situation is a great challenge for the both of you. While it may feel like you are responsible for her health and happiness, it is important that you understand that you, on your own, won't be able to resolve her mental health issues. Based on what you have explained, it sounds like she needs to get a medical and/or psychiatric evaluation. Whether or not she decides to take medication is her (and your) decision, but keeping an open mind about treatment options is important. I suggest that she see a therapist on her own in order to better understand and cope with her anxiety and depression, especially given her suicidal thoughts. You would also likely benefit from therapy, individual or couple's therapy, in order to address how you are feeling and best learn how to support her and your relationship. I wish the very best for both of you and hope that things will improve sooner than later.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 2598,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "5dfe1c1a82f39245"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "anxious",
+      "themes": [
+        "anxiety",
+        "panic",
+        "worried",
+        "fear",
+        "scared"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "help_seeking",
+      "emotional_tenor": -0.5,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-angst-signal",
+        "ATO-unsicherheit"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.5,
+        "arousal": 0.7,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.2,
+        "arousal": 0.5,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "angst",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

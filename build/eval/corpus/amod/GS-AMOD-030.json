@@ -1,0 +1,83 @@
+{
+  "id": "GS-AMOD-030",
+  "source": "amod",
+  "language": "en",
+  "theme": "sucht",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I don't know how to have emotions. I never had any from my birth. Being human, I think of myself as a monster. I enjoy pain. I cut myself for my climax during sex. I think most of the time, I lie, even when sometimes it would have been easy just to tell the truth. I was in rehabilitation for four year. I have made love with both men and women, but it made no impact in my emotions. The books that I enjoy reading H.P. Lovecraft and Edgar Allen Poe. I go hunting every Saturday. I feel powerful. I don't enjoy the killing of the creature, but the hunt of it and to eat and drink the flesh and blood of the creature.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "I'm not sure that you don't feel emotion or that you are frightened of the depth of your emotions. From what you write, the context of your growing up years had people telling you to not feel.  Little kids and babies don't remember whether or not they had emotions since birth.  This is information someone told you or was part of your family system.Possibly your family was afraid of their emotions or of you knowing yours.Similarly, your comparison of being human means being monster like, is not an obvious connection.  Besides, monsters are an idea, they aren't real.  They embody what someone considers the worst qualities of themselves or the human species.  Again, I wonder whether you've taken on stories you heard growing up about how unacceptable and bad you are.A way to start learning your emotions is to start in simple, basic ways to ask yourself what you are feeling in the situations that you believe emotions would belong.If on the first bright sunny and warm day of the year, you remind yourself to notice what you're feeling in response to this, you'll be taking one step toward awareness of your emotions.If someone buys you a birthday present, be aware of how you feel.  Keep adding awareness to situations and see if this builds an ease with feeling emotions.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1897,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "c9b0cb6cf50e3b2e"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "struggling",
+      "themes": [
+        "rehab"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "disclosure",
+      "emotional_tenor": -0.4,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-sucht-signal",
+        "ATO-vermeidung"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.4,
+        "arousal": 0.5,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.1,
+        "arousal": 0.3,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "sucht",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

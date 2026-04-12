@@ -1,0 +1,83 @@
+{
+  "id": "GS-AMOD-019",
+  "source": "amod",
+  "language": "en",
+  "theme": "trauma",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "My dad doesn't like the fact that I'm a boy. He yells at me daily because of it and he tells me I'm extreme and over dramatic.\r\n\r\nI get so depressed  because of my dad's yelling. He keeps asking me why I can't just be happy the way I am and yells at me on a daily basis. Is this considered emotional abuse?",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Maybe this is emotional abuse.It certainly is irritating and annoying to be yelled at for being yourself.Maybe at a time when he's not yelling you can bring up the topic of your own willingness, if this is true, to discuss questions he has about your gender.There's no guarantee he won't start yelling midway through a dialogue like this.  Only then you will be on firm ground to excuse yourself from the conversation since you already explained that you're willing to talk with him and not to be yelled at by him.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 820,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "c1022a7dcd704741"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "distressed",
+      "themes": [
+        "abuse"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "seeking_guidance",
+      "emotional_tenor": -0.8,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "ATO": [
+        "ATO-trauma-signal",
+        "ATO-vermeidung"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.8,
+        "arousal": 0.6,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.5,
+        "arousal": 0.4,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "trauma",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}
