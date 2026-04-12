@@ -44,10 +44,32 @@
     },
     "semiotic_signs": [],
     "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO"
+      ],
+      "CLU": [
+        "CLU_HEATED_CONFLICT",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD"
+      ],
       "ATO": [
-        "ATO-wut-signal",
-        "ATO-aggression"
-      ]
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_ANGER_RAGE",
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_MODAL_VERBS",
+        "ATO_WEDDING_TASK_NEGOTIATION"
+      ],
+      "SEM": []
     },
     "vad_trajectory": [
       {

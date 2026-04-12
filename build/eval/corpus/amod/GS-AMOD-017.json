@@ -42,10 +42,26 @@
     },
     "semiotic_signs": [],
     "expected_markers": {
+      "MEMA": [
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO"
+      ],
+      "CLU": [
+        "CLU_NEGATIVE_COGNITIVE_TRIAD"
+      ],
       "ATO": [
-        "ATO-trauma-signal",
-        "ATO-vermeidung"
-      ]
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_BOUNDARY_SETTING",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_LOVE_AFFECTION",
+        "ATO_SARCASM",
+        "ATO_SWITCH",
+        "ATO_WEDDING_TASK_NEGOTIATION"
+      ],
+      "SEM": []
     },
     "vad_trajectory": [
       {

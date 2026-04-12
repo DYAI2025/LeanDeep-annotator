@@ -43,9 +43,38 @@
     },
     "semiotic_signs": [],
     "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN"
+      ],
+      "CLU": [
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_GRIEF",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_RISK_LEVEL"
+      ],
+      "SEM": [
+        "SEM_SELF_REFLECTION"
+      ],
       "ATO": [
-        "ATO-trauer-signal",
-        "ATO-verlust"
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_SADNESS_GRIEF",
+        "ATO_SARCASM",
+        "ATO_SHARED_FUTURE_REFERENCE"
       ]
     },
     "vad_trajectory": [

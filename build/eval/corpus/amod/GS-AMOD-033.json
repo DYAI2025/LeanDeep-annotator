@@ -43,9 +43,36 @@
     },
     "semiotic_signs": [],
     "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE"
+      ],
+      "CLU": [
+        "CLU_HEATED_CONFLICT",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD"
+      ],
+      "SEM": [
+        "SEM_BOUNDARY_INVERSION",
+        "SEM_SYMBOLIC_COMMUNICATION_FOCUS"
+      ],
       "ATO": [
-        "ATO-identitaet-suche",
-        "ATO-unsicherheit"
+        "ATO_ACTIVITY_VERB",
+        "ATO_BOUNDARY_SETTING",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_LONELINESS_ISOLATION",
+        "ATO_LOVE_AFFECTION",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_PROTOCOL_LANG",
+        "ATO_TOGETHERNESS_TERMS"
       ]
     },
     "vad_trajectory": [

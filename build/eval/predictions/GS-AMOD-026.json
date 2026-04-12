@@ -1,0 +1,206 @@
+{
+  "markers": [
+    {
+      "id": "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+      "layer": "MEMA",
+      "confidence": 0.917,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_SELF_VICTIMIZATION_CYCLE",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_PAPAGEI_ECHO",
+      "layer": "MEMA",
+      "confidence": 0.55,
+      "family": null
+    },
+    {
+      "id": "CLU_NEGATIVE_COGNITIVE_TRIAD",
+      "layer": "CLU",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "CLU_MINIMIZATION_LOOP",
+      "layer": "CLU",
+      "confidence": 0.475,
+      "family": null
+    },
+    {
+      "id": "CLU_RISK_LEVEL",
+      "layer": "CLU",
+      "confidence": 0.475,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_BIAS",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_UNCERTAINTY",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "SEM_NEUTRAL_NEGOTIATION",
+      "layer": "SEM",
+      "confidence": 0.85,
+      "family": null
+    },
+    {
+      "id": "SEM_SYMBOLIC_COMMUNICATION_FOCUS",
+      "layer": "SEM",
+      "confidence": 0.8,
+      "family": null
+    },
+    {
+      "id": "ATO_BOUNDARY_SETTING",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_SELF_FOCUS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_MINIMIZATION_LANGUAGE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_OBLIGATION_SYNTAX",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_SARCASM",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_ABANDONMENT_ANXIETY",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CONTROL",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_PAST_FOCUS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_INTENSE_EMOTION_SWING",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_SHARED_FUTURE_REFERENCE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_UNCERTAINTY",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_LINGERING_REACTION",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_AMBIGUITY_QUOTES",
+      "layer": "ATO",
+      "confidence": 0.8,
+      "family": null
+    },
+    {
+      "id": "ATO_FEAR_ANXIETY",
+      "layer": "ATO",
+      "confidence": 0.657,
+      "family": null
+    },
+    {
+      "id": "ATO_LONELINESS_ISOLATION",
+      "layer": "ATO",
+      "confidence": 0.657,
+      "family": null
+    },
+    {
+      "id": "ATO_LOVE_AFFECTION",
+      "layer": "ATO",
+      "confidence": 0.657,
+      "family": null
+    }
+  ],
+  "meta": {
+    "markers_detected": 33,
+    "processing_ms": 24598.757028579712
+  }
+}

@@ -108,7 +108,47 @@
         "markers": []
       }
     ],
-    "expected_markers": {},
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_FAMILY_POWER_DYNAMICS",
+        "MEMA_ORDNUNGSPARAMETER",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SPIRAL_COHERENCE_INDEX",
+        "MEMA_VALUE_DYNAMICS"
+      ],
+      "CLU": [
+        "CLU_BINDING_SUPPORT_FIELD",
+        "CLU_INTUITION_NARION",
+        "CLU_INTUITION_PRESENCE_BINDING",
+        "CLU_SPIRAL_PERSONA_ROT",
+        "CLU_SUPPORT_EXCHANGE",
+        "CLU_VERBAL_PROSODY_INCONGRUENCE"
+      ],
+      "SEM": [
+        "SEM_ADJACENT_COMPLAIN",
+        "SEM_ARCHETYPE_PICARD",
+        "SEM_LIMINAL_FIELD_PRESENCE",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_REACTION_FORMATION_TEXT",
+        "SEM_REPAIR_GESTURE"
+      ],
+      "ATO": [
+        "ATO_ACKNOWLEDGE",
+        "ATO_ACTION_VERBS",
+        "ATO_ACTIVITY_VERB",
+        "ATO_CERTAINTY_WITHOUT_EVIDENCE",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONDITION_CUE",
+        "ATO_CONFIRM",
+        "ATO_DEFENSIVE_REBUTTAL",
+        "ATO_DISFLUENCY_FILLER",
+        "ATO_JOY_EXPRESSION",
+        "ATO_JUDGMENT",
+        "ATO_LINGERING_REACTION",
+        "ATO_SLANG_TOKEN",
+        "ATO_TIME_REFERENCE"
+      ]
+    },
     "vad_trajectory": [
       {
         "t": 0.0,

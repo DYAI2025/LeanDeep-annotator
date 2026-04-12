@@ -152,18 +152,48 @@
       }
     ],
     "expected_markers": {
-      "ATO": [
-        "ATO_BODY_LOAD",
-        "ATO_SELF_OBSERVATION_A",
-        "ATO_IF_THEN_PRESSURE",
-        "ATO_BACKCHANNEL_REGULATION_B"
+      "MEMA": [
+        "MEMA_META_DRIFT",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_SPIRAL_COHERENCE_INDEX",
+        "MEMA_VALUE_DYNAMICS",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_FRIENDSHIP_SIGNALING_MARKER",
+        "CLU_INTUITION_SUPPORT",
+        "CLU_RISK_LEVEL",
+        "CLU_SPIRAL_PERSONA_BLAU",
+        "CLU_SUPPORT_EXCHANGE",
+        "CLU_UNCERTAINTY_CASCADE"
       ],
       "SEM": [
-        "SEM_TRAPPED_AND_ESCAPE"
+        "SEM_ADJACENT_COMPLAIN",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_REACTION_FORMATION_TEXT",
+        "SEM_WARM_APPRECIATION"
       ],
-      "CLU": [],
-      "MEMA": [
-        "MEMA_SAFE_BASE_SIGNAL"
+      "ATO": [
+        "ATO_ACTION_VERBS",
+        "ATO_ACTIVITY_VERB",
+        "ATO_ATTENTION_TO_FEELINGS",
+        "ATO_BETAEUBUNG",
+        "ATO_BOUNDARY_STRICT",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONDITION_CUE",
+        "ATO_CONFIRM",
+        "ATO_COURAGE",
+        "ATO_EMOTIONAL_GRANULARITY",
+        "ATO_FEAR_ANXIETY",
+        "ATO_LINGERING_REACTION",
+        "ATO_LONELINESS_ISOLATION",
+        "ATO_LOVE_DEVOTION",
+        "ATO_NEGATION",
+        "ATO_ORDER_STRUCTURE",
+        "ATO_PRIDE_CONFIDENCE",
+        "ATO_SOCIAL_SAFETY",
+        "ATO_STRESS",
+        "ATO_TIME_REFERENCE"
       ]
     },
     "vad_trajectory": [

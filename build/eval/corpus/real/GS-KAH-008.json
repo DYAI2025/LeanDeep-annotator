@@ -122,11 +122,48 @@
       }
     ],
     "expected_markers": {
-      "ATO": [
-        "ATO_SELF_OBSERVATION_A"
+      "MEMA": [
+        "MEMA_FAMILY_POWER_DYNAMICS",
+        "MEMA_META_DRIFT",
+        "MEMA_ORDNUNGSPARAMETER",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SPIRAL_COHERENCE_INDEX",
+        "MEMA_VALUE_DYNAMICS",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_INTIMACY_PLAY",
+        "CLU_INTUITION_NARION",
+        "CLU_INTUITION_SELF_EFFICACY",
+        "CLU_INTUITION_TRUST",
+        "CLU_LL_PROFILE",
+        "CLU_RISK_LEVEL",
+        "CLU_SPIRAL_PERSONA_ROT",
+        "CLU_SUPPORT_EXCHANGE",
+        "CLU_UNCERTAINTY_CASCADE",
+        "CLU_VERBAL_PROSODY_INCONGRUENCE"
       ],
       "SEM": [
-        "SEM_SELF_WORTH_SHIFT"
+        "SEM_ARCHETYPE_PICARD",
+        "SEM_BREAK_UP",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_REACTION_FORMATION_TEXT",
+        "SEM_REPAIR_GESTURE",
+        "SEM_STATE_OF_HAPPINESS"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_ATTENTION_TO_FEELINGS",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONFIRM",
+        "ATO_DISFLUENCY_FILLER",
+        "ATO_DISGUST_AVERSION",
+        "ATO_HEDGING_CUE",
+        "ATO_LINGERING_REACTION",
+        "ATO_LL_PHYSICAL_TOUCH",
+        "ATO_SPONTANEITY_CUE",
+        "ATO_SURPRISE",
+        "ATO_TRUST_DEFICIT_STATEMENT"
       ]
     },
     "vad_trajectory": [

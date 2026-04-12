@@ -1,0 +1,278 @@
+{
+  "markers": [
+    {
+      "id": "MEMA_ORDNUNGSPARAMETER",
+      "layer": "MEMA",
+      "confidence": 0.75,
+      "family": null
+    },
+    {
+      "id": "MEMA_ZERO_PUNISHMENT_GUARD",
+      "layer": "MEMA",
+      "confidence": 0.75,
+      "family": null
+    },
+    {
+      "id": "MEMA_COMMUNICATION_BREAKDOWN_CASCADE",
+      "layer": "MEMA",
+      "confidence": 0.667,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_VALUE_DYNAMICS",
+      "layer": "MEMA",
+      "confidence": 0.562,
+      "family": null
+    },
+    {
+      "id": "MEMA_SPIRAL_COHERENCE_INDEX",
+      "layer": "MEMA",
+      "confidence": 0.55,
+      "family": null
+    },
+    {
+      "id": "MEMA_FAMILY_POWER_DYNAMICS",
+      "layer": "MEMA",
+      "confidence": 0.55,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.5,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.5,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.5,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.5,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_NARION",
+      "layer": "CLU",
+      "confidence": 0.643,
+      "family": null
+    },
+    {
+      "id": "CLU_SPIRAL_PERSONA_ROT",
+      "layer": "CLU",
+      "confidence": 0.475,
+      "family": null
+    },
+    {
+      "id": "CLU_DISSONANCE_ALERT_TEXT",
+      "layer": "CLU",
+      "confidence": 0.433,
+      "family": null
+    },
+    {
+      "id": "CLU_FRIENDSHIP_SIGNALING_MARKER",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_SUPPORT_EXCHANGE",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_GOTTMAN_TOXICITY_CLUSTER",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_SUPPORT",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_SIBLING_DYNAMICS",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_PRESENCE_BINDING",
+      "layer": "CLU",
+      "confidence": 0.4,
+      "family": null
+    },
+    {
+      "id": "CLU_VERBAL_PROSODY_INCONGRUENCE",
+      "layer": "CLU",
+      "confidence": 0.4,
+      "family": null
+    },
+    {
+      "id": "CLU_DRIFT_TO_PRESENCE",
+      "layer": "CLU",
+      "confidence": 0.392,
+      "family": null
+    },
+    {
+      "id": "SEM_ARCHETYPE_PICARD",
+      "layer": "SEM",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "SEM_REACTION_FORMATION_TEXT",
+      "layer": "SEM",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "SEM_NEUTRAL_NEGOTIATION",
+      "layer": "SEM",
+      "confidence": 0.85,
+      "family": null
+    },
+    {
+      "id": "SEM_ACCUSATION_MARKER",
+      "layer": "SEM",
+      "confidence": 0.8,
+      "family": null
+    },
+    {
+      "id": "SEM_SELF_DECISION_CONSTANCY",
+      "layer": "SEM",
+      "confidence": 0.8,
+      "family": null
+    },
+    {
+      "id": "SEM_SELF_ADDRESS_SHIFT",
+      "layer": "SEM",
+      "confidence": 0.8,
+      "family": null
+    },
+    {
+      "id": "SEM_WARM_APPRECIATION",
+      "layer": "SEM",
+      "confidence": 0.733,
+      "family": null
+    },
+    {
+      "id": "ATO_TIME_REFERENCE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CLARIFY_REQ",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_NEGATION",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CONFORMITY",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_SET_BOUNDARY",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CONDITION_CUE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_FEELING_WORD",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_ACTION_VERBS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_ROLE_MOTHER",
+      "layer": "ATO",
+      "confidence": 0.76,
+      "family": null
+    },
+    {
+      "id": "ATO_ROLE_CHILD",
+      "layer": "ATO",
+      "confidence": 0.667,
+      "family": null
+    },
+    {
+      "id": "ATO_DEFENSIVE_REBUTTAL",
+      "layer": "ATO",
+      "confidence": 0.667,
+      "family": null
+    },
+    {
+      "id": "ATO_SADNESS_GRIEF",
+      "layer": "ATO",
+      "confidence": 0.657,
+      "family": null
+    },
+    {
+      "id": "ATO_LONELINESS_ISOLATION",
+      "layer": "ATO",
+      "confidence": 0.657,
+      "family": null
+    }
+  ],
+  "meta": {
+    "markers_detected": 45,
+    "processing_ms": 1932.4710369110107
+  }
+}

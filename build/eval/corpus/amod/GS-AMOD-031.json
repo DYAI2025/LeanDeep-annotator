@@ -43,9 +43,32 @@
     },
     "semiotic_signs": [],
     "expected_markers": {
+      "MEMA": [
+        "MEMA_INCONSISTENCY_TREND",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_OVERCONFIDENCE_INVALIDATION_CYCLE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE"
+      ],
+      "CLU": [
+        "CLU_CONSISTENCY_ALERT",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_INCONSISTENCY",
+        "CLU_INTUITION_MORALITY",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_SELF_CONTRADICTION",
+        "CLU_SUPPORT_EXCHANGE"
+      ],
+      "SEM": [
+        "SEM_CERTAINTY_CLAIMS",
+        "SEM_LIGHT_ADMISSION",
+        "SEM_REPAIR_GESTURE"
+      ],
       "ATO": [
-        "ATO-sucht-signal",
-        "ATO-vermeidung"
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_SARCASM",
+        "ATO_THIRD_PARTY_CLAIM"
       ]
     },
     "vad_trajectory": [

@@ -152,17 +152,40 @@
       }
     ],
     "expected_markers": {
-      "ATO": [
-        "ATO_AMBIVALENZ"
-      ],
-      "SEM": [
-        "SEM_PRESSURE_RECOGNITION"
+      "MEMA": [
+        "MEMA_META_DRIFT",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
       ],
       "CLU": [
-        "CLU_MISSION_FORMATION"
+        "CLU_DRIFT_TO_PRESENCE",
+        "CLU_FRIENDSHIP_SIGNALING_MARKER",
+        "CLU_INTUITION_SUPPORT",
+        "CLU_RISK_LEVEL",
+        "CLU_SUPPORT_EXCHANGE",
+        "CLU_UNCERTAINTY_CASCADE"
       ],
-      "MEMA": [
-        "MEMA_HEALING_VS_OUTPUT"
+      "SEM": [
+        "SEM_NEEDS_TO_WANTS_FLIP",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_WARM_APPRECIATION"
+      ],
+      "ATO": [
+        "ATO_ACTION_VERBS",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONDITION_CUE",
+        "ATO_CONFIRM",
+        "ATO_DEFENSIVE_REBUTTAL",
+        "ATO_EXPRESSIVE_APHASIA",
+        "ATO_FEAR_ANXIETY",
+        "ATO_HEDGE_TERM",
+        "ATO_MODAL_VERBS",
+        "ATO_MUST_CHECK",
+        "ATO_NEGATION",
+        "ATO_SHAME_GUILT",
+        "ATO_STRESS",
+        "ATO_TIME_REFERENCE",
+        "ATO_WEDDING_STRESS_CUE"
       ]
     },
     "vad_trajectory": [

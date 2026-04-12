@@ -1,0 +1,86 @@
+{
+  "markers": [
+    {
+      "id": "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+      "layer": "MEMA",
+      "confidence": 0.833,
+      "family": null
+    },
+    {
+      "id": "MEMA_PAPAGEI_ECHO",
+      "layer": "MEMA",
+      "confidence": 0.55,
+      "family": null
+    },
+    {
+      "id": "CLU_NEGATIVE_COGNITIVE_TRIAD",
+      "layer": "CLU",
+      "confidence": 0.833,
+      "family": null
+    },
+    {
+      "id": "ATO_BOUNDARY_SETTING",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_PAST_FOCUS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_SELF_FOCUS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_SWITCH",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_SARCASM",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_WEDDING_TASK_NEGOTIATION",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_AMBIGUITY_QUOTES",
+      "layer": "ATO",
+      "confidence": 0.8,
+      "family": null
+    },
+    {
+      "id": "ATO_CONTRAST_CONJUNCTION",
+      "layer": "ATO",
+      "confidence": 0.667,
+      "family": null
+    },
+    {
+      "id": "ATO_LOVE_AFFECTION",
+      "layer": "ATO",
+      "confidence": 0.657,
+      "family": null
+    }
+  ],
+  "meta": {
+    "markers_detected": 13,
+    "processing_ms": 3541.900873184204
+  }
+}

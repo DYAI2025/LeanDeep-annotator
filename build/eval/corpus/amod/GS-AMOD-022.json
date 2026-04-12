@@ -43,9 +43,48 @@
     },
     "semiotic_signs": [],
     "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_ORDNUNGSPARAMETER",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_FRIENDSHIP_SIGNALING_MARKER",
+        "CLU_HEATED_CONFLICT",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_NARION",
+        "CLU_INTUITION_SUPPORT",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NARION_SIGNATURE",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_SUPPORT_EXCHANGE"
+      ],
+      "SEM": [
+        "SEM_RITUAL_INVOCATION",
+        "SEM_WARM_APPRECIATION"
+      ],
       "ATO": [
-        "ATO-wut-signal",
-        "ATO-aggression"
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_ANGER_RAGE",
+        "ATO_BOUNDARY_SETTING",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_CONTROL",
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_LOVE_AFFECTION",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_MODAL_VERBS",
+        "ATO_NEGATIVE_JUDGEMENT",
+        "ATO_SURPRISE_ASTONISHMENT"
       ]
     },
     "vad_trajectory": [

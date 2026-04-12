@@ -1,0 +1,140 @@
+{
+  "markers": [
+    {
+      "id": "MEMA_ZERO_PUNISHMENT_GUARD",
+      "layer": "MEMA",
+      "confidence": 0.75,
+      "family": null
+    },
+    {
+      "id": "MEMA_SELF_VICTIMIZATION_CYCLE",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_PAPAGEI_ECHO",
+      "layer": "MEMA",
+      "confidence": 0.55,
+      "family": null
+    },
+    {
+      "id": "CLU_FRIENDSHIP_SIGNALING_MARKER",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_SUPPORT_EXCHANGE",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_SUPPORT",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_HEATED_CONFLICT",
+      "layer": "CLU",
+      "confidence": 0.4,
+      "family": null
+    },
+    {
+      "id": "CLU_VERBAL_PROSODY_INCONGRUENCE",
+      "layer": "CLU",
+      "confidence": 0.4,
+      "family": null
+    },
+    {
+      "id": "SEM_REACTION_FORMATION_TEXT",
+      "layer": "SEM",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "SEM_NEUTRAL_NEGOTIATION",
+      "layer": "SEM",
+      "confidence": 0.85,
+      "family": null
+    },
+    {
+      "id": "SEM_WARM_APPRECIATION",
+      "layer": "SEM",
+      "confidence": 0.733,
+      "family": null
+    },
+    {
+      "id": "SEM_RESPECT_RELIABILITY_FRAME",
+      "layer": "SEM",
+      "confidence": 0.6,
+      "family": null
+    },
+    {
+      "id": "ATO_TIME_REFERENCE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_EXPRESSIVE_APHASIA",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CONFIRM",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_NEGATION",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_SUFFERING",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CLARIFY_REQ",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CONDITION_CUE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_MODAL_VERBS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEFENSIVE_REBUTTAL",
+      "layer": "ATO",
+      "confidence": 0.667,
+      "family": null
+    },
+    {
+      "id": "ATO_ANGER_RAGE",
+      "layer": "ATO",
+      "confidence": 0.657,
+      "family": null
+    }
+  ],
+  "meta": {
+    "markers_detected": 22,
+    "processing_ms": 3387.455940246582
+  }
+}

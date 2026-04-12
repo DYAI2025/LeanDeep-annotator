@@ -45,9 +45,43 @@
     },
     "semiotic_signs": [],
     "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE"
+      ],
+      "CLU": [
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD"
+      ],
+      "SEM": [
+        "SEM_SYMBOLIC_COMMUNICATION_FOCUS"
+      ],
       "ATO": [
-        "ATO-familie-konflikt",
-        "ATO-bindung"
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_BOUNDARY_SETTING",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_FEAR_ANXIETY",
+        "ATO_LITERAL_MARKER",
+        "ATO_LOVE_AFFECTION",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_MODAL_VERBS",
+        "ATO_ROLE_FATHER",
+        "ATO_ROLE_MOTHER",
+        "ATO_SARCASM",
+        "ATO_SLANG_TOKEN",
+        "ATO_SUPERLATIVE_PRAISE",
+        "ATO_SWITCH",
+        "ATO_WEDDING_TASK_NEGOTIATION"
       ]
     },
     "vad_trajectory": [

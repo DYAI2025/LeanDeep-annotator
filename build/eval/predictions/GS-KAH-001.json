@@ -1,0 +1,194 @@
+{
+  "markers": [
+    {
+      "id": "MEMA_ORDNUNGSPARAMETER",
+      "layer": "MEMA",
+      "confidence": 0.75,
+      "family": null
+    },
+    {
+      "id": "MEMA_VALUE_DYNAMICS",
+      "layer": "MEMA",
+      "confidence": 0.562,
+      "family": null
+    },
+    {
+      "id": "MEMA_PAPAGEI_ECHO",
+      "layer": "MEMA",
+      "confidence": 0.55,
+      "family": null
+    },
+    {
+      "id": "MEMA_SPIRAL_COHERENCE_INDEX",
+      "layer": "MEMA",
+      "confidence": 0.55,
+      "family": null
+    },
+    {
+      "id": "MEMA_FAMILY_POWER_DYNAMICS",
+      "layer": "MEMA",
+      "confidence": 0.55,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_NARION",
+      "layer": "CLU",
+      "confidence": 0.643,
+      "family": null
+    },
+    {
+      "id": "CLU_SPIRAL_PERSONA_ROT",
+      "layer": "CLU",
+      "confidence": 0.475,
+      "family": null
+    },
+    {
+      "id": "CLU_BINDING_SUPPORT_FIELD",
+      "layer": "CLU",
+      "confidence": 0.433,
+      "family": null
+    },
+    {
+      "id": "CLU_SUPPORT_EXCHANGE",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_PRESENCE_BINDING",
+      "layer": "CLU",
+      "confidence": 0.4,
+      "family": null
+    },
+    {
+      "id": "CLU_VERBAL_PROSODY_INCONGRUENCE",
+      "layer": "CLU",
+      "confidence": 0.4,
+      "family": null
+    },
+    {
+      "id": "SEM_NEUTRAL_NEGOTIATION",
+      "layer": "SEM",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "SEM_REACTION_FORMATION_TEXT",
+      "layer": "SEM",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "SEM_ARCHETYPE_PICARD",
+      "layer": "SEM",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "SEM_LIMINAL_FIELD_PRESENCE",
+      "layer": "SEM",
+      "confidence": 0.8,
+      "family": null
+    },
+    {
+      "id": "SEM_REPAIR_GESTURE",
+      "layer": "SEM",
+      "confidence": 0.7,
+      "family": null
+    },
+    {
+      "id": "SEM_ADJACENT_COMPLAIN",
+      "layer": "SEM",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "ATO_JOY_EXPRESSION",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_TIME_REFERENCE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_ACKNOWLEDGE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CONFIRM",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_LINGERING_REACTION",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CERTAINTY_WITHOUT_EVIDENCE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CONDITION_CUE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_ACTION_VERBS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_ACTIVITY_VERB",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_SLANG_TOKEN",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CLARIFY_REQ",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DISFLUENCY_FILLER",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_JUDGMENT",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEFENSIVE_REBUTTAL",
+      "layer": "ATO",
+      "confidence": 0.667,
+      "family": null
+    }
+  ],
+  "meta": {
+    "markers_detected": 31,
+    "processing_ms": 4583.687782287598
+  }
+}

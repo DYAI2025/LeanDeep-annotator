@@ -152,18 +152,35 @@
       }
     ],
     "expected_markers": {
-      "ATO": [
-        "ATO_IF_THEN_PRESSURE"
-      ],
-      "SEM": [
-        "SEM_PRESSURE_RECOGNITION",
-        "SEM_SELF_WORTH_SHIFT"
+      "MEMA": [
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
       ],
       "CLU": [
-        "CLU_PRESSURE_TRAP"
+        "CLU_FRIENDSHIP_SIGNALING_MARKER",
+        "CLU_HEATED_CONFLICT",
+        "CLU_INTUITION_SUPPORT",
+        "CLU_SUPPORT_EXCHANGE",
+        "CLU_VERBAL_PROSODY_INCONGRUENCE"
       ],
-      "MEMA": [
-        "MEMA_SAFE_BASE_SIGNAL"
+      "SEM": [
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_REACTION_FORMATION_TEXT",
+        "SEM_RESPECT_RELIABILITY_FRAME",
+        "SEM_WARM_APPRECIATION"
+      ],
+      "ATO": [
+        "ATO_ANGER_RAGE",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONDITION_CUE",
+        "ATO_CONFIRM",
+        "ATO_DEFENSIVE_REBUTTAL",
+        "ATO_EXPRESSIVE_APHASIA",
+        "ATO_MODAL_VERBS",
+        "ATO_NEGATION",
+        "ATO_SUFFERING",
+        "ATO_TIME_REFERENCE"
       ]
     },
     "vad_trajectory": [
