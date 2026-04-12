@@ -29,12 +29,15 @@ Pure Python core with optional LLM semantic profiling, VAD emotion tracking, sem
 
 ## Current State
 
-**Phase**: Code (in progress)
+**Phase**: Code (in progress) — Gap Analysis & Documentation Remediation completed 2026-04-07
 
-- **Implementation progress**: 10/23 tasks done (P0: 3/3, P1: 6/6, P2: 1/5, Deploy: 0/6). Candidate detection pipeline complete: `api/candidates.py` with LLM clustering + deterministic heuristic fallback, novelty scoring, rank_score ordering. Enrichment models added. 26 unit tests. Railway deployment plan adopted (DEC-railway-deployment): single-service multi-stage Dockerfile, 6 deploy-prep tasks queued in Phase 3e. 5 decisions recorded
-- **Design**: Architecture complete (Approved); Data model drafted; API design drafted. 3 decisions recorded. Completeness assessment (2026-04-05): 0 Critical, 0 Important, 2 Minor
-- **Components**: 3 identified — backend (Python/FastAPI), frontend (React/JS), marker-pipeline (Python CLI). Per-component directories created in `3-code/`
-- **Specification**: Complete. 4 goals (3 Approved); 4 user stories (all Approved); 13 requirements (all Approved); gap analysis clean
+- **Implementation progress**: 10/23 tasks done (P0: 3/3, P1: 6/6, P2: 1/5, Deploy: 0/6). Candidate detection pipeline complete: `api/candidates.py` with LLM clustering + deterministic heuristic fallback, novelty scoring, rank_score ordering. Enrichment models added. 26 unit tests.
+- **Design**: Architecture complete (Approved) — updated 2026-04-07 with Error Handling, Extensibility, Requirement Coverage sections. Data model drafted; API design drafted. Completeness assessment (2026-04-07): 0 Critical, 0 Important, 0 Minor — all gaps resolved.
+- **Components**: 3 identified — backend (Python/FastAPI), frontend (React/TypeScript/Vite), marker-pipeline (Python CLI). Per-component directories with `CLAUDE.component.md` in all three.
+- **Specification**: Complete. 5 goals (3 Approved, 2 Draft — added GOAL-operational-deployment-readiness); 4 user stories (all Approved); 14 requirements (all Approved); gap analysis clean.
+- **Decisions**: 9 recorded (5 existing + 4 new: DEC-marker-rating-lifecycle, DEC-semantic-affinity-enrichment-scope, DEC-marker-enrichment-pipeline, DEC-persona-persistence-strategy). All TBD items resolved.
+- **Deploy**: 4 runbooks created (RB-standard-deploy, RB-rollback, RB-high-error-rate, RB-semantic-provider-outage). Smoke test script (`scripts/smoke_test.sh`) created. Railway deployment per DEC-railway-deployment.
+- **Tasks**: SDLC-format task tables + Execution Plan added to `3-code/tasks.md` (5 phases, 23 tasks, all with requirement links and dependencies).
 - **Markers**: 887 in production; continuous enrichment cycle (VAD, examples, semantic affinity)
 - **Architecture**: 5-layer pipeline stable; semantic gating + VAD congruence in place
 - **API**: 15 endpoints (v1); Base tier production-ready, Pro tier stable
@@ -252,6 +255,11 @@ Recorded decisions live in `decisions/`. See `decisions/_template.md` for format
 | `DEC-context-uncertainty-proportional-variance.md` | Narrative count scales with context uncertainty |
 | `DEC-v1-backward-compatibility.md` | v1 API backward compatibility policy |
 | `DEC-railway-deployment.md` | Railway as deployment platform, single-service strategy |
+| `DEC-frontend-react-vite.md` | React + TypeScript + Vite stack |
+| `DEC-marker-rating-lifecycle.md` | 4-tier rating system with lifecycle rules |
+| `DEC-semantic-affinity-enrichment-scope.md` | LLM-assisted semantic affinity enrichment |
+| `DEC-marker-enrichment-pipeline.md` | Batch-first, streaming-later enrichment |
+| `DEC-persona-persistence-strategy.md` | YAML files over database for personas |
 
 ---
 
