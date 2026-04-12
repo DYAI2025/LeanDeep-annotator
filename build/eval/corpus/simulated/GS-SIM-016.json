@@ -1,0 +1,224 @@
+{
+  "id": "GS-SIM-016",
+  "source": "simulated",
+  "language": "de",
+  "theme": "familie",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "Ich weiss nicht, wo ich anfangen soll heute.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Nehmen Sie sich die Zeit, die Sie brauchen. Was beschaeftigt Sie gerade am meisten?",
+      "start_time": 3.0
+    },
+    {
+      "role": "Client",
+      "text": "Es ist alles so viel gerade. Ich fuehle mich ueberwaeltigt.",
+      "start_time": 5.9
+    },
+    {
+      "role": "Therapist",
+      "text": "Das hoert sich belastend an. Lassen Sie uns gemeinsam schauen, was gerade am draengendsten ist.",
+      "start_time": 8.7
+    },
+    {
+      "role": "Client",
+      "text": "Bei uns zuhause wurde nie ueber Gefuehle gesprochen.",
+      "start_time": 11.7
+    },
+    {
+      "role": "Therapist",
+      "text": "Wie war das fuer Sie als Kind?",
+      "start_time": 14.9
+    },
+    {
+      "role": "Client",
+      "text": "Ich habe gelernt, dass man funktionieren muss. Weinen war nicht erlaubt.",
+      "start_time": 17.8
+    },
+    {
+      "role": "Therapist",
+      "text": "Das klingt nach einem sehr engen Rahmen fuer ein Kind.",
+      "start_time": 20.8
+    },
+    {
+      "role": "Client",
+      "text": "Ich halte Menschen immer auf Abstand. Naeher als bis hierhin kommt niemand.",
+      "start_time": 23.7
+    },
+    {
+      "role": "Therapist",
+      "text": "Wann haben Sie angefangen, sich so zu schuetzen?",
+      "start_time": 26.8
+    },
+    {
+      "role": "Client",
+      "text": "Schon als Kind. Meine Mutter war unberechenbar. Mal liebevoll, mal eiskalt.",
+      "start_time": 29.8
+    },
+    {
+      "role": "Therapist",
+      "text": "Das macht Sinn, dass Sie dann gelernt haben, Naehe als gefaehrlich zu erleben.",
+      "start_time": 32.7
+    },
+    {
+      "role": "Client",
+      "text": "Ich muss mich nicht mehr dafuer verantwortlich fuehlen, ob es meiner Mutter gut geht.",
+      "start_time": 35.6
+    },
+    {
+      "role": "Therapist",
+      "text": "Was veraendert sich, wenn Sie diesen Gedanken zulassen?",
+      "start_time": 38.7
+    },
+    {
+      "role": "Client",
+      "text": "Ich fuehle mich leichter. Aber auch schuldig.",
+      "start_time": 41.9
+    },
+    {
+      "role": "Therapist",
+      "text": "Beides darf da sein. Abloesung bedeutet nicht Lieblosigkeit.",
+      "start_time": 44.8
+    },
+    {
+      "role": "Client",
+      "text": "Ich kann nicht mein ganzes Leben damit verbringen, andere zu retten.",
+      "start_time": 47.9
+    },
+    {
+      "role": "Therapist",
+      "text": "Was moechten Sie stattdessen fuer sich tun?",
+      "start_time": 51.1
+    },
+    {
+      "role": "Client",
+      "text": "Meine eigenen Beduerfnisse ernst nehmen. Das faellt mir noch schwer.",
+      "start_time": 54.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Es ist ein Prozess. Aber Sie haben bereits angefangen, sich selbst wahrzunehmen.",
+      "start_time": 57.0
+    }
+  ],
+  "metadata": {
+    "generator": "template-replay-v1",
+    "template_id": "familie",
+    "message_count": 20,
+    "total_chars": 1269,
+    "duration_minutes": 60.1,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": null,
+      "original_hash": null
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "nachdenklich",
+      "themes": [
+        "familie",
+        "bindung",
+        "herkunft"
+      ],
+      "relational_dynamics": "Therapist differenziert Bindung von Verstrickung",
+      "intent": "family-exploration",
+      "emotional_tenor": -0.05,
+      "context_validity": 0.8,
+      "offline_context_risk": 0.25
+    },
+    "semiotic_signs": [
+      {
+        "id": "sign-verstrickung",
+        "locus": "mid session",
+        "signifier": "Verstrickung",
+        "signified": "enmeshment with family of origin",
+        "type": "symbol",
+        "denotation": "Over-identification with parental role",
+        "connotations": [
+          "loyalty",
+          "guilt",
+          "burden"
+        ],
+        "codes": [
+          "systemic"
+        ],
+        "evidence": "Client feels responsible for parent"
+      }
+    ],
+    "expected_markers": {
+      "ATO": [
+        "ATO_SYMBOL_IMAGE"
+      ],
+      "SEM": [
+        "SEM_TRAPPED_AND_ESCAPE"
+      ],
+      "CLU": [
+        "CLU_BODY_TO_MEANING_LOOP"
+      ],
+      "MEMA": [
+        "MEMA_AGENCY_REASSEMBLY",
+        "MEMA_HEALING_VS_OUTPUT"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.35,
+        "arousal": 0.4,
+        "trigger": "session start",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.25,
+        "valence": 0.4,
+        "arousal": 0.35,
+        "trigger": "topic introduction",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.5,
+        "valence": 0.45,
+        "arousal": 0.35,
+        "trigger": "emotional deepening",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.75,
+        "valence": 0.45,
+        "arousal": 0.3,
+        "trigger": "crisis point",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "regulation",
+        "trigger_sign_id": ""
+      }
+    ],
+    "therapy_indices": {
+      "trust": 75,
+      "conflict": 20,
+      "deescalation": 75,
+      "synchronization": 70,
+      "semiotic_coherence": 65
+    },
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "familie",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": null
+  }
+}

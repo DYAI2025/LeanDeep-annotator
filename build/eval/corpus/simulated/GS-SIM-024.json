@@ -1,0 +1,235 @@
+{
+  "id": "GS-SIM-024",
+  "source": "simulated",
+  "language": "de",
+  "theme": "trauma",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "Ja, das hilft. Ich fuehle mich schon etwas ruhiger.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Gut. Dieser sichere Ort ist immer da, auch wenn es stuermisch wird.",
+      "start_time": 3.2
+    },
+    {
+      "role": "Client",
+      "text": "Ich brauche heute erst mal einen sicheren Boden.",
+      "start_time": 6.3
+    },
+    {
+      "role": "Therapist",
+      "text": "Lassen Sie uns mit einer Uebung beginnen. Spueren Sie Ihre Fuesse auf dem Boden.",
+      "start_time": 9.5
+    },
+    {
+      "role": "Client",
+      "text": "Es war nachts. Ich war allein. Ich hoerte Schritte und konnte mich nicht bewegen.",
+      "start_time": 12.5
+    },
+    {
+      "role": "Therapist",
+      "text": "Danke, dass Sie mir das anvertrauen. Wie geht es Ihnen gerade, wenn Sie das sagen?",
+      "start_time": 15.7
+    },
+    {
+      "role": "Client",
+      "text": "Es gibt da eine Erinnerung, die mich immer wieder einholt.",
+      "start_time": 19.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Moechten Sie mir davon erzaehlen? Nur so weit, wie es sich sicher anfuehlt.",
+      "start_time": 21.8
+    },
+    {
+      "role": "Client",
+      "text": "Ja. Dieselbe Hilflosigkeit. Dieselbe Enge in der Brust.",
+      "start_time": 24.8
+    },
+    {
+      "role": "Therapist",
+      "text": "Ihr Koerper erinnert sich. Aber Sie sind heute nicht mehr das kleine Kind. Sie sind hier, und Sie sind sicher.",
+      "start_time": 27.6
+    },
+    {
+      "role": "Client",
+      "text": "Dieses Gefuehl... das kenne ich. Das ist wie damals, als ich klein war.",
+      "start_time": 30.9
+    },
+    {
+      "role": "Therapist",
+      "text": "Es gibt also eine Bruecke zwischen dem Jetzt und dem Damals?",
+      "start_time": 33.8
+    },
+    {
+      "role": "Client",
+      "text": "Die Pflanze am Fenster. Das Bild an der Wand. Ihren Stuhl.",
+      "start_time": 36.6
+    },
+    {
+      "role": "Therapist",
+      "text": "Sehr gut. Sie sind im Hier und Jetzt. Das Damals ist vorbei.",
+      "start_time": 39.6
+    },
+    {
+      "role": "Client",
+      "text": "Stimmt. Ich bin jetzt hier. In diesem Raum. Bei Ihnen.",
+      "start_time": 42.6
+    },
+    {
+      "role": "Therapist",
+      "text": "Genau. Schauen Sie sich um. Was sehen Sie?",
+      "start_time": 45.4
+    },
+    {
+      "role": "Client",
+      "text": "Auf der Arbeit zum Beispiel. Da bin ich die, die immer Loesungen findet.",
+      "start_time": 48.6
+    },
+    {
+      "role": "Therapist",
+      "text": "Das klingt nach einer echten Staerke. Wie koennten Sie die auch hier nutzen?",
+      "start_time": 51.9
+    },
+    {
+      "role": "Client",
+      "text": "Eigentlich bin ich ganz gut darin, Probleme zu loesen. Das vergesse ich manchmal.",
+      "start_time": 54.9
+    },
+    {
+      "role": "Therapist",
+      "text": "Was sind denn Situationen, in denen Sie das gut koennen?",
+      "start_time": 57.8
+    }
+  ],
+  "metadata": {
+    "generator": "template-replay-v1",
+    "template_id": "trauma",
+    "message_count": 20,
+    "total_chars": 1337,
+    "duration_minutes": 61.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": null,
+      "original_hash": null
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "belastet",
+      "themes": [
+        "trauma",
+        "sicherheit",
+        "koerper"
+      ],
+      "relational_dynamics": "Therapist haelt Sicherheitsrahmen",
+      "intent": "trauma-processing",
+      "emotional_tenor": -0.4,
+      "context_validity": 0.9,
+      "offline_context_risk": 0.1
+    },
+    "semiotic_signs": [
+      {
+        "id": "sign-erstarrung",
+        "locus": "mid session",
+        "signifier": "Erstarrung",
+        "signified": "freeze response during trauma recall",
+        "type": "index",
+        "denotation": "Immobilization as trauma response",
+        "connotations": [
+          "helplessness",
+          "dissociation",
+          "survival"
+        ],
+        "codes": [
+          "trauma-theory"
+        ],
+        "evidence": "Client describes inability to move during memory"
+      }
+    ],
+    "expected_markers": {
+      "ATO": [
+        "ATO_BACKCHANNEL_REGULATION_B",
+        "ATO_BODY_LOAD",
+        "ATO_SELF_OBSERVATION_A",
+        "ATO_SYMBOL_IMAGE"
+      ],
+      "SEM": [
+        "SEM_SYMBOLIC_LINKING",
+        "SEM_SOMATIC_OVERLOAD_AFTER_EXPERIENCE"
+      ],
+      "CLU": [
+        "CLU_SAFE_EXPLORATION"
+      ],
+      "MEMA": [
+        "MEMA_SAFE_BASE_SIGNAL",
+        "MEMA_AGENCY_REASSEMBLY"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.3,
+        "arousal": 0.4,
+        "trigger": "session start",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.2,
+        "valence": 0.2,
+        "arousal": 0.5,
+        "trigger": "topic introduction",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.4,
+        "valence": -0.1,
+        "arousal": 0.7,
+        "trigger": "emotional deepening",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.6,
+        "valence": 0.1,
+        "arousal": 0.5,
+        "trigger": "crisis point",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.8,
+        "valence": 0.3,
+        "arousal": 0.35,
+        "trigger": "regulation",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "recovery",
+        "trigger_sign_id": ""
+      }
+    ],
+    "therapy_indices": {
+      "trust": 84,
+      "conflict": 10,
+      "deescalation": 86,
+      "synchronization": 80,
+      "semiotic_coherence": 71
+    },
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "trauma",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": null
+  }
+}

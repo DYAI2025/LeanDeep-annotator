@@ -1,0 +1,221 @@
+{
+  "id": "GS-SIM-047",
+  "source": "simulated",
+  "language": "de",
+  "theme": "uebertragung",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "Nein, das war alles. Danke.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Gut. Dann wuerde ich gerne etwas ansprechen, das mir letzte Sitzung aufgefallen ist.",
+      "start_time": 3.0
+    },
+    {
+      "role": "Client",
+      "text": "Bevor wir anfangen... Ich muss naechste Woche unseren Termin verschieben.",
+      "start_time": 6.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Kein Problem, wir finden einen Ersatztermin. Gibt es sonst noch etwas Organisatorisches?",
+      "start_time": 9.1
+    },
+    {
+      "role": "Client",
+      "text": "Sie nicken immer, aber ich weiss nicht, ob das echt ist.",
+      "start_time": 12.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Ich hoere, dass Sie sich nach echter Verbindung sehnen, auch hier in unserer Beziehung.",
+      "start_time": 15.1
+    },
+    {
+      "role": "Client",
+      "text": "Manchmal habe ich das Gefuehl, dass Sie mich nicht wirklich verstehen.",
+      "start_time": 18.3
+    },
+    {
+      "role": "Therapist",
+      "text": "Das ist wichtig, dass Sie das aussprechen. Was genau gibt Ihnen dieses Gefuehl?",
+      "start_time": 21.4
+    },
+    {
+      "role": "Client",
+      "text": "Diese ruhige Art. Ich weiss nie, was Sie wirklich denken.",
+      "start_time": 24.5
+    },
+    {
+      "role": "Therapist",
+      "text": "Koennte es sein, dass Sie hier etwas wiederholen, was Sie von frueher kennen?",
+      "start_time": 27.6
+    },
+    {
+      "role": "Client",
+      "text": "Sie reagieren gerade genauso wie meine Mutter frueher.",
+      "start_time": 30.7
+    },
+    {
+      "role": "Therapist",
+      "text": "Was genau erinnert Sie an Ihre Mutter?",
+      "start_time": 33.9
+    },
+    {
+      "role": "Client",
+      "text": "Ja... wahrscheinlich schon. Ich wuensche mir Bestaetigung, die ich nie gekriegt habe.",
+      "start_time": 37.1
+    },
+    {
+      "role": "Therapist",
+      "text": "Und genau das koennen wir hier gemeinsam anschauen. Es ist ein sicherer Raum dafuer.",
+      "start_time": 40.0
+    },
+    {
+      "role": "Client",
+      "text": "Sie meinen, ich suche hier das, was ich zuhause nie bekommen habe?",
+      "start_time": 43.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Was denken Sie: Koennte da etwas dran sein?",
+      "start_time": 45.9
+    },
+    {
+      "role": "Client",
+      "text": "Das klingt hart. Aber ich verstehe es.",
+      "start_time": 48.8
+    },
+    {
+      "role": "Therapist",
+      "text": "Der Rahmen schuetzt uns beide und macht diesen Raum ueberhaupt erst moeglich.",
+      "start_time": 52.0
+    },
+    {
+      "role": "Client",
+      "text": "Darf ich Sie eigentlich auch ausserhalb der Sitzung anrufen?",
+      "start_time": 55.2
+    },
+    {
+      "role": "Therapist",
+      "text": "Ich verstehe den Wunsch. Unsere gemeinsame Arbeit findet hier in den Sitzungen statt.",
+      "start_time": 58.2
+    }
+  ],
+  "metadata": {
+    "generator": "template-replay-v1",
+    "template_id": "uebertragung",
+    "message_count": 20,
+    "total_chars": 1328,
+    "duration_minutes": 61.3,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": null,
+      "original_hash": null
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "geladen",
+      "themes": [
+        "uebertragung",
+        "therapeutische_beziehung",
+        "bindung"
+      ],
+      "relational_dynamics": "Beziehungsdynamik wird zum Material",
+      "intent": "transference-work",
+      "emotional_tenor": -0.1,
+      "context_validity": 0.85,
+      "offline_context_risk": 0.2
+    },
+    "semiotic_signs": [
+      {
+        "id": "sign-mutterreaktion",
+        "locus": "mid session",
+        "signifier": "wie meine Mutter",
+        "signified": "transference onto therapist",
+        "type": "symbol",
+        "denotation": "Therapist experienced as parental figure",
+        "connotations": [
+          "projection",
+          "repetition",
+          "attachment"
+        ],
+        "codes": [
+          "psychodynamic"
+        ],
+        "evidence": "Client compares therapist to mother"
+      }
+    ],
+    "expected_markers": {
+      "ATO": [
+        "ATO_OPEN_EXPLORATION_B"
+      ],
+      "SEM": [],
+      "CLU": [
+        "CLU_TRANSFERENCE_PATTERN"
+      ],
+      "MEMA": [
+        "MEMA_SAFE_BASE_SIGNAL"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.2,
+        "arousal": 0.5,
+        "trigger": "session start",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.2,
+        "valence": 0.3,
+        "arousal": 0.45,
+        "trigger": "topic introduction",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.5,
+        "valence": 0.5,
+        "arousal": 0.35,
+        "trigger": "emotional deepening",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.75,
+        "valence": 0.6,
+        "arousal": 0.3,
+        "trigger": "crisis point",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.5,
+        "arousal": 0.3,
+        "trigger": "regulation",
+        "trigger_sign_id": ""
+      }
+    ],
+    "therapy_indices": {
+      "trust": 69,
+      "conflict": 28,
+      "deescalation": 73,
+      "synchronization": 68,
+      "semiotic_coherence": 60
+    },
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "uebertragung",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": null
+  }
+}

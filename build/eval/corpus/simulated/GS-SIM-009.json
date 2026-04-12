@@ -1,0 +1,231 @@
+{
+  "id": "GS-SIM-009",
+  "source": "simulated",
+  "language": "de",
+  "theme": "angst",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "Es ist alles so viel gerade. Ich fuehle mich ueberwaeltigt.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Das hoert sich belastend an. Lassen Sie uns gemeinsam schauen, was gerade am draengendsten ist.",
+      "start_time": 2.9
+    },
+    {
+      "role": "Client",
+      "text": "Ich weiss nicht, wo ich anfangen soll heute.",
+      "start_time": 6.1
+    },
+    {
+      "role": "Therapist",
+      "text": "Nehmen Sie sich die Zeit, die Sie brauchen. Was beschaeftigt Sie gerade am meisten?",
+      "start_time": 9.1
+    },
+    {
+      "role": "Client",
+      "text": "Es ist wie ein Druck. Und mein Kopf fuehlt sich benebelt an.",
+      "start_time": 12.1
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm. Der Koerper speichert manchmal das, was wir noch nicht in Worte fassen koennen.",
+      "start_time": 15.0
+    },
+    {
+      "role": "Client",
+      "text": "Mein Koerper fuehlt sich ganz schwer an, besonders in der Brust.",
+      "start_time": 18.2
+    },
+    {
+      "role": "Therapist",
+      "text": "Koennen Sie mir beschreiben, was Sie koerperlich wahrnehmen?",
+      "start_time": 21.1
+    },
+    {
+      "role": "Client",
+      "text": "Menschenmengen, oeffentliche Verkehrsmittel... Ich habe Angst, die Kontrolle zu verlieren.",
+      "start_time": 24.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Die Vermeidung gibt Ihnen kurzfristig Sicherheit, aber langfristig wird der Radius kleiner.",
+      "start_time": 27.0
+    },
+    {
+      "role": "Client",
+      "text": "Ich gehe bestimmten Situationen einfach aus dem Weg. Das ist einfacher.",
+      "start_time": 29.8
+    },
+    {
+      "role": "Therapist",
+      "text": "Was genau vermeiden Sie, und was befuerchten Sie dabei?",
+      "start_time": 32.7
+    },
+    {
+      "role": "Client",
+      "text": "Jemanden, der mitkommt. Alleine schaffe ich das noch nicht.",
+      "start_time": 35.9
+    },
+    {
+      "role": "Therapist",
+      "text": "Das ist voellig in Ordnung. Wir gehen in Ihrem Tempo.",
+      "start_time": 38.9
+    },
+    {
+      "role": "Client",
+      "text": "Vielleicht koennte ich ja mal versuchen, mit dem Bus zu fahren. Nur eine Station.",
+      "start_time": 41.7
+    },
+    {
+      "role": "Therapist",
+      "text": "Das waere ein mutiger Schritt. Was brauchten Sie dafuer?",
+      "start_time": 44.6
+    },
+    {
+      "role": "Client",
+      "text": "Danke. Ich merke, dass mein Herz schneller schlaegt.",
+      "start_time": 47.5
+    },
+    {
+      "role": "Therapist",
+      "text": "Gut, dass Sie das wahrnehmen. Das ist ein wichtiges Signal Ihres Koerpers.",
+      "start_time": 50.6
+    },
+    {
+      "role": "Client",
+      "text": "Das wird mir gerade zu viel. Koennen wir kurz pausieren?",
+      "start_time": 53.6
+    },
+    {
+      "role": "Therapist",
+      "text": "Natuerlich. Atmen Sie einmal tief durch. Wir machen weiter, wenn Sie bereit sind.",
+      "start_time": 56.4
+    }
+  ],
+  "metadata": {
+    "generator": "template-replay-v1",
+    "template_id": "angst",
+    "message_count": 20,
+    "total_chars": 1368,
+    "duration_minutes": 59.3,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": null,
+      "original_hash": null
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "aengstlich",
+      "themes": [
+        "angst",
+        "vermeidung",
+        "koerper"
+      ],
+      "relational_dynamics": "Therapist reguliert Tempo",
+      "intent": "fear-processing",
+      "emotional_tenor": -0.3,
+      "context_validity": 0.9,
+      "offline_context_risk": 0.15
+    },
+    "semiotic_signs": [
+      {
+        "id": "sign-enge",
+        "locus": "mid session",
+        "signifier": "Enge in der Brust",
+        "signified": "somatic anxiety expression",
+        "type": "index",
+        "denotation": "Physical tightness as anxiety marker",
+        "connotations": [
+          "threat",
+          "constriction",
+          "fight-or-flight"
+        ],
+        "codes": [
+          "somatic"
+        ],
+        "evidence": "Client reports chest tightness"
+      }
+    ],
+    "expected_markers": {
+      "ATO": [
+        "ATO_BODY_LOAD",
+        "ATO_SELF_OBSERVATION_A",
+        "ATO_IF_THEN_PRESSURE",
+        "ATO_BACKCHANNEL_REGULATION_B"
+      ],
+      "SEM": [
+        "SEM_TRAPPED_AND_ESCAPE"
+      ],
+      "CLU": [],
+      "MEMA": [
+        "MEMA_SAFE_BASE_SIGNAL"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.3,
+        "arousal": 0.4,
+        "trigger": "session start",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.2,
+        "valence": 0.2,
+        "arousal": 0.5,
+        "trigger": "topic introduction",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.4,
+        "valence": -0.1,
+        "arousal": 0.7,
+        "trigger": "emotional deepening",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.6,
+        "valence": 0.1,
+        "arousal": 0.5,
+        "trigger": "crisis point",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.8,
+        "valence": 0.3,
+        "arousal": 0.35,
+        "trigger": "regulation",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "recovery",
+        "trigger_sign_id": ""
+      }
+    ],
+    "therapy_indices": {
+      "trust": 83,
+      "conflict": 6,
+      "deescalation": 87,
+      "synchronization": 75,
+      "semiotic_coherence": 65
+    },
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "angst",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": null
+  }
+}

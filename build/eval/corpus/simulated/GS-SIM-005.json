@@ -1,0 +1,227 @@
+{
+  "id": "GS-SIM-005",
+  "source": "simulated",
+  "language": "de",
+  "theme": "selbstwert",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "Ich weiss nicht, wo ich anfangen soll heute.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Nehmen Sie sich die Zeit, die Sie brauchen. Was beschaeftigt Sie gerade am meisten?",
+      "start_time": 2.8
+    },
+    {
+      "role": "Client",
+      "text": "Es ist alles so viel gerade. Ich fuehle mich ueberwaeltigt.",
+      "start_time": 6.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Das hoert sich belastend an. Lassen Sie uns gemeinsam schauen, was gerade am draengendsten ist.",
+      "start_time": 9.3
+    },
+    {
+      "role": "Client",
+      "text": "Mein Koerper fuehlt sich ganz schwer an, besonders in der Brust.",
+      "start_time": 12.1
+    },
+    {
+      "role": "Therapist",
+      "text": "Koennen Sie mir beschreiben, was Sie koerperlich wahrnehmen?",
+      "start_time": 14.9
+    },
+    {
+      "role": "Client",
+      "text": "Es ist wie ein Druck. Und mein Kopf fuehlt sich benebelt an.",
+      "start_time": 17.9
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm. Der Koerper speichert manchmal das, was wir noch nicht in Worte fassen koennen.",
+      "start_time": 21.2
+    },
+    {
+      "role": "Client",
+      "text": "Ich zeige nie, wie es mir wirklich geht. Alle denken, mir geht es gut.",
+      "start_time": 24.2
+    },
+    {
+      "role": "Therapist",
+      "text": "Was wuerde passieren, wenn jemand sehen wuerde, wie es Ihnen wirklich geht?",
+      "start_time": 27.3
+    },
+    {
+      "role": "Client",
+      "text": "Dann wuerden sie mich fuer schwach halten. Das kann ich nicht ertragen.",
+      "start_time": 30.5
+    },
+    {
+      "role": "Therapist",
+      "text": "Es klingt, als ob die Fassade Sie schuetzt, aber gleichzeitig auch sehr einsam macht.",
+      "start_time": 33.6
+    },
+    {
+      "role": "Client",
+      "text": "Vielleicht bin ich doch nicht so wertlos, wie ich immer dachte.",
+      "start_time": 36.5
+    },
+    {
+      "role": "Therapist",
+      "text": "Was hat sich veraendert, dass Sie das jetzt so sehen koennen?",
+      "start_time": 39.6
+    },
+    {
+      "role": "Client",
+      "text": "Letzte Woche hat mir jemand gesagt, dass er mich schaetzt. Das hat mich sehr beruehrt.",
+      "start_time": 42.5
+    },
+    {
+      "role": "Therapist",
+      "text": "Das ist ein wichtiger Moment. Sie erlauben sich, das anzunehmen.",
+      "start_time": 45.7
+    },
+    {
+      "role": "Client",
+      "text": "Eigentlich bin ich ganz gut darin, Probleme zu loesen. Das vergesse ich manchmal.",
+      "start_time": 48.6
+    },
+    {
+      "role": "Therapist",
+      "text": "Was sind denn Situationen, in denen Sie das gut koennen?",
+      "start_time": 51.8
+    },
+    {
+      "role": "Client",
+      "text": "Auf der Arbeit zum Beispiel. Da bin ich die, die immer Loesungen findet.",
+      "start_time": 55.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Das klingt nach einer echten Staerke. Wie koennten Sie die auch hier nutzen?",
+      "start_time": 57.9
+    }
+  ],
+  "metadata": {
+    "generator": "template-replay-v1",
+    "template_id": "selbstwert",
+    "message_count": 20,
+    "total_chars": 1409,
+    "duration_minutes": 61.1,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": null,
+      "original_hash": null
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "verletzlich",
+      "themes": [
+        "selbstwert",
+        "scham",
+        "identitaet"
+      ],
+      "relational_dynamics": "Therapist spiegelt Wuerde",
+      "intent": "self-exploration",
+      "emotional_tenor": -0.1,
+      "context_validity": 0.85,
+      "offline_context_risk": 0.2
+    },
+    "semiotic_signs": [
+      {
+        "id": "sign-fassade",
+        "locus": "early session",
+        "signifier": "Fassade",
+        "signified": "protection against shame exposure",
+        "type": "symbol",
+        "denotation": "Mask or front presented to the world",
+        "connotations": [
+          "self-protection",
+          "isolation",
+          "shame"
+        ],
+        "codes": [
+          "psychodynamic"
+        ],
+        "evidence": "Client describes hiding true feelings"
+      }
+    ],
+    "expected_markers": {
+      "ATO": [
+        "ATO_BODY_LOAD",
+        "ATO_SELF_OBSERVATION_A",
+        "ATO_SYMBOL_IMAGE"
+      ],
+      "SEM": [
+        "SEM_SELF_WORTH_SHIFT",
+        "SEM_MEANING_MAKING"
+      ],
+      "CLU": [
+        "CLU_SAFE_EXPLORATION",
+        "CLU_MISSION_FORMATION"
+      ],
+      "MEMA": [
+        "MEMA_AGENCY_REASSEMBLY"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.2,
+        "arousal": 0.5,
+        "trigger": "session start",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.2,
+        "valence": 0.3,
+        "arousal": 0.45,
+        "trigger": "topic introduction",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.5,
+        "valence": 0.5,
+        "arousal": 0.35,
+        "trigger": "emotional deepening",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.75,
+        "valence": 0.6,
+        "arousal": 0.3,
+        "trigger": "crisis point",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.5,
+        "arousal": 0.3,
+        "trigger": "regulation",
+        "trigger_sign_id": ""
+      }
+    ],
+    "therapy_indices": {
+      "trust": 77,
+      "conflict": 13,
+      "deescalation": 84,
+      "synchronization": 74,
+      "semiotic_coherence": 61
+    },
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "selbstwert",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": null
+  }
+}
