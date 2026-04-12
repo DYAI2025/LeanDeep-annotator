@@ -140,8 +140,8 @@ Include: `Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>` when appropri
 ### Frontend
 
 - **Directory**: [`frontend/`](frontend/)
-- **Technology**: React (or vanilla JS — TBD)
-- **Responsibility**: Interactive visualization — text highlighting, tooltips, narrative-marker linking, marker library, dialogue upload
+- **Technology**: React 18+ / TypeScript / Vite (per DEC-frontend-react-vite)
+- **Responsibility**: Interactive visualization — text highlighting, tooltips, narrative-marker linking, marker library, dialogue upload, enrichment review UI
 
 ### Marker Pipeline
 

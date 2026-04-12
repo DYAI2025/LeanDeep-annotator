@@ -347,10 +347,94 @@ Header Override:
 
 ---
 
+## Error Handling
+
+**Satisfies**: REQ-REL-provider-fallback, REQ-SEC-data-handling
+
+### Failure Modes
+
+| Failure | Detection | Recovery | Response |
+|---------|-----------|----------|----------|
+| Primary LLM provider timeout | Timeout > `LEANDEEP_LLM_TIMEOUT` (default 2s) | Try next provider in chain | `degraded: true`, `fallback_reason: "timeout"` |
+| All LLM providers unavailable | All providers return error | Embedding fallback → markers only | `degraded: true`, `frame: null`, `narratives: []` |
+| Marker registry load failure | Startup check | Fail fast — service refuses traffic | 500 INTERNAL_ERROR |
+| Invalid input (malformed JSON) | Pydantic validation | Return 400 VALIDATION_ERROR | Error response with field details |
+| Rate limit exceeded | Token bucket counter | Return 429 with Retry-After header | `RATE_LIMITED` error |
+| Cache corruption | Deserialization error | Evict key, recompute | Transparent to user (slightly higher latency) |
+
+### Degraded Mode Behavior
+
+When semantic framing fails (provider outage, timeout):
+- `frame = null` — no SemanticFrame returned
+- Markers returned with `resonance_score: 0.0` and `adjusted_confidence = raw confidence`
+- `narratives = []` — no narratives generated without frame
+- `degraded: true` and `fallback_reason` populated
+- System remains functional for marker-only analysis
+
+### Security Rules (REQ-SEC-data-handling)
+
+- Production error responses NEVER include stack traces, internal file paths, or debug info
+- No dialogue content appears in application logs (log marker IDs and metadata, not text)
+- No sensitive data in URL query parameters (all dialogue text via POST body)
+- 401 responses include no data beyond error code and generic message
+
+---
+
+## Extensibility
+
+**Satisfies**: REQ-F-rest-api (provider selection), REQ-MNT-marker-evolution-tracking
+
+### Extension Points
+
+| Extension Point | Mechanism | Example |
+|-----------------|-----------|---------|
+| **Semantic Provider** | Pluggable via `LEANDEEP_LLM_PROVIDER` env var + `X-LeanDeep-Provider` header | Add Anthropic, Cohere, or custom model |
+| **Marker Types** | Add new YAML files to `build/markers_rated/` → run `normalize_schema.py` | New ATO patterns, SEM blends, CLU families |
+| **Narrative Prompts** | Template-based prompt system in `api/narrative.py` | Add domain-specific narrative styles |
+| **Resonance Tags** | Free-form tags per marker — no schema validation needed | New semantic dimensions without code changes |
+| **Enrichment Pipeline** | CLI scripts in `tools/` — each script is independent | Add new enrichment types (e.g., sentiment, topic clustering) |
+| **Persona Metrics** | EWMA state is extensible — new fields added to YAML without breaking existing | Add new behavioral metrics per persona |
+
+### Adding a New Semantic Provider
+
+1. Implement provider adapter in `api/providers/` (must conform to `SemanticProvider` interface)
+2. Register provider in `api/semantic.py` provider registry
+3. Add env var option to `api/config.py`
+4. Test with existing semantic framing test suite
+
+### Adding a New Marker Type
+
+1. Create YAML file in `build/markers_rated/{rating}/`
+2. Include all required fields (id, layer, family, pattern, pattern_type, description, vad, resonance_tags)
+3. Run `python3 tools/normalize_schema.py`
+4. Run `python3 -m pytest tests/` to verify no regressions
+
+---
+
+## Requirement Coverage
+
+| Requirement | Architecture Section | Covered |
+|---|---|---|
+| REQ-F-semantic-framing | Semantic Framing Layer | ✅ Yes |
+| REQ-F-marker-resonance-weighting | Frame Resonance Weighting Layer | ✅ Yes |
+| REQ-F-multi-narrative-analysis | Multi-Narrative Interpretation Layer | ✅ Yes |
+| REQ-USA-interactive-visualization | Interactive Visualization Layer | ✅ Yes |
+| REQ-PERF-conversation-latency | Latency Budget (Detailed) | ✅ Yes |
+| REQ-F-candidate-detection | Enrichment Domain (data-model.md), Enrichment Endpoints (api-design.md) | ✅ Yes (downstream docs) |
+| REQ-F-example-auto-enrichment | Enrichment Domain (data-model.md), Enrichment Endpoints (api-design.md) | ✅ Yes (downstream docs) |
+| REQ-COMP-professional-interpretability | Multi-Narrative Layer (konjunktiv), Narrative Ranking | ✅ Yes |
+| REQ-MNT-marker-evolution-tracking | Enrichment Domain (data-model.md: MarkerChangeRecord) | ✅ Yes (downstream docs) |
+| REQ-F-rest-api | Provider Flexibility, API Design (api-design.md) | ✅ Yes (downstream docs) |
+| REQ-SCA-rate-limiting | Rate Limiting (api-design.md) | ✅ Yes (downstream docs) |
+| REQ-SEC-data-handling | Error Handling, Provider Flexibility | ✅ Yes |
+| REQ-REL-provider-fallback | Provider Flexibility, Fallback Chain, Error Handling | ✅ Yes |
+
+---
+
 ## Deployment Model
 
-- Containerized via Docker
-- Fly.io deployment (serverless with PostgreSQL for cache if needed)
+- Containerized via Docker (multi-stage: Node frontend → Python runtime)
+- Railway deployment (per DEC-railway-deployment; fly.toml deprecated)
 - Optional Redis for distributed caching
 - Optional LLM provider (Gemini configured at startup)
 
@@ -358,6 +442,10 @@ Header Override:
 
 ## Decision Records
 
-- [DEC-semantic-guided-multi-perspective-architecture](../decisions/DEC-semantic-guided-multi-perspective-architecture.md): Central design decision
-- [DEC-no-compose-of-rules](../decisions/DEC-no-compose-of-rules.md): Free-form marker evolution
-- [DEC-context-uncertainty-proportional-variance](../decisions/DEC-context-uncertainty-proportional-variance.md): NEW: narrative count scales with context uncertainty
+| File | Title | Relevance |
+|------|-------|-----------|
+| [DEC-semantic-guided-multi-perspective-architecture](../decisions/DEC-semantic-guided-multi-perspective-architecture.md) | Semantic-guided multi-perspective analysis | Central design decision |
+| [DEC-context-uncertainty-proportional-variance](../decisions/DEC-context-uncertainty-proportional-variance.md) | Narrative count scales with context uncertainty | Multi-narrative layer |
+| [DEC-frontend-react-vite](../decisions/DEC-frontend-react-vite.md) | React + TypeScript + Vite stack | Frontend component |
+| [DEC-railway-deployment](../decisions/DEC-railway-deployment.md) | Railway over Fly.io | Deployment model |
+| [DEC-v1-backward-compatibility](../decisions/DEC-v1-backward-compatibility.md) | v1 API additive-only changes | API design |
