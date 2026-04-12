@@ -1,0 +1,246 @@
+{
+  "id": "GS-KAH-007",
+  "source": "real",
+  "language": "de",
+  "theme": "koerper",
+  "messages": [
+    {
+      "role": "Therapist",
+      "text": "Das glaube ich nicht.",
+      "start_time": 1710.758
+    },
+    {
+      "role": "Client",
+      "text": "Nicht? [lacht]",
+      "start_time": 1712.278
+    },
+    {
+      "role": "Therapist",
+      "text": "Ne, das glaube ich nicht. Glauben Sie das?",
+      "start_time": 1713.078
+    },
+    {
+      "role": "Client",
+      "text": "Ich weiß es nicht.",
+      "start_time": 1715.658
+    },
+    {
+      "role": "Therapist",
+      "text": "Also vielleicht eher dieses angewidert sein. Angewidert sein vielleicht von etwas, was, ähm, was Sie mit sich selber manchmal machen. Vielleicht von der alten Verhaltensweise, von etwas, wo Sie merken: „Boah, da habe ich gar keinen Bock mehr drauf.\" Ich klammere mich an etwas, Fassade, um eine bestimmte Fassade aufrechtzuerhalten, die mich aber eigentlich anekelt, weil es für mich überhaupt nicht mehr stimmig ist. Oder ich das gar nicht mehr fühle oder gar nicht mehr will oder gar nicht sein will.",
+      "start_time": 1717.318
+    },
+    {
+      "role": "Client",
+      "text": "Ja.",
+      "start_time": 1760.878
+    },
+    {
+      "role": "Therapist",
+      "text": "Und dazu passt auch dieses so: „Ich laufe durch den Matsch.\" Ne, Schlamm. So, das zieht mich ja auch immer wieder ein bisschen runter. Das ist kein einfacher Weg. Ja, ich kann da auch mal stecken bleiben. Und dann ist es ja auch ein Treffpunkt aus der Jugend. Also ein alter Ego.",
+      "start_time": 1762.318
+    },
+    {
+      "role": "Client",
+      "text": "Das hat noch einen anderen Hintergrund.",
+      "start_time": 1781.198
+    },
+    {
+      "role": "Therapist",
+      "text": "Ja.",
+      "start_time": 1783.158
+    },
+    {
+      "role": "Client",
+      "text": "Ich habe immer diese Abkürzung über die Wiese genommen.",
+      "start_time": 1783.618
+    },
+    {
+      "role": "Therapist",
+      "text": "Ahh. Eine Abkürzung?",
+      "start_time": 1786.618
+    },
+    {
+      "role": "Client",
+      "text": "Ja. Aber das war das Hundebollefeld, haben wir das immer genannt, weil da die ganzen Hunde drauf geschissen haben.",
+      "start_time": 1787.598
+    },
+    {
+      "role": "Therapist",
+      "text": "Aaah.",
+      "start_time": 1793.458
+    },
+    {
+      "role": "Client",
+      "text": "Das war total",
+      "start_time": 1794.938
+    },
+    {
+      "role": "Other",
+      "text": "[unverständlich] Tretmine. Da hast du immer gewusst, okay, du kannst jetzt die Abkürzung nehmen, aber dann trittst du in die Scheiße, je nachdem. Jetzt lachen Sie. [lacht] Was amüsiert Sie jetzt gerade?",
+      "start_time": 1795.978
+    },
+    {
+      "role": "Client",
+      "text": "Das ist ja genau das, worüber wir gesprochen haben, dass der kürzere Weg eben scheiße ist. Ja. Und dass der längere Weg ja meistens dann doch, also, braucht länger, aber die Schuhe sind nicht dreckig. Ne, das ist clean.",
+      "start_time": 1813.158
+    },
+    {
+      "role": "Therapist",
+      "text": "[Schmunzeln] Ja, und vielleicht auch, ähm, langfristig, ähm, stabiler.",
+      "start_time": 1833.793
+    },
+    {
+      "role": "Client",
+      "text": "Stabiler und vielleicht auch erwachsener. Ja.",
+      "start_time": 1840.174
+    },
+    {
+      "role": "Therapist",
+      "text": "Ja, dann auch dieser Bus, ne? Ähm...",
+      "start_time": 1849.444
+    },
+    {
+      "role": "Client",
+      "text": "Ja, das mit dem Bus ist sowieso so 'ne Sache, weil ich habe jetzt immer auch diese Sätze im Kopf von dem Buch und wie ich das formuliere und es sind auch Sachen dabei, wo-- die ich lustig finde, aber die gar nicht lustig sind natürlich, ja. Also, als ich letztes Mal hier dann heimgefahren bin, hab ich auch ein paar Tränchen verdrückt.",
+      "start_time": 1852.144
+    },
+    {
+      "role": "Therapist",
+      "text": "Gestern Morgen?",
+      "start_time": 1872.254
+    },
+    {
+      "role": "Client",
+      "text": "Ja.",
+      "start_time": 1873.014
+    },
+    {
+      "role": "Therapist",
+      "text": "Ja.",
+      "start_time": 1873.644
+    },
+    {
+      "role": "Client",
+      "text": "Dann habe ich mir gedacht: „Warum jetzt?\" Was-- Dann habe ich so abgecheckt die Traurigkeit und so. Und dann dachte ich: \"Ne, bedauern, was ich mir schon alles angetan habe.\" Ja? Und dann kam das so-",
+      "start_time": 1873.793
+    },
+    {
+      "role": "Therapist",
+      "text": "Mitgefühl.",
+      "start_time": 1887.094
+    },
+    {
+      "role": "Client",
+      "text": "Mitgefühl. Und dann sind mir auch wieder ganz viele Situationen eingefallen, was ich schon erduldet hab, was schon alles so... Was ich schon alles abgetan hab, was ja angeblich nicht so schlimm ist. So, ne? Der Herr Hartmann hat ja auch Mitgefühl gezeigt. Und da dachte ich ja auch, da ich wieder so Sprüche im Kopf gehabt: „Nur die Harten kommen in den Garten\", und diesen ganzen Flachs. Und dachte dann: „Okay, wie formuliere ich das jetzt auch in meinem Buch?\" Und habe dann die ganze Zeit gedacht: „Da mache ich diesen Wortwitz mit der Borderline.\" Also, dass die Borderline wie ein Bus ist oder wie ein Zug ist, der dich wo hinbringt. Du steigst immer wieder in dieses doofe Borderline und fährst deine Strecke damit und weißt aber genau, das ist... Es fährt nicht ans Ziel, aber trotzdem steigst du immer wieder ein, denkst immer wieder: „Wenn ich das nicht mache, verpasse ich was. Ich muss das machen, ich muss das machen.\" Und was man sich dann antut, ja? Und wie oft ich schon in den falschen Zug gestiegen bin und dann doch wieder zurückgefahren und doch wieder eingestiegen, wenn es denn da war, die Gelegenheit. Und so war es ja in dem Dorf auch. Ich bin ja tatsächlich auch weggegangen, aber mit Leuten oder an Orte, wo es auch nicht besser war. Ich war da so... Hab mich da echt auch mit Gesellschaft umgeben, die echt übel war. Und dachte mir so: „Gott, was hab ich mir da angetan? Es war ja uh, eklig.\" Ja.",
+      "start_time": 1887.854
+    }
+  ],
+  "metadata": {
+    "generator": null,
+    "template_id": null,
+    "message_count": 26,
+    "total_chars": 3689,
+    "duration_minutes": 2.95,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "anonymized",
+      "method": "name_replacement",
+      "original_hash": "b0dc86055c43ec870b48575ff1cae693434f5a5343cdcdb9a30b9834289ef42b"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "concerned-somatic",
+      "themes": [
+        "koerper",
+        "somatisierung"
+      ],
+      "relational_dynamics": "empathic-attuned",
+      "intent": "symptom_exploration",
+      "emotional_tenor": -0.2,
+      "context_validity": 0.8,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [
+      {
+        "id": "SIGN-KAH-007-1",
+        "locus": "t=1711-1888s",
+        "signifier": "koerperliche Erschoepfung",
+        "type": "index",
+        "denotation": "Body as symptom carrier",
+        "connotations": [
+          "somatic memory",
+          "psychosomatic expression"
+        ],
+        "codes": [
+          "koerper"
+        ],
+        "markers": [
+          "ATO_BODY_LOAD",
+          "ATO_SELF_OBSERVATION_A",
+          "SEM_SOMATIC_OVERLOAD_AFTER_EXPERIENCE"
+        ]
+      }
+    ],
+    "expected_markers": {
+      "ATO": [
+        "ATO_BODY_LOAD",
+        "ATO_SELF_OBSERVATION_A"
+      ],
+      "SEM": [
+        "SEM_SOMATIC_OVERLOAD_AFTER_EXPERIENCE"
+      ],
+      "CLU": [
+        "CLU_BODY_TO_MEANING_LOOP"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.35,
+        "arousal": 0.4,
+        "trigger": "session_start",
+        "trigger_sign_id": "SIGN-KAH-007-1"
+      },
+      {
+        "t": 0.25,
+        "valence": 0.4,
+        "arousal": 0.35,
+        "trigger": "stable_exploration",
+        "trigger_sign_id": "SIGN-KAH-007-1"
+      },
+      {
+        "t": 0.5,
+        "valence": 0.45,
+        "arousal": 0.35,
+        "trigger": "steady_work",
+        "trigger_sign_id": "SIGN-KAH-007-1"
+      },
+      {
+        "t": 0.75,
+        "valence": 0.45,
+        "arousal": 0.3,
+        "trigger": "consolidation",
+        "trigger_sign_id": "SIGN-KAH-007-1"
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "closing",
+        "trigger_sign_id": "SIGN-KAH-007-1"
+      }
+    ],
+    "therapy_indices": {
+      "trust": 84,
+      "conflict": 15,
+      "deescalation": 83,
+      "synchronization": 79,
+      "semiotic_coherence": 73
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": 0.0
+  }
+}

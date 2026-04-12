@@ -1,0 +1,205 @@
+{
+  "id": "GS-KAH-004",
+  "source": "real",
+  "language": "de",
+  "theme": "familie",
+  "messages": [
+    {
+      "role": "Therapist",
+      "text": "Nach [Ort_A] zu ziehen? Mhm. Inwiefern?",
+      "start_time": 741.742
+    },
+    {
+      "role": "Client",
+      "text": "Ja, ich dachte mir schon, dass es mit dem Typ wahrscheinlich nicht für immer ist. Wir waren schon sehr unterschiedlich. Das war son ganz, äh, straighter Wirtschaftsstudent. Mhm. Und ich halt die Künstlerin und wir kannten uns aus der Kindheit.",
+      "start_time": 746.562
+    },
+    {
+      "role": "Therapist",
+      "text": "Ach?",
+      "start_time": 763.542
+    },
+    {
+      "role": "Client",
+      "text": "Ja. Wir hatten da sone österreichische Austauschfamilie und das war dann so dieses, zwei Fliegen mit einer Klappe. Mhm. Der Wunsch Schwiegersohn und ich bin hier raus. Und dann bin ich da hin und hab dann dort auch weiter studiert. Ich war ja gerade im Kunststudium und... Mhm. Ja.",
+      "start_time": 764.122
+    },
+    {
+      "role": "Therapist",
+      "text": "Da ist [Ort_A] auch eine tolle Stadt natürlich dafür.",
+      "start_time": 786.122
+    },
+    {
+      "role": "Client",
+      "text": "Ach super! Und dann in dem Traum, alsooo, dann waren Sie an dieser Bushaltestelle und dann an Ihrem Siemensdachen, also an diesem Treffpunkt. Und dann kam die Klammer. Kam die Klammer.",
+      "start_time": 788.542
+    },
+    {
+      "role": "Therapist",
+      "text": "Die ist Ihnen quasi ins Gesicht gesprungen.",
+      "start_time": 806.742
+    },
+    {
+      "role": "Client",
+      "text": "Ja. Es war surreal. Äh, Matsch war da auch noch. Ich hab dann richtig so gesehen und dann dachte ich so: „Oh, jetzt muss ich auch noch durch den Matsch, und dann sind die Schuhe so eingesunken. Es war so richtig, ähm, real, ja. War ich wieder in der Akasha-Chronik unterwegs. [lacht] Und dann wieder... Ich weiß es nicht. Es kann alles sein. Ich bin, ich bin nur eben wieder aufgewacht und hab mir so gefühlt so, whoa, kaum geschlafen. Das war halt anstrengend.",
+      "start_time": 809.082
+    },
+    {
+      "role": "Therapist",
+      "text": "Genau, also da läuft noch der Verarbeitungsprozess von der Sitzung.",
+      "start_time": 851.462
+    },
+    {
+      "role": "Client",
+      "text": "Ja.",
+      "start_time": 856.562
+    },
+    {
+      "role": "Therapist",
+      "text": "Sie sind ja da... Ich weiß gar nicht. Was erinnern Sie denn noch von der Sitzung?",
+      "start_time": 858.342
+    },
+    {
+      "role": "Client",
+      "text": "Alles.",
+      "start_time": 862.262
+    },
+    {
+      "role": "Therapist",
+      "text": "Also man denkt oft, dass es alles ist. Deswegen würd mich mal interessieren, was erinnern Sie denn noch davon? [lacht]",
+      "start_time": 864.062
+    },
+    {
+      "role": "Client",
+      "text": "Ich hab auch noch, äh, den genauen Klang und den Akzent hab ich auch noch total im Ohr.",
+      "start_time": 869.622
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm.",
+      "start_time": 877.422
+    },
+    {
+      "role": "Client",
+      "text": "Ja.",
+      "start_time": 878.402
+    },
+    {
+      "role": "Therapist",
+      "text": "Wenn Sie jetzt sagen würden, noch mal zusammenfassen würden, was jetzt da alles passiert?",
+      "start_time": 882.162
+    },
+    {
+      "role": "Client",
+      "text": "Wie ne Verknüpfung, dass wir noch mal richtig in die frühe Kindheit gehen. So, wo ich dachte, so, okay, das ist abgeschlossen, da brauchen wir nicht mehr dran therapieren. Dann ist noch mal so hochgeholt und ja auch verknüpft mit dem Heutigen und eigentlich ja auch mit dem Zukünftigen- Mhm. -aber das war noch so gaaanz diffus. Äh, da hab ich auch schon während der Sitzung gemerkt, okay, da, da hab ich noch nicht wirklich den, äh, Zugriff, aber- Mhm. -dass ich die Kleine noch mal dazuhole, das war schon, äh, das, ja, das ging. Ja, und ich, äh, hab-- die ist aber noch da. Also ich merk jetzt auch, ich hab wieder am Buch weitergeschrieben.",
+      "start_time": 887.962
+    }
+  ],
+  "metadata": {
+    "generator": null,
+    "template_id": null,
+    "message_count": 18,
+    "total_chars": 2404,
+    "duration_minutes": 2.44,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "anonymized",
+      "method": "name_replacement",
+      "original_hash": "2ea0470a9ae537c2739fb9c821600aa387f0a49cbdb424a901b43101f416f486"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "narrative-exploratory",
+      "themes": [
+        "familie",
+        "bindung"
+      ],
+      "relational_dynamics": "curious-differentiating",
+      "intent": "family_pattern_analysis",
+      "emotional_tenor": 0.0,
+      "context_validity": 0.75,
+      "offline_context_risk": 0.4
+    },
+    "semiotic_signs": [
+      {
+        "id": "SIGN-KAH-004-1",
+        "locus": "t=742-888s",
+        "signifier": "Familiengeschichte",
+        "type": "symbol",
+        "denotation": "Family narrative as identity frame",
+        "connotations": [
+          "intergenerational pattern",
+          "attachment history"
+        ],
+        "codes": [
+          "familie"
+        ],
+        "markers": [
+          "ATO_SYMBOL_IMAGE",
+          "SEM_TRAPPED_AND_ESCAPE",
+          "CLU_BODY_TO_MEANING_LOOP"
+        ]
+      }
+    ],
+    "expected_markers": {
+      "ATO": [
+        "ATO_SYMBOL_IMAGE"
+      ],
+      "SEM": [
+        "SEM_TRAPPED_AND_ESCAPE"
+      ],
+      "CLU": [
+        "CLU_BODY_TO_MEANING_LOOP"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.35,
+        "arousal": 0.4,
+        "trigger": "session_start",
+        "trigger_sign_id": "SIGN-KAH-004-1"
+      },
+      {
+        "t": 0.25,
+        "valence": 0.4,
+        "arousal": 0.35,
+        "trigger": "stable_exploration",
+        "trigger_sign_id": "SIGN-KAH-004-1"
+      },
+      {
+        "t": 0.5,
+        "valence": 0.45,
+        "arousal": 0.35,
+        "trigger": "steady_work",
+        "trigger_sign_id": "SIGN-KAH-004-1"
+      },
+      {
+        "t": 0.75,
+        "valence": 0.45,
+        "arousal": 0.3,
+        "trigger": "consolidation",
+        "trigger_sign_id": "SIGN-KAH-004-1"
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "closing",
+        "trigger_sign_id": "SIGN-KAH-004-1"
+      }
+    ],
+    "therapy_indices": {
+      "trust": 82,
+      "conflict": 21,
+      "deescalation": 85,
+      "synchronization": 76,
+      "semiotic_coherence": 66
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": 0.0
+  }
+}

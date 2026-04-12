@@ -1,0 +1,255 @@
+{
+  "id": "GS-KAH-003",
+  "source": "real",
+  "language": "de",
+  "theme": "familie",
+  "messages": [
+    {
+      "role": "Therapist",
+      "text": "Da ist ja auch dieses Einklammern, ne? Was hat 'ne Klammer für 'ne Funktion? Eigentlich hält sie ja was zusammen.",
+      "start_time": 510.492
+    },
+    {
+      "role": "Client",
+      "text": "Ja.",
+      "start_time": 517.751
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm.",
+      "start_time": 520.232
+    },
+    {
+      "role": "Client",
+      "text": "Ist ja eigentlich ein nützliches Teil. Also jetzt nichts Bedrohliches.",
+      "start_time": 528.292
+    },
+    {
+      "role": "Therapist",
+      "text": "Hochfunktional. [Lachen] Also, ähm, flexibel auch, ne? Aber Klammern ist halt auch was, ja, so fest Anklammern.",
+      "start_time": 536.872
+    },
+    {
+      "role": "Client",
+      "text": "Mhm. Angeklammert, ja.",
+      "start_time": 550.772
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm.",
+      "start_time": 552.792
+    },
+    {
+      "role": "Client",
+      "text": "Und es war ja schon alles voll, es war ja schon alles beladen. Ich konnte nicht... Und ich war dann in dem Dorf, in dem ich aufgewachsen bin und wusste, okay, ich muss jetzt zur Bushaltestelle. Also es war so diese, diese frühere Abhängigkeit von: „Ich komme hier nur weg, wenn ich jetzt den Bus nehme und habe so alles, sieben Sachen, so alles, was geht, was ich brauche, habe ich so, äh, eingesammelt, auf dem Arm gehabt, hatte keine Tasche oder so. War anscheinend plötzlicher Aufbruch. Und dann die Klammer mich [Schmunzeln] angenagt. Sprung.",
+      "start_time": 554.072
+    },
+    {
+      "role": "Therapist",
+      "text": "Ach so, also Sie waren eigentlich quasi, Sie waren in Ihrem Dorf der Kindheit von früher, ähm, wollten aber eigentlich weg.",
+      "start_time": 592.892
+    },
+    {
+      "role": "Client",
+      "text": "Ja, anscheinend. Also, ich war an der Bushaltestelle.",
+      "start_time": 601.032
+    },
+    {
+      "role": "Therapist",
+      "text": "Auf'm Sprung?",
+      "start_time": 605.141
+    },
+    {
+      "role": "Client",
+      "text": "Ja, auf'm Sprung. Genau. Und die Bushaltestelle war auch früher immer so der, der Treffpunkt der Jugendlichen.",
+      "start_time": 605.192
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm.",
+      "start_time": 612.812
+    },
+    {
+      "role": "Client",
+      "text": "Das war immer so dieses, äh, zum Abhängen. Also der, der Dorfschande.",
+      "start_time": 613.092
+    },
+    {
+      "role": "Therapist",
+      "text": "Es ging gar nicht, ging gar nicht darum, jetzt wegzufahren aus dem Dorf, sondern eher dort an diesem Treffpunkt sein.",
+      "start_time": 620.632
+    },
+    {
+      "role": "Client",
+      "text": "Ich weiß es nicht. Es war, ich weiß es nicht. Das weiß ich nicht genau.",
+      "start_time": 626.312
+    },
+    {
+      "role": "Therapist",
+      "text": "Also auf jeden Fall ein alter Treffpunkt-",
+      "start_time": 630.912
+    },
+    {
+      "role": "Client",
+      "text": "Ja.",
+      "start_time": 632.572
+    },
+    {
+      "role": "Therapist",
+      "text": "ein alter bekannter Treffpunkt aus der Jugendzeit und Kindheit auch?",
+      "start_time": 632.592
+    },
+    {
+      "role": "Client",
+      "text": "Ja, ja.",
+      "start_time": 637.492
+    },
+    {
+      "role": "Therapist",
+      "text": "Und da dann alle sieben Sachen zusammengesammelt im Gepäck. Also eigentlich für alles bereit.",
+      "start_time": 640.012
+    },
+    {
+      "role": "Client",
+      "text": "Für alles bereit. Da war sogar noch das Gebäude von der Sparkasse. Im Traum bin ich da auch noch rein und dachte mir so: „Oh, das ist aber schon lange her. Da ist ja schon lang kein Geldautomat mehr oder so.\" Ich habe so mitgehirnt [Schmunzeln]. Ja, dann, also das war, muss von vielleicht als Elf-, Zwölfjähriger gewesen sein. Vielleicht so mit dreizehn oder... Also so diese ganz wilde Zeit, wo es wirklich ganz schlimm dort war.",
+      "start_time": 646.172
+    },
+    {
+      "role": "Therapist",
+      "text": "Ah.",
+      "start_time": 677.312
+    },
+    {
+      "role": "Client",
+      "text": "Wo ich weg wollte.",
+      "start_time": 677.742
+    },
+    {
+      "role": "Therapist",
+      "text": "Ah, da wollten Sie unbedingt weg?",
+      "start_time": 679.012
+    },
+    {
+      "role": "Client",
+      "text": "Unbedingt. Ich habe immer gesagt, mit achtzehn bin ich hier raus.",
+      "start_time": 680.372
+    },
+    {
+      "role": "Therapist",
+      "text": "Wieso? Was war da so ganz wild, ganz schlimm?",
+      "start_time": 682.952
+    },
+    {
+      "role": "Client",
+      "text": "Alles. Die, diese Menschen, das ganze Dorf, die waren sehr heftig unterwegs. Mich da nie zu Hause gefühlt. Das war ganz schlimm für mich, dort zu sein. Ja. Ich habe auch ganz lang immer gesagt, wenn ich mal Kinder habe, ich habe nur Kinder, wenn die da nicht aufwachsen müssen. Das war immer die Bedingung. Ich muss hier weg und bin ja dann auch, ähm, ich bin dann noch geblieben, obwohl ich schon volljährig war, mhm, hatte dieses Pferd und war gebunden und bin dann mit vierundzwanzig, war dann so die erstbeste Gelegenheit. Dann bin ich ja nach [Ort_A] gezogen. Erst hab ich 'ne Fernbeziehung gehabt und dann bin ich dorthin gezogen.Flucht. Ja.",
+      "start_time": 685.432
+    }
+  ],
+  "metadata": {
+    "generator": null,
+    "template_id": null,
+    "message_count": 28,
+    "total_chars": 2884,
+    "duration_minutes": 2.92,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "anonymized",
+      "method": "name_replacement",
+      "original_hash": "49f91cc069743b1e3ac8a76a68e25e2308df5e1c381ca5e479adb90336475266"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "narrative-exploratory",
+      "themes": [
+        "familie",
+        "bindung"
+      ],
+      "relational_dynamics": "curious-differentiating",
+      "intent": "family_pattern_analysis",
+      "emotional_tenor": 0.0,
+      "context_validity": 0.75,
+      "offline_context_risk": 0.4
+    },
+    "semiotic_signs": [
+      {
+        "id": "SIGN-KAH-003-1",
+        "locus": "t=510-685s",
+        "signifier": "Familiengeschichte",
+        "type": "symbol",
+        "denotation": "Family narrative as identity frame",
+        "connotations": [
+          "intergenerational pattern",
+          "attachment history"
+        ],
+        "codes": [
+          "familie"
+        ],
+        "markers": [
+          "ATO_SYMBOL_IMAGE",
+          "SEM_TRAPPED_AND_ESCAPE",
+          "CLU_BODY_TO_MEANING_LOOP"
+        ]
+      }
+    ],
+    "expected_markers": {
+      "ATO": [
+        "ATO_SYMBOL_IMAGE"
+      ],
+      "SEM": [
+        "SEM_TRAPPED_AND_ESCAPE"
+      ],
+      "CLU": [
+        "CLU_BODY_TO_MEANING_LOOP"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.35,
+        "arousal": 0.4,
+        "trigger": "session_start",
+        "trigger_sign_id": "SIGN-KAH-003-1"
+      },
+      {
+        "t": 0.25,
+        "valence": 0.4,
+        "arousal": 0.35,
+        "trigger": "stable_exploration",
+        "trigger_sign_id": "SIGN-KAH-003-1"
+      },
+      {
+        "t": 0.5,
+        "valence": 0.45,
+        "arousal": 0.35,
+        "trigger": "steady_work",
+        "trigger_sign_id": "SIGN-KAH-003-1"
+      },
+      {
+        "t": 0.75,
+        "valence": 0.45,
+        "arousal": 0.3,
+        "trigger": "consolidation",
+        "trigger_sign_id": "SIGN-KAH-003-1"
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "closing",
+        "trigger_sign_id": "SIGN-KAH-003-1"
+      }
+    ],
+    "therapy_indices": {
+      "trust": 83,
+      "conflict": 16,
+      "deescalation": 83,
+      "synchronization": 77,
+      "semiotic_coherence": 68
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": 0.0
+  }
+}

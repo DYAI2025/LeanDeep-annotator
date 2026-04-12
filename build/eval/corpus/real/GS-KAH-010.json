@@ -1,0 +1,266 @@
+{
+  "id": "GS-KAH-010",
+  "source": "real",
+  "language": "de",
+  "theme": "koerper",
+  "messages": [
+    {
+      "role": "Therapist",
+      "text": "Mhm.",
+      "start_time": 2333.886
+    },
+    {
+      "role": "Client",
+      "text": "\"Ich muss kurz wissen, wie's weitergeht.\" Und, und es ist ja jetzt erst so die Einleitung, ja. Jetzt, ich bin jetzt dabei zu beschreiben, wie ich als Kind zuerst ganz viel Trauer gesammelt hab und auf einmal schlägt's so um in Wut.",
+      "start_time": 2333.896
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm.",
+      "start_time": 2351.026
+    },
+    {
+      "role": "Client",
+      "text": "Ja, der Dorfpfarrer beantwortet mir meine Fragen nicht über Gott und jetzt soll er zur Hölle fahren. Und dann ist da so ein Turn drin, wo ich auch selber merk, dann hab ich jahrelang Wut unterdrückt. Und das war der Anfang von, von der Krankheit.",
+      "start_time": 2351.626
+    },
+    {
+      "role": "Therapist",
+      "text": "Depression ist die Wut, die man gegen sich selbst richtet, statt gegen die anderen.",
+      "start_time": 2374.246
+    },
+    {
+      "role": "Client",
+      "text": "Mhm. So hat sich's auch angefühlt. Ich wünsch mir für Sie, dass Sie sich, ähm, in diesem Prozess nicht überfordern.",
+      "start_time": 2381.226
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm. Weil Sie schon so 'nen Perfektionsanspruch ja an sich haben. Und, ähm, Sie kennen das von Ihren Bildern, von Ihrem Zeichnen und das Schreiben ist dem sehr verwandt.",
+      "start_time": 2394.046
+    },
+    {
+      "role": "Client",
+      "text": "Ja, das hab ich schon gemerkt. Das ist eine Bildsprache. Ich merke beides. Ich merke die Anstrengung, wie wenn ich da nicht aufhören kann, die nächste Farbe zu mischen.",
+      "start_time": 2408.986
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm.",
+      "start_time": 2422.026
+    },
+    {
+      "role": "Client",
+      "text": "Aber ich merke auch, dass es mir fast noch, noch heilsamer ist wie das Malen.",
+      "start_time": 2422.746
+    },
+    {
+      "role": "Therapist",
+      "text": "Genau, also man sagt ja auch, ähm, rausschreiben, rausschreiben, ne, weil dann kann man's richtig raus, aus dem Körper rauslassen. Also das Schreiben ist dabei extrem heilsam und hilfreich.",
+      "start_time": 2428.976
+    },
+    {
+      "role": "Client",
+      "text": "Mhm.",
+      "start_time": 2442.026
+    },
+    {
+      "role": "Therapist",
+      "text": "Ich denke nur, es wäre vielleicht eine gute Übung, das, dieses Projekt nicht an ein hohes Ziel zu knüpfen, dass Sie jetzt damit irgendwie 'n Verlag finden müssen und 'n Bestseller draus wird und, äh, alle Leute auf der ganzen Welt dann dieses Buch in den verschiedensten Sprachen lesen oder ersetzen. [lacht leise]",
+      "start_time": 2442.366
+    },
+    {
+      "role": "Client",
+      "text": "Ja. Das, ähm, hab ich unter Kontrolle. Also das wär natürlich schön, aber ich weiß, okay, das ist Fantasie. Aber was ich selber merk, ist der Druck, dass ich denk, ich muss es in 'nem bestimmten Zeitraum jetzt machen, weil erst danach wieder meine Malerei weitergehen kann oder ich kann es gar nicht so richtig beschreiben.",
+      "start_time": 2467.126
+    },
+    {
+      "role": "Therapist",
+      "text": "Genau, das ist dieses Wenn dann.",
+      "start_time": 2489.886
+    },
+    {
+      "role": "Client",
+      "text": "Ja, dass da so Bedingungen dran sind und-",
+      "start_time": 2492.306
+    },
+    {
+      "role": "Therapist",
+      "text": "Genau.",
+      "start_time": 2495.086
+    },
+    {
+      "role": "Client",
+      "text": "Druck.",
+      "start_time": 2495.766
+    },
+    {
+      "role": "Therapist",
+      "text": "Und das, ähm, da lauern viele Herausforderungen oder vielleicht auch dann Gefahren.",
+      "start_time": 2496.526
+    },
+    {
+      "role": "Client",
+      "text": "Ja, das ist eine Falle. Ich kenn die.",
+      "start_time": 2504.686
+    },
+    {
+      "role": "Therapist",
+      "text": "Ja.",
+      "start_time": 2507.026
+    },
+    {
+      "role": "Client",
+      "text": "Ich, ähm, überleg, wie ich das machen kann, weil-",
+      "start_time": 2507.746
+    },
+    {
+      "role": "Therapist",
+      "text": "Also jeder Autor teilt sich... Entschuldigung, dass ich dazwischen gehe, aber wir haben nur noch zwei Minuten. Jeder Autor teilt sich, also professionelle Autoren teilen sich genaue Zeitfenster dafür ein pro Tag.",
+      "start_time": 2512.146
+    },
+    {
+      "role": "Client",
+      "text": "Okay. Mhm.",
+      "start_time": 2524.746
+    },
+    {
+      "role": "Therapist",
+      "text": "Und es ist ganz wichtig, dass Sie diesen Prozess sich noch gut um sich kümmern und Ihrem Körper und Ihre Bedürfnisse. Wie lief das denn mit dem Wellness jetzt?",
+      "start_time": 2527.226
+    },
+    {
+      "role": "Client",
+      "text": "Gut, ich war die ganze Zeit dann dort, habe auch dann so gemerkt, ich habe mich dann so bewusst auf den Liegestuhl gelegt und neben, neben dem Schwimmbad und, und das, das Wasser, das Rauschen und so, ne? Und parallel dazu ist aber immer dieses Buch aufgeploppt.",
+      "start_time": 2535.066
+    },
+    {
+      "role": "Therapist",
+      "text": "Ich kenn das. [lacht]",
+      "start_time": 2552.806
+    },
+    {
+      "role": "Client",
+      "text": "[lacht]",
+      "start_time": 2555.246
+    },
+    {
+      "role": "Therapist",
+      "text": "Deswegen sprech ich's an.",
+      "start_time": 2555.266
+    },
+    {
+      "role": "Client",
+      "text": "Ja. Äh, ich hab 'n bisschen Angst. Es gibt, glaub ich, für mich so diese zwei Möglichkeiten, die es auch immer in der Malerei hat.Verflucht. Aber entweder ich mache ein Bild, ich fange es an, dann lasse ich es auf einmal schleifen und dann verschwindet's und steht jahrelang in der Ecke. Und es sind, wer weiss, manchmal wie Meisterwerke gewesen eigentlich. Oder eben, ich gehe voll dran und nutze diese ganze Energie, diese ganze Kraft, dieses Hirnen. Könnte es in der Zeit auch aufschreiben, dann hätte ich es ja schon, wenn ich jetzt nur dran denke. Und ich habe immer dieses: Entweder ganz oder gar nicht. Und das ist so schwierig, weil da haben wir geredet. Es muss ja schaukeln. Das muss ich lernen. Genau. Pendeln. Genau, zwischen diesen beiden Polen und dann in der Mitte die Balance finden. Ja, das ist schwierig. Der Weg ist das Ziel. Das Ziel ist das Ziel. Und dann ist es nicht Druck, nicht Stress. Der Plan war sogar, es vor Januar noch zu schaffen. Genau. Ja. Ich bin schon fast bei Mittelzeit. Zu welchem Preis? Ja, Augenringe, schlaflose Nächte, zehn Kilo weniger, Rauchen wieder angefangen. Nein, da kommt dann eher die Absinthe-Abhängigkeit. Man sagt ja immer, dass Schriftsteller so alkoholgefährdet sind. Jetzt weiß ich auch, warum. Wenn das mit dem Ohr ist, dann auch noch abgeschnitten wird. Das war er gar nicht selber. Das war sein Freund. Die wollten den Tinnitus heilen. Das ist ganz traurig. Im Wahn halt. Im Wahn den Tinnitus besiegen. Genau. Aber dass der Tinnitus kommt von zu viel Stress und weniger wird, wenn man weniger Stress mal hat und dem armen Körper mal ein paar Pausen gönnt und sich mal dem kümmert. Ja Das wurde nicht gesehen. Das hat er nicht gedacht. Und ist es nicht verrückt, dass jeder das kennt mit dem Ohr, Aber die wenigsten bedenken, dass er sich ja dann tatsächlich das Leben genommen hat später. Absolut. Ja, Stefan Kopf hat sich. Nein, ich meine, ich weiß nicht, ob das ist, dass die wenigsten machen. Doch, würde ich sagen, der wäre echt. Ja, eben. Und wir wollen ja bei Ihnen eine gesunde Geschichte. Ja. Nein? Da muss ich mit langsamen Meilen im Stil gehen. Ja. Wirklich? Also Schritt für Schritt. Also Sie können es auch üben, dann gehen. Spüren Sie, wie Sie den Boden berühren und wie der Boden auch Sie berührt. Im Kontakt sein. Das ist schwer gerade. Wie hältst du immer? Also dieses Berühren und sich auch berühren lassen. Und so ist es beim Schreiben auch. Also wir arbeiten da viel durch, was auch Raum und Zeit braucht zum Entstehen. Aber ist auch okay. Manchmal hat man halt so Flows, die wellen. Ist ja auch geil, flow zu werden. Wenn man nicht im Flow ist, das nutzen und sich berühren und was man spürt. Ich hoffe, ich will auch noch mal wieder hier nach Hause gehen. Ich glaube, das wird jetzt nicht mehr klap. Was soll's? Jetzt ist sie. Ja. Genau. Weil man sagt es ja auch, sich was von der Seele schreiben oder ... Ja ja, genau. Also, Frau Kempster, einfach noch mal, dass die Versicherung sich dann gemeldet hat. Okay? Das haben wir jetzt einfach mit dem Stoff durcherarbeitet. Okay, vielen Dank. Und wenn du suchst, dann melden. Will ich nicht. Okay, aber wir machen das ein ganz kurzes Mal langer. Na, dann machen wir das. Gute Heimfahrt. Danke schön. Passt, dass sie einfach will.",
+      "start_time": 2556.646
+    }
+  ],
+  "metadata": {
+    "generator": null,
+    "template_id": null,
+    "message_count": 30,
+    "total_chars": 6141,
+    "duration_minutes": 3.71,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "anonymized",
+      "method": "name_replacement",
+      "original_hash": "9c8ac36a2e73aab7a01ef4c1a65520b0d46b83be87a8fad40c4a3cd2591e43d0"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "concerned-somatic",
+      "themes": [
+        "koerper",
+        "somatisierung"
+      ],
+      "relational_dynamics": "empathic-attuned",
+      "intent": "symptom_exploration",
+      "emotional_tenor": -0.2,
+      "context_validity": 0.8,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [
+      {
+        "id": "SIGN-KAH-010-1",
+        "locus": "t=2334-2557s",
+        "signifier": "koerperliche Erschoepfung",
+        "type": "index",
+        "denotation": "Body as symptom carrier",
+        "connotations": [
+          "somatic memory",
+          "psychosomatic expression"
+        ],
+        "codes": [
+          "koerper"
+        ],
+        "markers": [
+          "ATO_BODY_LOAD",
+          "ATO_SELF_OBSERVATION_A",
+          "SEM_SOMATIC_OVERLOAD_AFTER_EXPERIENCE"
+        ]
+      }
+    ],
+    "expected_markers": {
+      "ATO": [
+        "ATO_BODY_LOAD",
+        "ATO_SELF_OBSERVATION_A"
+      ],
+      "SEM": [
+        "SEM_SOMATIC_OVERLOAD_AFTER_EXPERIENCE"
+      ],
+      "CLU": [
+        "CLU_BODY_TO_MEANING_LOOP"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.35,
+        "arousal": 0.4,
+        "trigger": "session_start",
+        "trigger_sign_id": "SIGN-KAH-010-1"
+      },
+      {
+        "t": 0.25,
+        "valence": 0.4,
+        "arousal": 0.35,
+        "trigger": "stable_exploration",
+        "trigger_sign_id": "SIGN-KAH-010-1"
+      },
+      {
+        "t": 0.5,
+        "valence": 0.45,
+        "arousal": 0.35,
+        "trigger": "steady_work",
+        "trigger_sign_id": "SIGN-KAH-010-1"
+      },
+      {
+        "t": 0.75,
+        "valence": 0.45,
+        "arousal": 0.3,
+        "trigger": "consolidation",
+        "trigger_sign_id": "SIGN-KAH-010-1"
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "closing",
+        "trigger_sign_id": "SIGN-KAH-010-1"
+      }
+    ],
+    "therapy_indices": {
+      "trust": 81,
+      "conflict": 18,
+      "deescalation": 86,
+      "synchronization": 77,
+      "semiotic_coherence": 68
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": 0.0
+  }
+}
