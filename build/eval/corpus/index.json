@@ -1,0 +1,938 @@
+{
+  "version": "1.0",
+  "schema": "../schema/dialog_schema.json",
+  "created": "2026-04-12",
+  "stats": {
+    "total": 100,
+    "total_messages": 1311,
+    "total_chars": 179448,
+    "by_source": {
+      "real": 10,
+      "amod": 40,
+      "simulated": 50
+    },
+    "by_language": {
+      "de": 60,
+      "en": 40
+    },
+    "by_theme": {
+      "admin": 1,
+      "angst": 10,
+      "beziehung": 9,
+      "familie": 12,
+      "identitaet": 10,
+      "koerper": 3,
+      "selbstwert": 10,
+      "sucht": 9,
+      "trauer": 9,
+      "trauma": 9,
+      "uebertragung": 9,
+      "wut": 9
+    },
+    "by_review_status": {
+      "llm_generated": 100
+    }
+  },
+  "dialogues": [
+    {
+      "id": "GS-KAH-001",
+      "path": "real/GS-KAH-001.json",
+      "source": "real",
+      "language": "de",
+      "theme": "admin",
+      "message_count": 12,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-KAH-002",
+      "path": "real/GS-KAH-002.json",
+      "source": "real",
+      "language": "de",
+      "theme": "koerper",
+      "message_count": 13,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-KAH-003",
+      "path": "real/GS-KAH-003.json",
+      "source": "real",
+      "language": "de",
+      "theme": "familie",
+      "message_count": 28,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-KAH-004",
+      "path": "real/GS-KAH-004.json",
+      "source": "real",
+      "language": "de",
+      "theme": "familie",
+      "message_count": 18,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-KAH-005",
+      "path": "real/GS-KAH-005.json",
+      "source": "real",
+      "language": "de",
+      "theme": "familie",
+      "message_count": 27,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-KAH-006",
+      "path": "real/GS-KAH-006.json",
+      "source": "real",
+      "language": "de",
+      "theme": "selbstwert",
+      "message_count": 47,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-KAH-007",
+      "path": "real/GS-KAH-007.json",
+      "source": "real",
+      "language": "de",
+      "theme": "koerper",
+      "message_count": 26,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-KAH-008",
+      "path": "real/GS-KAH-008.json",
+      "source": "real",
+      "language": "de",
+      "theme": "identitaet",
+      "message_count": 14,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-KAH-009",
+      "path": "real/GS-KAH-009.json",
+      "source": "real",
+      "language": "de",
+      "theme": "angst",
+      "message_count": 16,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-KAH-010",
+      "path": "real/GS-KAH-010.json",
+      "source": "real",
+      "language": "de",
+      "theme": "koerper",
+      "message_count": 30,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-001",
+      "path": "amod/GS-AMOD-001.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "selbstwert",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-002",
+      "path": "amod/GS-AMOD-002.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "selbstwert",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-003",
+      "path": "amod/GS-AMOD-003.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "selbstwert",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-004",
+      "path": "amod/GS-AMOD-004.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "selbstwert",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-005",
+      "path": "amod/GS-AMOD-005.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "angst",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-006",
+      "path": "amod/GS-AMOD-006.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "angst",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-007",
+      "path": "amod/GS-AMOD-007.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "angst",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-008",
+      "path": "amod/GS-AMOD-008.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "angst",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-009",
+      "path": "amod/GS-AMOD-009.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "beziehung",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-010",
+      "path": "amod/GS-AMOD-010.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "beziehung",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-011",
+      "path": "amod/GS-AMOD-011.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "beziehung",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-012",
+      "path": "amod/GS-AMOD-012.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "beziehung",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-013",
+      "path": "amod/GS-AMOD-013.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "familie",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-014",
+      "path": "amod/GS-AMOD-014.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "familie",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-015",
+      "path": "amod/GS-AMOD-015.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "familie",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-016",
+      "path": "amod/GS-AMOD-016.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "familie",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-017",
+      "path": "amod/GS-AMOD-017.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "trauma",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-018",
+      "path": "amod/GS-AMOD-018.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "trauma",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-019",
+      "path": "amod/GS-AMOD-019.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "trauma",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-020",
+      "path": "amod/GS-AMOD-020.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "trauma",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-021",
+      "path": "amod/GS-AMOD-021.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "wut",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-022",
+      "path": "amod/GS-AMOD-022.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "wut",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-023",
+      "path": "amod/GS-AMOD-023.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "wut",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-024",
+      "path": "amod/GS-AMOD-024.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "wut",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-025",
+      "path": "amod/GS-AMOD-025.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "trauer",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-026",
+      "path": "amod/GS-AMOD-026.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "trauer",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-027",
+      "path": "amod/GS-AMOD-027.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "trauer",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-028",
+      "path": "amod/GS-AMOD-028.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "trauer",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-029",
+      "path": "amod/GS-AMOD-029.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "sucht",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-030",
+      "path": "amod/GS-AMOD-030.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "sucht",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-031",
+      "path": "amod/GS-AMOD-031.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "sucht",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-032",
+      "path": "amod/GS-AMOD-032.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "sucht",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-033",
+      "path": "amod/GS-AMOD-033.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "identitaet",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-034",
+      "path": "amod/GS-AMOD-034.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "identitaet",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-035",
+      "path": "amod/GS-AMOD-035.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "identitaet",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-036",
+      "path": "amod/GS-AMOD-036.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "identitaet",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-037",
+      "path": "amod/GS-AMOD-037.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "uebertragung",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-038",
+      "path": "amod/GS-AMOD-038.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "uebertragung",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-039",
+      "path": "amod/GS-AMOD-039.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "uebertragung",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-AMOD-040",
+      "path": "amod/GS-AMOD-040.json",
+      "source": "amod",
+      "language": "en",
+      "theme": "uebertragung",
+      "message_count": 2,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-001",
+      "path": "simulated/GS-SIM-001.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "selbstwert",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-002",
+      "path": "simulated/GS-SIM-002.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "selbstwert",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-003",
+      "path": "simulated/GS-SIM-003.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "selbstwert",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-004",
+      "path": "simulated/GS-SIM-004.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "selbstwert",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-005",
+      "path": "simulated/GS-SIM-005.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "selbstwert",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-006",
+      "path": "simulated/GS-SIM-006.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "angst",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-007",
+      "path": "simulated/GS-SIM-007.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "angst",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-008",
+      "path": "simulated/GS-SIM-008.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "angst",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-009",
+      "path": "simulated/GS-SIM-009.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "angst",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-010",
+      "path": "simulated/GS-SIM-010.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "angst",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-011",
+      "path": "simulated/GS-SIM-011.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "beziehung",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-012",
+      "path": "simulated/GS-SIM-012.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "beziehung",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-013",
+      "path": "simulated/GS-SIM-013.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "beziehung",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-014",
+      "path": "simulated/GS-SIM-014.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "beziehung",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-015",
+      "path": "simulated/GS-SIM-015.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "beziehung",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-016",
+      "path": "simulated/GS-SIM-016.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "familie",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-017",
+      "path": "simulated/GS-SIM-017.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "familie",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-018",
+      "path": "simulated/GS-SIM-018.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "familie",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-019",
+      "path": "simulated/GS-SIM-019.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "familie",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-020",
+      "path": "simulated/GS-SIM-020.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "familie",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-021",
+      "path": "simulated/GS-SIM-021.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "trauma",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-022",
+      "path": "simulated/GS-SIM-022.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "trauma",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-023",
+      "path": "simulated/GS-SIM-023.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "trauma",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-024",
+      "path": "simulated/GS-SIM-024.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "trauma",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-025",
+      "path": "simulated/GS-SIM-025.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "trauma",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-026",
+      "path": "simulated/GS-SIM-026.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "wut",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-027",
+      "path": "simulated/GS-SIM-027.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "wut",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-028",
+      "path": "simulated/GS-SIM-028.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "wut",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-029",
+      "path": "simulated/GS-SIM-029.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "wut",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-030",
+      "path": "simulated/GS-SIM-030.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "wut",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-031",
+      "path": "simulated/GS-SIM-031.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "trauer",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-032",
+      "path": "simulated/GS-SIM-032.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "trauer",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-033",
+      "path": "simulated/GS-SIM-033.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "trauer",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-034",
+      "path": "simulated/GS-SIM-034.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "trauer",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-035",
+      "path": "simulated/GS-SIM-035.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "trauer",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-036",
+      "path": "simulated/GS-SIM-036.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "sucht",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-037",
+      "path": "simulated/GS-SIM-037.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "sucht",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-038",
+      "path": "simulated/GS-SIM-038.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "sucht",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-039",
+      "path": "simulated/GS-SIM-039.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "sucht",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-040",
+      "path": "simulated/GS-SIM-040.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "sucht",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-041",
+      "path": "simulated/GS-SIM-041.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "identitaet",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-042",
+      "path": "simulated/GS-SIM-042.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "identitaet",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-043",
+      "path": "simulated/GS-SIM-043.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "identitaet",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-044",
+      "path": "simulated/GS-SIM-044.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "identitaet",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-045",
+      "path": "simulated/GS-SIM-045.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "identitaet",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-046",
+      "path": "simulated/GS-SIM-046.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "uebertragung",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-047",
+      "path": "simulated/GS-SIM-047.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "uebertragung",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-048",
+      "path": "simulated/GS-SIM-048.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "uebertragung",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-049",
+      "path": "simulated/GS-SIM-049.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "uebertragung",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    },
+    {
+      "id": "GS-SIM-050",
+      "path": "simulated/GS-SIM-050.json",
+      "source": "simulated",
+      "language": "de",
+      "theme": "uebertragung",
+      "message_count": 20,
+      "review_status": "llm_generated"
+    }
+  ]
+}
