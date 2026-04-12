@@ -1,0 +1,1208 @@
+{
+  "_doc": "Gold Standard Corpus for ASM-ki-semantic-framing-sufficient verification.",
+  "_format_version": "1.0",
+  "_dimensions": {
+    "tone": "Free text label. Normalized to lowercase.",
+    "themes": "List of theme labels. Multi-label F1.",
+    "relational_dynamics": "Free text label.",
+    "intent": "Free text label.",
+    "emotional_tenor": "Float -1.0 to 1.0.",
+    "context_validity": "Float 0.0 to 1.0.",
+    "offline_context_risk": "Float 0.0 to 1.0."
+  },
+  "dialogues": [
+    {
+      "id": "GS-KAH-001",
+      "messages": [
+        {
+          "role": "S0",
+          "text": "So. Tschüss.",
+          "start_time": 0.0
+        },
+        {
+          "role": "S1",
+          "text": "So. Noch gar nicht lang her. Ja. [lachen] Ich habe die Überweisung nicht. Die haben tatsächlich Urlaub. Ich kann aber morgen noch mal herkommen. Ja, das ist jetzt ein bisschen per Post. Oder das? Ja, das geht auch. Weil es war schon eine ganz schöne Fahrt. Ja, aber auch eine schöne Fahrt. Oder? Ja, haben wir die Fahrt. Warten Sie über Frankreich, denn ... Teilweise, ja. Genau, das ist total schön. Habe ich gesehen, wir haben ja noch gar nicht den Antrag genehmigt bekommen für die Therapie?",
+          "start_time": 86.44
+        },
+        {
+          "role": "S0",
+          "text": "Ja, wir haben gesagt, wir datieren es zurück. Ja. Aber der ist schon ... Der geht durch, ne?",
+          "start_time": 129.02
+        },
+        {
+          "role": "S1",
+          "text": "Ich hoffe sehr.",
+          "start_time": 138.78
+        },
+        {
+          "role": "S0",
+          "text": "Ja, klar. Ich denke schon.",
+          "start_time": 140.38
+        },
+        {
+          "role": "S1",
+          "text": "Ich habe jetzt aber tatsächlich noch mal einen Langzeitantrag draus gemacht. Das werden dann sechsunddreißig Stunden. Weil wir haben jetzt mit der KAH und dem hier so, würden wir ja schon ein paar Stunden dafür aufschreiben und dann sind wir schon fast fertig mit den zwölf und dann können sie eigentlich auch direkt in die Langzeittherapie beantragen. Wenn man nicht alle Stunden braucht, dann muss man ja nicht, aber es geht so schnell. Also wenn Sie damit einverstanden sind.",
+          "start_time": 143.06
+        },
+        {
+          "role": "S0",
+          "text": "Ja, ja, klar. Bin ich völlig freiwillig.",
+          "start_time": 173.32
+        },
+        {
+          "role": "S1",
+          "text": "Aber da müssen wir gucken, weil dann geht es zum Gutachter und so, aber es ist letztendlich ...",
+          "start_time": 175.58
+        },
+        {
+          "role": "S0",
+          "text": "Ich habe mir überlegt, ob es nicht mal sinnvoll wäre, dass ich da ein Gutachten machen lasse, weil die wollen mich jetzt auch ab Januar aus dem Krankengeld nehmen, weil die haben das zusammengerechnet, wie oft ich schon wegen der Depression krank war bis 2022 rückwirkend und haben das zusammengerechnet. Das heißt, es läuft jetzt aus und da dachte ich, das kann eigentlich nicht sein. Also lieg ich jetzt auf dem Arbeitsamt, das macht ja keinen Sinn. Von daher überlege ich, ob das sinnvoll ist, dass ich den bestelle und sage: „Ja, mach mal im Gespräch, damit ich das verlangen kann. Das will ich jetzt mal gucken.",
+          "start_time": 182.62
+        },
+        {
+          "role": "S1",
+          "text": "Okay, das wäre interessant. Also ich habe das jetzt einfach noch mal bei dem Supervisor so beantragt. Gucken wir mal, was sie sagen. Aber mir ist das jetzt erst aufgefallen. Das wäre ja noch gar nicht ... Gar nicht zurückgekommen. Haben Sie aber auch nichts gehört, ne? Nein, ich habe noch nichts gehört. Okay. Dann bleiben wir mal positiv.",
+          "start_time": 222.4
+        },
+        {
+          "role": "S0",
+          "text": "Ja, klar. Ähm, ich bin, also ich hätte noch Termine am 22. Oder am 23. Dezember, wo ich hier bin. Sollen wir da einen ausmachen? Ja.",
+          "start_time": 253.34
+        },
+        {
+          "role": "S1",
+          "text": "Okay, sollen wir dann eine Doppelsitzung oder eine einzelne machen? Okay, dann könnte ich Ihnen aber nur den 23. Anbieten, ab 14 Uhr. Mhm, geht. Geht das? Ja. Dann die anderen dazwischen. Na gut, also den haben wir jetzt erst mal fest und dann warten wir mal bis dahin auf die, ähm, Krankenkasse. Das sind jetzt anderthalb Monate, die sollten sich mal melden. Ja, wie geht es Ihnen denn jetzt heute in Nachwirkungen dieser KA-Erfahrung?",
+          "start_time": 266.86
+        },
+        {
+          "role": "S0",
+          "text": "Gut. Im Kopf gut. Körperlich bin ich total fertig.",
+          "start_time": 328.08
+        },
+        {
+          "role": "S1",
+          "text": "Ja?",
+          "start_time": 332.72
+        },
+        {
+          "role": "S0",
+          "text": "Das ist abartig. Mein Kopf wie verkatert, so grenzwertig an der Migräne. Aber ich wollte jetzt nichts nehmen, weil ich gedacht habe, vielleicht stört es die Neuroplastizität. Wenn ich dann mit dem Somatritt anfange, ist es ja so gefäßverengt. Und vielleicht gehört das jetzt auch dazu, dass ich da jetzt einfach was tue. Ich weiß nicht.",
+          "start_time": 333.28
+        },
+        {
+          "role": "S1",
+          "text": "Ja. Anstrengend ist das.",
+          "start_time": 357.64
+        },
+        {
+          "role": "S0",
+          "text": "Ja. Ich merke, einfach das Nervensystem macht was, ja, ist provoziert.[Schmunzeln]",
+          "start_time": 360.94
+        },
+        {
+          "role": "S2",
+          "text": "Woran zeigt sich das? Also, sozusagen zum Nachdennen der Migräne... Körperlich, was ist da noch so?",
+          "start_time": 369.312
+        },
+        {
+          "role": "S0",
+          "text": "Der Kopf ist so schwer auf dem Nacken, merk ich so und dann völlig verrückte Träume.",
+          "start_time": 375.232
+        },
+        {
+          "role": "S2",
+          "text": "Ah ja?",
+          "start_time": 383.372
+        },
+        {
+          "role": "S0",
+          "text": "Lachen Ist echt funny. Sehr, sehr real. Also gestern, das war wo hab ich geträumt, ich belade mich mit ganz viel kleinen Dingen, ganz viel so Schminkutensilien, Kosmetik und so. Hatte das alles so auf der Hand, kam immer mehr dazu und dann hat sich eine Haarklammer bei mir so ins Gesicht [Lachen] geklammert und war dann auf einmal 'ne Spinne, die mich einmal gestochen hat und dann ist sie wieder weggefallen. Also, also ich weiß es nicht. [Lachen] Was es, was es sein kann. Ähm, das mit dem Überladen kann ich ja noch nachvollziehen, ja, aber dass sich da so was in mir so anklammert, das fand ich schon ein bisschen spooky.",
+          "start_time": 386.012
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 439.962
+        },
+        {
+          "role": "S0",
+          "text": "Und hat sich total real angefühlt. Also ich hatte wirklich das Gefühl, ich habe da was im Gesicht hängen. Ja.",
+          "start_time": 442.142
+        },
+        {
+          "role": "S2",
+          "text": "Haben Sie eine Idee, wofür das stehen könnte? Was bedeuten könnte?",
+          "start_time": 452.802
+        },
+        {
+          "role": "S0",
+          "text": "Ich hatte früher immer Angst vor Spinnen, aber das ist nicht mehr da. Ich hatte nur so wie, das war wie so 'n Ekel, sondern so: „Oh nein, nicht ins Gesicht.\" Und dann ist er wieder so weggerobst. [Schmunzeln] Ich dachte erst so Maske, wie so 'ne eiserne Maske, aber eben nicht ganz so Hardcore, dass man so eingeklammert ist, sondern so kurz nur, wie wenn was noch mal so versucht einen anzuspringen und dann ablässt. Kann's mir nicht erklären.",
+          "start_time": 456.972
+        },
+        {
+          "role": "S2",
+          "text": "Da ist ja auch dieses Einklammern, ne? Was hat 'ne Klammer für 'ne Funktion? Eigentlich hält sie ja was zusammen.",
+          "start_time": 510.492
+        },
+        {
+          "role": "S0",
+          "text": "Ja.",
+          "start_time": 517.751
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 520.232
+        },
+        {
+          "role": "S0",
+          "text": "Ist ja eigentlich ein nützliches Teil. Also jetzt nichts Bedrohliches.",
+          "start_time": 528.292
+        },
+        {
+          "role": "S2",
+          "text": "Hochfunktional. [Lachen] Also, ähm, flexibel auch, ne? Aber Klammern ist halt auch was, ja, so fest Anklammern.",
+          "start_time": 536.872
+        },
+        {
+          "role": "S0",
+          "text": "Mhm. Angeklammert, ja.",
+          "start_time": 550.772
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 552.792
+        },
+        {
+          "role": "S0",
+          "text": "Und es war ja schon alles voll, es war ja schon alles beladen. Ich konnte nicht... Und ich war dann in dem Dorf, in dem ich aufgewachsen bin und wusste, okay, ich muss jetzt zur Bushaltestelle. Also es war so diese, diese frühere Abhängigkeit von: „Ich komme hier nur weg, wenn ich jetzt den Bus nehme und habe so alles, sieben Sachen, so alles, was geht, was ich brauche, habe ich so, äh, eingesammelt, auf dem Arm gehabt, hatte keine Tasche oder so. War anscheinend plötzlicher Aufbruch. Und dann die Klammer mich [Schmunzeln] angenagt. Sprung.",
+          "start_time": 554.072
+        },
+        {
+          "role": "S2",
+          "text": "Ach so, also Sie waren eigentlich quasi, Sie waren in Ihrem Dorf der Kindheit von früher, ähm, wollten aber eigentlich weg.",
+          "start_time": 592.892
+        },
+        {
+          "role": "S0",
+          "text": "Ja, anscheinend. Also, ich war an der Bushaltestelle.",
+          "start_time": 601.032
+        },
+        {
+          "role": "S2",
+          "text": "Auf'm Sprung?",
+          "start_time": 605.141
+        },
+        {
+          "role": "S0",
+          "text": "Ja, auf'm Sprung. Genau. Und die Bushaltestelle war auch früher immer so der, der Treffpunkt der Jugendlichen.",
+          "start_time": 605.192
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 612.812
+        },
+        {
+          "role": "S0",
+          "text": "Das war immer so dieses, äh, zum Abhängen. Also der, der Dorfschande.",
+          "start_time": 613.092
+        },
+        {
+          "role": "S2",
+          "text": "Es ging gar nicht, ging gar nicht darum, jetzt wegzufahren aus dem Dorf, sondern eher dort an diesem Treffpunkt sein.",
+          "start_time": 620.632
+        },
+        {
+          "role": "S0",
+          "text": "Ich weiß es nicht. Es war, ich weiß es nicht. Das weiß ich nicht genau.",
+          "start_time": 626.312
+        },
+        {
+          "role": "S2",
+          "text": "Also auf jeden Fall ein alter Treffpunkt-",
+          "start_time": 630.912
+        },
+        {
+          "role": "S0",
+          "text": "Ja.",
+          "start_time": 632.572
+        },
+        {
+          "role": "S2",
+          "text": "ein alter bekannter Treffpunkt aus der Jugendzeit und Kindheit auch?",
+          "start_time": 632.592
+        },
+        {
+          "role": "S0",
+          "text": "Ja, ja.",
+          "start_time": 637.492
+        },
+        {
+          "role": "S2",
+          "text": "Und da dann alle sieben Sachen zusammengesammelt im Gepäck. Also eigentlich für alles bereit.",
+          "start_time": 640.012
+        },
+        {
+          "role": "S0",
+          "text": "Für alles bereit. Da war sogar noch das Gebäude von der Sparkasse. Im Traum bin ich da auch noch rein und dachte mir so: „Oh, das ist aber schon lange her. Da ist ja schon lang kein Geldautomat mehr oder so.\" Ich habe so mitgehirnt [Schmunzeln]. Ja, dann, also das war, muss von vielleicht als Elf-, Zwölfjähriger gewesen sein. Vielleicht so mit dreizehn oder... Also so diese ganz wilde Zeit, wo es wirklich ganz schlimm dort war.",
+          "start_time": 646.172
+        },
+        {
+          "role": "S2",
+          "text": "Ah.",
+          "start_time": 677.312
+        },
+        {
+          "role": "S0",
+          "text": "Wo ich weg wollte.",
+          "start_time": 677.742
+        },
+        {
+          "role": "S2",
+          "text": "Ah, da wollten Sie unbedingt weg?",
+          "start_time": 679.012
+        },
+        {
+          "role": "S0",
+          "text": "Unbedingt. Ich habe immer gesagt, mit achtzehn bin ich hier raus.",
+          "start_time": 680.372
+        },
+        {
+          "role": "S2",
+          "text": "Wieso? Was war da so ganz wild, ganz schlimm?",
+          "start_time": 682.952
+        },
+        {
+          "role": "S0",
+          "text": "Alles. Die, diese Menschen, das ganze Dorf, die waren sehr heftig unterwegs. Mich da nie zu Hause gefühlt. Das war ganz schlimm für mich, dort zu sein. Ja. Ich habe auch ganz lang immer gesagt, wenn ich mal Kinder habe, ich habe nur Kinder, wenn die da nicht aufwachsen müssen. Das war immer die Bedingung. Ich muss hier weg und bin ja dann auch, ähm, ich bin dann noch geblieben, obwohl ich schon volljährig war, mhm, hatte dieses Pferd und war gebunden und bin dann mit vierundzwanzig, war dann so die erstbeste Gelegenheit. Dann bin ich ja nach Wien gezogen. Erst hab ich 'ne Fernbeziehung gehabt und dann bin ich dorthin gezogen.Flucht. Ja.",
+          "start_time": 685.432
+        },
+        {
+          "role": "S2",
+          "text": "Nach Wien zu ziehen? Mhm. Inwiefern?",
+          "start_time": 741.742
+        },
+        {
+          "role": "S0",
+          "text": "Ja, ich dachte mir schon, dass es mit dem Typ wahrscheinlich nicht für immer ist. Wir waren schon sehr unterschiedlich. Das war son ganz, äh, straighter Wirtschaftsstudent. Mhm. Und ich halt die Künstlerin und wir kannten uns aus der Kindheit.",
+          "start_time": 746.562
+        },
+        {
+          "role": "S2",
+          "text": "Ach?",
+          "start_time": 763.542
+        },
+        {
+          "role": "S0",
+          "text": "Ja. Wir hatten da sone österreichische Austauschfamilie und das war dann so dieses, zwei Fliegen mit einer Klappe. Mhm. Der Wunsch Schwiegersohn und ich bin hier raus. Und dann bin ich da hin und hab dann dort auch weiter studiert. Ich war ja gerade im Kunststudium und... Mhm. Ja.",
+          "start_time": 764.122
+        },
+        {
+          "role": "S2",
+          "text": "Da ist Wien auch eine tolle Stadt natürlich dafür.",
+          "start_time": 786.122
+        },
+        {
+          "role": "S0",
+          "text": "Ach super! Und dann in dem Traum, alsooo, dann waren Sie an dieser Bushaltestelle und dann an Ihrem Siemensdachen, also an diesem Treffpunkt. Und dann kam die Klammer. Kam die Klammer.",
+          "start_time": 788.542
+        },
+        {
+          "role": "S2",
+          "text": "Die ist Ihnen quasi ins Gesicht gesprungen.",
+          "start_time": 806.742
+        },
+        {
+          "role": "S0",
+          "text": "Ja. Es war surreal. Äh, Matsch war da auch noch. Ich hab dann richtig so gesehen und dann dachte ich so: „Oh, jetzt muss ich auch noch durch den Matsch, und dann sind die Schuhe so eingesunken. Es war so richtig, ähm, real, ja. War ich wieder in der Akasha-Chronik unterwegs. [lacht] Und dann wieder... Ich weiß es nicht. Es kann alles sein. Ich bin, ich bin nur eben wieder aufgewacht und hab mir so gefühlt so, whoa, kaum geschlafen. Das war halt anstrengend.",
+          "start_time": 809.082
+        },
+        {
+          "role": "S2",
+          "text": "Genau, also da läuft noch der Verarbeitungsprozess von der Sitzung.",
+          "start_time": 851.462
+        },
+        {
+          "role": "S0",
+          "text": "Ja.",
+          "start_time": 856.562
+        },
+        {
+          "role": "S2",
+          "text": "Sie sind ja da... Ich weiß gar nicht. Was erinnern Sie denn noch von der Sitzung?",
+          "start_time": 858.342
+        },
+        {
+          "role": "S0",
+          "text": "Alles.",
+          "start_time": 862.262
+        },
+        {
+          "role": "S2",
+          "text": "Also man denkt oft, dass es alles ist. Deswegen würd mich mal interessieren, was erinnern Sie denn noch davon? [lacht]",
+          "start_time": 864.062
+        },
+        {
+          "role": "S0",
+          "text": "Ich hab auch noch, äh, den genauen Klang und den Akzent hab ich auch noch total im Ohr.",
+          "start_time": 869.622
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 877.422
+        },
+        {
+          "role": "S0",
+          "text": "Ja.",
+          "start_time": 878.402
+        },
+        {
+          "role": "S2",
+          "text": "Wenn Sie jetzt sagen würden, noch mal zusammenfassen würden, was jetzt da alles passiert?",
+          "start_time": 882.162
+        },
+        {
+          "role": "S0",
+          "text": "Wie ne Verknüpfung, dass wir noch mal richtig in die frühe Kindheit gehen. So, wo ich dachte, so, okay, das ist abgeschlossen, da brauchen wir nicht mehr dran therapieren. Dann ist noch mal so hochgeholt und ja auch verknüpft mit dem Heutigen und eigentlich ja auch mit dem Zukünftigen- Mhm. -aber das war noch so gaaanz diffus. Äh, da hab ich auch schon während der Sitzung gemerkt, okay, da, da hab ich noch nicht wirklich den, äh, Zugriff, aber- Mhm. -dass ich die Kleine noch mal dazuhole, das war schon, äh, das, ja, das ging. Ja, und ich, äh, hab-- die ist aber noch da. Also ich merk jetzt auch, ich hab wieder am Buch weitergeschrieben.",
+          "start_time": 887.962
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 933.662
+        },
+        {
+          "role": "S0",
+          "text": "Und hab dann auch noch mal das alles abgetippt und dann hab ich's auch vorgelesen. Freunde von mir wollten es hören. Dann hab ich das so als Sprachnachricht, hab ich das so zusammengefasst und dann hab ich gemerkt, whoa, da kommt jetzt aber viel, was ja erfolgreich von mir eigentlich verdrängt war.",
+          "start_time": 934.322
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 951.762
+        },
+        {
+          "role": "S0",
+          "text": "Ja, und das kommt jetzt alles auf einmal hoch. [lacht leise] Und auch positive Momente, wo ich so denk: „Ah, guck mal, ich war neugierig, ich war verspielt, ich, äh, war so in meiner Welt.\"",
+          "start_time": 952.762
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 967.862
+        },
+        {
+          "role": "S0",
+          "text": "Und gleichzeitig halt auch so diese heftige Abhängigkeit. Und dass meine Eltern das ja auch so 'n bisschen ausgenutzt haben, dass ich da gebunden war.",
+          "start_time": 968.842
+        },
+        {
+          "role": "S2",
+          "text": "Was meinen Sie mit heftiger Abhängigkeit?",
+          "start_time": 979.832
+        },
+        {
+          "role": "S0",
+          "text": "Das ist son Dorf mit tausendsechshundert Einwohnern gewesen und es gab nur einen Bus, der in die Stadt gefahren ist, der ist auch nur einmal am Tag gefahren. Ja, und, äh, man war sich bewusst, ohne Führerschein kannst du hier nicht weg. Und wenn, wo willst du hin? Zur Tankstelle. Da gibt's auch nichts außer Red Bull. Und dann... Es gab nur einen Pizza Service, der sich die Mühe gemacht hat, in dieses Dorf zu fahren und man hatte ja auch nicht viel Auswahl, was Menschen angeht.",
+          "start_time": 983.502
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 1017.022
+        },
+        {
+          "role": "S0",
+          "text": "Ja, man hatte so die Gleichaltrigen und egal, wie die drauf waren, mit denen musste man halt dann auskommen.",
+          "start_time": 1017.342
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 1024.021
+        },
+        {
+          "role": "S0",
+          "text": "Ja, und meine Eltern hatten auch eine ganz komische Erziehungsmethode. Das war eher sone Erpressungsmethode. Die wussten recht früh, dass ich sehr willensstark bin und stur. Und dann gab es immer dieses Druckmittel: „Wir fahren dich nicht zu deinem Ziel, wenn du nicht gehorchst.\" Ja. Oder wenn du dich nicht entschuldigst, dann kriegst du kein Geld, dann kannst du keine Busfahrkarte kaufen. Das war immer so dieses Dableiben müssen.",
+          "start_time": 1025.202
+        },
+        {
+          "role": "S2",
+          "text": "Und in diesem Traum ist Ihnen quasi diese Klammer ins Gesicht gesprungen an dieser Bushaltestelle, während Sie durch den Matsch gelaufen sind. Oder Sie sind durch den Matsch gelaufen, um dorthin zu kommen. Und dann hat sich diese Klammer verwandelt in eine Spinne.",
+          "start_time": 1066.222
+        },
+        {
+          "role": "S0",
+          "text": "Ja. Also die war lebendig. Das war wie son...",
+          "start_time": 1084.722
+        },
+        {
+          "role": "S2",
+          "text": "Die Klammer war lebendig.",
+          "start_time": 1088.612
+        },
+        {
+          "role": "S0",
+          "text": "Die Schöne und das Biest, wo dann plötzlich diese Gegenstände ein Leben kriegen.",
+          "start_time": 1089.662
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 1095.582
+        },
+        {
+          "role": "S0",
+          "text": "So war die. Und die hat sich dann bei mir so-Ich habe mir auch vorhin solche Klammern gekauft, witzigerweise. [lacht]",
+          "start_time": 1096.462
+        },
+        {
+          "role": "S2",
+          "text": "Haben Sie dann dabei daran gedacht?",
+          "start_time": 1111.626
+        },
+        {
+          "role": "S0",
+          "text": "Nee, aber ich habe die in klein, ne, suche ich schon länger, so braune und dann dachte ich: „Jetzt gibt's braune Klammern.\" Und dann habe ich mir gedacht: \"Ja, das ist ja genau die Form, die ich im Traum...\" Die ist also so. Und da ist ja immer so ein Draht dran.",
+          "start_time": 1114.246
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 1134.186
+        },
+        {
+          "role": "S0",
+          "text": "Und dieser Draht, der war mir so in der Mitte vom Gesicht und der hat mich gepiekst. Also ich habe gemerkt, die Klammer, die will auch mich so stechen, oder, ähm, ich dachte dann wirklich an so eine Spinne, die, die so beißt kurz.",
+          "start_time": 1134.966
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 1151.946
+        },
+        {
+          "role": "S0",
+          "text": "Vielleicht giftig und dann lässt sie sich wieder so fallen, weil die lassen sich ja dann wieder so, so wegfallen.",
+          "start_time": 1152.646
+        },
+        {
+          "role": "S2",
+          "text": "Also die hat sich dann auch fallen lassen?",
+          "start_time": 1159.846
+        },
+        {
+          "role": "S0",
+          "text": "Die hat sich wieder fallen lassen, ja. [lacht] Das klingt so total verrückt, ja. Aber anscheinend hat es, hat es was damit zu tun, was mich beschäftigt. Ja.",
+          "start_time": 1162.006
+        },
+        {
+          "role": "S2",
+          "text": "Ja, also, ähm, total symbolisch natürlich, ne? Also, der Träume sind ja immer auch überzeichnet, also extrem, ne? Ähm, wenn oft sehr drastische Bilder, aber zeigen ja doch oft, was eben in einem vorgeht und was einen beschäftigt. Und diese Klammer, genau, also die hat ja auch was Haltenes. Sie haben sich das jetzt auch gekauft. Also da ist ja auch was, was, was Angenehmes mit dabei, irgendwo, ne, was, was, ähm, das Gesicht auch... Ich weiß nicht, ob's-- Ich denk die ganze Zeit an zusammenhalten, ja? Gesicht zusammenhalten. Weiß ich aber auch nicht, ob das so, so stimmig ist. Und, äh, die Spinne steht ja auch für, dann, 'ne Angst, die Sie wirklich mal hatten über viele Jahre, ne, wenn Sie sagen, Sie hatten eine Spinnenphobie. Und dann kam die wieder, hat sie auch gebissen, aber dann ist sie abgefallen.",
+          "start_time": 1179.596
+        },
+        {
+          "role": "S0",
+          "text": "Hm-hm. Und war riesig. Gegen über das ganze Gesicht.",
+          "start_time": 1244.726
+        },
+        {
+          "role": "S2",
+          "text": "Das ist schon ein heftiges Bild, ne?",
+          "start_time": 1250.266
+        },
+        {
+          "role": "S0",
+          "text": "Ja. Wie dieses Alien-Bild, was es da gibt.",
+          "start_time": 1251.726
+        },
+        {
+          "role": "S2",
+          "text": "Mhm. Ja, ja, ja, jetzt seh' ich's, ja. Waren Sie dabei Angst gehabt oder geschrien?",
+          "start_time": 1255.686
+        },
+        {
+          "role": "S0",
+          "text": "Nee, nur so, fand's eklig.",
+          "start_time": 1262.046
+        },
+        {
+          "role": "S2",
+          "text": "Ekel, ja.",
+          "start_time": 1264.506
+        },
+        {
+          "role": "S0",
+          "text": "Habe dann so zu der Klammer gesagt: „Nee, nicht ins Gesicht.\"",
+          "start_time": 1265.066
+        },
+        {
+          "role": "S2",
+          "text": "Und dann ist sie abgefallen.",
+          "start_time": 1267.866
+        },
+        {
+          "role": "S0",
+          "text": "Dann ist sie abgefallen. [lacht]",
+          "start_time": 1269.776
+        },
+        {
+          "role": "S2",
+          "text": "Also Sie haben selber, ne, dann aber auch so gesagt: „Nee, will ich nicht. Nee, passt nicht für mich.\" Und dann ist es abgefallen.",
+          "start_time": 1270.406
+        },
+        {
+          "role": "S0",
+          "text": "Hm-hm.",
+          "start_time": 1277.166
+        },
+        {
+          "role": "S2",
+          "text": "Also Sie waren dem nicht hilflos ausgeliefert.",
+          "start_time": 1278.566
+        },
+        {
+          "role": "S0",
+          "text": "Nee, so hab ich mich auch nicht gefühlt. Also ich habe mich nicht hilflos ausgeliefert gefühlt. Ich frage mich nur, was soll das? Was soll das mit dem ganzen Schminkzeug?",
+          "start_time": 1280.896
+        },
+        {
+          "role": "S2",
+          "text": "Ah.",
+          "start_time": 1289.806
+        },
+        {
+          "role": "S0",
+          "text": "Was soll das?",
+          "start_time": 1290.586
+        },
+        {
+          "role": "S2",
+          "text": "Weil das war ja am Anfang des Traums der-",
+          "start_time": 1293.106
+        },
+        {
+          "role": "S0",
+          "text": "Dass ich alles so auf dem Arm hatte. Da denk ich: „Ach, das noch und das noch und darauf musst du aufpassen. Das kannst du nicht einfach hinlegen.\" Weil ich pack ja im Moment immer meine Sportsachen.",
+          "start_time": 1295.296
+        },
+        {
+          "role": "S2",
+          "text": "Hm-hm.",
+          "start_time": 1304.346
+        },
+        {
+          "role": "S0",
+          "text": "Und ich hab so einen-",
+          "start_time": 1304.886
+        },
+        {
+          "role": "S2",
+          "text": "Weil Sie jetzt Sport machen, ne?",
+          "start_time": 1305.726
+        },
+        {
+          "role": "S0",
+          "text": "Ja. [lacht]",
+          "start_time": 1307.006
+        },
+        {
+          "role": "S2",
+          "text": "[lacht]",
+          "start_time": 1309.666
+        },
+        {
+          "role": "S0",
+          "text": "So ein ganz teures Zeug. Und denke dann immer: \"Oh Mann, wenn ich das da reinmache und das schüttel oder so quer so reinstecke, wo ist dann der Po oder irgendwie so was.\" Und dann, äh, überlege ich immer: \"Lass ich's daheim oder nehme ich es überhaupt mit?\" Und dieses Mal habe ich das halt alles so: \"Ah, das brauche ich noch, das brauche ich noch.\" Und habe das aber so gestapelt und habe das so getragen und so vorsichtig. Und da war irgendwie, war das... Ich wollte das mitnehmen, weil kann ja wichtig sein, die Schminke. Und dann war aber auch dieses: \"Oh Gott, Vorsicht, das kannst du jetzt nicht einfach in den Rucksack schmeißen.\"",
+          "start_time": 1310.095
+        },
+        {
+          "role": "S2",
+          "text": "Huh. Behutsam.",
+          "start_time": 1352.986
+        },
+        {
+          "role": "S0",
+          "text": "Behutsam, aber auch irgendwas muss dann noch sein mit Maskieren, weil ich hatte, äh, auch solche Träume in letzter Zeit, wo ich immer geträumt habe, dass ich irgendwo bin und, und hab dann gedacht: \"Scheiße, jetzt habe ich kein Schminkzeug dabei.\" [lacht] Aaah! Und, oh Gott, wie sehe ich heute aus? Das geht gar nicht. Ich habe mich verschätzt in der Zeit. Jetzt muss ich dahin und ich hab keine Schminke. Genau, wofür könnte diese Schminke stehen? Also, Sie haben ja vorhin gesagt: „Wie sehe ich aus? Was denken die anderen?\"",
+          "start_time": 1353.935
+        },
+        {
+          "role": "S2",
+          "text": "Ja.",
+          "start_time": 1387.826
+        },
+        {
+          "role": "S0",
+          "text": "Ähm, was glauben Sie, wenn Sie jetzt an Schminke denken?",
+          "start_time": 1388.726
+        },
+        {
+          "role": "S2",
+          "text": "Der Look muss stimmen, weil wieder irgendwas nicht gut genug ist.",
+          "start_time": 1396.826
+        },
+        {
+          "role": "S0",
+          "text": "Hm-hm.",
+          "start_time": 1403.606
+        },
+        {
+          "role": "S2",
+          "text": "Wenn es um solche Träume geht, dann weiß ich immer: „Okay, jetzt bist du wieder nicht gut genug, jetzt bist du nicht gekämmt, jetzt hast du nur den Kapuzenpulli dabei oder bist nicht rasiert.\" Ganz schlimm bei mir, wenn ich intime Träume habe. Ich bin nicht rasiert. Ich träume dann auf einmal: \"Ich bin nicht rasiert, ja, toll.\" [lacht] Dann ist gleich die Lust vorbei. [lacht] Und es geht so, es geht so ins Detail, ne? Der schönste Waldsee, wunderschöne Landschaft, sexy Boy am Start und ich, ich bin nicht rasiert. [lacht] Gleich sofort aufwachen. Sofort aufwachen, sagen Sie mal, dadurch?",
+          "start_time": 1404.666
+        },
+        {
+          "role": "S0",
+          "text": "Ja. Also, dieses so... Genau. Es ist eigentlich alles gut. Ist eigentlich alles gut, aber die Scham... Aber ich finde irgendwas... Ja, die Scham überwiegt und dann, ne, geht nicht.",
+          "start_time": 1441.295
+        },
+        {
+          "role": "S2",
+          "text": "Genau, weil Schminke passt ja auch, ne, zu Scham. Also eigentlich was verstecken, verstecken oder abdecken oder, ähm, nicht sichtbar machen, also nicht dafür gesehen werden wollen.",
+          "start_time": 1455.486
+        },
+        {
+          "role": "S0",
+          "text": "Und ich habe auch schon öfter die Erfahrung gemacht, wenn ich nicht geschminkt war.",
+          "start_time": 1466.966
+        },
+        {
+          "role": "S2",
+          "text": "Wurde ich angesprochen, ob ich krank bin. Ah, okay, also... Das könnte auch damit zusammenhängen.",
+          "start_time": 1471.318
+        },
+        {
+          "role": "S0",
+          "text": "Was ist das für ein Gefühl dann?",
+          "start_time": 1478.398
+        },
+        {
+          "role": "S2",
+          "text": "Schlimm. Ja, ich denk dann wieder dieses: „Ich bin nicht okay.\" Vor allem, ob ich krank bin. Das ist ja auch nicht, äh, das ist ja auch schon was sehr... Theoretisch eher was Schlimmes, ne?",
+          "start_time": 1481.298
+        },
+        {
+          "role": "S0",
+          "text": "Ja.",
+          "start_time": 1500.838
+        },
+        {
+          "role": "S2",
+          "text": "Ja.",
+          "start_time": 1501.678
+        },
+        {
+          "role": "S0",
+          "text": "Ich habe dann tatsächlich in der Anfangszeit von der Depression auch immer drauf geachtet: Wenn ich rausgehe, sehe ich krank aus? Kann man mir das ansehen, dass es mir nicht gut geht? Ich bin immer nur, wenn ich gewusst habe, okay, heute geht's einigermaßen, du siehht normal aus oder fühlt sich einigermaßen normal, dann habe ich mich rausgetraut und wenn nicht, das war wie ein Verstecken. Ja.",
+          "start_time": 1505.698
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 1530.638
+        },
+        {
+          "role": "S0",
+          "text": "Dann habe ich gewartet, bis die Sonne scheint. Dann habe ich gewusst, okay, dann habe ich wenigstens einen Grund für die Sonnenbrille. Also so ganz heftig, manipulativ, ins Detail und auch mit, mit allen möglichen Tricks.",
+          "start_time": 1532.528
+        },
+        {
+          "role": "S2",
+          "text": "Und in diesem Traum hatten Sie jetzt ganz viel Schminke, die Sie behutsam auf dem Arm vor sich hergetragen haben. Und was ist dann passiert mit der Schminke? Die hatten Sie einfach dabei? Die hatte ich dabei und ich konnte aber gar nicht die Klammer so abnehmen, weil ich hatte ja die Schminke. Ah. Also hätten-- Um die Klammer abzunehmen, hätten Sie was machen müssen?",
+          "start_time": 1550.278
+        },
+        {
+          "role": "S0",
+          "text": "Die Schminke fallen lassen müssen, wahrscheinlich.",
+          "start_time": 1575.388
+        },
+        {
+          "role": "S2",
+          "text": "Aaah. Okay. Und dass dann die Spinne kommt, macht ja irgendwo jetzt auch mehr Sinn.",
+          "start_time": 1578.338
+        },
+        {
+          "role": "S0",
+          "text": "Die hüpft mit drauf.",
+          "start_time": 1587.038
+        },
+        {
+          "role": "S2",
+          "text": "Na ja, Angst davor, die Klammer abzunehmen, weil das würde ja bedeuten, dass Sie die Schminke fallen lassen müssten. Das heißt, was müssten Sie eigentlich fallen lassen? Also was würde passieren, wenn Sie die Klammer abnehmen? Was würde dann damit fallen gelassen werden?",
+          "start_time": 1588.738
+        },
+        {
+          "role": "S0",
+          "text": "Die Fassade, oder? Ach du Scheiße. Fassade. [lacht] Ja. Und die Spinne hat ja auf meinen Befehl reagiert. Die war ja noch so ein bisschen behaart auch. Und ich war mir am Anfang nicht sicher, was springt mich da jetzt an? Ist das jetzt ein Äffchen oder was? Und dann war das aber so eine Tarantel. Aber dass ich dann gesagt habe: „Ih, nein, nicht\", und die ist dann gleich so weg. Also eigentlich war das so, als ob die mit will. So, ich spring jetzt noch auf und wir fahren Bus oder wir gehen und die springt noch dazu mit. Auf dem Arm war kein Platz, springt mir ins Gesicht. Was soll das? Ich lasse die Fassade fallen oder ich müsste, die Fassade müsste weg und dann kommt auf einmal die Angst ins, oder? Es war keine Angst. Das, das Ekel. Dass ich mich davor ekle, ohne Fassade zu sein? Dass ich es eklig finde, ohne Fassade zu sein? [lacht leise] Oh nein, bitte nicht. Vielleicht fühle ich mich ekelig.",
+          "start_time": 1618.568
+        },
+        {
+          "role": "S2",
+          "text": "Das glaube ich nicht.",
+          "start_time": 1710.758
+        },
+        {
+          "role": "S0",
+          "text": "Nicht? [lacht]",
+          "start_time": 1712.278
+        },
+        {
+          "role": "S2",
+          "text": "Ne, das glaube ich nicht. Glauben Sie das?",
+          "start_time": 1713.078
+        },
+        {
+          "role": "S0",
+          "text": "Ich weiß es nicht.",
+          "start_time": 1715.658
+        },
+        {
+          "role": "S2",
+          "text": "Also vielleicht eher dieses angewidert sein. Angewidert sein vielleicht von etwas, was, ähm, was Sie mit sich selber manchmal machen. Vielleicht von der alten Verhaltensweise, von etwas, wo Sie merken: „Boah, da habe ich gar keinen Bock mehr drauf.\" Ich klammere mich an etwas, Fassade, um eine bestimmte Fassade aufrechtzuerhalten, die mich aber eigentlich anekelt, weil es für mich überhaupt nicht mehr stimmig ist. Oder ich das gar nicht mehr fühle oder gar nicht mehr will oder gar nicht sein will.",
+          "start_time": 1717.318
+        },
+        {
+          "role": "S0",
+          "text": "Ja.",
+          "start_time": 1760.878
+        },
+        {
+          "role": "S2",
+          "text": "Und dazu passt auch dieses so: „Ich laufe durch den Matsch.\" Ne, Schlamm. So, das zieht mich ja auch immer wieder ein bisschen runter. Das ist kein einfacher Weg. Ja, ich kann da auch mal stecken bleiben. Und dann ist es ja auch ein Treffpunkt aus der Jugend. Also ein alter Ego.",
+          "start_time": 1762.318
+        },
+        {
+          "role": "S0",
+          "text": "Das hat noch einen anderen Hintergrund.",
+          "start_time": 1781.198
+        },
+        {
+          "role": "S2",
+          "text": "Ja.",
+          "start_time": 1783.158
+        },
+        {
+          "role": "S0",
+          "text": "Ich habe immer diese Abkürzung über die Wiese genommen.",
+          "start_time": 1783.618
+        },
+        {
+          "role": "S2",
+          "text": "Ahh. Eine Abkürzung?",
+          "start_time": 1786.618
+        },
+        {
+          "role": "S0",
+          "text": "Ja. Aber das war das Hundebollefeld, haben wir das immer genannt, weil da die ganzen Hunde drauf geschissen haben.",
+          "start_time": 1787.598
+        },
+        {
+          "role": "S2",
+          "text": "Aaah.",
+          "start_time": 1793.458
+        },
+        {
+          "role": "S0",
+          "text": "Das war total",
+          "start_time": 1794.938
+        },
+        {
+          "role": "S3",
+          "text": "[unverständlich] Tretmine. Da hast du immer gewusst, okay, du kannst jetzt die Abkürzung nehmen, aber dann trittst du in die Scheiße, je nachdem. Jetzt lachen Sie. [lacht] Was amüsiert Sie jetzt gerade?",
+          "start_time": 1795.978
+        },
+        {
+          "role": "S0",
+          "text": "Das ist ja genau das, worüber wir gesprochen haben, dass der kürzere Weg eben scheiße ist. Ja. Und dass der längere Weg ja meistens dann doch, also, braucht länger, aber die Schuhe sind nicht dreckig. Ne, das ist clean.",
+          "start_time": 1813.158
+        },
+        {
+          "role": "S2",
+          "text": "[Schmunzeln] Ja, und vielleicht auch, ähm, langfristig, ähm, stabiler.",
+          "start_time": 1833.793
+        },
+        {
+          "role": "S0",
+          "text": "Stabiler und vielleicht auch erwachsener. Ja.",
+          "start_time": 1840.174
+        },
+        {
+          "role": "S2",
+          "text": "Ja, dann auch dieser Bus, ne? Ähm...",
+          "start_time": 1849.444
+        },
+        {
+          "role": "S0",
+          "text": "Ja, das mit dem Bus ist sowieso so 'ne Sache, weil ich habe jetzt immer auch diese Sätze im Kopf von dem Buch und wie ich das formuliere und es sind auch Sachen dabei, wo-- die ich lustig finde, aber die gar nicht lustig sind natürlich, ja. Also, als ich letztes Mal hier dann heimgefahren bin, hab ich auch ein paar Tränchen verdrückt.",
+          "start_time": 1852.144
+        },
+        {
+          "role": "S2",
+          "text": "Gestern Morgen?",
+          "start_time": 1872.254
+        },
+        {
+          "role": "S0",
+          "text": "Ja.",
+          "start_time": 1873.014
+        },
+        {
+          "role": "S2",
+          "text": "Ja.",
+          "start_time": 1873.644
+        },
+        {
+          "role": "S0",
+          "text": "Dann habe ich mir gedacht: „Warum jetzt?\" Was-- Dann habe ich so abgecheckt die Traurigkeit und so. Und dann dachte ich: \"Ne, bedauern, was ich mir schon alles angetan habe.\" Ja? Und dann kam das so-",
+          "start_time": 1873.793
+        },
+        {
+          "role": "S2",
+          "text": "Mitgefühl.",
+          "start_time": 1887.094
+        },
+        {
+          "role": "S0",
+          "text": "Mitgefühl. Und dann sind mir auch wieder ganz viele Situationen eingefallen, was ich schon erduldet hab, was schon alles so... Was ich schon alles abgetan hab, was ja angeblich nicht so schlimm ist. So, ne? Der Herr Hartmann hat ja auch Mitgefühl gezeigt. Und da dachte ich ja auch, da ich wieder so Sprüche im Kopf gehabt: „Nur die Harten kommen in den Garten\", und diesen ganzen Flachs. Und dachte dann: „Okay, wie formuliere ich das jetzt auch in meinem Buch?\" Und habe dann die ganze Zeit gedacht: „Da mache ich diesen Wortwitz mit der Borderline.\" Also, dass die Borderline wie ein Bus ist oder wie ein Zug ist, der dich wo hinbringt. Du steigst immer wieder in dieses doofe Borderline und fährst deine Strecke damit und weißt aber genau, das ist... Es fährt nicht ans Ziel, aber trotzdem steigst du immer wieder ein, denkst immer wieder: „Wenn ich das nicht mache, verpasse ich was. Ich muss das machen, ich muss das machen.\" Und was man sich dann antut, ja? Und wie oft ich schon in den falschen Zug gestiegen bin und dann doch wieder zurückgefahren und doch wieder eingestiegen, wenn es denn da war, die Gelegenheit. Und so war es ja in dem Dorf auch. Ich bin ja tatsächlich auch weggegangen, aber mit Leuten oder an Orte, wo es auch nicht besser war. Ich war da so... Hab mich da echt auch mit Gesellschaft umgeben, die echt übel war. Und dachte mir so: „Gott, was hab ich mir da angetan? Es war ja uh, eklig.\" Ja.",
+          "start_time": 1887.854
+        },
+        {
+          "role": "S2",
+          "text": "Eklig?",
+          "start_time": 1992.474
+        },
+        {
+          "role": "S0",
+          "text": "Eklig.",
+          "start_time": 1993.114
+        },
+        {
+          "role": "S2",
+          "text": "Ja. Ganz schön eklig.",
+          "start_time": 1995.293
+        },
+        {
+          "role": "S0",
+          "text": "Ja. Und, und jetzt soll ich oder jetzt ist es an der Zeit, mit Selbstliebe jetzt da so anzufangen, ja? Oder diese Message: „Okay, jetzt bin ich auf einmal würdig, jetzt bin ich auf einmal liebenswürdig.\" Was das für eine große Spanne ist zu diesem: „Ich bin, ich bin es nicht wert oder ich bin Müll, ich bin wertlos.\" Und dann auf einmal Freundschaft. Und das ist, glaube ich, auch, was ich da im Kopf, was mich da so drückt, was ich da so merke als, äh, als Anstrengung. Das ist ja wirklich kein so kleiner Schritt.",
+          "start_time": 1997.094
+        },
+        {
+          "role": "S2",
+          "text": "Hmmm. Anspannung? Also zwischen welchen Punkten jetzt genau?",
+          "start_time": 2043.754
+        },
+        {
+          "role": "S0",
+          "text": "Zwischen, ähm, der ganzen Zeit von Selbst, ähm, Hass und vielleicht auch einfach nur Misstrauen oder eben nicht Zutrauen. Hass ist so ein großes Wort, aber dieses sich lieber wegducken, drücken und jetzt-",
+          "start_time": 2051.154
+        },
+        {
+          "role": "S2",
+          "text": "Zurauben.",
+          "start_time": 2070.514
+        },
+        {
+          "role": "S0",
+          "text": "Ja, auch, ja,",
+          "start_time": 2071.674
+        },
+        {
+          "role": "S4",
+          "text": "[Klopfen]",
+          "start_time": 2072.793
+        },
+        {
+          "role": "S0",
+          "text": "Und jetzt auf einmal so glasklar.",
+          "start_time": 2073.424
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 2076.494
+        },
+        {
+          "role": "S0",
+          "text": "So für jedes Problem auch 'ne Lösung suchen wollen und so in die krasse Verantwortung reingehen. Ja.",
+          "start_time": 2078.254
+        },
+        {
+          "role": "S2",
+          "text": "Was für 'ne Verantwortung?",
+          "start_time": 2091.234
+        },
+        {
+          "role": "S0",
+          "text": "Volle, volle, volle Breite. Jetzt bin ich auf einmal Lehrerin, ich bin Vermieterin, ich bin alles Mögliche jetzt. Meine eigene Anwältin. Meine Bänkerin. Okay, meine KI hilft mir ein bisschen, aber... [Lachen] Ja, trotzdem ist es so 'ne Chefsposition. Und jetzt soll auf-- Ich soll jetzt auf einmal sagen, wie es weitergeht. Ja, ich soll jetzt auf einmal-- Ich war jetzt die ganze Zeit fremdbestimmt. Obwohl mich meine Eltern nicht mehr so wirklich unter der Fuchtel hatten, hatten sie ja trotzdem noch eine Macht über mich. Die haben natürlich trotzdem gedacht: „Gott, wenn meine Eltern das mitkriegen und...\" Und jetzt, äh, schreibe ich dieses Buch und ich spüre, das ist jetzt wichtiger als das, was meine Eltern davon halten werden.",
+          "start_time": 2093.293
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 2143.734
+        },
+        {
+          "role": "S0",
+          "text": "Ich weiß aber, dass wenn ich diese Dinge jetzt aufschreibe, dass sie die lesen.",
+          "start_time": 2144.874
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 2149.134
+        },
+        {
+          "role": "S0",
+          "text": "Und das ist ein Riesending. Ich hatte-- Ich liebe dieses Schreiben, aber ich hab mich früher nie getraut, weil meine Mutter hat alle Tage Bücher gefunden, alles gelesen, Briefe aufgemacht, alles. Sie hat so 'ne Kontrollsucht auch. Und, äh, es war für mich immer ein Grund, noch mehr zu verheimlichen oder es noch mehr unter Verschluss zu bringen. Und jetzt bringe ich ja alles hoch, sogar die Dinge, die man aus Höflichkeit weglassen könnte oder so.",
+          "start_time": 2150.354
+        },
+        {
+          "role": "S2",
+          "text": "Eine Klammer ist auch ein Verschluss.",
+          "start_time": 2188.913
+        },
+        {
+          "role": "S0",
+          "text": "Angst ist auch ein... Ne? Aus Angst hab ich's verschlossen.",
+          "start_time": 2198.246
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 2202.086
+        },
+        {
+          "role": "S0",
+          "text": "Ne? Ich bin da als Symbol für die Angst.",
+          "start_time": 2202.406
+        },
+        {
+          "role": "S2",
+          "text": "Aha. Dieses, ne, das möchte ich jetzt aber nicht mehr. Geh weg!",
+          "start_time": 2206.656
+        },
+        {
+          "role": "S0",
+          "text": "Hm? Ja.",
+          "start_time": 2210.546
+        },
+        {
+          "role": "S2",
+          "text": "Das fällt ab. Das fällt jetzt weg, weil, äh, es ist so wichtig. Beziehungsweise, weil ich übernehme jetzt Verantwortung für mich und meine Gefühle und gehe meinen Weg.",
+          "start_time": 2212.046
+        },
+        {
+          "role": "S0",
+          "text": "Ja.",
+          "start_time": 2225.246
+        },
+        {
+          "role": "S2",
+          "text": "Ich steh zu mir, zu meiner Realität, zu meinem Leben.",
+          "start_time": 2227.166
+        },
+        {
+          "role": "S0",
+          "text": "Und es ist nicht nur, ich will's nicht nur abschließen, ich will dem 'nen Sinn geben. Das war so 'n langer Weg und so ein Kampf. Das muss irgendwie eine tiefere Bedeutung haben, sonst ist es sinnlos. Also nicht sinnlos, aber das gibt's, gibt's nicht, weder in der Kunst noch in der Natur, dass man so 'nen heftigen Aufwand betreibt und dann vergeht das einfach und man vergisst's. Es muss festgehalten werden, es muss ein Spiegel sein und auch sichtbar werden.",
+          "start_time": 2233.946
+        },
+        {
+          "role": "S2",
+          "text": "Weil daraus dann was resultiert?",
+          "start_time": 2277.106
+        },
+        {
+          "role": "S0",
+          "text": "Weil ich glaube, dass es andere Menschen retten kann. Und ich glaube, ich hätte das auch gebraucht, aber es war nicht da. Aber das hab ich ja jetzt. Also ich hab ja dann selber den Rettungsring aufgeblasen und jetzt kann ich schön, jetzt kann ich den so weitergeben. Weil das ist ein, also [lacht] ich hab, ich schreib da Zeug auf, wo ich mir denke, Gott, wie? [lacht] Das wird, ähm, verrückt. Ich hab das jetzt so 'n bisschen ausgetestet, ne, und hab das den ehrlichsten Freunden habe ich mal rübergeschickt und die lachten sich krumm. Die haben gesagt, \"Bitte, ich kann nicht schlafen. Kannst du mir das nächste Kapitel noch [lacht] noch mal verschicken?\"",
+          "start_time": 2281.386
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 2333.886
+        },
+        {
+          "role": "S0",
+          "text": "\"Ich muss kurz wissen, wie's weitergeht.\" Und, und es ist ja jetzt erst so die Einleitung, ja. Jetzt, ich bin jetzt dabei zu beschreiben, wie ich als Kind zuerst ganz viel Trauer gesammelt hab und auf einmal schlägt's so um in Wut.",
+          "start_time": 2333.896
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 2351.026
+        },
+        {
+          "role": "S0",
+          "text": "Ja, der Dorfpfarrer beantwortet mir meine Fragen nicht über Gott und jetzt soll er zur Hölle fahren. Und dann ist da so ein Turn drin, wo ich auch selber merk, dann hab ich jahrelang Wut unterdrückt. Und das war der Anfang von, von der Krankheit.",
+          "start_time": 2351.626
+        },
+        {
+          "role": "S2",
+          "text": "Depression ist die Wut, die man gegen sich selbst richtet, statt gegen die anderen.",
+          "start_time": 2374.246
+        },
+        {
+          "role": "S0",
+          "text": "Mhm. So hat sich's auch angefühlt. Ich wünsch mir für Sie, dass Sie sich, ähm, in diesem Prozess nicht überfordern.",
+          "start_time": 2381.226
+        },
+        {
+          "role": "S2",
+          "text": "Mhm. Weil Sie schon so 'nen Perfektionsanspruch ja an sich haben. Und, ähm, Sie kennen das von Ihren Bildern, von Ihrem Zeichnen und das Schreiben ist dem sehr verwandt.",
+          "start_time": 2394.046
+        },
+        {
+          "role": "S0",
+          "text": "Ja, das hab ich schon gemerkt. Das ist eine Bildsprache. Ich merke beides. Ich merke die Anstrengung, wie wenn ich da nicht aufhören kann, die nächste Farbe zu mischen.",
+          "start_time": 2408.986
+        },
+        {
+          "role": "S2",
+          "text": "Mhm.",
+          "start_time": 2422.026
+        },
+        {
+          "role": "S0",
+          "text": "Aber ich merke auch, dass es mir fast noch, noch heilsamer ist wie das Malen.",
+          "start_time": 2422.746
+        },
+        {
+          "role": "S2",
+          "text": "Genau, also man sagt ja auch, ähm, rausschreiben, rausschreiben, ne, weil dann kann man's richtig raus, aus dem Körper rauslassen. Also das Schreiben ist dabei extrem heilsam und hilfreich.",
+          "start_time": 2428.976
+        },
+        {
+          "role": "S0",
+          "text": "Mhm.",
+          "start_time": 2442.026
+        },
+        {
+          "role": "S2",
+          "text": "Ich denke nur, es wäre vielleicht eine gute Übung, das, dieses Projekt nicht an ein hohes Ziel zu knüpfen, dass Sie jetzt damit irgendwie 'n Verlag finden müssen und 'n Bestseller draus wird und, äh, alle Leute auf der ganzen Welt dann dieses Buch in den verschiedensten Sprachen lesen oder ersetzen. [lacht leise]",
+          "start_time": 2442.366
+        },
+        {
+          "role": "S0",
+          "text": "Ja. Das, ähm, hab ich unter Kontrolle. Also das wär natürlich schön, aber ich weiß, okay, das ist Fantasie. Aber was ich selber merk, ist der Druck, dass ich denk, ich muss es in 'nem bestimmten Zeitraum jetzt machen, weil erst danach wieder meine Malerei weitergehen kann oder ich kann es gar nicht so richtig beschreiben.",
+          "start_time": 2467.126
+        },
+        {
+          "role": "S2",
+          "text": "Genau, das ist dieses Wenn dann.",
+          "start_time": 2489.886
+        },
+        {
+          "role": "S0",
+          "text": "Ja, dass da so Bedingungen dran sind und-",
+          "start_time": 2492.306
+        },
+        {
+          "role": "S2",
+          "text": "Genau.",
+          "start_time": 2495.086
+        },
+        {
+          "role": "S0",
+          "text": "Druck.",
+          "start_time": 2495.766
+        },
+        {
+          "role": "S2",
+          "text": "Und das, ähm, da lauern viele Herausforderungen oder vielleicht auch dann Gefahren.",
+          "start_time": 2496.526
+        },
+        {
+          "role": "S0",
+          "text": "Ja, das ist eine Falle. Ich kenn die.",
+          "start_time": 2504.686
+        },
+        {
+          "role": "S2",
+          "text": "Ja.",
+          "start_time": 2507.026
+        },
+        {
+          "role": "S0",
+          "text": "Ich, ähm, überleg, wie ich das machen kann, weil-",
+          "start_time": 2507.746
+        },
+        {
+          "role": "S2",
+          "text": "Also jeder Autor teilt sich... Entschuldigung, dass ich dazwischen gehe, aber wir haben nur noch zwei Minuten. Jeder Autor teilt sich, also professionelle Autoren teilen sich genaue Zeitfenster dafür ein pro Tag.",
+          "start_time": 2512.146
+        },
+        {
+          "role": "S0",
+          "text": "Okay. Mhm.",
+          "start_time": 2524.746
+        },
+        {
+          "role": "S2",
+          "text": "Und es ist ganz wichtig, dass Sie diesen Prozess sich noch gut um sich kümmern und Ihrem Körper und Ihre Bedürfnisse. Wie lief das denn mit dem Wellness jetzt?",
+          "start_time": 2527.226
+        },
+        {
+          "role": "S0",
+          "text": "Gut, ich war die ganze Zeit dann dort, habe auch dann so gemerkt, ich habe mich dann so bewusst auf den Liegestuhl gelegt und neben, neben dem Schwimmbad und, und das, das Wasser, das Rauschen und so, ne? Und parallel dazu ist aber immer dieses Buch aufgeploppt.",
+          "start_time": 2535.066
+        },
+        {
+          "role": "S2",
+          "text": "Ich kenn das. [lacht]",
+          "start_time": 2552.806
+        },
+        {
+          "role": "S0",
+          "text": "[lacht]",
+          "start_time": 2555.246
+        },
+        {
+          "role": "S2",
+          "text": "Deswegen sprech ich's an.",
+          "start_time": 2555.266
+        },
+        {
+          "role": "S0",
+          "text": "Ja. Äh, ich hab 'n bisschen Angst. Es gibt, glaub ich, für mich so diese zwei Möglichkeiten, die es auch immer in der Malerei hat.Verflucht. Aber entweder ich mache ein Bild, ich fange es an, dann lasse ich es auf einmal schleifen und dann verschwindet's und steht jahrelang in der Ecke. Und es sind, wer weiss, manchmal wie Meisterwerke gewesen eigentlich. Oder eben, ich gehe voll dran und nutze diese ganze Energie, diese ganze Kraft, dieses Hirnen. Könnte es in der Zeit auch aufschreiben, dann hätte ich es ja schon, wenn ich jetzt nur dran denke. Und ich habe immer dieses: Entweder ganz oder gar nicht. Und das ist so schwierig, weil da haben wir geredet. Es muss ja schaukeln. Das muss ich lernen. Genau. Pendeln. Genau, zwischen diesen beiden Polen und dann in der Mitte die Balance finden. Ja, das ist schwierig. Der Weg ist das Ziel. Das Ziel ist das Ziel. Und dann ist es nicht Druck, nicht Stress. Der Plan war sogar, es vor Januar noch zu schaffen. Genau. Ja. Ich bin schon fast bei Mittelzeit. Zu welchem Preis? Ja, Augenringe, schlaflose Nächte, zehn Kilo weniger, Rauchen wieder angefangen. Nein, da kommt dann eher die Absinthe-Abhängigkeit. Man sagt ja immer, dass Schriftsteller so alkoholgefährdet sind. Jetzt weiß ich auch, warum. Wenn das mit dem Ohr ist, dann auch noch abgeschnitten wird. Das war er gar nicht selber. Das war sein Freund. Die wollten den Tinnitus heilen. Das ist ganz traurig. Im Wahn halt. Im Wahn den Tinnitus besiegen. Genau. Aber dass der Tinnitus kommt von zu viel Stress und weniger wird, wenn man weniger Stress mal hat und dem armen Körper mal ein paar Pausen gönnt und sich mal dem kümmert. Ja Das wurde nicht gesehen. Das hat er nicht gedacht. Und ist es nicht verrückt, dass jeder das kennt mit dem Ohr, Aber die wenigsten bedenken, dass er sich ja dann tatsächlich das Leben genommen hat später. Absolut. Ja, Stefan Kopf hat sich. Nein, ich meine, ich weiß nicht, ob das ist, dass die wenigsten machen. Doch, würde ich sagen, der wäre echt. Ja, eben. Und wir wollen ja bei Ihnen eine gesunde Geschichte. Ja. Nein? Da muss ich mit langsamen Meilen im Stil gehen. Ja. Wirklich? Also Schritt für Schritt. Also Sie können es auch üben, dann gehen. Spüren Sie, wie Sie den Boden berühren und wie der Boden auch Sie berührt. Im Kontakt sein. Das ist schwer gerade. Wie hältst du immer? Also dieses Berühren und sich auch berühren lassen. Und so ist es beim Schreiben auch. Also wir arbeiten da viel durch, was auch Raum und Zeit braucht zum Entstehen. Aber ist auch okay. Manchmal hat man halt so Flows, die wellen. Ist ja auch geil, flow zu werden. Wenn man nicht im Flow ist, das nutzen und sich berühren und was man spürt. Ich hoffe, ich will auch noch mal wieder hier nach Hause gehen. Ich glaube, das wird jetzt nicht mehr klap. Was soll's? Jetzt ist sie. Ja. Genau. Weil man sagt es ja auch, sich was von der Seele schreiben oder ... Ja ja, genau. Also, Frau Kempster, einfach noch mal, dass die Versicherung sich dann gemeldet hat. Okay? Das haben wir jetzt einfach mit dem Stoff durcherarbeitet. Okay, vielen Dank. Und wenn du suchst, dann melden. Will ich nicht. Okay, aber wir machen das ein ganz kurzes Mal langer. Na, dann machen wir das. Gute Heimfahrt. Danke schön. Passt, dass sie einfach will.",
+          "start_time": 2556.646
+        }
+      ],
+      "language": "de",
+      "metadata": {
+        "source": "KAH EGOSTATE.m4a.json",
+        "duration_seconds": 2858.0,
+        "speakers": [
+          "S0",
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "message_count": 231,
+        "total_chars": 33647
+      },
+      "rater_a": {
+        "tone": "",
+        "themes": [],
+        "relational_dynamics": "",
+        "intent": "",
+        "emotional_tenor": 0.0,
+        "context_validity": 0.0,
+        "offline_context_risk": 0.0
+      },
+      "rater_b": {
+        "tone": "",
+        "themes": [],
+        "relational_dynamics": "",
+        "intent": "",
+        "emotional_tenor": 0.0,
+        "context_validity": 0.0,
+        "offline_context_risk": 0.0
+      },
+      "notes": "Converted from Whisper/diarization JSON. Annotations pending."
+    }
+  ]
+}
