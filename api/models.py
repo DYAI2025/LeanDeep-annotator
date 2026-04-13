@@ -5,11 +5,13 @@ from __future__ import annotations
 from enum import Enum
 from typing import Any
 
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 
 from pydantic import BaseModel, Field
 
 from .semantic_frame import SemanticFrame
+
+UTC = timezone.utc
 
 # --- Enums ---
 
@@ -443,6 +445,27 @@ class PredictionResponse(BaseModel):
     session_count: int
     predictions: PredictionReservoir | None = None
     confidence: str = "insufficient_data"  # "low" | "medium" | "high" | "insufficient_data"
+
+
+# --- Candidate Detection Models ---
+
+class ExamplePassage(BaseModel):
+    text: str
+    context: str = ""
+    source_dialogue_hash: str = ""
+    confidence: float = Field(default=0.0, ge=0.0, le=1.0)
+
+
+class MarkerCandidate(BaseModel):
+    candidate_id: str
+    example_passages: list[ExamplePassage] = Field(default_factory=list)
+    cluster_meaning: str
+    frequency: int = Field(default=0, ge=0)
+    related_markers: list[str] = Field(default_factory=list)
+    coherence: float = Field(default=0.0, ge=0.0, le=1.0)
+    novelty: float = Field(default=0.0, ge=0.0, le=1.0)
+    rank_score: float = Field(default=0.0, ge=0.0)
+    status: str = "proposed"
 
 
 # --- Narrative Analysis Models ---
