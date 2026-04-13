@@ -35,7 +35,7 @@ CLUSTER_COHERENCE_THRESHOLD = 0.7
 # Resonance scoring
 # ---------------------------------------------------------------------------
 
-def _extract_semantic_tags(marker_def: Any) -> list[str]:
+def extract_semantic_tags(marker_def: Any) -> list[str]:
     """Extract semantic tags from a marker definition.
 
     Uses `resonance_tags` if available, otherwise derives tags from
@@ -146,7 +146,7 @@ class WeightedMarker:
     layer: str
     confidence: float           # original confidence
     resonance_score: float      # frame alignment (0.0-1.0)
-    adjusted_confidence: float  # confidence * resonance_score
+    adjusted_confidence: float | None  # confidence * resonance_score
     tier: str                   # "STRONG" | "WEAK" | "DISCARDED"
     description: str = ""
     family: str | None = None
@@ -191,7 +191,7 @@ def apply_resonance_weighting(
 
     for det in detections:
         marker_def = marker_defs.get(det.marker_id)
-        tags = _extract_semantic_tags(marker_def) if marker_def else []
+        tags = extract_semantic_tags(marker_def) if marker_def else []
         resonance = score_resonance(tags, frame)
         adjusted = det.confidence * resonance
 
@@ -247,9 +247,15 @@ async def cluster_weak_markers(
 
     if not settings.google_api_key:
         return []
+    if not settings.reasoning_model:
+        logger.warning("reasoning_model not configured. Skipping weak marker clustering.")
+        return []
+
+    if not settings.reasoning_model:
+        return []
 
     marker_descriptions = "\n".join(
-        f"- {wm.marker_id}: {wm.description} (confidence: {wm.adjusted_confidence:.2f})"
+        f"- {wm.marker_id}: {wm.description} (confidence: {(wm.adjusted_confidence if wm.adjusted_confidence is not None else wm.confidence):.2f})"
         for wm in weak_markers
     )
 
@@ -276,7 +282,10 @@ Return ONLY the JSON object."""
 
         coherence = float(data.get("coherence_score", 0.0))
         if coherence >= CLUSTER_COHERENCE_THRESHOLD:
-            avg_conf = sum(wm.adjusted_confidence for wm in weak_markers) / len(weak_markers)
+            avg_conf = sum(
+                wm.adjusted_confidence if wm.adjusted_confidence is not None else wm.confidence
+                for wm in weak_markers
+            ) / len(weak_markers)
             return [WeakMarkerCluster(
                 marker_ids=[wm.marker_id for wm in weak_markers],
                 cluster_label=str(data.get("cluster_label", "Weak marker cluster")),
@@ -294,6 +303,9 @@ Return ONLY the JSON object."""
 
 async def _call_clustering_llm(prompt: str) -> str:
     """Call the LLM for clustering and return raw JSON response."""
+    if not settings.reasoning_model:
+        raise ValueError("settings.reasoning_model must be configured for weak-marker clustering")
+
     import google.generativeai as genai
     genai.configure(api_key=settings.google_api_key)
     model = genai.GenerativeModel(settings.reasoning_model)

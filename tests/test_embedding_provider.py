@@ -39,14 +39,15 @@ def test_embedding_provider_unavailable_without_prototypes():
     assert provider.is_available() is False
 
 
-def test_deterministic_hash_encoder_is_stable():
+def test_deterministic_hash_encoder_uses_stable_token_hashing():
     from api.providers.embedding import _DeterministicHashEncoder
 
-    encoder = _DeterministicHashEncoder(dim=32)
-    texts = ["repeatable token mapping", "repeatable token mapping"]
+    encoder = _DeterministicHashEncoder(dim=17)
 
-    encoded_first = encoder.encode(texts, normalize_embeddings=True)
-    encoded_second = encoder.encode(texts, normalize_embeddings=True)
+    assert encoder._bucket_for_token("alpha") == 9
+    assert encoder._bucket_for_token("beta") == 14
+    assert encoder._bucket_for_token("gamma") == 16
 
-    np.testing.assert_allclose(encoded_first, encoded_second)
-    np.testing.assert_allclose(encoded_first[0], encoded_first[1])
+    emb_a = encoder.encode(["alpha beta gamma"], normalize_embeddings=False)
+    emb_b = encoder.encode(["alpha beta gamma"], normalize_embeddings=False)
+    np.testing.assert_array_equal(emb_a, emb_b)

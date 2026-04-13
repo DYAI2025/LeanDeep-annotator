@@ -1,0 +1,47 @@
+.highlighted-text {
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+}
+
+.message-block {
+  margin-bottom: var(--space-md);
+  padding: var(--space-sm) 0;
+}
+
+.message-role {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-right: var(--space-sm);
+  font-size: var(--font-size-sm);
+}
+
+.message-text {
+  color: var(--color-text);
+}
+
+.marker-highlight {
+  background-color: var(--color-accent);
+  opacity: var(--marker-opacity, 0.3);
+  border-radius: 2px;
+  padding: 1px 2px;
+  cursor: pointer;
+  transition: opacity var(--transition-fast), outline-color var(--transition-fast);
+  outline: 2px solid transparent;
+}
+
+.marker-highlight:hover,
+.marker-highlight:focus-visible {
+  opacity: 1 !important;
+  outline-color: currentColor;
+}
+
+.marker-highlight--active {
+  opacity: 1 !important;
+  outline: 2px solid var(--color-text);
+  outline-offset: 1px;
+}
+
+.marker-highlight:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}

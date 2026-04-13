@@ -19,17 +19,16 @@ class _DeterministicHashEncoder:
     def __init__(self, dim: int):
         self._dim = max(1, int(dim))
 
-    def _token_index(self, token: str) -> int:
+    def _bucket_for_token(self, token: str) -> int:
         digest = hashlib.blake2b(token.encode("utf-8"), digest_size=8).digest()
-        bucket = int.from_bytes(digest, byteorder="big", signed=False)
-        return bucket % self._dim
+        return int.from_bytes(digest, byteorder="big", signed=False) % self._dim
 
     def encode(self, texts: list[str], normalize_embeddings: bool = True) -> np.ndarray:
         embeddings: list[np.ndarray] = []
         for text in texts:
             vec = np.zeros(self._dim, dtype=np.float32)
             for token in text.lower().split():
-                idx = self._token_index(token)
+                idx = self._bucket_for_token(token)
                 vec[idx] += 1.0
             if normalize_embeddings:
                 norm = float(np.linalg.norm(vec))

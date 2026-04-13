@@ -2,9 +2,9 @@
 
 **Responsibility**: Interactive analysis UI — dialogue upload, text highlighting with marker spans, contextual tooltips, narrative-marker bidirectional linking, marker library sidebar, export (JSON/HTML/PDF).
 
-**Technology**: React (or vanilla JS — TBD), served by FastAPI static files or separate build
+**Technology**: React 18+ / TypeScript / Vite (per DEC-frontend-react-vite)
 
-**Source Directory**: `static/` or `frontend/` (to be established during implementation)
+**Source Directory**: `3-code/frontend/` (Vite project root)
 
 ## Interfaces
 
@@ -22,5 +22,6 @@
 
 | File | Title | Trigger |
 |------|-------|---------|
+| [DEC-frontend-react-vite](../../decisions/DEC-frontend-react-vite.md) | React + TypeScript + Vite stack | All frontend development |
 | [DEC-semantic-guided-multi-perspective-architecture](../../decisions/DEC-semantic-guided-multi-perspective-architecture.md) | Multi-perspective analysis | When displaying narratives and marker-narrative linking |
 | [DEC-context-uncertainty-proportional-variance](../../decisions/DEC-context-uncertainty-proportional-variance.md) | Narrative count scales with uncertainty | When rendering dynamic narrative count |

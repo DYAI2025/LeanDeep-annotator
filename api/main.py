@@ -48,6 +48,7 @@ from .models import (
     InterpretResponse,
     Layer,
     MarkerDetail,
+    MultiNarrative,
     MarkerListResponse,
     Message,
     NarrativeActor,
@@ -75,7 +76,8 @@ from .models import (
     VADPoint,
 )
 from .framing import frame_generator
-from .resonance import apply_resonance_weighting, cluster_weak_markers
+from .narratives import generate_multi_narratives
+from .resonance import apply_resonance_weighting, cluster_weak_markers, extract_semantic_tags
 from .narrative import (
     InitialSemanticsGenerator,
     NarrativeReportGenerator,
@@ -252,6 +254,7 @@ async def analyze_conversation(
 
     # Semantic profiling (Layer 0) — per-message profiles
     analysis_mode = "pattern"
+    profiles = []
     if req.semantic_mode != "off":
         profiler = _resolve_profiler(request)
         units = TextUnit.from_messages(messages)
@@ -274,15 +277,21 @@ async def analyze_conversation(
 
     detections = result["detections"]
     weak_cluster_models: list[WeakCluster] = []
+    _strong_markers = None
+    _weak_markers = []
+    _resonance_clusters = []
 
     # Apply resonance weighting when frame is available
     if frame is not None:
         strong, weak, _discarded = apply_resonance_weighting(
             detections, frame, engine.markers,
         )
+        _strong_markers = strong
+        _weak_markers = weak
 
         # Cluster weak markers for alternative perspectives
         clusters = await cluster_weak_markers(weak)
+        _resonance_clusters = clusters
         weak_cluster_models = [
             WeakCluster(
                 marker_ids=c.marker_ids,
@@ -316,6 +325,7 @@ async def analyze_conversation(
                 resonance_score=wm.resonance_score,
                 adjusted_confidence=wm.adjusted_confidence,
                 tier=wm.tier,
+                meaning_in_context=wm.description,
             )
             for wm in all_weighted
         ]
@@ -350,15 +360,63 @@ async def analyze_conversation(
     # Sort by adjusted_confidence (if available) or confidence
     markers.sort(key=lambda m: (-(m.adjusted_confidence or m.confidence), m.id))
 
+    # Generate multi-narrative interpretations when frame + weighted markers available
+    narrative_models: list[MultiNarrative] = []
+    if frame is not None and _strong_markers is not None:
+        narrative_models = await generate_multi_narratives(
+            _strong_markers, _weak_markers, _resonance_clusters, frame,
+        )
+
+    # Build semantic profile responses
+    semantic_profile_models = []
+    if profiles:
+        for i, p in enumerate(profiles):
+            semantic_profile_models.append(SemanticProfileResponse(
+                message_index=i,
+                intent=p.intent,
+                register=p.register,
+                emotion_primary=p.emotion_primary,
+                ironie=p.ironie,
+                selbst_fremd=p.selbst_fremd,
+                beziehungsdynamik=p.beziehungsdynamik,
+                tension=p.tension,
+                source=p.source,
+            ))
+
+    # Build VAD trajectory from result
+    vad_trajectory = []
+    for msg_vad in result.get("message_vad", []):
+        if msg_vad:
+            vad_trajectory.append(VADPoint(
+                valence=msg_vad.get("valence", 0.0),
+                arousal=msg_vad.get("arousal", 0.0),
+                dominance=msg_vad.get("dominance", 0.0),
+            ))
+
+    # Determine degraded state (only degraded if semantic was requested but failed)
+    semantic_requested = req.semantic_mode != "off"
+    is_degraded = frame is None and semantic_requested
+    provider_used = "none" if frame is None else (result.get("provider_used") or settings.semantic_provider or "unknown")
+    fallback_reason_val = "all_providers_unavailable" if is_degraded else None
+
+    timing_ms = result["timing_ms"]
+
     return ConversationResponse(
         frame=frame,
         markers=markers,
+        narratives=narrative_models,
         weak_clusters=weak_cluster_models,
+        semantic_profile=semantic_profile_models,
+        vad_trajectory=vad_trajectory,
         temporal_patterns=temporal,
         topology=result.get("topology"),
         reasoning=result.get("reasoning"),
+        degraded=is_degraded,
+        provider_used=provider_used,
+        fallback_reason=fallback_reason_val,
+        duration_ms=timing_ms,
         meta=AnalyzeMeta(
-            processing_ms=result["timing_ms"],
+            processing_ms=timing_ms,
             text_length=sum(len(m.text) for m in req.messages),
             markers_detected=len(markers),
             layers_scanned=layers,
@@ -876,6 +934,7 @@ async def list_markers(
             scoring=m.scoring,
             activation=m.activation if isinstance(m.activation, dict) else None,
             window=m.window,
+            resonance_tags=extract_semantic_tags(m),
         )
         for m in results
         if m.layer in valid_layers
@@ -917,6 +976,7 @@ async def get_marker(
         scoring=m.scoring,
         activation=m.activation,
         window=m.window,
+        resonance_tags=extract_semantic_tags(m),
     )
 
 
