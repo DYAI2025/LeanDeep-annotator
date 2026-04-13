@@ -1,0 +1,170 @@
+{
+  "markers": [
+    {
+      "id": "MEMA_ZERO_PUNISHMENT_GUARD",
+      "layer": "MEMA",
+      "confidence": 0.75,
+      "family": null
+    },
+    {
+      "id": "MEMA_META_DRIFT",
+      "layer": "MEMA",
+      "confidence": 0.6,
+      "family": null
+    },
+    {
+      "id": "MEMA_VALUE_DYNAMICS",
+      "layer": "MEMA",
+      "confidence": 0.562,
+      "family": null
+    },
+    {
+      "id": "MEMA_PAPAGEI_ECHO",
+      "layer": "MEMA",
+      "confidence": 0.55,
+      "family": null
+    },
+    {
+      "id": "MEMA_SPIRAL_COHERENCE_INDEX",
+      "layer": "MEMA",
+      "confidence": 0.55,
+      "family": null
+    },
+    {
+      "id": "CLU_UNCERTAINTY_CASCADE",
+      "layer": "CLU",
+      "confidence": 0.6,
+      "family": null
+    },
+    {
+      "id": "CLU_RISK_LEVEL",
+      "layer": "CLU",
+      "confidence": 0.475,
+      "family": null
+    },
+    {
+      "id": "CLU_SPIRAL_PERSONA_BEIGE",
+      "layer": "CLU",
+      "confidence": 0.475,
+      "family": null
+    },
+    {
+      "id": "CLU_DRIFT_TO_PRESENCE",
+      "layer": "CLU",
+      "confidence": 0.392,
+      "family": null
+    },
+    {
+      "id": "SEM_NEUTRAL_NEGOTIATION",
+      "layer": "SEM",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "SEM_NEEDS_TO_WANTS_FLIP",
+      "layer": "SEM",
+      "confidence": 0.8,
+      "family": null
+    },
+    {
+      "id": "SEM_WARM_APPRECIATION",
+      "layer": "SEM",
+      "confidence": 0.733,
+      "family": null
+    },
+    {
+      "id": "ATO_TIME_REFERENCE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_EXPRESSIVE_APHASIA",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CONFIRM",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_MODAL_VERBS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_NEGATION",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_WEDDING_STRESS_CUE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CONDITION_CUE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_ACTION_VERBS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_STRESS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_CLARIFY_REQ",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_MUST_CHECK",
+      "layer": "ATO",
+      "confidence": 0.7,
+      "family": null
+    },
+    {
+      "id": "ATO_HEDGE_TERM",
+      "layer": "ATO",
+      "confidence": 0.68,
+      "family": null
+    },
+    {
+      "id": "ATO_DEFENSIVE_REBUTTAL",
+      "layer": "ATO",
+      "confidence": 0.667,
+      "family": null
+    },
+    {
+      "id": "ATO_FEAR_ANXIETY",
+      "layer": "ATO",
+      "confidence": 0.657,
+      "family": null
+    },
+    {
+      "id": "ATO_SHAME_GUILT",
+      "layer": "ATO",
+      "confidence": 0.657,
+      "family": null
+    }
+  ],
+  "meta": {
+    "markers_detected": 27,
+    "processing_ms": 21499.974012374878
+  }
+}

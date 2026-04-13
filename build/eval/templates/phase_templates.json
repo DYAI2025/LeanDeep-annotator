@@ -1,0 +1,62 @@
+{
+  "selbstwert": {
+    "description": "Selbstwert- und Identitaetsarbeit mit Scham-/Fassaden-Exploration",
+    "phases": ["Containment", "Koerpersignal", "Scham_Fassade", "Selbstwert_Shift", "Ressource"],
+    "vad_type": "aufstieg",
+    "role_dynamics": "Client traegt Scham- und Entwertungsnarrative, Therapist spiegelt Wuerde und Kompetenz"
+  },
+  "angst": {
+    "description": "Angst- und Panikbearbeitung mit Koerper- und Vermeidungsfokus",
+    "phases": ["Containment", "Koerpersignal", "Vermeidung", "Exposition_Andeutung", "Pace_Regulation"],
+    "vad_type": "tal_und_gipfel",
+    "role_dynamics": "Client benennt koerperliche Angstsymptome, Therapist reguliert Tempo und Sicherheit"
+  },
+  "beziehung": {
+    "description": "Beziehungskonflikte mit Musteranalyse und Perspektivwechsel",
+    "phases": ["Eroeffnung", "Konflikt_Schilderung", "Muster_Erkennung", "Perspektivwechsel", "Handlungsplan"],
+    "vad_type": "plateau",
+    "role_dynamics": "Client schildert Beziehungsdynamik, Therapist fragt nach Mustern und eigenem Anteil"
+  },
+  "familie": {
+    "description": "Familiaere Bindungsmuster und Abloesungsprozesse",
+    "phases": ["Containment", "Herkunftsraum", "Bindungsmuster", "Abloesung", "Eigenverantwortung"],
+    "vad_type": "plateau",
+    "role_dynamics": "Client erzaehlt Familiengeschichte, Therapist differenziert Bindung von Verstrickung"
+  },
+  "trauma": {
+    "description": "Traumabearbeitung mit Stabilisierung und Affektbruecke",
+    "phases": ["Stabilisierung", "Annaeherung", "Affektbruecke", "Reorientierung", "Ressource"],
+    "vad_type": "tal_und_gipfel",
+    "role_dynamics": "Client naehert sich behutsam Traumamaterial, Therapist haelt Sicherheitsrahmen"
+  },
+  "wut": {
+    "description": "Wut- und Aggressionsregulation mit Beduerfnisanalyse",
+    "phases": ["Eroeffnung", "Ausloeser", "Eskalationskette", "Regulation", "Beduerfnis_dahinter"],
+    "vad_type": "tal_und_gipfel",
+    "role_dynamics": "Client beschreibt Wutausloeser, Therapist normalisiert und lenkt auf darunter liegende Beduerfnisse"
+  },
+  "trauer": {
+    "description": "Verlustbearbeitung mit Erinnerung und Sinnsuche",
+    "phases": ["Containment", "Verlust_benennen", "Erinnerung", "Sinnfrage", "Weiterleben"],
+    "vad_type": "tal_und_gipfel",
+    "role_dynamics": "Client trauert, Therapist validiert Schmerz und begleitet Sinnbildung"
+  },
+  "sucht": {
+    "description": "Suchtverhalten mit Ambivalenz- und Funktionsanalyse",
+    "phases": ["Eroeffnung", "Ambivalenz", "Funktionsanalyse", "Alternativen", "Commitment"],
+    "vad_type": "plateau",
+    "role_dynamics": "Client zeigt Ambivalenz, Therapist exploriert Funktion des Verhaltens ohne Moralisierung"
+  },
+  "identitaet": {
+    "description": "Identitaets- und Authentizitaetsexploration",
+    "phases": ["Eroeffnung", "Selbstbild", "Fremdbild_Spannung", "Exploration", "Authentizitaet"],
+    "vad_type": "aufstieg",
+    "role_dynamics": "Client ringt mit Selbst- vs. Fremdbild, Therapist foerdert Selbsterforschung"
+  },
+  "uebertragung": {
+    "description": "Therapeutische Beziehungsdynamik und Uebertragungsarbeit",
+    "phases": ["Admin", "Beziehungsdynamik", "Spiegelung", "Deutung", "Boundary"],
+    "vad_type": "aufstieg",
+    "role_dynamics": "Beziehungsdynamik zwischen Client und Therapist wird zum Material der Sitzung"
+  }
+}

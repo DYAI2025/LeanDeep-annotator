@@ -1,0 +1,117 @@
+{
+  "id": "GS-AMOD-040",
+  "source": "amod",
+  "language": "en",
+  "theme": "uebertragung",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "An organization admitted to implanting thoughts in my head with technologies. The study was to implant a fantasy other people are having, but to me, it's a nightmare. I lost my kids, my job, and all that. I was an unwilling participant. I no longer trust a therapist.  I'm too afraid to go under hypnosis or anything.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Given your experience of being imposed upon against your will, and all the personal and professional loss that has come since, your fear of what will happen if you undergo treatment and trust a therapist is understandable. There is no technique or pill that can guarantee these thoughts will go away or be reversed, however, there are things that you can do which may help you to change your relationship to the thoughts and to the distress that they cause. I understand that working with a therapist sounds risky, given your experiences, and at the same time a good therapist may be a beneficial resource in helping you deal with the intrusive thoughts, cope with and alleviate the stress that they create, and perhaps even lead to the alleviation of the thoughts themselves. A therapist may also be able to help you discover strategies to work towards any goals you have around reconnecting with your children and working again. If therapy feels too unsafe at the moment, I would recommend looking into workbooks on how to deal with intrusive thoughts and coping with stress. Some popular approaches that you may want to look into are mindfulness techniques, Acceptance and Commitment Therapy, or Cognitive Behavioral Therapy. You may even be able to find some of these resources at a library, if affordability is an obstacle.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1645,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "5f849a4d13f3b320"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "ambivalent",
+      "themes": [
+        "therapist"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "disclosure",
+      "emotional_tenor": -0.3,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_SELF_REFERENCE_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_PLATFORM_SWITCH_MANIPULATION",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN"
+      ],
+      "CLU": [
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INTUITION_GRIEF",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_RISK_LEVEL",
+        "CLU_SECRET_BONDING_MARKER"
+      ],
+      "SEM": [
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_PLATFORM_SWITCH",
+        "SEM_SELF_REFLECTION",
+        "SEM_SYMBOLIC_COMMUNICATION_FOCUS"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_FEAR_ANXIETY",
+        "ATO_REGISTER_FORMAL",
+        "ATO_WEDDING_STRESS_CUE"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.3,
+        "arousal": 0.5,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.0,
+        "arousal": 0.3,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "uebertragung",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

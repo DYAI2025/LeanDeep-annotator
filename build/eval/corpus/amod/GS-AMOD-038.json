@@ -1,0 +1,105 @@
+{
+  "id": "GS-AMOD-038",
+  "source": "amod",
+  "language": "en",
+  "theme": "uebertragung",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I had a dispute with my therapist regarding an appointment cancellation. Now, she is blocking me from seeing other psychologists at the same clinic (which takes my insurance), which is also where I get my psychiatric services. There is a strict 48 hour cancellation policy, and my appointments are at 3:00 on Tuesday. I called to cancel at 4:30 the previous Friday. I was late, so we contacted my doctor to tell her that I would be out of town. She said I could do a phone in session. The thing is we do double sessions.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "My recommendation would be to try to talk to your therapist about this  from your description, it sounds like you have a legitimate explanation for missing your scheduled session. Maybe if you could explain that to her she would be willing to work with you. If she is not willing to consider your explanation and if she is not willing to continue working with you, she still has an ethical obligation to provide you with referral resources to another therapist.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 981,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "e2b4a80392f71769"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "ambivalent",
+      "themes": [
+        "therapist",
+        "session"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "disclosure",
+      "emotional_tenor": -0.3,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN"
+      ],
+      "CLU": [
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INTUITION_GRIEF",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_RISK_LEVEL"
+      ],
+      "SEM": [
+        "SEM_SELF_REFLECTION",
+        "SEM_SYMBOLIC_COMMUNICATION_FOCUS"
+      ],
+      "ATO": [
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.3,
+        "arousal": 0.5,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.0,
+        "arousal": 0.3,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "uebertragung",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

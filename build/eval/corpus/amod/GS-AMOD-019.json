@@ -1,0 +1,123 @@
+{
+  "id": "GS-AMOD-019",
+  "source": "amod",
+  "language": "en",
+  "theme": "trauma",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "My dad doesn't like the fact that I'm a boy. He yells at me daily because of it and he tells me I'm extreme and over dramatic.\r\n\r\nI get so depressed  because of my dad's yelling. He keeps asking me why I can't just be happy the way I am and yells at me on a daily basis. Is this considered emotional abuse?",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Maybe this is emotional abuse.It certainly is irritating and annoying to be yelled at for being yourself.Maybe at a time when he's not yelling you can bring up the topic of your own willingness, if this is true, to discuss questions he has about your gender.There's no guarantee he won't start yelling midway through a dialogue like this.  Only then you will be on firm ground to excuse yourself from the conversation since you already explained that you're willing to talk with him and not to be yelled at by him.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 820,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "c1022a7dcd704741"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "distressed",
+      "themes": [
+        "abuse"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "seeking_guidance",
+      "emotional_tenor": -0.8,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_CODE_VIOLATION_SIGNATURE",
+        "MEMA_INCONSISTENCY_TREND",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_OVERCONFIDENCE_INVALIDATION_CYCLE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN"
+      ],
+      "CLU": [
+        "CLU_CONSISTENCY_ALERT",
+        "CLU_FRIENDSHIP_SIGNALING_MARKER",
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_GRIEF",
+        "CLU_INTUITION_INCONSISTENCY",
+        "CLU_INTUITION_MORALITY",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_QA_RIDDLE_FORMATS",
+        "CLU_RISK_LEVEL",
+        "CLU_SELF_CONTRADICTION"
+      ],
+      "SEM": [
+        "SEM_CERTAINTY_CLAIMS",
+        "SEM_SELF_REFLECTION",
+        "SEM_SHARED_HUMOR"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_BOUNDARY_SETTING",
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_MODAL_VERBS",
+        "ATO_ROLE_FATHER"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.8,
+        "arousal": 0.6,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.5,
+        "arousal": 0.4,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "trauma",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

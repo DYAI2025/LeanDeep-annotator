@@ -1,0 +1,106 @@
+{
+  "id": "GS-AMOD-020",
+  "source": "amod",
+  "language": "en",
+  "theme": "trauma",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "When I'm not cutting, I'm drinking. When I try healthy outlets such as exercise, I end up running myself down into an asthma attack. From weapons, to words, I can't help but self harm. What am I supposed to do, how do I stop this cycle? I don't know how else to cope or motivate myself without pain.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "It sounds like you are feeling helpless and out of control, you are concerned about your behavior, and at the same time you feel compelled to continue it. In working with a therapist, you may be able to get insight into what is motivating these behaviors, develop strategies for taking care of yourself, and get a stronger sense of who you are motivated to be when you are your authentic self.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 692,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "bf6aba2c46131361"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "distressed",
+      "themes": [
+        "attack"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "seeking_guidance",
+      "emotional_tenor": -0.8,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN"
+      ],
+      "CLU": [
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INTUITION_GRIEF",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_RISK_LEVEL"
+      ],
+      "SEM": [
+        "SEM_SELF_REFLECTION"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_BOUNDARY_SETTING",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_WEDDING_TASK_NEGOTIATION"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.8,
+        "arousal": 0.6,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.5,
+        "arousal": 0.4,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "trauma",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

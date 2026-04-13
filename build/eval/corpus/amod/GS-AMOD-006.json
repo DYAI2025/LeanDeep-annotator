@@ -1,0 +1,130 @@
+{
+  "id": "GS-AMOD-006",
+  "source": "amod",
+  "language": "en",
+  "theme": "angst",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I have lately been having lots of anxiety and self-loathing about the fact that I am a young adult virgin girl who has never had a boyfriend before. It seems like everyone my age has already had boyfriends by now or are not virgins anymore, and I just had my first kiss five months ago. I’m worried that, at this rate, I won’t have a boyfriend for a very long time. The problem is that I want to lose my virginity to my first boyfriend who cares about me, but at the same time, I don't want to be waiting forever in order to experience sex. I have already given in to bad temptations by hooking up with random strangers on social media sites and having oral sex with them. Luckily, they were nice guys, but none of them wanted a relationship with me. I feel dirty by doing this, but I feel pressured to do this things in order to seem normal.\n   Most people are surprised when they find out that I am a virgin or never had a boyfriend because people think I am really good looking. I am tall, I play lots of sports, and I get excellent grades in school. I am in my first year of university right now, and no guys have approached me to go out on a date or showed any interest. It bothers me. Most of the people in my family have been in relationships at my age already. I feel like I will be single forever sometimes.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Hi Winters, I'm so glad you wrote, because I think there are a lot of young women experiencing the exact same thing. You feel self-loathing for both being a virgin, and for being sexually active. Young women have always gotten crazy mixed messages about what they're supposed to be. They feel pressure to be pure, and they also feel pressure to be the vixen and please men sexually. But you can't be both, so you can't ever win if you buy into all that horse manure (excuse my language). This current hook-up culture puts added pressure on girls to expect nothing more than random sexual encounters that leave you feeling empty and used; perhaps desirable in that moment but mostly worthless. The stupid part is that research tells us that young men are also impacted negatively by this cultural norm that values sex and not relationship; they feel guilt, and loneliness.  I urge you to talk to other girls and women about your feelings. My hope and prayer is that they will echo my words here.Your value and power cannot ever be found in whether a man wants you, whether you turn his eye, or how he treats you. Your sexuality is a beautiful part of who you are, and it is to be celebrated. I love that you want to celebrate it with someone who cares. Who you are is so very much more than your sexuality. You sound like you have a lot of things going for you. Try to see all of those things when you think of yourself.There are many more virgins out there, and many are afraid, like you, that they don't fit in. We are all different, and you don't have to be anything but who you want to be; who you are. You don't have to have any kind of sex until you're ready, and that makes you brave and smart, not weird.You're tall and beautiful, and guys may be intimidated by that. It may take time for you to meet the right guy, but he's out there. The question is: How do you want to spend your time until he crosses your path? I hope you talk to someone soon and find out that your feelings are normal. I wish you the best.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 3335,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "39d9b3066ec6526a"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "anxious",
+      "themes": [
+        "anxiety",
+        "worried"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "help_seeking",
+      "emotional_tenor": -0.5,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_SELF_REFERENCE_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN"
+      ],
+      "CLU": [
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_GRIEF",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_RISK_LEVEL"
+      ],
+      "SEM": [
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_SELF_REFLECTION",
+        "SEM_SYMBOLIC_COMMUNICATION_FOCUS"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_CONTROL",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_FEAR_ANXIETY",
+        "ATO_HOPE_OPTIMISM",
+        "ATO_LONELINESS_ISOLATION",
+        "ATO_LOVE_AFFECTION",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_NEGATIVE_JUDGEMENT",
+        "ATO_ROLE_CHILD",
+        "ATO_SARCASM",
+        "ATO_SLANG_TOKEN",
+        "ATO_SURPRISE_ASTONISHMENT",
+        "ATO_UNCERTAINTY",
+        "ATO_WEDDING_TASK_NEGOTIATION"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.5,
+        "arousal": 0.7,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.2,
+        "arousal": 0.5,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "angst",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

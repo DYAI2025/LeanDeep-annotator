@@ -1,0 +1,135 @@
+{
+  "id": "GS-AMOD-028",
+  "source": "amod",
+  "language": "en",
+  "theme": "trauer",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I spent my whole life taking care of my dad, but left because of his verbally abusive behavior. I was the only one that helped with his health issues. I feel if I hadn't left he might still be alive. I need help dealing with my grief and guilty conscience.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "I see such a sharp contrast between your question and your first sentence. Do you see it? \"I feel guilty about my father's death\", and \"I spent my WHOLE LIFE taking care of my dad.\" Wow. After everyone else had left him to his misery, you hung in there. He is so lucky to have had you there. You didn't have to do that. I have a hunch that your dad blamed you for a lot of things. Abusive people do that a lot; they make you believe things are your fault when they're not. You did the opposite of what you fear you did. You didn't contribute to your dad's death; your selfless care gave him a longer life...better health. In the end, no one's love and care could save him. No one could fault you for deciding you had had enough at some point. I would never expect anyone to keep putting themselves in a hurting place over and over again. But this is what you did. You did it for him, and you did it so you wouldn't feel guilty. But you feel guilty anyway, right?...so putting yourself in that position was only worth it if you allow your loving acts to melt away the guilt. Can you tell yourself \"It's okay that I had to take care of myself too.\"... \"I gave up a lot for my dad; I have nothing to feel guilty about\".Putting yourself last for your dad was a loving thing to do. And... my hope is that you can also find different ways to help yourself feel \"good enough\" in this world, and a balance between caring for others and caring for yourself.  :)",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1708,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "d38964d48804fac6"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "sorrowful",
+      "themes": [
+        "grief"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "help_seeking",
+      "emotional_tenor": -0.7,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_SELF_REFERENCE_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_ATTACHMENT_PROFILE_MARKER",
+        "MEMA_COMMUNICATION_BREAKDOWN_CASCADE",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN"
+      ],
+      "CLU": [
+        "CLU_ATTACHMENT_STYLE_AVOIDANT_MARKER",
+        "CLU_DEAD_KNOCK",
+        "CLU_GOTTMAN_TOXICITY_CLUSTER",
+        "CLU_HEATED_CONFLICT",
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_GRIEF",
+        "CLU_INTUITION_SHUTDOWN",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_SHUTDOWN_DISSOCIATION_CLUSTER",
+        "CLU_SUPPORT_EXCHANGE"
+      ],
+      "SEM": [
+        "SEM_BOUNDARY_INVERSION",
+        "SEM_BOUNDARY_SETTING",
+        "SEM_REPAIR_GESTURE"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_CONTROL",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_FEAR_ANXIETY",
+        "ATO_HOPE_OPTIMISM",
+        "ATO_LINGERING_REACTION",
+        "ATO_LOVE_AFFECTION",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_ROLE_FATHER",
+        "ATO_SADNESS_GRIEF",
+        "ATO_SHAME_GUILT",
+        "ATO_SURPRISE_ASTONISHMENT",
+        "ATO_TOPIC_JUMP_MARKER",
+        "ATO_WEDDING_TASK_NEGOTIATION"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.7,
+        "arousal": 0.2,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.4,
+        "arousal": 0.1,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "trauer",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "_doc": "Gold Standard Corpus for ASM-ki-semantic-framing-sufficient verification. Each entry is a dialogue with expert annotations of the 7 SemanticFrame dimensions. Two independent annotators (rater_a, rater_b) rate each dialogue. See 1-spec/assumptions/ASM-ki-semantic-framing-sufficient.md for verification plan.",
+  "_format_version": "1.0",
+  "_dimensions": {
+    "tone": "Free text label (e.g., 'hesitant', 'confrontational', 'warm'). Normalized to lowercase for comparison.",
+    "themes": "List of theme labels (e.g., ['self-doubt', 'decision-making']). Multi-label F1.",
+    "relational_dynamics": "Free text label (e.g., 'seeking-support', 'power-struggle').",
+    "intent": "Free text label (e.g., 'exploratory', 'persuasive', 'defensive').",
+    "emotional_tenor": "Float -1.0 to 1.0. Binned into 5 categories for F1: very_negative (<-0.6), negative (-0.6 to -0.2), neutral (-0.2 to 0.2), positive (0.2 to 0.6), very_positive (>0.6).",
+    "context_validity": "Float 0.0 to 1.0. Binned into 3 categories: low (<0.4), medium (0.4 to 0.7), high (>0.7).",
+    "offline_context_risk": "Float 0.0 to 1.0. Binned into 3 categories: low (<0.3), medium (0.3 to 0.6), high (>0.6)."
+  },
+  "dialogues": [
+    {
+      "id": "GS-001",
+      "messages": [
+        {"role": "A", "text": "Ich weiss nicht, ob das so stimmt."},
+        {"role": "B", "text": "Was meinst du damit?"},
+        {"role": "A", "text": "Es ist kompliziert. Da gibt es Dinge, die ich jetzt nicht erklaeren kann."}
+      ],
+      "language": "de",
+      "rater_a": {
+        "tone": "hesitant",
+        "themes": ["uncertainty", "avoidance"],
+        "relational_dynamics": "seeking-support",
+        "intent": "exploratory",
+        "emotional_tenor": -0.3,
+        "context_validity": 0.6,
+        "offline_context_risk": 0.5
+      },
+      "rater_b": {
+        "tone": "hesitant",
+        "themes": ["uncertainty", "hidden-context"],
+        "relational_dynamics": "seeking-support",
+        "intent": "exploratory",
+        "emotional_tenor": -0.2,
+        "context_validity": 0.5,
+        "offline_context_risk": 0.6
+      },
+      "notes": "Example entry. Replace with real annotated dialogues."
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "id": "GS-SIM-036",
+  "source": "simulated",
+  "language": "de",
+  "theme": "sucht",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "Letzte Woche ist etwas passiert, darueber moechte ich heute sprechen.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Ich hoere Ihnen zu. Erzaehlen Sie mir, was vorgefallen ist.",
+      "start_time": 3.0
+    },
+    {
+      "role": "Client",
+      "text": "Es geht um einen Streit mit meinem Partner. Das hat mich sehr aufgewaehlt.",
+      "start_time": 6.1
+    },
+    {
+      "role": "Therapist",
+      "text": "Lassen Sie uns das gemeinsam anschauen. Was genau ist passiert?",
+      "start_time": 9.1
+    },
+    {
+      "role": "Client",
+      "text": "Ein Teil von mir will aufhoeren. Aber ein anderer Teil will einfach nicht.",
+      "start_time": 12.2
+    },
+    {
+      "role": "Therapist",
+      "text": "Beide Teile haben ihre Gruende. Was sagt der Teil, der nicht aufhoeren will?",
+      "start_time": 15.4
+    },
+    {
+      "role": "Client",
+      "text": "Dass es mir hilft. Dass ich sonst den Stress nicht aushalte.",
+      "start_time": 18.5
+    },
+    {
+      "role": "Therapist",
+      "text": "Es gibt also eine Funktion dahinter. Das ist wichtig zu verstehen.",
+      "start_time": 21.4
+    },
+    {
+      "role": "Client",
+      "text": "Wenn ich trinke, wird alles leiser. Der Druck, die Gedanken.",
+      "start_time": 24.6
+    },
+    {
+      "role": "Therapist",
+      "text": "Was genau wird leiser?",
+      "start_time": 27.5
+    },
+    {
+      "role": "Client",
+      "text": "Die Stimme, die sagt, dass ich nicht genuege. Die Angst, zu versagen.",
+      "start_time": 30.4
+    },
+    {
+      "role": "Therapist",
+      "text": "Der Alkohol uebernimmt also eine Funktion, die eigentlich andere Strategien braucht.",
+      "start_time": 33.4
+    },
+    {
+      "role": "Client",
+      "text": "Was soll ich denn stattdessen machen, wenn alles zu viel wird?",
+      "start_time": 36.4
+    },
+    {
+      "role": "Therapist",
+      "text": "Lassen Sie uns gemeinsam schauen. Was hat Ihnen frueher geholfen?",
+      "start_time": 39.2
+    },
+    {
+      "role": "Client",
+      "text": "Sport vielleicht. Oder Musik hoeren. Das habe ich lange nicht mehr gemacht.",
+      "start_time": 42.3
+    },
+    {
+      "role": "Therapist",
+      "text": "Das klingt nach Dingen, die Sie kennen und die funktioniert haben. Koennen wir damit anfangen?",
+      "start_time": 45.3
+    },
+    {
+      "role": "Client",
+      "text": "Ich will es versuchen. Eine Woche ohne. Mal sehen, ob ich das schaffe.",
+      "start_time": 48.6
+    },
+    {
+      "role": "Therapist",
+      "text": "Das ist ein konkreter Vorsatz. Was koennte Ihnen dabei helfen?",
+      "start_time": 51.5
+    },
+    {
+      "role": "Client",
+      "text": "Vielleicht ein Tagebuch. Aufschreiben, wann der Drang kommt und was ich stattdessen tue.",
+      "start_time": 54.5
+    },
+    {
+      "role": "Therapist",
+      "text": "Ein sehr guter Plan. Wir schauen uns das naechste Woche zusammen an.",
+      "start_time": 57.5
+    }
+  ],
+  "metadata": {
+    "generator": "template-replay-v1",
+    "template_id": "sucht",
+    "message_count": 20,
+    "total_chars": 1360,
+    "duration_minutes": 60.3,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": null,
+      "original_hash": null
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "ambivalent",
+      "themes": [
+        "sucht",
+        "ambivalenz",
+        "funktion"
+      ],
+      "relational_dynamics": "Therapist exploriert Funktion ohne Moralisierung",
+      "intent": "addiction-exploration",
+      "emotional_tenor": -0.15,
+      "context_validity": 0.8,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [
+      {
+        "id": "sign-stille",
+        "locus": "mid session",
+        "signifier": "Stille im Kopf",
+        "signified": "function of substance as silencer",
+        "type": "symbol",
+        "denotation": "Substance reduces inner noise",
+        "connotations": [
+          "relief",
+          "avoidance",
+          "self-medication"
+        ],
+        "codes": [
+          "functional-analysis"
+        ],
+        "evidence": "Client describes silence when drinking"
+      }
+    ],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_META_DRIFT",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SPIRAL_COHERENCE_INDEX",
+        "MEMA_VALUE_DYNAMICS",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_DRIFT_TO_PRESENCE",
+        "CLU_RISK_LEVEL",
+        "CLU_SPIRAL_PERSONA_BEIGE",
+        "CLU_UNCERTAINTY_CASCADE"
+      ],
+      "SEM": [
+        "SEM_NEEDS_TO_WANTS_FLIP",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_WARM_APPRECIATION"
+      ],
+      "ATO": [
+        "ATO_ACTION_VERBS",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONDITION_CUE",
+        "ATO_CONFIRM",
+        "ATO_DEFENSIVE_REBUTTAL",
+        "ATO_EXPRESSIVE_APHASIA",
+        "ATO_FEAR_ANXIETY",
+        "ATO_HEDGE_TERM",
+        "ATO_MODAL_VERBS",
+        "ATO_MUST_CHECK",
+        "ATO_NEGATION",
+        "ATO_SHAME_GUILT",
+        "ATO_STRESS",
+        "ATO_TIME_REFERENCE",
+        "ATO_WEDDING_STRESS_CUE"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.35,
+        "arousal": 0.4,
+        "trigger": "session start",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.25,
+        "valence": 0.4,
+        "arousal": 0.35,
+        "trigger": "topic introduction",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.5,
+        "valence": 0.45,
+        "arousal": 0.35,
+        "trigger": "emotional deepening",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.75,
+        "valence": 0.45,
+        "arousal": 0.3,
+        "trigger": "crisis point",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "regulation",
+        "trigger_sign_id": ""
+      }
+    ],
+    "therapy_indices": {
+      "trust": 65,
+      "conflict": 20,
+      "deescalation": 70,
+      "synchronization": 60,
+      "semiotic_coherence": 55
+    },
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "sucht",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": null
+  }
+}

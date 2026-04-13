@@ -1,0 +1,136 @@
+{
+  "id": "GS-AMOD-021",
+  "source": "amod",
+  "language": "en",
+  "theme": "wut",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I have anger issues that have worsened over the years because I’ve never dealt with my emotions. My anger has never been expressed physically until the past year. My girlfriend has had to endure these episodes. I love her, and I think I’m about to lose her, if I already haven’t. I throw things at her when I’m angry, and sometimes I hit her. I may not hit her enough to cause harm, but I still physically lash out at her. I don’t want to lose her, and I don’t want the situation to worsen. I am a lesbian in my early 30s, and I have been dealing with anger since my childhood. I'm ready to change. I need help now. I'm about to explode.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Hi Baton Rouge,I'm glad you're reaching out. The first step here is that you are taking some responsibility for your behaviours. I do hear you minimizing your actions (you say you don't \"hit her enough to cause harm\"?), but you're headed in the right direction. I hope that in your pursuit of treatment you learn that the harm you're causing isn't just superficial bruising. The effects of using aggression and anger to control a person are deep and lasting wounds. Please seek treatment for yourself immediately.You say you love your girlfriend? Do you love her enough to leave the relationship while you address your issues? Are you brave enough to not lean on this relationship while you learn how to create a safe place for a partner?You have dangerous habits because you don't know how to manage your own emotional pain. You can unlearn this; and it doesn't mean you're a bad person. Sometimes, however, the relationship in which you have done the hurting is best ended, for both of your sakes, because too much damage has been done.I know you don't want to lose her, but you don't own her, and you don't have the right to trap her in this because you're afraid of being alone. Right now, she needs some space to figure out what's best for her and the freedom to make whatever decision she wants. This is potentially the first step to learning real respect; honouring her need for safety above your need for comfort. I wish you well.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 2075,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "737503e3c1565338"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "hostile",
+      "themes": [
+        "angry",
+        "anger"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "help_seeking",
+      "emotional_tenor": -0.5,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ATTACHMENT_PROFILE_MARKER",
+        "MEMA_AVOIDANCE_PATTERN_ESCALATION",
+        "MEMA_COMMUNICATION_BREAKDOWN_CASCADE",
+        "MEMA_MEANING_CRISIS_MARKER",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN"
+      ],
+      "CLU": [
+        "CLU_ATTACHMENT_STYLE_AVOIDANT_MARKER",
+        "CLU_DEAD_KNOCK",
+        "CLU_DYSREGULATION_PATTERN",
+        "CLU_EMOTION_VOLATILITY",
+        "CLU_GOTTMAN_TOXICITY_CLUSTER",
+        "CLU_HEATED_CONFLICT",
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INNER_EMPTINESS_MARKER",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_GRIEF",
+        "CLU_INTUITION_SHUTDOWN",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_PERSONA_REGRESSION",
+        "CLU_SHUTDOWN_DISSOCIATION_CLUSTER"
+      ],
+      "SEM": [
+        "SEM_BOUNDARY_SETTING",
+        "SEM_EMOTIONAL_OVERWHELM"
+      ],
+      "ATO": [
+        "ATO_ABANDONMENT_ANXIETY",
+        "ATO_ACTIVITY_VERB",
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_ANGER_RAGE",
+        "ATO_COMPLIANT_WITHDRAWAL",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_FEAR_ANXIETY",
+        "ATO_HOPE_OPTIMISM",
+        "ATO_LOVE_AFFECTION",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_SLANG_TOKEN",
+        "ATO_SWITCH"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.5,
+        "arousal": 0.8,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.2,
+        "arousal": 0.6,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "wut",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

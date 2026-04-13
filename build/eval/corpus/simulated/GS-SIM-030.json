@@ -1,0 +1,248 @@
+{
+  "id": "GS-SIM-030",
+  "source": "simulated",
+  "language": "de",
+  "theme": "wut",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "Letzte Woche ist etwas passiert, darueber moechte ich heute sprechen.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Ich hoere Ihnen zu. Erzaehlen Sie mir, was vorgefallen ist.",
+      "start_time": 3.2
+    },
+    {
+      "role": "Client",
+      "text": "Es geht um einen Streit mit meinem Partner. Das hat mich sehr aufgewaehlt.",
+      "start_time": 6.4
+    },
+    {
+      "role": "Therapist",
+      "text": "Lassen Sie uns das gemeinsam anschauen. Was genau ist passiert?",
+      "start_time": 9.3
+    },
+    {
+      "role": "Client",
+      "text": "Es hat mit einem Kommentar meines Chefs angefangen. Da bin ich explodiert.",
+      "start_time": 12.2
+    },
+    {
+      "role": "Therapist",
+      "text": "Was genau hat er gesagt, und was hat das in Ihnen ausgeloest?",
+      "start_time": 15.2
+    },
+    {
+      "role": "Client",
+      "text": "Er sagte, ich waere nicht belastbar genug. Das hat mich rasend gemacht.",
+      "start_time": 18.3
+    },
+    {
+      "role": "Therapist",
+      "text": "Was an diesem Satz war so schmerzhaft?",
+      "start_time": 21.3
+    },
+    {
+      "role": "Client",
+      "text": "Erst war ich still, dann habe ich die Tuer zugeschlagen, dann habe ich geschrien.",
+      "start_time": 24.3
+    },
+    {
+      "role": "Therapist",
+      "text": "Koennen Sie erkennen, wann der Punkt war, an dem es kippte?",
+      "start_time": 27.5
+    },
+    {
+      "role": "Client",
+      "text": "Als er den Kopf geschuettelt hat. Das war wie ein Schalter.",
+      "start_time": 30.6
+    },
+    {
+      "role": "Therapist",
+      "text": "Dieses Kopfschuetteln scheint eine starke Bedeutung fuer Sie zu haben.",
+      "start_time": 33.5
+    },
+    {
+      "role": "Client",
+      "text": "Ich weiss nicht, wie ich mich beruhigen soll, wenn die Wut kommt.",
+      "start_time": 36.8
+    },
+    {
+      "role": "Therapist",
+      "text": "Was haben Sie bisher versucht?",
+      "start_time": 40.1
+    },
+    {
+      "role": "Client",
+      "text": "Rausgehen, laufen. Aber manchmal hilft auch das nicht.",
+      "start_time": 43.2
+    },
+    {
+      "role": "Therapist",
+      "text": "Lassen Sie uns gemeinsam schauen, was noch helfen koennte. Wie ist es mit bewusstem Atmen?",
+      "start_time": 46.3
+    },
+    {
+      "role": "Client",
+      "text": "Eigentlich will ich nur, dass man mich respektiert.",
+      "start_time": 49.2
+    },
+    {
+      "role": "Therapist",
+      "text": "Was bedeutet Respekt fuer Sie ganz konkret?",
+      "start_time": 52.3
+    },
+    {
+      "role": "Client",
+      "text": "Dass man mich anhoert. Dass meine Meinung zaehlt.",
+      "start_time": 55.2
+    },
+    {
+      "role": "Therapist",
+      "text": "Hinter der Wut steckt also ein tiefes Beduerfnis nach Anerkennung und Gehoertwerden.",
+      "start_time": 58.2
+    }
+  ],
+  "metadata": {
+    "generator": "template-replay-v1",
+    "template_id": "wut",
+    "message_count": 20,
+    "total_chars": 1244,
+    "duration_minutes": 61.3,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": null,
+      "original_hash": null
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "angespannt",
+      "themes": [
+        "wut",
+        "kontrolle",
+        "beduerfnisse"
+      ],
+      "relational_dynamics": "Therapist normalisiert und lenkt auf Beduerfnisse",
+      "intent": "anger-regulation",
+      "emotional_tenor": -0.2,
+      "context_validity": 0.85,
+      "offline_context_risk": 0.2
+    },
+    "semiotic_signs": [
+      {
+        "id": "sign-schalter",
+        "locus": "mid session",
+        "signifier": "Schalter",
+        "signified": "tipping point in anger escalation",
+        "type": "icon",
+        "denotation": "Moment where control is lost",
+        "connotations": [
+          "trigger",
+          "powerlessness",
+          "explosion"
+        ],
+        "codes": [
+          "behavioral"
+        ],
+        "evidence": "Client describes a moment where anger flips"
+      }
+    ],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_FRIENDSHIP_SIGNALING_MARKER",
+        "CLU_HEATED_CONFLICT",
+        "CLU_INTUITION_SUPPORT",
+        "CLU_SUPPORT_EXCHANGE",
+        "CLU_VERBAL_PROSODY_INCONGRUENCE"
+      ],
+      "SEM": [
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_REACTION_FORMATION_TEXT",
+        "SEM_RESPECT_RELIABILITY_FRAME",
+        "SEM_WARM_APPRECIATION"
+      ],
+      "ATO": [
+        "ATO_ANGER_RAGE",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONDITION_CUE",
+        "ATO_CONFIRM",
+        "ATO_DEFENSIVE_REBUTTAL",
+        "ATO_EXPRESSIVE_APHASIA",
+        "ATO_MODAL_VERBS",
+        "ATO_NEGATION",
+        "ATO_SUFFERING",
+        "ATO_TIME_REFERENCE"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.3,
+        "arousal": 0.4,
+        "trigger": "session start",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.2,
+        "valence": 0.2,
+        "arousal": 0.5,
+        "trigger": "topic introduction",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.4,
+        "valence": -0.1,
+        "arousal": 0.7,
+        "trigger": "emotional deepening",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.6,
+        "valence": 0.1,
+        "arousal": 0.5,
+        "trigger": "crisis point",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.8,
+        "valence": 0.3,
+        "arousal": 0.35,
+        "trigger": "regulation",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "recovery",
+        "trigger_sign_id": ""
+      }
+    ],
+    "therapy_indices": {
+      "trust": 70,
+      "conflict": 30,
+      "deescalation": 67,
+      "synchronization": 62,
+      "semiotic_coherence": 55
+    },
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "wut",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": null
+  }
+}

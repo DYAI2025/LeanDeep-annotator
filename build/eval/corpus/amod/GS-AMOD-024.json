@@ -1,0 +1,145 @@
+{
+  "id": "GS-AMOD-024",
+  "source": "amod",
+  "language": "en",
+  "theme": "wut",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I don't know what's with me. I'm almost constantly angry. Even when I'm happy, I still feel anger inside me. When I acknowledge it, it ruins my mood and takes over. I get angry at the littlest things. Even if I think someone said something they didn't, it infuriates me. Something perfectly normal can make me go off. When my anger flares up, I get a terrible pain in my chest that lasts for a while. It's like there is a fire constantly burning in my body, and anger is gasoline.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Hi Nashville, I'm glad you want this to be different. It doesn't feel good to be angry all the time, and it's stealing your energy as well as affecting relationships, I'm sure.Working with a therapist, you can learn to recognise the deep emotions that lie underneath the anger. It's likely to be either powerlessness or worthlessness, and what happens is this... a small moment in the present touches on an old, tender, bruised emotion that we've simply felt too much of or too strongly in the past. We develop ways of avoiding these vulnerable emotions, and anger is one way of doing that. So, when someone looks at you in a certain way, or says something, you'd rather be angry than feel powerless, or unimportant (or whatever your kryptonite feeling is). In that moment, your instinct is to blame whatever happened, no matter how small, because that's the thing that happened just before you got mad. You fail to recognise that the problem is not the look on that person's face, or the shoe that someone left in front of the door...it's that you can't stand feeling something and you want to avoid it like you want to stamp your foot out if it's on fire.I suggest finding a therapist to work with. You can learn to take responsibility for your old emotions and find new ways to manage them. :)",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1776,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "04a77b88fdbca586"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "hostile",
+      "themes": [
+        "angry",
+        "anger"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "disclosure",
+      "emotional_tenor": -0.5,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_SELF_REFERENCE_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_ATTACHMENT_PROFILE_MARKER",
+        "MEMA_AVOIDANCE_PATTERN_ESCALATION",
+        "MEMA_CODE_VIOLATION_SIGNATURE",
+        "MEMA_COMMUNICATION_BREAKDOWN_CASCADE",
+        "MEMA_DESTRUCTIVE_CONFLICT_DYNAMICS_MARKER",
+        "MEMA_INFORMATION_DENSITY_MARKER",
+        "MEMA_MEANING_CRISIS_MARKER",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN"
+      ],
+      "CLU": [
+        "CLU_ATTACHMENT_STYLE_AVOIDANT_MARKER",
+        "CLU_DEAD_KNOCK",
+        "CLU_DYSREGULATION_PATTERN",
+        "CLU_EMOTION_VOLATILITY",
+        "CLU_FRIENDSHIP_SIGNALING_MARKER",
+        "CLU_GOTTMAN_TOXICITY_CLUSTER",
+        "CLU_HEATED_CONFLICT",
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INNER_EMPTINESS_MARKER",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_GRIEF",
+        "CLU_INTUITION_IRONY",
+        "CLU_INTUITION_SHUTDOWN",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_PERSONA_REGRESSION",
+        "CLU_QA_RIDDLE_FORMATS",
+        "CLU_RISK_LEVEL",
+        "CLU_SHUTDOWN_DISSOCIATION_CLUSTER",
+        "CLU_SVT_MESSAGE_INCONGRUENCE",
+        "CLU_SVT_MESSAGE_INCONGRUENCE_MARKER"
+      ],
+      "SEM": [
+        "SEM_EMOTIONAL_OVERWHELM",
+        "SEM_PASSIVE_AGGRESSIVE_BEHAVIOR",
+        "SEM_SELF_REFLECTION",
+        "SEM_SHARED_HUMOR",
+        "SEM_STONEWALLING_BEHAVIOR"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_ANGER_RAGE",
+        "ATO_CONTROL",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_LINGERING_REACTION",
+        "ATO_MINIMIZATION_LANGUAGE"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.5,
+        "arousal": 0.8,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.2,
+        "arousal": 0.6,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "wut",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

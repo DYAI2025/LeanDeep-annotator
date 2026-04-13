@@ -1,0 +1,125 @@
+{
+  "id": "GS-AMOD-015",
+  "source": "amod",
+  "language": "en",
+  "theme": "familie",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "About two and a half months ago, I met a woman on a dating site. We went out on two dates, and then despite her original plans on how to pace and conduct the relationship, I ended up at her house on a the Friday night one week after our first date. We respectfully tried not to have sex, but after hours of trying to resist each other, we gave in and we had sex. After that, I slept at her house every night for almost two weeks. Then one day, she went to her family’s house on Thanksgiving and everything changed. Within the short time we were together, we got so close and serious really fast. We had finally found each other. We told each other that we loved each other all the time, even while we were making love. A few days after Thanksgiving, she told me that we would have to go back to her original plans of seeing each other much less frequently. I was very hurt and didn’t understand. Then another week later, she told me she couldn’t do it at all anymore. I was crushed!\n   A few days later, she tells me how much she’s missing me and “let’s get together for lunch” or something like that. Then about two weeks later, we finally get together one night and we were so hot for each other (in love, not just sex), but she confessed that the reason for the sudden distance was that the father of her very young child told her he wants to get back together and this totally messed with her. So for her child’s sake, she is now considering the possibility of allowing that to happen. She had told me all about him previously, and it is definite that she has little to no attraction to him, but she would do this putting herself in misery again for her child. Our love for each other is fully established and acknowledged, but she is torn and confused. She doesn’t even think it would work between them as she had to kick him out before for not fulfilling his role properly. I know she needs time, and all I can do is take care of myself. We have agreed to remain friends, and if this doesn’t work out for her, we will try again. I’m completely in love with her, and I’m in extreme pain.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "That sounds really heartbreaking. It is tough falling in love and not being able to dive fully because of complications on the other side. It sounds to me that you are doing exactly what you need to be doing by taking \"care of myself\" while the rest sorts itself out. While I admire your desire and courage to stay friends - the \"extreme pain\" that you mentioned may make this too challenging and at odds with your taking care of yourself. Since there is no commitment on her end to give it a shot with you I would make sure that you really honour your own feelings about what feels right to you so that you don't end up feeling strung along or resentful. Make sure that you lean on friends and family at this time - we need all the support that we can get when we are heartbroken.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 2873,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "f6c9015d2fd37316"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "strained",
+      "themes": [
+        "father",
+        "family",
+        "child",
+        "son"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "help_seeking",
+      "emotional_tenor": -0.3,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_SELF_REFERENCE_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_ORDNUNGSPARAMETER",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE"
+      ],
+      "CLU": [
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_NARION",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NARION_SIGNATURE",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD"
+      ],
+      "SEM": [
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_RITUAL_INVOCATION",
+        "SEM_SYMBOLIC_COMMUNICATION_FOCUS"
+      ],
+      "ATO": [
+        "ATO_ACTIVITY_VERB",
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_CONTROL",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_LOVE_AFFECTION",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_SARCASM",
+        "ATO_SHARED_FUTURE_REFERENCE",
+        "ATO_THIRD_PARTY_CLAIM",
+        "ATO_TOGETHERNESS_TERMS"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.3,
+        "arousal": 0.4,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.0,
+        "arousal": 0.2,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "familie",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

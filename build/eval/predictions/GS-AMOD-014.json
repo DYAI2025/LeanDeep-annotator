@@ -1,0 +1,326 @@
+{
+  "markers": [
+    {
+      "id": "MEMA_MEANING_CRISIS_MARKER",
+      "layer": "MEMA",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+      "layer": "MEMA",
+      "confidence": 0.833,
+      "family": null
+    },
+    {
+      "id": "MEMA_AVOIDANCE_PATTERN_ESCALATION",
+      "layer": "MEMA",
+      "confidence": 0.75,
+      "family": null
+    },
+    {
+      "id": "MEMA_THERAPEUTIC_RESISTANCE_PATTERN",
+      "layer": "MEMA",
+      "confidence": 0.75,
+      "family": null
+    },
+    {
+      "id": "MEMA_ATTACHMENT_PROFILE_MARKER",
+      "layer": "MEMA",
+      "confidence": 0.667,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_SELF_REFERENCE_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_SELF_VICTIMIZATION_CYCLE",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_PAPAGEI_ECHO",
+      "layer": "MEMA",
+      "confidence": 0.55,
+      "family": null
+    },
+    {
+      "id": "CLU_NEGATIVE_COGNITIVE_TRIAD",
+      "layer": "CLU",
+      "confidence": 0.833,
+      "family": null
+    },
+    {
+      "id": "CLU_MINIMIZATION_LOOP",
+      "layer": "CLU",
+      "confidence": 0.475,
+      "family": null
+    },
+    {
+      "id": "CLU_DYSREGULATION_PATTERN",
+      "layer": "CLU",
+      "confidence": 0.433,
+      "family": null
+    },
+    {
+      "id": "CLU_INNER_EMPTINESS_MARKER",
+      "layer": "CLU",
+      "confidence": 0.433,
+      "family": null
+    },
+    {
+      "id": "CLU_EMOTION_VOLATILITY",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_BIAS",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_GRIEF",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_SHUTDOWN",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_SUPPORT_EXCHANGE",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_IDENTITY_NEGOTIATION",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_UNCERTAINTY",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_NARRATIVE_DEEPENING",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_PERSONA_REGRESSION",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_HEATED_CONFLICT",
+      "layer": "CLU",
+      "confidence": 0.4,
+      "family": null
+    },
+    {
+      "id": "SEM_BOUNDARY_SETTING",
+      "layer": "SEM",
+      "confidence": 0.9,
+      "family": null
+    },
+    {
+      "id": "SEM_NEUTRAL_NEGOTIATION",
+      "layer": "SEM",
+      "confidence": 0.85,
+      "family": null
+    },
+    {
+      "id": "SEM_SYMBOLIC_COMMUNICATION_FOCUS",
+      "layer": "SEM",
+      "confidence": 0.8,
+      "family": null
+    },
+    {
+      "id": "SEM_REPAIR_GESTURE",
+      "layer": "SEM",
+      "confidence": 0.7,
+      "family": null
+    },
+    {
+      "id": "SEM_EMOTIONAL_OVERWHELM",
+      "layer": "SEM",
+      "confidence": 0.6,
+      "family": null
+    },
+    {
+      "id": "SEM_BOUNDARY_INVERSION",
+      "layer": "SEM",
+      "confidence": 0.56,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_PAST_FOCUS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_SELF_FOCUS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_MINIMIZATION_LANGUAGE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_OBLIGATION_SYNTAX",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_PROTOCOL_LANG",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_SARCASM",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_SHARED_FUTURE_REFERENCE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_SWITCH",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_THIRD_PARTY_CLAIM",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_WEDDING_TASK_NEGOTIATION",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_EXPRESSIVE_APHASIA",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_AMBIGUITY_QUOTES",
+      "layer": "ATO",
+      "confidence": 0.8,
+      "family": null
+    },
+    {
+      "id": "ATO_ROLE_MOTHER",
+      "layer": "ATO",
+      "confidence": 0.68,
+      "family": null
+    },
+    {
+      "id": "ATO_TOGETHERNESS_TERMS",
+      "layer": "ATO",
+      "confidence": 0.68,
+      "family": null
+    },
+    {
+      "id": "ATO_CONTRAST_CONJUNCTION",
+      "layer": "ATO",
+      "confidence": 0.667,
+      "family": null
+    },
+    {
+      "id": "ATO_LOVE_AFFECTION",
+      "layer": "ATO",
+      "confidence": 0.657,
+      "family": null
+    },
+    {
+      "id": "ATO_HOPE_OPTIMISM",
+      "layer": "ATO",
+      "confidence": 0.394,
+      "family": null
+    }
+  ],
+  "meta": {
+    "markers_detected": 53,
+    "processing_ms": 11116.730213165283
+  }
+}

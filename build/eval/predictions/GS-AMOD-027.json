@@ -1,0 +1,164 @@
+{
+  "markers": [
+    {
+      "id": "MEMA_INCONSISTENCY_TREND",
+      "layer": "MEMA",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+      "layer": "MEMA",
+      "confidence": 0.917,
+      "family": null
+    },
+    {
+      "id": "MEMA_OVERCONFIDENCE_INVALIDATION_CYCLE",
+      "layer": "MEMA",
+      "confidence": 0.75,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_SELF_VICTIMIZATION_CYCLE",
+      "layer": "MEMA",
+      "confidence": 0.65,
+      "family": null
+    },
+    {
+      "id": "MEMA_PAPAGEI_ECHO",
+      "layer": "MEMA",
+      "confidence": 0.55,
+      "family": null
+    },
+    {
+      "id": "CLU_NEGATIVE_COGNITIVE_TRIAD",
+      "layer": "CLU",
+      "confidence": 0.833,
+      "family": null
+    },
+    {
+      "id": "CLU_MINIMIZATION_LOOP",
+      "layer": "CLU",
+      "confidence": 0.475,
+      "family": null
+    },
+    {
+      "id": "CLU_SELF_CONTRADICTION",
+      "layer": "CLU",
+      "confidence": 0.433,
+      "family": null
+    },
+    {
+      "id": "CLU_CONSISTENCY_ALERT",
+      "layer": "CLU",
+      "confidence": 0.433,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_BIAS",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_MORALITY",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_INCONSISTENCY",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "CLU_INTUITION_UNCERTAINTY",
+      "layer": "CLU",
+      "confidence": 0.412,
+      "family": null
+    },
+    {
+      "id": "SEM_CERTAINTY_CLAIMS",
+      "layer": "SEM",
+      "confidence": 0.8,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_SELF_FOCUS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_DEPRESSION_SUICIDE_RISK",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_MINIMIZATION_LANGUAGE",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_COMPLIANT_WITHDRAWAL",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_MODAL_VERBS",
+      "layer": "ATO",
+      "confidence": 1.0,
+      "family": null
+    },
+    {
+      "id": "ATO_AMBIGUITY_QUOTES",
+      "layer": "ATO",
+      "confidence": 0.8,
+      "family": null
+    }
+  ],
+  "meta": {
+    "markers_detected": 26,
+    "processing_ms": 17666.012048721313
+  }
+}

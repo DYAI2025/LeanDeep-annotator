@@ -1,0 +1,54 @@
+{
+  "selbstwert": {
+    "Koerpersignal": {"ATO": ["ATO_BODY_LOAD", "ATO_SELF_OBSERVATION_A"], "SEM": []},
+    "Scham_Fassade": {"ATO": ["ATO_SYMBOL_IMAGE"], "SEM": ["SEM_SELF_WORTH_SHIFT"]},
+    "Selbstwert_Shift": {"SEM": ["SEM_SELF_WORTH_SHIFT", "SEM_MEANING_MAKING"], "CLU": ["CLU_SAFE_EXPLORATION"]},
+    "Ressource": {"CLU": ["CLU_MISSION_FORMATION"], "MEMA": ["MEMA_AGENCY_REASSEMBLY"]}
+  },
+  "angst": {
+    "Koerpersignal": {"ATO": ["ATO_BODY_LOAD", "ATO_SELF_OBSERVATION_A"]},
+    "Vermeidung": {"SEM": ["SEM_TRAPPED_AND_ESCAPE"], "ATO": ["ATO_IF_THEN_PRESSURE"]},
+    "Pace_Regulation": {"ATO": ["ATO_BACKCHANNEL_REGULATION_B"], "MEMA": ["MEMA_SAFE_BASE_SIGNAL"]}
+  },
+  "beziehung": {
+    "Konflikt_Schilderung": {"ATO": ["ATO_IF_THEN_PRESSURE"], "SEM": ["SEM_PRESSURE_RECOGNITION"]},
+    "Muster_Erkennung": {"CLU": ["CLU_PRESSURE_TRAP"], "SEM": ["SEM_SYMBOLIC_LINKING"]},
+    "Handlungsplan": {"CLU": ["CLU_MISSION_FORMATION"], "MEMA": ["MEMA_AGENCY_REASSEMBLY"]}
+  },
+  "familie": {
+    "Herkunftsraum": {"ATO": ["ATO_SYMBOL_IMAGE"], "SEM": ["SEM_TRAPPED_AND_ESCAPE"]},
+    "Bindungsmuster": {"CLU": ["CLU_BODY_TO_MEANING_LOOP"]},
+    "Eigenverantwortung": {"MEMA": ["MEMA_AGENCY_REASSEMBLY", "MEMA_HEALING_VS_OUTPUT"]}
+  },
+  "trauma": {
+    "Stabilisierung": {"ATO": ["ATO_BACKCHANNEL_REGULATION_B"], "MEMA": ["MEMA_SAFE_BASE_SIGNAL"]},
+    "Annaeherung": {"ATO": ["ATO_BODY_LOAD", "ATO_SELF_OBSERVATION_A"]},
+    "Affektbruecke": {"ATO": ["ATO_SYMBOL_IMAGE"], "SEM": ["SEM_SYMBOLIC_LINKING", "SEM_SOMATIC_OVERLOAD_AFTER_EXPERIENCE"]},
+    "Ressource": {"CLU": ["CLU_SAFE_EXPLORATION"], "MEMA": ["MEMA_AGENCY_REASSEMBLY"]}
+  },
+  "wut": {
+    "Ausloeser": {"ATO": ["ATO_IF_THEN_PRESSURE"]},
+    "Eskalationskette": {"SEM": ["SEM_PRESSURE_RECOGNITION"], "CLU": ["CLU_PRESSURE_TRAP"]},
+    "Beduerfnis_dahinter": {"SEM": ["SEM_SELF_WORTH_SHIFT"], "MEMA": ["MEMA_SAFE_BASE_SIGNAL"]}
+  },
+  "trauer": {
+    "Verlust_benennen": {"ATO": ["ATO_BODY_LOAD", "ATO_SELF_OBSERVATION_A"]},
+    "Erinnerung": {"ATO": ["ATO_SYMBOL_IMAGE"], "SEM": ["SEM_SYMBOLIC_LINKING"]},
+    "Sinnfrage": {"SEM": ["SEM_MEANING_MAKING_THROUGH_WRITING"], "CLU": ["CLU_MISSION_FORMATION"]}
+  },
+  "sucht": {
+    "Ambivalenz": {"ATO": ["ATO_AMBIVALENZ"]},
+    "Funktionsanalyse": {"SEM": ["SEM_PRESSURE_RECOGNITION"]},
+    "Commitment": {"CLU": ["CLU_MISSION_FORMATION"], "MEMA": ["MEMA_HEALING_VS_OUTPUT"]}
+  },
+  "identitaet": {
+    "Selbstbild": {"ATO": ["ATO_SELF_OBSERVATION_A"]},
+    "Fremdbild_Spannung": {"SEM": ["SEM_SELF_WORTH_SHIFT"]},
+    "Authentizitaet": {"MEMA": ["MEMA_AGENCY_REASSEMBLY"]}
+  },
+  "uebertragung": {
+    "Beziehungsdynamik": {"CLU": ["CLU_TRANSFERENCE_PATTERN"]},
+    "Spiegelung": {"ATO": ["ATO_OPEN_EXPLORATION_B"]},
+    "Boundary": {"MEMA": ["MEMA_SAFE_BASE_SIGNAL"]}
+  }
+}

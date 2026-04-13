@@ -1,0 +1,271 @@
+{
+  "id": "GS-SIM-003",
+  "source": "simulated",
+  "language": "de",
+  "theme": "selbstwert",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "Ich weiss nicht, wo ich anfangen soll heute.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Nehmen Sie sich die Zeit, die Sie brauchen. Was beschaeftigt Sie gerade am meisten?",
+      "start_time": 2.9
+    },
+    {
+      "role": "Client",
+      "text": "Es ist alles so viel gerade. Ich fuehle mich ueberwaeltigt.",
+      "start_time": 5.9
+    },
+    {
+      "role": "Therapist",
+      "text": "Das hoert sich belastend an. Lassen Sie uns gemeinsam schauen, was gerade am draengendsten ist.",
+      "start_time": 8.8
+    },
+    {
+      "role": "Client",
+      "text": "Mein Koerper fuehlt sich ganz schwer an, besonders in der Brust.",
+      "start_time": 11.9
+    },
+    {
+      "role": "Therapist",
+      "text": "Koennen Sie mir beschreiben, was Sie koerperlich wahrnehmen?",
+      "start_time": 14.7
+    },
+    {
+      "role": "Client",
+      "text": "Es ist wie ein Druck. Und mein Kopf fuehlt sich benebelt an.",
+      "start_time": 17.8
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm. Der Koerper speichert manchmal das, was wir noch nicht in Worte fassen koennen.",
+      "start_time": 20.7
+    },
+    {
+      "role": "Client",
+      "text": "Ich zeige nie, wie es mir wirklich geht. Alle denken, mir geht es gut.",
+      "start_time": 23.8
+    },
+    {
+      "role": "Therapist",
+      "text": "Was wuerde passieren, wenn jemand sehen wuerde, wie es Ihnen wirklich geht?",
+      "start_time": 26.6
+    },
+    {
+      "role": "Client",
+      "text": "Dann wuerden sie mich fuer schwach halten. Das kann ich nicht ertragen.",
+      "start_time": 29.7
+    },
+    {
+      "role": "Therapist",
+      "text": "Es klingt, als ob die Fassade Sie schuetzt, aber gleichzeitig auch sehr einsam macht.",
+      "start_time": 32.7
+    },
+    {
+      "role": "Client",
+      "text": "Vielleicht bin ich doch nicht so wertlos, wie ich immer dachte.",
+      "start_time": 35.6
+    },
+    {
+      "role": "Therapist",
+      "text": "Was hat sich veraendert, dass Sie das jetzt so sehen koennen?",
+      "start_time": 38.5
+    },
+    {
+      "role": "Client",
+      "text": "Letzte Woche hat mir jemand gesagt, dass er mich schaetzt. Das hat mich sehr beruehrt.",
+      "start_time": 41.7
+    },
+    {
+      "role": "Therapist",
+      "text": "Das ist ein wichtiger Moment. Sie erlauben sich, das anzunehmen.",
+      "start_time": 44.5
+    },
+    {
+      "role": "Client",
+      "text": "Eigentlich bin ich ganz gut darin, Probleme zu loesen. Das vergesse ich manchmal.",
+      "start_time": 47.4
+    },
+    {
+      "role": "Therapist",
+      "text": "Was sind denn Situationen, in denen Sie das gut koennen?",
+      "start_time": 50.5
+    },
+    {
+      "role": "Client",
+      "text": "Auf der Arbeit zum Beispiel. Da bin ich die, die immer Loesungen findet.",
+      "start_time": 53.7
+    },
+    {
+      "role": "Therapist",
+      "text": "Das klingt nach einer echten Staerke. Wie koennten Sie die auch hier nutzen?",
+      "start_time": 56.8
+    }
+  ],
+  "metadata": {
+    "generator": "template-replay-v1",
+    "template_id": "selbstwert",
+    "message_count": 20,
+    "total_chars": 1409,
+    "duration_minutes": 59.8,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": null,
+      "original_hash": null
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "verletzlich",
+      "themes": [
+        "selbstwert",
+        "scham",
+        "identitaet"
+      ],
+      "relational_dynamics": "Therapist spiegelt Wuerde",
+      "intent": "self-exploration",
+      "emotional_tenor": -0.1,
+      "context_validity": 0.85,
+      "offline_context_risk": 0.2
+    },
+    "semiotic_signs": [
+      {
+        "id": "sign-fassade",
+        "locus": "early session",
+        "signifier": "Fassade",
+        "signified": "protection against shame exposure",
+        "type": "symbol",
+        "denotation": "Mask or front presented to the world",
+        "connotations": [
+          "self-protection",
+          "isolation",
+          "shame"
+        ],
+        "codes": [
+          "psychodynamic"
+        ],
+        "evidence": "Client describes hiding true feelings"
+      }
+    ],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_BOUNDARY_SETTING",
+        "MEMA_COMMUNICATION_BREAKDOWN_CASCADE",
+        "MEMA_FAMILY_POWER_DYNAMICS",
+        "MEMA_META_DRIFT",
+        "MEMA_ORDNUNGSPARAMETER",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_SPIRAL_COHERENCE_INDEX",
+        "MEMA_VALUE_DYNAMICS",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_CONFLICT_ESCALATION",
+        "CLU_DISSONANCE_ALERT_TEXT",
+        "CLU_GOTTMAN_TOXICITY_CLUSTER",
+        "CLU_INTIMACY_PLAY",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_CONFLICT",
+        "CLU_INTUITION_INCONSISTENCY",
+        "CLU_INTUITION_MORALITY",
+        "CLU_INTUITION_NARION",
+        "CLU_LL_PROFILE",
+        "CLU_RISK_LEVEL",
+        "CLU_SIBLING_DYNAMICS",
+        "CLU_SPIRAL_PERSONA_ROT",
+        "CLU_SVT_MESSAGE_INCONGRUENCE",
+        "CLU_SVT_MESSAGE_INCONGRUENCE_MARKER",
+        "CLU_UNCERTAINTY_CASCADE",
+        "CLU_VERBAL_PROSODY_INCONGRUENCE"
+      ],
+      "SEM": [
+        "SEM_ACCUSATION_MARKER",
+        "SEM_ARCHETYPE_PICARD",
+        "SEM_EXPRESSED_SATISFACTION",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_REACTION_FORMATION_TEXT"
+      ],
+      "ATO": [
+        "ATO_ACTIVITY_VERB",
+        "ATO_BETAEUBUNG",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONDITION_CUE",
+        "ATO_EMOTIONAL_GRANULARITY",
+        "ATO_EXPRESSIVE_APHASIA",
+        "ATO_LL_PHYSICAL_TOUCH",
+        "ATO_LONELINESS_ISOLATION",
+        "ATO_NEGATION",
+        "ATO_PRIDE_CONFIDENCE",
+        "ATO_REGULATION_VERB_POSITIVE",
+        "ATO_TIME_REFERENCE"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.2,
+        "arousal": 0.5,
+        "trigger": "session start",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.2,
+        "valence": 0.3,
+        "arousal": 0.45,
+        "trigger": "topic introduction",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.5,
+        "valence": 0.5,
+        "arousal": 0.35,
+        "trigger": "emotional deepening",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.75,
+        "valence": 0.6,
+        "arousal": 0.3,
+        "trigger": "crisis point",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.5,
+        "arousal": 0.3,
+        "trigger": "regulation",
+        "trigger_sign_id": ""
+      }
+    ],
+    "therapy_indices": {
+      "trust": 74,
+      "conflict": 11,
+      "deescalation": 80,
+      "synchronization": 75,
+      "semiotic_coherence": 64
+    },
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "selbstwert",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": null
+  }
+}

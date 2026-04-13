@@ -1,0 +1,120 @@
+{
+  "id": "GS-AMOD-013",
+  "source": "amod",
+  "language": "en",
+  "theme": "familie",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I'm a teenager, and throughout my entire life, I've never really had good parents, or parents at all for that matter. I'm not exaggerating. I was living with my mom and grandparents until my father, in prison for most of my life, got out when I was in middle school. His mom, my grandma, only lived a mile down the road from my mom’s house, and I was so awe-stricken with my dad that I got to stay with him for a long time. Meanwhile, I did not realize that my mom was doing hardcore drugs. My mom went to prison for that and lost her café. We live in a very small town, so everyone knew about it, and I was bullied because of who my parents were. My dad ended up getting in with the wrong people and went back to prison.\n   My mom and him had a mutual friend and often hung out at that person’s house. My parents did not get along at this point. We were driving him home one day from this house, and my mom stopped the car and kicked him out. He got out of the car, went to the driver’s side, and punched my mom in the face. I got out and told him not to hit my mom. At that point, I was really scared and mad that he did that, so I ran towards him to stop him. He literally picked me up and threw me on the back of a gravel road. I couldn't even walk. My mom tried to help me, but he started choking her. I hobbled over, and she barely got into the car, and we quickly drove away and called the police and ambulance. He was so badly strung out on drugs. He went to prison again and seems to be doing well. I met up with him once with my grandma, and we had coffee, but he's so hard to handle. I think a lot of it is that I can't bring myself to forgive him. My mom went back to prison again for drugs, and while she was in there, I moved in with my dad’s mom (the one who lived just down the road) because I trust her, her house is stable, and she's more nurturing, understanding, and loving then my other grandparents. I also stay at my boyfriend’s a lot. Now that my mom is out of prison, she's trying to control every aspect of my life. She’s trying to make me move back home out of Susan's house, and I don't want to. I don't like it there. They condone drug abuse and many other things, and I'm just not comfortable. She's even threatened to call the police and say I'm a runaway because she has custody of me. My boyfriend has always had this picture-perfect life, and his family are strict Christians. One time, his mom even went as far as to say that if he and I break up, if we were having sex, I would say that he raped me. I've got so many problems I don't even know what to do.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Thank you for reaching out and I can see that this is getting to the point that it is becoming overwhelming with all that is going on. To address your question, the best answer is that it will take time and from what I read you are still living through it , so your feelings are perfectly normal for the situation. I get the  impression that you really need someone to process through all that you have been through and unfortunately getting  adequate feedback would best be done meeting one on one with a therapist vs. through a question answer forum. If you are currently in school you could see about meeting with a school therapist or if you are over the age of 15, in most states you can consent to your own therapy. If you choose not to meet with a therapist I would encourage you to call a crisis hotline to help you safety plan to keep yourself safe around your parents 1-800-273-8255  If you chose to meet with a therapist keep in mind that a lot of what you experienced can be reported to Family protective services since you are a minor. You can also choose to make a report if you are feeling unsafe with your parents. I’m glad to hear that you have your grandmother for support. I’m sure this is a lot to take in and I wish you the best.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 3841,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "2ed7cbdb6ed8c8c0"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "strained",
+      "themes": [
+        "father",
+        "parent",
+        "family",
+        "son"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "help_seeking",
+      "emotional_tenor": -0.3,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE"
+      ],
+      "CLU": [
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD"
+      ],
+      "SEM": [
+        "SEM_SYMBOLIC_COMMUNICATION_FOCUS"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_BOUNDARY_SETTING",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_FEAR_ANXIETY",
+        "ATO_LITERAL_MARKER",
+        "ATO_LOVE_AFFECTION",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_MODAL_VERBS",
+        "ATO_ROLE_FATHER",
+        "ATO_ROLE_MOTHER",
+        "ATO_SARCASM",
+        "ATO_SLANG_TOKEN",
+        "ATO_SUPERLATIVE_PRAISE",
+        "ATO_SWITCH",
+        "ATO_WEDDING_TASK_NEGOTIATION"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.3,
+        "arousal": 0.4,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.0,
+        "arousal": 0.2,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "familie",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

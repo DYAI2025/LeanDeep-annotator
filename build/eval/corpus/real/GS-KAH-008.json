@@ -1,0 +1,218 @@
+{
+  "id": "GS-KAH-008",
+  "source": "real",
+  "language": "de",
+  "theme": "identitaet",
+  "messages": [
+    {
+      "role": "Therapist",
+      "text": "Eklig?",
+      "start_time": 1992.474
+    },
+    {
+      "role": "Client",
+      "text": "Eklig.",
+      "start_time": 1993.114
+    },
+    {
+      "role": "Therapist",
+      "text": "Ja. Ganz schön eklig.",
+      "start_time": 1995.293
+    },
+    {
+      "role": "Client",
+      "text": "Ja. Und, und jetzt soll ich oder jetzt ist es an der Zeit, mit Selbstliebe jetzt da so anzufangen, ja? Oder diese Message: „Okay, jetzt bin ich auf einmal würdig, jetzt bin ich auf einmal liebenswürdig.\" Was das für eine große Spanne ist zu diesem: „Ich bin, ich bin es nicht wert oder ich bin Müll, ich bin wertlos.\" Und dann auf einmal Freundschaft. Und das ist, glaube ich, auch, was ich da im Kopf, was mich da so drückt, was ich da so merke als, äh, als Anstrengung. Das ist ja wirklich kein so kleiner Schritt.",
+      "start_time": 1997.094
+    },
+    {
+      "role": "Therapist",
+      "text": "Hmmm. Anspannung? Also zwischen welchen Punkten jetzt genau?",
+      "start_time": 2043.754
+    },
+    {
+      "role": "Client",
+      "text": "Zwischen, ähm, der ganzen Zeit von Selbst, ähm, Hass und vielleicht auch einfach nur Misstrauen oder eben nicht Zutrauen. Hass ist so ein großes Wort, aber dieses sich lieber wegducken, drücken und jetzt-",
+      "start_time": 2051.154
+    },
+    {
+      "role": "Therapist",
+      "text": "Zurauben.",
+      "start_time": 2070.514
+    },
+    {
+      "role": "Client",
+      "text": "Ja, auch, ja,",
+      "start_time": 2071.674
+    },
+    {
+      "role": "Other",
+      "text": "[Klopfen]",
+      "start_time": 2072.793
+    },
+    {
+      "role": "Client",
+      "text": "Und jetzt auf einmal so glasklar.",
+      "start_time": 2073.424
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm.",
+      "start_time": 2076.494
+    },
+    {
+      "role": "Client",
+      "text": "So für jedes Problem auch 'ne Lösung suchen wollen und so in die krasse Verantwortung reingehen. Ja.",
+      "start_time": 2078.254
+    },
+    {
+      "role": "Therapist",
+      "text": "Was für 'ne Verantwortung?",
+      "start_time": 2091.234
+    },
+    {
+      "role": "Client",
+      "text": "Volle, volle, volle Breite. Jetzt bin ich auf einmal Lehrerin, ich bin Vermieterin, ich bin alles Mögliche jetzt. Meine eigene Anwältin. Meine Bänkerin. Okay, meine KI hilft mir ein bisschen, aber... [Lachen] Ja, trotzdem ist es so 'ne Chefsposition. Und jetzt soll auf-- Ich soll jetzt auf einmal sagen, wie es weitergeht. Ja, ich soll jetzt auf einmal-- Ich war jetzt die ganze Zeit fremdbestimmt. Obwohl mich meine Eltern nicht mehr so wirklich unter der Fuchtel hatten, hatten sie ja trotzdem noch eine Macht über mich. Die haben natürlich trotzdem gedacht: „Gott, wenn meine Eltern das mitkriegen und...\" Und jetzt, äh, schreibe ich dieses Buch und ich spüre, das ist jetzt wichtiger als das, was meine Eltern davon halten werden.",
+      "start_time": 2093.293
+    }
+  ],
+  "metadata": {
+    "generator": null,
+    "template_id": null,
+    "message_count": 14,
+    "total_chars": 1742,
+    "duration_minutes": 1.68,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "anonymized",
+      "method": "name_replacement",
+      "original_hash": "4ae292077a50e3a88448ecf342161377e6a75884cfbf02ae1f01f01110489fc2"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "searching-exploratory",
+      "themes": [
+        "identitaet",
+        "authentizitaet"
+      ],
+      "relational_dynamics": "exploratory-mirroring",
+      "intent": "identity_exploration",
+      "emotional_tenor": 0.0,
+      "context_validity": 0.75,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [
+      {
+        "id": "SIGN-KAH-008-1",
+        "locus": "t=1992-2093s",
+        "signifier": "Selbstbild-Spannung",
+        "type": "symbol",
+        "denotation": "Identity tension between self and other image",
+        "connotations": [
+          "authenticity search",
+          "role conflict"
+        ],
+        "codes": [
+          "identitaet"
+        ],
+        "markers": [
+          "ATO_SELF_OBSERVATION_A",
+          "SEM_SELF_WORTH_SHIFT"
+        ]
+      }
+    ],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_FAMILY_POWER_DYNAMICS",
+        "MEMA_META_DRIFT",
+        "MEMA_ORDNUNGSPARAMETER",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SPIRAL_COHERENCE_INDEX",
+        "MEMA_VALUE_DYNAMICS",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_INTIMACY_PLAY",
+        "CLU_INTUITION_NARION",
+        "CLU_INTUITION_SELF_EFFICACY",
+        "CLU_INTUITION_TRUST",
+        "CLU_LL_PROFILE",
+        "CLU_RISK_LEVEL",
+        "CLU_SPIRAL_PERSONA_ROT",
+        "CLU_SUPPORT_EXCHANGE",
+        "CLU_UNCERTAINTY_CASCADE",
+        "CLU_VERBAL_PROSODY_INCONGRUENCE"
+      ],
+      "SEM": [
+        "SEM_ARCHETYPE_PICARD",
+        "SEM_BREAK_UP",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_REACTION_FORMATION_TEXT",
+        "SEM_REPAIR_GESTURE",
+        "SEM_STATE_OF_HAPPINESS"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_ATTENTION_TO_FEELINGS",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONFIRM",
+        "ATO_DISFLUENCY_FILLER",
+        "ATO_DISGUST_AVERSION",
+        "ATO_HEDGING_CUE",
+        "ATO_LINGERING_REACTION",
+        "ATO_LL_PHYSICAL_TOUCH",
+        "ATO_SPONTANEITY_CUE",
+        "ATO_SURPRISE",
+        "ATO_TRUST_DEFICIT_STATEMENT"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.2,
+        "arousal": 0.5,
+        "trigger": "session_start",
+        "trigger_sign_id": "SIGN-KAH-008-1"
+      },
+      {
+        "t": 0.2,
+        "valence": 0.3,
+        "arousal": 0.45,
+        "trigger": "rapport_building",
+        "trigger_sign_id": "SIGN-KAH-008-1"
+      },
+      {
+        "t": 0.5,
+        "valence": 0.5,
+        "arousal": 0.35,
+        "trigger": "exploration",
+        "trigger_sign_id": "SIGN-KAH-008-1"
+      },
+      {
+        "t": 0.75,
+        "valence": 0.6,
+        "arousal": 0.3,
+        "trigger": "insight",
+        "trigger_sign_id": "SIGN-KAH-008-1"
+      },
+      {
+        "t": 1.0,
+        "valence": 0.5,
+        "arousal": 0.3,
+        "trigger": "integration",
+        "trigger_sign_id": "SIGN-KAH-008-1"
+      }
+    ],
+    "therapy_indices": {
+      "trust": 80,
+      "conflict": 17,
+      "deescalation": 86,
+      "synchronization": 76,
+      "semiotic_coherence": 67
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": 0.0
+  }
+}

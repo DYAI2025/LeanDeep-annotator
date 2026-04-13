@@ -1,0 +1,248 @@
+{
+  "id": "GS-KAH-009",
+  "source": "real",
+  "language": "de",
+  "theme": "angst",
+  "messages": [
+    {
+      "role": "Therapist",
+      "text": "Mhm.",
+      "start_time": 2143.734
+    },
+    {
+      "role": "Client",
+      "text": "Ich weiß aber, dass wenn ich diese Dinge jetzt aufschreibe, dass sie die lesen.",
+      "start_time": 2144.874
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm.",
+      "start_time": 2149.134
+    },
+    {
+      "role": "Client",
+      "text": "Und das ist ein Riesending. Ich hatte-- Ich liebe dieses Schreiben, aber ich hab mich früher nie getraut, weil meine Mutter hat alle Tage Bücher gefunden, alles gelesen, Briefe aufgemacht, alles. Sie hat so 'ne Kontrollsucht auch. Und, äh, es war für mich immer ein Grund, noch mehr zu verheimlichen oder es noch mehr unter Verschluss zu bringen. Und jetzt bringe ich ja alles hoch, sogar die Dinge, die man aus Höflichkeit weglassen könnte oder so.",
+      "start_time": 2150.354
+    },
+    {
+      "role": "Therapist",
+      "text": "Eine Klammer ist auch ein Verschluss.",
+      "start_time": 2188.913
+    },
+    {
+      "role": "Client",
+      "text": "Angst ist auch ein... Ne? Aus Angst hab ich's verschlossen.",
+      "start_time": 2198.246
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm.",
+      "start_time": 2202.086
+    },
+    {
+      "role": "Client",
+      "text": "Ne? Ich bin da als Symbol für die Angst.",
+      "start_time": 2202.406
+    },
+    {
+      "role": "Therapist",
+      "text": "Aha. Dieses, ne, das möchte ich jetzt aber nicht mehr. Geh weg!",
+      "start_time": 2206.656
+    },
+    {
+      "role": "Client",
+      "text": "Hm? Ja.",
+      "start_time": 2210.546
+    },
+    {
+      "role": "Therapist",
+      "text": "Das fällt ab. Das fällt jetzt weg, weil, äh, es ist so wichtig. Beziehungsweise, weil ich übernehme jetzt Verantwortung für mich und meine Gefühle und gehe meinen Weg.",
+      "start_time": 2212.046
+    },
+    {
+      "role": "Client",
+      "text": "Ja.",
+      "start_time": 2225.246
+    },
+    {
+      "role": "Therapist",
+      "text": "Ich steh zu mir, zu meiner Realität, zu meinem Leben.",
+      "start_time": 2227.166
+    },
+    {
+      "role": "Client",
+      "text": "Und es ist nicht nur, ich will's nicht nur abschließen, ich will dem 'nen Sinn geben. Das war so 'n langer Weg und so ein Kampf. Das muss irgendwie eine tiefere Bedeutung haben, sonst ist es sinnlos. Also nicht sinnlos, aber das gibt's, gibt's nicht, weder in der Kunst noch in der Natur, dass man so 'nen heftigen Aufwand betreibt und dann vergeht das einfach und man vergisst's. Es muss festgehalten werden, es muss ein Spiegel sein und auch sichtbar werden.",
+      "start_time": 2233.946
+    },
+    {
+      "role": "Therapist",
+      "text": "Weil daraus dann was resultiert?",
+      "start_time": 2277.106
+    },
+    {
+      "role": "Client",
+      "text": "Weil ich glaube, dass es andere Menschen retten kann. Und ich glaube, ich hätte das auch gebraucht, aber es war nicht da. Aber das hab ich ja jetzt. Also ich hab ja dann selber den Rettungsring aufgeblasen und jetzt kann ich schön, jetzt kann ich den so weitergeben. Weil das ist ein, also [lacht] ich hab, ich schreib da Zeug auf, wo ich mir denke, Gott, wie? [lacht] Das wird, ähm, verrückt. Ich hab das jetzt so 'n bisschen ausgetestet, ne, und hab das den ehrlichsten Freunden habe ich mal rübergeschickt und die lachten sich krumm. Die haben gesagt, \"Bitte, ich kann nicht schlafen. Kannst du mir das nächste Kapitel noch [lacht] noch mal verschicken?\"",
+      "start_time": 2281.386
+    }
+  ],
+  "metadata": {
+    "generator": null,
+    "template_id": null,
+    "message_count": 16,
+    "total_chars": 2118,
+    "duration_minutes": 2.29,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "anonymized",
+      "method": "name_replacement",
+      "original_hash": "3eff04143d1b4e3d84c76044b2c19881fdcd2b3417e6b318ada09db794756e17"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "anxious-exploratory",
+      "themes": [
+        "angst",
+        "vermeidung"
+      ],
+      "relational_dynamics": "containing-regulatory",
+      "intent": "anxiety_processing",
+      "emotional_tenor": -0.3,
+      "context_validity": 0.8,
+      "offline_context_risk": 0.4
+    },
+    "semiotic_signs": [
+      {
+        "id": "SIGN-KAH-009-1",
+        "locus": "t=2144-2281s",
+        "signifier": "Angst/Panik",
+        "type": "index",
+        "denotation": "Anxiety as bodily experience",
+        "connotations": [
+          "fight-flight activation",
+          "avoidance pattern"
+        ],
+        "codes": [
+          "angst"
+        ],
+        "markers": [
+          "ATO_BODY_LOAD",
+          "ATO_SELF_OBSERVATION_A",
+          "SEM_TRAPPED_AND_ESCAPE"
+        ]
+      }
+    ],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_COMMUNICATION_BREAKDOWN_CASCADE",
+        "MEMA_FAMILY_POWER_DYNAMICS",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SPIRAL_COHERENCE_INDEX",
+        "MEMA_VALUE_DYNAMICS",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_DRIFT_TO_PRESENCE",
+        "CLU_FRIENDSHIP_SIGNALING_MARKER",
+        "CLU_GOTTMAN_TOXICITY_CLUSTER",
+        "CLU_INTUITION_POSITIVE_AFFECT",
+        "CLU_INTUITION_SUPPORT",
+        "CLU_LL_PROFILE",
+        "CLU_SIBLING_DYNAMICS",
+        "CLU_SPIRAL_PERSONA_BEIGE",
+        "CLU_SUPPORT_EXCHANGE",
+        "CLU_TECH_REPAIR_BOND",
+        "CLU_VERBAL_PROSODY_INCONGRUENCE"
+      ],
+      "SEM": [
+        "SEM_ACCUSATION_MARKER",
+        "SEM_ADJACENT_COMPLAIN",
+        "SEM_AUTHORITY_REFERENCE",
+        "SEM_NEEDS_TO_WANTS_FLIP",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_REACTION_FORMATION_TEXT",
+        "SEM_REPORTED_NONVERBAL_JOY",
+        "SEM_TECH_REPAIR_AS_BOND",
+        "SEM_WARM_APPRECIATION"
+      ],
+      "ATO": [
+        "ATO_ACTIVITY_VERB",
+        "ATO_AFFECTION_SHOW",
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_CLARIFY_REQ",
+        "ATO_COMMITMENT_PHRASES",
+        "ATO_CONDITION_CUE",
+        "ATO_CONFIRM",
+        "ATO_DISFLUENCY_FILLER",
+        "ATO_FEAR_ANXIETY",
+        "ATO_HEDGE_TERM",
+        "ATO_HEDGING_CUE",
+        "ATO_JOY_EXPRESSION",
+        "ATO_LINGERING_REACTION",
+        "ATO_POSITIVE_PREFERENCE",
+        "ATO_PRIDE_CONFIDENCE",
+        "ATO_ROLE_MOTHER",
+        "ATO_SELF_DAMAGING_ADMISSION",
+        "ATO_SUPPORT_MESSAGE",
+        "ATO_SURVIVAL_INSTINCT",
+        "ATO_TIME_REFERENCE",
+        "ATO_TRUST_DEFICIT_STATEMENT"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.3,
+        "arousal": 0.4,
+        "trigger": "session_start",
+        "trigger_sign_id": "SIGN-KAH-009-1"
+      },
+      {
+        "t": 0.2,
+        "valence": 0.2,
+        "arousal": 0.5,
+        "trigger": "tension_rising",
+        "trigger_sign_id": "SIGN-KAH-009-1"
+      },
+      {
+        "t": 0.4,
+        "valence": -0.1,
+        "arousal": 0.7,
+        "trigger": "crisis_peak",
+        "trigger_sign_id": "SIGN-KAH-009-1"
+      },
+      {
+        "t": 0.6,
+        "valence": 0.1,
+        "arousal": 0.5,
+        "trigger": "regulation",
+        "trigger_sign_id": "SIGN-KAH-009-1"
+      },
+      {
+        "t": 0.8,
+        "valence": 0.3,
+        "arousal": 0.35,
+        "trigger": "recovery",
+        "trigger_sign_id": "SIGN-KAH-009-1"
+      }
+    ],
+    "therapy_indices": {
+      "trust": 81,
+      "conflict": 22,
+      "deescalation": 82,
+      "synchronization": 77,
+      "semiotic_coherence": 63
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": 0.0
+  }
+}

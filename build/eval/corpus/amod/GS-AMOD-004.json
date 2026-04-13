@@ -1,0 +1,143 @@
+{
+  "id": "GS-AMOD-004",
+  "source": "amod",
+  "language": "en",
+  "theme": "selbstwert",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I have been married for ten years. My husband is 29 years my senior. We have a young daughter. Ever since she was born, my husband has \"shut down.\" We have no intimacy; he doesn't even kiss me. I've told him how I feel for years, and he swears he loves me and wants to make me happy, but I still have to literally beg for sex and affection. My self-esteem is gone, and I feel so alone. He has stranded me. He uses his passive-aggressive ways and ignores every comment I make. He refuses to talk to me in detail.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Hi Smyrna,Your husband is avoiding dealing with this problem. I understand how lonely you must feel, not only sexually, but emotionally too.From what you describe, it seems that he wants to be there for you, but he clearly has barriers to engaging fully around this issue. My hunch is that he doesn't know what to do or how to talk to you. But I think he does have something to say.Your husband is 29 years older and you've been together for ten years...that puts you at around thirty perhaps and him at almost sixty? Has any wise older woman sat you down to explain that men sometimes have erectile issues or hormone-related low sex drive as they age? It's possible that your husband is bewildered, angry, grieving or anxious about changes in his sex drive or his ability to maintain an erection, and that he doesn't know how to talk to you about this. He may feel like he's letting you down, and he's scared it will get worse, so he's sticking his head in the sand. Of course, that doesn't help, does it?The worst case scenario is that you get angry or hopeless, that he senses danger or disapproval from you and pulls away even further in shame. Eventually, you stop chasing him, and you drift further apart. It's a bit of a conundrum...how to honour both your need for connection and honesty and his need for a safe place to explore his fears and insecurities. Maybe lower your expectations for a bit? Your husband will need to believe that you are a safe place to share his fears, and you would need to hold onto the fact that he's really scared, and that he's not rejecting you...just protecting himself.I would suggest having a gentle conversation that sounds something like \"Sweetheart, we both know that something's not right here. I think you've been trying to handle this on your own or hoping it would get better, but can we agree that it's not? I need you to either talk to me about what's happening, or please go see a doctor. What I need is to see that you are doing some little step to help us. Either of those things would show me that.\"In the end, you need to know that he's heard you and that he's willing to look at the issue in some way. If he does neither, then at least you know where you stand and you can decide whether to live in a sexless marriage. I wonder if showing him this answer to your question might help? Just a thought.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 2867,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "5f7baf084a0771e1"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "despondent",
+      "themes": [
+        "self-esteem"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "help_seeking",
+      "emotional_tenor": -0.6,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_SELF_REFERENCE_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_CODE_VIOLATION_SIGNATURE",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_ORDNUNGSPARAMETER",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN"
+      ],
+      "CLU": [
+        "CLU_FRIENDSHIP_SIGNALING_MARKER",
+        "CLU_HEATED_CONFLICT",
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_GRIEF",
+        "CLU_INTUITION_NARION",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NARION_SIGNATURE",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_QA_RIDDLE_FORMATS",
+        "CLU_RISK_LEVEL"
+      ],
+      "SEM": [
+        "SEM_BOUNDARY_SETTING",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_RITUAL_INVOCATION",
+        "SEM_SELF_REFLECTION",
+        "SEM_SHARED_HUMOR"
+      ],
+      "ATO": [
+        "ATO_ABANDONMENT_ANXIETY",
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_ANGER_RAGE",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_CONTROL",
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_EXPRESSIVE_APHASIA",
+        "ATO_FEAR_ANXIETY",
+        "ATO_HOPE_OPTIMISM",
+        "ATO_LINGERING_REACTION",
+        "ATO_LITERAL_MARKER",
+        "ATO_LONELINESS_ISOLATION",
+        "ATO_LOVE_AFFECTION",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_PERSON_COMPARISON",
+        "ATO_SARCASM",
+        "ATO_SHAME_GUILT",
+        "ATO_SHARED_FUTURE_REFERENCE",
+        "ATO_SLANG_TOKEN",
+        "ATO_TOGETHERNESS_TERMS",
+        "ATO_WEDDING_TASK_NEGOTIATION"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.6,
+        "arousal": 0.3,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.3,
+        "arousal": 0.1,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "selbstwert",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

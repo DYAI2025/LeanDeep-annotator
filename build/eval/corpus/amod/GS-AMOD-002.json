@@ -1,0 +1,125 @@
+{
+  "id": "GS-AMOD-002",
+  "source": "amod",
+  "language": "en",
+  "theme": "selbstwert",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I have several issues like I don't like people. They make me sick. I have issues with talking to people. I feel like they are talking about me and making fun of me. I have felt this way for years. When I look people in the eyes I have voices that tell me to hurt them and if I don't stop looking at who I am talking to it gets so loud I can't hear what they are saying. I just stay away from people to avoid this. I look at people and think how I could hurt them. I feel like I am worthless and would be better off not in this world where I don't fit in. Every day I wake up it's like another day. Any info would be good.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Sounds like you are dealing with a lot within your self which is causing you great pain.  I would suggest that first you get a full physical evaluation to make sure that you are ok physically.  Then getting a mental evaluation as well from a psychiatrist.  Seeing both would help rule out any physically or psychologically causes to your symptoms.    After getting these evaluations, your physician should be able to help guide you on what treatments would be the best to help with your everyday challenges your are facing.  Whether treatment includes medication and/or psychotherapist would be discussed.  Please consider doing both immediately so you can have the live you want everyday you wake up.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1322,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "338577a221b9ab55"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "despondent",
+      "themes": [
+        "worthless"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "disclosure",
+      "emotional_tenor": -0.6,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EMOTION_LABELS_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_SELF_REFERENCE_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_ATTACHMENT_PROFILE_MARKER",
+        "MEMA_COMMUNICATION_BREAKDOWN_CASCADE",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN"
+      ],
+      "CLU": [
+        "CLU_ATTACHMENT_STYLE_AVOIDANT_MARKER",
+        "CLU_DEAD_KNOCK",
+        "CLU_GOTTMAN_TOXICITY_CLUSTER",
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_GRIEF",
+        "CLU_INTUITION_SHUTDOWN",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_SHUTDOWN_DISSOCIATION_CLUSTER",
+        "CLU_SUPPORT_EXCHANGE"
+      ],
+      "SEM": [
+        "SEM_BOUNDARY_SETTING",
+        "SEM_REPAIR_GESTURE"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_NEGATIVE_SELF_TALK",
+        "ATO_PERSON_COMPARISON",
+        "ATO_SARCASM"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.6,
+        "arousal": 0.3,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.3,
+        "arousal": 0.1,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "selbstwert",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

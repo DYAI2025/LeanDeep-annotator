@@ -1,0 +1,139 @@
+{
+  "id": "GS-AMOD-001",
+  "source": "amod",
+  "language": "en",
+  "theme": "selbstwert",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "My dad refuses to acknowledge my anxieties about going to parties, dinners, etc. Whenever I have an opinion it gets shut down. My mom and everyone else behaves likewise. For my father who heads a company, this is normal. He has to be right all the time. He blatantly refuses to even try to see it from my angle. \r\n\r\nRecently however, it's been getting to the point where I feel pressured and unable to speak my mind. It isn't possible for me to get professional one-on-one help. He tells me to grow a pair and get over it. I recently have been developing more severe body image and self-confidence issues, which I have had all my life. I feel invalidated by my dad.  I have been more paranoid lately as well. I can't turn on location services anymore on my phone because of a past incident. He makes me feel guilty about it.  I feel rather worthless more often than not, unfortunately.  What do I do?",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "I'm sorry to hear that you are unable to get through to your parents. It sounds like you are experiencing a great deal of anxiety that needs to be addressed by a professional (despite the fact that you are unable to at the moment). I would recommend talking with another adult such as a  school counselor that can offer you support in this area. Perhaps they can work with you on your anxiety issues and schedule a meeting with your parents so that he/she may help mediate the conversation with them.If you are unable to reach out to a school counselor maybe you can try a member of the family such as an aunt or an uncle that feels comfortable addressing the issue with your parents. Sometimes it helps hearing it from a third party before the situations is taken seriously enough.Good luck!",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1692,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "55b7f700012bd06a"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "despondent",
+      "themes": [
+        "worthless"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "seeking_guidance",
+      "emotional_tenor": -0.6,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_SELF_REFERENCE_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_ATTACHMENT_PROFILE_MARKER",
+        "MEMA_COMMUNICATION_BREAKDOWN_CASCADE",
+        "MEMA_INCONSISTENCY_TREND",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_OVERCONFIDENCE_INVALIDATION_CYCLE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_ACTIVE_REPAIR",
+        "CLU_ATTACHMENT_STYLE_AVOIDANT_MARKER",
+        "CLU_CONSISTENCY_ALERT",
+        "CLU_DEAD_KNOCK",
+        "CLU_GOTTMAN_TOXICITY_CLUSTER",
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_GRIEF",
+        "CLU_INTUITION_INCONSISTENCY",
+        "CLU_INTUITION_MORALITY",
+        "CLU_INTUITION_SHUTDOWN",
+        "CLU_INTUITION_SUPPORT",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_RISK_LEVEL",
+        "CLU_SELF_CONTRADICTION",
+        "CLU_SHUTDOWN_DISSOCIATION_CLUSTER",
+        "CLU_SUPPORT_EXCHANGE"
+      ],
+      "SEM": [
+        "SEM_BOUNDARY_SETTING",
+        "SEM_CERTAINTY_CLAIMS",
+        "SEM_LIGHT_ADMISSION"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_OBLIGATION_SYNTAX",
+        "ATO_PRIDE_CONFIDENCE",
+        "ATO_ROLE_FATHER",
+        "ATO_ROLE_MOTHER",
+        "ATO_SARCASM",
+        "ATO_SHAME_GUILT",
+        "ATO_UNCERTAINTY"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.6,
+        "arousal": 0.3,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.3,
+        "arousal": 0.1,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "selbstwert",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

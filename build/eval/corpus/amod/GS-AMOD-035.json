@@ -1,0 +1,132 @@
+{
+  "id": "GS-AMOD-035",
+  "source": "amod",
+  "language": "en",
+  "theme": "identitaet",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "My therapist is gay so there are no sexual issues here. However, my therapist for six years has made me believe that he cares about me and that we are friends. I have loaned money to him many times, and he always paid me back.\r\n\r\nI had a medical emergency last weekend and I was heavily medicated. I knew that this therapist came into my home and wrote down my credit card information so he could pay back what he owed me, but this therapist dropped me off and never came again.  I don't know what to do.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Do you want this therapist to have your credit card information?If not, then cancel the credit cards that you believe may now be accessible to this therapist.Therapists are expected to keep very clear boundaries between the therapy work and not have other relationships, such as \"friend\" or \"money lender\" with someone who is their patient.Therapists are never \"friends\" with their patients.Letting you believe that you are the therapist's friend, is a violation of professional ethics and almost definitely, a violation of the Consumer Protection laws in your State.Start by dropping this person as your therapist.  He has broken too many ethical standards to be worthy of offering therapy.Think over if you'd like remaining friends with this person, whom you describe as lacking integrity and stealing from you.If you need help getting back money from him, then contact the police and talk to a detective about what has happened so far.  The detective will advise according to the laws in your community and State, whether to file a police report, and what steps are necessary to utilize the Court system to get back your funds.If you'd like doing future patients who may be treated to similar ways by this therapist, a favor, go online and file a complaint with the therapist's Licensing Board.Good luck!",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1811,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "49e15aa81996dd7f"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "searching",
+      "themes": [
+        "gay"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "disclosure",
+      "emotional_tenor": -0.2,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EMOTION_LABELS_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_SELF_REFERENCE_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_FAMILY_SYSTEM_DYSFUNCTION",
+        "MEMA_INCONSISTENCY_TREND",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_OVERCONFIDENCE_INVALIDATION_CYCLE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_SPIRAL_COHERENCE_INDEX",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN",
+        "MEMA_VALUE_DYNAMICS"
+      ],
+      "CLU": [
+        "CLU_CONSISTENCY_ALERT",
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_GRIEF",
+        "CLU_INTUITION_INCONSISTENCY",
+        "CLU_INTUITION_MORALITY",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_PERSONA_INTEGRATION",
+        "CLU_PERSONA_ORANGE",
+        "CLU_PERSONA_TURQUOISE",
+        "CLU_RISK_LEVEL",
+        "CLU_SELF_CONTRADICTION",
+        "CLU_SPIRAL_PERSONA_GELB",
+        "CLU_SPIRAL_PERSONA_ORANGE"
+      ],
+      "SEM": [
+        "SEM_CERTAINTY_CLAIMS",
+        "SEM_GELB_SYSTEMIC_INTEGRATION",
+        "SEM_SELF_REFLECTION",
+        "SEM_SYMBOLIC_COMMUNICATION_FOCUS"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_MODAL_VERBS",
+        "ATO_WEDDING_TASK_NEGOTIATION"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.2,
+        "arousal": 0.4,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.1,
+        "arousal": 0.2,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "identitaet",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

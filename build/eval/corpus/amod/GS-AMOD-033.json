@@ -1,0 +1,111 @@
+{
+  "id": "GS-AMOD-033",
+  "source": "amod",
+  "language": "en",
+  "theme": "identitaet",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "I am currently living in a hotel and I don’t have a family.  I met a guy a month ago.  He is a bisexual.  He has a lot of gay friends on social networking sites. He would not help pay for the room.  When I asked for the TV remote control, he threw it elsewhere and asked me to get it. I slapped him and asked him to leave my room.  We recently just got back together.  One time I was sick.  He came to visit and feed me but left no money.  Then he texts me and brags about his house and car knowing that I have struggles living at a hotel.  He says that he has a whole house where he can put me in and orders me to text him whenever I need someone to have sex with.  He left his bath soap so he could come and get it.  I think that he is trying to find a way to come back.  Please help me.  What’s going on?  I am a good, loyal woman.  Why is he treating me like this?",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "I am less concerned about this man as bisexual and having gay friends, than about how you feel is treating you.  You are in a vulnerable position because of social isolation.  If you have friends to talk to, please reach out.  While this man has money, it is not his job to take care of you financially unless the two of you have decided that together.  It sounds like he sometimes cares for you and other times you feel disrespected.  I would suggest you look for a man that is consistent in his love and care.  This is not your fault.  But you are in control of removing him from you life or choosing not to because he meets some of your needs.  Take care. ",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1527,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "4274072448dc9a62"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "searching",
+      "themes": [
+        "bisexual",
+        "gay"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "seeking_guidance",
+      "emotional_tenor": -0.2,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE"
+      ],
+      "CLU": [
+        "CLU_HEATED_CONFLICT",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD"
+      ],
+      "SEM": [
+        "SEM_BOUNDARY_INVERSION",
+        "SEM_SYMBOLIC_COMMUNICATION_FOCUS"
+      ],
+      "ATO": [
+        "ATO_ACTIVITY_VERB",
+        "ATO_BOUNDARY_SETTING",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_LONELINESS_ISOLATION",
+        "ATO_LOVE_AFFECTION",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_PROTOCOL_LANG",
+        "ATO_TOGETHERNESS_TERMS"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.2,
+        "arousal": 0.4,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.1,
+        "arousal": 0.2,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "identitaet",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "id": "GS-SIM-014",
+  "source": "simulated",
+  "language": "de",
+  "theme": "beziehung",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "Es geht um einen Streit mit meinem Partner. Das hat mich sehr aufgewaehlt.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Lassen Sie uns das gemeinsam anschauen. Was genau ist passiert?",
+      "start_time": 2.8
+    },
+    {
+      "role": "Client",
+      "text": "Letzte Woche ist etwas passiert, darueber moechte ich heute sprechen.",
+      "start_time": 6.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Ich hoere Ihnen zu. Erzaehlen Sie mir, was vorgefallen ist.",
+      "start_time": 9.2
+    },
+    {
+      "role": "Client",
+      "text": "Wuetend und unverstanden. Ich mache doch so viel fuer uns.",
+      "start_time": 12.1
+    },
+    {
+      "role": "Therapist",
+      "text": "Es klingt, als fuehlen Sie sich in Ihren Bemuehungen nicht gesehen.",
+      "start_time": 15.3
+    },
+    {
+      "role": "Client",
+      "text": "Er hat mir vorgeworfen, dass ich nie zuhoere. Dabei hoere ich staendig zu!",
+      "start_time": 18.3
+    },
+    {
+      "role": "Therapist",
+      "text": "Wie haben Sie sich in dem Moment gefuehlt?",
+      "start_time": 21.3
+    },
+    {
+      "role": "Client",
+      "text": "Ich gebe und gebe, und dann werde ich wuetend, wenn nichts zurueckkommt.",
+      "start_time": 24.3
+    },
+    {
+      "role": "Therapist",
+      "text": "Da scheint ein Muster zu sein: Aufopferung, dann Enttaeuschung, dann Rueckzug.",
+      "start_time": 27.2
+    },
+    {
+      "role": "Client",
+      "text": "Jetzt wo ich darueber nachdenke... das kommt immer wieder vor.",
+      "start_time": 30.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Was genau wiederholt sich da?",
+      "start_time": 32.9
+    },
+    {
+      "role": "Client",
+      "text": "Er will wahrscheinlich einfach, dass ich praesent bin. Nicht nur koerperlich.",
+      "start_time": 35.9
+    },
+    {
+      "role": "Therapist",
+      "text": "Das ist ein wichtiger Unterschied. Praesenz bedeutet mehr als Anwesenheit.",
+      "start_time": 39.0
+    },
+    {
+      "role": "Client",
+      "text": "Vielleicht hat er ja auch recht, dass ich manchmal abwesend bin.",
+      "start_time": 42.1
+    },
+    {
+      "role": "Therapist",
+      "text": "Was meinen Sie damit? Koennen Sie sich in seine Perspektive versetzen?",
+      "start_time": 44.9
+    },
+    {
+      "role": "Client",
+      "text": "Vielleicht so: Ich brauche, dass du mich fragst, wie mein Tag war.",
+      "start_time": 47.9
+    },
+    {
+      "role": "Therapist",
+      "text": "Das klingt klar und respektvoll. Wollen Sie das diese Woche ausprobieren?",
+      "start_time": 50.9
+    },
+    {
+      "role": "Client",
+      "text": "Ich koennte ihm mal direkt sagen, was ich brauche, statt es zu schlucken.",
+      "start_time": 53.8
+    },
+    {
+      "role": "Therapist",
+      "text": "Wie koennte das konkret aussehen?",
+      "start_time": 56.7
+    }
+  ],
+  "metadata": {
+    "generator": "template-replay-v1",
+    "template_id": "beziehung",
+    "message_count": 20,
+    "total_chars": 1277,
+    "duration_minutes": 59.8,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": null,
+      "original_hash": null
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "konflikthaft",
+      "themes": [
+        "beziehung",
+        "kommunikation",
+        "muster"
+      ],
+      "relational_dynamics": "Therapist fragt nach Mustern",
+      "intent": "pattern-recognition",
+      "emotional_tenor": -0.1,
+      "context_validity": 0.85,
+      "offline_context_risk": 0.2
+    },
+    "semiotic_signs": [
+      {
+        "id": "sign-muster",
+        "locus": "mid session",
+        "signifier": "Muster",
+        "signified": "recurring relational pattern",
+        "type": "symbol",
+        "denotation": "Repeated behavioral cycle in relationships",
+        "connotations": [
+          "repetition",
+          "compulsion",
+          "awareness"
+        ],
+        "codes": [
+          "systemic"
+        ],
+        "evidence": "Client recognizes repeating dynamic"
+      }
+    ],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EMOTION_LABELS_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_BOUNDARY_SETTING",
+        "MEMA_COMMUNICATION_BREAKDOWN_CASCADE",
+        "MEMA_FAMILY_POWER_DYNAMICS",
+        "MEMA_FAMILY_SYSTEM_DYSFUNCTION",
+        "MEMA_META_DRIFT",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SPIRAL_COHERENCE_INDEX",
+        "MEMA_STRUDEL_PATTERN",
+        "MEMA_VALUE_DYNAMICS",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_CIRCULAR_REASONING",
+        "CLU_CONFLICT_ESCALATION",
+        "CLU_DISSONANCE_ALERT_TEXT",
+        "CLU_DRIFT_TO_PRESENCE",
+        "CLU_EXAMPLE_MARKER",
+        "CLU_GOTTMAN_TOXICITY_CLUSTER",
+        "CLU_HOUSEHOLD_ROUTINE_CONFLICTS",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_CONFLICT",
+        "CLU_INTUITION_INCONSISTENCY",
+        "CLU_INTUITION_MORALITY",
+        "CLU_NARION_SIGNATURE",
+        "CLU_PERSONA_INTEGRATION",
+        "CLU_PERSONA_ORANGE",
+        "CLU_PERSONA_TURQUOISE",
+        "CLU_RISK_LEVEL",
+        "CLU_SIBLING_DYNAMICS",
+        "CLU_SPIRAL_PERSONA_GELB",
+        "CLU_SPIRAL_PERSONA_ORANGE",
+        "CLU_SVT_MESSAGE_INCONGRUENCE_MARKER",
+        "CLU_UNCERTAINTY_CASCADE"
+      ],
+      "SEM": [
+        "SEM_ACCUSATION_MARKER",
+        "SEM_CONDITIONALITY_FRAME",
+        "SEM_GELB_SYSTEMIC_INTEGRATION",
+        "SEM_NEEDS_TO_WANTS_FLIP",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_REPETITIVE_COMPLAINT"
+      ],
+      "ATO": [
+        "ATO_ACKNOWLEDGE",
+        "ATO_CERTAINTY_WITHOUT_EVIDENCE",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONDITION_CUE",
+        "ATO_CONFIRM",
+        "ATO_EXPRESSIVE_APHASIA",
+        "ATO_HEDGE_TERM",
+        "ATO_LINGERING_REACTION",
+        "ATO_NEGATION",
+        "ATO_PROBABILISTIC",
+        "ATO_TIME_REFERENCE"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.35,
+        "arousal": 0.4,
+        "trigger": "session start",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.25,
+        "valence": 0.4,
+        "arousal": 0.35,
+        "trigger": "topic introduction",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.5,
+        "valence": 0.45,
+        "arousal": 0.35,
+        "trigger": "emotional deepening",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.75,
+        "valence": 0.45,
+        "arousal": 0.3,
+        "trigger": "crisis point",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "regulation",
+        "trigger_sign_id": ""
+      }
+    ],
+    "therapy_indices": {
+      "trust": 72,
+      "conflict": 22,
+      "deescalation": 66,
+      "synchronization": 64,
+      "semiotic_coherence": 64
+    },
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "beziehung",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": null
+  }
+}

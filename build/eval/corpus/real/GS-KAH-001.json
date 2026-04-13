@@ -1,0 +1,201 @@
+{
+  "id": "GS-KAH-001",
+  "source": "real",
+  "language": "de",
+  "theme": "admin",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "So. Tschüss.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "So. Noch gar nicht lang her. Ja. [lachen] Ich habe die Überweisung nicht. Die haben tatsächlich Urlaub. Ich kann aber morgen noch mal herkommen. Ja, das ist jetzt ein bisschen per Post. Oder das? Ja, das geht auch. Weil es war schon eine ganz schöne Fahrt. Ja, aber auch eine schöne Fahrt. Oder? Ja, haben wir die Fahrt. Warten Sie über Frankreich, denn ... Teilweise, ja. Genau, das ist total schön. Habe ich gesehen, wir haben ja noch gar nicht den Antrag genehmigt bekommen für die Therapie?",
+      "start_time": 86.44
+    },
+    {
+      "role": "Client",
+      "text": "Ja, wir haben gesagt, wir datieren es zurück. Ja. Aber der ist schon ... Der geht durch, ne?",
+      "start_time": 129.02
+    },
+    {
+      "role": "Therapist",
+      "text": "Ich hoffe sehr.",
+      "start_time": 138.78
+    },
+    {
+      "role": "Client",
+      "text": "Ja, klar. Ich denke schon.",
+      "start_time": 140.38
+    },
+    {
+      "role": "Therapist",
+      "text": "Ich habe jetzt aber tatsächlich noch mal einen Langzeitantrag draus gemacht. Das werden dann sechsunddreißig Stunden. Weil wir haben jetzt mit der KAH und dem hier so, würden wir ja schon ein paar Stunden dafür aufschreiben und dann sind wir schon fast fertig mit den zwölf und dann können sie eigentlich auch direkt in die Langzeittherapie beantragen. Wenn man nicht alle Stunden braucht, dann muss man ja nicht, aber es geht so schnell. Also wenn Sie damit einverstanden sind.",
+      "start_time": 143.06
+    },
+    {
+      "role": "Client",
+      "text": "Ja, ja, klar. Bin ich völlig freiwillig.",
+      "start_time": 173.32
+    },
+    {
+      "role": "Therapist",
+      "text": "Aber da müssen wir gucken, weil dann geht es zum Gutachter und so, aber es ist letztendlich ...",
+      "start_time": 175.58
+    },
+    {
+      "role": "Client",
+      "text": "Ich habe mir überlegt, ob es nicht mal sinnvoll wäre, dass ich da ein Gutachten machen lasse, weil die wollen mich jetzt auch ab Januar aus dem Krankengeld nehmen, weil die haben das zusammengerechnet, wie oft ich schon wegen der Depression krank war bis 2022 rückwirkend und haben das zusammengerechnet. Das heißt, es läuft jetzt aus und da dachte ich, das kann eigentlich nicht sein. Also lieg ich jetzt auf dem Arbeitsamt, das macht ja keinen Sinn. Von daher überlege ich, ob das sinnvoll ist, dass ich den bestelle und sage: „Ja, mach mal im Gespräch, damit ich das verlangen kann. Das will ich jetzt mal gucken.",
+      "start_time": 182.62
+    },
+    {
+      "role": "Therapist",
+      "text": "Okay, das wäre interessant. Also ich habe das jetzt einfach noch mal bei dem Supervisor so beantragt. Gucken wir mal, was sie sagen. Aber mir ist das jetzt erst aufgefallen. Das wäre ja noch gar nicht ... Gar nicht zurückgekommen. Haben Sie aber auch nichts gehört, ne? Nein, ich habe noch nichts gehört. Okay. Dann bleiben wir mal positiv.",
+      "start_time": 222.4
+    },
+    {
+      "role": "Client",
+      "text": "Ja, klar. Ähm, ich bin, also ich hätte noch Termine am 22. Oder am 23. Dezember, wo ich hier bin. Sollen wir da einen ausmachen? Ja.",
+      "start_time": 253.34
+    },
+    {
+      "role": "Therapist",
+      "text": "Okay, sollen wir dann eine Doppelsitzung oder eine einzelne machen? Okay, dann könnte ich Ihnen aber nur den 23. Anbieten, ab 14 Uhr. Mhm, geht. Geht das? Ja. Dann die anderen dazwischen. Na gut, also den haben wir jetzt erst mal fest und dann warten wir mal bis dahin auf die, ähm, Krankenkasse. Das sind jetzt anderthalb Monate, die sollten sich mal melden. Ja, wie geht es Ihnen denn jetzt heute in Nachwirkungen dieser KA-Erfahrung?",
+      "start_time": 266.86
+    }
+  ],
+  "metadata": {
+    "generator": null,
+    "template_id": null,
+    "message_count": 12,
+    "total_chars": 2776,
+    "duration_minutes": 4.45,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "anonymized",
+      "method": "name_replacement",
+      "original_hash": "a6a3f40cdb150b835cf87e46eaa0d6d92d3cfc2829cbabd8eba0b1b7a16ca2ff"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "neutral-organizational",
+      "themes": [
+        "admin",
+        "therapy_logistics"
+      ],
+      "relational_dynamics": "collaborative-administrative",
+      "intent": "frame_setting",
+      "emotional_tenor": 0.1,
+      "context_validity": 0.9,
+      "offline_context_risk": 0.1
+    },
+    "semiotic_signs": [
+      {
+        "id": "SIGN-KAH-001-1",
+        "locus": "t=0-267s",
+        "signifier": "Krankenkasse/Antrag",
+        "type": "symbol",
+        "denotation": "Administrative frame negotiation",
+        "connotations": [
+          "bureaucratic burden",
+          "therapy access barrier"
+        ],
+        "codes": [
+          "admin"
+        ],
+        "markers": []
+      }
+    ],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_FAMILY_POWER_DYNAMICS",
+        "MEMA_ORDNUNGSPARAMETER",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SPIRAL_COHERENCE_INDEX",
+        "MEMA_VALUE_DYNAMICS"
+      ],
+      "CLU": [
+        "CLU_BINDING_SUPPORT_FIELD",
+        "CLU_INTUITION_NARION",
+        "CLU_INTUITION_PRESENCE_BINDING",
+        "CLU_SPIRAL_PERSONA_ROT",
+        "CLU_SUPPORT_EXCHANGE",
+        "CLU_VERBAL_PROSODY_INCONGRUENCE"
+      ],
+      "SEM": [
+        "SEM_ADJACENT_COMPLAIN",
+        "SEM_ARCHETYPE_PICARD",
+        "SEM_LIMINAL_FIELD_PRESENCE",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_REACTION_FORMATION_TEXT",
+        "SEM_REPAIR_GESTURE"
+      ],
+      "ATO": [
+        "ATO_ACKNOWLEDGE",
+        "ATO_ACTION_VERBS",
+        "ATO_ACTIVITY_VERB",
+        "ATO_CERTAINTY_WITHOUT_EVIDENCE",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONDITION_CUE",
+        "ATO_CONFIRM",
+        "ATO_DEFENSIVE_REBUTTAL",
+        "ATO_DISFLUENCY_FILLER",
+        "ATO_JOY_EXPRESSION",
+        "ATO_JUDGMENT",
+        "ATO_LINGERING_REACTION",
+        "ATO_SLANG_TOKEN",
+        "ATO_TIME_REFERENCE"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.35,
+        "arousal": 0.4,
+        "trigger": "session_start",
+        "trigger_sign_id": "SIGN-KAH-001-1"
+      },
+      {
+        "t": 0.25,
+        "valence": 0.4,
+        "arousal": 0.35,
+        "trigger": "stable_exploration",
+        "trigger_sign_id": "SIGN-KAH-001-1"
+      },
+      {
+        "t": 0.5,
+        "valence": 0.45,
+        "arousal": 0.35,
+        "trigger": "steady_work",
+        "trigger_sign_id": "SIGN-KAH-001-1"
+      },
+      {
+        "t": 0.75,
+        "valence": 0.45,
+        "arousal": 0.3,
+        "trigger": "consolidation",
+        "trigger_sign_id": "SIGN-KAH-001-1"
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "closing",
+        "trigger_sign_id": "SIGN-KAH-001-1"
+      }
+    ],
+    "therapy_indices": {
+      "trust": 80,
+      "conflict": 5,
+      "deescalation": 85,
+      "synchronization": 75,
+      "semiotic_coherence": 64
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": 0.0
+  }
+}

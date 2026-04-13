@@ -1,0 +1,107 @@
+{
+  "id": "GS-AMOD-023",
+  "source": "amod",
+  "language": "en",
+  "theme": "wut",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "My fiancé and I recently had an argument over finances. He gives me the money each month to pay his automobile insurance. He no longer has one of the vehicles on the policy. He realized he was still paying for the coverage and asked why I was allowing him to continue to do that since I was physically paying it for him. My response was that he was giving me the money, and I just made the payment. I didn't think of the coverages. He was angry about it. I still can't figure out that anger.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "I'd be more worried generally about a fiancee who assumes you are responsible for tracking what in fact are his responsibilities, than about the anger per se.What you describe holds the seeds of classic abusive behavior, which is blaming the partner for what in fact are the person's own responsibilities.Start by withdrawing yourself from paying his bills.If he is on his own in terms of tracking what and when is due regarding his auto policy, then surely the only one for him to blame will be himself.Stay clear of involving yourself in doing favors for him if the favor involves something that he is the one accountable.Tell him it is so the relationship remains fair for each of you.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 1179,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "7b26e905f5225c74"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "hostile",
+      "themes": [
+        "angry",
+        "anger",
+        "rage"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "disclosure",
+      "emotional_tenor": -0.5,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_PAPAGEI_ECHO"
+      ],
+      "CLU": [
+        "CLU_HEATED_CONFLICT",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_UNCERTAINTY",
+        "CLU_MINIMIZATION_LOOP",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_ANGER_RAGE",
+        "ATO_DEPRESSION_NEGATIVE_EMOTIONS",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_MINIMIZATION_LANGUAGE",
+        "ATO_MODAL_VERBS",
+        "ATO_WEDDING_TASK_NEGOTIATION"
+      ],
+      "SEM": []
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.5,
+        "arousal": 0.8,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": -0.2,
+        "arousal": 0.6,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "wut",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

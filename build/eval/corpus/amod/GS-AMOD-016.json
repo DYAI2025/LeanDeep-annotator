@@ -1,0 +1,141 @@
+{
+  "id": "GS-AMOD-016",
+  "source": "amod",
+  "language": "en",
+  "theme": "familie",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "My fiancé and I have been in a relationship for two years. We have an infant son. My fiancé also has a child from a previous relationship. We do not live together. I live with my mother currently while I get on my feet, and he's living with some friends. My mother and I have an awful relationship that is completely unbearable most of the time. We cannot even stand to be around one another while living in the same house. She has made it clear that she wants me gone. Recently, I was talking to my father who lives in a different state. My father and I have always had a good relationship. I explained to him the situation I am in with my mother, and he said he would like for me, my fiancé, and our son to come live with him and his wife. I would really love to go. I do not want my son to be in this environment with constant arguing and negativity any longer. There is nowhere else for me to stay while remaining in this state. The problem is my fiancé is refusing to move away with me because he does not want to leave behind his other child. He and his child's mother have a horrible relationship, and she would absolutely not be willing to let him visit if we moved away. I believe I would be doing what is best for my child by moving away, but I do not want to leave without my fiancé. I have already explained the situation to him, and he will not give in. Do I continue to stay in this negative environment with my child and keep our family together? Do I move away with my child and have my relationship end? I do not want to take him out of either of his kids’ lives. What do I do?",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Hi Bethlehem,You have a big decision to make.  I appreciate your fiancé's need to stay close to his child and be a stand-up dad, and I am glad that you know your son needs an emotionally safe place.I'm a bit confused, because the obvious answer seems to be that you and your fiancé would get your own place together. I get that you want your dad to take care of all of you, but maybe it's time to take responsibility for your own future and start building it independently of either parent. I say that without knowing how old you are, but if you have a child and a two year relationship, you basically have declared your independence anyway.  I wish you the best.",
+      "start_time": 1.0
+    }
+  ],
+  "metadata": {
+    "generator": "select_amod_dialogues.py",
+    "template_id": null,
+    "message_count": 2,
+    "total_chars": 2257,
+    "duration_minutes": 0.0,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": "amod_dataset_pre_anonymized",
+      "original_hash": "9cd8e8275263736f"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "strained",
+      "themes": [
+        "mother",
+        "father",
+        "family",
+        "child",
+        "son"
+      ],
+      "relational_dynamics": "client_disclosure",
+      "intent": "seeking_guidance",
+      "emotional_tenor": -0.3,
+      "context_validity": 0.7,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_SELF_REFERENCE_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_INCONSISTENCY_TREND",
+        "MEMA_NEGATIVE_LANGUAGE_PROFILE",
+        "MEMA_OVERCONFIDENCE_INVALIDATION_CYCLE",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_THERAPEUTIC_RESISTANCE_PATTERN",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_CONSISTENCY_ALERT",
+        "CLU_FRIENDSHIP_SIGNALING_MARKER",
+        "CLU_IDENTITY_NEGOTIATION",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_GRIEF",
+        "CLU_INTUITION_INCONSISTENCY",
+        "CLU_INTUITION_MORALITY",
+        "CLU_INTUITION_SUPPORT",
+        "CLU_NARRATIVE_DEEPENING",
+        "CLU_NEGATIVE_COGNITIVE_TRIAD",
+        "CLU_RISK_LEVEL",
+        "CLU_SELF_CONTRADICTION",
+        "CLU_SUPPORT_EXCHANGE",
+        "CLU_TECH_REPAIR_BOND"
+      ],
+      "SEM": [
+        "SEM_CERTAINTY_CLAIMS",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_SELF_REFLECTION",
+        "SEM_SYMBOLIC_COMMUNICATION_FOCUS",
+        "SEM_TECH_REPAIR_AS_BOND",
+        "SEM_WARM_APPRECIATION"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_CONTRAST_CONJUNCTION",
+        "ATO_DEPRESSION_ABSOLUTIST_LANGUAGE",
+        "ATO_DEPRESSION_PAST_FOCUS",
+        "ATO_DEPRESSION_SELF_FOCUS",
+        "ATO_EXPRESSIVE_APHASIA",
+        "ATO_LOVE_AFFECTION",
+        "ATO_NEGATIVE_JUDGEMENT",
+        "ATO_OBLIGATION_SYNTAX",
+        "ATO_ROLE_FATHER",
+        "ATO_SARCASM",
+        "ATO_SLANG_TOKEN",
+        "ATO_SWITCH",
+        "ATO_TOGETHERNESS_TERMS",
+        "ATO_TOPIC_JUMP_MARKER"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": -0.3,
+        "arousal": 0.4,
+        "trigger": "client_disclosure",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.0,
+        "arousal": 0.2,
+        "trigger": "therapist_response",
+        "trigger_sign_id": ""
+      }
+    ],
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "familie",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "therapy_indices": {
+      "trust": null,
+      "conflict": null,
+      "deescalation": null,
+      "synchronization": null,
+      "semiotic_coherence": null
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null
+  }
+}

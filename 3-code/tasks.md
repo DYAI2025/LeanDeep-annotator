@@ -921,3 +921,130 @@ P0 Tasks Latency:
 4. **Week 7**: Gold standard validation complete?
    - PROCEED if: all dimensions >= 0.75 F1
    - Ship with caveat if: 5/7 dimensions >= 0.75 F1
+
+---
+
+## SDLC Task Tables
+
+*Per-component task tables following SDLC convention. Each row links to detailed task definitions above.*
+
+### Backend
+
+| ID | Task | Priority | Status | Req | Dependencies | Updated | Notes |
+|----|------|----------|--------|-----|--------------|---------|-------|
+| TASK-semantic-framing-implementation | Implement Gemini semantic framing with caching and fallback | P0 | Done | [REQ-F-semantic-framing](../1-spec/requirements/REQ-F-semantic-framing.md) | — | 2026-04-06 | 7-dim SemanticFrame, < 250ms p95 |
+| TASK-marker-resonance-weighting-system | Resonance scoring + tier categorization + weak clustering | P0 | Done | [REQ-F-marker-resonance-weighting](../1-spec/requirements/REQ-F-marker-resonance-weighting.md) | TASK-semantic-framing-implementation | 2026-04-06 | adjusted_confidence = confidence × resonance |
+| TASK-multi-narrative-generation | Dynamic narrative count + 3 parallel prompts + ranking | P0 | Done | [REQ-F-multi-narrative-analysis](../1-spec/requirements/REQ-F-multi-narrative-analysis.md) | TASK-semantic-framing-implementation, TASK-marker-resonance-weighting-system | 2026-04-06 | 3 + floor(offline_context_risk × 2) |
+| TASK-rest-api-endpoints | Implement all v1 API endpoints with contracts | P1 | Done | [REQ-F-rest-api](../1-spec/requirements/REQ-F-rest-api.md) | All P0 tasks | 2026-04-06 | 15 endpoints, OpenAPI spec |
+| TASK-candidate-detection-pipeline | Candidate detection algorithm with LLM clustering | P2 | Done | [REQ-F-candidate-detection](../1-spec/requirements/REQ-F-candidate-detection.md) | TASK-semantic-framing-implementation, TASK-marker-resonance-weighting-system | 2026-04-07 | api/candidates.py, 24 tests |
+| TASK-candidate-persistence-audit | Audit trail + changelog + revert capability | P2 | Todo | [REQ-MNT-marker-evolution-tracking](../1-spec/requirements/REQ-MNT-marker-evolution-tracking.md) | TASK-candidate-detection-pipeline | 2026-04-07 | build/enrichment/changelog.jsonl |
+| TASK-enrichment-api-endpoints | Enrichment REST endpoints (candidates + examples) | P2 | Todo | [REQ-F-candidate-detection](../1-spec/requirements/REQ-F-candidate-detection.md), [REQ-F-example-auto-enrichment](../1-spec/requirements/REQ-F-example-auto-enrichment.md) | TASK-candidate-detection-pipeline, TASK-candidate-persistence-audit | 2026-04-07 | Per api-design.md contracts |
+| TASK-performance-optimization | Latency targets + caching + frontend performance | P2 | Todo | [REQ-PERF-conversation-latency](../1-spec/requirements/REQ-PERF-conversation-latency.md) | All P0 + P1 tasks | 2026-04-07 | p95 < 500ms conversation |
+| TASK-assumption-verification-gold-standard | Gold standard annotation + F1 measurement | Blocker | Todo | [REQ-F-semantic-framing](../1-spec/requirements/REQ-F-semantic-framing.md) | TASK-semantic-framing-implementation, TASK-marker-resonance-weighting-system | 2026-04-07 | 100 dialogues, >= 0.80 F1 on 6/7 |
+| TASK-documentation-api-sdks | OpenAPI spec, integration guides, example code | P2 | Todo | [REQ-F-rest-api](../1-spec/requirements/REQ-F-rest-api.md) | TASK-rest-api-endpoints | 2026-04-07 | Swagger UI at /docs |
+
+### Frontend
+
+| ID | Task | Priority | Status | Req | Dependencies | Updated | Notes |
+|----|------|----------|--------|-----|--------------|---------|-------|
+| TASK-frontend-scaffold | Vite + React + TypeScript project + dev server + API client | P1 | Done | [REQ-USA-interactive-visualization](../1-spec/requirements/REQ-USA-interactive-visualization.md) | — | 2026-04-06 | Per DEC-frontend-react-vite |
+| TASK-frontend-text-highlighting | Marker spans + tooltips + semantic frame display | P1 | Done | [REQ-USA-interactive-visualization](../1-spec/requirements/REQ-USA-interactive-visualization.md) | TASK-frontend-scaffold | 2026-04-06 | ATO=blue, SEM=green, CLU=red, MEMA=purple |
+| TASK-frontend-narrative-ui | Narrative tabs + marker linking + uncertainty warnings | P1 | Done | [REQ-USA-interactive-visualization](../1-spec/requirements/REQ-USA-interactive-visualization.md) | TASK-frontend-text-highlighting | 2026-04-06 | Dynamic narrative count |
+| TASK-frontend-marker-sidebar | Marker library sidebar + search + filter + detail | P1 | Done | [REQ-USA-interactive-visualization](../1-spec/requirements/REQ-USA-interactive-visualization.md) | TASK-frontend-scaffold | 2026-04-06 | Collapsible, responsive |
+| TASK-native-ui-dialogue-upload | Upload/paste + submit + display + export + error handling | P1 | Done | [REQ-USA-interactive-visualization](../1-spec/requirements/REQ-USA-interactive-visualization.md) | TASK-frontend-narrative-ui, TASK-frontend-marker-sidebar, TASK-rest-api-endpoints | 2026-04-06 | JSON, HTML, PDF export |
+| TASK-candidate-review-ui | Enrichment review page (candidates + examples) | P2 | Todo | [REQ-F-candidate-detection](../1-spec/requirements/REQ-F-candidate-detection.md), [REQ-F-example-auto-enrichment](../1-spec/requirements/REQ-F-example-auto-enrichment.md) | TASK-enrichment-api-endpoints | 2026-04-07 | /enrichment route, approve/reject/merge |
+| TASK-accessibility-audit | WCAG AA compliance + keyboard + screen reader | P2 | Todo | [REQ-USA-interactive-visualization](../1-spec/requirements/REQ-USA-interactive-visualization.md) | All frontend subtasks + native-ui | 2026-04-07 | axe-core automated + manual |
+
+### Marker Pipeline
+
+| ID | Task | Priority | Status | Req | Dependencies | Updated | Notes |
+|----|------|----------|--------|-----|--------------|---------|-------|
+| TASK-candidate-detection-pipeline | Candidate detection algorithm (shared with Backend) | P2 | Done | [REQ-F-candidate-detection](../1-spec/requirements/REQ-F-candidate-detection.md) | TASK-semantic-framing-implementation, TASK-marker-resonance-weighting-system | 2026-04-07 | Also listed under Backend |
+
+### Deploy & Operations
+
+| ID | Task | Priority | Status | Req | Dependencies | Updated | Notes |
+|----|------|----------|--------|-----|--------------|---------|-------|
+| TASK-deploy-dockerfile-multistage | Multi-stage Dockerfile (Node → Python) | P2 | Todo | — | — | 2026-04-07 | Per DEC-railway-deployment |
+| TASK-deploy-static-serving | FastAPI serves frontend dist as static files | P2 | Todo | — | TASK-deploy-dockerfile-multistage | 2026-04-07 | SPA fallback, / takes precedence |
+| TASK-deploy-railway-config | railway.toml finalized, fly.toml deprecated | P2 | Todo | — | TASK-deploy-dockerfile-multistage | 2026-04-07 | Health check, restart policy |
+| TASK-deploy-env-vars-setup | .env.example, secrets docs, runbook | P2 | Todo | — | TASK-deploy-railway-config | 2026-04-07 | No secrets in git |
+| TASK-deploy-smoke-tests | scripts/smoke_test.sh for post-deploy verification | P2 | Todo | — | TASK-deploy-dockerfile-multistage, TASK-deploy-static-serving | 2026-04-07 | Health + config + analyze + frontend |
+| TASK-deploy-runbook-initial | Deploy + rollback runbooks | P2 | Todo | — | TASK-deploy-smoke-tests, TASK-deploy-railway-config | 2026-04-07 | RB-standard-deploy, RB-rollback |
+
+---
+
+## Execution Plan
+
+### Phase 1: P0 Blockers — Semantic Core
+
+**Capabilities delivered:**
+- Semantic frame generation (7 dimensions) with < 250ms latency
+- Marker resonance weighting (STRONG/WEAK/DISCARDED tiers)
+- Multi-narrative interpretation (3-4 perspectives, dynamic count)
+- Weak marker clustering for alternative perspectives
+
+**Tasks:**
+1. TASK-semantic-framing-implementation
+2. TASK-marker-resonance-weighting-system
+3. TASK-multi-narrative-generation
+
+### Phase 2: P1 Core — API + UI
+
+**Capabilities delivered:**
+- Full REST API v1 with 15 endpoints and OpenAPI docs
+- Interactive analysis UI with color-coded text, tooltips, narratives
+- Dialogue upload/paste with export options
+- Marker library browser with search and filter
+
+**Tasks:**
+1. TASK-frontend-scaffold
+2. TASK-frontend-text-highlighting
+3. TASK-frontend-narrative-ui
+4. TASK-frontend-marker-sidebar
+5. TASK-rest-api-endpoints
+6. TASK-native-ui-dialogue-upload
+
+### Phase 3: P2 Polish — Enrichment + Quality
+
+**Capabilities delivered:**
+- Candidate detection pipeline (auto-discover new markers)
+- Enrichment API endpoints (approve/reject/merge workflow)
+- Enrichment review UI for researchers
+- Performance optimization (latency targets met)
+- Accessibility compliance (WCAG AA)
+
+**Tasks:**
+1. TASK-candidate-detection-pipeline
+2. TASK-candidate-persistence-audit
+3. TASK-enrichment-api-endpoints
+4. TASK-candidate-review-ui
+5. TASK-performance-optimization
+6. TASK-accessibility-audit
+
+### Phase 4: Deploy Prep — Railway
+
+**Capabilities delivered:**
+- Production-ready Docker image (multi-stage build)
+- Frontend served as static files from FastAPI
+- Railway deployment configuration
+- Smoke test script for post-deploy verification
+- Deploy and rollback runbooks
+
+**Tasks:**
+1. TASK-deploy-dockerfile-multistage
+2. TASK-deploy-static-serving
+3. TASK-deploy-railway-config
+4. TASK-deploy-env-vars-setup
+5. TASK-deploy-smoke-tests
+6. TASK-deploy-runbook-initial
+
+### Phase 5: Production Readiness
+
+**Capabilities delivered:**
+- Gold standard validation (100 dialogues, F1 measurement)
+- Complete API documentation and integration guides
+
+**Tasks:**
+1. TASK-assumption-verification-gold-standard
+2. TASK-documentation-api-sdks

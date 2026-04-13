@@ -1,0 +1,269 @@
+{
+  "id": "GS-SIM-044",
+  "source": "simulated",
+  "language": "de",
+  "theme": "identitaet",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "Es geht um einen Streit mit meinem Partner. Das hat mich sehr aufgewaehlt.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Lassen Sie uns das gemeinsam anschauen. Was genau ist passiert?",
+      "start_time": 3.1
+    },
+    {
+      "role": "Client",
+      "text": "Letzte Woche ist etwas passiert, darueber moechte ich heute sprechen.",
+      "start_time": 6.4
+    },
+    {
+      "role": "Therapist",
+      "text": "Ich hoere Ihnen zu. Erzaehlen Sie mir, was vorgefallen ist.",
+      "start_time": 9.5
+    },
+    {
+      "role": "Client",
+      "text": "Ich musste immer funktionieren. Schwaeche war keine Option.",
+      "start_time": 12.4
+    },
+    {
+      "role": "Therapist",
+      "text": "Was waere, wenn Staerke auch bedeuten koennte, sich Hilfe zu holen?",
+      "start_time": 15.2
+    },
+    {
+      "role": "Client",
+      "text": "Ich sehe mich immer als den Starken, der alles alleine schafft.",
+      "start_time": 18.5
+    },
+    {
+      "role": "Therapist",
+      "text": "Woher kommt dieses Bild von sich?",
+      "start_time": 21.8
+    },
+    {
+      "role": "Client",
+      "text": "Es macht mich traurig. Als waere ich unsichtbar.",
+      "start_time": 25.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Die Diskrepanz zwischen dem, was innen ist, und dem, was aussen ankommt, scheint schmerzhaft.",
+      "start_time": 28.0
+    },
+    {
+      "role": "Client",
+      "text": "Meine Freunde sagen, ich sei kalt. Aber innen drin fuehle ich so viel.",
+      "start_time": 31.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Wie erleben Sie diesen Widerspruch?",
+      "start_time": 33.9
+    },
+    {
+      "role": "Client",
+      "text": "Nein. Und das macht mir Angst. Was wenn da nichts ist?",
+      "start_time": 37.1
+    },
+    {
+      "role": "Therapist",
+      "text": "Die Tatsache, dass Sie diese Frage stellen, zeigt mir, dass da sehr wohl etwas ist.",
+      "start_time": 40.4
+    },
+    {
+      "role": "Client",
+      "text": "Wer bin ich eigentlich, wenn ich nicht die Rolle spiele, die alle erwarten?",
+      "start_time": 43.4
+    },
+    {
+      "role": "Therapist",
+      "text": "Haben Sie eine Ahnung davon?",
+      "start_time": 46.5
+    },
+    {
+      "role": "Client",
+      "text": "Vielleicht meiner Schwester zu sagen, dass ich auch mal Hilfe brauche.",
+      "start_time": 49.4
+    },
+    {
+      "role": "Therapist",
+      "text": "Das waere ein mutiger und authentischer Schritt. Was hindert Sie noch?",
+      "start_time": 52.4
+    },
+    {
+      "role": "Client",
+      "text": "Ich moechte mich trauen, so zu sein, wie ich wirklich bin.",
+      "start_time": 55.6
+    },
+    {
+      "role": "Therapist",
+      "text": "Was waere ein erster Schritt dahin?",
+      "start_time": 58.7
+    }
+  ],
+  "metadata": {
+    "generator": "template-replay-v1",
+    "template_id": "identitaet",
+    "message_count": 20,
+    "total_chars": 1206,
+    "duration_minutes": 61.9,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": null,
+      "original_hash": null
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "suchend",
+      "themes": [
+        "identitaet",
+        "authentizitaet",
+        "selbstbild"
+      ],
+      "relational_dynamics": "Therapist foerdert Selbsterforschung",
+      "intent": "identity-exploration",
+      "emotional_tenor": 0.0,
+      "context_validity": 0.8,
+      "offline_context_risk": 0.25
+    },
+    "semiotic_signs": [
+      {
+        "id": "sign-maske",
+        "locus": "mid session",
+        "signifier": "Rolle",
+        "signified": "performed identity vs. authentic self",
+        "type": "symbol",
+        "denotation": "Social role as substitute for identity",
+        "connotations": [
+          "performance",
+          "emptiness",
+          "search"
+        ],
+        "codes": [
+          "existential"
+        ],
+        "evidence": "Client questions who they are without their role"
+      }
+    ],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_COMMUNICATION_BREAKDOWN_CASCADE",
+        "MEMA_FAMILY_POWER_DYNAMICS",
+        "MEMA_META_DRIFT",
+        "MEMA_ORDNUNGSPARAMETER",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SPIRAL_COHERENCE_INDEX",
+        "MEMA_VALUE_DYNAMICS",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_DRIFT_TO_PRESENCE",
+        "CLU_GOTTMAN_TOXICITY_CLUSTER",
+        "CLU_INTUITION_NARION",
+        "CLU_INTUITION_PRESENCE_BINDING",
+        "CLU_PERSONA_REGRESSION",
+        "CLU_RISK_LEVEL",
+        "CLU_SIBLING_DYNAMICS",
+        "CLU_SPIRAL_PERSONA_BEIGE",
+        "CLU_SPIRAL_PERSONA_ROT",
+        "CLU_TECH_REPAIR_BOND",
+        "CLU_UNCERTAINTY_CASCADE",
+        "CLU_VERBAL_PROSODY_INCONGRUENCE"
+      ],
+      "SEM": [
+        "SEM_ACCUSATION_MARKER",
+        "SEM_ARCHETYPE_PICARD",
+        "SEM_REACTION_FORMATION_TEXT",
+        "SEM_RELATION_OVER_PERSONA",
+        "SEM_ROT_POWER_ERUPTION"
+      ],
+      "ATO": [
+        "ATO_ACTIVITY_VERB",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONDITION_CUE",
+        "ATO_CONFIRM",
+        "ATO_CONFORMITY",
+        "ATO_EXPRESSIVE_APHASIA",
+        "ATO_FEELING_WORD",
+        "ATO_HEDGE_TERM",
+        "ATO_HEDGING_CUE",
+        "ATO_HOPE_OPTIMISM",
+        "ATO_LONELINESS_ISOLATION",
+        "ATO_NEGATION",
+        "ATO_NEGATIVE_JUDGEMENT",
+        "ATO_REGULATION_VERB_POSITIVE",
+        "ATO_ROLE_SIBLINGS",
+        "ATO_STATE_IMPACT",
+        "ATO_SUFFERING",
+        "ATO_TIME_REFERENCE"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.2,
+        "arousal": 0.5,
+        "trigger": "session start",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.2,
+        "valence": 0.3,
+        "arousal": 0.45,
+        "trigger": "topic introduction",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.5,
+        "valence": 0.5,
+        "arousal": 0.35,
+        "trigger": "emotional deepening",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.75,
+        "valence": 0.6,
+        "arousal": 0.3,
+        "trigger": "crisis point",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.5,
+        "arousal": 0.3,
+        "trigger": "regulation",
+        "trigger_sign_id": ""
+      }
+    ],
+    "therapy_indices": {
+      "trust": 69,
+      "conflict": 13,
+      "deescalation": 73,
+      "synchronization": 64,
+      "semiotic_coherence": 63
+    },
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "identitaet",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": null
+  }
+}

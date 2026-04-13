@@ -108,6 +108,7 @@ When an artifact is no longer relevant:
 | [GOAL-professional-diagnostic-support](goals/GOAL-professional-diagnostic-support.md) | Must-have | Approved | Support professionals with bias-resistant pattern detection + multi-perspective interpretation |
 | [GOAL-autonomous-marker-evolution](goals/GOAL-autonomous-marker-evolution.md) | Must-have | Approved | Self-learning marker system with weak marker clustering + autonomous enrichment |
 | [GOAL-real-time-live-analysis](goals/GOAL-real-time-live-analysis.md) | Should-have | Draft | Real-time stream analysis for fraud, negotiation, interrogation support (Phase 2+) |
+| [GOAL-operational-deployment-readiness](goals/GOAL-operational-deployment-readiness.md) | Should-have | Draft | Deployable, monitored, operable production system with runbooks and alerts |
 
 ---
 

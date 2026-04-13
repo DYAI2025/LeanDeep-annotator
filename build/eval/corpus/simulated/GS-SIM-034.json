@@ -1,0 +1,265 @@
+{
+  "id": "GS-SIM-034",
+  "source": "simulated",
+  "language": "de",
+  "theme": "trauer",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "Es ist alles so viel gerade. Ich fuehle mich ueberwaeltigt.",
+      "start_time": 0.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Das hoert sich belastend an. Lassen Sie uns gemeinsam schauen, was gerade am draengendsten ist.",
+      "start_time": 3.2
+    },
+    {
+      "role": "Client",
+      "text": "Ich weiss nicht, wo ich anfangen soll heute.",
+      "start_time": 6.2
+    },
+    {
+      "role": "Therapist",
+      "text": "Nehmen Sie sich die Zeit, die Sie brauchen. Was beschaeftigt Sie gerade am meisten?",
+      "start_time": 9.1
+    },
+    {
+      "role": "Client",
+      "text": "Es fuehlt sich unwirklich an. Als waere er nur verreist und kommt bald zurueck.",
+      "start_time": 12.4
+    },
+    {
+      "role": "Therapist",
+      "text": "Das ist eine ganz normale Reaktion. Die Realitaet braucht Zeit, um anzukommen.",
+      "start_time": 15.5
+    },
+    {
+      "role": "Client",
+      "text": "Mein Vater ist vor drei Monaten gestorben. Ich... ich kann es immer noch nicht fassen.",
+      "start_time": 18.4
+    },
+    {
+      "role": "Therapist",
+      "text": "Das tut mir leid. Moegen Sie mir erzaehlen, wie das fuer Sie ist?",
+      "start_time": 21.5
+    },
+    {
+      "role": "Client",
+      "text": "Von Abenteuern, die er sich ausgedacht hat. Nur fuer mich. Das war unsere Zeit.",
+      "start_time": 24.5
+    },
+    {
+      "role": "Therapist",
+      "text": "Diese Erinnerungen gehoeren Ihnen. Niemand kann sie Ihnen nehmen.",
+      "start_time": 27.4
+    },
+    {
+      "role": "Client",
+      "text": "Ich erinnere mich an seine Haende. Wie er mir als Kind Geschichten erzaehlt hat.",
+      "start_time": 30.6
+    },
+    {
+      "role": "Therapist",
+      "text": "Was fuer Geschichten waren das?",
+      "start_time": 33.7
+    },
+    {
+      "role": "Client",
+      "text": "Vielleicht, dass ich so lebe, wie er es sich fuer mich gewuenscht haette.",
+      "start_time": 37.0
+    },
+    {
+      "role": "Therapist",
+      "text": "Das klingt wie eine Art innerer Auftrag. Fuehlt sich das stimmig an?",
+      "start_time": 40.3
+    },
+    {
+      "role": "Client",
+      "text": "Was bleibt, wenn jemand geht? Was hat das alles fuer einen Sinn?",
+      "start_time": 43.4
+    },
+    {
+      "role": "Therapist",
+      "text": "Das sind grosse Fragen. Was kommt Ihnen als Erstes in den Sinn?",
+      "start_time": 46.6
+    },
+    {
+      "role": "Client",
+      "text": "Er wuerde sagen: Natuerlich! Das Leben geht weiter, mein Schatz.",
+      "start_time": 49.5
+    },
+    {
+      "role": "Therapist",
+      "text": "Da ist ein Laecheln. Trauer und Freude schliessen sich nicht aus.",
+      "start_time": 52.5
+    },
+    {
+      "role": "Client",
+      "text": "Ich glaube, ich darf auch wieder lachen. Das waere okay.",
+      "start_time": 55.7
+    },
+    {
+      "role": "Therapist",
+      "text": "Was glauben Sie, wuerde Ihr Vater dazu sagen?",
+      "start_time": 58.9
+    }
+  ],
+  "metadata": {
+    "generator": "template-replay-v1",
+    "template_id": "trauer",
+    "message_count": 20,
+    "total_chars": 1342,
+    "duration_minutes": 61.9,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "synthetic",
+      "method": null,
+      "original_hash": null
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "traurig",
+      "themes": [
+        "verlust",
+        "abschied",
+        "erinnerung"
+      ],
+      "relational_dynamics": "Therapist validiert Schmerz",
+      "intent": "grief-processing",
+      "emotional_tenor": -0.35,
+      "context_validity": 0.9,
+      "offline_context_risk": 0.15
+    },
+    "semiotic_signs": [
+      {
+        "id": "sign-haende",
+        "locus": "mid session",
+        "signifier": "Haende des Vaters",
+        "signified": "embodied memory of deceased",
+        "type": "icon",
+        "denotation": "Tactile memory as connection to the dead",
+        "connotations": [
+          "loss",
+          "love",
+          "permanence"
+        ],
+        "codes": [
+          "phenomenological"
+        ],
+        "evidence": "Client recalls father's hands"
+      }
+    ],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_RESPONSIBILITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_COMMUNICATION_BREAKDOWN_CASCADE",
+        "MEMA_FAMILY_POWER_DYNAMICS",
+        "MEMA_META_DRIFT",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SELF_VICTIMIZATION_CYCLE",
+        "MEMA_ZERO_PUNISHMENT_GUARD"
+      ],
+      "CLU": [
+        "CLU_GOTTMAN_TOXICITY_CLUSTER",
+        "CLU_INTIMACY_PLAY",
+        "CLU_RISK_LEVEL",
+        "CLU_SIBLING_DYNAMICS",
+        "CLU_SUPPORT_EXCHANGE",
+        "CLU_UNCERTAINTY_CASCADE"
+      ],
+      "SEM": [
+        "SEM_ACCUSATION_MARKER",
+        "SEM_LIGHT_ADMISSION",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_REPAIR_GESTURE"
+      ],
+      "ATO": [
+        "ATO_AFFECTION_SHOW",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONDITION_CUE",
+        "ATO_EXPRESSIVE_APHASIA",
+        "ATO_HEDGE_TERM",
+        "ATO_HEDGING_CUE",
+        "ATO_HOPE_OPTIMISM",
+        "ATO_JOY_EXPRESSION",
+        "ATO_LINGERING_REACTION",
+        "ATO_LONELINESS_ISOLATION",
+        "ATO_MODAL_VERBS",
+        "ATO_NEGATION",
+        "ATO_ROLE_CHILD",
+        "ATO_ROLE_FATHER",
+        "ATO_SADNESS_GRIEF",
+        "ATO_TIME_REFERENCE"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.3,
+        "arousal": 0.4,
+        "trigger": "session start",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.2,
+        "valence": 0.2,
+        "arousal": 0.5,
+        "trigger": "topic introduction",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.4,
+        "valence": -0.1,
+        "arousal": 0.7,
+        "trigger": "emotional deepening",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.6,
+        "valence": 0.1,
+        "arousal": 0.5,
+        "trigger": "crisis point",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 0.8,
+        "valence": 0.3,
+        "arousal": 0.35,
+        "trigger": "regulation",
+        "trigger_sign_id": ""
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "recovery",
+        "trigger_sign_id": ""
+      }
+    ],
+    "therapy_indices": {
+      "trust": 76,
+      "conflict": 5,
+      "deescalation": 75,
+      "synchronization": 73,
+      "semiotic_coherence": 75
+    },
+    "ambiguity_profile": {
+      "kinds": [],
+      "dominant_reading": "trauer",
+      "competing_readings": [],
+      "overall_risk": "low"
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": null
+  }
+}

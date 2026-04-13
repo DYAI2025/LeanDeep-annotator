@@ -1,0 +1,36 @@
+{
+  "aufstieg": {
+    "description": "Trust-Building: Valenz steigt stetig, Arousal sinkt (Beruhigung)",
+    "themes": ["selbstwert", "identitaet", "uebertragung"],
+    "anchors": [
+      {"t": 0.0, "valence": 0.2, "arousal": 0.5},
+      {"t": 0.2, "valence": 0.3, "arousal": 0.45},
+      {"t": 0.5, "valence": 0.5, "arousal": 0.35},
+      {"t": 0.75, "valence": 0.6, "arousal": 0.3},
+      {"t": 1.0, "valence": 0.5, "arousal": 0.3}
+    ]
+  },
+  "tal_und_gipfel": {
+    "description": "Krisenbearbeitung: Valenz-Dip in der Mitte, Recovery; Arousal-Peak bei Krise",
+    "themes": ["trauma", "angst", "trauer", "wut"],
+    "anchors": [
+      {"t": 0.0, "valence": 0.3, "arousal": 0.4},
+      {"t": 0.2, "valence": 0.2, "arousal": 0.5},
+      {"t": 0.4, "valence": -0.1, "arousal": 0.7},
+      {"t": 0.6, "valence": 0.1, "arousal": 0.5},
+      {"t": 0.8, "valence": 0.3, "arousal": 0.35},
+      {"t": 1.0, "valence": 0.4, "arousal": 0.3}
+    ]
+  },
+  "plateau": {
+    "description": "Stabilisierung: Valenz und Arousal stabil, kaum Schwankung",
+    "themes": ["beziehung", "familie", "sucht"],
+    "anchors": [
+      {"t": 0.0, "valence": 0.35, "arousal": 0.4},
+      {"t": 0.25, "valence": 0.4, "arousal": 0.35},
+      {"t": 0.5, "valence": 0.45, "arousal": 0.35},
+      {"t": 0.75, "valence": 0.45, "arousal": 0.3},
+      {"t": 1.0, "valence": 0.4, "arousal": 0.3}
+    ]
+  }
+}

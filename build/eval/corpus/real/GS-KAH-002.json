@@ -1,0 +1,237 @@
+{
+  "id": "GS-KAH-002",
+  "source": "real",
+  "language": "de",
+  "theme": "koerper",
+  "messages": [
+    {
+      "role": "Client",
+      "text": "Gut. Im Kopf gut. Körperlich bin ich total fertig.",
+      "start_time": 328.08
+    },
+    {
+      "role": "Therapist",
+      "text": "Ja?",
+      "start_time": 332.72
+    },
+    {
+      "role": "Client",
+      "text": "Das ist abartig. Mein Kopf wie verkatert, so grenzwertig an der Migräne. Aber ich wollte jetzt nichts nehmen, weil ich gedacht habe, vielleicht stört es die Neuroplastizität. Wenn ich dann mit dem Somatritt anfange, ist es ja so gefäßverengt. Und vielleicht gehört das jetzt auch dazu, dass ich da jetzt einfach was tue. Ich weiß nicht.",
+      "start_time": 333.28
+    },
+    {
+      "role": "Therapist",
+      "text": "Ja. Anstrengend ist das.",
+      "start_time": 357.64
+    },
+    {
+      "role": "Client",
+      "text": "Ja. Ich merke, einfach das Nervensystem macht was, ja, ist provoziert.[Schmunzeln]",
+      "start_time": 360.94
+    },
+    {
+      "role": "Therapist",
+      "text": "Woran zeigt sich das? Also, sozusagen zum Nachdennen der Migräne... Körperlich, was ist da noch so?",
+      "start_time": 369.312
+    },
+    {
+      "role": "Client",
+      "text": "Der Kopf ist so schwer auf dem Nacken, merk ich so und dann völlig verrückte Träume.",
+      "start_time": 375.232
+    },
+    {
+      "role": "Therapist",
+      "text": "Ah ja?",
+      "start_time": 383.372
+    },
+    {
+      "role": "Client",
+      "text": "Lachen Ist echt funny. Sehr, sehr real. Also gestern, das war wo hab ich geträumt, ich belade mich mit ganz viel kleinen Dingen, ganz viel so Schminkutensilien, Kosmetik und so. Hatte das alles so auf der Hand, kam immer mehr dazu und dann hat sich eine Haarklammer bei mir so ins Gesicht [Lachen] geklammert und war dann auf einmal 'ne Spinne, die mich einmal gestochen hat und dann ist sie wieder weggefallen. Also, also ich weiß es nicht. [Lachen] Was es, was es sein kann. Ähm, das mit dem Überladen kann ich ja noch nachvollziehen, ja, aber dass sich da so was in mir so anklammert, das fand ich schon ein bisschen spooky.",
+      "start_time": 386.012
+    },
+    {
+      "role": "Therapist",
+      "text": "Mhm.",
+      "start_time": 439.962
+    },
+    {
+      "role": "Client",
+      "text": "Und hat sich total real angefühlt. Also ich hatte wirklich das Gefühl, ich habe da was im Gesicht hängen. Ja.",
+      "start_time": 442.142
+    },
+    {
+      "role": "Therapist",
+      "text": "Haben Sie eine Idee, wofür das stehen könnte? Was bedeuten könnte?",
+      "start_time": 452.802
+    },
+    {
+      "role": "Client",
+      "text": "Ich hatte früher immer Angst vor Spinnen, aber das ist nicht mehr da. Ich hatte nur so wie, das war wie so 'n Ekel, sondern so: „Oh nein, nicht ins Gesicht.\" Und dann ist er wieder so weggerobst. [Schmunzeln] Ich dachte erst so Maske, wie so 'ne eiserne Maske, aber eben nicht ganz so Hardcore, dass man so eingeklammert ist, sondern so kurz nur, wie wenn was noch mal so versucht einen anzuspringen und dann ablässt. Kann's mir nicht erklären.",
+      "start_time": 456.972
+    }
+  ],
+  "metadata": {
+    "generator": null,
+    "template_id": null,
+    "message_count": 13,
+    "total_chars": 1934,
+    "duration_minutes": 2.15,
+    "annotation_version": "v1.0",
+    "anonymization": {
+      "status": "anonymized",
+      "method": "name_replacement",
+      "original_hash": "9de3cf25d386a71639b584ee71ae394e6dbc6c6296cb0750d59038ea9cfe37b1"
+    }
+  },
+  "annotations": {
+    "semantic_frame": {
+      "tone": "concerned-somatic",
+      "themes": [
+        "koerper",
+        "somatisierung"
+      ],
+      "relational_dynamics": "empathic-attuned",
+      "intent": "symptom_exploration",
+      "emotional_tenor": -0.2,
+      "context_validity": 0.8,
+      "offline_context_risk": 0.3
+    },
+    "semiotic_signs": [
+      {
+        "id": "SIGN-KAH-002-1",
+        "locus": "t=328-457s",
+        "signifier": "koerperliche Erschoepfung",
+        "type": "index",
+        "denotation": "Body as symptom carrier",
+        "connotations": [
+          "somatic memory",
+          "psychosomatic expression"
+        ],
+        "codes": [
+          "koerper"
+        ],
+        "markers": [
+          "ATO_BODY_LOAD",
+          "ATO_SELF_OBSERVATION_A",
+          "SEM_SOMATIC_OVERLOAD_AFTER_EXPERIENCE"
+        ]
+      }
+    ],
+    "expected_markers": {
+      "MEMA": [
+        "MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR",
+        "MEMA_ABSENCE_OF_GOAL_CLARITY_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_THREAT_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT",
+        "MEMA_ABSENCE_OF_VULNERABILITY_IN_CONFLICT",
+        "MEMA_BOUNDARY_SETTING",
+        "MEMA_COMMUNICATION_BREAKDOWN_CASCADE",
+        "MEMA_FAMILY_POWER_DYNAMICS",
+        "MEMA_META_DRIFT",
+        "MEMA_ORDNUNGSPARAMETER",
+        "MEMA_PAPAGEI_ECHO",
+        "MEMA_SPIRAL_COHERENCE_INDEX",
+        "MEMA_VALUE_DYNAMICS"
+      ],
+      "CLU": [
+        "CLU_CONFLICT_ESCALATION",
+        "CLU_DISSONANCE_ALERT_TEXT",
+        "CLU_DRIFT_TO_PRESENCE",
+        "CLU_GOTTMAN_TOXICITY_CLUSTER",
+        "CLU_HEATED_CONFLICT",
+        "CLU_INTUITION_BIAS",
+        "CLU_INTUITION_CONFLICT",
+        "CLU_INTUITION_INCONSISTENCY",
+        "CLU_INTUITION_MORALITY",
+        "CLU_INTUITION_NARION",
+        "CLU_INTUITION_PRESENCE_BINDING",
+        "CLU_PERSONA_BLUE",
+        "CLU_SIBLING_DYNAMICS",
+        "CLU_SPIRAL_PERSONA_BEIGE",
+        "CLU_SPIRAL_PERSONA_ROT",
+        "CLU_SVT_MESSAGE_INCONGRUENCE",
+        "CLU_SVT_MESSAGE_INCONGRUENCE_MARKER",
+        "CLU_TECH_REPAIR_BOND",
+        "CLU_VERBAL_PROSODY_INCONGRUENCE"
+      ],
+      "SEM": [
+        "SEM_ACCUSATION_MARKER",
+        "SEM_ADJACENT_COMPLAIN",
+        "SEM_ARCHETYPE_PICARD",
+        "SEM_AUTHORITY_REFERENCE",
+        "SEM_NEUTRAL_NEGOTIATION",
+        "SEM_REACTION_FORMATION_TEXT",
+        "SEM_RELATION_OVER_PERSONA"
+      ],
+      "ATO": [
+        "ATO_AMBIGUITY_QUOTES",
+        "ATO_ATTENTION_TO_FEELINGS",
+        "ATO_CLARIFY_REQ",
+        "ATO_CONDITION_CUE",
+        "ATO_CONFIRM",
+        "ATO_DISFLUENCY_FILLER",
+        "ATO_DISGUST_AVERSION",
+        "ATO_EXPRESSIVE_APHASIA",
+        "ATO_FEAR_ANXIETY",
+        "ATO_HEDGING_CUE",
+        "ATO_JOY_EXPRESSION",
+        "ATO_LINGERING_REACTION",
+        "ATO_MODAL_VERBS",
+        "ATO_NEGATIVE_JUDGEMENT",
+        "ATO_PRIDE_CONFIDENCE",
+        "ATO_REQUEST_TRANSPARENCY",
+        "ATO_TIME_REFERENCE"
+      ]
+    },
+    "vad_trajectory": [
+      {
+        "t": 0.0,
+        "valence": 0.35,
+        "arousal": 0.4,
+        "trigger": "session_start",
+        "trigger_sign_id": "SIGN-KAH-002-1"
+      },
+      {
+        "t": 0.25,
+        "valence": 0.4,
+        "arousal": 0.35,
+        "trigger": "stable_exploration",
+        "trigger_sign_id": "SIGN-KAH-002-1"
+      },
+      {
+        "t": 0.5,
+        "valence": 0.45,
+        "arousal": 0.35,
+        "trigger": "steady_work",
+        "trigger_sign_id": "SIGN-KAH-002-1"
+      },
+      {
+        "t": 0.75,
+        "valence": 0.45,
+        "arousal": 0.3,
+        "trigger": "consolidation",
+        "trigger_sign_id": "SIGN-KAH-002-1"
+      },
+      {
+        "t": 1.0,
+        "valence": 0.4,
+        "arousal": 0.3,
+        "trigger": "closing",
+        "trigger_sign_id": "SIGN-KAH-002-1"
+      }
+    ],
+    "therapy_indices": {
+      "trust": 80,
+      "conflict": 14,
+      "deescalation": 87,
+      "synchronization": 77,
+      "semiotic_coherence": 72
+    },
+    "review_status": "llm_generated",
+    "rater_a": null,
+    "rater_b": null,
+    "inter_rater_agreement": 0.0
+  }
+}
