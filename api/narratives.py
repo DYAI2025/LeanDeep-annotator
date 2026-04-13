@@ -364,7 +364,18 @@ async def generate_multi_narratives(
         ))
 
     # Score and rank
-    narratives = _score_narratives(narratives)
+    ranked = _score_narratives(narratives)
+    selected = ranked[:target_count]
 
-    # Return top N (capped at target_count)
-    return narratives[:target_count]
+    # Ensure weak-cluster perspective is represented when there is room.
+    # This keeps low-confidence-but-distinct interpretations visible instead
+    # of always being out-ranked by the three base LLM narratives.
+    if weak_clusters and target_count >= 3 and not any(n.type == "Weak Cluster" for n in selected):
+        best_weak = next((n for n in ranked if n.type == "Weak Cluster"), None)
+        if best_weak is not None:
+            if len(selected) < target_count:
+                selected.append(best_weak)
+            elif selected:
+                selected[-1] = best_weak
+
+    return selected
