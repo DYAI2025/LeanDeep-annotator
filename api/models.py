@@ -5,8 +5,11 @@ from __future__ import annotations
 from enum import Enum
 from typing import Any
 
+from datetime import UTC, datetime
+
 from pydantic import BaseModel, Field
 
+from .semantic_frame import SemanticFrame
 
 # --- Enums ---
 
@@ -34,7 +37,7 @@ class Language(str, Enum):
 class AnalyzeRequest(BaseModel):
     text: str = Field(..., min_length=1, max_length=100_000, description="Text to analyze")
     language: Language = Language.DE
-    layers: list[Layer] = Field(default=[Layer.ATO, Layer.SEM], description="Layers to detect")
+    layers: list[Layer] = Field(default_factory=lambda: [Layer.ATO, Layer.SEM], description="Layers to detect")
     threshold: float = Field(default=0.5, ge=0.0, le=1.0, description="Confidence threshold")
     semantic_mode: str = Field(default="auto", description="Semantic profiling: auto|llm|embedding|off")
 
@@ -48,7 +51,7 @@ class ConversationRequest(BaseModel):
     messages: list[Message] = Field(..., min_length=1, max_length=2000)
     language: Language = Language.DE
     layers: list[Layer] = Field(
-        default=[Layer.ATO, Layer.SEM, Layer.CLU, Layer.MEMA],
+        default_factory=lambda: [Layer.ATO, Layer.SEM, Layer.CLU, Layer.MEMA],
         description="Layers to detect",
     )
     threshold: float = Field(default=0.5, ge=0.0, le=1.0)
@@ -59,7 +62,7 @@ class ConversationRequest(BaseModel):
 class NarrativeRequest(BaseModel):
     messages: list[Message] = Field(..., min_length=1, max_length=2000)
     language: Language = Language.DE
-    layers: list[Layer] = Field(default=[Layer.ATO, Layer.SEM, Layer.CLU, Layer.MEMA])
+    layers: list[Layer] = Field(default_factory=lambda: [Layer.ATO, Layer.SEM, Layer.CLU, Layer.MEMA])
     threshold: float = Field(default=0.5, ge=0.0, le=1.0)
     semantic_mode: str = Field(default="auto")
     interpretation_mode: InterpretationMode = Field(
@@ -94,14 +97,14 @@ class DetectedMarker(BaseModel):
     layer: Layer
     confidence: float = Field(ge=0.0, le=1.0)
     description: str = ""
-    matches: list[PatternMatch] = []
+    matches: list[PatternMatch] = Field(default_factory=list)
     family: str | None = None
     multiplier: float | None = None
 
 
 class AnalyzeMeta(BaseModel):
     processing_ms: float
-    version: str = "5.1-LD5"
+    version: str = "6.0"
     text_length: int
     markers_detected: int
     layers_scanned: list[str]
@@ -134,15 +137,16 @@ class ConversationMarker(BaseModel):
     layer: Layer
     confidence: float
     description: str = ""
-    message_indices: list[int] = []
+    message_indices: list[int] = Field(default_factory=list)
     family: str | None = None
     multiplier: float | None = None
-    matches: list[PatternMatch] = []
+    matches: list[PatternMatch] = Field(default_factory=list)
     frame: dict[str, Any] | None = None
     # v6.0 resonance weighting fields (additive, per DEC-v1-backward-compatibility)
     resonance_score: float | None = None
     adjusted_confidence: float | None = None
     tier: str | None = None  # "STRONG" | "WEAK" | "DISCARDED"
+    meaning_in_context: str | None = None
 
 
 class TemporalPattern(BaseModel):
@@ -163,17 +167,17 @@ class TopologyConstraint(BaseModel):
     severity: str
     status: str
     score: float
-    message_indices: list[int] = []
-    evidence: dict[str, Any] = {}
+    message_indices: list[int] = Field(default_factory=list)
+    evidence: dict[str, Any] = Field(default_factory=dict)
     notes: str = ""
 
 class TopologyReport(BaseModel):
     version: str
     mode: str = "shadow"
     health: TopologyHealth
-    constraints: list[TopologyConstraint] = []
-    summary: dict[str, Any] = {}
-    gates: dict[str, Any] = {}
+    constraints: list[TopologyConstraint] = Field(default_factory=list)
+    summary: dict[str, Any] = Field(default_factory=dict)
+    gates: dict[str, Any] = Field(default_factory=dict)
 
 
 class ReasoningReport(BaseModel):
@@ -181,7 +185,7 @@ class ReasoningReport(BaseModel):
     narrative: str
     is_formal_technical: bool
     confidence_score: float
-    evidence_marker_ids: list[str] = []
+    evidence_marker_ids: list[str] = Field(default_factory=list)
 
 
 class WeakCluster(BaseModel):
@@ -193,32 +197,56 @@ class WeakCluster(BaseModel):
     marker_count: int
 
 
-class SemanticFrame(BaseModel):
-    """Dialogue-level semantic context for resonance weighting and narratives."""
-    tone: str = ""
-    themes: list[str] = []
-    relational_dynamics: str = ""
-    intent: str = ""
-    emotional_tenor: float = Field(default=0.0, ge=-1.0, le=1.0)
-    context_validity: float = Field(default=0.5, ge=0.0, le=1.0)
-    offline_context_risk: float = Field(default=0.5, ge=0.0, le=1.0)
+class SupportingMarkerRef(BaseModel):
+    """Reference to a marker supporting a narrative interpretation."""
+    id: str
+    adjusted_confidence: float | None = None
+    span: tuple[int, int] | None = None
+    meaning_in_context: str = ""
 
 
-class ConversationResponse(BaseModel):
-    frame: SemanticFrame | None = None
-    markers: list[ConversationMarker]
-    weak_clusters: list[WeakCluster] = []
-    temporal_patterns: list[TemporalPattern] = []
-    topology: TopologyReport | None = None
-    reasoning: ReasoningReport | None = None
-    meta: AnalyzeMeta
-
+class MultiNarrative(BaseModel):
+    """A single narrative interpretation (one of 3-4 perspectives)."""
+    narrative_id: int
+    type: str  # "Primary" | "Contrarian" | "Novel" | "High-Uncertainty" | "Weak Cluster"
+    text: str
+    confidence: float = Field(ge=0.0, le=1.0)
+    supporting_markers: list[SupportingMarkerRef] = Field(default_factory=list)
+    uncertainty_warning: str | None = None
+    score: float = 0.0
 
 
 class VADPoint(BaseModel):
     valence: float
     arousal: float
     dominance: float
+
+
+# Note: SemanticFrame is defined in api/semantic_frame.py and imported at top of this file.
+# Do NOT redefine it here — the import from semantic_frame is the canonical definition.
+
+
+class VADPoint(BaseModel):
+    valence: float
+    arousal: float
+    dominance: float
+
+
+class ConversationResponse(BaseModel):
+    frame: SemanticFrame | None = None
+    markers: list[ConversationMarker]
+    narratives: list[MultiNarrative] = Field(default_factory=list)
+    weak_clusters: list[WeakCluster] = Field(default_factory=list)
+    semantic_profile: list[SemanticProfileResponse] = Field(default_factory=list)
+    vad_trajectory: list[VADPoint] = Field(default_factory=list)
+    temporal_patterns: list[TemporalPattern] = Field(default_factory=list)
+    topology: TopologyReport | None = None
+    reasoning: ReasoningReport | None = None
+    degraded: bool = False
+    provider_used: str | None = None
+    fallback_reason: str | None = None
+    duration_ms: float | None = None
+    meta: AnalyzeMeta
 
 
 class UEDVariability(BaseModel):
@@ -270,14 +298,22 @@ class SpeakerBaselines(BaseModel):
     per_message_delta: list[SpeakerDelta | None]
 
 
+class PersonaSessionSummary(BaseModel):
+    session_number: int
+    warm_start_applied: bool
+    new_episodes: list[Episode] = Field(default_factory=list)
+    state_snapshot: dict[str, float] = Field(default_factory=dict)
+    prediction_available: bool = False
+
+
 class DynamicsResponse(BaseModel):
     markers: list[ConversationMarker]
     message_vad: list[VADPoint]
-    message_emotions: list[EmotionScore | None] = []
+    message_emotions: list[EmotionScore | None] = Field(default_factory=list)
     ued_metrics: UEDMetrics | None = None
     state_indices: StateIndices
     speaker_baselines: SpeakerBaselines | None = None
-    temporal_patterns: list[TemporalPattern] = []
+    temporal_patterns: list[TemporalPattern] = Field(default_factory=list)
     topology: TopologyReport | None = None
     reasoning: ReasoningReport | None = None
     persona_session: "PersonaSessionSummary | None" = None
@@ -306,7 +342,7 @@ class FramingHypothesis(BaseModel):
 
 class InterpretFindings(BaseModel):
     narrative: str = ""
-    key_points: list[str] = []
+    key_points: list[str] = Field(default_factory=list)
     relational_pattern: str | None = None
     bias_check: str | None = None
 
@@ -335,6 +371,7 @@ class MarkerDetail(BaseModel):
     scoring: dict[str, Any] | None = None
     activation: dict[str, Any] | None = None
     window: dict[str, Any] | None = None
+    resonance_tags: list[str] = Field(default_factory=list)
 
 
 class MarkerListResponse(BaseModel):
@@ -356,7 +393,7 @@ class EngineConfig(BaseModel):
 
 class HealthResponse(BaseModel):
     status: str = "ok"
-    version: str = "5.1-LD5"
+    version: str = "6.0"
     markers_loaded: int
     uptime_seconds: float
 
@@ -376,17 +413,17 @@ class Episode(BaseModel):
     type: str  # escalation_cluster | repair_trend | withdrawal_phase | rupture | stabilization
     session: int
     duration_messages: int
-    markers_involved: list[str] = []
-    vad_delta: dict[str, float] = {}
-    state_at_entry: dict[str, float] = {}
-    state_at_exit: dict[str, float] = {}
+    markers_involved: list[str] = Field(default_factory=list)
+    vad_delta: dict[str, float] = Field(default_factory=dict)
+    state_at_entry: dict[str, float] = Field(default_factory=dict)
+    state_at_exit: dict[str, float] = Field(default_factory=dict)
 
 
 class PredictionReservoir(BaseModel):
-    shift_counts: dict[str, int] = {}
-    shift_prior: dict[str, float] = {}
-    shift_given_valence_quartile: dict[str, dict[str, float]] = {}
-    top_transition_pairs: list[list] = []
+    shift_counts: dict[str, int] = Field(default_factory=dict)
+    shift_prior: dict[str, float] = Field(default_factory=dict)
+    shift_given_valence_quartile: dict[str, dict[str, float]] = Field(default_factory=dict)
+    top_transition_pairs: list[list] = Field(default_factory=list)
 
 
 class PersonaStats(BaseModel):
@@ -408,14 +445,6 @@ class PredictionResponse(BaseModel):
     confidence: str = "insufficient_data"  # "low" | "medium" | "high" | "insufficient_data"
 
 
-class PersonaSessionSummary(BaseModel):
-    session_number: int
-    warm_start_applied: bool
-    new_episodes: list[Episode] = []
-    state_snapshot: dict[str, float] = {}
-    prediction_available: bool = False
-
-
 # --- Narrative Analysis Models ---
 
 class NarrativeActor(BaseModel):
@@ -426,10 +455,10 @@ class NarrativeActor(BaseModel):
 
 
 class NarrativeRelationship(BaseModel):
-    actors: list[str] = []
+    actors: list[str] = Field(default_factory=list)
     dynamic: str = ""
     evidence_tier: str = "A"
-    supporting_marker_ids: list[str] = []
+    supporting_marker_ids: list[str] = Field(default_factory=list)
 
 
 class NarrativeBeliefSystem(BaseModel):
@@ -448,27 +477,27 @@ class HumanReviewFlag(BaseModel):
 class InitialSemanticsReport(BaseModel):
     narrative_domain: str
     discourse_type: str
-    actors: list[NarrativeActor] = []
+    actors: list[NarrativeActor] = Field(default_factory=list)
     spatiotemporal_context: str = "unclear"
     cultural_frame: str = "uncertain"
-    active_belief_systems: list[str] = []
+    active_belief_systems: list[str] = Field(default_factory=list)
     tension_axis: str = ""
     semantic_readiness_score: float = Field(0.0, ge=0.0, le=1.0)
-    pre_markers_expected: list[str] = []
-    uncertainty_notes: list[str] = []
+    pre_markers_expected: list[str] = Field(default_factory=list)
+    uncertainty_notes: list[str] = Field(default_factory=list)
 
 
 class NarrativeReport(BaseModel):
     mode: InterpretationMode
     scenario: str
-    actors: list[NarrativeActor] = []
+    actors: list[NarrativeActor] = Field(default_factory=list)
     timeline: str = "not_inferable"
-    relationships: list[NarrativeRelationship] = []
-    belief_systems: list[NarrativeBeliefSystem] = []
-    marker_evidence_summary: dict[str, str] = {}
+    relationships: list[NarrativeRelationship] = Field(default_factory=list)
+    belief_systems: list[NarrativeBeliefSystem] = Field(default_factory=list)
+    marker_evidence_summary: dict[str, str] = Field(default_factory=dict)
     interpretation: str
-    uncertainty_flags: list[str] = []
-    human_review_flags: list[HumanReviewFlag] = []
+    uncertainty_flags: list[str] = Field(default_factory=list)
+    human_review_flags: list[HumanReviewFlag] = Field(default_factory=list)
     bias_check_summary: str
     evidence_tier_used: str = "A+B"
 
@@ -490,3 +519,18 @@ class TranscriptResponse(BaseModel):
     messages: list[Message]
     format_detected: str
     speaker_count: int
+
+
+# Ensure forward references are resolved in this module namespace.
+# This avoids FastAPI/Pydantic schema generation failures under some
+# Python/Pydantic version combinations during app import.
+for _model in (
+    UEDMetrics,
+    SpeakerSummary,
+    SpeakerBaselines,
+    DynamicsResponse,
+):
+    try:
+        _model.model_rebuild(_types_namespace=globals())
+    except TypeError:
+        _model.model_rebuild()

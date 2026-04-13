@@ -165,7 +165,8 @@ This is a **prerequisite**. If markers don't have tags, weighting won't work.
 ### TASK-multi-narrative-generation
 
 **Priority**: P0 (Blocker)  
-**Status**: Todo  
+**Status**: Done  
+**Updated**: 2026-04-06  
 **Estimated Time**: M (3 days)  
 **Owner**: Backend
 
@@ -246,40 +247,117 @@ async def generate_narratives(
 ### TASK-interactive-visualization-ui
 
 **Priority**: P1  
-**Status**: Todo  
+**Status**: Cancelled  
+**Updated**: 2026-04-06  
 **Estimated Time**: L (4 days)  
+**Owner**: Frontend  
+**Notes**: Decomposed into TASK-frontend-scaffold, TASK-frontend-text-highlighting, TASK-frontend-narrative-ui, TASK-frontend-marker-sidebar. Tech stack decided: React + TypeScript + Vite (DEC-frontend-react-vite).
+
+---
+
+### TASK-frontend-scaffold
+
+**Priority**: P1  
+**Status**: Done  
+**Updated**: 2026-04-06  
+**Estimated Time**: S (1 day)  
 **Owner**: Frontend
 
 #### Acceptance Criteria
 
-- [ ] Text highlighting working (marker spans colored by type/confidence)
-- [ ] Tooltips on hover (100ms delay, tooltip content: marker ID, meaning, confidence)
-- [ ] Narrative ↔ marker linking (click narrative highlights supporting markers; click marker shows narratives)
-- [ ] Marker library sidebar (searchable, filterable, detail view)
-- [ ] Responsive design (mobile, tablet, desktop)
-- [ ] Accessibility: WCAG AA (keyboard nav, screen reader support)
-- [ ] Performance: page load < 2s, animations 60fps
-- [ ] Tests pass: `tests/test_ui_visualization.py` (visual regression, E2E)
+- [ ] Vite + React + TypeScript project created in `3-code/frontend/`
+- [ ] Dev server starts with `npm run dev` and proxies `/v1/*` to FastAPI (port 8420)
+- [ ] Production build works with `npm run build`
+- [ ] Basic App shell renders (header, main content area, sidebar placeholder)
+- [ ] API client utility for calling backend endpoints (typed responses)
+- [ ] CSS reset + base styles (design tokens: colors, spacing, typography)
 
 #### Dependencies
 
-- TASK-semantic-framing-implementation
-- TASK-marker-resonance-weighting-system
-- TASK-multi-narrative-generation
+- None (infrastructure task)
 
-#### Tech Stack Decision Needed
+**Notes**: Split from TASK-interactive-visualization-ui. Establishes React project structure per DEC-frontend-react-vite.
 
-Choose frontend framework:
-- Option A: React (component ecosystem, performance)
-- Option B: Vanilla JS (lightweight, minimal dependencies)
-- Recommendation: React for state management (narratives ↔ markers)
+---
+
+### TASK-frontend-text-highlighting
+
+**Priority**: P1  
+**Status**: Done  
+**Updated**: 2026-04-06  
+**Estimated Time**: M (2 days)  
+**Owner**: Frontend
+
+#### Acceptance Criteria
+
+- [ ] Text highlighting working (marker spans colored by type: ATO=blue, SEM=green, CLU=red, MEMA=purple)
+- [ ] Color intensity reflects marker confidence
+- [ ] Tooltips on hover (100ms delay, content: marker ID, meaning_in_context, confidence, tier)
+- [ ] Semantic frame displayed above text (7 dimensions as visual bar/card)
+- [ ] Keyboard navigation for highlighted spans (Tab to next marker)
+
+#### Dependencies
+
+- TASK-frontend-scaffold
+
+**Notes**: Split from TASK-interactive-visualization-ui. Covers REQ-USA-interactive-visualization text highlighting + tooltips.
+
+---
+
+### TASK-frontend-narrative-ui
+
+**Priority**: P1  
+**Status**: Done  
+**Updated**: 2026-04-06  
+**Estimated Time**: M (2 days)  
+**Owner**: Frontend
+
+#### Acceptance Criteria
+
+- [ ] Narrative tabs/cards (one per narrative, labeled by type)
+- [ ] Click narrative highlights supporting markers in text
+- [ ] Click marker shows which narratives reference it
+- [ ] Narrative count label shows dynamic count + uncertainty indicator
+- [ ] Uncertainty warning displayed for high offline_context_risk narratives
+- [ ] Weak cluster perspectives displayed with distinct styling
+
+#### Dependencies
+
+- TASK-frontend-text-highlighting
+
+**Notes**: Split from TASK-interactive-visualization-ui. Covers REQ-USA-interactive-visualization narrative-marker linking.
+
+---
+
+### TASK-frontend-marker-sidebar
+
+**Priority**: P1  
+**Status**: Done  
+**Updated**: 2026-04-06  
+**Estimated Time**: S (1 day)  
+**Owner**: Frontend
+
+#### Acceptance Criteria
+
+- [x] Marker library sidebar (collapsible, resizable)
+- [x] Search by marker ID or description
+- [x] Filter by layer (ATO/SEM/CLU/MEMA), tier (STRONG/WEAK), family
+- [x] Marker detail view (click to expand: patterns, examples, VAD, tags)
+- [x] Responsive: collapses to drawer on mobile
+
+#### Dependencies
+
+- TASK-frontend-scaffold
+
+**Notes**: Split from TASK-interactive-visualization-ui. Covers REQ-USA-interactive-visualization marker library.
 
 ---
 
 ### TASK-native-ui-dialogue-upload
 
 **Priority**: P1  
-**Status**: Todo  
+**Status**: Done  
+**Updated**: 2026-04-06  
 **Estimated Time**: M (3 days)  
 **Owner**: Frontend
 
@@ -300,7 +378,8 @@ Choose frontend framework:
 
 #### Dependencies
 
-- TASK-interactive-visualization-ui
+- TASK-frontend-narrative-ui
+- TASK-frontend-marker-sidebar
 - TASK-rest-api-endpoints (needs working API)
 
 ---
@@ -308,7 +387,8 @@ Choose frontend framework:
 ### TASK-rest-api-endpoints
 
 **Priority**: P1  
-**Status**: Todo  
+**Status**: Done  
+**Updated**: 2026-04-06  
 **Estimated Time**: M (3 days)  
 **Owner**: Backend
 
@@ -341,11 +421,14 @@ Choose frontend framework:
 ### TASK-weak-marker-candidate-detection
 
 **Priority**: P2  
-**Status**: Todo  
+**Status**: Cancelled  
+**Updated**: 2026-04-07  
 **Estimated Time**: L (4 days)  
 **Owner**: Backend
 
-#### Acceptance Criteria
+**Notes**: Decomposed into TASK-candidate-detection-pipeline, TASK-enrichment-api-endpoints, TASK-candidate-persistence-audit, TASK-candidate-review-ui. Spans backend pipeline + API + persistence + frontend UI — too large for a single task.
+
+#### Original Acceptance Criteria (covered by subtasks)
 
 - [ ] Candidate detection pipeline implemented
   - [ ] Identify pattern clusters not matching existing markers
@@ -363,6 +446,120 @@ Choose frontend framework:
 - TASK-semantic-framing-implementation
 - TASK-marker-resonance-weighting-system
 - TASK-native-ui-dialogue-upload
+
+---
+
+### TASK-candidate-detection-pipeline
+
+**Priority**: P2  
+**Status**: Done  
+**Updated**: 2026-04-07  
+**Estimated Time**: M (2 days)  
+**Owner**: Backend
+
+#### Acceptance Criteria
+
+- [x] `api/candidates.py` module with candidate detection logic
+- [x] Identify text clusters not matching existing markers (using weak/discarded marker gaps)
+- [x] LLM-driven clustering (cluster_label + coherence score)
+- [x] Rank by frequency, coherence, novelty
+- [ ] Quality: false discovery rate < 30% (measured on eval corpus) — **deferred**: requires eval corpus run with researcher review, not achievable in pipeline-only task
+- [x] Tests: `tests/test_candidate_detection.py` (24 tests, all passing)
+
+#### Dependencies
+
+- TASK-semantic-framing-implementation
+- TASK-marker-resonance-weighting-system
+
+**Notes**: Split from TASK-weak-marker-candidate-detection. Core detection algorithm only — no API/UI/persistence. Output entities (`MarkerCandidate`, `ExampleCandidate`, `ExamplePassage`) defined in [2-design/data-model.md](../2-design/data-model.md) Enrichment Domain — match those shapes exactly so the API and persistence layers can consume without translation.
+
+---
+
+### TASK-candidate-persistence-audit
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (1 day)  
+**Owner**: Backend
+
+#### Acceptance Criteria
+
+- [ ] Approved candidates written to `build/markers_rated/` in correct schema
+- [ ] Audit log at `build/enrichment/changelog.jsonl` tracks all enrichments (create/update/revert)
+- [ ] Revert capability (rollback last change)
+- [ ] Coverage report generation (per REQ-MNT-marker-evolution-tracking)
+- [ ] Tests: `tests/test_candidate_persistence.py`
+
+#### Dependencies
+
+- TASK-candidate-detection-pipeline
+
+**Notes**: Split from TASK-weak-marker-candidate-detection. Handles file I/O and audit trail. Must exist before enrichment-api-endpoints so approve/reject actions have a persistence layer to call. Satisfies REQ-MNT-marker-evolution-tracking.
+
+---
+
+### TASK-enrichment-api-endpoints
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (1 day)  
+**Owner**: Backend
+
+#### Acceptance Criteria
+
+- [ ] POST `/v1/enrichment/candidates/{id}/action` endpoint (approve/reject/merge) — per api-design.md
+- [ ] GET `/v1/enrichment/candidates` endpoint (filter by status, paginated) — per api-design.md
+- [ ] GET `/v1/enrichment/examples` endpoint
+- [ ] POST `/v1/enrichment/examples/{id}/action` endpoint
+- [ ] GET `/v1/markers/{id}/history` endpoint
+- [ ] Auth required on all write endpoints (per REQ-SEC-data-handling)
+- [ ] Tests: `tests/test_api_enrichment.py`
+
+#### Dependencies
+
+- TASK-candidate-detection-pipeline
+- TASK-candidate-persistence-audit
+
+**Notes**: Split from TASK-weak-marker-candidate-detection. Wires the detection pipeline and persistence layer into REST endpoints.
+
+---
+
+### TASK-candidate-review-ui
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: M (2 days)  
+**Owner**: Frontend
+
+#### Acceptance Criteria
+
+- [ ] `/enrichment` route in frontend (new page, tabbed: Candidates | Examples)
+
+**Candidate review flow** (satisfies REQ-F-candidate-detection UI):
+- [ ] List of pending candidates with filter by status (proposed/approved/rejected/merged)
+- [ ] Candidate detail view (example_passages, cluster_meaning, coherence, frequency, related_markers)
+- [ ] Approve / Reject / Merge actions with notes field
+- [ ] For Merge: select merge_target marker ID
+- [ ] Call POST `/v1/enrichment/candidates/{id}/action`
+
+**Example review flow** (satisfies REQ-F-example-auto-enrichment UI):
+- [ ] List of pending example candidates with filter by marker_id and status
+- [ ] Example detail view (passage text, context, confidence, semantic_explanation)
+- [ ] Approve / Reject / Refine actions (Refine allows text correction)
+- [ ] Call POST `/v1/enrichment/examples/{id}/action`
+
+**Tests:**
+- [ ] Component tests for candidate review flow (approve/reject/merge)
+- [ ] Component tests for example review flow (approve/reject/refine)
+
+#### Dependencies
+
+- TASK-enrichment-api-endpoints
+
+**Notes**: Split from TASK-weak-marker-candidate-detection. Covers both REQ-F-candidate-detection (candidate management) and REQ-F-example-auto-enrichment (example management) — two distinct researcher workflows in one UI.
 
 ---
 
@@ -394,6 +591,7 @@ Choose frontend framework:
 
 **Priority**: P2  
 **Status**: Todo  
+**Updated**: 2026-04-07  
 **Estimated Time**: S (1-2 days)  
 **Owner**: Frontend
 
@@ -408,8 +606,172 @@ Choose frontend framework:
 
 #### Dependencies
 
-- TASK-interactive-visualization-ui
+- TASK-frontend-scaffold
+- TASK-frontend-text-highlighting
+- TASK-frontend-narrative-ui
+- TASK-frontend-marker-sidebar
 - TASK-native-ui-dialogue-upload
+
+---
+
+## PHASE 3e: DEPLOY PREP — RAILWAY
+
+**Goal**: Produce a deployable single-service Railway image (backend + frontend) per DEC-railway-deployment. Tasks are pre-deploy infra — once they're done, production deploy happens from Phase 4.
+
+### TASK-deploy-dockerfile-multistage
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (half day)  
+**Owner**: Backend + DevOps
+
+#### Acceptance Criteria
+
+- [ ] Multi-stage `Dockerfile` at repo root:
+  - [ ] Stage 1: `node:20-alpine`, runs `npm ci && npm run build` in `3-code/frontend/`
+  - [ ] Stage 2: `python:3.12-slim`, installs `requirements.txt`, copies `api/`, `build/markers_normalized/`, `mcp_server.py`, and frontend `dist/` from stage 1
+- [ ] Layer caching optimized (deps before source)
+- [ ] Non-root user for runtime stage
+- [ ] `HEALTHCHECK` instruction pointing at `/v1/health`
+- [ ] Image builds cleanly: `docker build -t leandeep:test .` exits 0
+- [ ] Container runs: `docker run -p 8420:8420 leandeep:test` and `curl localhost:8420/v1/health` returns 200
+
+#### Dependencies
+
+- None (but blocks all downstream deploy tasks)
+
+**Notes**: Per DEC-railway-deployment. Existing Dockerfile is single-stage and doesn't build the frontend — this task replaces it.
+
+---
+
+### TASK-deploy-static-serving
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (half day)  
+**Owner**: Backend
+
+#### Acceptance Criteria
+
+- [ ] `api/main.py` serves frontend `dist/` as static files at `/` (NOT at `/playground`)
+- [ ] SPA fallback: unknown routes (`/enrichment`, `/analysis`, etc.) return `index.html` so client-side routing works
+- [ ] Existing API routes `/v1/*` and existing `/playground` route still work (no regression)
+- [ ] Static files only served when `frontend_dist/` exists (dev mode: graceful skip)
+- [ ] Test: `tests/test_api_static_serving.py` — GET `/` returns HTML with `<title>LeanDeep</title>`, GET `/nonexistent-route` returns same HTML (SPA fallback)
+- [ ] Test: GET `/v1/health` still returns JSON (API routes take precedence)
+
+#### Dependencies
+
+- TASK-deploy-dockerfile-multistage (needs the dist/ location convention)
+
+**Notes**: Use `StaticFiles(directory="frontend_dist", html=True)` or a custom catch-all route. FastAPI already has static file handlers for the `/playground` UI — extend the pattern.
+
+---
+
+### TASK-deploy-railway-config
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (quarter day)  
+**Owner**: DevOps
+
+#### Acceptance Criteria
+
+- [ ] `railway.toml` finalized with:
+  - [ ] `[build]` section: Dockerfile builder, correct path
+  - [ ] `[deploy]` section: healthcheckPath `/v1/health`, healthcheckTimeout, restart policy
+  - [ ] Numbered replica count = 1 (hobby tier)
+- [ ] `fly.toml` retained with deprecation comment at the top pointing to DEC-railway-deployment
+- [ ] README or deploy doc snippet explaining `railway link` + `railway up` workflow
+
+#### Dependencies
+
+- TASK-deploy-dockerfile-multistage
+
+**Notes**: Existing `railway.toml` stub already has the right skeleton. Just needs verification and any missing fields.
+
+---
+
+### TASK-deploy-env-vars-setup
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (quarter day)  
+**Owner**: DevOps
+
+#### Acceptance Criteria
+
+- [ ] `.env.example` at repo root listing ALL required `LEANDEEP_*` env vars with placeholder values and inline comments explaining each
+- [ ] Secrets documented (API keys, provider credentials) with markers like `### SECRET ###`
+- [ ] `4-deploy/CLAUDE.deploy.md` Environment Variables section updated with full list (already partially done; verify)
+- [ ] Setup runbook: `4-deploy/runbooks/RB-initial-railway-setup.md` with step-by-step `railway variables set ...` commands
+- [ ] **`.env` is in `.gitignore`** (verify; add if missing)
+- [ ] **No secrets in git history** — verified by running a real secrets scanner. Use ONE of:
+  - `git secrets --scan` (after `brew install git-secrets`), OR
+  - `trufflehog git file://. --only-verified` (after `brew install trufflehog`), OR
+  - As a fallback: `git grep -E -i "(api[_-]?key|secret|token|password|bearer)\s*[:=]\s*['\"]?[A-Za-z0-9_+/=-]{20,}"` and manually triage hits
+  - Note: `git grep` does NOT search `.env` files when they are gitignored, which is the intended state — secrets must never be committed in the first place. The scanner is a safety net, not the primary control.
+- [ ] Document the chosen scanner + command in `4-deploy/runbooks/RB-initial-railway-setup.md` so future audits use the same tool
+
+#### Dependencies
+
+- TASK-deploy-railway-config
+
+**Notes**: Does NOT actually set the vars on Railway — that's a manual operational step. This task just produces the list + instructions.
+
+---
+
+### TASK-deploy-smoke-tests
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (half day)  
+**Owner**: Backend
+
+#### Acceptance Criteria
+
+- [ ] `scripts/smoke_test.sh` that takes `BASE_URL` as env var and runs:
+  - [ ] GET `/v1/health` → 200, JSON contains `status: "ok"`
+  - [ ] GET `/v1/engine/config` → 200, `total_markers > 0`
+  - [ ] POST `/v1/analyze/conversation` with tiny sample → 200, response has `markers` key
+  - [ ] GET `/` → 200, HTML with frontend markup
+- [ ] Script exits non-zero on any failure
+- [ ] Can be run locally against Docker container OR against deployed Railway URL
+
+#### Dependencies
+
+- TASK-deploy-dockerfile-multistage
+- TASK-deploy-static-serving
+
+**Notes**: Lightweight shell script, not a pytest suite. Used as a post-deploy gate.
+
+---
+
+### TASK-deploy-runbook-initial
+
+**Priority**: P2  
+**Status**: Todo  
+**Updated**: 2026-04-07  
+**Estimated Time**: S (quarter day)  
+**Owner**: DevOps
+
+#### Acceptance Criteria
+
+- [ ] `4-deploy/runbooks/RB-standard-deploy.md` — steps from `git push` to verified deploy (railway up, smoke test, health check)
+- [ ] `4-deploy/runbooks/RB-rollback.md` — how to roll back via Railway dashboard + CLI, verification steps, communication template
+- [ ] Both follow the runbook template in `4-deploy/CLAUDE.deploy.md`
+
+#### Dependencies
+
+- TASK-deploy-railway-config
+- TASK-deploy-smoke-tests
+
+**Notes**: Last piece of deploy prep. After this, the project is ready for an actual production deploy (separate Phase 4 activity).
 
 ---
 
@@ -468,19 +830,33 @@ Choose frontend framework:
 
 ## Summary Table
 
-| Task | Phase | Est. Time | Dependencies | Owner |
-|------|-------|-----------|--------------|-------|
-| semantic-framing | P0 | M | None | Backend |
-| marker-resonance-weighting | P0 | M | semantic-framing | Backend |
-| multi-narrative-generation | P0 | M | semantic-framing, weighting | Backend |
-| interactive-visualization-ui | P1 | L | P0 tasks | Frontend |
-| native-ui-dialogue-upload | P1 | M | visualization, api | Frontend |
-| rest-api-endpoints | P1 | M | P0 tasks | Backend |
-| candidate-detection | P2 | L | P0+P1 | Backend |
-| performance-optimization | P2 | M | all | Backend+Frontend |
-| accessibility-audit | P2 | S | visualization | Frontend |
-| assumption-verification-gold-standard | Parallel | M | P0 | Research |
-| documentation-api-sdks | P2 | M | api-endpoints | Tech Writer |
+| Task | Phase | Est. Time | Dependencies | Owner | Status |
+|------|-------|-----------|--------------|-------|--------|
+| semantic-framing | P0 | M | None | Backend | Done |
+| marker-resonance-weighting | P0 | M | semantic-framing | Backend | Done |
+| multi-narrative-generation | P0 | M | semantic-framing, weighting | Backend | Done |
+| interactive-visualization-ui | P1 | L | P0 tasks | Frontend | Cancelled — decomposed |
+| frontend-scaffold | P1 | S | None | Frontend | Done |
+| frontend-text-highlighting | P1 | M | scaffold | Frontend | Done |
+| frontend-narrative-ui | P1 | M | text-highlighting | Frontend | Done |
+| frontend-marker-sidebar | P1 | S | scaffold | Frontend | Done |
+| native-ui-dialogue-upload | P1 | M | narrative-ui, marker-sidebar, rest-api | Frontend | Done |
+| rest-api-endpoints | P1 | M | P0 tasks | Backend | Done |
+| weak-marker-candidate-detection | P2 | L | P0+P1 | Backend | Cancelled — decomposed |
+| candidate-detection-pipeline | P2 | M | P0 | Backend | Done |
+| candidate-persistence-audit | P2 | S | detection-pipeline | Backend | Todo |
+| enrichment-api-endpoints | P2 | S | detection-pipeline, persistence-audit | Backend | Todo |
+| candidate-review-ui | P2 | M | enrichment-api | Frontend | Todo |
+| performance-optimization | P2 | M | all | Backend+Frontend | Todo |
+| accessibility-audit | P2 | S | frontend subtasks + native-ui | Frontend | Todo |
+| deploy-dockerfile-multistage | P2/Deploy | S | None | Backend+DevOps | Todo |
+| deploy-static-serving | P2/Deploy | S | dockerfile-multistage | Backend | Todo |
+| deploy-railway-config | P2/Deploy | S | dockerfile-multistage | DevOps | Todo |
+| deploy-env-vars-setup | P2/Deploy | S | railway-config | DevOps | Todo |
+| deploy-smoke-tests | P2/Deploy | S | static-serving | Backend | Todo |
+| deploy-runbook-initial | P2/Deploy | S | smoke-tests, railway-config | DevOps | Todo |
+| assumption-verification-gold-standard | Parallel | M | P0 | Research | Todo |
+| documentation-api-sdks | P2 | M | api-endpoints | Tech Writer | Todo |
 
 ---
 
