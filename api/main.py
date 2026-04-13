@@ -15,6 +15,7 @@ Endpoints:
 from __future__ import annotations
 
 import asyncio
+import importlib.util
 import io
 import time
 from contextlib import asynccontextmanager
@@ -134,6 +135,8 @@ app.add_middleware(
 
 # Serve static assets (neutral_insights.json, etc.)
 app.mount("/static", StaticFiles(directory=Path(__file__).parent / "static"), name="static")
+
+_HAS_MULTIPART = importlib.util.find_spec("multipart") is not None
 
 
 @app.get("/", include_in_schema=False)
@@ -1098,28 +1101,40 @@ async def app_ui():
 # POST /v1/upload — Document upload (extracts text from .docx/.txt/.md)
 # ---------------------------------------------------------------------------
 
-@app.post("/v1/upload")
-async def upload_document(file: UploadFile = File(...)):
-    """Extract text from uploaded document (.txt, .md, .docx)."""
-    name = file.filename or ""
-    content = await file.read()
+if _HAS_MULTIPART:
+    @app.post("/v1/upload")
+    async def upload_document(file: UploadFile = File(...)):
+        """Extract text from uploaded document (.txt, .md, .docx)."""
+        name = file.filename or ""
+        content = await file.read()
 
-    if name.endswith(".txt") or name.endswith(".md"):
-        text = content.decode("utf-8", errors="replace")
-    elif name.endswith(".docx"):
-        try:
-            from docx import Document
-        except ImportError:
+        if name.endswith(".txt") or name.endswith(".md"):
+            text = content.decode("utf-8", errors="replace")
+        elif name.endswith(".docx"):
+            try:
+                from docx import Document
+            except ImportError:
+                raise HTTPException(
+                    status_code=500,
+                    detail="python-docx not installed. Run: pip install python-docx",
+                )
+            doc = Document(io.BytesIO(content))
+            text = "\n".join(p.text for p in doc.paragraphs)
+        else:
             raise HTTPException(
-                status_code=500,
-                detail="python-docx not installed. Run: pip install python-docx",
+                status_code=400,
+                detail=f"Unsupported file type: {name}. Use .txt, .md, or .docx",
             )
-        doc = Document(io.BytesIO(content))
-        text = "\n".join(p.text for p in doc.paragraphs)
-    else:
-        raise HTTPException(
-            status_code=400,
-            detail=f"Unsupported file type: {name}. Use .txt, .md, or .docx",
-        )
 
-    return {"filename": name, "text": text, "length": len(text)}
+        return {"filename": name, "text": text, "length": len(text)}
+else:
+    @app.post("/v1/upload")
+    async def upload_document_unavailable():
+        """Fallback when multipart support is unavailable in the runtime."""
+        raise HTTPException(
+            status_code=503,
+            detail=(
+                "Document upload requires the optional dependency 'python-multipart'. "
+                "Install it with: pip install python-multipart"
+            ),
+        )

@@ -1,6 +1,7 @@
 """Tests for the embedding fallback provider."""
-import numpy as np
 import pytest
+
+np = pytest.importorskip("numpy")
 
 try:
     from sentence_transformers import SentenceTransformer
