@@ -52,3 +52,26 @@ def test_deterministic_hash_encoder_uses_stable_token_hashing():
     emb_a = encoder.encode(["alpha beta gamma"], normalize_embeddings=False)
     emb_b = encoder.encode(["alpha beta gamma"], normalize_embeddings=False)
     np.testing.assert_array_equal(emb_a, emb_b)
+
+
+def test_deterministic_hash_encoder_same_texts_have_identical_embeddings():
+    from api.providers.embedding import _DeterministicHashEncoder
+
+    encoder = _DeterministicHashEncoder(dim=31)
+    embeddings = encoder.encode(
+        ["repeatable text sample", "repeatable text sample"],
+        normalize_embeddings=False,
+    )
+    np.testing.assert_array_equal(embeddings[0], embeddings[1])
+
+
+def test_deterministic_hash_encoder_is_stable_across_repeated_calls():
+    from api.providers.embedding import _DeterministicHashEncoder
+
+    encoder = _DeterministicHashEncoder(dim=31)
+    texts = ["alpha beta", "gamma delta", "alpha beta"]
+
+    first = encoder.encode(texts, normalize_embeddings=True)
+    second = encoder.encode(texts, normalize_embeddings=True)
+
+    np.testing.assert_array_equal(first, second)
