@@ -16,11 +16,19 @@ logger = logging.getLogger("leandeep.semantic.embedding")
 class _DeterministicHashEncoder:
     """Offline-safe fallback encoder with SentenceTransformer-like API."""
 
+    _HASH_DIGEST_SIZE = 8
+    _HASH_PERSON = b"ld-embed"
+
     def __init__(self, dim: int):
         self._dim = max(1, int(dim))
 
     def _bucket_for_token(self, token: str) -> int:
-        digest = hashlib.blake2b(token.encode("utf-8"), digest_size=8).digest()
+        """Map token to a stable bucket index independent of Python hash randomization."""
+        digest = hashlib.blake2b(
+            token.encode("utf-8"),
+            digest_size=self._HASH_DIGEST_SIZE,
+            person=self._HASH_PERSON,
+        ).digest()
         return int.from_bytes(digest, byteorder="big", signed=False) % self._dim
 
     def encode(self, texts: list[str], normalize_embeddings: bool = True) -> np.ndarray:
