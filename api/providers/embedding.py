@@ -20,6 +20,8 @@ class _DeterministicHashEncoder:
         self._dim = max(1, int(dim))
 
     def _bucket_for_token(self, token: str) -> int:
+        # Use a cryptographic hash from hashlib (not Python's built-in hash),
+        # because built-in hash randomization changes across interpreter runs.
         digest = hashlib.blake2b(token.encode("utf-8"), digest_size=8).digest()
         return int.from_bytes(digest, byteorder="big", signed=False) % self._dim
 
