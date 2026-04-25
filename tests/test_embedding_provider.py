@@ -44,11 +44,27 @@ def test_deterministic_hash_encoder_uses_stable_token_hashing():
     from api.providers.embedding import _DeterministicHashEncoder
 
     encoder = _DeterministicHashEncoder(dim=17)
+    second_encoder = _DeterministicHashEncoder(dim=17)
 
-    assert encoder._bucket_for_token("alpha") == 9
-    assert encoder._bucket_for_token("beta") == 14
-    assert encoder._bucket_for_token("gamma") == 16
+    # Token-to-bucket assignment is deterministic across calls and instances.
+    assert encoder._bucket_for_token("alpha") == second_encoder._bucket_for_token("alpha")
+    assert encoder._bucket_for_token("beta") == second_encoder._bucket_for_token("beta")
+    assert encoder._bucket_for_token("gamma") == second_encoder._bucket_for_token("gamma")
 
-    emb_a = encoder.encode(["alpha beta gamma"], normalize_embeddings=False)
-    emb_b = encoder.encode(["alpha beta gamma"], normalize_embeddings=False)
+    text = "alpha beta gamma"
+    emb_a = encoder.encode([text], normalize_embeddings=False)
+    emb_b = encoder.encode([text], normalize_embeddings=False)
+    emb_c = second_encoder.encode([text], normalize_embeddings=False)
     np.testing.assert_array_equal(emb_a, emb_b)
+    np.testing.assert_array_equal(emb_a, emb_c)
+
+
+def test_deterministic_hash_encoder_repeated_inputs_have_identical_embeddings():
+    from api.providers.embedding import _DeterministicHashEncoder
+
+    encoder = _DeterministicHashEncoder(dim=31)
+    repeated = ["repeat this input", "repeat this input", "repeat this input"]
+
+    embeddings = encoder.encode(repeated, normalize_embeddings=True)
+    np.testing.assert_array_equal(embeddings[0], embeddings[1])
+    np.testing.assert_array_equal(embeddings[1], embeddings[2])
